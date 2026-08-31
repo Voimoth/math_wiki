@@ -26,4 +26,6 @@
 
 ## Comparisons
 
+- [[fourier-series-introductions]] — 四种引入方式对比:物理/正交投影/逼近论/群表示论
+
 ## Queries

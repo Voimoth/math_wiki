@@ -29,3 +29,8 @@
 - 用户开始学第1章,创建 concepts/separation-of-variables.md(方法五步 + 例1.3 + 三种边条件对照表)
 - 关联 fourier-series、fourier-applications、fourier-handout-2026
 - 计划:将 wiki 推上 GitHub 仓库备份(待用户提供认证 token)
+
+## [2026-08-31] create | Fourier 引入方式对比页
+- 用户问"物理路径是否真实历史",创建 comparisons/fourier-series-introductions.md
+- 内容:历史真相(Euler/Bernoulli 前史、傅里叶 1807-1822)+ 四种引入路径对比(物理/正交投影/逼近论/群表示论)
+- 已推送 GitHub(math_wiki 私有仓库,GCM 免密已配置)
