@@ -1,0 +1,72 @@
+---
+title: 分离变量法
+created: 2026-08-31
+updated: 2026-08-31
+type: concept
+tags: [fourier-series, proof-technique, learning-path]
+sources: [raw/papers/fourier-handout-2026.md]
+confidence: high
+---
+
+# 分离变量法 (Separation of Variables)
+
+> 讲义第 1.2 节。Fourier 级数的**起源方法**:从 PDE 到 ODE,再自然引出"按特征函数展开"。
+
+## 方法流程(五步)
+
+1. **假设解可分离**:$u(x,t) = X(x)T(t)$(形式操作,暂时不证明一般性)
+2. **代入方程,分离变量**:整理使左边只依赖 $x$、右边只依赖 $t$ ⟹ 两边必须等于**同一个常数** $A$
+3. **分解为两个 ODE**:各自求解
+4. **代入边条件,确定特征值**:边条件迫使 $A$ 只能取离散值(特征值),对应特征函数
+5. **叠加原理**:把所有特解线性组合成形式级数解
+
+## 核心例子:热方程 + Dirichlet 边条件(讲义例 1.3)
+
+$$\begin{cases} u_t = ku_{xx} \\ u(0,t) = u(l,t) = 0 \end{cases}$$
+
+代入 $u = X(x)T(t)$:
+
+$$\frac{T'(t)}{kT(t)} = \frac{X''(x)}{X(x)} = A$$
+
+**A 的符号讨论(关键步骤)**:
+- $A > 0$:解为双曲函数,代入边条件只有零解 → **舍去**
+- $A \leq 0$:令 $A = -\lambda^2$,$X = C_1\cos\lambda x + C_2\sin\lambda x$
+
+边条件 $X(0)=X(l)=0$ ⟹ $C_1=0,\ \sin\lambda l=0$ ⟹ $\lambda l = n\pi$,即:
+
+$$\boxed{A = -\frac{n^2\pi^2}{l^2}}, \qquad X_n(x) = \sin\frac{n\pi x}{l}$$
+
+**特征值/特征函数出现**。叠加得形式解:
+
+$$u(x,t) = \sum_{n=1}^{\infty} a_n e^{-n^2\pi^2kt/l^2}\sin\frac{n\pi x}{l}$$
+
+初值 $u(x,0) = \sum a_n\sin\frac{n\pi x}{l}$ —— **由 $f$ 求 $a_n$ 就是 Fourier 级数**。
+
+## 三种边条件 → 三种展开(讲义 1.2 结尾)
+
+| 边条件 | 物理含义 | 展开基底 |
+|---|---|---|
+| Dirichlet $u=0$ | 边界温度固定 | 只含 **sin**(奇) |
+| Neumann $\partial_x u = 0$ | 边界绝热 | 只含 **cos**(偶) |
+| 周期 $u(\theta) = u(\theta+2\pi)$ | 圆环 | **$a_n\cos n\theta + b_n\sin n\theta$ 完整形式** |
+
+> 边条件的奇偶性决定基底:奇边条件(固定端点)出 sin,偶边条件(绝热)出 cos。这正是 [[fourier-series]] 下一章要研究的对象。
+
+## 为什么这章重要(讲义原话精神)
+
+> "不仅仅是为了引入一个概念,这个过程本身,尤其是分离变量法有实际意义,是需要学习掌握的。"
+
+分离变量法是**数学物理的基本工具**:热传导、波动、Laplace、量子力学(氢原子)全靠它。Fourier 级数只是它的"副产品"之一。
+
+## 学习提示
+
+- **A 的符号讨论必须自己推一遍**:$A>0$ 为什么不行、$A \leq 0$ 怎么解出 $\lambda$——这是理解"特征值来自边条件"的关键。
+- 留意 Remark 1.2:**形式解 ≠ 真解**。收敛性、可微性、代入验算都是后续章节的主题(第 3-5 章)。
+- 你能做的验证:把 $u = \sum a_n e^{-n^2\pi^2kt/l^2}\sin\frac{n\pi x}{l}$ 逐项代入方程,确认每一项都是解(叠加原理的前提)。
+- 衔接:分离变量法在波动方程、圆盘 Laplace(第 4 章 Abel 求和处)会再次出现,方法是同构的。
+
+## 相关概念
+
+- [[fourier-series]] — 分离变量法的自然产物
+- [[fourier-applications]] — 解方程(热方程)的完整应用
+- [[fourier-handout-2026]] — 讲义第 1 章

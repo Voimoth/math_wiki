@@ -1,0 +1,43 @@
+---
+title: 傅里叶级数入门文献库
+created: 2026-08-31
+updated: 2026-08-31
+type: entity
+tags: [textbook, fourier-series, learning-path]
+sources: []
+confidence: high
+---
+
+# 傅里叶级数入门文献库(精选)
+
+> 入门学习阶段,"文献" = 经典教材 + 讲义 + 少量综述。arXiv 前沿论文不是入门材料,以下按优先级排列。
+
+## 第一梯队(主教材,二选一精读)
+
+| 教材 | 特点 | 适配度 |
+|---|---|---|
+| **Stein & Shakarchi**, *Fourier Analysis* (2003) | 现代、严谨、习题好 | ★★★★★(见 [[stein-shakarchi-fourier-analysis]]) |
+| **T. W. Körner**, *Fourier Analysis* (1988) | 直觉丰富、例子海量、历史感强 | ★★★★(偏应用与直觉) |
+
+## 第二梯队(补充与参考)
+
+- **G. Tolstov**, *Fourier Series*(经典俄式教材,初等、计算详尽,适合刷计算题)
+- **W. Rudin**, *Real and Complex Analysis* 第 4 章(傅里叶分析放在测度论框架下,中法班 L3 后读)
+- **A. Zygmund**, *Trigonometric Series*(调和分析圣经,研究级,仅作查阅)
+- **H. Dym & H. McKean**, *Fourier Series and Integrals*(分析 + 应用的平衡之作)
+
+## 讲义类(免费在线)
+
+- 各大学公开课讲义:搜索 "Fourier analysis lecture notes PDF"(斯坦福、MIT、巴黎六大等)
+- 注意甄别:优先大学官方课程主页的讲义
+
+## 综述/历史(轻松阅读)
+
+- *Fourier Series* — 维基百科英文条目(入门概览,网站可能需代理)
+- E. Stein 获 Abel 奖相关介绍文章(调和分析背景)
+
+## 使用规则
+
+- **每摄入一篇新资料 → 让 agent 精读后更新对应概念页**(本 wiki 的机制)
+- 教材页对应概念:[[fourier-series]]、[[convergence-of-fourier-series]]、[[parseval-identity]]
+- 学习顺序见 [[fourier-learning-path]]
