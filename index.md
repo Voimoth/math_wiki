@@ -12,6 +12,7 @@
 
 ## Concepts
 
+- [[analysis2-review]] — 分析II(下)全册复习:因果链地图 + 控制收敛专题
 - [[convergence-of-fourier-series]] — 三种收敛模式(点态/一致/L²)与关键定理
 - [[dirichlet-kernel]] — 部分和的卷积核,符号振荡
 - [[fejer-kernel]] — Cesàro 平均与 Fejér 定理,正核的优势
