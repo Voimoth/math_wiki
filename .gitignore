@@ -5,3 +5,6 @@ node_modules/
 # 编辑器
 .vscode/
 *.swp
+
+# 临时脚本副本
+scripts/pdfjs/extract.js
