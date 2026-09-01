@@ -4,14 +4,14 @@ created: 2026-08-31
 updated: 2026-08-31
 type: concept
 tags: [learning-path, real-analysis, proof-technique, review]
-sources: [课程笔记/分析/分析II-2.txt]
+sources: [数学/分析/分析II-2.txt]
 confidence: high
 ---
 
 # 分析II(下) 复习:因果链地图
 
 > 面向中法班学生的复习页。目标:把"定理太多记不住"变成"记住一条因果链"。
-> 讲义: `E:\书籍\分析\分析II\分析II(2).pdf`(殷浩),提取文本 `课程笔记/分析/分析II-2.txt`
+> 讲义: `E:\书籍\分析\分析II\分析II(2).pdf`(殷浩),提取文本 `数学/分析/分析II-2.txt`
 
 ## 全册主线(四章一条链)
 

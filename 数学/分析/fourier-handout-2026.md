@@ -1,10 +1,10 @@
----
+﻿---
 title: 中法班 Fourier 讲义(殷浩)
 created: 2026-08-31
 updated: 2026-08-31
 type: entity
 tags: [textbook, fourier-series, fourier-transform, harmonic-analysis, learning-path]
-sources: [raw/papers/fourier-handout-2026.md]
+sources: [fourier-handout-2026-raw.md]
 confidence: high
 ---
 
@@ -15,7 +15,7 @@ confidence: high
 ## 基本信息
 
 - **位置**: `E:\书籍\分析\fourier.pdf`
-- **提取文本**: `raw/papers/fourier-讲义-full.txt`(3862 行,中文完整)
+- **提取文本**: `fourier-讲义-full.txt`(3862 行,中文完整,同目录)
 - **作者**: 殷浩(往届学长)
 - **版本日期**: 2026-08-30 更新
 

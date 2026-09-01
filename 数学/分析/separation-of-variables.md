@@ -1,10 +1,10 @@
----
+﻿---
 title: 分离变量法
 created: 2026-08-31
 updated: 2026-08-31
 type: concept
 tags: [fourier-series, proof-technique, learning-path]
-sources: [raw/papers/fourier-handout-2026.md]
+sources: [fourier-handout-2026-raw.md]
 confidence: high
 ---
 

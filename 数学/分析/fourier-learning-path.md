@@ -1,10 +1,10 @@
----
+﻿---
 title: 傅里叶级数学习路径
 created: 2026-08-31
 updated: 2026-08-31
 type: concept
 tags: [learning-path, fourier-series, harmonic-analysis]
-sources: [raw/papers/fourier-handout-2026.md]
+sources: [fourier-handout-2026-raw.md]
 confidence: high
 ---
 

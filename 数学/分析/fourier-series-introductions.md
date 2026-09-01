@@ -1,10 +1,10 @@
----
+﻿---
 title: Fourier 级数的多种引入方式
 created: 2026-08-31
 updated: 2026-08-31
 type: comparison
 tags: [fourier-series, comparison, learning-path, harmonic-analysis]
-sources: [raw/papers/fourier-handout-2026.md]
+sources: [fourier-handout-2026-raw.md]
 confidence: high
 ---
 
