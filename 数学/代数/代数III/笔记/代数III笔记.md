@@ -92,9 +92,9 @@ Elle est notée $(i\ j)$.
 **2. Sous-groupe distingué, ou normal**
 
 **Déf :** C'est un sous-groupe $H \subset G$ tel que :
-$
+$$
 \forall g \in G, \forall h \in H,\ g h g^{-1} \in H
-$
+$$
 i.e. $g H g^{-1} = H$, i.e. $g H = H g$.
 
 **Ex** noyau $\mathrm{Ker} f$ d'un morphisme de groupes.
@@ -104,16 +104,16 @@ i.e. $g H g^{-1} = H$, i.e. $g H = H g$.
 **Exemples :**
 
 1. **Centre de G** 
-$
+$$
 Z(G) = \{ x \in G / \forall g \in G\ xg = gx \}
-$
+$$
 
 **Ex** $Z(\mathfrak{S}_n)$ $n \geq 2$ ?
 
 * Si $n=2$ $\mathfrak{S}_2 = \{ \mathrm{Id}, (12) \}$ commutatif
-$
+$$
 Z(\mathfrak{S}_2) = \mathfrak{S}_2
-$
+$$
 
 * Si $n \geq 3$ $Z(\mathfrak{S}_n) = \{ \mathrm{Id} \}$
 
@@ -216,31 +216,31 @@ On vérifie que ceci est bien défini, i.e. si $gH = g'H$ alors $f(g) = f(g')$
 
 Mais $gH = g'H \Rightarrow \exists h \in H$ tel que $g' = gh$
 
-$
+$$
 f(g') = f(gh) = f(g)f(h)
-$
-$
+$$
+$$
 = f(g) \qquad (H \subset \text{Ker } f)
-$
+$$
 
 $\bar{f}$ est bien un morphisme de groupes, i.e.
 
-$
+$$
 \bar{f}(gH \cdot g'H) = \bar{f}(gH) \cdot \bar{f}(g'H)
-$
+$$
 
-$
+$$
 \bar{f}(gHg'H) = \bar{f}(gg'H) = f(gg') = f(g)f(g')
-$
-$
+$$
+$$
 = \bar{f}(gH) \cdot \bar{f}(g'H)
-$
+$$
 
 **Corollaire.** On a un isomorphisme de groupes
 
-$
+$$
 G/\text{Ker } f \longrightarrow \text{Im } f
-$
+$$
 
 Ainsi, si $G$ fini, $|G| = |\text{Im } f| \cdot |\text{Ker } f|$
 
@@ -262,9 +262,9 @@ $$
 
 **Rem** $G/\mathcal{D}(G)$ est commutatif. $\pi([x,y]) = e$
 
-$
+$$
 \pi([x,y]^g) = [\pi(x), \pi(y)] = e
-$
+$$
 
 ---
 
@@ -274,13 +274,13 @@ $H \triangleleft G$ avec $G/H$ commutatif, alors il
 existe un morphisme surjectif $G/\mathcal{D}(G) \longrightarrow G/H$
 
 en effet
-$
+$$
 \begin{array}{ccc}
 G & \xrightarrow{\pi_1} & G/H \\
 & \searrow_{\pi} & \nearrow_{\bar{\pi}_1} \\
 & & G/\mathcal{D}(G)
 \end{array}
-$
+$$
 $\bar{\pi}_1$ donné par
 le thm, il est
 surjectif car
@@ -338,50 +338,50 @@ Cependant, si $M \subset G$ sous-groupe quelconque
 alors $\pi(M) \subset G/H$ sous-groupe. Le sous-groupe de $G$ contenant $H$ qui correspond   $\pi(M)$ est
 $\pi^{-1}(\pi(M))$, qui est le sous-groupe de $G$
 engendré par $M$ et $H$
-$
+$$
 \pi^{-1}(\pi(M)) = MH = HM \quad (*)
-$
+$$
 
 En effet :
-$
+$$
 x \in \pi^{-1}(\pi(M)) \iff \exists m \in M, \pi(x) = \pi(m)
-$
-$
+$$
+$$
 \iff \exists m \in M, \exists h \in H, x = mh \in MH
-$
+$$
 
 **Corollaire**
 
 Si $M \subset G$ sous-groupe quelconque
-$
+$$
 \pi(M) = MH / H
-$
+$$
 
 ---
 
 **Théorème :** Soit $H \trianglelefteq G$, $M \subset G$ sous-groupe
 Alors $M \cap H \trianglelefteq M$. On a un isomorphisme
-$
+$$
 \frac{M}{M \cap H} \cong \frac{MH}{H}
-$
+$$
 
 **Preuve :** On dispose du morphisme
-$
+$$
 \pi: G \to G/H
-$
+$$
 On restreint $\pi$   $M$ :
-$
+$$
 \pi|_M = \pi_1 : M \to G/H \text{ morphisme}
-$
+$$
 Son image $\pi(M) = \frac{MH}{H}$
 Son noyau $\mathrm{Ker}(\pi_1) = M \cap \mathrm{Ker}\,\pi = M \cap H$
 Par le thm d'isomorphisme
-$
+$$
 \frac{M}{\mathrm{Ker}(\pi_1)} \cong \mathrm{Im}(\pi_1)
-$
-$
+$$
+$$
 \frac{M}{M \cap H} \cong \frac{MH}{H}
-$
+$$
 
 **MISE EN GARDE :**
 Soit $G$ groupe, $H \trianglelefteq G$ et $K \trianglelefteq H$
@@ -418,7 +418,7 @@ $\sigma \in G_n, \ \sigma(i \ j)\sigma^{-1} = (\sigma(i) \ \sigma(j))$
 
 ---
 
-```markdown
+
 On a: $\langle a \rangle \triangleleft V \triangleleft A_4$
 mais $\langle a \rangle$ n'est pas distingué dans $A_4$
 
@@ -427,9 +427,9 @@ mais $\langle a \rangle$ n'est pas distingué dans $A_4$
 **Thm** : $G$ groupe, $H \triangleleft G$, $K \triangleleft H$ et $K \triangleleft G$
 Alors $H/K \triangleleft G/K$ et on a :
 
-$
+$$
 \frac{G/K}{H/K} \simeq G/H
-$
+$$
 
 ---
 
@@ -437,9 +437,9 @@ $
 
 On considère les morphismes de passage au quotient :
 
-$
+$$
 G \xrightarrow{\pi_1} G/K \xrightarrow{\pi_2} \frac{G/K}{H/K}
-$
+$$
 
 $\varphi = \pi_2 \circ \pi_1$ surjectif
 
@@ -447,26 +447,23 @@ On a : $\boxed{\text{Ker } \varphi = H}$ ; ainsi $\quad G/H \simeq \text{Im } \v
 
 Soit $g \in \text{ker } \varphi$
 
-$
+$$
 \pi_2(\pi_1(g)) = \text{neutre}
-$
+$$
 
-$
+$$
 \pi_1(g) \in \text{Ker } \pi_2 = H/K
-$
+$$
 
-$
+$$
 gK \in H/K
-$
+$$
 
 $\exists h \in H$ tel que : $\pi_1(g) = gK = \pi_1(h) = hK \subset H$
 
 donc $g \in hK \subset H$, d'où $\text{Ker } \varphi \subset H$
-```
 
 ---
-
-Here is the transcription of the handwritten French math lecture notes:
 
 On a aussi $H \subset \ker \varphi$ car $\pi_1(H) = H/K = \ker \pi_2$
 
@@ -536,12 +533,12 @@ C'est un sous-groupe de $G$
 
 ### Description de l'orbite en terme du stabilisateur
 **Prop:** Soit $x \in X$. L'application
-$
+$$
 \begin{aligned}
 G / \text{Stab}(x) &\longrightarrow \mathcal{O}(x) \\
 g \cdot \text{Stab}(x) &\longmapsto g \cdot x
 \end{aligned}
-$
+$$
 est bijective
 
 **Preuve**
