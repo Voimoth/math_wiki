@@ -16,6 +16,11 @@
 - 文献策略:arXiv 前沿论文不适合入门,改用经典教材体系(Stein-Shakarchi 等)
 - 网络情况:arXiv/SemanticScholar 可访问,维基百科被墙(zh:000)
 
+## [2026-08-31] create | 伽利略群概念页(理论力学开课)
+- 用户开始学理论力学,提出"时空=四维仿射空间+时间函数+距离函数,伽利略群=保持二者的映射"——与 Arnold 公理化定义一致
+- 创建 concepts/galilean-group.md:时空结构公理化、群定义、四子群10维表、与相对论对照
+- 用户授权:数学/物理问答可直接更新 wiki,无需询问
+
 ## [2026-08-31] ingest | 本地讲义 fourier.pdf(殷浩)
 - 用户提供 E:\书籍\ 本地资料库(fourier.pdf = 往届学长讲义,45页)
 - 用 pdfjs-dist(Node) 提取全文(中文完整):raw/papers/fourier-讲义-full.txt,3862 行
