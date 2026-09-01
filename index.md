@@ -20,6 +20,7 @@
 - [[fourier-learning-path]] — 三阶段学习路径(以讲义为主干)
 - [[fourier-series]] — 定义、系数、直觉与学习提示(核心页)
 - [[fourier-transform]] — 傅里叶变换:缓降函数、性质、求逆、Plancherel
+- [[affine-space]] — 仿射空间与平移群作用(A⁴ 无原点、torsor、物理动机)
 - [[galilean-group]] — 伽利略群与伽利略时空:理论力学第一课(仿射空间+对称群)
 - [[gibbs-phenomenon]] — 间断点附近的固定比例过冲
 - [[orthogonal-system]] — 正交函数系:Bessel、完备性、Riesz-Fischer
