@@ -8,3 +8,7 @@ node_modules/
 
 # 临时脚本副本
 scripts/pdfjs/extract.js
+
+# Obsidian 本地配置
+.obsidian/
+!notes
