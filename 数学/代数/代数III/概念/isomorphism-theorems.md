@@ -1,0 +1,65 @@
+---
+title: 同构定理(Théorèmes d'isomorphisme)
+created: 2026-09-01
+updated: 2026-09-01
+type: concept
+tags: [group-theory, algebre]
+sources: [Cours USTC 01-09-26.pdf]
+confidence: high
+---
+
+# 同构定理 (Théorèmes d'isomorphisme)
+
+> [!tip] 想法:三个定理是一个故事
+> 同构定理回答同一个问题:**"商掉不同的子群,得到的商群之间什么关系?"** 答案:由核与像之间的关系决定。核心工具是下面的因子分解定理。
+
+## 核心工具:因子分解定理
+
+> [!note] 因子分解定理(Thm de factorisation)
+> $G$ 群,$H \trianglelefteq G$,$f: G \to K$ 态射。存在 $\bar{f}: G/H \to K$ 使下图交换
+> $$\begin{array}{ccc} G & \xrightarrow{f} & K \\ \pi \downarrow & \nearrow \bar{f} \\ G/H & & \end{array}$$
+> **当且仅当** $H \subset \ker f$。
+>
+> **证明要点**:
+> - (⟹) $\forall h \in H$:$f(h) = \bar{f}(\pi(h)) = \bar{f}(H) = e$,故 $H \subset \ker f$
+> - (⟸) 定义 $\bar{f}(gH) = f(g)$;良定义:若 $gH = g'H$,则 $g' = gh$,$f(g') = f(g)f(h) = f(g)$
+
+> [!tip] 想法:核是"能安全商掉的极限"
+> $f$ 能穿过 $G/H$ ⟺ $H$ 在核里。核是最大可商子群——商掉核,信息无损,得到像。
+
+## 第一同构定理
+
+> [!note] 第一同构定理(同构定理)
+> $$G/\ker f \cong \mathrm{Im}\, f$$
+> 若 $G$ 有限:$|G| = |\mathrm{Im}\, f| \cdot |\ker f|$(因 $|G/H| = |G|/|H|$)。
+> **证明**:因子分解定理取 $H = \ker f$,则 $\bar{f}$ 存在且单射(核为 $e$)、满射到像。
+
+## 第二同构定理(钻石定理)
+
+> [!note] 第二同构定理
+> $H \trianglelefteq G$,$M \subset G$ 子群。则 $M \cap H \trianglelefteq M$,且:
+> $$\frac{M}{M \cap H} \cong \frac{MH}{H}$$
+> **证明**:限制 $\pi: G \to G/H$ 到 $M$ 得 $\pi_1: M \to G/H$;像 $= MH/H$,核 $= M \cap H$;用第一同构定理。
+
+> [!tip] 想法:钻石定理的直觉
+> "分子分母同时乘 $M$":$M/(M \cap H) \cong MH/H$。像分数约分:$\frac{M}{M \cap H}$ 与 $\frac{MH}{H}$ 是同构的群。其中 $MH = \{mh\}$ 是由 $M$ 与 $H$ 生成的子群(若 $M$ 或 $H$ 正规则 $MH = HM$ 是子群)。
+
+## 第三同构定理
+
+> [!note] 第三同构定理
+> $H \triangleleft G$, $K \triangleleft G$, $K \triangleleft H$。则 $H/K \triangleleft G/K$,且:
+> $$\frac{G/K}{H/K} \cong \frac{G}{H}$$
+> **证明**:$\varphi = \pi_2 \circ \pi_1: G \to (G/K)/(H/K)$ 满射,核 $= H$;用第一同构定理。关键验证 $\ker \varphi = H$:$\pi_1(g) \in \ker \pi_2 = H/K \iff gK \in H/K \iff g \in HK = H$。
+
+## 学习提示
+
+- 三个定理的证明套路一致:**构造满态射 → 求核 → 第一同构定理**。记住套路,不用背结论
+- 因子分解定理是"母定理",三个同构定理都是它的推论
+- 中法班术语:factorisation(因子分解)、isomorphisme(同构)、diagramme commutatif(交换图)
+
+## 相关概念
+
+- [[quotient-group]] — 商群是舞台
+- [[normal-subgroup]] — 核与正规子群
+- [[derived-subgroup]] — 泛性质用因子分解定理证明
+- [[group-action]] — 轨道-稳定子定理也是同构定理的应用

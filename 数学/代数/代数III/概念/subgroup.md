@@ -1,0 +1,57 @@
+---
+title: 子群与陪集(Sous-groupe)
+created: 2026-09-01
+updated: 2026-09-01
+type: concept
+tags: [group-theory, algebre]
+sources: [Cours USTC 01-09-26.pdf]
+confidence: high
+---
+
+# 子群与陪集 (Sous-groupe)
+
+> [!note] 定义:子群
+> $H \subset G$ 是子群,若 $H$ 在乘法下封闭且含逆元(即 $H$ 自身是群)。
+
+> [!note] 定义:陪集(Classe à gauche)
+> $H \subset G$ 子群,$a \in G$ 的**左陪集**:$aH = \{ah : h \in H\}$。
+> 右陪集类似:$Ha$。
+
+## 陪集的划分性质
+
+> [!note] 命题:陪集是等价类
+> 关系 $a\mathcal{R}b \iff a^{-1}b \in H$ 是等价关系,陪集 $aH$ 恰为其等价类。
+> 故:**陪集构成 $G$ 的一个划分**(partition),不同陪集不相交。
+
+> [!tip] 想法:陪集 = "把 G 切成同样大小的块"
+> 每个陪集 $aH$ 与 $H$ 有相同基数(左乘 $a$ 是双射)。划分 ⟹ $G$ 被切成 $|G|/|H|$ 块——这是 Lagrange 定理的直觉。
+
+## Lagrange 定理
+
+> [!note] Lagrange 定理
+> 若 $G$ 有限,$H \subset G$ 子群,则 $|H|$ 整除 $|G|$。
+
+> [!tip] 想法:Lagrange 定理的威力
+> 由 $|H| \mid |G|$ 立刻得到:
+> - 素数阶群无非平凡子群(所以素数阶群是循环的)
+> - 群的阶的子群存在性受限(反过来不成立:有 $d \mid |G|$ 未必有 $d$ 阶子群)
+
+## 由子集生成的子群(回顾)
+
+见 [[group]]:$\langle A \rangle$ = 包含 $A$ 的最小子群。
+
+> [!example] 例:循环子群
+> $g \in G$,$\langle g \rangle = \{g^k : k \in \mathbb{Z}\}$ 是循环子群。
+> $|\langle g \rangle|$ = $g$ 的阶(最小的 $n$ 使 $g^n = e$)。
+
+## 学习提示
+
+- 子群判定:验证"封闭 + 逆元"两步即可($e \in H$ 自动由逆元+封闭推出)
+- 陪集是等价类 ⟹ 划分 ⟹ Lagrange——**一条因果链**,不要分开背
+- 中法班术语:classe à gauche(左陪集)、classe à droite(右陪集)、indice(指标 $= |G/H|$)
+
+## 相关概念
+
+- [[group]] — 群的背景与例子
+- [[normal-subgroup]] — 正规子群:左陪集 = 右陪集的特殊子群
+- [[quotient-group]] — 商群:陪集的集合做成群

@@ -1,0 +1,56 @@
+---
+title: 导群(Groupe dérivé)
+created: 2026-09-01
+updated: 2026-09-01
+type: concept
+tags: [group-theory, algebre]
+sources: [Cours USTC 01-09-26.pdf]
+confidence: high
+---
+
+# 导群 (Groupe dérivé)
+
+> [!note] 定义:换位子与导群
+> **换位子**(commutateur):$[x, y] = xyx^{-1}y^{-1}$。
+> **导群** $\mathfrak{D}(G)$ = 由所有换位子 $\{[x,y] : x,y \in G\}$ 生成的子群。
+
+> [!tip] 想法:换位子测量"不可交换程度"
+> - $[x, y] = e \iff xy = yx$(换位子为幺元 ⟺ 可交换)
+> - 导群 = 所有"不可交换信息"生成的子群
+> - $\mathfrak{D}(G) = \{e\} \iff G$ 交换
+
+## 导群是正规子群
+
+> [!note] 命题
+> $\mathfrak{D}(G) \triangleleft G$。
+>
+> **证明核心**:换位子的共轭仍是换位子:
+> $$g[x,y]g^{-1} = [gxg^{-1}, gyg^{-1}]$$
+> 共轭保持换位子结构,故生成子群被共轭保持,即正规。
+
+> [!tip] 想法:导群的角色
+> 导群衡量"$G$ 离交换群有多远"。商群 $G/\mathfrak{D}(G)$ 是**最大的交换商群**——见 [[quotient-group]] 的泛性质。
+
+## 泛性质:最大交换商
+
+> [!note] 定理:导群的泛性质
+> $G$ 群,$A$ 交换群,$f: G \to A$ 态射。则 $f$ 穿过 $G/\mathfrak{D}(G)$ 分解(经 [[isomorphism-theorems|因子分解定理]]):
+> $$G \xrightarrow{\pi} G/\mathfrak{D}(G) \xrightarrow{\bar{f}} A$$
+> **含义**:$G/\mathfrak{D}(G)$ 是**最大的交换商**——任何交换商 $G/H$($G/H$ 交换)都是它的商:
+> $$G/\mathfrak{D}(G) \twoheadrightarrow G/H$$
+
+> [!tip] 想法:泛性质 = "最佳"对象
+> "最大交换商"是泛性质的典型:所有交换商从它"长出来"。这与自由群、自由阿贝尔群是同一类思想——**泛性质唯一确定对象**。
+
+## 学习提示
+
+- 注意区分:换位子 $[x,y]$ 是元素;导群 $\mathfrak{D}(G)$ 是子群(由换位子**生成**,未必等于换位子集合!)
+- 交换化的直觉:商掉导群 = "把不可交换的部分抹平"
+- 中法班术语:commutateur(换位子)、groupe dérivé(导群)、abélianisé(交换化)
+
+## 相关概念
+
+- [[normal-subgroup]] — 导群是正规子群的例子
+- [[quotient-group]] — 商群 $G/\mathfrak{D}(G)$ = 最大交换商
+- [[isomorphism-theorems]] — 泛性质的证明工具
+- [[group]] — 群的背景

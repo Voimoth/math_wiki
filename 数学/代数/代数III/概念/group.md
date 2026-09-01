@@ -1,0 +1,50 @@
+---
+title: 群(Groupe)
+created: 2026-09-01
+updated: 2026-09-01
+type: concept
+tags: [group-theory, algebre]
+sources: [Cours USTC 01-09-26.pdf]
+confidence: high
+---
+
+# 群 (Groupe)
+
+> [!note] 定义:群
+> 集合 $G$ 配上乘法 $G \times G \to G$, $(g, g') \mapsto gg'$,满足:
+> - **结合律**:$(gg')g'' = g(g'g'')$
+> - **幺元**:$\exists e \in G$, $\forall g$, $eg = ge = g$
+> - **逆元**:$\forall g$, $\exists g^{-1}$, $gg^{-1} = g^{-1}g = e$
+
+> [!tip] 想法:群 = "可逆变换"的抽象
+> 群公理抽象的是"能组合、能还原"的结构:结合律保证组合一致,幺元是"什么都不做",逆元是"能撤销"。物理学中伽利略群、线性群都是这个模式(见 [[galilean-group]])。
+
+## 基本例子
+
+> [!example] 例子
+> - **循环群**:$\mathbb{Z}/n\mathbb{Z}$(加法群,由 1 生成)
+> - **置换群**:$X$ 为集合,$\mathfrak{S}(X) = \{f: X \to X \text{ 双射}\}$;当 $X = \{1, \dots, n\}$ 记 $\mathfrak{S}_n$,称**对称群**
+> - **线性群**:$k$ 为域,$\mathrm{GL}_n(k) = \{n \times n \text{ 可逆矩阵}\}$(乘法为矩阵乘法)
+
+## 生成元
+
+> [!note] 定义:由子集生成的子群
+> $A \subset G$,包含 $A$ 的所有子群之交 = **由 $A$ 生成的子群** $\langle A \rangle$,即包含 $A$ 的最小子群:
+> $$\langle A \rangle = \{a_1^{\varepsilon_1} \cdots a_k^{\varepsilon_k} : k \in \mathbb{N},\ a_i \in A,\ \varepsilon_i = \pm 1\}$$
+
+> [!example] 例:$\mathfrak{S}_n$ 由对换生成
+> **对换**(transposition):$\sigma = (i\ j)$ 交换 $i, j$ 且固定其余。
+> 命题:**$\mathfrak{S}_n$ 由所有对换生成**(任何置换可分解为对换之积)。
+
+## 学习提示
+
+- 验证"是群"三件事:结合律(通常继承自已知结构)、幺元、逆元
+- 中法班术语:groupe(群)、sous-groupe(子群)、morphisme(态射)、élément neutre(幺元)
+- 例子是群的"仓库":看到新结构先问"它是不是群?为什么?"
+
+## 相关概念
+
+- [[subgroup]] — 子群与陪集(群的内部结构)
+- [[normal-subgroup]] — 正规子群(做商群的前提)
+- [[group-action]] — 群作用(群"作用"在集合上)
+- [[galilean-group]] — 物理学中的群(跨学科联系)

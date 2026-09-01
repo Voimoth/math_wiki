@@ -1,0 +1,49 @@
+---
+title: 商群(Groupe quotient)
+created: 2026-09-01
+updated: 2026-09-01
+type: concept
+tags: [group-theory, algebre]
+sources: [Cours USTC 01-09-26.pdf]
+confidence: high
+---
+
+# 商群 (Groupe quotient)
+
+> [!note] 定理:商群构造
+> 设 $H \triangleleft G$。则陪集集合 $G/H = \{gH : g \in G\}$ 有**唯一**群结构,使 $\pi: G \to G/H$, $g \mapsto gH$ 是群态射:
+> $$(gH)(g'H) = gg'H$$
+> - $eH = H$ 是幺元
+> - $\ker \pi = H$(商群的核回到 $H$)
+
+> [!tip] 想法:良定义需要正规性
+> 乘法 $(gH)(g'H) = gg'H$ 必须**良定义**:若 $g_1 \in gH$、$g'_1 \in g'H$,需 $g_1g'_1 \in gg'H$。这**恰是正规条件 $gHg^{-1} = H$**。这就是 [[normal-subgroup|正规子群]] 为何重要。
+> 推论:**正规子群 = 态射的核**(任意正规子群都是 $\pi$ 的核)。
+
+## 商群的两个关键应用
+
+### 最大交换商
+
+> [!note] $G/\mathfrak{D}(G)$ 是最大交换商
+> 见 [[derived-subgroup]]:$G/\mathfrak{D}(G)$ 交换,且任何交换商都是它的商。
+> $$G/\mathfrak{D}(G) \twoheadrightarrow G/H \quad (\forall H \triangleleft G,\ G/H \text{ 交换})$$
+
+### 循环群的子群
+
+> [!example] 应用:$\mathbb{Z}/n\mathbb{Z}$ 的子群
+> 商群理论 + 第三同构定理 ⟹ 循环群子群结构:
+> - $\mathbb{Z}/n\mathbb{Z}$ 的子群 ⟷ $\mathbb{Z}$ 中含 $n\mathbb{Z}$ 的子群 $k\mathbb{Z}$($k \mid n$)
+> - **命题:$\forall d \mid n$, $\mathbb{Z}/n\mathbb{Z}$ 有唯一的 $d$ 阶子群,且为循环群**
+
+## 学习提示
+
+- 商群 = "把 H 捏成一个点"得到的群;元素是陪集,乘法是"先乘再捏"
+- 验证商群结构:良定义(依赖正规) + 结合律(从 G 继承) + 核正确
+- 中法班术语:groupe quotient(商群)、passage au quotient(过渡到商)、surjectif(满射)
+
+## 相关概念
+
+- [[normal-subgroup]] — 做商群的前提
+- [[isomorphism-theorems]] — 商群的三大定理
+- [[derived-subgroup]] — 商群 $G/\mathfrak{D}(G)$ 的最大交换性
+- [[subgroup]] — 陪集是商群的元素
