@@ -16,8 +16,8 @@ confidence: high
 
 | 教材 | 特点 | 适配度 |
 |---|---|---|
-| **Stein & Shakarchi**, *Fourier Analysis* (2003) | 现代、严谨、习题好 | ★★★★★(见 [[stein-shakarchi-fourier-analysis]]) |
-| **T. W. Körner**, *Fourier Analysis* (1988) | 直觉丰富、例子海量、历史感强 | ★★★★(偏应用与直觉) |
+| **Stein & Shakarchi**, *Fourier Analysis* (2003) | 现代、严谨、习题好 | 五星推荐(见 [[stein-shakarchi-fourier-analysis]]) |
+| **T. W. Körner**, *Fourier Analysis* (1988) | 直觉丰富、例子海量、历史感强 | 四星(偏应用与直觉) |
 
 ## 第二梯队(补充与参考)
 

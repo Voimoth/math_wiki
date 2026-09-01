@@ -6,7 +6,7 @@
 
 ## Entities
 
-- [[fourier-handout-2026]] — ★主教材:中法班往届讲义(45页,第1-8章完整体系)
+- [[fourier-handout-2026]] — 主教材:中法班往届讲义(45页,第1-8章完整体系)
 - [[fourier-literature]] — 傅里叶级数入门文献库(教材分级 + 使用规则)
 - [[stein-shakarchi-fourier-analysis]] — 补充教材:结构与使用建议
 
