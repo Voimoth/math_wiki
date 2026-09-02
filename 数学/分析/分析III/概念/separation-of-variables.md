@@ -1,10 +1,10 @@
-﻿---
+---
 title: 分离变量法
 created: 2026-08-31
 updated: 2026-09-02
 type: concept
 tags: [fourier-series, proof-technique, learning-path]
-sources: [Fourier-合并笔记-2026-09-02.md]
+sources: [Fourier笔记.md]
 confidence: high
 ---
 
@@ -100,7 +100,7 @@ $$u(x,t)=\\sum_{n=0}^{\\infty} a_n e^{-\\frac{n^2\\pi^2 k}{l^2}t}\\sin\\frac{n\\
 
 ## 学习提示
 
-- **A 的符号讨论必须自己推一遍**:$A\\ge0$ 为什么不行、$A<0$ 怎么解出 $\\lambda$——这是理解\"特征值来自边条件\"的关键。
+- **A 的符号讨论必须自己推一遍**:$A\ge0$ 为什么不行、$A<0$ 怎么解出 $\\lambda$——这是理解\"特征值来自边条件\"的关键。
 - 留意 Remark 1.2:**形式解 ≠ 真解**。收敛性、可微性、代入验算都是逐点收敛理论的主题(见 [[convergence-of-fourier-series]])。
 - 你能做的验证:把 $u=\\sum a_n e^{-n^2\\pi^2kt/l^2}\\sin\\frac{n\\pi x}{l}$ 逐项代入方程,确认每一项都是解(叠加原理的前提)。
 - 衔接:分离变量法在后续章节(波动方程、圆盘 Laplace 等)会再次出现,方法是同构的。

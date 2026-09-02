@@ -4,7 +4,7 @@ created: 2026-08-31
 updated: 2026-09-02
 type: concept
 tags: [convergence, fourier-series, proof-technique]
-sources: [Fourier-合并笔记-2026-09-02.md]
+sources: [Fourier笔记.md]
 confidence: high
 ---
 

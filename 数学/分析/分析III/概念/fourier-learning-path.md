@@ -4,14 +4,14 @@ created: 2026-08-31
 updated: 2026-09-02
 type: concept
 tags: [learning-path, fourier-series, harmonic-analysis]
-sources: [Fourier-合并笔记-2026-09-02.md]
+sources: [Fourier笔记.md]
 confidence: high
 ---
 
 # 傅里叶级数学习路径(中法班适配)
 
 > 面向对象:中科大中法班数学系大二,已学一元微积分(含级数)、线性代数、抽象代数基础;未学多元微积分与测度论。
-> **主资料**:[[../笔记/Fourier-合并笔记-2026-09-02|Fourier 合并笔记]](讲义 sofar.pdf + 自身手写笔记,覆盖第 1-3 章)。
+> **主资料**:[[Fourier笔记|Fourier 合并笔记]](覆盖第 1-3 章)。
 
 ## 当前进度:已完成第 1-3 章(截至 9 月 2 日课)
 

@@ -4,7 +4,7 @@ created: 2026-08-31
 updated: 2026-09-02
 type: entity
 tags: [textbook, fourier-series, harmonic-analysis, learning-path]
-sources: [Fourier-合并笔记-2026-09-02.md]
+sources: [Fourier笔记.md]
 confidence: high
 ---
 
@@ -17,7 +17,7 @@ confidence: high
 - **现行版本**: `sofar.pdf`(17 页,截至 2026-09-02 课,覆盖 §1-3)
 - **提取文本**: `C:\Users\13761\Downloads\sofar_extracted.txt`
 - **作者**: 殷浩(授课老师/整理)
-- **合并笔记**: [[../笔记/Fourier-合并笔记-2026-09-02|Fourier 合并笔记]](讲义 + 自身手写笔记的整合)
+- **合并笔记**:[[Fourier笔记|Fourier 合并笔记]]
 
 ## 现行覆盖内容(第 1-3 章)
 
