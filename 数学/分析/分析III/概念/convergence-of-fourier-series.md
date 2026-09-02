@@ -1,95 +1,95 @@
 ---
 title: 傅里叶级数的收敛理论
 created: 2026-08-31
-updated: 2026-08-31
+updated: 2026-09-02
 type: concept
 tags: [convergence, fourier-series, proof-technique]
-sources: []
+sources: [Fourier-合并笔记-2026-09-02.md]
 confidence: high
 ---
 
 # 傅里叶级数的收敛理论 (Convergence of Fourier Series)
 
-## 三种收敛模式(核心框架)
+> 本节覆盖讲义第 3 章:逐点收敛理论。核心问题:给 $f$,$S_N(f)$ 何时收敛?收敛到 $f$ 吗?本节给充分条件。**存在连续函数其 Fourier 级数在某点/多点发散**;存在(Lebesgue)可积函数几乎处处/处处发散。
 
-傅里叶级数收敛问题必须区分三种意义:
+部分和:$S_N(x)=\\dfrac{a_0}{2}+\\sum_{n=1}^{N}(a_n\\cos nx+b_n\\sin nx)=\\sum_{n=-N}^{N}C_n e^{inx}$。由卷积表示,收敛问题化为核 $D_N$ 的行为(见 [[dirichlet-kernel]])。
 
-| 模式 | 含义 | 关键定理 | 成立条件 |
-|---|---|---|---|
-| **点态收敛** | 每点 $x$ 处部分和 $S_N(f)(x) \to$ 某值 | Dirichlet-Jordan 定理 | $f$ 有界变差(含分段单调) |
-| **一致收敛** | $\sup_x \|S_N(f)(x) - f(x)\| \to 0$ | 傅里叶系数绝对可和(如 $f \in C^1$,或 $f$ 连续且分段光滑) | 光滑性足够强 |
-| **$L^2$ 收敛** | $\|S_N(f) - f\|_{L^2} \to 0$ | Riesz-Fischer / Parseval | 只需 $f \in L^2$ |
+## 1. Riemann-Lebesgue 引理(起点)
 
-## 关键定理
+**引理**:$f$ 在 $[a,b]$ 可积或绝对可积,则
 
-### 1. Riemann-Lebesgue 引理
-$$\hat{f}(n) = \frac{1}{2\pi}\int_{-\pi}^{\pi} f(x)e^{-inx}\,dx \to 0 \quad (|n|\to\infty)$$
-"高频成分最终衰减"——系数趋于 0 的必要条件,处处可用。
+$$\lim_{n\\to\\infty}\\int_a^b f(t)\\sin nt\\,dt=0 \\quad(\\cos nt,\\ e^{int}\\ \\text{同理})$$
 
-### 2. Dirichlet-Jordan 定理(点态收敛)
-若 $f$ 在 $x_0$ 附近有界变差(充分条件:分段单调),则:
+**证明(4 步逼近套路)**:
 
-$$S_N(f)(x_0) \to \frac{f(x_0^+) + f(x_0^-)}{2}$$
+1. $f$ 常值:直接积分 $\\frac{C}{n}(\\cos na-\\cos nb)\\to0$。
+2. $f$ 阶梯函数:有限小区间上常值函数的线性组合,逐段用 (1)。
+3. $f$ 黎曼可积:$\\forall\\varepsilon>0$ 存在阶梯 $g$ 使 $\\int|f-g|<\\varepsilon$;固定 $g$ 用 (2),再三角不等式得 $|\\int f\\sin nt\\,dt|<2\\varepsilon$。
+4. $f$ 绝对可积(有瑕点):设一个瑕点 $c\\in(a,b)$,取 $\\delta$ 使 $\\int_{c-\\delta}^{c+\\delta}|f|<\\varepsilon$,构造 $g(x)=f(x)$(当 $|x-c|>\\delta$)、$g=0$(在 $[c-\\delta,c+\\delta]$),对 $g$ 用 (3),结合 $\\int|f-g|<\\varepsilon$。
 
-即:**连续点收敛到 $f(x_0)$,跳跃间断点收敛到左右极限均值**。这是"傅里叶级数在什么意义下等于函数"的最实用答案。
+**推论**:任何可积函数的 Fourier 系数至少趋于 0。
 
-### 3. Fejér 定理(一致收敛的补救)
-若 $f$ 连续,则 **Cesàro 平均** $\sigma_N(f) = \frac{1}{N}\sum_{k=0}^{N-1}S_k(f)$ **一致收敛**到 $f$。
-用 [[fejer-kernel]] 证明——核是正的,规避了 Dirichlet 核的振荡问题。
+## 2. 局部化原理
 
-### 4. Carleson 定理(1966,深刻)
-$f \in L^2$ 时,傅里叶级数**几乎处处**点态收敛。极其深刻的现代结果,证明极长——学习阶段知道结论即可。
+**定理(局部化原理)**:$f,g$ 若在某点 $x_0$ 小邻域内相同,则它们在 $x_0$ 处 Fourier 级数敛散性相同、收敛值相同。
 
-## 直觉
+证明基于 Riemann-Lebesgue:$[\\delta,\\pi]$ 上的积分由 Riemann-Lebesgue 消失,极限只取决于 $0$ 附近(即 $x_0$ 附近)取值。**收敛性只取决于 $x_0$ 附近的取值**。
 
-- **为什么会有收敛问题?** 因为部分和是"用三角多项式逼近 $f$",而 $f$ 可能很粗糙(甚至不连续)。逼近"坏函数"时,傅里叶级数可能发散(Du Bois-Reymond 例:连续函数某点发散)。
-- **点态 vs $L^2$**:$L^2$ 收敛像"面积逼近",点态收敛像"逐点值逼近"。面积逼近容易,逐点逼近难。
-- **光滑性决定收敛速度**:$f$ 越光滑,系数衰减越快(如 $f \in C^k$ ⟹ $\hat{f}(n) = O(1/n^k)$),收敛越快。
+## 3. Dini 条件与 Dini 定理
 
-## 学习提示(中法班路径)
+**Dini 条件**:$f$ 在 $x$ 的空心邻域定义。若 (1) 左右极限 $f(x-),f(x+)$ 存在;(2) 存在小 $\\varepsilon$ 使
 
-- 法国体系经典讲法:先证明 **Fejér 定理**(正的核,较易)→ 推出 Weierstrass 三角逼近定理 → 再用 Dirichlet 核处理点态收敛 → 最后 $L^2$ 理论。
-- 你的级数理论基础(一致收敛、绝对收敛)是直接前置。
-- 常见误区:把"点态收敛"当作默认意义。做题/证明时**先声明用的是哪种收敛**。
-- 不连续点的行为看 [[gibbs-phenomenon]]。
+$$\\int_0^{\\varepsilon}\\frac{|f(x-t)-f(x-)|+|f(x+t)-f(x+)|}{t}dt$$
 
-## 收敛理论地图(第3-4章概览)
+收敛。因 $\\frac1t$ 在 0 附近不可积,分子须\"足够小\"使乘以 $\\frac1t$ 后可积——本质是对 $f$ 在 $x$ 两侧收敛速度(连续性)的要求。
 
-> 核心问题:给定 $f$,$S_N(f)(x)$ 在 $N\to\infty$ 时收敛吗?收敛到哪?
+**充分条件**:Hölder 条件 $|f(x)-f(y)|\\le C|x-y|^{\\alpha}\\ (\\alpha>0)\\Rightarrow$ Dini;分段可导且导数有界 $\\Rightarrow$ Dini。例 $f(x)=\\text{sgn}\\,x$ 满足。**Dini 是充分不必要条件**。
 
-**主线(第3章开头)**:部分和改写为卷积
+**Dini 定理**:$f$ $2\\pi$ 周期、可积,若在 $x_0$ 满足 Dini 条件,则
 
-$$S_N(x) = \frac{1}{2\pi}\int_{-\pi}^{\pi} f(x-s)D_N(s)\,ds, \qquad D_N(u)=\frac{\sin(N+\frac12)u}{\sin\frac u2}$$
+$$S_N(x_0)\\xrightarrow{N\\to\\infty}\\frac{f(x_0^-)+f(x_0^+)}{2}$$
 
-收敛问题 → 变成"加权平均的权函数 $D_N$ 的行为"问题。
+即:**连续点收敛到 $f(x_0)$,跳跃间断点收敛到左右极限均值**。
 
-**三座里程碑**:
-1. **Riemann-Lebesgue**(Lemma 3.1):系数必趋于 0——一切收敛理论的起点
-2. **局部化原理**:收敛性只取决于 $x_0$ 附近取值(积分远处部分消失)
-3. **Dini 条件 / Dirichlet-Jordan**:分段光滑 ⟹ $S_N \to \frac{f(x^+)+f(x^-)}2$;光滑性 ⟹ 系数 $o(1/n^k)$(3.1节)
+**证明要点**:利用 $\\frac{1}{2\\pi}\\int_{-\\pi}^{\\pi}D_N=1$,把目标化为
 
-**为什么需要 Cesàro/Abel(第4章)**:$\int|D_N| \sim \log N \to \infty$($D_N$ 振荡),点态收敛需额外条件,甚至有连续函数发散的例子。换正核 $F_N$ 解决:
-- **Fejér 核三条黄金性质**:$\int F_N=1$、$F_N\ge0$、远离0处 $\to0$
-- **Fejér 定理**:连续函数 ⟹ Cesàro 平均 $\sigma_N$ 一致收敛 ⟹ Weierstrass 三角逼近
-- **Abel 求和**(4.2):乘 $r^n$ 再 $r\to1$,发散级数"算"出值(Hardy《Divergent Series》)
+$$\\lim_{N\\to\\infty}\\int_0^{\\pi}\\bigl[f(x-t)+f(x+t)-f(x^-)-f(x^+)\\bigr]\\frac{\\sin(N+\\tfrac12)t}{\\sin\\tfrac{t}{2}}dt=0$$
 
-**三种收敛对比**:
+对 $\\varepsilon>0$ 用 Dini 条件选 $\\delta$ 使 $[0,\\frac{\\delta}{2}]$ 上积分 $<\\varepsilon$(分子被 $\\frac{t}{\\sin\\frac t2}$ 控制、由 Dini 可积);固定 $\\delta$ 后在 $[\\frac{\\delta}{2},\\pi]$ 上对被积函数用 Riemann-Lebesgue 引理,得积分 $<\\varepsilon$。两部分合起来 $<\\varepsilon$。
 
-| 收敛类型 | 工具 | 条件 | 结论 |
-|---|---|---|---|
-| 点态(第3章) | Dirichlet 核+局部化 | 分段光滑/有界变差 | 每点收敛到均值 |
-| 一致(第4章 Cesàro) | Fejér 核 | 只需连续 | $\sigma_N$ 一致收敛 |
-| L²(第5章) | 内积/Parseval | 只需平方可积 | $\|S_N-f\|_{L^2}\to0$ |
+**例($f(x)=x$)**:$x\\sim\\sum(-1)^{n-1}\\frac2n\\sin nx$,在 $(-\\pi,\\pi)$ 满足定理条件。$2\\pi$ 周期延拓 $\\tilde f$ 在端点 $x=(2k+1)\\pi$ 处左右极限平均为 0,恰为级数值 $\\sum(-1)^{n-1}\\frac2n\\sin(n\\pi)=0$。
 
-**注意(常见误区)**:第4章的一致收敛是对 $\sigma_N$(Cesàro 平均),不是 $S_N$!$S_N$ 点态收敛仍需第3章条件。两个定理各管各的。
+## 4. 函数光滑性与 Fourier 系数的关系
 
-**光滑性→收敛速度阶梯**:可积(系数→0,R-L) → 分段光滑(点态收敛到均值) → 连续($\sigma_N$ 一致收敛) → $C^k$(系数 $o(1/n^k)$,一致收敛且快)
+**定理**:$f$ 在 $[-\\pi,\\pi]$ 可导、$f'$ 可积或绝对可积,若 $f(-\\pi)=f(\\pi)$,则 $a_n=o(\\frac1n),\\ b_n=o(\\frac1n)$。
+
+证明(分部积分):$a_n=\\frac1\\pi\\int f\\cos nx\\,dx=\\frac{1}{n\\pi}\\int f'\\sin nx\\,dx$(边界项因 $\\sin n\\pi=0$ 消失;$b_n$ 需 $f(-\\pi)=f(\\pi)$),再用 Riemann-Lebesgue。
+
+**推广**:$f$ 有到 $k+1$ 阶导数、$f^{(k+1)}$ 可积,且 $f^{(j)}(\\pi)=f^{(j)}(-\\pi)\\ (j=0,\\dots,k)$,则 $a_n,b_n=o(\\frac{1}{n^{k+1}})$。反复分部积分。
+
+**反向**:若 $|a_n|,|b_n|\\le \\frac{C}{n^3}$,则 Fourier 级数及逐项求导都绝对一致收敛,收敛于一个 $C^1$ 函数 $g$(此时 $g$ 与 $f$ 的系数相同)。
+
+> **原理(不是定理)**:$f$ 越光滑,Fourier 系数趋向 0 越快。例:$f=x$ 的 $b_n\\sim\\frac1n$,$f=|x|$ 的 $a_n\\sim\\frac1{n^2}$。
+
+## 5. Zygmund《Trigonometric Series》进一步结果(文献注记)
+
+本节只讲了 Dini 一条充分条件。Zygmund 书中另有经典结果(编号沿用该书):
+
+1. **Dirichlet-Jordan 判别(Thm 8·1)**:$f$ 有界变差($\\Leftrightarrow f=f_1-f_2$,$f_1,f_2$ 单调)则逐点收敛到 $\\frac{f(x+0)+f(x-0)}{2}$,在连续点组成的闭区间上一致收敛。
+2. **逐项积分定理(Thm 8·7)**:$f$ 可积,无论级数是否收敛,逐项积分 $\\frac{a_0}{2}x+\\sum\\frac{a_n\\sin nx-b_n\\cos nx}{n}$ 一致收敛于 $\\int_0^x f-C$。**发散的级数逐项积分后反而一致收敛**。
+3. **Dini-Lipschitz 判别(Thm 10·3)**:$f$ 连续,连续性模 $\\omega(\\delta)=\\sup_{|x-y|\\le\\delta}|f(x)-f(y)|$ 满足 $\\omega(\\delta)\\log\\frac1\\delta\\to0$,则 Fourier 级数一致收敛于 $f$。单点版本 $f(x\\pm t)-f(x)=o(1/\\log\\frac1t)$不能保证收敛(反例见 Zygmund §2)。
+4. **Lebesgue 常数(§12)**:$L_n=\\frac{1}{2\\pi}\\int|D_n|=\\frac4{\\pi^2}\\log n+O(1)$,且 $L_n$ 恰为 $\\sup_{|f|\\le1\\ \\text{连续}}|S_n(f;0)|$——结合一致有界性原理给出\"连续函数某点发散\"的定量解释。
+5. **Gibbs 现象(Thm 9·3)**:锯齿波 $\\sum\\frac{\\sin nx}{n}=\\frac{\\pi-x}{2}$ 的部分和逐点收敛但在跳点附近不一致收敛,超出右极限比例 $\\frac2\\pi\\int_0^\\pi\\frac{\\sin t}{t}dt\\approx1.179$(冲过跳跃约 9%),且不随 $n$ 消失。有界变差函数在每个不可去间断点出现 Gibbs 现象。见 [[gibbs-phenomenon]]。
+6. **系数量级(§4)**:有界变差函数 $a_n,b_n=O(\\frac1n)$,不可改进为 $o(\\frac1n)$(锯齿波反例)。
+
+> **注**:Zygmund §11 的 Lebesgue 判别法逻辑上蕴含 Dini、Dini-Lipschitz、Dirichlet-Jordan,但条件不便验证。
+
+## 衔接说明
+
+讲义下一节(§4)由 Hardy《Divergent Series》引入 **Cesàro 求和与 Abel 求和**(广义求和),用以处理原级数发散的情形;$L^2$ 理论等则为后续章节内容。**此为后续课程内容,当前不在范围内**。
 
 ## 相关概念
 
 - [[fourier-series]] — 被研究收敛性的对象
-- [[dirichlet-kernel]] — 点态收敛的核
-- [[fejer-kernel]] — 一致收敛与 Cesàro 求和
-- [[parseval-identity]] — $L^2$ 收敛的等价形式
+- [[dirichlet-kernel]] — 点态收敛的核(卷积表示)
 - [[gibbs-phenomenon]] — 不连续点附近的过冲
-- [[orthogonal-system]] — 投影视角的收敛

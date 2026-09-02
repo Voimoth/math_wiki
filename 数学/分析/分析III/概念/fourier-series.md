@@ -1,10 +1,10 @@
 ---
 title: 傅里叶级数
 created: 2026-08-31
-updated: 2026-08-31
+updated: 2026-09-02
 type: concept
-tags: [fourier-series, orthogonal-system, convergence, harmonic-analysis]
-sources: []
+tags: [fourier-series, convergence, harmonic-analysis]
+sources: [Fourier-合并笔记-2026-09-02.md]
 confidence: high
 ---
 
@@ -12,43 +12,55 @@ confidence: high
 
 ## 定义
 
-对周期为 $2\pi$ 的函数 $f$($[-\pi,\pi]$ 上的可积函数),其**傅里叶级数**为:
+设 $f:[-\\pi,\\pi]\\to\\mathbb{R}$ 可积或绝对可积(黎曼可积;或在分割点上允许瑕点且广义积分 $\\int|f|$ 存在)。定义(实形式):
 
-$$f \sim \frac{a_0}{2} + \sum_{n=1}^{\infty} \bigl(a_n \cos nx + b_n \sin nx\bigr)$$
+$$a_n=\\frac{1}{\\pi}\\int_{-\\pi}^{\\pi} f(x)\\cos nx\\,dx, \\qquad b_n=\\frac{1}{\\pi}\\int_{-\\pi}^{\\pi} f(x)\\sin nx\\,dx \\quad (n=0,1,2,\\dots)$$
 
-其中傅里叶系数(欧拉-傅里叶公式):
+称
 
-$$a_n = \frac{1}{\pi}\int_{-\pi}^{\pi} f(x)\cos(nx)\,dx, \qquad b_n = \frac{1}{\pi}\int_{-\pi}^{\pi} f(x)\sin(nx)\,dx$$
+$$f \\sim \\frac{a_0}{2}+\\sum_{n=1}^{\\infty}\\bigl(a_n\\cos nx+b_n\\sin nx\\bigr)$$
 
-复指数形式更简洁:
+为 $f$ 的 **Fourier 级数**。
 
-$$\hat{f}(n) = \frac{1}{2\pi}\int_{-\pi}^{\pi} f(x)e^{-inx}\,dx, \qquad f \sim \sum_{n=-\infty}^{\infty} \hat{f}(n)e^{inx}$$
+**复形式**(更简洁):$C_n=\\dfrac{1}{2\\pi}\\int_{-\\pi}^{\\pi} f(\\theta)e^{-in\\theta}d\\theta$,级数
 
-> 注意:这里的 $\sim$ 表示"形式地对应",**不自动意味着级数收敛到 $f$**——这正是本领域的核心问题(见 [[convergence-of-fourier-series]])。
+$$f \\sim \\sum_{n=-\\infty}^{\\infty} C_n e^{inx}=\\lim_{N\\to\\infty}\\sum_{n=-N}^{N} C_n e^{inx}$$
+
+若 $f$ 实值,则 $C_n=\\overline{C_{-n}}=\\frac12(a_n+ib_n)$($n>0$)。
+
+> **注意**:改变函数在单点的取值不影响 Fourier 级数(级数由积分定义,单点对积分无影响)。
+
+## 关于符号 $\\sim$
+
+> 这里的 $\\sim$ 表示\"形式地对应\"——**这里没说级数收敛、也没说收敛于 $f$**。$f$ 连续时级数也未必收敛(后续给反例)。\"是否收敛于 $f$\" 是逐点收敛理论的核心问题,见 [[convergence-of-fourier-series]]。
 
 ## 直觉
 
-- **思想**:任何周期信号都能分解为"基本谐波" $e^{inx}$ 的叠加,系数 $\hat{f}(n)$ 度量频率 $n$ 的成分大小。就像向量在正交基下分解——[[orthogonal-system]]。
-- **几何图景**:$\hat{f}(n)$ 是 $f$ 在单位圆上的"投影";傅里叶级数就是把 $f$ 表示成这些投影的线性组合。
-- 物理起源:热传导方程(傅里叶 1807 年),振动弦、信号处理。
+- **思想**:任何周期信号都能分解为\"基本谐波\" $e^{inx}$ / $\\cos nx,\\sin nx$ 的叠加;系数 $a_n,b_n$(或 $C_n$)度量频率 $n$ 的成分大小。
+- **物理起源**:Fourier 级数由热传导方程(分离变量法)自然引出(见 [[separation-of-variables]]),傅里叶本人 1807 年提交、1822 年成书《热的解析理论》。
+- **较光滑 → 收敛较快**:函数越光滑,系数衰减越快,级数收敛越快。这是光滑性与系数量级关系的体现(见 [[convergence-of-fourier-series]] §3.4)。
 
-## 证明要点
+## 计算例子
 
-- 系数的正交性推导:$e^{inx}$ 族在 $L^2[-\pi,\pi]$ 上两两正交,范数 $\|e^{inx}\| = \sqrt{2\pi}$。
-- 部分和算子 $S_N$ 是 $L^2$ 中到三角多项式子空间的**正交投影**——这是理解一切收敛理论(尤其 [[parseval-identity]])的钥匙。
+**例($f(x)=x$)**:奇函数故 $a_n=0$;由分部积分 $b_n=\\frac1\\pi\\int_{-\\pi}^{\\pi}x\\sin nx\\,dx=(-1)^{n-1}\\frac{2}{n}$。故
 
-## 学习提示(中法班路径)
+$$x \\sim \\sum_{n=1}^{\\infty}(-1)^{n-1}\\frac{2}{n}\\sin nx$$
 
-- 你的基础(一元微积分 + 级数理论 + 线性代数)完全够用;傅里叶级数是"级数理论的自然延伸",法国体系里通常在 L2 分析课讲到。
-- 核心先掌握三件事:**系数怎么算 → 部分和怎么写 → 什么时候收敛**。
-- 常见误区:以为"展开式 = 函数本身"。实际只有当收敛定理条件满足时才成立,不连续点处收敛到左右极限均值。
-- 下一步自然衔接:傅里叶变换(把周期推广到非周期),需要更多分析基础,标记为后续目标。
+**例($f(x)=|x|$)**:偶函数故 $b_n=0$;$a_n=\\frac2\\pi\\int_0^\\pi x\\cos nx\\,dx=\\frac{2}{n^2\\pi}\\bigl[(-1)^n-1\\bigr]$。
+
+> 对比两例:$|x|$ 连续,系数 $a_n\\sim \\frac{1}{n^2}$ 衰减快于 $x$ 的 $b_n\\sim\\frac1n$。**函数越光滑,级数收敛越快**。
+
+## 特殊区间
+
+- **一般区间 $[a,b]$**:令 $g(y)=f\\bigl(\\frac{a+b}{2}+\\frac{y}{\\pi}(b-a)\\bigr)$ 化为 $[-\\pi,\\pi]$,求 $g$ 的系数后再换回。
+- **$[0,\\pi]$ 只含 sin**:奇延拓到 $[-\\pi,\\pi]$($a_n\\equiv0$)。只含 cos 则偶延拓 $\\tilde f(x)=f(|x|)$。同一函数既可 sin 展开也可 cos 展开。
+
+## 常见误区
+
+- 以为\"展开式 = 函数本身\"。实际只有收敛定理条件满足时才成立;不连续点处收敛到左右极限均值(见 [[convergence-of-fourier-series]])。
 
 ## 相关概念
 
-- [[orthogonal-system]] — 傅里叶级数的数学骨架
-- [[dirichlet-kernel]] — 部分和的卷积表示
-- [[fejer-kernel]] — Cesàro 求和与 Fejér 定理
-- [[convergence-of-fourier-series]] — 三种收敛模式
-- [[parseval-identity]] — 系数与范数的对应
-- [[gibbs-phenomenon]] — 不连续点附近的过冲
+- [[dirichlet-kernel]] — 部分和的卷积表示(逐点收敛理论的出发点)
+- [[convergence-of-fourier-series]] — 何时收敛、收敛到哪里
+- [[separation-of-variables]] — Fourier 级数的起源方法

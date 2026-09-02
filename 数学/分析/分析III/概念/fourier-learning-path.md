@@ -1,61 +1,44 @@
 ﻿---
 title: 傅里叶级数学习路径
 created: 2026-08-31
-updated: 2026-08-31
+updated: 2026-09-02
 type: concept
 tags: [learning-path, fourier-series, harmonic-analysis]
-sources: [fourier-handout-2026-raw.md]
+sources: [Fourier-合并笔记-2026-09-02.md]
 confidence: high
 ---
 
 # 傅里叶级数学习路径(中法班适配)
 
 > 面向对象:中科大中法班数学系大二,已学一元微积分(含级数)、线性代数、抽象代数基础;未学多元微积分与测度论。
-> **主教材**:[[fourier-handout-2026]](往届学长讲义,45 页,即你课程的实际内容)。
+> **主资料**:[[../笔记/Fourier-合并笔记-2026-09-02|Fourier 合并笔记]](讲义 sofar.pdf + 自身手写笔记,覆盖第 1-3 章)。
 
-## 阶段一:建立框架(第 1-2 章)
+## 当前进度:已完成第 1-3 章(截至 9 月 2 日课)
 
-1. **物理动机与分离变量法**(讲义 1):波/热/Laplace/薛定谔方程;Dirichlet/Neumann 边条件;分离变量导出特征值问题 → 自然引出 Fourier 级数
-2. **计算方面**(讲义 2):[[fourier-series]] 定义、系数公式、算例(方波、$|x|$、锯齿波)——**必须亲手算**
-3. 衔接概念:[[orthogonal-system]](内积空间视角)
+1. **物理动机与分离变量法**(讲义 1):波/热/Laplace/薛定谔方程;Dirichlet/Neumann/Newton 边条件;分离变量法导出特征值问题 → 自然引出 Fourier 级数。见 [[separation-of-variables]]。
+2. **计算方面**(讲义 2):[[fourier-series]] 定义(实/复形式)、系数公式、算例($f=x$、$f=|x|$)、一般区间 $[a,b]$ 与 $[0,\pi]$ 的 sin/cos 展开——**必须亲手算**。
+3. **收敛理论**(讲义 3,核心):[[dirichlet-kernel]] 与卷积表示 → Riemann-Lebesgue 引理 → 局部化原理 → [[convergence-of-fourier-series]](Dini 条件、Dini 定理、光滑性-系数衰减、Zygmund 注记含 Dirichlet-Jordan/逐项积分/Dini-Lipschitz/[[gibbs-phenomenon]])。
 
-## 阶段二:收敛理论(第 3-4 章,核心)
+## 后续课程(尚未覆盖,讲义第 4-8 章)
 
-1. **Dirichlet 核与部分和**(讲义 3):[[dirichlet-kernel]]、卷积表示
-2. **Riemann-Lebesgue 引理**:四步证明(阶梯→连续→可积→绝对可积),讲义有完整证明
-3. **局部化原理 + Dini 条件 + Dirichlet-Jordan**:[[convergence-of-fourier-series]]
-4. **光滑性与系数衰减**:$f \in C^k \Rightarrow$ 系数 $o(1/n^k)$
-5. **Cesàro 与 Abel 求和**(讲义 4):[[fejer-kernel]]、Fejér 定理、Poisson 核与圆盘 Laplace——**法国体系先讲这里**
+- **第 4 章:其它类型的逐点收敛**——Cesàro 求和(Fejér 核)、Abel 求和(Poisson 核、圆盘 Laplace)。讲义与手写笔记末尾已点出入口(Hardy《Divergent Series》，见合并笔记 §3.5 衔接)。
+- **第 5 章:L² 理论**——内积空间、正交系、Bessel 不等式、均方收敛(Parseval)、勒让德多项式。
+- **第 6 章:应用**——解方程、等周不等式、Weyl 分布定理(*)、发散 Fourier 级数反例(*)。
+- **第 7-8 章:Fourier 变换及其应用**——缓降/速降函数、求逆、Plancherel;热核、Poisson 求和、海森堡不等式。
 
-## 阶段三:L² 理论(第 5 章)
-
-1. 内积空间与正交系回顾:[[orthogonal-system]]、Bessel 不等式
-2. 有限维逼近:[[parseval-identity]]、均方收敛、$L^2 \cong \ell^2$
-3. 推广:勒让德多项式(讲义 5.4,衔接你的抽代/线代)
-
-## 阶段四:应用与变换(第 6-8 章)
-
-1. **应用**(讲义 6):解方程、等周不等式(必学)、Weyl 定理(*)、发散反例(*):[[fourier-applications]]
-2. **Fourier 变换**(讲义 7):缓降函数、性质、求逆、Plancherel:[[fourier-transform]]
-3. **变换应用**(讲义 8):热核、Poisson 求和、海森堡不等式:[[fourier-applications]]
-
-## 每阶段配套练习
-
-- 阶段一:算 5-10 个函数的 Fourier 系数;验证正交性
-- 阶段二:每个定理跟一道证明题;用 Fejér 定理证 Weierstrass;算 Parseval 求和
-- 阶段三:证明 Bessel;用 Parseval 算 $\sum 1/n^2$
-- 阶段四:解热方程初值问题;证明等周不等式;可视化 Gibbs 现象(Python)
+> 待相应课程讲义/笔记进来后再补齐对应概念页(对应旧页已删除,如需可从 git 历史找回)。
 
 ## 学习节奏建议
 
-- **以讲义章节为推进单位**,每章读完 → 让 agent 对照概念页出 3 道变式题检验
-- **每周摄入 1-2 篇补充资料**(如 Stein-Shakarchi 对应章节:[[stein-shakarchi-fourier-analysis]])更新 wiki
-- 遇到卡点:把卡住的具体步骤(而非整题)贴给 agent 讨论
-- 作业:配合 `E:\书籍\补充材料\分析I作业\` 的往届题
+- **以合并笔记章节为推进单位**,每章读完 → 让 agent 对照概念页出 3 道变式题检验。
+- 第 1-3 章已学,重点在于:亲手重推 Dirichlet 核、Riemann-Lebesgue 四步证明、Dini 定理证明;算熟 $f=x$、$f=|x|$ 的系数。
+- 每周摄入 1-2 篇补充资料(如 Stein-Shakarchi 对应章节:[[stein-shakarchi-fourier-analysis]])更新 wiki。
+- 遇到卡点:把卡住的具体步骤(而非整题)贴给 agent 讨论。
 
 ## 相关概念
 
-- [[fourier-handout-2026]] — 主教材
 - [[fourier-series]] — 核心对象
-- [[convergence-of-fourier-series]] — 阶段二主线
-- [[fourier-transform]] — 阶段四主线
+- [[convergence-of-fourier-series]] — 第 3 章主线
+- [[separation-of-variables]] — 第 1 章方法
+- [[dirichlet-kernel]] — 逐点收敛工具
+- [[fourier-handout-2026]] — 讲义实体页

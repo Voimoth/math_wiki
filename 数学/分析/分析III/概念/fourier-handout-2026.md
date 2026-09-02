@@ -1,50 +1,41 @@
 ﻿---
 title: 中法班 Fourier 讲义(殷浩)
 created: 2026-08-31
-updated: 2026-08-31
+updated: 2026-09-02
 type: entity
-tags: [textbook, fourier-series, fourier-transform, harmonic-analysis, learning-path]
-sources: [fourier-handout-2026-raw.md]
+tags: [textbook, fourier-series, harmonic-analysis, learning-path]
+sources: [Fourier-合并笔记-2026-09-02.md]
 confidence: high
 ---
 
 # 中法班《分析 2》Fourier 讲义(殷浩整理)
 
-**本 wiki 的核心主教材。** 中科大中法班往届学长整理的讲义,45 页,覆盖 Fourier 级数到 Fourier 变换的完整体系。
+**本 wiki 的核心主教材(现行版本 sofar.pdf)。** 中科大中法班《分析 2》Fourier 部分讲义,现举行为 17 页(sofar.pdf),对应课程进行到 **9 月 2 日**,覆盖第 1-3 章。
 
 ## 基本信息
 
-- **位置**: `E:\书籍\分析\fourier.pdf`
-- **提取文本**: `fourier-讲义-full.txt`(3862 行,中文完整,同目录)
-- **作者**: 殷浩(往届学长)
-- **版本日期**: 2026-08-30 更新
+- **现行版本**: `sofar.pdf`(17 页,截至 2026-09-02 课,覆盖 §1-3)
+- **提取文本**: `C:\Users\13761\Downloads\sofar_extracted.txt`
+- **作者**: 殷浩(授课老师/整理)
+- **合并笔记**: [[../笔记/Fourier-合并笔记-2026-09-02|Fourier 合并笔记]](讲义 + 自身手写笔记的整合)
 
-## 与 wiki 概念页的映射(学习时对照使用)
+## 现行覆盖内容(第 1-3 章)
 
-| 讲义章节 | wiki 概念页 |
+| 讲义章节 | 对应 wiki 概念页 |
 |---|---|
-| 1. 引言(物理方程、分离变量) | [[fourier-series]] 的动机部分 |
-| 2. 计算方面 | [[fourier-series]] 定义与算例 |
-| 3. 逐点收敛理论 | [[dirichlet-kernel]]、[[convergence-of-fourier-series]] |
-| 4. Cesàro/Abel 求和 | [[fejer-kernel]](+ Poisson 核,见下) |
-| 5. L² 理论 | [[orthogonal-system]]、[[parseval-identity]] |
-| 6. 应用(等周、Weyl、发散例) | 进阶补充,见 [[fourier-applications]] |
-| 7. Fourier 变换 | [[fourier-transform]](新建) |
-| 8. 变换应用(热核、Poisson 求和、海森堡) | [[fourier-transform]] 应用部分 |
+| 1. 引言(物理方程、分离变量) | [[separation-of-variables]]、[[fourier-series]] 的动机部分 |
+| 2. 定义与计算(实/复形式、算例、一般区间) | [[fourier-series]] |
+| 3. 逐点收敛理论 | [[dirichlet-kernel]]、[[convergence-of-fourier-series]]、[[gibbs-phenomenon]] |
 
-## 为什么它是主教材
+> 讲义目录中还有第 4-8 章(Cesàro/Abel 求和、L² 理论、应用、Fourier 变换),为后续课程尚未覆盖;对应概念页暂缺,待课程推进再补。
 
-1. **贴合课程**:就是你们中法班分析 2 的实际教学内容,顺序、深度、记号都与课堂一致;
-2. **起点匹配**:第一章从物理方程和分离变量法讲起,正是你"一元微积分+级数"基础的自然延伸;
-3. **覆盖完整**:含傅里叶变换、热核、Poisson 求和——比常见本科教材多讲一章,为后续实变/调和分析铺路;
-4. **带进阶标记**:(*) 内容(Weyl 等分布、发散反例、海森堡不等式)可量力学习。
+## 讲义特点
 
-## 使用建议
-
-- **精读顺序**:按讲义 1→8 章推进,每章读完对照映射的 wiki 概念页复习;
-- **例题**:第 2 章算例(方波、|x|、锯齿波)必须亲手算一遍;
-- **(*) 内容**:等周不等式是经典应用值得看;Weyl 定理和海森堡不等式了解思想即可;
-- **作业**:配套的 `E:\书籍\补充材料\分析I作业\` 里有往届作业,可作为练习。
+1. **物理路径**:第一章从物理方程和分离变量法讲起,动机自然、衔接数学物理;
+2. **法国体系风格**:物理动机 → 分离变量 → 级数理论 → (后续)L² → 变换,层层递进;
+3. **证明完整**:如 Riemann-Lebesgue 四步逼近证明、Dini 定理证明(讲义与本笔记均含完整推导);
+4. **带文献注记**:§3.5 引 Zygmund《Trigonometric Series》进一步结果,扩展了课堂范围;
+5. **带 (*) 进阶内容**(后续章节):Weyl 等分布、发散级数反例、海森堡不确定性原理。
 
 ## 相关
 

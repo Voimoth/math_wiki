@@ -39,4 +39,3 @@ confidence: high
 
 - [[fourier-series]] — 第 1-2 章主题
 - [[convergence-of-fourier-series]] — 第 3 章主题
-- [[fejer-kernel]] — 第 2 章核心工具

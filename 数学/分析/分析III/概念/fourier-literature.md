@@ -39,5 +39,5 @@ confidence: high
 ## 使用规则
 
 - **每摄入一篇新资料 → 让 agent 精读后更新对应概念页**(本 wiki 的机制)
-- 教材页对应概念:[[fourier-series]]、[[convergence-of-fourier-series]]、[[parseval-identity]]
+- 教材页对应概念:[[fourier-series]]、[[convergence-of-fourier-series]]
 - 学习顺序见 [[fourier-learning-path]]
