@@ -36,6 +36,11 @@ $$
 - neutre $e \in G$
 - inverse $g^{-1}$
 
+> [!example] Exemples de groupes
+> - **groupes cycliques** $\mathbb{Z}/n\mathbb{Z}$
+> - **groupes de permutations**: $X$ ensemble, $\mathfrak{S}(X) = \{f : X \longrightarrow X, \text{ bijective}\}$;si $X = \{1, \dots, n\}$,$\mathfrak{S}_n = \mathfrak{S}(\{1, \dots, n\})$ **groupe symétrique**
+> - **groupe linéaire**: $k$ corps,$\mathrm{GL}_n(k) = \{\text{matrices inversibles } n \times n\}$
+
 ### 1.2 Sous-groupe
 
 H 與乘法構成群(见定义式简略,OCR 原文仅列名目)。
@@ -54,11 +59,6 @@ $\forall g, g' \in G \quad f(gg') = f(g)f(g')$
 > [!info] Remarques
 > - L'image d'un sous-groupe de $G$ est un sous-groupe de $H$.
 > - L'image réciproque $f^{-1}(K)$ d'un sous-groupe $K$ de $H$ est un sous-groupe de $G$.
-
-> [!example] Exemples de groupes
-> - **groupes cycliques** $\mathbb{Z}/n\mathbb{Z}$
-> - **groupes de permutations**: $X$ ensemble, $\mathfrak{S}(X) = \{f : X \longrightarrow X, \text{ bijective}\}$;si $X = \{1, \dots, n\}$,$\mathfrak{S}_n = \mathfrak{S}(\{1, \dots, n\})$ **groupe symétrique**
-> - **groupe linéaire**: $k$ corps,$\mathrm{GL}_n(k) = \{\text{matrices inversibles } n \times n\}$
 
 ### 1.4 Classe à gauche modulo un sous-groupe
 
