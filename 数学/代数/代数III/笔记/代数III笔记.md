@@ -98,10 +98,10 @@ i.e. $g H g^{-1} = H$, i.e. $g H = H g$.
 >
 > En effet, si $\omega \in Z(\mathfrak{S}_n)$ alors $\omega (1\ i) = (1\ i) \omega$ pour tout $i \geq 2$ :
 > $$
-> \begin{array}{l}
-> \omega(1\ i)\omega^{-1} = (1\ i) \\
-> \left( \omega(1)\ \ \omega(i) \right) = (1\ i)
-> \end{array}
+> \begin{aligned}
+> \omega(1\ i)\omega^{-1} &= (1\ i) \\
+> \left( \omega(1)\ \ \omega(i) \right) &= (1\ i)
+> \end{aligned}
 > $$
 > d'où $\omega(i) = 1$ ou $i$ pour tout $i$, donc $\omega(1) = 1$.
 
@@ -140,11 +140,11 @@ Ainsi : un sous-groupe distingué est toujours le noyau d'un morphisme : $H = \k
 Soit $G$ groupe, $H \trianglelefteq G$, $K$ groupe et $f : G \to K$ un morphisme :
 
 $$
-\begin{array}{ccc}
-G & \xrightarrow{f} & K \\
-\pi \downarrow & \nearrow \overline{F} & \\
-G/H & &
-\end{array}
+\begin{CD}
+G @>f>> K \\
+@V\pi VV @| \\
+G/H @>\overline{F}>> K
+\end{CD}
 $$
 
 Alors il existe un morphisme $\overline{F} : G/H \to K$ tel que $f = \overline{F} \circ \pi$ **si et seulement si** $H \subset \ker f$.
@@ -169,11 +169,11 @@ Ainsi, si $G$ fini : $|G| = |\mathrm{Im}\, f| \cdot |\mathrm{Ker}\, f|$ (car $|G
 **Thm :** Soit $G$ groupe, $A$ groupe commutatif et $f : G \longrightarrow A$ un morphisme. Alors $f$ se factorise à travers $G/\mathfrak{D}(G)$ :
 
 $$
-\begin{array}{ccc}
-G & \xrightarrow{f} & A \\
-\pi \downarrow & \nearrow \bar{f} & \\
-G/\mathfrak{D}(G) & &
-\end{array}
+\begin{CD}
+G @>f>> A \\
+@V\pi VV @| \\
+G/\mathfrak{D}(G) @>\bar{f}>> A
+\end{CD}
 $$
 
 > [!info] Rem
@@ -184,11 +184,11 @@ Ce que dit le thm : $G/\mathfrak{D}(G)$ est le **plus grand quotient commutatif*
 
 En effet :
 $$
-\begin{array}{ccc}
-G & \xrightarrow{\pi_1} & G/H \\
-& \searrow_{\pi} & \nearrow_{\bar{\pi}_1} \\
-& & G/\mathfrak{D}(G)
-\end{array}
+\begin{CD}
+G @>\pi_1>> G/H \\
+@V\pi VV @AA\bar{\pi}_1A \\
+G/\mathfrak{D}(G) @= G/\mathfrak{D}(G)
+\end{CD}
 $$
 $\bar{\pi}_1$ est donné par le thm ; il est surjectif car $\pi_1$ est surjectif.
 
