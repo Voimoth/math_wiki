@@ -15,7 +15,7 @@ confidence: high
 ## 基本信息
 
 - **现行版本**: `sofar.pdf`(17 页,截至 2026-09-02 课,覆盖 §1-3)
-- **提取文本**: `C:\Users\13761\Downloads\sofar_extracted.txt`
+- **提取文本**: `../笔记/sofar_extracted.txt`(如已归档;原在 Downloads)
 - **作者**: 殷浩(授课老师/整理)
 - **合并笔记**:[[Fourier笔记|Fourier 合并笔记]]
 
