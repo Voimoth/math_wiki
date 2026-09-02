@@ -1,4 +1,4 @@
-﻿---
+---
 title: 群论讲义 Cours de Groupes (Marc Rosso)
 created: 2026-09-01
 updated: 2026-09-02
@@ -11,7 +11,6 @@ confidence: medium
 # Cours de Groupes — Marc Rosso (USTC, 2026-09-01)
 
 > 手写法语讲义整理(OCR 转写)。原 PDF: `Cours USTC 01-09-26.pdf`。
-> 结构约定:定义/定理为正文小节(并列概念各占一节);例子、注记、警告分别用 [!example] / [!info] / [!warning] 框出,不打断主干。
 > 注意:OCR 转写可能存在少量错误,数学公式以原图为准。
 
 Marc Rosso
@@ -42,8 +41,6 @@ $$
 > - **groupe linéaire**: $k$ corps,$\mathrm{GL}_n(k) = \{\text{matrices inversibles } n \times n\}$
 
 ### 1.2 Sous-groupe
-
-H 與乘法構成群(见定义式简略,OCR 原文仅列名目)。
 
 > [!info] Prop
 > Une intersection de sous-groupes est un sous-groupe.
