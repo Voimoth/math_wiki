@@ -9,7 +9,8 @@ confidence: high
 
 # Fourier 级数 笔记
 
-> 涵盖范围：第 1—3 章（引言/分离变量、定义与计算、逐点收敛理论）。第 4—8 章（Cesàro/Abel、L² 理论、应用、Fourier 变换）为后续课程，尚未覆盖。
+> [!info] 涵盖范围
+> 第 1—3 章（引言/分离变量、定义与计算、逐点收敛理论）。第 4—8 章（Cesàro/Abel、L² 理论、应用、Fourier 变换）为后续课程，尚未覆盖。
 
 ---
 
@@ -40,7 +41,8 @@ confidence: high
 
 **基本思想**：假设解 $u(x,y)=X(x)Y(y)$ 代入方程，整理使左边只依赖 $x$、右边只依赖 $y$，则两边必等于同一常数。PDE 化为两个 ODE。
 
-> 严格性(Remark 1.2)：暂时是**形式操作**——没证明一般解就是该形式，也没证明算出的级数"是解"。这是后续章节的主题。
+> [!info] 严格性(Remark 1.2)
+> 暂时是**形式操作**——没证明一般解就是该形式，也没证明算出的级数"是解"。这是后续章节的主题。
 
 **例子 1.3(热方程 + Dirichlet 边条件)**：
 
@@ -61,7 +63,8 @@ $$u(x,t)=\sum_{n=0}^{\infty} a_n e^{-\frac{n^2\pi^2 k}{l^2}t}\sin\frac{n\pi x}{l
 
 若换 Neumann 边条件 $\partial_x u(0)=\partial_x u(l)=0$，得形式解含 $\cos\frac{n\pi x}{l}$；换周期边条件 $u(\theta)=u(\theta+2\pi)$(圆环)，得 $u=\sum(a_n\cos n\theta + b_n\sin n\theta)e^{-n^2kt}$。
 
-> **历史注记(AI 生成标注)**：分离变量+模式叠加的雏形是 D. Bernoulli(1753)弦振动主张；Euler(1777)已写正交性系数公式但本人不信"任意函数"可展开；Fourier(1807 提交，1822《热的解析理论》)系统用于热方程并断言任意函数可展开，遭 Lagrange 质疑严格性。Dirichlet(1829)给出首个严格收敛定理；Riemann(1854)为研究三角级数表示创立积分；Cantor(1870)证明唯一性并走向集合论。一个求解 PDE 的形式技巧最终成为现代分析源头。
+> [!info] 历史注记(AI 生成标注)
+> 分离变量+模式叠加的雏形是 D. Bernoulli(1753)弦振动主张；Euler(1777)已写正交性系数公式但本人不信"任意函数"可展开；Fourier(1807 提交，1822《热的解析理论》)系统用于热方程并断言任意函数可展开，遭 Lagrange 质疑严格性。Dirichlet(1829)给出首个严格收敛定理；Riemann(1854)为研究三角级数表示创立积分；Cantor(1870)证明唯一性并走向集合论。一个求解 PDE 的形式技巧最终成为现代分析源头。
 
 ---
 
@@ -77,7 +80,8 @@ $$a_n=\frac{1}{\pi}\int_{-\pi}^{\pi} f(x)\cos nx\,dx, \qquad b_n=\frac{1}{\pi}\i
 
 **复形式**：$C_n = \dfrac{1}{2\pi}\int_{-\pi}^{\pi} f(\theta)e^{-in\theta}d\theta$，级数 $\displaystyle\sum_{n=-\infty}^{\infty}C_n e^{inx}=\lim_{N\to\infty}\sum_{n=-N}^{N}C_ne^{inx}$。若 $f$ 实值则 $C_n=\overline{C_{-n}}=\frac12(a_n+ib_n)$($n>0$)。
 
-> **注意(Remark 2.2)**：这里没说级数收敛、也没说收敛于 $f$。$f$ 连续时级数也未必收敛(后续给反例)。"是否收敛于 $f$" 是第 3 章的核心问题。
+> [!warning] 注意(Remark 2.2)
+> 这里没说级数收敛、也没说收敛于 $f$。$f$ 连续时级数也未必收敛(后续给反例)。"是否收敛于 $f$" 是第 3 章的核心问题。
 
 ### 2.2 计算例子
 
@@ -86,7 +90,8 @@ $$x \sim \sum_{n=1}^{\infty}(-1)^{n-1}\frac{2}{n}\sin nx$$
 
 **例 2.5($f(x)=|x|$)**：偶函数故 $b_n=0$；$a_n=\frac2\pi\int_0^\pi x\cos nx\,dx=\frac{2}{n^2\pi}\bigl[(-1)^n-1\bigr]$。
 
-> 对比两例：|x| 连续，系数 $a_n\sim \frac{1}{n^2}$ 衰减快于 x 的 $b_n\sim\frac1n$。**函数越光滑，级数收敛越快**(见 §3.4)。
+> [!tip] 对比两例
+> |x| 连续，系数 $a_n\sim \frac{1}{n^2}$ 衰减快于 x 的 $b_n\sim\frac1n$。**函数越光滑，级数收敛越快**(见 §3.4)。
 
 ### 2.3 特殊区间
 
@@ -113,7 +118,8 @@ $$\boxed{S_N(x)=\frac{1}{2\pi}\int_{-\pi}^{\pi} f(t)D_N(x-t)dt=\frac{1}{2\pi}\in
 
 (利用周期性把 $f$ 延拓到 $\mathbb{R}$；最后用 $D_N$ 为偶函数得 $S_N(x)=\frac{1}{2\pi}\int_0^\pi\bigl[f(x-s)+f(x+s)\bigr]D_N(s)ds$。)
 
-> **直觉**：$S_N$ 是 $f$ 以 $D_N$ 为权的加权平均(卷积)。$N$ 增大时 $D_N$ 主峰高($\sim 2N+1$)变尖(宽 $\sim \frac{2\pi}{N+1/2}$)、旁瓣高频振荡。收敛问题归结为核 $D_N$ 的行为。
+> [!tip] 直觉
+> $S_N$ 是 $f$ 以 $D_N$ 为权的加权平均(卷积)。$N$ 增大时 $D_N$ 主峰高($\sim 2N+1$)变尖(宽 $\sim \frac{2\pi}{N+1/2}$)、旁瓣高频振荡。收敛问题归结为核 $D_N$ 的行为。
 
 ### 3.2 Riemann-Lebesgue 引理与局部性
 
@@ -134,9 +140,11 @@ $$\lim_{n\to\infty}\int_a^b f(t)\sin nt\,dt=0 \quad(\cos nt,\ e^{int}\ \text{同
 
 **定义 3.4(Dini 条件)**：$f$ 在 $x$ 的空心邻域定义。若 (1) 左右极限 $f(x-),f(x+)$ 存在；(2) 存在小 $\varepsilon$ 使 $\displaystyle\int_0^{\varepsilon}\frac{|f(x-t)-f(x-)|+|f(x+t)-f(x+)|}{t}dt$ 收敛。
 
+> [!info] Dini 条件的直觉
 > 因 $\frac1t$ 在 0 附近不可积，分子须"足够小"使乘以 $\frac1t$ 后可积——本质是对 $f$ 在 $x$ 两侧收敛速度(连续性)的要求。
 
 **充分条件**：Hölder 条件 $|f(x)-f(y)|\le C|x-y|^{\alpha}\ (\alpha>0)\Rightarrow$ Dini；分段可导且导数有界 $\Rightarrow$ Dini。例 $f(x)=\text{sgn}\,x$ 满足。
+> [!warning] Dini 条件的定位
 > Dini 是**充分不必要**条件。
 
 **定理 3.6(Dini)**：$f$ $2\pi$ 周期、可积，若在 $x_0$ 满足 Dini 条件，则
@@ -157,7 +165,8 @@ $$\lim_{N\to\infty}\int_0^{\pi}\bigl[f(x-t)+f(x+t)-f(x^-)-f(x^+)\bigr]\frac{\sin
 
 **反向**：若 $|a_n|,|b_n|\le \frac{C}{n^3}$，则 Fourier 级数及逐项求导都绝对一致收敛，收敛于一个 $C^1$ 函数 $g$（此时 $g$ 与 $f$ 的系数相同，需借助收敛性理论说明 $f=g$ 的意义——逐点/$L^2$/几乎处处）。
 
-> **原理(不是定理)**：$f$ 越光滑，Fourier 系数趋向 0 越快。例：$f=x$ 的 $b_n\sim\frac1n$，$f=|x|$ 的 $a_n\sim\frac1{n^2}$。
+> [!tip] 原理(不是定理)
+> $f$ 越光滑，Fourier 系数趋向 0 越快。例：$f=x$ 的 $b_n\sim\frac1n$，$f=|x|$ 的 $a_n\sim\frac1{n^2}$。
 
 ### 3.5 文献注记：Zygmund《Trigonometric Series》进一步结果(第 1 卷第 2 章)
 
@@ -170,6 +179,7 @@ $$\lim_{N\to\infty}\int_0^{\pi}\bigl[f(x-t)+f(x+t)-f(x^-)-f(x^+)\bigr]\frac{\sin
 5. **Gibbs 现象(Thm 9·3)**：锯齿波 $\sum\frac{\sin nx}{n}=\frac{\pi-x}{2}$ 的部分和逐点收敛但在跳点附近不一致收敛，超出右极限比例 $\frac2\pi\int_0^\pi\frac{\sin t}{t}dt\approx1.179$（冲过跳跃约 9%），且不随 $n$ 消失。有界变差函数在每个不可去间断点出现 Gibbs 现象。
 6. **系数量级(§4)**：有界变差函数 $a_n,b_n=O(\frac1n)$，不可改进为 $o(\frac1n)$（锯齿波反例）。
 
-> Rem 3.11：Zygmund §11 的 Lebesgue 判别法逻辑上蕴含 Dini、Dini–Lipschitz、Dirichlet–Jordan，但条件不便验证。
+> [!info] Rem 3.11 (Zygmund)
+> Zygmund §11 的 Lebesgue 判别法逻辑上蕴含 Dini、Dini–Lipschitz、Dirichlet–Jordan，但条件不便验证。
 
 **衔接**：下一节(§4)由 Hardy《Divergent Series》引入 Cesàro 求和与 Abel 求和（广义求和），用以处理原级数发散的情形。此为后续课程内容。
