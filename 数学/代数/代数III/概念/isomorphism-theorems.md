@@ -18,11 +18,11 @@ confidence: high
 > [!note] 因子分解定理(Thm de factorisation)
 > $G$ 群,$H \trianglelefteq G$,$f: G \to K$ 态射。存在 $\bar{f}: G/H \to K$ 使下图交换
 > $$
-> \begin{CD}
-> G @>f>> K \\
-> @V\pi VV @| \\
-> G/H @>\bar{f}>> K
-> \end{CD}
+> \begin{array}{ccc}
+> G & \xrightarrow{\;\;f\;\;} & K \\
+> \pi\ \Big\downarrow & \underset{\bar{f}}{\nearrow} \\
+> G/H & &
+> \end{array}
 > $$
 > **当且仅当** $H \subset \ker f$。
 >

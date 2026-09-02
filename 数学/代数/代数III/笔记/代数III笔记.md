@@ -140,11 +140,11 @@ Ainsi : un sous-groupe distingué est toujours le noyau d'un morphisme : $H = \k
 Soit $G$ groupe, $H \trianglelefteq G$, $K$ groupe et $f : G \to K$ un morphisme :
 
 $$
-\begin{CD}
-G @>f>> K \\
-@V\pi VV @| \\
-G/H @>\overline{F}>> K
-\end{CD}
+\begin{array}{ccc}
+G & \xrightarrow{\;\;f\;\;} & K \\
+\pi\ \Big\downarrow & \underset{\overline{F}}{\nearrow} \\
+G/H & &
+\end{array}
 $$
 
 Alors il existe un morphisme $\overline{F} : G/H \to K$ tel que $f = \overline{F} \circ \pi$ **si et seulement si** $H \subset \ker f$.
@@ -169,11 +169,11 @@ Ainsi, si $G$ fini : $|G| = |\mathrm{Im}\, f| \cdot |\mathrm{Ker}\, f|$ (car $|G
 **Thm :** Soit $G$ groupe, $A$ groupe commutatif et $f : G \longrightarrow A$ un morphisme. Alors $f$ se factorise à travers $G/\mathfrak{D}(G)$ :
 
 $$
-\begin{CD}
-G @>f>> A \\
-@V\pi VV @| \\
-G/\mathfrak{D}(G) @>\bar{f}>> A
-\end{CD}
+\begin{array}{ccc}
+G & \xrightarrow{\;\;f\;\;} & A \\
+\pi\ \Big\downarrow & \underset{\bar{f}}{\nearrow} \\
+G/\mathfrak{D}(G) & &
+\end{array}
 $$
 
 > [!info] Rem
@@ -184,11 +184,11 @@ Ce que dit le thm : $G/\mathfrak{D}(G)$ est le **plus grand quotient commutatif*
 
 En effet :
 $$
-\begin{CD}
-G @>\pi_1>> G/H \\
-@V\pi VV @AA\bar{\pi}_1A \\
-G/\mathfrak{D}(G) @= G/\mathfrak{D}(G)
-\end{CD}
+\begin{array}{ccc}
+G & \xrightarrow{\;\;\pi_1\;\;} & G/H \\
+& \underset{\pi}{\searrow} & \underset{\bar{\pi}_1}{\nearrow} \\
+& & G/\mathfrak{D}(G)
+\end{array}
 $$
 $\bar{\pi}_1$ est donné par le thm ; il est surjectif car $\pi_1$ est surjectif.
 
