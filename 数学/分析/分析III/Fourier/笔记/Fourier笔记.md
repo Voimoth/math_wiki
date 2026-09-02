@@ -7,7 +7,7 @@ tags: [fourier-series, notes, 分析III]
 confidence: high
 ---
 
-# Fourier 级数 合并笔记
+# Fourier 级数 笔记
 
 > 涵盖范围：第 1—3 章（引言/分离变量、定义与计算、逐点收敛理论）。第 4—8 章（Cesàro/Abel、L² 理论、应用、Fourier 变换）为后续课程，尚未覆盖。
 
