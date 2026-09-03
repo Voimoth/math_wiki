@@ -29,4 +29,4 @@ sha256: not-computed (local file, immutable source)
 - 法国体系风格:物理动机 → 分离变量 → 级数理论 → L² → 变换,层层递进
 - 证明完整(如 Riemann-Lebesgue 四步证明、Fejér 核非负性)
 - 带 (*) 的是进阶内容:Weyl 等分布、发散级数反例、海森堡不确定性原理
-- 与 [[fourier-series]] 等概念页一一对应,详见 [[fourier-handout-2026]]
+- 与 [[傅里叶级数]] 等概念页一一对应,详见 [[Fourier讲义2026]]

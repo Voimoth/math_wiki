@@ -1,4 +1,4 @@
-﻿---
+---
 title: 中法班 Fourier 讲义(殷浩)
 created: 2026-08-31
 updated: 2026-09-02
@@ -23,9 +23,9 @@ confidence: high
 
 | 讲义章节 | 对应 wiki 概念页 |
 |---|---|
-| 1. 引言(物理方程、分离变量) | [[separation-of-variables]]、[[fourier-series]] 的动机部分 |
-| 2. 定义与计算(实/复形式、算例、一般区间) | [[fourier-series]] |
-| 3. 逐点收敛理论 | [[dirichlet-kernel]]、[[convergence-of-fourier-series]]、[[gibbs-phenomenon]] |
+| 1. 引言(物理方程、分离变量) | [[分离变量法]]、[[傅里叶级数]] 的动机部分 |
+| 2. 定义与计算(实/复形式、算例、一般区间) | [[傅里叶级数]] |
+| 3. 逐点收敛理论 | [[狄利克雷核]]、[[傅里叶级数收敛]]、[[吉布斯现象]] |
 
 > 讲义目录中还有第 4-8 章(Cesàro/Abel 求和、L² 理论、应用、Fourier 变换),为后续课程尚未覆盖;对应概念页暂缺,待课程推进再补。
 
@@ -39,6 +39,6 @@ confidence: high
 
 ## 相关
 
-- [[fourier-literature]] — 其他教材(Stein-Shakarchi 等)作为补充
-- [[fourier-learning-path]] — 学习路线图(本讲义为主干)
-- [[fourier-series]] — 核心概念页
+- [[傅里叶文献]] — 其他教材(Stein-Shakarchi 等)作为补充
+- [[傅里叶学习路径]] — 学习路线图(本讲义为主干)
+- [[傅里叶级数]] — 核心概念页

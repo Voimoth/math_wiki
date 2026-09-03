@@ -37,5 +37,5 @@ confidence: high
 
 ## 相关概念
 
-- [[fourier-series]] — 第 1-2 章主题
-- [[convergence-of-fourier-series]] — 第 3 章主题
+- [[傅里叶级数]] — 第 1-2 章主题
+- [[傅里叶级数收敛]] — 第 3 章主题
