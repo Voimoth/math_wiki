@@ -40,6 +40,34 @@ confidence: high
 > **反例**:$A_4 \triangleleft \mathfrak{S}_4$,而 $V = \{\mathrm{Id}, (12)(34), (13)(24), (14)(23)\} \cong \mathbb{Z}/2 \times \mathbb{Z}/2$ 满足 $V \triangleleft A_4$,但 $V$ **不是** $\mathfrak{S}_4$ 的正规子群。
 > 正规性**不传递**——这是最容易犯的错误。
 
+## 矩阵群中的例子
+
+> [!example] 正规子群: $\mathrm{SL}_n(k)\trianglelefteq\mathrm{GL}_n(k)$
+> 行列式是群态射:
+> $$\det:\mathrm{GL}_n(k)\to k^\times.$$
+> 因为 $\mathrm{SL}_n(k)=\ker(\det)$,所以 $\mathrm{SL}_n(k)$ 正规。直接看共轭:
+> $$\det(PAP^{-1})=\det(P)\det(A)\det(P)^{-1}=1$$
+> 当 $A\in\mathrm{SL}_n(k)$ 时仍成立。
+>
+> [!example] 非正规子群:对角矩阵群
+> $$D=\left\{\begin{pmatrix}a&0\\0&b\end{pmatrix}:a,b\in k^\times\right\}\leq\mathrm{GL}_2(k).$$
+> 取 $A=\begin{pmatrix}2&0\\0&1\end{pmatrix}$ 和 $P=\begin{pmatrix}1&1\\0&1\end{pmatrix}$,则
+> $$PAP^{-1}=\begin{pmatrix}2&-1\\0&1\end{pmatrix}\notin D.$$
+> 因而 $D$ 在 $\mathrm{GL}_2(k)$ 中通常不正规。"对角"依赖于所选基底,一般换基不保持。
+>
+> [!example] 母群会影响正规性
+> 令
+> $$U=\left\{\begin{pmatrix}1&t\\0&1\end{pmatrix}:t\in k\right\},\quad
+> B=\left\{\begin{pmatrix}a&b\\0&d\end{pmatrix}:a,d\in k^\times\right\}.$$
+> 则 $U\trianglelefteq B$,因为
+> $$\begin{pmatrix}a&b\\0&d\end{pmatrix}
+> \begin{pmatrix}1&t\\0&1\end{pmatrix}
+> \begin{pmatrix}a&b\\0&d\end{pmatrix}^{-1}
+> =\begin{pmatrix}1&\frac adt\\0&1\end{pmatrix}\in U.$$
+> 但 $U$ 在 $\mathrm{SL}_2(k)$ 中通常不正规:用
+> $$w=\begin{pmatrix}0&-1\\1&0\end{pmatrix}$$
+> 共轭得到下三角幺正矩阵。
+
 ## 学习提示
 
 - 验证正规:检验 $ghg^{-1} \in H$(比"左=右陪集"更实用)
