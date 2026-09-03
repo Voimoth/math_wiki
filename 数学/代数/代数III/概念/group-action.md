@@ -11,7 +11,7 @@ confidence: high
 # 群作用 (Action d'un groupe sur un ensemble)
 
 > [!note] 定义:群作用
-> 群 $G$ **作用**在集合 $X$ 上 = 有态射 $\varphi: G \to \mathcal{G}(X)$,其中 $\mathcal{G}(X)$ = $X$ 的双射群。
+> 群 $G$ **作用**在集合 $X$ 上 = 有态射 $\varphi: G \to \mathfrak S(X)$,其中 $\mathfrak S(X)$ = $X$ 的双射群。
 > 等价地:映射 $G \times X \to X$, $(g,x) \mapsto g \cdot x$ 满足:
 > 1. $g \cdot (g' \cdot x) = (gg') \cdot x$
 > 2. $e \cdot x = x$

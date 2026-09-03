@@ -243,7 +243,7 @@ $$\frac{M}{\mathrm{Ker}(\pi_1)} \cong \mathrm{Im}(\pi_1) \quad\Longrightarrow\qu
 > Il n'est **pas vrai** en général que $K \trianglelefteq G$ — la normalité n'est pas transitive!
 
 > [!example] Contre-exemple
-> $G_4$ = groupe des permutations de $\{1,2,3,4\}$ ; $A_4 \subset G_4$ groupe alterné (permutations de signature $+1$), et $A_4 \lhd G_4$.
+> $\mathfrak{S}_4$ = groupe des permutations de $\{1,2,3,4\}$ ; $A_4 \subset \mathfrak{S}_4$ groupe alterné (permutations de signature $+1$), et $A_4 \lhd \mathfrak{S}_4$.
 > Dans $A_4$, considérons $V = \{ \mathrm{Id}, (12)(34), (13)(24), (14)(23) \}$.
 >
 > Posons $a = (12)(34)$, $b = (13)(24)$, $c = (14)(23)$. On a $a^2 = b^2 = c^2 = \mathrm{Id}$ et $a \cdot b = c = b \cdot a$. Donc $V$ est commutatif :
