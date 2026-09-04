@@ -1,13 +1,25 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="700" height="430" viewBox="0 0 700 430">
-  <rect width="700" height="430" fill="white"/>
-  <ellipse cx="350" cy="215" rx="230" ry="105" fill="none" stroke="#222" stroke-width="3"/>
-  <path d="M120 215 C120 155 223 110 350 110 C477 110 580 155 580 215 C580 275 477 320 350 320 C223 320 120 275 120 215" fill="none" stroke="#222" stroke-width="2" stroke-dasharray="8 7" opacity="0.65"/>
-  <path d="M350 55 L350 375" stroke="#1f4e79" stroke-width="4"/>
-  <circle cx="350" cy="215" r="7" fill="#222"/>
-  <circle cx="350" cy="55" r="8" fill="#c0392b"/>
-  <circle cx="350" cy="375" r="8" fill="#c0392b"/>
-  <text x="368" y="222" font-family="Times New Roman, serif" font-size="28" fill="#222">O</text>
-  <text x="370" y="64" font-family="Times New Roman, serif" font-size="28" fill="#c0392b">p</text>
-  <text x="370" y="385" font-family="Times New Roman, serif" font-size="28" fill="#c0392b">−p</text>
-  <text x="350" y="410" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" fill="#555">diamètre de la sphère S²</text>
+<svg xmlns="http://www.w3.org/2000/svg" width="760" height="480" viewBox="0 0 760 480">
+  <rect width="760" height="480" fill="#ffffff"/>
+  <g fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <!-- outer silhouette of the sphere -->
+    <ellipse cx="380" cy="235" rx="245" ry="155" stroke="#202124" stroke-width="3"/>
+    <!-- rear half of the latitude circle, hidden by the sphere -->
+    <path d="M135,235 C135,185 245,145 380,145 C515,145 625,185 625,235" stroke="#687078" stroke-width="2.5" stroke-dasharray="9 8"/>
+    <!-- front half of the latitude circle -->
+    <path d="M135,235 C135,285 245,325 380,325 C515,325 625,285 625,235" stroke="#202124" stroke-width="3"/>
+    <!-- an oblique diameter: rear portion dashed, visible portion solid -->
+    <path d="M190,120 L380,235" stroke="#7b1e1e" stroke-width="4" stroke-dasharray="10 8"/>
+    <path d="M380,235 L570,350" stroke="#7b1e1e" stroke-width="4"/>
+    <!-- axis direction marker -->
+    <path d="M380,235 L535,329" stroke="#7b1e1e" stroke-width="1.5" stroke-dasharray="3 7" opacity="0.7"/>
+  </g>
+  <circle cx="380" cy="235" r="7" fill="#202124"/>
+  <circle cx="190" cy="120" r="8" fill="#b3261e"/>
+  <circle cx="570" cy="350" r="8" fill="#b3261e"/>
+  <g font-family="Times New Roman, serif" font-size="30">
+    <text x="160" y="112" fill="#b3261e">p</text>
+    <text x="584" y="363" fill="#b3261e">−p</text>
+    <text x="397" y="229" fill="#202124">O</text>
+  </g>
+  <text x="380" y="425" text-anchor="middle" font-family="Arial, sans-serif" font-size="19" fill="#4b5563">sphère S² : diamètre oblique et ligne de latitude</text>
 </svg>

@@ -353,7 +353,7 @@ $$|O(x)| \mid |G|$$
 
    morphisme de groupes (associativité), injectif.
 
-   **Corollaire :** Théorème de Cayley  .
+   **Corollaire :** Théorème de Cayley..
    Soit $G$ groupe fini, $|G|=n$. Alors $G$ est isomorphe à un sous-groupe du groupe symétrique $\mathfrak{S}_n$
 
 2. Soit $H$ sous-groupe de $G$. Alors $G$ agit par translations à gauche sur $G/H$
@@ -380,7 +380,7 @@ En effet : $\forall g \in G$, $a \in G \quad \psi(a.\text{Stab}(a)) = a.x$
 $$\begin{aligned}
 \psi(g.(a\text{Stab}(a))) &= \psi((ga).\text{Stab}(a)) \\
 &= (ga).x = g.(a.x) \\
-&= g.\psi(a.\text{Stab}(a))
+&= g.\psi(a.\text{Stab}(a)).
 \end{aligned}$$
 
 ---
@@ -393,10 +393,10 @@ Cas particulier : Pour l'action de $G$ dans $G/H$
 
 $$\text{Stab}(aH) = aHa^{-1}, \quad \text{car } \text{Stab}(H) = H$$
 
-**Rem.** : L'action par translation de $G$ sur $G/H$ n'est pas fidèle en général :
+**Rem :** L'action par translation de $G$ sur $G/H$ n'est pas fidèle en général :
 $$\operatorname{Ker}\varphi=\bigcap_{a\in G}aHa^{-1}$$
 
-**Prop.** : Soit $G$ groupe infini qui possède un sous-groupe $H$ d'indice fini $(|G/H|<+\infty)$.
+**Prop :** : Soit $G$ groupe infini qui possède un sous-groupe $H$ d'indice fini $(|G/H|<+\infty)$.
 Alors $G$ n'est pas un groupe simple.
 
 **Preuve** : Considérons l'opération de $G$ sur $G/H$
@@ -545,7 +545,7 @@ $$\begin{pmatrix} 1 & 0 & 0 \\ 0 & \cos\theta & \sin\theta \\ 0 & -\sin\theta & 
 
 Si $g \in G$, $g \neq e$ : son axe intersecte la sphère $S^2$ de rayon 1 en 2 points $p$ et $-p$, appelés les pôles de $G$
 
-![[附件/球面直径与极点.svg]]
+![[附件/球面直径与极点.svg]].
 
 Soit $X =$ ensemble des pôles des éléments de $G \neq \{e\}$
 
@@ -575,10 +575,10 @@ Soit $Gx_i = \text{Stab}(x_i)$ $\qquad |O_i| = \frac{|G|}{|Gx_i|}$
 $$\begin{aligned}
 N &= \frac{1}{|G|}\left(\sum_{i=1}^{m}|O_i|+2(|G|-1)\right) \\
 &= \sum_{i=1}^{N}\frac{1}{|Gx_i|} + 2\left(1-\frac{1}{|G|}\right) \\
-N &= \sum_{i=1}^{N}\frac{1}{|Gx_i|} \quad (\star\star) \sum_{i=1}^{N}\left(1-\frac{1}{|Gx_i|}\right) = 2\left(1-\frac{1}{|G|}\right)
+N &= \sum_{i=1}^{N}\frac{1}{|Gx_i|} \quad (\star\star) \sum_{i=1}^{N}\left(1-\frac{1}{|Gx_i|}\right) = 2\left(1-\frac{1}{|G|}\right).
 \end{aligned}$$
 
-**Rem** $|G| \geq 2 \qquad \frac{1}{2} \leq 1-\frac{1}{|G|} < 1$
+**Rem :** $|G| \geq 2 \qquad \frac{1}{2} \leq 1-\frac{1}{|G|} < 1$
 
 De même $Gx_i$ contient $\text{Id}$, et aussi une rotation $\neq \text{Id}$ dont l'axe est la droite $Rx_i$.
 $|Gx_i| \geq 2$
@@ -586,7 +586,7 @@ $|Gx_i| \geq 2$
 $$
 \begin{aligned}
 &\frac{1}{2} \leq 1-\frac{1}{\left|G_{x_{i}}\right|}<1 \\
-&\frac{N}{2} \leq \sum_{i=1}^{N}\left(1-\frac{1}{\left|G_{i}\right|}\right)=2\left(1-\frac{1}{|G|}\right)<2
+&\frac{N}{2} \leq \sum_{i=1}^{N}\left(1-\frac{1}{\left|G_{i}\right|}\right)=2\left(1-\frac{1}{|G|}\right)<2.
 \end{aligned}
 $$
 
@@ -618,7 +618,7 @@ on suppose $\quad e_{1} \leq e_{2} \leq e_{3}$
 
 $$\begin{aligned}
 &2-\frac{2}{|G|}=3-\frac{1}{e_{1}}-\frac{1}{e_{2}}-\frac{1}{e_{3}} \\
-&\boxed{1+\frac{2}{|G|}=\frac{1}{e_{1}}+\frac{1}{e_{2}}+\frac{1}{e_{3}}} \quad>1
+&\boxed{1+\frac{2}{|G|}=\frac{1}{e_{1}}+\frac{1}{e_{2}}+\frac{1}{e_{3}}} \quad>1.
 \end{aligned}$$
 
 Nécessairement $e_{1}=2$
@@ -638,7 +638,7 @@ $\boxed{\text{où } e_{2}=2 \text{ ou } e_{2}=3}$
 $$\begin{aligned}
 &\frac{2}{|G|}=\frac{1}{e_{3}} \qquad |G|=2e_{3} \quad\text{. Bosons } m=e_{3} \\
 &|D_{1}|=\frac{|G|}{e_{1}}=m=|D_{2}| \\
-&|D_{3}|=2
+&|D_{3}|=2.
 \end{aligned}$$
 
 Rem l'action de $G$ sur $X$ est la restruction à $X$  
