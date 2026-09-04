@@ -344,7 +344,7 @@ $$|O(x)| \mid |G|$$
 
 ---
 
-**Exemples**
+### Exemples
 
 1. Action de $G$ sur lui-même par translation à gauche :
    pour $g \in G$, $\varphi(g)\colon \begin{array}{rcl} G & \longrightarrow & G \\ a & \longmapsto & ga \end{array}$.
@@ -393,18 +393,20 @@ Cas particulier : Pour l'action de $G$ dans $G/H$.
 
 $$\text{Stab}(aH) = aHa^{-1}, \quad \text{car } \text{Stab}(H) = H$$
 
-**Rem :** L'action par translation de $G$ sur $G/H$ n'est pas fidèle en général :
-$$\operatorname{Ker}\varphi=\bigcap_{a\in G}aHa^{-1}$$
+> [!info] Rem : action sur $G/H$ non fidèle
+> L'action par translation de $G$ sur $G/H$ n'est pas fidèle en général :
+> $$\operatorname{Ker}\varphi=\bigcap_{a\in G}aHa^{-1}$$
 
-**Prop :** Soit $G$ groupe infini qui possède un sous-groupe $H$ d'indice fini $(|G/H|<+\infty)$.
-Alors $G$ n'est pas un groupe simple.
+> [!note] Prop : groupe infini non simple
+> Soit $G$ groupe infini qui possède un sous-groupe $H$ d'indice fini $(|G/H|<+\infty)$.
+> Alors $G$ n'est pas un groupe simple.
 
 **Preuve :** Considérons l'opération de $G$ sur $G/H$.
 $$\varphi\colon G\longrightarrow\mathfrak{S}(G/H).$$
 Mais $\mathfrak{S}(G/H)$ est un groupe fini, donc $\varphi$ ne peut pas être injective. Comme $H\neq G$, $\operatorname{Ker}\varphi\neq G$.
 D'où $\operatorname{Ker}\varphi\triangleleft G$ avec $\operatorname{Ker}\varphi\neq\{e\}$ et $\neq G$.
 
-3. Action de $G$ sur lui-même par conjugaison.
+### 3. Action de $G$ sur lui-même par conjugaison
 $\forall g\in G$, on pose $\Psi(g)\colon\begin{array}{rcl}G&\longrightarrow&G\\ a&\longmapsto&gag^{-1}\end{array}$.
 $\Psi(g)=$ automorphisme intérieur défini par $g$.
 
@@ -440,7 +442,7 @@ GL_n(k)\times S_n(k) & \longrightarrow & S_n(k) \\
 (P,Q) & \longmapsto & P\,Q\,{}^tP.
 \end{array}$$
 
-**Points Fixes pour une action de groupe**
+### Points fixes pour une action de groupe
 
 $G$ agit sur $X$. On note $\displaystyle X^G = \{\text{points fixes}\} = \{x \in X; \forall g \in G, g\cdot x = x\}$.
 
@@ -448,11 +450,10 @@ $$x \in X^G \Longleftrightarrow O(x) = \{x\}$$
 
 ---
 
-**Thm :** *Equation aux classes*.
-
-Soit $G$ agissant sur $X$. Alors
-$$X = X^G \sqcup \bigsqcup_{|O(\alpha_i)| \geq 2} O(\alpha_i)$$
-réunion disjointe de $X^G$ et des orbites non réduites à un point.
+> [!note] Thm : Equation aux classes
+> Soit $G$ agissant sur $X$. Alors
+> $$X = X^G \sqcup \bigsqcup_{|O(\alpha_i)| \geq 2} O(\alpha_i)$$
+> réunion disjointe de $X^G$ et des orbites non réduites à un point.
 
 ---
 
@@ -481,21 +482,15 @@ on a $|X|\equiv |X^G| \bmod k$.
 
 D'après la Prop., $|Z(G)|\equiv |G| \bmod p$.
 
-Mais $|G|\equiv 0 \bmod p$. Mais $|Z(G)|\geqslant 1$ car $e\in Z(G)$. Donc $p\mid |Z(G)|$, donc $|Z(G)|\geqslant k$.
+Mais $|G|\equiv 0 \bmod p$. Mais $|Z(G)|\geqslant 1$ car $e\in Z(G)$. Donc $p\mid |Z(G)|$, donc $|Z(G)|\geqslant p$.
 
 ---
 
-**Thm :** Formule de Burnside.
-
-Soit $G$ groupe fini, agissant sur $X$ fini.
-
-Pour $g\in G$, soit $\mathrm{Fix}(g)=\{x\in X;\; g\cdot x=x\}$.
-
-ensemble des points fixes de $g$.
-
-Alors le nombre $N$ d'orbites de $X$ est :
-
-$$N=\frac{1}{|G|}\sum_{g\in G}|\mathrm{Fix}(g)|$$
+> [!note] Thm : Formule de Burnside
+> Soit $G$ groupe fini, agissant sur $X$ fini.
+> Pour $g\in G$, soit $\mathrm{Fix}(g)=\{x\in X;\; g\cdot x=x\}$, l'ensemble des points fixes de $g$.
+> Alors le nombre $N$ d'orbites de $X$ est :
+> $$N=\frac{1}{|G|}\sum_{g\in G}|\mathrm{Fix}(g)|$$
 
 **Preuve :**
 
@@ -523,22 +518,23 @@ $$\begin{aligned}
 
 **Preuve :** Ici $N=1$.
 $$\begin{aligned}
-1 &= \frac{1}{|G|}\sum_{g\in G}|Fix(g)| \\
-&= \frac{1}{|G|}\left(|X|+\sum_{g\neq e}|Fix(g)|\right).
+1 &= \frac{1}{|G|}\sum_{g\in G}|\mathrm{Fix}(g)| \\
+&= \frac{1}{|G|}\left(|X|+\sum_{g\neq e}|\mathrm{Fix}(g)|\right).
 \end{aligned}$$
 
-Ici $|X|\geq 2$ et si on avait $\forall g\in G$, $|Fix(g)|\geq 1$ on aurait une contradiction.
+Ici $|X|\geq 2$ et si on avait $\forall g\in G$, $|\mathrm{Fix}(g)|\geq 1$ on aurait une contradiction.
 
 **Application :** Sous-groupes finis du groupe des rotations de l'espace euclidien $\mathbb{R}^3$, $SO(3)$.
 
-**Thm :** Soit $G\subset SO(3)$ sous-groupe fini. Alors $G$ est isomorphe à l'un des groupes suivants :
-1) groupe cyclique $\mathbb{Z}/n\mathbb{Z}$ , $n\geq 2$.
-2) groupe diédral $D_{2n}$ (groupe des isométries du polygone régulier à $n$ côtés).
-3) $\mathcal{A}_4$.
-4) $\mathcal{S}_4$.
-5) $\mathcal{A}_5$.
+> [!note] Thm : sous-groupes finis de $SO(3)$
+> Soit $G\subset SO(3)$ sous-groupe fini. Alors $G$ est isomorphe à l'un des groupes suivants :
+> 1. groupe cyclique $\mathbb{Z}/n\mathbb{Z}$, $n\geq 2$ ;
+> 2. groupe diédral $D_{2n}$ (groupe des isométries du polygone régulier à $n$ côtés) ;
+> 3. $\mathcal{A}_4$ ;
+> 4. $\mathcal{S}_4$ ;
+> 5. $\mathcal{A}_5$.
 
-Preuve :
+**Preuve :**
 
 Si $r \in SO(3)$, $r \neq \text{Id}$. On dispose de l'axe de $r$, droite vectorielle des points fixes. Dans une base orthonormée convenable, $r$ a pour matrice.
 $$\begin{pmatrix} 1 & 0 & 0 \\ 0 & \cos\theta & \sin\theta \\ 0 & -\sin\theta & \cos\theta \end{pmatrix}$$
@@ -597,11 +593,11 @@ De plus, $N>1$ via $(\star)$, car si $N=1$ on aurait $|X|+|G|=2$ d'où $|G|=|X|=
 
 **Conclusion :** $N \in\{2,3\}$.
 
-**Remarque** : les stabilisateurs $G_{x_{i}}$ sont des *groupes cycliques* : les éléments de $G_{x_{i}}$ sont des rotations de même axe $\mathbb{R} \alpha_{i}$. Ainsi $G_{x_{i}}$ est en bijection avec un sous-groupe fini du groupe des rotations du plan $(\mathbb{R} \alpha_{i})^{\perp}$.
+**Remarque :** les stabilisateurs $G_{x_{i}}$ sont des *groupes cycliques* : les éléments de $G_{x_{i}}$ sont des rotations de même axe $\mathbb{R} \alpha_{i}$. Ainsi $G_{x_{i}}$ est en bijection avec un sous-groupe fini du groupe des rotations du plan $(\mathbb{R} \alpha_{i})^{\perp}$.
 
 ---
 
-**1. Étude du cas $N=2$**
+### 1. Étude du cas $N=2$
 
 Posons $e_{i}=\left|G_{x_{i}}\right|$.
 
@@ -613,7 +609,7 @@ nécessairement $e_{1}=e_{2}=|G|$, i.e $G_{x_{1}}=G_{x_{2}}=G$.
 
 Donc $G$ cyclique $x_{2}=-x_{1}, \quad X=\left\{x_{1} ; x_{2}\right\}$.
 
-**2. Étude du cas $N=3$**
+### 2. Étude du cas $N=3$
 
 on suppose $\quad e_{1} \leq e_{2} \leq e_{3}$.
 
@@ -634,7 +630,7 @@ $\boxed{\text{où } e_{2}=2 \text{ ou } e_{2}=3}$.
 
 ---
 
-**a)** Cas où $e_{1}=2$ et $e_{2}=2$.
+#### a) Cas où $e_{1}=2$ et $e_{2}=2$
 
 $$\begin{aligned}
 &\frac{2}{|G|}=\frac{1}{e_{3}}, \qquad |G|=2e_{3}, \quad m=e_{3} \\
@@ -683,7 +679,7 @@ $$
 
 ---
 
-b) $\underline{\text{Cas } e_1=2, e_2=3}$.
+#### b) Cas où $e_1=2$, $e_2=3$
 
 Nécessairement $e_3 \in \{3, 4, 5\}$.
 
@@ -699,25 +695,22 @@ On trouve $G \simeq S_4$.
 
 $\underline{\text{Si } e_1=2, e_2=3, e_3=5} \quad |G|=60$.
 
-On trouve $G \simeq A_5$ Car $A_5$ est l'unique groupe simple d'ordre 60.
+On trouve $G \simeq A_5$. Car $A_5$ est l'unique groupe simple d'ordre 60.
 
 # Théorèmes de Sylow
 
-**Motivation :** Thm de Lagrange : si $H \subset G$ sous groupe alors $|H| \mid |G|$.
-
-**Question :** Soit $d \mid |G|$, existe-t-il un sous-groupe de $G$ de cardinal $d$?
-
-**Non !**
-
-**Exercice :** $G = \mathbb{Z}/4\mathbb{Z}$, $|G|=12$.
-
-$G$ ne possède pas de sous-groupe d'ordre 6.
+> [!question] Motivation et question
+> **Motivation :** Thm de Lagrange : si $H \subset G$ sous groupe alors $|H| \mid |G|$.
+> Soit $d \mid |G|$, existe-t-il un sous-groupe de $G$ de cardinal $d$ ?
+> **Non !**
+> **Exercice :** $G = \mathbb{Z}/4\mathbb{Z}$, $|G|=12$. $G$ ne possède pas de sous-groupe d'ordre 6.
 
 ## Situation favorable
 
-Soit $k$ nombre premier, $G$ $k$-groupe, $|G|=p^n$.
+Soit $p$ nombre premier, $G$ un $p$-groupe, $|G|=p^n$.
 
-**Prop :** $\forall i \in \{1,\ldots,n-1\}$ $G$ possède un sous-groupe d'ordre $p^i$.
+> [!note] Prop : sous-groupes d'ordre $p^i$
+> $\forall i \in \{1,\ldots,n-1\}$, $G$ possède un sous-groupe d'ordre $p^i$.
 
 **Preuve :** Récurrence sur $m$.
 
