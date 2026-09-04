@@ -7,9 +7,9 @@
   <line x1="239.5" y1="169.5" x2="380" y2="235" stroke="#8b1e1e" stroke-width="3.5" stroke-dasharray="10 8"/>
   <line x1="380" y1="235" x2="520.5" y2="300.5" stroke="#8b1e1e" stroke-width="3.5" stroke-dasharray="10 8"/>
   <line x1="520.5" y1="300.5" x2="700" y2="384" stroke="#8b1e1e" stroke-width="3.5"/>
-  <!-- 纬线：后半(上方)虚线，前半(下方)实线。 -->
-  <path d="M250,235 A130,52 0 0 1 510,235" fill="none" stroke="#687078" stroke-width="2.5" stroke-dasharray="9 8"/>
-  <path d="M250,235 A130,52 0 0 0 510,235" fill="none" stroke="#202124" stroke-width="3"/>
+  <!-- 纬线：两端与球轮廓相切；后半(上方)虚线，前半(下方)实线。 -->
+  <path d="M225,235 A155,60 0 0 1 535,235" fill="none" stroke="#687078" stroke-width="2.5" stroke-dasharray="9 8"/>
+  <path d="M225,235 A155,60 0 0 0 535,235" fill="none" stroke="#202124" stroke-width="3"/>
   <!-- 球心和直径端点。 -->
   <circle cx="380" cy="235" r="7" fill="#202124"/>
   <circle cx="239.5" cy="169.5" r="8" fill="#b3261e"/>

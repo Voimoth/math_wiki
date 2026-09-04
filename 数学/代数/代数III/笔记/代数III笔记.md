@@ -369,18 +369,18 @@ $$|O(x)| \mid |G|$$
 
    i.e. « $f$ transforme l'action de $G$ sur $X$ en l'action de $G$ sur $Y$ ».
 
-**Prop :** Soit $G$ agissant sur $X$, $x \in X$. Alors la bijection $\psi: \underset{\text{Stab}(x)}{G/} \longrightarrow O(x)$ est $G$ équivariante.
+**Prop :** Soit $G$ agissant sur $X$, $x \in X$. Alors la bijection $\psi: G/\operatorname{Stab}(x) \longrightarrow O(x)$ est $G$-équivariante.
 
-Ainsi : pour étudier l'action de $G$ sur une orbite, on se ramène à étudier l'action par translation à gauche sur $\underset{\text{Stab}(x)}{G/}$.
+Ainsi : pour étudier l'action de $G$ sur une orbite, on se ramène à étudier l'action par translation à gauche sur $G/\operatorname{Stab}(x)$.
 
 Cas particulier : action transitive.
 
-En effet : $\forall g \in G$, $a \in G \quad \psi(a\cdot\text{Stab}(a)) = a\cdot x$.
+En effet : $\forall g \in G$, $a \in G \quad \psi(a\cdot\text{Stab}(x)) = a\cdot x$.
 
 $$\begin{aligned}
-\psi(g\cdot(a\text{Stab}(a))) &= \psi((ga)\cdot\text{Stab}(a)) \\
+\psi(g\cdot(a\text{Stab}(x))) &= \psi((ga)\cdot\text{Stab}(x)) \\
 &= (ga)\cdot x = g\cdot(a\cdot x) \\
-&= g\cdot\psi(a\cdot\text{Stab}(a)).
+&= g\cdot\psi(a\cdot\text{Stab}(x)).
 \end{aligned}$$
 
 ---
@@ -467,13 +467,13 @@ Alors $\displaystyle |X| \equiv |X^G| \pmod{k}$.
 
 *Preuve :* équation aux classes, et le fait que $|O(\alpha_i)| \mid |G|$. Comme $|G| = k^n$, si $|O(\alpha_i)| \geq 2$,
 
-alors $|O(G)|=p^k$ avec $k\geqslant 1$, donc $p\vert|O(G)|$.
+alors $|O(\alpha_i)|=k^r$ avec $r\geqslant 1$, donc $k\mid |O(\alpha_i)|$.
 
-si $|O(G)|\geqslant 2$ ?
+si $|O(\alpha_i)|\geqslant 2$ ?
 
-$$|X|=|X^G|+\sum_{|O(G)|\geqslant 2}|O(\omega)|$$
+$$|X|=|X^G|+\sum_{|O(\alpha_i)|\geqslant 2}|O(\alpha_i)|$$
 
-on a $|X|\equiv |X^G| \bmod p$.
+on a $|X|\equiv |X^G| \bmod k$.
 
 **Thm :** Si $G$ est un $p$-groupe, alors le centre de $G$ est $\neq \{e\}$, i.e. $Z(G)$ non trivial.
 
@@ -570,23 +570,24 @@ $$N=\frac{1}{|G|}\left(|X|+2(|G|-1)\right) \quad (\star)$$
 On décompose $X$ en réunion disjointe d'orbites,
 on choisit un élément $x_i$ dans chaque orbite $O_i$.
 
-Soit $Gx_i = \text{Stab}(x_i)$ $\qquad |O_i| = \frac{|G|}{|Gx_i|}$.
+Soit $G_{x_i} = \text{Stab}(x_i)$ $\qquad |O_i| = \frac{|G|}{|G_{x_i}|}$.
 
 $$\begin{aligned}
 N &= \frac{1}{|G|}\left(\sum_{i=1}^{m}|O_i|+2(|G|-1)\right) \\
-&= \sum_{i=1}^{N}\frac{1}{|Gx_i|} + 2\left(1-\frac{1}{|G|}\right) \\
-N &= \sum_{i=1}^{N}\frac{1}{|Gx_i|} \quad (\star\star) \sum_{i=1}^{N}\left(1-\frac{1}{|Gx_i|}\right) = 2\left(1-\frac{1}{|G|}\right).
+&= \sum_{i=1}^{N}\frac{1}{|G_{x_i}|} + 2\left(1-\frac{1}{|G|}\right) \\
+N &= \sum_{i=1}^{N}\frac{1}{|G_{x_i}|} + 2\left(1-\frac{1}{|G|}\right) \quad (\star\star) \\
+\sum_{i=1}^{N}\left(1-\frac{1}{|G_{x_i}|}\right) &= 2\left(1-\frac{1}{|G|}\right).
 \end{aligned}$$
 
 **Rem :** $|G| \geq 2 \qquad \frac{1}{2} \leq 1-\frac{1}{|G|} < 1$.
 
-De même $Gx_i$ contient $\text{Id}$, et aussi une rotation $\neq \text{Id}$ dont l'axe est la droite $Rx_i$.
-$|Gx_i| \geq 2$.
+De même $G_{x_i}$ contient $\text{Id}$, et aussi une rotation $\neq \text{Id}$ dont l'axe est la droite $\mathbb{R}x_i$.
+$|G_{x_i}| \geq 2$.
 
 $$
 \begin{aligned}
 &\frac{1}{2} \leq 1-\frac{1}{\left|G_{x_{i}}\right|}<1 \\
-&\frac{N}{2} \leq \sum_{i=1}^{N}\left(1-\frac{1}{\left|G_{i}\right|}\right)=2\left(1-\frac{1}{|G|}\right)<2.
+&\frac{N}{2} \leq \sum_{i=1}^{N}\left(1-\frac{1}{\left|G_{x_i}\right|}\right)=2\left(1-\frac{1}{|G|}\right)<2.
 \end{aligned}
 $$
 
@@ -602,7 +603,7 @@ De plus, $N>1$ via $(\star)$, car si $N=1$ on aurait $|X|+|G|=2$ d'où $|G|=|X|=
 
 **1. Étude du cas $N=2$**
 
-Posons $e_{i}=\left|G x_{i}\right|$.
+Posons $e_{i}=\left|G_{x_{i}}\right|$.
 
 $$
 (\star \star) \quad \frac{1}{e_{1}}+\frac{1}{e_{2}}=\frac{2}{|G|} \quad \text { avec } e_{1}, e_{2} \leq|G|.
@@ -650,9 +651,9 @@ Supposons $m\geq 3:$ Comment étudier $O_{3}$?
 
 $x \in O_3$, $|O(x)|=|O(-x)|=2$. Comme il y a
 une seule orbite de cardinal 2 $O_3=\{x,-x\}$.
-$G_{\mathbb{Z}_3}$ groupe cyclique d'ordre $n$, d'axe $\mathbb{R}z_3$.
-Soit $y \in O_1$, $|Gy|=2$, $Gy=\{\text{Id}, r\}$ où $r$ est
-une rotation d'angle $\pi$. $Gy$ agit dans l'orbite.
+$G_{z_3}$ groupe cyclique d'ordre $n$, d'axe $\mathbb{R}z_3$.
+Soit $y \in O_1$, $|G_y|=2$, $G_y=\{\text{Id}, r\}$ où $r$ est
+une rotation d'angle $\pi$. $G_y$ agit dans l'orbite.
 $O_3=O(z_3)$. Comme $x$ et $y$ non colinéaires, $r(x_3)\neq x_3$
 donne $r(x_3)=-z_3$. Donc $z_3 \perp y$ ($x=z_3$).
 Considérons une base orthonormée de $\mathbb{R}^3$.
