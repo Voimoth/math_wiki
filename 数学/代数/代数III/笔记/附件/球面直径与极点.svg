@@ -1,23 +1,23 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="760" height="480" viewBox="0 0 760 480">
   <rect width="760" height="480" fill="#ffffff"/>
-  <!-- 正球面的投影轮廓。 -->
+  <!-- 正球面轮廓。 -->
   <circle cx="380" cy="235" r="155" fill="#ffffff" stroke="#202124" stroke-width="3"/>
-  <!-- 穿过 p、O、−p 的整条直线；球面背后的直径半段用虚线。 -->
-  <line x1="70" y1="50" x2="248" y2="155" stroke="#8b1e1e" stroke-width="3.5" stroke-dasharray="10 8"/>
-  <line x1="248" y1="155" x2="380" y2="235" stroke="#8b1e1e" stroke-width="3.5"/>
-  <line x1="380" y1="235" x2="512" y2="315" stroke="#8b1e1e" stroke-width="3.5" stroke-dasharray="10 8"/>
-  <line x1="512" y1="315" x2="690" y2="420" stroke="#8b1e1e" stroke-width="3.5"/>
-  <!-- 纬线：后半段用虚线，前半段用实线。 -->
-  <path d="M225,235 C225,198 295,180 380,180 C465,180 535,198 535,235" fill="none" stroke="#687078" stroke-width="2.5" stroke-dasharray="9 8"/>
-  <path d="M225,235 C225,272 295,290 380,290 C465,290 535,272 535,235" fill="none" stroke="#202124" stroke-width="3"/>
+  <!-- 直径所在斜直线：球外实线，球内虚线。 -->
+  <line x1="60" y1="86" x2="239.5" y2="169.5" stroke="#8b1e1e" stroke-width="3.5"/>
+  <line x1="239.5" y1="169.5" x2="380" y2="235" stroke="#8b1e1e" stroke-width="3.5" stroke-dasharray="10 8"/>
+  <line x1="380" y1="235" x2="520.5" y2="300.5" stroke="#8b1e1e" stroke-width="3.5" stroke-dasharray="10 8"/>
+  <line x1="520.5" y1="300.5" x2="700" y2="384" stroke="#8b1e1e" stroke-width="3.5"/>
+  <!-- 纬线：后半(上方)虚线，前半(下方)实线。 -->
+  <path d="M250,235 A130,52 0 0 1 510,235" fill="none" stroke="#687078" stroke-width="2.5" stroke-dasharray="9 8"/>
+  <path d="M250,235 A130,52 0 0 0 510,235" fill="none" stroke="#202124" stroke-width="3"/>
   <!-- 球心和直径端点。 -->
   <circle cx="380" cy="235" r="7" fill="#202124"/>
-  <circle cx="248" cy="155" r="8" fill="#b3261e"/>
-  <circle cx="512" cy="315" r="8" fill="#b3261e"/>
+  <circle cx="239.5" cy="169.5" r="8" fill="#b3261e"/>
+  <circle cx="520.5" cy="300.5" r="8" fill="#b3261e"/>
   <g font-family="Times New Roman, serif" font-size="30">
-    <text x="216" y="143" fill="#b3261e">p</text>
-    <text x="526" y="333" fill="#b3261e">−p</text>
-    <text x="397" y="229" fill="#202124">O</text>
+    <text x="180" y="126" fill="#b3261e">p</text>
+    <text x="608" y="330" fill="#b3261e">−p</text>
+    <text x="397" y="222" fill="#202124">O</text>
   </g>
-  <text x="380" y="425" text-anchor="middle" font-family="Arial, sans-serif" font-size="19" fill="#4b5563">sphère S² : droite diamètre et ligne de latitude.</text>
+  <text x="380" y="440" text-anchor="middle" font-family="Arial, sans-serif" font-size="19" fill="#4b5563">sphère S² : droite diamètre et ligne de latitude.</text>
 </svg>

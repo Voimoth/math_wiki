@@ -38,7 +38,7 @@ $$
 > [!example] Exemples de groupes.
 > - **groupes cycliques** $\mathbb{Z}/n\mathbb{Z}$
 > - **groupes de permutations**: $X$ ensemble, $\mathfrak{S}(X) = \{f : X \longrightarrow X, \text{ bijective}\}$;si $X = \{1, \dots, n\}$,$\mathfrak{S}_n = \mathfrak{S}(\{1, \dots, n\})$ **groupe symétrique**
-> - **groupe linéaire**: $k$ corps,$\mathrm{GL}_n(k) = \{\text{matrices inversibles } n \times n\}$
+> - **groupe linéaire :** $k$ corps, $\mathrm{GL}_n(k) = \{\text{matrices inversibles } n \times n\}$.
 
 ### 1.2 Sous-groupe
 
@@ -326,7 +326,7 @@ $$
 est bijective.
 
 **Preuve :**
-- Bien définie : si $g \cdot \mathrm{Stab}(x) = g' \cdot \mathrm{Stab}(x)$, alors $\exists h \in \mathrm{Stab}(x)$ tel que $g = g' h$, donc.
+- Bien définie : si $g \cdot \mathrm{Stab}(x) = g' \cdot \mathrm{Stab}(x)$, alors $\exists h \in \mathrm{Stab}(x)$ tel que $g = g' h$, donc
   $$g \cdot x = g' \cdot (h \cdot x) = g' \cdot x$$
 - Surjective : par définition de l'orbite.
 - Injective : si.
@@ -347,49 +347,49 @@ $$|O(x)| \mid |G|$$
 **Exemples**
 
 1. Action de $G$ sur lui-même par translation à gauche :
-   pour $g \in G$, $\varphi(g)\colon \begin{array}{rcl} G & \longrightarrow & G \\ a & \longmapsto & ga \end{array}$
+   pour $g \in G$, $\varphi(g)\colon \begin{array}{rcl} G & \longrightarrow & G \\ a & \longmapsto & ga \end{array}$.
 
-   $\varphi$ est une application $\psi\colon \begin{array}{rcl} G & \longrightarrow & \mathfrak{S}(G) \\ g & \longmapsto & \varphi(g) \end{array}$
+   $\varphi$ est une application $\psi\colon \begin{array}{rcl} G & \longrightarrow & \mathfrak{S}(G) \\ g & \longmapsto & \varphi(g) \end{array}$.
 
    morphisme de groupes (associativité), injectif.
 
    **Corollaire :** Théorème de Cayley.
-   Soit $G$ groupe fini, $|G|=n$. Alors $G$ est isomorphe à un sous-groupe du groupe symétrique $\mathfrak{S}_n$
+   Soit $G$ groupe fini, $|G|=n$. Alors $G$ est isomorphe à un sous-groupe du groupe symétrique $\mathfrak{S}_n$.
 
-2. Soit $H$ sous-groupe de $G$. Alors $G$ agit par translations à gauche sur $G/H$
+2. Soit $H$ sous-groupe de $G$. Alors $G$ agit par translations à gauche sur $G/H$.
 
-   Soit $g \in G$, soit $\varphi(g)\colon \begin{array}{rcl} G/H & \longrightarrow & G/H \\ aH & \longmapsto & gaH \end{array}$
+   Soit $g \in G$, soit $\varphi(g)\colon \begin{array}{rcl} G/H & \longrightarrow & G/H \\ aH & \longmapsto & gaH \end{array}$.
 
    **Déf :** $G$ groupe, $X, Y$ ensembles sur lesquels $G$ agit. On dit qu'une application $f\colon X \longrightarrow Y$ est $G$-équivariante si :
 
    $$\forall x \in X,\; \forall g \in G \quad f(g \cdot x) = g \cdot f(x)$$
 
-   $\uparrow$ action de $G$ sur $X$  
-   $\qquad\qquad\;\;$ action de $G$ sur $Y$
+   $\uparrow$ action de $G$ sur $X$.
+   $\qquad\qquad\;\;$ action de $G$ sur $Y$.
 
    i.e. « $f$ transforme l'action de $G$ sur $X$ en l'action de $G$ sur $Y$ ».
 
 **Prop :** Soit $G$ agissant sur $X$, $x \in X$. Alors la bijection $\psi: \underset{\text{Stab}(x)}{G/} \longrightarrow O(x)$ est $G$ équivariante.
 
-Ainsi : pour étudier l'action de $G$ sur une orbite, on se ramène à étudier l'action par translation à gauche sur $\underset{\text{Stab}(x)}{G/}$
+Ainsi : pour étudier l'action de $G$ sur une orbite, on se ramène à étudier l'action par translation à gauche sur $\underset{\text{Stab}(x)}{G/}$.
 
 Cas particulier : action transitive.
 
-En effet : $\forall g \in G$, $a \in G \quad \psi(a.\text{Stab}(a)) = a.x$
+En effet : $\forall g \in G$, $a \in G \quad \psi(a\cdot\text{Stab}(a)) = a\cdot x$.
 
 $$\begin{aligned}
-\psi(g.(a\text{Stab}(a))) &= \psi((ga).\text{Stab}(a)) \\
-&= (ga).x = g.(a.x) \\
-&= g.\psi(a.\text{Stab}(a)).
+\psi(g\cdot(a\text{Stab}(a))) &= \psi((ga)\cdot\text{Stab}(a)) \\
+&= (ga)\cdot x = g\cdot(a\cdot x) \\
+&= g\cdot\psi(a\cdot\text{Stab}(a)).
 \end{aligned}$$
 
 ---
 
-**Prop :** Si $G$ agit sur $X$ et $x \in X$. Alors $$\text{Stab}(g.x) = g.\text{Stab}(x)g^{-1}$$
+**Prop :** Si $G$ agit sur $X$ et $x \in X$, alors $$\text{Stab}(g\cdot x) = g\,\text{Stab}(x)\,g^{-1}.$$
 
-En effet : $h.(g.x) = g.x \Longleftrightarrow (g^{-1}hg).x = x \Longleftrightarrow g^{-1}hg \in \text{Stab}(x)$
+En effet : $h\cdot(g\cdot x) = g\cdot x \Longleftrightarrow (g^{-1}hg)\cdot x = x \Longleftrightarrow g^{-1}hg \in \text{Stab}(x)$.
 
-Cas particulier : Pour l'action de $G$ dans $G/H$
+Cas particulier : Pour l'action de $G$ dans $G/H$.
 
 $$\text{Stab}(aH) = aHa^{-1}, \quad \text{car } \text{Stab}(H) = H$$
 
@@ -399,26 +399,26 @@ $$\operatorname{Ker}\varphi=\bigcap_{a\in G}aHa^{-1}$$
 **Prop :** Soit $G$ groupe infini qui possède un sous-groupe $H$ d'indice fini $(|G/H|<+\infty)$.
 Alors $G$ n'est pas un groupe simple.
 
-**Preuve :** Considérons l'opération de $G$ sur $G/H$
+**Preuve :** Considérons l'opération de $G$ sur $G/H$.
 $$\varphi\colon G\longrightarrow\mathfrak{S}(G/H).$$
 Mais $\mathfrak{S}(G/H)$ est un groupe fini, donc $\varphi$ ne peut pas être injective. Comme $H\neq G$, $\operatorname{Ker}\varphi\neq G$.
 D'où $\operatorname{Ker}\varphi\triangleleft G$ avec $\operatorname{Ker}\varphi\neq\{e\}$ et $\neq G$.
 
-3. Action de $G$ sur lui-même par conjugaison  .
-$\forall g\in G$, on pose $\Psi(g)\colon\begin{array}{rcl}G&\longrightarrow&G\\ a&\longmapsto&gag^{-1}\end{array}$  
-$\Psi(g)=$ automorphisme intérieur défini par $g$
+3. Action de $G$ sur lui-même par conjugaison.
+$\forall g\in G$, on pose $\Psi(g)\colon\begin{array}{rcl}G&\longrightarrow&G\\ a&\longmapsto&gag^{-1}\end{array}$.
+$\Psi(g)=$ automorphisme intérieur défini par $g$.
 
-**Terminologie** Ici, $\operatorname{Stab}(a)$ est appelé le centralisateur de $a$, aussi noté $Z(a)$
+**Terminologie** Ici, $\operatorname{Stab}(a)$ est appelé le centralisateur de $a$, aussi noté $Z(a)$.
 
 # Actions de groupes et résultats de classification
 
 ## 1. Classes d'équivalence de matrices
 
-$k$ corps $\quad M_{n,p}(k)=\begin{cases} \text{matrices } n \text{ lignes, } p \text{ colonnes} \\ \text{à coefficients dans } k \end{cases}$
+$k$ corps $\quad M_{n,p}(k)=\begin{cases} \text{matrices } n \text{ lignes, } p \text{ colonnes} \\ \text{à coefficients dans } k \end{cases}$.
 
 Soit $G=GL_n(k)\times GL_p(k)$ produit.
 
-$G$ agit sur $M_{n,p}(k)$
+$G$ agit sur $M_{n,p}(k)$.
 $$\begin{array}{ccc}
 G\times M_{n,p}(k) & \longrightarrow & M_{n,p}(k) \\
 ((g_1,g_2),m) & \longmapsto & g_1mg_2^{-1}
@@ -428,13 +428,13 @@ les orbites de cette action sont les classes d'équivalence de matrices.
 
 **Thm :** 2 matrices sont équivalentes $\Leftrightarrow$ même rang.
 
-Pour $r \leq n,p$ représentant $I_r=\begin{pmatrix} I_r & 0 \\ 0 & 0 \end{pmatrix}$
+Pour $r \leq n,p$ représentant $I_r=\begin{pmatrix} I_r & 0 \\ 0 & 0 \end{pmatrix}$.
 
 ## 2. Classes de similitude de matrices carrées
 
 ## 3. Réduction des formes quadratiques
 
-Action du groupe $GL_n(k)$ sur l'espace des matrices symétriques $S_n(k)\subset M_n(k)$
+Action du groupe $GL_n(k)$ sur l'espace des matrices symétriques $S_n(k)\subset M_n(k)$.
 $$\begin{array}{ccc}
 GL_n(k)\times S_n(k) & \longrightarrow & S_n(k) \\
 (P,Q) & \longmapsto & P\,Q\,{}^tP.
@@ -442,7 +442,7 @@ GL_n(k)\times S_n(k) & \longrightarrow & S_n(k) \\
 
 **Points Fixes pour une action de groupe**
 
-$G$ agit sur $X$. On note $\displaystyle X^G = \{\text{points fixes}\} = \{x \in X; \forall g \in G, g\cdot x = x\}$
+$G$ agit sur $X$. On note $\displaystyle X^G = \{\text{points fixes}\} = \{x \in X; \forall g \in G, g\cdot x = x\}$.
 
 $$x \in X^G \Longleftrightarrow O(x) = \{x\}$$
 
@@ -450,7 +450,7 @@ $$x \in X^G \Longleftrightarrow O(x) = \{x\}$$
 
 **Thm :** *Equation aux classes*.
 
-Soit $G$ agissant sur $X$. Alors.
+Soit $G$ agissant sur $X$. Alors
 $$X = X^G \sqcup \bigsqcup_{|O(\alpha_i)| \geq 2} O(\alpha_i)$$
 réunion disjointe de $X^G$ et des orbites non réduites à un point.
 
@@ -458,16 +458,16 @@ réunion disjointe de $X^G$ et des orbites non réduites à un point.
 
 ## Application
 
-**Déf :** Soit $k$ nombre premier  .
-On appelle **$k$-groupe** un groupe dont le cardinal est une puissance de $k$
+**Déf :** Soit $k$ nombre premier.
+On appelle **$k$-groupe** un groupe dont le cardinal est une puissance de $k$.
 $$|G| = k^n,\ n \geq 1.$$
 
 **Prop :** Soit $G$ un $k$-groupe agissant sur $X$ fini.  
-Alors $\displaystyle |X| \equiv |X^G| \pmod{k}$
+Alors $\displaystyle |X| \equiv |X^G| \pmod{k}$.
 
-*Preuve :* équation aux classes, et le fait que $|O(\alpha_i)| \mid |G|$. Comme $|G| = k^n$, si $|O(\alpha_i)| \geq 2$
+*Preuve :* équation aux classes, et le fait que $|O(\alpha_i)| \mid |G|$. Comme $|G| = k^n$, si $|O(\alpha_i)| \geq 2$,
 
-alors $|O(G)|=p^k$ avec $k\geqslant 1$, donc $p\vert|O(G)|$
+alors $|O(G)|=p^k$ avec $k\geqslant 1$, donc $p\vert|O(G)|$.
 
 si $|O(G)|\geqslant 2$ ?
 
@@ -475,23 +475,23 @@ $$|X|=|X^G|+\sum_{|O(G)|\geqslant 2}|O(\omega)|$$
 
 on a $|X|\equiv |X^G| \bmod p$.
 
-$\underline{\text{Thm}}$ Si $G$ est un $p$-groupe, alors le centre de $G$ est $\neq \{e\}$; i.e $Z(G)$ non trivial.
+**Thm :** Si $G$ est un $p$-groupe, alors le centre de $G$ est $\neq \{e\}$, i.e. $Z(G)$ non trivial.
 
-$\underline{\text{Preuve}}$ On considère l'action de $G$ sur lui-même par conjugaison. On a $Z(G)=\{g\in G\mid \forall x\in G,\; xgx^{-1}=g\}$
+**Preuve :** On considère l'action de $G$ sur lui-même par conjugaison. On a $Z(G)=\{g\in G\mid \forall x\in G,\; xgx^{-1}=g\}$.
 
-D'après la Prop., $|Z(G)|\equiv |G| \bmod p$
+D'après la Prop., $|Z(G)|\equiv |G| \bmod p$.
 
 Mais $|G|\equiv 0 \bmod p$. Mais $|Z(G)|\geqslant 1$ car $e\in Z(G)$. Donc $p\mid |Z(G)|$, donc $|Z(G)|\geqslant k$.
 
 ---
 
-$\underline{\text{Thm}}$: Formule de Burnside.
+**Thm :** Formule de Burnside.
 
 Soit $G$ groupe fini, agissant sur $X$ fini.
 
-Pour $g\in G$, soit $\mathrm{Fix}(g)=\{x\in X;\; g\cdot x=x\}$
+Pour $g\in G$, soit $\mathrm{Fix}(g)=\{x\in X;\; g\cdot x=x\}$.
 
-ensemble des points fixes de $g$
+ensemble des points fixes de $g$.
 
 Alors le nombre $N$ d'orbites de $X$ est :
 
@@ -499,7 +499,7 @@ $$N=\frac{1}{|G|}\sum_{g\in G}|\mathrm{Fix}(g)|$$
 
 **Preuve :**
 
-On a : $x \in \mathrm{Fix}(g) \Leftrightarrow g \cdot x = x \Leftrightarrow g \in \mathrm{Stab}(x)$
+On a : $x \in \mathrm{Fix}(g) \Leftrightarrow g \cdot x = x \Leftrightarrow g \in \mathrm{Stab}(x)$.
 
 $$\begin{aligned}
 &\text{Soit } E = \{(g,x) \in G \times X ; g \cdot x = x\} \\
@@ -521,7 +521,7 @@ $$\begin{aligned}
 
 **Prop :** Soit $G$ groupe fini, agissant sur $X$ fini, $|X|\geq 2$ transitivement. Alors il y a au moins un élément $g\in G$ sans point fixe.
 
-**Preuve :** Ici $N=1$
+**Preuve :** Ici $N=1$.
 $$\begin{aligned}
 1 &= \frac{1}{|G|}\sum_{g\in G}|Fix(g)| \\
 &= \frac{1}{|G|}\left(|X|+\sum_{g\neq e}|Fix(g)|\right).
@@ -529,48 +529,48 @@ $$\begin{aligned}
 
 Ici $|X|\geq 2$ et si on avait $\forall g\in G$, $|Fix(g)|\geq 1$ on aurait une contradiction.
 
-**Application :** Sous-groupes finis du groupe des rotations de l'espace euclidien $\mathbb{R}^3$, $SO(3)$
+**Application :** Sous-groupes finis du groupe des rotations de l'espace euclidien $\mathbb{R}^3$, $SO(3)$.
 
 **Thm :** Soit $G\subset SO(3)$ sous-groupe fini. Alors $G$ est isomorphe à l'un des groupes suivants :
-1) groupe cyclique $\mathbb{Z}/n\mathbb{Z}$ , $n\geq 2$
+1) groupe cyclique $\mathbb{Z}/n\mathbb{Z}$ , $n\geq 2$.
 2) groupe diédral $D_{2n}$ (groupe des isométries du polygone régulier à $n$ côtés).
-3) $\mathcal{A}_4$
-4) $\mathcal{S}_4$
-5) $\mathcal{A}_5$
+3) $\mathcal{A}_4$.
+4) $\mathcal{S}_4$.
+5) $\mathcal{A}_5$.
 
 Preuve :
 
 Si $r \in SO(3)$, $r \neq \text{Id}$. On dispose de l'axe de $r$, droite vectorielle des points fixes. Dans une base orthonormée convenable, $r$ a pour matrice.
 $$\begin{pmatrix} 1 & 0 & 0 \\ 0 & \cos\theta & \sin\theta \\ 0 & -\sin\theta & \cos\theta \end{pmatrix}$$
 
-Si $g \in G$, $g \neq e$ : son axe intersecte la sphère $S^2$ de rayon 1 en 2 points $p$ et $-p$, appelés les pôles de $G$
+Si $g \in G$, $g \neq e$ : son axe intersecte la sphère $S^2$ de rayon 1 en 2 points $p$ et $-p$, appelés les pôles de $G$.
 
-![[球面直径与极点.svg|附件/球面直径与极点.svg]]
+![[附件/球面直径与极点.svg]]
 
-Soit $X =$ ensemble des pôles des éléments de $G \neq \{e\}$
+Soit $X =$ ensemble des pôles des éléments de $G \neq \{e\}$.
 
 Alors $G$ agit sur $X$, car il agit sur lui-même par conjugaison.
 
-Soit $g \in G$. Soit $p \in X$, pôle de $r \in G$. Soit $g \in G$. Alors $grg^{-1} \in G$ et $g(p)$ (pour l'action habituelle de $SO(3)$ sur $\mathbb{R}^3$) est un pôle de $grg^{-1}$. Ainsi $g(p) \in X$
+Soit $g \in G$. Soit $p \in X$, pôle de $r \in G$. Soit $g \in G$. Alors $grg^{-1} \in G$ et $g(p)$ (pour l'action habituelle de $SO(3)$ sur $\mathbb{R}^3$) est un pôle de $grg^{-1}$. Ainsi $g(p) \in X$.
 
 On a ainsi, par restriction à $X$, une action de $G$ sur $X$.
 
 Soit $N$ le nombre d'orbites.
 
-**Prop :** On a $N=2$ ou $N=3$
+**Prop :** On a $N=2$ ou $N=3$.
 
-**Preuve :** Burnside $N=\frac{1}{|G|}\sum\limits_{g \in G} |\text{Fix}(g)|$
+**Preuve :** Burnside $N=\frac{1}{|G|}\sum\limits_{g \in G} |\text{Fix}(g)|$.
 
-Si $g=e=\text{Id}$, $\text{Fix}(g)=X$
+Si $g=e=\text{Id}$, $\text{Fix}(g)=X$.
 
-Si $g \neq \text{Id}$, $\text{Fix}(g)=\{\text{pôles de }g\}$, $|\text{Fix}(g)|=2$
+Si $g \neq \text{Id}$, $\text{Fix}(g)=\{\text{pôles de }g\}$, $|\text{Fix}(g)|=2$.
 
 $$N=\frac{1}{|G|}\left(|X|+2(|G|-1)\right) \quad (\star)$$
 
 On décompose $X$ en réunion disjointe d'orbites,
-on choisit un élément $x_i$ dans chaque orbite $O_i$
+on choisit un élément $x_i$ dans chaque orbite $O_i$.
 
-Soit $Gx_i = \text{Stab}(x_i)$ $\qquad |O_i| = \frac{|G|}{|Gx_i|}$
+Soit $Gx_i = \text{Stab}(x_i)$ $\qquad |O_i| = \frac{|G|}{|Gx_i|}$.
 
 $$\begin{aligned}
 N &= \frac{1}{|G|}\left(\sum_{i=1}^{m}|O_i|+2(|G|-1)\right) \\
@@ -578,10 +578,10 @@ N &= \frac{1}{|G|}\left(\sum_{i=1}^{m}|O_i|+2(|G|-1)\right) \\
 N &= \sum_{i=1}^{N}\frac{1}{|Gx_i|} \quad (\star\star) \sum_{i=1}^{N}\left(1-\frac{1}{|Gx_i|}\right) = 2\left(1-\frac{1}{|G|}\right).
 \end{aligned}$$
 
-**Rem :** $|G| \geq 2 \qquad \frac{1}{2} \leq 1-\frac{1}{|G|} < 1$
+**Rem :** $|G| \geq 2 \qquad \frac{1}{2} \leq 1-\frac{1}{|G|} < 1$.
 
 De même $Gx_i$ contient $\text{Id}$, et aussi une rotation $\neq \text{Id}$ dont l'axe est la droite $Rx_i$.
-$|Gx_i| \geq 2$
+$|Gx_i| \geq 2$.
 
 $$
 \begin{aligned}
@@ -590,11 +590,11 @@ $$
 \end{aligned}
 $$
 
-Ainsi $N<4$
+Ainsi $N<4$.
 
-De plus, $N>1$ via $(\star)$, car si $N=1$ on aurait $|X|+|G|=2$ d'où $|G|=|X|=1$
+De plus, $N>1$ via $(\star)$, car si $N=1$ on aurait $|X|+|G|=2$ d'où $|G|=|X|=1$.
 
-**Conclusion** $N \in\{2,3\}$
+**Conclusion :** $N \in\{2,3\}$.
 
 **Remarque** : les stabilisateurs $G_{x_{i}}$ sont des *groupes cycliques* : les éléments de $G_{x_{i}}$ sont des rotations de même axe $\mathbb{R} \alpha_{i}$. Ainsi $G_{x_{i}}$ est en bijection avec un sous-groupe fini du groupe des rotations du plan $(\mathbb{R} \alpha_{i})^{\perp}$.
 
@@ -602,72 +602,72 @@ De plus, $N>1$ via $(\star)$, car si $N=1$ on aurait $|X|+|G|=2$ d'où $|G|=|X|=
 
 **1. Étude du cas $N=2$**
 
-Posons $e_{i}=\left|G x_{i}\right|$
+Posons $e_{i}=\left|G x_{i}\right|$.
 
 $$
 (\star \star) \quad \frac{1}{e_{1}}+\frac{1}{e_{2}}=\frac{2}{|G|} \quad \text { avec } e_{1}, e_{2} \leq|G|.
 $$
 
-nécessairement $e_{1}=e_{2}=|G|$, i.e $G_{x_{1}}=G_{x_{2}}=G$
+nécessairement $e_{1}=e_{2}=|G|$, i.e $G_{x_{1}}=G_{x_{2}}=G$.
 
-Donc $G$ cyclique $x_{2}=-x_{1}, \quad X=\left\{x_{1} ; x_{2}\right\}$
+Donc $G$ cyclique $x_{2}=-x_{1}, \quad X=\left\{x_{1} ; x_{2}\right\}$.
 
 **2. Étude du cas $N=3$**
 
-on suppose $\quad e_{1} \leq e_{2} \leq e_{3}$
+on suppose $\quad e_{1} \leq e_{2} \leq e_{3}$.
 
 $$\begin{aligned}
 &2-\frac{2}{|G|}=3-\frac{1}{e_{1}}-\frac{1}{e_{2}}-\frac{1}{e_{3}} \\
 &\boxed{1+\frac{2}{|G|}=\frac{1}{e_{1}}+\frac{1}{e_{2}}+\frac{1}{e_{3}}} \quad>1.
 \end{aligned}$$
 
-Nécessairement $e_{1}=2$
+Nécessairement $e_{1}=2$.
 
 $$\frac{1}{2}+\frac{2}{|G|}=\frac{1}{e_{2}}+\frac{1}{e_{3}} \quad>\frac{1}{2}$$
 
-nécessairement $e_{2}\leq 3$ (sinon $e_{3}\geq e_{2}\geq 4$
+nécessairement $e_{2}\leq 3$ (sinon $e_{3}\geq e_{2}\geq 4$).
 
 $$\frac{1}{e_{2}}+\frac{1}{e_{3}}\leq\frac{1}{2}$$
 
-$\boxed{\text{où } e_{2}=2 \text{ ou } e_{2}=3}$
+$\boxed{\text{où } e_{2}=2 \text{ ou } e_{2}=3}$.
 
 ---
 
-**a)** Cas où $e_{1}=2$ et $e_{2}=2$
+**a)** Cas où $e_{1}=2$ et $e_{2}=2$.
 
 $$\begin{aligned}
-&\frac{2}{|G|}=\frac{1}{e_{3}} \qquad |G|=2e_{3} \quad\text{. Bosons } m=e_{3} \\
+&\frac{2}{|G|}=\frac{1}{e_{3}}, \qquad |G|=2e_{3}, \quad m=e_{3} \\
 &|D_{1}|=\frac{|G|}{e_{1}}=m=|D_{2}| \\
 &|D_{3}|=2.
 \end{aligned}$$
 
-Rem l'action de $G$ sur $X$ est la restruction à $X$  
-d'une action linéaire $\quad g(-x)=-g(x)$
+**Rem :** l'action de $G$ sur $X$ est la restriction à $X$
+d'une action linéaire $g(-x)=-g(x)$.
 
 $$\forall x \quad G_{x}=G_{-x}, \text{ d'où } |\mathcal{O}(x)|=|\mathcal{O}(-x)|$$
 
 Supposons $m\geq 3:$ Comment étudier $O_{3}$?
 
-$x \in O_3$, $|O(x)|=|O(-x)|=2$. Comme il y a.
-une seule orbite de cardinal 2 $O_3=\{x,-x\}$
-$G_{\mathbb{Z}_3}$ groupe cyclique d'ordre $n$, d'axe $\mathbb{R}z_3$
-Soit $y \in O_1$, $|Gy|=2$, $Gy=\{\text{Id}, r\}$ où $r$ est.
+$x \in O_3$, $|O(x)|=|O(-x)|=2$. Comme il y a
+une seule orbite de cardinal 2 $O_3=\{x,-x\}$.
+$G_{\mathbb{Z}_3}$ groupe cyclique d'ordre $n$, d'axe $\mathbb{R}z_3$.
+Soit $y \in O_1$, $|Gy|=2$, $Gy=\{\text{Id}, r\}$ où $r$ est
 une rotation d'angle $\pi$. $Gy$ agit dans l'orbite.
 $O_3=O(z_3)$. Comme $x$ et $y$ non colinéaires, $r(x_3)\neq x_3$
 donne $r(x_3)=-z_3$. Donc $z_3 \perp y$ ($x=z_3$).
-Considérons une base orthonormée de $\mathbb{R}^3$
+Considérons une base orthonormée de $\mathbb{R}^3$.
 $(x, y_{13})$. Dans cette base, les éléments de $G$
 ont des matrices de la forme :
 $$\begin{pmatrix} 1 & 0 & 0 \\ 0 & \cos\theta & -\sin\theta \\ 0 & \sin\theta & \cos\theta \end{pmatrix} \text{ et } Gy=\left\{\text{Id}, \begin{pmatrix} -1 & 0 & 0 \\ 0 & 1 & 0 \\ 0 & 0 & -1 \end{pmatrix}\right\}$$
 les restrictions au plan $(\mathbb{R}x)^\perp$ sont :
-• Pour $G_x$ : un groupe cyclique de rotations.
-planes, $\simeq \mathbb{Z}/n\mathbb{Z}$
-• Pour $G_y$ : $\left\{\text{Id}, \text{symétrie orthogonale par}\right.$
-$\left.\text{rapport à } \mathbb{R}xy\right\}$
+• Pour $G_x$ : un groupe cyclique de rotations
+planes, $\simeq \mathbb{Z}/n\mathbb{Z}$.
+• Pour $G_y$ : $\left\{\text{Id}, \text{symétrie orthogonale par}\right.$.
+$\left.\text{rapport à } \mathbb{R}xy\right\}$.
 
-De plus $G_x \cap G_y=\{\text{Id}\}$
-$G_x$ est d'indice 2 dans $G$, donc il est.
-distingué dans $G$. On dispose du groupe.
+De plus $G_x \cap G_y=\{\text{Id}\}$.
+$G_x$ est d'indice 2 dans $G$, donc il est
+distingué dans $G$. On dispose du groupe
 
 $$
 \begin{aligned}
@@ -678,47 +678,47 @@ $$
 \end{aligned}
 $$
 
-$\underline{\text{Rem}}$ Si $n=2 \quad |G|=4 \quad$ A priori $G = \mathbb{Z}/4\mathbb{Z}$ ou $\underline{D_4}$
+**Rem :** Si $n=2$, $|G|=4$. A priori $G = \mathbb{Z}/4\mathbb{Z}$ ou $D_4$.
 
 ---
 
-b) $\underline{\text{Cas } e_1=2, e_2=3}$
+b) $\underline{\text{Cas } e_1=2, e_2=3}$.
 
-Nécessairement $e_3 \in \{3, 4, 5\}$
+Nécessairement $e_3 \in \{3, 4, 5\}$.
 
-On a en effet: $\displaystyle \frac{1}{e_3} = \frac{1}{6} + \frac{2}{|G|} \Rightarrow 3 \leq e_3 < 6$
+On a en effet: $\displaystyle \frac{1}{e_3} = \frac{1}{6} + \frac{2}{|G|} \Rightarrow 3 \leq e_3 < 6$.
 
-$\underline{\text{Si } e_1=2, e_2=3, e_3=3}: \quad |G|=12$
+$\underline{\text{Si } e_1=2, e_2=3, e_3=3}: \quad |G|=12$.
 
-On trouve $G \simeq A_4$
+On trouve $G \simeq A_4$.
 
-$\underline{\text{Si } e_1=2, e_2=3, e_3=4} \quad |G|=24$
+$\underline{\text{Si } e_1=2, e_2=3, e_3=4} \quad |G|=24$.
 
-On trouve $G \simeq S_4$
+On trouve $G \simeq S_4$.
 
-$\underline{\text{Si } e_1=2, e_2=3, e_3=5} \quad |G|=60$
+$\underline{\text{Si } e_1=2, e_2=3, e_3=5} \quad |G|=60$.
 
 On trouve $G \simeq A_5$ Car $A_5$ est l'unique groupe simple d'ordre 60.
 
 # Théorèmes de Sylow
 
-**Motivation** Thm de Lagrange: si $H \subset G$ sous groupe alors $|H| \mid |G|$
+**Motivation :** Thm de Lagrange : si $H \subset G$ sous groupe alors $|H| \mid |G|$.
 
-**Question:** Soit $d \mid |G|$, existe-t-il un sous-groupe de $G$ de cardinal $d$?
+**Question :** Soit $d \mid |G|$, existe-t-il un sous-groupe de $G$ de cardinal $d$?
 
-$\underline{\text{Non!}}$
+**Non !**
 
-$\underline{\text{Exercice:}}$ $G = \mathbb{Z}/4\mathbb{Z}$, $|G|=12$
+**Exercice :** $G = \mathbb{Z}/4\mathbb{Z}$, $|G|=12$.
 
 $G$ ne possède pas de sous-groupe d'ordre 6.
 
 ## Situation favorable
 
-Soit $k$ nombre premier, $G$ $k$-groupe, $|G|=p^n$
+Soit $k$ nombre premier, $G$ $k$-groupe, $|G|=p^n$.
 
-**Prop :** $\forall i \in \{1,\ldots,n-1\}$ $G$ possède un sous-groupe d'ordre $p^i$
+**Prop :** $\forall i \in \{1,\ldots,n-1\}$ $G$ possède un sous-groupe d'ordre $p^i$.
 
-**Preuve :** Récurrence sur $m$
+**Preuve :** Récurrence sur $m$.
 
 $n \geqslant 2$, le centre $Z(G)$ est non trivial.
 
@@ -726,13 +726,13 @@ Soit $g \in Z(G), g \neq e$. L'ordre de $g$ est $p^\alpha$ avec $1 \leqslant \al
 
 Sinon $g^{p^{\alpha-1}}$ est d'ordre $p$, et le sous-groupe $H$ qu'il engendre est cyclique d'ordre $p$.
 
-On a: $H \lhd G$ car $g \in Z(G)$
+On a: $H \lhd G$ car $g \in Z(G)$.
 
-On considère $G_{1}=G/H$, $|G_{1}|=p^{m-1}$
+On considère $G_{1}=G/H$, $|G_{1}|=p^{m-1}$.
 
 On applique l'hypothèse de récurrence.
 
-$$\forall \beta \in \{1,..,m-2\}, \exists K \subset G \text{ sous groupe de}$$
+$$\forall \beta \in \{1,\ldots,m-2\}, \exists K \subset G \text{ sous groupe de}$$
 
 $$\text{cardinal } p^{\beta}$$
 
