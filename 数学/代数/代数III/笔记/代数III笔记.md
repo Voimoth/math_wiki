@@ -1,11 +1,11 @@
 ---
-title: 群论讲义 Cours de Groupes (Marc Rosso).
+title: 群论讲义 Cours de Groupes (Marc Rosso)
 created: 2026-09-01
 updated: 2026-09-02
-type: entity.
-tags: [group-theory, algebre, cours].
-sources: [Cours USTC 01-09-26.pdf].
-confidence: medium.
+type: entity
+tags: [group-theory, algebre, cours]
+sources: [Cours USTC 01-09-26.pdf]
+confidence: medium
 ---
 
 # Cours de Groupes — Marc Rosso (USTC, 2026-09-01)
@@ -13,8 +13,8 @@ confidence: medium.
 > 手写法语讲义整理(OCR 转写)。原 PDF: `Cours USTC 01-09-26.pdf`。
 > 注意:OCR 转写可能存在少量错误,数学公式以原图为准。
 
-Marc Rosso.
-marc.rosso@imj-prg.fr.
+Marc Rosso
+marc.rosso@imj-prg.fr
 
 **Notations :** G, H groupes.
 
@@ -32,39 +32,39 @@ G \times G &\longrightarrow G \\
 $$
 
 - associative.
-- neutre $e \in G$
-- inverse $g^{-1}$
+- neutre $e \in G$.
+- inverse $g^{-1}$.
 
-> [!example] Exemples de groupes.
+> [!example] Exemples de groupes
 > - **groupes cycliques** $\mathbb{Z}/n\mathbb{Z}$
-> - **groupes de permutations**: $X$ ensemble, $\mathfrak{S}(X) = \{f : X \longrightarrow X, \text{ bijective}\}$;si $X = \{1, \dots, n\}$,$\mathfrak{S}_n = \mathfrak{S}(\{1, \dots, n\})$ **groupe symétrique**
-> - **groupe linéaire :** $k$ corps, $\mathrm{GL}_n(k) = \{\text{matrices inversibles } n \times n\}$.
+> - **groupes de permutations :** $X$ ensemble, $\mathfrak{S}(X) = \{f : X \longrightarrow X, \text{ bijective}\}$ ; si $X = \{1, \dots, n\}$, $\mathfrak{S}_n = \mathfrak{S}(\{1, \dots, n\})$ **groupe symétrique**
+> - **groupe linéaire :** $k$ corps, $\mathrm{GL}_n(k) = \{\text{matrices inversibles } n \times n\}$
 
 ### 1.2 Sous-groupe
 
-> [!info] Prop.
+> [!info] Prop
 > Une intersection de sous-groupes est un sous-groupe.
 
 ### 1.3 Morphisme de groupe
 
-$f : G \longrightarrow H$ tel que.
+$f : G \longrightarrow H$ tel que :
 $\forall g, g' \in G \quad f(gg') = f(g)f(g')$
 
-- Image de $f = \mathrm{Im}\, f$
+- Image de $f = \mathrm{Im}\, f$.
 - Noyau $\mathrm{Ker}\, f = \{g \in G ; f(g) = e\}$ — sous-groupe.
 
-> [!info] Remarques.
+> [!info] Remarques
 > - L'image d'un sous-groupe de $G$ est un sous-groupe de $H$.
 > - L'image réciproque $f^{-1}(K)$ d'un sous-groupe $K$ de $H$ est un sous-groupe de $G$.
 
 ### 1.4 Classe à gauche modulo un sous-groupe
 
 $H \subset G$ sous-groupe.
-Classe à gauche de $a \in G$ : $aH = \{ah, h \in H\}$ — classes d'équivalence pour la relation.
+Classe à gauche de $a \in G$ : $aH = \{ah, h \in H\}$ — classes d'équivalence pour la relation :
 $$a \mathcal{R} b \iff a^{-1}b \in H \quad\text{i.e.}\quad aH = bH$$
 elles forment une partition de $G$.
 
-**Notation** $G/H = \{\text{classes à gauche}\}$;de même : classe à droite.
+**Notation :** $G/H = \{\text{classes à gauche}\}$ ; de même : classe à droite.
 
 **Thm de Lagrange :** Si $G$ groupe fini, $H \subset G$ sous-groupe, alors $|H|$ divise $|G|$.
 
@@ -87,7 +87,7 @@ $$\langle A \rangle = \{a_1^{\varepsilon_1} \cdots a_k^{\varepsilon_k}, \ k \in 
 $$\forall g \in G, \forall h \in H, \quad g h g^{-1} \in H$$
 i.e. $g H g^{-1} = H$, i.e. $g H = H g$.
 
-> [!example] Exemples.
+> [!example] Exemples
 > 1. Le noyau $\mathrm{Ker}\, f$ d'un morphisme de groupes.
 > 2. **Centre de $G$** :
 > $$Z(G) = \{ x \in G \;/\; \forall g \in G,\ xg = gx \}$$
@@ -112,7 +112,7 @@ i.e. $g H g^{-1} = H$, i.e. $g H = H g$.
 **Déf :** $\mathfrak{D}(G)$ = sous-groupe de $G$ engendré par les **commutateurs**, i.e. par les éléments $xyx^{-1}y^{-1}$, $x,y \in G$.
 
 Notation : $[x,y] = xyx^{-1}y^{-1}$.
-Dire que $[x,y] = e$, c'est dire $xy = yx$. Donc.
+Dire que $[x,y] = e$, c'est dire $xy = yx$. Donc :
 $$\mathfrak{D}(G) = \{e\} \iff G \text{ commutatif}$$
 
 **Prop :** $\mathfrak{D}(G)$ est un sous-groupe distingué.
@@ -124,14 +124,14 @@ $$g[x,y]g^{-1} = gxyx^{-1}y^{-1}g^{-1} = (gxg^{-1})(gyg^{-1})(gxg^{-1})^{-1}(gyg
 
 ## 4. Groupe quotient
 
-**Notation :** si $H \triangleleft G$ sous-groupe distingué.
+**Notation :** si $H < G$ sous-groupe distingué, on l'écrit $H \triangleleft G$.
 
 ### 4.1 Construction
 
-**Thm :** Soit $H \triangleleft G$. Alors il existe sur $G/H$ une unique structure de groupe telle que l'application $\pi: G \to G/H$, $g \mapsto gH$ soit un morphisme de groupes, i.e. telle que.
+**Thm :** Soit $H \triangleleft G$. Alors il existe sur $G/H$ une unique structure de groupe telle que l'application $\pi: G \to G/H$, $g \mapsto gH$ soit un morphisme de groupes, i.e. telle que :
 $$(gH)(g'H) = gg'H$$
 
-(Il faut s'assurer que cette formule a un sens, i.e. : si $g_1 \in gH$, $g'_1 \in g'H$, alors $g_1g'_1 \in gg'H$.).
+(Il faut s'assurer que cette formule a un sens, i.e. : si $g_1 \in gH$, $g'_1 \in g'H$, alors $g_1g'_1 \in gg'H$.)
 
 Ainsi : un sous-groupe distingué est toujours le noyau d'un morphisme : $H = \ker \pi$, $\pi$ surjectif, et $eH = H$ est le neutre de $G/H$.
 
@@ -155,12 +155,12 @@ Alors il existe un morphisme $\overline{F} : G/H \to K$ tel que $f = \overline{F
   $$f(h) = \overline{F}(\pi(h)) = \overline{F}(H) = e$$
   ($H$ neutre de $G/H$). Ainsi $H \subset \ker f$.
 - Si $H \subset \ker f$ : on définit $\overline{F}$ par $\overline{F}(gH) = f(g)$. Vérifions que ceci est bien défini, i.e. si $gH = g'H$ alors $f(g) = f(g')$.
-  Mais $gH = g'H \Rightarrow \exists h \in H$ tel que $g' = gh$, donc.
+  Mais $gH = g'H \Rightarrow \exists h \in H$ tel que $g' = gh$, donc
   $$f(g') = f(gh) = f(g)f(h) = f(g) \qquad (H \subset \ker f)$$
   $\bar{f}$ est bien un morphisme de groupes, i.e.
   $$\bar{f}(gH \cdot g'H) = \bar{f}(gHg'H) = \bar{f}(gg'H) = f(gg') = f(g)f(g') = \bar{f}(gH) \cdot \bar{f}(g'H)$$
 
-**Corollaire.** On a un isomorphisme de groupes.
+**Corollaire :** On a un isomorphisme de groupes.
 $$G/\mathrm{Ker}\, f \longrightarrow \mathrm{Im}\, f$$
 Ainsi, si $G$ fini : $|G| = |\mathrm{Im}\, f| \cdot |\mathrm{Ker}\, f|$ (car $|G/H| = \frac{|G|}{|H|}$).
 
@@ -176,7 +176,7 @@ G/\mathfrak{D}(G) @>\bar{f}>> A.
 \end{CD}
 $$
 
-> [!info] Rem.
+> [!info] Rem
 > $G/\mathfrak{D}(G)$ est commutatif : $\pi([x,y]) = e$, et.
 > $$\pi([x,y]^g) = [\pi(x), \pi(y)] = e$$
 
@@ -213,7 +213,7 @@ Soit $H \triangleleft G$, $\pi: G \longrightarrow G/H$.
 >
 > **Prop :** $\forall d \mid n$, il y a un unique sous-groupe d'ordre $d$ de $\mathbb{Z}/n\mathbb{Z}$, qui est de plus cyclique.
 
-> [!info] Remarque importante.
+> [!info] Remarque importante
 > On a vu : si $L \subset G$ sous-groupe contenant $H$, alors $\pi(L) = L/H$.
 > Cependant, si $M \subset G$ est un sous-groupe **quelconque**, $\pi(M) \subset G/H$ est un sous-groupe ; le sous-groupe de $G$ contenant $H$ qui correspond à $\pi(M)$ est $\pi^{-1}(\pi(M))$, qui est le sous-groupe de $G$ engendré par $M$ et $H$ :
 > $$\pi^{-1}(\pi(M)) = MH = HM \quad (*)$$
@@ -225,7 +225,7 @@ Soit $H \triangleleft G$, $\pi: G \longrightarrow G/H$.
 
 ### 4.5 Deuxième théorème d'isomorphisme
 
-**Théorème :** Soit $H \trianglelefteq G$ et $M \subset G$ sous-groupe. Alors $M \cap H \trianglelefteq M$, et on a un isomorphisme.
+**Théorème :** Soit $H \trianglelefteq G$ et $M \subset G$ sous-groupe. Alors $M \cap H \trianglelefteq M$, et on a un isomorphisme :
 $$\frac{M}{M \cap H} \cong \frac{MH}{H}$$
 
 **Preuve :** On dispose du morphisme $\pi: G \to G/H$. On le restreint à $M$ : $\pi|_M = \pi_1 : M \to G/H$ morphisme.
@@ -235,14 +235,14 @@ $$\frac{M}{M \cap H} \cong \frac{MH}{H}$$
 Par le thm d'isomorphisme :
 $$\frac{M}{\mathrm{Ker}(\pi_1)} \cong \mathrm{Im}(\pi_1) \quad\Longrightarrow\quad \frac{M}{M \cap H} \cong \frac{MH}{H}$$
 
-> [!info] Rem.
+> [!info] Rem
 > Soient $M$ et $H$ sous-groupes de $G$. Alors $MH = \{mh, m \in M, h \in H\}$ est un sous-groupe $\iff MH = HM$. Ceci est le cas si $M$ ou $H$ est distingué.
 
-> [!warning] MISE EN GARDE.
+> [!warning] Mise en garde
 > Soit $G$ groupe, $H \trianglelefteq G$ et $K \trianglelefteq H$.
-> Il n'est **pas vrai** en général que $K \trianglelefteq G$ — la normalité n'est pas transitive!
+> Il n'est **pas vrai** en général que $K \trianglelefteq G$ — la normalité n'est pas transitive !
 
-> [!example] Contre-exemple.
+> [!example] Contre-exemple
 > $\mathfrak{S}_4$ = groupe des permutations de $\{1,2,3,4\}$ ; $A_4 \subset \mathfrak{S}_4$ groupe alterné (permutations de signature $+1$), et $A_4 \lhd \mathfrak{S}_4$.
 > Dans $A_4$, considérons $V = \{ \mathrm{Id}, (12)(34), (13)(24), (14)(23) \}$.
 >
@@ -278,7 +278,7 @@ On a aussi $H \subset \ker \varphi$ car $\pi_1(H) = H/K = \ker \pi_2$.
 
 **Prop :** Soit $H \subset G$ sous-groupe d'indice 2, i.e. $|G/H| = 2$. Alors $H \trianglelefteq G$.
 
-**Preuve :** Soit $g \in G$, $g \notin H$ ; alors $gH \neq H$, donc $G/H = \{H, gH\}$ et.
+**Preuve :** Soit $g \in G$, $g \notin H$ ; alors $gH \neq H$, donc $G/H = \{H, gH\}$ et
 $$G = H \sqcup gH$$
 ($\sqcup$ : réunion disjointe, i.e. réunion de 2 parties d'intersection $\emptyset$).
 De même avec les classes à droite : $G = H \sqcup Hg$, d'où $gH = Hg$.
@@ -288,10 +288,10 @@ Ceci vaut $\forall g \in G$, d'où $H \trianglelefteq G$.
 
 ## 5. Action d'un groupe sur un ensemble
 
-$X$ ensemble, $\mathcal{G}(X) = \{ f : X \to X \mid f \text{ bijection} \}$.
+$X$ ensemble, $\mathfrak{S}(X) = \{ f : X \to X \mid f \text{ bijection} \}$.
 
 **Déf :** On dit qu'un groupe $G$ **opère** (ou **agit**) sur $X$ si on a un morphisme de groupes.
-$$\varphi : G \to \mathcal{G}(X)$$
+$$\varphi : G \to \mathfrak{S}(X)$$
 notation : $\varphi(g) : x \mapsto g \cdot x$.
 Autrement dit : on a une application $G \times X \to X$, $(g, x) \mapsto g \cdot x$, telle que :
 1. $\forall g, g' \in G, \forall x \in X \quad g \cdot (g' \cdot x) = (gg') \cdot x$
@@ -304,7 +304,7 @@ Autrement dit : on a une application $G \times X \to X$, $(g, x) \mapsto g \cdot
 **Déf :** Soit $G$ agissant sur $X$ et $x \in X$. L'**orbite** de $x$ :
 $$O(x) = \{ g \cdot x ,\ g \in G \} = G \cdot x$$
 
-> [!info] Rem.
+> [!info] Rem
 > On a sur $X$ une relation d'équivalence : pour $x, y \in X$,
 > $$x \mathcal{R} y \iff \exists g \in G \;/\; y = g \cdot x$$
 > les orbites sont les classes d'équivalence. Ainsi : les orbites distinctes sont disjointes, et elles forment une partition de $X$.
@@ -314,9 +314,9 @@ $$O(x) = \{ g \cdot x ,\ g \in G \} = G \cdot x$$
 $$\mathrm{Stab}(x) = \{ g \in G ; g \cdot x = x \}$$
 (aussi noté $G_x$). C'est un sous-groupe de $G$.
 
-### 5.1 Description de l'orbite en terme du stabilisateur
+### 5.1 Description de l'orbite en termes du stabilisateur
 
-**Prop :** Soit $x \in X$. L'application.
+**Prop :** Soit $x \in X$. L'application
 $$
 \begin{aligned}
 G / \mathrm{Stab}(x) &\longrightarrow \mathcal{O}(x) \\
@@ -329,7 +329,7 @@ est bijective.
 - Bien définie : si $g \cdot \mathrm{Stab}(x) = g' \cdot \mathrm{Stab}(x)$, alors $\exists h \in \mathrm{Stab}(x)$ tel que $g = g' h$, donc
   $$g \cdot x = g' \cdot (h \cdot x) = g' \cdot x$$
 - Surjective : par définition de l'orbite.
-- Injective : si.
+- Injective : si
   $$
   \begin{aligned}
   g \cdot x &= g' \cdot x \\
@@ -364,8 +364,8 @@ $$|O(x)| \mid |G|$$
 
    $$\forall x \in X,\; \forall g \in G \quad f(g \cdot x) = g \cdot f(x)$$
 
-   $\uparrow$ action de $G$ sur $X$.
-   $\qquad\qquad\;\;$ action de $G$ sur $Y$.
+   $\uparrow$ action de $G$ sur $X$
+   $\qquad\qquad\;\;$ action de $G$ sur $Y$
 
    i.e. « $f$ transforme l'action de $G$ sur $X$ en l'action de $G$ sur $Y$ ».
 
@@ -389,7 +389,7 @@ $$\begin{aligned}
 
 En effet : $h\cdot(g\cdot x) = g\cdot x \Longleftrightarrow (g^{-1}hg)\cdot x = x \Longleftrightarrow g^{-1}hg \in \text{Stab}(x)$.
 
-Cas particulier : Pour l'action de $G$ dans $G/H$.
+Cas particulier : pour l'action de $G$ dans $G/H$
 
 $$\text{Stab}(aH) = aHa^{-1}, \quad \text{car } \text{Stab}(H) = H$$
 
