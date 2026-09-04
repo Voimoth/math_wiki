@@ -712,26 +712,21 @@ Soit $p$ nombre premier, $G$ un $p$-groupe, $|G|=p^n$.
 > [!note] Prop : sous-groupes d'ordre $p^i$
 > $\forall i \in \{1,\ldots,n-1\}$, $G$ possède un sous-groupe d'ordre $p^i$.
 
-**Preuve :** Récurrence sur $m$.
+**Preuve :** Récurrence sur $n$.
 
-$n \geqslant 2$, le centre $Z(G)$ est non trivial.
+Si $n \geqslant 2$, le centre $Z(G)$ est non trivial.
 
-Soit $g \in Z(G), g \neq e$. L'ordre de $g$ est $p^\alpha$ avec $1 \leqslant \alpha \leqslant n$. Si $\alpha = m$, $G$ cyclique OK.
+Soit $g \in Z(G)$, $g \neq e$. L'ordre de $g$ est $p^\alpha$ avec $1 \leqslant \alpha \leqslant n$. Si $\alpha = n$, alors $G$ est cyclique.
 
 Sinon $g^{p^{\alpha-1}}$ est d'ordre $p$, et le sous-groupe $H$ qu'il engendre est cyclique d'ordre $p$.
 
-On a: $H \lhd G$ car $g \in Z(G)$.
+On a : $H \lhd G$ car $g \in Z(G)$.
 
-On considère $G_{1}=G/H$, $|G_{1}|=p^{m-1}$.
+On considère $G_1 = G/H$, $|G_1| = p^{n-1}$.
 
-On applique l'hypothèse de récurrence.
+On applique l'hypothèse de récurrence :
+$$\forall \beta \in \{1,\ldots,n-2\}, \ \exists K \subset G_1 \text{ sous-groupe de cardinal } p^\beta.$$
 
-$$\forall \beta \in \{1,\ldots,m-2\}, \exists K \subset G \text{ sous groupe de}$$
-
-$$\text{cardinal } p^{\beta}$$
-
-$$\text{Soit } \pi : G \longrightarrow G_{1}, \quad \pi^{-1}(K) \text{ sous groupe de } G$$
-
-$$\text{contenant } H, \text{ de cardinal } |K| \cdot p = p^{\beta+1}$$
+Soit $\pi : G \longrightarrow G_1$. Alors $\pi^{-1}(K)$ est un sous-groupe de $G$ contenant $H$, de cardinal $|K| \cdot p = p^{\beta+1}$, et
 
 $$\left( \pi^{-1}(K)/H \simeq K \right)$$
