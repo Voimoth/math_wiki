@@ -547,7 +547,7 @@ Si $g \in G$, $g \neq e$ : son axe intersecte la sphère $S^2$ de rayon 1 en 2 p
 
 ![[附件/群论笔记_图1_原页10.png]]
 
-Soit $X =$ ensemble des pôles des éléments de $G \\neq \\{e\\}$
+Soit $X =$ ensemble des pôles des éléments de $G \neq \{e\}$
 
 Alors $G$ agit sur $X$, car il agit sur lui-même par conjugaison
 
