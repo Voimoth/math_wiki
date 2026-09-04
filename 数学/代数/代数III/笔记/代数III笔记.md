@@ -344,12 +344,6 @@ $$|O(x)| \mid |G|$$
 
 ---
 
-# 群论课程笔记续
-
-> 以下内容接续前面的群论笔记，按新上传的手写笔记页码整理。
-
-## 页面 02
-
 **Exemples**
 
 1. Action de $G$ sur lui-même par translation à gauche :
@@ -375,8 +369,6 @@ $$|O(x)| \mid |G|$$
 
    i.e. « $f$ transforme l'action de $G$ sur $X$ en l'action de $G$ sur $Y$ »
 
-## 页面 03
-
 **Prop:** Soit $G$ agissant sur $X$, $x \in X$. Alors la bijection $\psi: \underset{\text{Stab}(x)}{G/} \longrightarrow O(x)$ est $G$ équivariante
 
 Ainsi : pour étudier l'action de $G$ sur une orbite, on se ramène à étudier l'action par translation à gauche sur $\underset{\text{Stab}(x)}{G/}$
@@ -401,8 +393,6 @@ Cas particulier : Pour l'action de $G$ dans $G/H$
 
 $$\text{Stab}(aH) = aHa^{-1}, \quad \text{car } \text{Stab}(H) = H$$
 
-## 页面 04
-
 **Rem.** : L'action par translation de $G$ sur $G/H$ n'est pas fidèle en général :
 $$\operatorname{Ker}\varphi=\bigcap_{a\in G}aHa^{-1}$$
 
@@ -419,8 +409,6 @@ $\forall g\in G$, on pose $\Psi(g)\colon\begin{array}{rcl}G&\longrightarrow&G\\ 
 $\Psi(g)=$ automorphisme intérieur défini par $g$
 
 **Terminologie** Ici, $\operatorname{Stab}(a)$ est appelé le centralisateur de $a$, aussi noté $Z(a)$
-
-## 页面 05
 
 # Actions de groupes et résultats de classification
 
@@ -452,8 +440,6 @@ GL_n(k)\times S_n(k) & \longrightarrow & S_n(k) \\
 (P,Q) & \longmapsto & PQ.\,{}^tP
 \end{array}$$
 
-## 页面 06
-
 **Points Fixes pour une action de groupe**
 
 $G$ agit sur $X$. On note $\displaystyle X^G = \{\text{points fixes}\} = \{x \in X; \forall g \in G, g\cdot x = x\}$
@@ -480,8 +466,6 @@ $$|G| = k^n,\ n \geq 1.$$
 Alors $\displaystyle |X| \equiv |X^G| \pmod{k}$
 
 *Preuve :* équation aux classes, et le fait que $|O(\alpha_i)| \mid |G|$. Comme $|G| = k^n$, si $|O(\alpha_i)| \geq 2$
-
-## 页面 07
 
 alors $|O(G)|=p^k$ avec $k\geqslant 1$, donc $p\vert|O(G)|$
 
@@ -513,8 +497,6 @@ Alors le nombre $N$ d'orbites de $X$ est :
 
 $$N=\frac{1}{|G|}\sum_{g\in G}|\mathrm{Fix}(g)|$$
 
-## 页面 08
-
 **Preuve :**
 
 On a : $x \in \mathrm{Fix}(g) \Leftrightarrow g \cdot x = x \Leftrightarrow g \in \mathrm{Stab}(x)$
@@ -537,8 +519,6 @@ $$\begin{aligned}
 &= |G| \cdot N
 \end{aligned}$$
 
-## 页面 09
-
 **Prop** Soit $G$ groupe fini, agissant sur $X$ fini, $|X|\geq 2$ transitivement. Alors il y a au moins un élément $g\in G$ sans point fixe.
 
 **Preuve** Ici $N=1$
@@ -558,16 +538,12 @@ Ici $|X|\geq 2$ et si on avait $\forall g\in G$, $|Fix(g)|\geq 1$ on aurait une 
 4) $\mathcal{S}_4$
 5) $\mathcal{A}_5$
 
-## 页面 10
-
 Preuve :
 
 Si $r \in SO(3)$, $r \neq \text{Id}$. On dispose de l'axe de $r$, droite vectorielle des points fixes. Dans une base orthonormée convenable, $r$ a pour matrice
 $$\begin{pmatrix} 1 & 0 & 0 \\ 0 & \cos\theta & \sin\theta \\ 0 & -\sin\theta & \cos\theta \end{pmatrix}$$
 
 Si $g \in G$, $g \neq e$ : son axe intersecte la sphère $S^2$ de rayon 1 en 2 points $p$ et $-p$, appelés les pôles de $G$
-
-[Diagram: Sphere with points labeled $k$, $0$, $-p$]
 
 Soit $X =$ ensemble des pôles des éléments de $G \neq \{e\}$
 
@@ -578,8 +554,6 @@ Soit $g \in G$. Soit $p \in X$, pôle de $r \in G$. Soit $g \in G$. Alors $grg^{
 On a ainsi, par restriction à $X$, une action de $G$ sur $X$.
 
 Soit $N$ le nombre d'orbites.
-
-## 页面 11
 
 **Prop :** On a $N=2$ ou $N=3$
 
@@ -607,8 +581,6 @@ N &= \sum_{i=1}^{N}\frac{1}{|Gx_i|} \quad (\star\star) \sum_{i=1}^{N}\left(1-\fr
 De même $Gx_i$ contient $\text{Id}$, et aussi une
 rotation $\neq \text{Id}$ dont l'axe est la droite $Rx_i$
 $|Gx_i| \geq 2$
-
-## 页面 12
 
 $$
 \begin{aligned}
@@ -638,8 +610,6 @@ $$
 nécessairement $e_{1}=e_{2}=|G|$, i.e $G_{x_{1}}=G_{x_{2}}=G$
 
 Donc $G$ cyclique $x_{2}=-x_{1}, \quad X=\left\{x_{1} ; x_{2}\right\}$
-
-## 页面 13
 
 **2. Étude du cas $N=3$**
 
@@ -677,8 +647,6 @@ $$\forall x \quad G_{x}=G_{-x}, \text{ d'où } |\mathcal{O}(x)|=|\mathcal{O}(-x)
 
 Supposons $m\geq 3:$ Comment étudier $O_{3}$?
 
-## 页面 14
-
 $x \in O_3$, $|O(x)|=|O(-x)|=2$. Comme il y a
 une seule orbite de cardinal 2 $O_3=\{x,-x\}$
 $G_{\mathbb{Z}_3}$ groupe cyclique d'ordre $n$, d'axe $\mathbb{R}z_3$
@@ -699,8 +667,6 @@ $\left.\text{rapport à } \mathbb{R}xy\right\}$
 De plus $G_x \cap G_y=\{\text{Id}\}$
 $G_x$ est d'indice 2 dans $G$, donc il est
 distingué dans $G$. On dispose du groupe
-
-## 页面 15
 
 $$
 \begin{aligned}
@@ -733,8 +699,6 @@ $\underline{\text{Si } e_1=2, e_2=3, e_3=5} \quad |G|=60$
 
 On trouve $G \simeq A_5$ Car $A_5$ est l'unique groupe simple d'ordre 60.
 
-## 页面 16
-
 # Théorèmes de Sylow
 
 **Motivation** Thm de Lagrange: si $H \subset G$ sous groupe alors $|H| \mid |G|$
@@ -762,8 +726,6 @@ Soit $g \in Z(G), g \neq e$. L'ordre de $g$ est $p^\alpha$ avec $1 \leqslant \al
 Sinon $g^{p^{\alpha-1}}$ est d'ordre $p$, et le sous-groupe $H$ qu'il engendre est cyclique d'ordre $p$.
 
 On a: $H \lhd G$ car $g \in Z(G)$
-
-## 页面 17
 
 On considère $G_{1}=G/H$, $|G_{1}|=p^{m-1}$
 
