@@ -1,11 +1,11 @@
 ---
-title: 群论讲义 Cours de Groupes (Marc Rosso)
+title: 群论讲义 Cours de Groupes (Marc Rosso).
 created: 2026-09-01
 updated: 2026-09-02
-type: entity
-tags: [group-theory, algebre, cours]
-sources: [Cours USTC 01-09-26.pdf]
-confidence: medium
+type: entity.
+tags: [group-theory, algebre, cours].
+sources: [Cours USTC 01-09-26.pdf].
+confidence: medium.
 ---
 
 # Cours de Groupes — Marc Rosso (USTC, 2026-09-01)
@@ -13,10 +13,10 @@ confidence: medium
 > 手写法语讲义整理(OCR 转写)。原 PDF: `Cours USTC 01-09-26.pdf`。
 > 注意:OCR 转写可能存在少量错误,数学公式以原图为准。
 
-Marc Rosso
-marc.rosso@imj-prg.fr
+Marc Rosso.
+marc.rosso@imj-prg.fr.
 
-**Notations :** G, H groupes
+**Notations :** G, H groupes.
 
 ---
 
@@ -31,18 +31,18 @@ G \times G &\longrightarrow G \\
 \end{aligned}
 $$
 
-- associative
+- associative.
 - neutre $e \in G$
 - inverse $g^{-1}$
 
-> [!example] Exemples de groupes
+> [!example] Exemples de groupes.
 > - **groupes cycliques** $\mathbb{Z}/n\mathbb{Z}$
 > - **groupes de permutations**: $X$ ensemble, $\mathfrak{S}(X) = \{f : X \longrightarrow X, \text{ bijective}\}$;si $X = \{1, \dots, n\}$,$\mathfrak{S}_n = \mathfrak{S}(\{1, \dots, n\})$ **groupe symétrique**
 > - **groupe linéaire**: $k$ corps,$\mathrm{GL}_n(k) = \{\text{matrices inversibles } n \times n\}$
 
 ### 1.2 Sous-groupe
 
-> [!info] Prop
+> [!info] Prop.
 > Une intersection de sous-groupes est un sous-groupe.
 
 ### 1.3 Morphisme de groupe
@@ -53,7 +53,7 @@ $\forall g, g' \in G \quad f(gg') = f(g)f(g')$
 - Image de $f = \mathrm{Im}\, f$
 - Noyau $\mathrm{Ker}\, f = \{g \in G ; f(g) = e\}$ — sous-groupe
 
-> [!info] Remarques
+> [!info] Remarques.
 > - L'image d'un sous-groupe de $G$ est un sous-groupe de $H$.
 > - L'image réciproque $f^{-1}(K)$ d'un sous-groupe $K$ de $H$ est un sous-groupe de $G$.
 
@@ -87,7 +87,7 @@ $$\langle A \rangle = \{a_1^{\varepsilon_1} \cdots a_k^{\varepsilon_k}, \ k \in 
 $$\forall g \in G, \forall h \in H, \quad g h g^{-1} \in H$$
 i.e. $g H g^{-1} = H$, i.e. $g H = H g$.
 
-> [!example] Exemples
+> [!example] Exemples.
 > 1. Le noyau $\mathrm{Ker}\, f$ d'un morphisme de groupes.
 > 2. **Centre de $G$** :
 > $$Z(G) = \{ x \in G \;/\; \forall g \in G,\ xg = gx \}$$
@@ -112,7 +112,7 @@ i.e. $g H g^{-1} = H$, i.e. $g H = H g$.
 **Déf :** $\mathfrak{D}(G)$ = sous-groupe de $G$ engendré par les **commutateurs**, i.e. par les éléments $xyx^{-1}y^{-1}$, $x,y \in G$.
 
 Notation : $[x,y] = xyx^{-1}y^{-1}$.
-Dire que $[x,y] = e$, c'est dire $xy = yx$. Donc
+Dire que $[x,y] = e$, c'est dire $xy = yx$. Donc.
 $$\mathfrak{D}(G) = \{e\} \iff G \text{ commutatif}$$
 
 **Prop :** $\mathfrak{D}(G)$ est un sous-groupe distingué.
@@ -143,7 +143,7 @@ $$
 \begin{CD}
 G @>f>> K \\
 @V\pi VV @| \\
-G/H @>\overline{F}>> K
+G/H @>\overline{F}>> K.
 \end{CD}
 $$
 
@@ -160,7 +160,7 @@ Alors il existe un morphisme $\overline{F} : G/H \to K$ tel que $f = \overline{F
   $\bar{f}$ est bien un morphisme de groupes, i.e.
   $$\bar{f}(gH \cdot g'H) = \bar{f}(gHg'H) = \bar{f}(gg'H) = f(gg') = f(g)f(g') = \bar{f}(gH) \cdot \bar{f}(g'H)$$
 
-**Corollaire.** On a un isomorphisme de groupes
+**Corollaire.** On a un isomorphisme de groupes.
 $$G/\mathrm{Ker}\, f \longrightarrow \mathrm{Im}\, f$$
 Ainsi, si $G$ fini : $|G| = |\mathrm{Im}\, f| \cdot |\mathrm{Ker}\, f|$ (car $|G/H| = \frac{|G|}{|H|}$).
 
@@ -172,12 +172,12 @@ $$
 \begin{CD}
 G @>f>> A \\
 @V\pi VV @| \\
-G/\mathfrak{D}(G) @>\bar{f}>> A
+G/\mathfrak{D}(G) @>\bar{f}>> A.
 \end{CD}
 $$
 
-> [!info] Rem
-> $G/\mathfrak{D}(G)$ est commutatif : $\pi([x,y]) = e$, et
+> [!info] Rem.
+> $G/\mathfrak{D}(G)$ est commutatif : $\pi([x,y]) = e$, et.
 > $$\pi([x,y]^g) = [\pi(x), \pi(y)] = e$$
 
 Ce que dit le thm : $G/\mathfrak{D}(G)$ est le **plus grand quotient commutatif** de $G$, i.e. si $H \triangleleft G$ avec $G/H$ commutatif, alors il existe un morphisme **surjectif** $G/\mathfrak{D}(G) \longrightarrow G/H$.
@@ -187,7 +187,7 @@ $$
 \begin{CD}
 G @>\pi_1>> G/H \\
 @V\pi VV @AA\bar{\pi}_1A \\
-G/\mathfrak{D}(G) @= G/\mathfrak{D}(G)
+G/\mathfrak{D}(G) @= G/\mathfrak{D}(G).
 \end{CD}
 $$
 $\bar{\pi}_1$ est donné par le thm ; il est surjectif car $\pi_1$ est surjectif.
@@ -213,7 +213,7 @@ Soit $H \triangleleft G$, $\pi: G \longrightarrow G/H$.
 >
 > **Prop :** $\forall d \mid n$, il y a un unique sous-groupe d'ordre $d$ de $\mathbb{Z}/n\mathbb{Z}$, qui est de plus cyclique.
 
-> [!info] Remarque importante
+> [!info] Remarque importante.
 > On a vu : si $L \subset G$ sous-groupe contenant $H$, alors $\pi(L) = L/H$.
 > Cependant, si $M \subset G$ est un sous-groupe **quelconque**, $\pi(M) \subset G/H$ est un sous-groupe ; le sous-groupe de $G$ contenant $H$ qui correspond à $\pi(M)$ est $\pi^{-1}(\pi(M))$, qui est le sous-groupe de $G$ engendré par $M$ et $H$ :
 > $$\pi^{-1}(\pi(M)) = MH = HM \quad (*)$$
@@ -221,7 +221,7 @@ Soit $H \triangleleft G$, $\pi: G \longrightarrow G/H$.
 > En effet :
 > $$x \in \pi^{-1}(\pi(M)) \iff \exists m \in M,\ \pi(x) = \pi(m) \iff \exists m \in M,\ \exists h \in H,\ x = mh \in MH$$
 >
-> **Corollaire** : $\pi(M) = MH/H$.
+> **Corollaire :** $\pi(M) = MH/H$.
 
 ### 4.5 Deuxième théorème d'isomorphisme
 
@@ -235,14 +235,14 @@ $$\frac{M}{M \cap H} \cong \frac{MH}{H}$$
 Par le thm d'isomorphisme :
 $$\frac{M}{\mathrm{Ker}(\pi_1)} \cong \mathrm{Im}(\pi_1) \quad\Longrightarrow\quad \frac{M}{M \cap H} \cong \frac{MH}{H}$$
 
-> [!info] Rem
+> [!info] Rem.
 > Soient $M$ et $H$ sous-groupes de $G$. Alors $MH = \{mh, m \in M, h \in H\}$ est un sous-groupe $\iff MH = HM$. Ceci est le cas si $M$ ou $H$ est distingué.
 
-> [!warning] MISE EN GARDE
+> [!warning] MISE EN GARDE.
 > Soit $G$ groupe, $H \trianglelefteq G$ et $K \trianglelefteq H$.
 > Il n'est **pas vrai** en général que $K \trianglelefteq G$ — la normalité n'est pas transitive!
 
-> [!example] Contre-exemple
+> [!example] Contre-exemple.
 > $\mathfrak{S}_4$ = groupe des permutations de $\{1,2,3,4\}$ ; $A_4 \subset \mathfrak{S}_4$ groupe alterné (permutations de signature $+1$), et $A_4 \lhd \mathfrak{S}_4$.
 > Dans $A_4$, considérons $V = \{ \mathrm{Id}, (12)(34), (13)(24), (14)(23) \}$.
 >
@@ -290,7 +290,7 @@ Ceci vaut $\forall g \in G$, d'où $H \trianglelefteq G$.
 
 $X$ ensemble, $\mathcal{G}(X) = \{ f : X \to X \mid f \text{ bijection} \}$.
 
-**Déf :** On dit qu'un groupe $G$ **opère** (ou **agit**) sur $X$ si on a un morphisme de groupes
+**Déf :** On dit qu'un groupe $G$ **opère** (ou **agit**) sur $X$ si on a un morphisme de groupes.
 $$\varphi : G \to \mathcal{G}(X)$$
 notation : $\varphi(g) : x \mapsto g \cdot x$.
 Autrement dit : on a une application $G \times X \to X$, $(g, x) \mapsto g \cdot x$, telle que :
@@ -304,7 +304,7 @@ Autrement dit : on a une application $G \times X \to X$, $(g, x) \mapsto g \cdot
 **Déf :** Soit $G$ agissant sur $X$ et $x \in X$. L'**orbite** de $x$ :
 $$O(x) = \{ g \cdot x ,\ g \in G \} = G \cdot x$$
 
-> [!info] Rem
+> [!info] Rem.
 > On a sur $X$ une relation d'équivalence : pour $x, y \in X$,
 > $$x \mathcal{R} y \iff \exists g \in G \;/\; y = g \cdot x$$
 > les orbites sont les classes d'équivalence. Ainsi : les orbites distinctes sont disjointes, et elles forment une partition de $X$.
@@ -329,13 +329,13 @@ est bijective.
 - Bien définie : si $g \cdot \mathrm{Stab}(x) = g' \cdot \mathrm{Stab}(x)$, alors $\exists h \in \mathrm{Stab}(x)$ tel que $g = g' h$, donc
   $$g \cdot x = g' \cdot (h \cdot x) = g' \cdot x$$
 - Surjective : par définition de l'orbite.
-- Injective : si
+- Injective : si.
   $$
   \begin{aligned}
   g \cdot x &= g' \cdot x \\
   \iff g'^{-1}(g \cdot x) &= (g'^{-1}g) \cdot x \\
   \iff g'^{-1}g &\in \operatorname{Stab}(x) \\
-  &\qquad\qquad g \operatorname{Stab}(x) = g' \operatorname{Stab}(x)
+  &\qquad\qquad g \operatorname{Stab}(x) = g' \operatorname{Stab}(x).
   \end{aligned}
   $$
 
@@ -399,7 +399,7 @@ $$\operatorname{Ker}\varphi=\bigcap_{a\in G}aHa^{-1}$$
 **Prop :** : Soit $G$ groupe infini qui possède un sous-groupe $H$ d'indice fini $(|G/H|<+\infty)$.
 Alors $G$ n'est pas un groupe simple.
 
-**Preuve** : Considérons l'opération de $G$ sur $G/H$
+**Preuve :** Considérons l'opération de $G$ sur $G/H$
 $$\varphi\colon G\longrightarrow\mathfrak{S}(G/H).$$
 Mais $\mathfrak{S}(G/H)$ est un groupe fini, donc $\varphi$ ne peut pas être injective. Comme $H\neq G$, $\operatorname{Ker}\varphi\neq G$.
 D'où $\operatorname{Ker}\varphi\triangleleft G$ avec $\operatorname{Ker}\varphi\neq\{e\}$ et $\neq G$.
@@ -426,7 +426,7 @@ G\times M_{n,p}(k) & \longrightarrow & M_{n,p}(k) \\
 
 les orbites de cette action sont les classes d'équivalence de matrices.
 
-**Thm** 2 matrices sont équivalentes $\Leftrightarrow$ même rang.
+**Thm :** 2 matrices sont équivalentes $\Leftrightarrow$ même rang.
 
 Pour $r \leq n,p$ représentant $I_r=\begin{pmatrix} I_r & 0 \\ 0 & 0 \end{pmatrix}$
 
@@ -462,7 +462,7 @@ réunion disjointe de $X^G$ et des orbites non réduites à un point.
 On appelle **$k$-groupe** un groupe dont le cardinal est une puissance de $k$
 $$|G| = k^n,\ n \geq 1.$$
 
-**Prop** Soit $G$ un $k$-groupe agissant sur $X$ fini.  
+**Prop :** Soit $G$ un $k$-groupe agissant sur $X$ fini.  
 Alors $\displaystyle |X| \equiv |X^G| \pmod{k}$
 
 *Preuve :* équation aux classes, et le fait que $|O(\alpha_i)| \mid |G|$. Comme $|G| = k^n$, si $|O(\alpha_i)| \geq 2$
@@ -519,9 +519,9 @@ $$\begin{aligned}
 &= |G| \cdot N.
 \end{aligned}$$
 
-**Prop** Soit $G$ groupe fini, agissant sur $X$ fini, $|X|\geq 2$ transitivement. Alors il y a au moins un élément $g\in G$ sans point fixe.
+**Prop :** Soit $G$ groupe fini, agissant sur $X$ fini, $|X|\geq 2$ transitivement. Alors il y a au moins un élément $g\in G$ sans point fixe.
 
-**Preuve** Ici $N=1$
+**Preuve :** Ici $N=1$
 $$\begin{aligned}
 1 &= \frac{1}{|G|}\sum_{g\in G}|Fix(g)| \\
 &= \frac{1}{|G|}\left(|X|+\sum_{g\neq e}|Fix(g)|\right).
@@ -531,7 +531,7 @@ Ici $|X|\geq 2$ et si on avait $\forall g\in G$, $|Fix(g)|\geq 1$ on aurait une 
 
 **Application :** Sous-groupes finis du groupe des rotations de l'espace euclidien $\mathbb{R}^3$, $SO(3)$
 
-**Thm** Soit $G\subset SO(3)$ sous-groupe fini. Alors $G$ est isomorphe à l'un des groupes suivants :
+**Thm :** Soit $G\subset SO(3)$ sous-groupe fini. Alors $G$ est isomorphe à l'un des groupes suivants :
 1) groupe cyclique $\mathbb{Z}/n\mathbb{Z}$ , $n\geq 2$
 2) groupe diédral $D_{2n}$ (groupe des isométries du polygone régulier à $n$ côtés).
 3) $\mathcal{A}_4$
@@ -545,7 +545,7 @@ $$\begin{pmatrix} 1 & 0 & 0 \\ 0 & \cos\theta & \sin\theta \\ 0 & -\sin\theta & 
 
 Si $g \in G$, $g \neq e$ : son axe intersecte la sphère $S^2$ de rayon 1 en 2 points $p$ et $-p$, appelés les pôles de $G$
 
-![[附件/球面直径与极点.svg]].
+![[附件/球面直径与极点.svg]]
 
 Soit $X =$ ensemble des pôles des éléments de $G \neq \{e\}$
 
@@ -559,7 +559,7 @@ Soit $N$ le nombre d'orbites.
 
 **Prop :** On a $N=2$ ou $N=3$
 
-**Preuve** Burnside $N=\frac{1}{|G|}\sum\limits_{g \in G} |\text{Fix}(g)|$
+**Preuve :** Burnside $N=\frac{1}{|G|}\sum\limits_{g \in G} |\text{Fix}(g)|$
 
 Si $g=e=\text{Id}$, $\text{Fix}(g)=X$
 
