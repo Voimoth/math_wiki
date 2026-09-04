@@ -545,7 +545,9 @@ $$\begin{pmatrix} 1 & 0 & 0 \\ 0 & \cos\theta & \sin\theta \\ 0 & -\sin\theta & 
 
 Si $g \in G$, $g \neq e$ : son axe intersecte la sphère $S^2$ de rayon 1 en 2 points $p$ et $-p$, appelés les pôles de $G$
 
-Soit $X =$ ensemble des pôles des éléments de $G \neq \{e\}$
+![[附件/群论笔记_图1_原页10.png]]
+
+Soit $X =$ ensemble des pôles des éléments de $G \\neq \\{e\\}$
 
 Alors $G$ agit sur $X$, car il agit sur lui-même par conjugaison
 
