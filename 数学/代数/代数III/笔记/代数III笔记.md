@@ -536,18 +536,18 @@ Ici $|X|\geq 2$ et si on avait $\forall g\in G$, $|\mathrm{Fix}(g)|\geq 1$ on au
 
 **Preuve :**
 
-Si $r \in SO(3)$, $r \neq \text{Id}$. On dispose de l'axe de $r$, droite vectorielle des points fixes. Dans une base orthonormée convenable, $r$ a pour matrice.
+Si $r \in SO(3)$, $r \neq \text{Id}$, on dispose de l'axe de $r$, droite vectorielle des points fixes ; dans une base orthonormée convenable, $r$ a pour matrice :
 $$\begin{pmatrix} 1 & 0 & 0 \\ 0 & \cos\theta & \sin\theta \\ 0 & -\sin\theta & \cos\theta \end{pmatrix}$$
 
 Si $g \in G$, $g \neq e$ : son axe intersecte la sphère $S^2$ de rayon 1 en 2 points $p$ et $-p$, appelés les pôles de $G$.
 
 ![[附件/球面直径与极点.svg]]
 
-Soit $X =$ ensemble des pôles des éléments de $G \neq \{e\}$.
+Soit $X$ l'ensemble des pôles des éléments de $G \setminus \{e\}$.
 
 Alors $G$ agit sur $X$, car il agit sur lui-même par conjugaison.
 
-Soit $g \in G$. Soit $p \in X$, pôle de $r \in G$. Soit $g \in G$. Alors $grg^{-1} \in G$ et $g(p)$ (pour l'action habituelle de $SO(3)$ sur $\mathbb{R}^3$) est un pôle de $grg^{-1}$. Ainsi $g(p) \in X$.
+Soit $g \in G$ et soit $p \in X$ un pôle de $r \in G$. Alors $grg^{-1} \in G$, et $g(p)$ (pour l'action habituelle de $SO(3)$ sur $\mathbb{R}^3$) est un pôle de $grg^{-1}$. Ainsi $g(p) \in X$.
 
 On a ainsi, par restriction à $X$, une action de $G$ sur $X$.
 
@@ -566,19 +566,17 @@ $$N=\frac{1}{|G|}\left(|X|+2(|G|-1)\right) \quad (\star)$$
 On décompose $X$ en réunion disjointe d'orbites,
 on choisit un élément $x_i$ dans chaque orbite $O_i$.
 
-Soit $G_{x_i} = \text{Stab}(x_i)$ $\qquad |O_i| = \frac{|G|}{|G_{x_i}|}$.
+Soit $G_{x_i} = \operatorname{Stab}(x_i)$ ; alors $|O_i| = \frac{|G|}{|G_{x_i}|}$.
 
 $$\begin{aligned}
-N &= \frac{1}{|G|}\left(\sum_{i=1}^{m}|O_i|+2(|G|-1)\right) \\
-&= \sum_{i=1}^{N}\frac{1}{|G_{x_i}|} + 2\left(1-\frac{1}{|G|}\right) \\
-N &= \sum_{i=1}^{N}\frac{1}{|G_{x_i}|} + 2\left(1-\frac{1}{|G|}\right) \quad (\star\star) \\
+N &= \frac{1}{|G|}\left(\sum_{i=1}^{N}|O_i|+2(|G|-1)\right) \\
+&= \sum_{i=1}^{N}\frac{1}{|G_{x_i}|} + 2\Bigl(1-\frac{1}{|G|}\Bigr) \quad (\star\star) \\
 \sum_{i=1}^{N}\left(1-\frac{1}{|G_{x_i}|}\right) &= 2\left(1-\frac{1}{|G|}\right).
 \end{aligned}$$
 
 **Rem :** $|G| \geq 2 \qquad \frac{1}{2} \leq 1-\frac{1}{|G|} < 1$.
 
-De même $G_{x_i}$ contient $\text{Id}$, et aussi une rotation $\neq \text{Id}$ dont l'axe est la droite $\mathbb{R}x_i$.
-$|G_{x_i}| \geq 2$.
+De même $G_{x_i}$ contient $\text{Id}$, et aussi une rotation $\neq \text{Id}$ dont l'axe est la droite $\mathbb{R}x_i$, d'où $|G_{x_i}| \geq 2$.
 
 $$
 \begin{aligned}
@@ -605,13 +603,13 @@ $$
 (\star \star) \quad \frac{1}{e_{1}}+\frac{1}{e_{2}}=\frac{2}{|G|} \quad \text { avec } e_{1}, e_{2} \leq|G|.
 $$
 
-nécessairement $e_{1}=e_{2}=|G|$, i.e $G_{x_{1}}=G_{x_{2}}=G$.
+Nécessairement $e_{1}=e_{2}=|G|$, i.e. $G_{x_{1}}=G_{x_{2}}=G$.
 
-Donc $G$ cyclique $x_{2}=-x_{1}, \quad X=\left\{x_{1} ; x_{2}\right\}$.
+Donc $G$ est cyclique, $x_2 = -x_1$ et $X = \{x_1, x_2\}$.
 
 ### 2. Étude du cas $N=3$
 
-on suppose $\quad e_{1} \leq e_{2} \leq e_{3}$.
+On suppose $e_1 \leq e_2 \leq e_3$.
 
 $$\begin{aligned}
 &2-\frac{2}{|G|}=3-\frac{1}{e_{1}}-\frac{1}{e_{2}}-\frac{1}{e_{3}} \\
@@ -622,11 +620,11 @@ Nécessairement $e_{1}=2$.
 
 $$\frac{1}{2}+\frac{2}{|G|}=\frac{1}{e_{2}}+\frac{1}{e_{3}} \quad>\frac{1}{2}$$
 
-nécessairement $e_{2}\leq 3$ (sinon $e_{3}\geq e_{2}\geq 4$).
+Nécessairement $e_2 \leq 3$ (sinon $e_3 \geq e_2 \geq 4$).
 
 $$\frac{1}{e_{2}}+\frac{1}{e_{3}}\leq\frac{1}{2}$$
 
-$\boxed{\text{où } e_{2}=2 \text{ ou } e_{2}=3}$.
+$\boxed{e_2 = 2 \text{ ou } e_2 = 3}$.
 
 ---
 
@@ -634,8 +632,8 @@ $\boxed{\text{où } e_{2}=2 \text{ ou } e_{2}=3}$.
 
 $$\begin{aligned}
 &\frac{2}{|G|}=\frac{1}{e_{3}}, \qquad |G|=2e_{3}, \quad m=e_{3} \\
-&|D_{1}|=\frac{|G|}{e_{1}}=m=|D_{2}| \\
-&|D_{3}|=2.
+&|O_1| = \frac{|G|}{e_1} = m = |O_2| \\
+&|O_3| = 2.
 \end{aligned}$$
 
 **Rem :** l'action de $G$ sur $X$ est la restriction à $X$
@@ -643,37 +641,23 @@ d'une action linéaire $g(-x)=-g(x)$.
 
 $$\forall x \quad G_{x}=G_{-x}, \text{ d'où } |\mathcal{O}(x)|=|\mathcal{O}(-x)|$$
 
-Supposons $m\geq 3:$ Comment étudier $O_{3}$?
+Supposons $m \geq 3$ : comment étudier $O_3$ ?
 
-$x \in O_3$, $|O(x)|=|O(-x)|=2$. Comme il y a
-une seule orbite de cardinal 2 $O_3=\{x,-x\}$.
-$G_{z_3}$ groupe cyclique d'ordre $n$, d'axe $\mathbb{R}z_3$.
-Soit $y \in O_1$, $|G_y|=2$, $G_y=\{\text{Id}, r\}$ où $r$ est
-une rotation d'angle $\pi$. $G_y$ agit dans l'orbite.
-$O_3=O(z_3)$. Comme $x$ et $y$ non colinéaires, $r(x_3)\neq x_3$
-donne $r(x_3)=-z_3$. Donc $z_3 \perp y$ ($x=z_3$).
-Considérons une base orthonormée de $\mathbb{R}^3$.
-$(x, y_{13})$. Dans cette base, les éléments de $G$
-ont des matrices de la forme :
-$$\begin{pmatrix} 1 & 0 & 0 \\ 0 & \cos\theta & -\sin\theta \\ 0 & \sin\theta & \cos\theta \end{pmatrix} \text{ et } Gy=\left\{\text{Id}, \begin{pmatrix} -1 & 0 & 0 \\ 0 & 1 & 0 \\ 0 & 0 & -1 \end{pmatrix}\right\}$$
-les restrictions au plan $(\mathbb{R}x)^\perp$ sont :
-• Pour $G_x$ : un groupe cyclique de rotations
-planes, $\simeq \mathbb{Z}/n\mathbb{Z}$.
-• Pour $G_y$ : $\left\{\text{Id}, \text{symétrie orthogonale par}\right.$.
-$\left.\text{rapport à } \mathbb{R}xy\right\}$.
+$x \in O_3$, $|O(x)|=|O(-x)|=2$. Comme il y a une seule orbite de cardinal 2, $O_3=\{x,-x\}$.
 
-De plus $G_x \cap G_y=\{\text{Id}\}$.
-$G_x$ est d'indice 2 dans $G$, donc il est
-distingué dans $G$. On dispose du groupe
+$G_{z_3}$ est un groupe cyclique d'ordre $n$, d'axe $\mathbb{R}z_3$.
 
-$$
-\begin{aligned}
-& G_x \cdot G_y = G_y \cdot G_x, \text{ de cardinal } |G_x||G_y| = 2n = |G| \\
-& \text{Ainsi } G = G_x G_y \\
-& \text{ isomorphe au groupe diédral } D_{2n} \\
-& (\text{en considérant les restrictions à } (\mathbb{R}x)^\perp).
-\end{aligned}
-$$
+Soit $y \in O_1$, $|G_y|=2$, $G_y=\{\text{Id}, r\}$, où $r$ est une rotation d'angle $\pi$. $G_y$ agit dans l'orbite $O_3=O(z_3)$. Comme $x$ et $y$ non colinéaires, $r(x_3)\neq x_3$, donc $r(x_3)=-z_3$, d'où $z_3 \perp y$ ($x=z_3$).
+
+Considérons une base orthonormée $(x, y_{13})$ de $\mathbb{R}^3$. Dans cette base, les éléments de $G$ ont des matrices de la forme :
+$$\begin{pmatrix} 1 & 0 & 0 \\ 0 & \cos\theta & -\sin\theta \\ 0 & \sin\theta & \cos\theta \end{pmatrix} \text{ et } G_y=\left\{\text{Id}, \begin{pmatrix} -1 & 0 & 0 \\ 0 & 1 & 0 \\ 0 & 0 & -1 \end{pmatrix}\right\}$$
+Les restrictions au plan $(\mathbb{R}x)^\perp$ sont :
+• Pour $G_x$ : un groupe cyclique de rotations planes, $\simeq \mathbb{Z}/n\mathbb{Z}$ ;
+• Pour $G_y$ : $\{\mathrm{Id}, s\}$, où $s$ est la symétrie orthogonale par rapport à la droite $\mathbb{R}y$.
+
+De plus $G_x \cap G_y = \{\mathrm{Id}\}$, et $G_x$ est d'indice 2 dans $G$, donc il est distingué dans $G$.
+
+On dispose du groupe $G_x G_y = G_y G_x$, de cardinal $|G_x|\,|G_y| = 2n = |G|$ ; ainsi $G = G_x G_y$ est isomorphe au groupe diédral $D_{2n}$, en considérant les restrictions à $(\mathbb{R}x)^\perp$.
 
 **Rem :** Si $n=2$, $|G|=4$. A priori $G = \mathbb{Z}/4\mathbb{Z}$ ou $D_4$.
 
@@ -683,19 +667,19 @@ $$
 
 Nécessairement $e_3 \in \{3, 4, 5\}$.
 
-On a en effet: $\displaystyle \frac{1}{e_3} = \frac{1}{6} + \frac{2}{|G|} \Rightarrow 3 \leq e_3 < 6$.
+On a en effet : $\displaystyle \frac{1}{e_3} = \frac{1}{6} + \frac{2}{|G|}$, d'où $3 \leq e_3 < 6$.
 
-$\underline{\text{Si } e_1=2, e_2=3, e_3=3}: \quad |G|=12$.
+**Si $e_1=2$, $e_2=3$, $e_3=3$ :** $|G|=12$.
 
 On trouve $G \simeq A_4$.
 
-$\underline{\text{Si } e_1=2, e_2=3, e_3=4} \quad |G|=24$.
+**Si $e_1=2$, $e_2=3$, $e_3=4$ :** $|G|=24$.
 
 On trouve $G \simeq S_4$.
 
-$\underline{\text{Si } e_1=2, e_2=3, e_3=5} \quad |G|=60$.
+**Si $e_1=2$, $e_2=3$, $e_3=5$ :** $|G|=60$.
 
-On trouve $G \simeq A_5$. Car $A_5$ est l'unique groupe simple d'ordre 60.
+On trouve $G \simeq A_5$, car $A_5$ est l'unique groupe simple d'ordre 60.
 
 # Théorèmes de Sylow
 
@@ -729,4 +713,4 @@ $$\forall \beta \in \{1,\ldots,n-2\}, \ \exists K \subset G_1 \text{ sous-groupe
 
 Soit $\pi : G \longrightarrow G_1$. Alors $\pi^{-1}(K)$ est un sous-groupe de $G$ contenant $H$, de cardinal $|K| \cdot p = p^{\beta+1}$, et
 
-$$\left( \pi^{-1}(K)/H \simeq K \right)$$
+$$\pi^{-1}(K)/H \simeq K$$
