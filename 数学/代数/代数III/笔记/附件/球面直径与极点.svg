@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="700" height="430" viewBox="0 0 700 430">
+  <rect width="700" height="430" fill="white"/>
+  <ellipse cx="350" cy="215" rx="230" ry="105" fill="none" stroke="#222" stroke-width="3"/>
+  <path d="M120 215 C120 155 223 110 350 110 C477 110 580 155 580 215 C580 275 477 320 350 320 C223 320 120 275 120 215" fill="none" stroke="#222" stroke-width="2" stroke-dasharray="8 7" opacity="0.65"/>
+  <path d="M350 55 L350 375" stroke="#1f4e79" stroke-width="4"/>
+  <circle cx="350" cy="215" r="7" fill="#222"/>
+  <circle cx="350" cy="55" r="8" fill="#c0392b"/>
+  <circle cx="350" cy="375" r="8" fill="#c0392b"/>
+  <text x="368" y="222" font-family="Times New Roman, serif" font-size="28" fill="#222">O</text>
+  <text x="370" y="64" font-family="Times New Roman, serif" font-size="28" fill="#c0392b">p</text>
+  <text x="370" y="385" font-family="Times New Roman, serif" font-size="28" fill="#c0392b">−p</text>
+  <text x="350" y="410" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" fill="#555">diamètre de la sphère S²</text>
+</svg>

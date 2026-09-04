@@ -351,9 +351,9 @@ $$|O(x)| \mid |G|$$
 
    $\varphi$ est une application $\psi\colon \begin{array}{rcl} G & \longrightarrow & \mathfrak{S}(G) \\ g & \longmapsto & \varphi(g) \end{array}$
 
-   morphisme de groupes (associativité), injectif
+   morphisme de groupes (associativité), injectif.
 
-   **Corollaire :** Théorème de Cayley  
+   **Corollaire :** Théorème de Cayley  .
    Soit $G$ groupe fini, $|G|=n$. Alors $G$ est isomorphe à un sous-groupe du groupe symétrique $\mathfrak{S}_n$
 
 2. Soit $H$ sous-groupe de $G$. Alors $G$ agit par translations à gauche sur $G/H$
@@ -367,9 +367,9 @@ $$|O(x)| \mid |G|$$
    $\uparrow$ action de $G$ sur $X$  
    $\qquad\qquad\;\;$ action de $G$ sur $Y$
 
-   i.e. « $f$ transforme l'action de $G$ sur $X$ en l'action de $G$ sur $Y$ »
+   i.e. « $f$ transforme l'action de $G$ sur $X$ en l'action de $G$ sur $Y$ ».
 
-**Prop:** Soit $G$ agissant sur $X$, $x \in X$. Alors la bijection $\psi: \underset{\text{Stab}(x)}{G/} \longrightarrow O(x)$ est $G$ équivariante
+**Prop:** Soit $G$ agissant sur $X$, $x \in X$. Alors la bijection $\psi: \underset{\text{Stab}(x)}{G/} \longrightarrow O(x)$ est $G$ équivariante.
 
 Ainsi : pour étudier l'action de $G$ sur une orbite, on se ramène à étudier l'action par translation à gauche sur $\underset{\text{Stab}(x)}{G/}$
 
@@ -404,7 +404,7 @@ $$\varphi\colon G\longrightarrow\mathfrak{S}(G/H).$$
 Mais $\mathfrak{S}(G/H)$ est un groupe fini, donc $\varphi$ ne peut pas être injective. Comme $H\neq G$, $\operatorname{Ker}\varphi\neq G$.
 D'où $\operatorname{Ker}\varphi\triangleleft G$ avec $\operatorname{Ker}\varphi\neq\{e\}$ et $\neq G$.
 
-3. Action de $G$ sur lui-même par conjugaison  
+3. Action de $G$ sur lui-même par conjugaison  .
 $\forall g\in G$, on pose $\Psi(g)\colon\begin{array}{rcl}G&\longrightarrow&G\\ a&\longmapsto&gag^{-1}\end{array}$  
 $\Psi(g)=$ automorphisme intérieur défini par $g$
 
@@ -416,7 +416,7 @@ $\Psi(g)=$ automorphisme intérieur défini par $g$
 
 $k$ corps $\quad M_{n,p}(k)=\begin{cases} \text{matrices } n \text{ lignes, } p \text{ colonnes} \\ \text{à coefficients dans } k \end{cases}$
 
-Soit $G=GL_n(k)\times GL_p(k)$ produit
+Soit $G=GL_n(k)\times GL_p(k)$ produit.
 
 $G$ agit sur $M_{n,p}(k)$
 $$\begin{array}{ccc}
@@ -426,7 +426,7 @@ G\times M_{n,p}(k) & \longrightarrow & M_{n,p}(k) \\
 
 les orbites de cette action sont les classes d'équivalence de matrices.
 
-**Thm** 2 matrices sont équivalentes $\Leftrightarrow$ même rang
+**Thm** 2 matrices sont équivalentes $\Leftrightarrow$ même rang.
 
 Pour $r \leq n,p$ représentant $I_r=\begin{pmatrix} I_r & 0 \\ 0 & 0 \end{pmatrix}$
 
@@ -437,7 +437,7 @@ Pour $r \leq n,p$ représentant $I_r=\begin{pmatrix} I_r & 0 \\ 0 & 0 \end{pmatr
 Action du groupe $GL_n(k)$ sur l'espace des matrices symétriques $S_n(k)\subset M_n(k)$
 $$\begin{array}{ccc}
 GL_n(k)\times S_n(k) & \longrightarrow & S_n(k) \\
-(P,Q) & \longmapsto & PQ.\,{}^tP
+(P,Q) & \longmapsto & PQ.\,{}^tP.
 \end{array}$$
 
 **Points Fixes pour une action de groupe**
@@ -448,9 +448,9 @@ $$x \in X^G \Longleftrightarrow O(x) = \{x\}$$
 
 ---
 
-**Thm:** *Equation aux classes*
+**Thm:** *Equation aux classes*.
 
-Soit $G$ agissant sur $X$. Alors
+Soit $G$ agissant sur $X$. Alors.
 $$X = X^G \sqcup \bigsqcup_{|O(\alpha_i)| \geq 2} O(\alpha_i)$$
 réunion disjointe de $X^G$ et des orbites non réduites à un point.
 
@@ -458,7 +458,7 @@ réunion disjointe de $X^G$ et des orbites non réduites à un point.
 
 ## Application
 
-**Déf:** Soit $k$ nombre premier  
+**Déf:** Soit $k$ nombre premier  .
 On appelle **$k$-groupe** un groupe dont le cardinal est une puissance de $k$
 $$|G| = k^n,\ n \geq 1.$$
 
@@ -485,7 +485,7 @@ Mais $|G|\equiv 0 \bmod p$. Mais $|Z(G)|\geqslant 1$ car $e\in Z(G)$. Donc $p\mi
 
 ---
 
-$\underline{\text{Thm}}$: Formule de Burnside
+$\underline{\text{Thm}}$: Formule de Burnside.
 
 Soit $G$ groupe fini, agissant sur $X$ fini.
 
@@ -504,10 +504,10 @@ On a : $x \in \mathrm{Fix}(g) \Leftrightarrow g \cdot x = x \Leftrightarrow g \i
 $$\begin{aligned}
 &\text{Soit } E = \{(g,x) \in G \times X ; g \cdot x = x\} \\
 &\qquad = \bigsqcup_{g \in G} \{g\} \times \mathrm{Fix}(g) = \bigsqcup_{x \in X} \mathrm{Stab}(x) \times \{x\} \\
-&|E| = \sum_{g \in G} |\mathrm{Fix}(g)| = \sum_{x \in X} |\mathrm{Stab}(x)|
+&|E| = \sum_{g \in G} |\mathrm{Fix}(g)| = \sum_{x \in X} |\mathrm{Stab}(x)|.
 \end{aligned}$$
 
-Alors $\mathcal{O}_1, \mathcal{O}_2, \ldots, \mathcal{O}_N$ les orbites distinctes
+Alors $\mathcal{O}_1, \mathcal{O}_2, \ldots, \mathcal{O}_N$ les orbites distinctes.
 
 $$X = \bigsqcup_{i=1}^{N} \mathcal{O}_i$$
 
@@ -516,7 +516,7 @@ $$\begin{aligned}
 &|\mathrm{Stab}(x)| = \frac{|G|}{|\mathcal{O}(x)|} \\
 \sum_{x \in X} |\mathrm{Stab}(x)| &= \sum_{i=1}^{N} \sum_{x \in \mathcal{O}_i} \frac{|G|}{|\mathcal{O}_i|} \\
 &= |G| \sum_{i=1}^{N} \underbrace{\sum_{x \in \mathcal{O}_i} \frac{1}{|\mathcal{O}_i|}}_{\frac{1}{|\mathcal{O}_i|} \cdot |\mathcal{O}_i| = 1} \\
-&= |G| \cdot N
+&= |G| \cdot N.
 \end{aligned}$$
 
 **Prop** Soit $G$ groupe fini, agissant sur $X$ fini, $|X|\geq 2$ transitivement. Alors il y a au moins un élément $g\in G$ sans point fixe.
@@ -524,32 +524,32 @@ $$\begin{aligned}
 **Preuve** Ici $N=1$
 $$\begin{aligned}
 1 &= \frac{1}{|G|}\sum_{g\in G}|Fix(g)| \\
-&= \frac{1}{|G|}\left(|X|+\sum_{g\neq e}|Fix(g)|\right)
+&= \frac{1}{|G|}\left(|X|+\sum_{g\neq e}|Fix(g)|\right).
 \end{aligned}$$
 
-Ici $|X|\geq 2$ et si on avait $\forall g\in G$, $|Fix(g)|\geq 1$ on aurait une contradiction
+Ici $|X|\geq 2$ et si on avait $\forall g\in G$, $|Fix(g)|\geq 1$ on aurait une contradiction.
 
 **Application :** Sous-groupes finis du groupe des rotations de l'espace euclidien $\mathbb{R}^3$, $SO(3)$
 
 **Thm** Soit $G\subset SO(3)$ sous-groupe fini. Alors $G$ est isomorphe à l'un des groupes suivants :
 1) groupe cyclique $\mathbb{Z}/n\mathbb{Z}$ , $n\geq 2$
-2) groupe diédral $D_{2n}$ (groupe des isométries du polygone régulier à $n$ côtés)
+2) groupe diédral $D_{2n}$ (groupe des isométries du polygone régulier à $n$ côtés).
 3) $\mathcal{A}_4$
 4) $\mathcal{S}_4$
 5) $\mathcal{A}_5$
 
 Preuve :
 
-Si $r \in SO(3)$, $r \neq \text{Id}$. On dispose de l'axe de $r$, droite vectorielle des points fixes. Dans une base orthonormée convenable, $r$ a pour matrice
+Si $r \in SO(3)$, $r \neq \text{Id}$. On dispose de l'axe de $r$, droite vectorielle des points fixes. Dans une base orthonormée convenable, $r$ a pour matrice.
 $$\begin{pmatrix} 1 & 0 & 0 \\ 0 & \cos\theta & \sin\theta \\ 0 & -\sin\theta & \cos\theta \end{pmatrix}$$
 
 Si $g \in G$, $g \neq e$ : son axe intersecte la sphère $S^2$ de rayon 1 en 2 points $p$ et $-p$, appelés les pôles de $G$
 
-![[附件/群论笔记_图1_原页10.png]]
+![[附件/球面直径与极点.svg]]
 
 Soit $X =$ ensemble des pôles des éléments de $G \neq \{e\}$
 
-Alors $G$ agit sur $X$, car il agit sur lui-même par conjugaison
+Alors $G$ agit sur $X$, car il agit sur lui-même par conjugaison.
 
 Soit $g \in G$. Soit $p \in X$, pôle de $r \in G$. Soit $g \in G$. Alors $grg^{-1} \in G$ et $g(p)$ (pour l'action habituelle de $SO(3)$ sur $\mathbb{R}^3$) est un pôle de $grg^{-1}$. Ainsi $g(p) \in X$
 
@@ -580,8 +580,7 @@ N &= \sum_{i=1}^{N}\frac{1}{|Gx_i|} \quad (\star\star) \sum_{i=1}^{N}\left(1-\fr
 
 **Rem** $|G| \geq 2 \qquad \frac{1}{2} \leq 1-\frac{1}{|G|} < 1$
 
-De même $Gx_i$ contient $\text{Id}$, et aussi une
-rotation $\neq \text{Id}$ dont l'axe est la droite $Rx_i$
+De même $Gx_i$ contient $\text{Id}$, et aussi une rotation $\neq \text{Id}$ dont l'axe est la droite $Rx_i$.
 $|Gx_i| \geq 2$
 
 $$
@@ -606,7 +605,7 @@ De plus, $N>1$ via $(\star)$, car si $N=1$ on aurait $|X|+|G|=2$ d'où $|G|=|X|=
 Posons $e_{i}=\left|G x_{i}\right|$
 
 $$
-(\star \star) \quad \frac{1}{e_{1}}+\frac{1}{e_{2}}=\frac{2}{|G|} \quad \text { avec } e_{1}, e_{2} \leq|G|
+(\star \star) \quad \frac{1}{e_{1}}+\frac{1}{e_{2}}=\frac{2}{|G|} \quad \text { avec } e_{1}, e_{2} \leq|G|.
 $$
 
 nécessairement $e_{1}=e_{2}=|G|$, i.e $G_{x_{1}}=G_{x_{2}}=G$
@@ -649,33 +648,33 @@ $$\forall x \quad G_{x}=G_{-x}, \text{ d'où } |\mathcal{O}(x)|=|\mathcal{O}(-x)
 
 Supposons $m\geq 3:$ Comment étudier $O_{3}$?
 
-$x \in O_3$, $|O(x)|=|O(-x)|=2$. Comme il y a
+$x \in O_3$, $|O(x)|=|O(-x)|=2$. Comme il y a.
 une seule orbite de cardinal 2 $O_3=\{x,-x\}$
 $G_{\mathbb{Z}_3}$ groupe cyclique d'ordre $n$, d'axe $\mathbb{R}z_3$
-Soit $y \in O_1$, $|Gy|=2$, $Gy=\{\text{Id}, r\}$ où $r$ est
-une rotation d'angle $\pi$. $Gy$ agit dans l'orbite
+Soit $y \in O_1$, $|Gy|=2$, $Gy=\{\text{Id}, r\}$ où $r$ est.
+une rotation d'angle $\pi$. $Gy$ agit dans l'orbite.
 $O_3=O(z_3)$. Comme $x$ et $y$ non colinéaires, $r(x_3)\neq x_3$
-donne $r(x_3)=-z_3$. Donc $z_3 \perp y$ ($x=z_3$)
+donne $r(x_3)=-z_3$. Donc $z_3 \perp y$ ($x=z_3$).
 Considérons une base orthonormée de $\mathbb{R}^3$
 $(x, y_{13})$. Dans cette base, les éléments de $G$
 ont des matrices de la forme :
 $$\begin{pmatrix} 1 & 0 & 0 \\ 0 & \cos\theta & -\sin\theta \\ 0 & \sin\theta & \cos\theta \end{pmatrix} \text{ et } Gy=\left\{\text{Id}, \begin{pmatrix} -1 & 0 & 0 \\ 0 & 1 & 0 \\ 0 & 0 & -1 \end{pmatrix}\right\}$$
 les restrictions au plan $(\mathbb{R}x)^\perp$ sont :
-• Pour $G_x$ : un groupe cyclique de rotations
+• Pour $G_x$ : un groupe cyclique de rotations.
 planes, $\simeq \mathbb{Z}/n\mathbb{Z}$
 • Pour $G_y$ : $\left\{\text{Id}, \text{symétrie orthogonale par}\right.$
 $\left.\text{rapport à } \mathbb{R}xy\right\}$
 
 De plus $G_x \cap G_y=\{\text{Id}\}$
-$G_x$ est d'indice 2 dans $G$, donc il est
-distingué dans $G$. On dispose du groupe
+$G_x$ est d'indice 2 dans $G$, donc il est.
+distingué dans $G$. On dispose du groupe.
 
 $$
 \begin{aligned}
 & G_x \cdot G_y = G_y \cdot G_x, \text{ de cardinal } |G_x||G_y| = 2n = |G| \\
 & \text{Ainsi } G = G_x G_y \\
 & \text{ isomorphe au groupe diédral } D_{2n} \\
-& (\text{en considérant les restrictions à } (\mathbb{R}x)^\perp)
+& (\text{en considérant les restrictions à } (\mathbb{R}x)^\perp).
 \end{aligned}
 $$
 
@@ -711,7 +710,7 @@ $\underline{\text{Non!}}$
 
 $\underline{\text{Exercice:}}$ $G = \mathbb{Z}/4\mathbb{Z}$, $|G|=12$
 
-$G$ ne possède pas de sous-groupe d'ordre 6
+$G$ ne possède pas de sous-groupe d'ordre 6.
 
 ## Situation favorable
 
@@ -721,7 +720,7 @@ Soit $k$ nombre premier, $G$ $k$-groupe, $|G|=p^n$
 
 **Preuve :** Récurrence sur $m$
 
-$n \geqslant 2$, le centre $Z(G)$ est non trivial
+$n \geqslant 2$, le centre $Z(G)$ est non trivial.
 
 Soit $g \in Z(G), g \neq e$. L'ordre de $g$ est $p^\alpha$ avec $1 \leqslant \alpha \leqslant n$. Si $\alpha = m$, $G$ cyclique OK.
 
@@ -731,7 +730,7 @@ On a: $H \lhd G$ car $g \in Z(G)$
 
 On considère $G_{1}=G/H$, $|G_{1}|=p^{m-1}$
 
-On applique l'hypothèse de récurrence
+On applique l'hypothèse de récurrence.
 
 $$\forall \beta \in \{1,..,m-2\}, \exists K \subset G \text{ sous groupe de}$$
 
