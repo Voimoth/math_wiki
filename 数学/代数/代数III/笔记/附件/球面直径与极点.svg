@@ -1,25 +1,30 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="760" height="480" viewBox="0 0 760 480">
   <rect width="760" height="480" fill="#ffffff"/>
-  <g fill="none" stroke-linecap="round" stroke-linejoin="round">
-    <!-- outer silhouette of the sphere -->
-    <ellipse cx="380" cy="235" rx="245" ry="155" stroke="#202124" stroke-width="3"/>
-    <!-- rear half of the latitude circle, hidden by the sphere -->
-    <path d="M135,235 C135,185 245,145 380,145 C515,145 625,185 625,235" stroke="#687078" stroke-width="2.5" stroke-dasharray="9 8"/>
-    <!-- front half of the latitude circle -->
-    <path d="M135,235 C135,285 245,325 380,325 C515,325 625,285 625,235" stroke="#202124" stroke-width="3"/>
-    <!-- an oblique diameter: rear portion dashed, visible portion solid -->
-    <path d="M190,120 L380,235" stroke="#7b1e1e" stroke-width="4" stroke-dasharray="10 8"/>
-    <path d="M380,235 L570,350" stroke="#7b1e1e" stroke-width="4"/>
-    <!-- axis direction marker -->
-    <path d="M380,235 L535,329" stroke="#7b1e1e" stroke-width="1.5" stroke-dasharray="3 7" opacity="0.7"/>
-  </g>
+
+  <!-- 三维球面的外轮廓 -->
+  <ellipse cx="380" cy="235" rx="245" ry="155" fill="#ffffff" stroke="#202124" stroke-width="3"/>
+
+  <!-- 直径所在的直线：延伸到球面之外，穿过 O、p、-p -->
+  <line x1="75" y1="50" x2="685" y2="420" stroke="#8b1e1e" stroke-width="3.5"/>
+
+  <!-- 球面的纬线：后半段用虚线，前半段用实线 -->
+  <path d="M135,235 C135,185 245,145 380,145 C515,145 625,185 625,235"
+        fill="none" stroke="#687078" stroke-width="2.5" stroke-dasharray="9 8"/>
+  <path d="M135,235 C135,285 245,325 380,325 C515,325 625,285 625,235"
+        fill="none" stroke="#202124" stroke-width="3"/>
+
+  <!-- 球面轮廓再描一次，保证直径和纬线不会覆盖轮廓 -->
+  <ellipse cx="380" cy="235" rx="245" ry="155" fill="none" stroke="#202124" stroke-width="3"/>
+
+  <!-- 球心与两个极点 -->
   <circle cx="380" cy="235" r="7" fill="#202124"/>
   <circle cx="190" cy="120" r="8" fill="#b3261e"/>
   <circle cx="570" cy="350" r="8" fill="#b3261e"/>
+
   <g font-family="Times New Roman, serif" font-size="30">
-    <text x="160" y="112" fill="#b3261e">p</text>
-    <text x="584" y="363" fill="#b3261e">−p</text>
+    <text x="157" y="108" fill="#b3261e">p</text>
+    <text x="584" y="365" fill="#b3261e">−p</text>
     <text x="397" y="229" fill="#202124">O</text>
   </g>
-  <text x="380" y="425" text-anchor="middle" font-family="Arial, sans-serif" font-size="19" fill="#4b5563">sphère S² : diamètre oblique et ligne de latitude</text>
+  <text x="380" y="425" text-anchor="middle" font-family="Arial, sans-serif" font-size="19" fill="#4b5563">sphère S² : une droite passant par p, O et −p</text>
 </svg>
