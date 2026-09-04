@@ -47,11 +47,11 @@ $$
 
 ### 1.3 Morphisme de groupe
 
-$f : G \longrightarrow H$ tel que
+$f : G \longrightarrow H$ tel que.
 $\forall g, g' \in G \quad f(gg') = f(g)f(g')$
 
 - Image de $f = \mathrm{Im}\, f$
-- Noyau $\mathrm{Ker}\, f = \{g \in G ; f(g) = e\}$ — sous-groupe
+- Noyau $\mathrm{Ker}\, f = \{g \in G ; f(g) = e\}$ — sous-groupe.
 
 > [!info] Remarques.
 > - L'image d'un sous-groupe de $G$ est un sous-groupe de $H$.
@@ -60,7 +60,7 @@ $\forall g, g' \in G \quad f(gg') = f(g)f(g')$
 ### 1.4 Classe à gauche modulo un sous-groupe
 
 $H \subset G$ sous-groupe.
-Classe à gauche de $a \in G$ : $aH = \{ah, h \in H\}$ — classes d'équivalence pour la relation
+Classe à gauche de $a \in G$ : $aH = \{ah, h \in H\}$ — classes d'équivalence pour la relation.
 $$a \mathcal{R} b \iff a^{-1}b \in H \quad\text{i.e.}\quad aH = bH$$
 elles forment une partition de $G$.
 
@@ -100,7 +100,7 @@ i.e. $g H g^{-1} = H$, i.e. $g H = H g$.
 > $$
 > \begin{aligned}
 > \omega(1\ i)\omega^{-1} &= (1\ i) \\
-> \left( \omega(1)\ \ \omega(i) \right) &= (1\ i)
+> \left( \omega(1)\ \ \omega(i) \right) &= (1\ i).
 > \end{aligned}
 > $$
 > d'où $\omega(i) = 1$ ou $i$ pour tout $i$, donc $\omega(1) = 1$.
@@ -128,10 +128,10 @@ $$g[x,y]g^{-1} = gxyx^{-1}y^{-1}g^{-1} = (gxg^{-1})(gyg^{-1})(gxg^{-1})^{-1}(gyg
 
 ### 4.1 Construction
 
-**Thm :** Soit $H \triangleleft G$. Alors il existe sur $G/H$ une unique structure de groupe telle que l'application $\pi: G \to G/H$, $g \mapsto gH$ soit un morphisme de groupes, i.e. telle que
+**Thm :** Soit $H \triangleleft G$. Alors il existe sur $G/H$ une unique structure de groupe telle que l'application $\pi: G \to G/H$, $g \mapsto gH$ soit un morphisme de groupes, i.e. telle que.
 $$(gH)(g'H) = gg'H$$
 
-(Il faut s'assurer que cette formule a un sens, i.e. : si $g_1 \in gH$, $g'_1 \in g'H$, alors $g_1g'_1 \in gg'H$.)
+(Il faut s'assurer que cette formule a un sens, i.e. : si $g_1 \in gH$, $g'_1 \in g'H$, alors $g_1g'_1 \in gg'H$.).
 
 Ainsi : un sous-groupe distingué est toujours le noyau d'un morphisme : $H = \ker \pi$, $\pi$ surjectif, et $eH = H$ est le neutre de $G/H$.
 
@@ -155,7 +155,7 @@ Alors il existe un morphisme $\overline{F} : G/H \to K$ tel que $f = \overline{F
   $$f(h) = \overline{F}(\pi(h)) = \overline{F}(H) = e$$
   ($H$ neutre de $G/H$). Ainsi $H \subset \ker f$.
 - Si $H \subset \ker f$ : on définit $\overline{F}$ par $\overline{F}(gH) = f(g)$. Vérifions que ceci est bien défini, i.e. si $gH = g'H$ alors $f(g) = f(g')$.
-  Mais $gH = g'H \Rightarrow \exists h \in H$ tel que $g' = gh$, donc
+  Mais $gH = g'H \Rightarrow \exists h \in H$ tel que $g' = gh$, donc.
   $$f(g') = f(gh) = f(g)f(h) = f(g) \qquad (H \subset \ker f)$$
   $\bar{f}$ est bien un morphisme de groupes, i.e.
   $$\bar{f}(gH \cdot g'H) = \bar{f}(gHg'H) = \bar{f}(gg'H) = f(gg') = f(g)f(g') = \bar{f}(gH) \cdot \bar{f}(g'H)$$
@@ -225,7 +225,7 @@ Soit $H \triangleleft G$, $\pi: G \longrightarrow G/H$.
 
 ### 4.5 Deuxième théorème d'isomorphisme
 
-**Théorème :** Soit $H \trianglelefteq G$ et $M \subset G$ sous-groupe. Alors $M \cap H \trianglelefteq M$, et on a un isomorphisme
+**Théorème :** Soit $H \trianglelefteq G$ et $M \subset G$ sous-groupe. Alors $M \cap H \trianglelefteq M$, et on a un isomorphisme.
 $$\frac{M}{M \cap H} \cong \frac{MH}{H}$$
 
 **Preuve :** On dispose du morphisme $\pi: G \to G/H$. On le restreint à $M$ : $\pi|_M = \pi_1 : M \to G/H$ morphisme.
@@ -278,7 +278,7 @@ On a aussi $H \subset \ker \varphi$ car $\pi_1(H) = H/K = \ker \pi_2$.
 
 **Prop :** Soit $H \subset G$ sous-groupe d'indice 2, i.e. $|G/H| = 2$. Alors $H \trianglelefteq G$.
 
-**Preuve :** Soit $g \in G$, $g \notin H$ ; alors $gH \neq H$, donc $G/H = \{H, gH\}$ et
+**Preuve :** Soit $g \in G$, $g \notin H$ ; alors $gH \neq H$, donc $G/H = \{H, gH\}$ et.
 $$G = H \sqcup gH$$
 ($\sqcup$ : réunion disjointe, i.e. réunion de 2 parties d'intersection $\emptyset$).
 De même avec les classes à droite : $G = H \sqcup Hg$, d'où $gH = Hg$.
@@ -316,17 +316,17 @@ $$\mathrm{Stab}(x) = \{ g \in G ; g \cdot x = x \}$$
 
 ### 5.1 Description de l'orbite en terme du stabilisateur
 
-**Prop :** Soit $x \in X$. L'application
+**Prop :** Soit $x \in X$. L'application.
 $$
 \begin{aligned}
 G / \mathrm{Stab}(x) &\longrightarrow \mathcal{O}(x) \\
-g \cdot \mathrm{Stab}(x) &\longmapsto g \cdot x
+g \cdot \mathrm{Stab}(x) &\longmapsto g \cdot x.
 \end{aligned}
 $$
 est bijective.
 
 **Preuve :**
-- Bien définie : si $g \cdot \mathrm{Stab}(x) = g' \cdot \mathrm{Stab}(x)$, alors $\exists h \in \mathrm{Stab}(x)$ tel que $g = g' h$, donc
+- Bien définie : si $g \cdot \mathrm{Stab}(x) = g' \cdot \mathrm{Stab}(x)$, alors $\exists h \in \mathrm{Stab}(x)$ tel que $g = g' h$, donc.
   $$g \cdot x = g' \cdot (h \cdot x) = g' \cdot x$$
 - Surjective : par définition de l'orbite.
 - Injective : si.
@@ -353,7 +353,7 @@ $$|O(x)| \mid |G|$$
 
    morphisme de groupes (associativité), injectif.
 
-   **Corollaire :** Théorème de Cayley..
+   **Corollaire :** Théorème de Cayley.
    Soit $G$ groupe fini, $|G|=n$. Alors $G$ est isomorphe à un sous-groupe du groupe symétrique $\mathfrak{S}_n$
 
 2. Soit $H$ sous-groupe de $G$. Alors $G$ agit par translations à gauche sur $G/H$
@@ -369,7 +369,7 @@ $$|O(x)| \mid |G|$$
 
    i.e. « $f$ transforme l'action de $G$ sur $X$ en l'action de $G$ sur $Y$ ».
 
-**Prop:** Soit $G$ agissant sur $X$, $x \in X$. Alors la bijection $\psi: \underset{\text{Stab}(x)}{G/} \longrightarrow O(x)$ est $G$ équivariante.
+**Prop :** Soit $G$ agissant sur $X$, $x \in X$. Alors la bijection $\psi: \underset{\text{Stab}(x)}{G/} \longrightarrow O(x)$ est $G$ équivariante.
 
 Ainsi : pour étudier l'action de $G$ sur une orbite, on se ramène à étudier l'action par translation à gauche sur $\underset{\text{Stab}(x)}{G/}$
 
@@ -396,7 +396,7 @@ $$\text{Stab}(aH) = aHa^{-1}, \quad \text{car } \text{Stab}(H) = H$$
 **Rem :** L'action par translation de $G$ sur $G/H$ n'est pas fidèle en général :
 $$\operatorname{Ker}\varphi=\bigcap_{a\in G}aHa^{-1}$$
 
-**Prop :** : Soit $G$ groupe infini qui possède un sous-groupe $H$ d'indice fini $(|G/H|<+\infty)$.
+**Prop :** Soit $G$ groupe infini qui possède un sous-groupe $H$ d'indice fini $(|G/H|<+\infty)$.
 Alors $G$ n'est pas un groupe simple.
 
 **Preuve :** Considérons l'opération de $G$ sur $G/H$
@@ -437,7 +437,7 @@ Pour $r \leq n,p$ représentant $I_r=\begin{pmatrix} I_r & 0 \\ 0 & 0 \end{pmatr
 Action du groupe $GL_n(k)$ sur l'espace des matrices symétriques $S_n(k)\subset M_n(k)$
 $$\begin{array}{ccc}
 GL_n(k)\times S_n(k) & \longrightarrow & S_n(k) \\
-(P,Q) & \longmapsto & PQ.\,{}^tP.
+(P,Q) & \longmapsto & P\,Q\,{}^tP.
 \end{array}$$
 
 **Points Fixes pour une action de groupe**
@@ -448,7 +448,7 @@ $$x \in X^G \Longleftrightarrow O(x) = \{x\}$$
 
 ---
 
-**Thm:** *Equation aux classes*.
+**Thm :** *Equation aux classes*.
 
 Soit $G$ agissant sur $X$. Alors.
 $$X = X^G \sqcup \bigsqcup_{|O(\alpha_i)| \geq 2} O(\alpha_i)$$
@@ -458,7 +458,7 @@ réunion disjointe de $X^G$ et des orbites non réduites à un point.
 
 ## Application
 
-**Déf:** Soit $k$ nombre premier  .
+**Déf :** Soit $k$ nombre premier  .
 On appelle **$k$-groupe** un groupe dont le cardinal est une puissance de $k$
 $$|G| = k^n,\ n \geq 1.$$
 
@@ -545,7 +545,7 @@ $$\begin{pmatrix} 1 & 0 & 0 \\ 0 & \cos\theta & \sin\theta \\ 0 & -\sin\theta & 
 
 Si $g \in G$, $g \neq e$ : son axe intersecte la sphère $S^2$ de rayon 1 en 2 points $p$ et $-p$, appelés les pôles de $G$
 
-![[附件/球面直径与极点.svg]]
+![[球面直径与极点.svg|附件/球面直径与极点.svg]]
 
 Soit $X =$ ensemble des pôles des éléments de $G \neq \{e\}$
 
