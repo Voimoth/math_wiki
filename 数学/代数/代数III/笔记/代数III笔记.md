@@ -16,7 +16,8 @@ confidence: medium
 Marc Rosso
 marc.rosso@imj-prg.fr
 
-**Notations :** G, H groupes.
+> [!info] Notations
+> G, H groupes.
 
 ---
 
@@ -64,9 +65,11 @@ Classe à gauche de $a \in G$ : $aH = \{ah, h \in H\}$ — classes d'équivalenc
 $$a \mathcal{R} b \iff a^{-1}b \in H \quad\text{i.e.}\quad aH = bH$$
 elles forment une partition de $G$.
 
-**Notation :** $G/H = \{\text{classes à gauche}\}$ ; de même : classe à droite.
+> [!info] Notation
+> $G/H = \{\text{classes à gauche}\}$ ; de même : classe à droite.
 
-**Thm de Lagrange :** Si $G$ groupe fini, $H \subset G$ sous-groupe, alors $|H|$ divise $|G|$.
+> [!note] Thm de Lagrange
+> Si $G$ groupe fini, $H \subset G$ sous-groupe, alors $|H|$ divise $|G|$.
 
 ### 1.5 Sous-groupe engendré par une partie $A$
 
@@ -83,9 +86,10 @@ $$\langle A \rangle = \{a_1^{\varepsilon_1} \cdots a_k^{\varepsilon_k}, \ k \in 
 
 ## 2. Sous-groupe distingué, ou normal
 
-**Déf :** C'est un sous-groupe $H \subset G$ tel que :
-$$\forall g \in G, \forall h \in H, \quad g h g^{-1} \in H$$
-i.e. $g H g^{-1} = H$, i.e. $g H = H g$.
+> [!note] Déf
+> C'est un sous-groupe $H \subset G$ tel que :
+> $$\forall g \in G, \forall h \in H, \quad g h g^{-1} \in H$$
+> i.e. $g H g^{-1} = H$, i.e. $g H = H g$.
 
 > [!example] Exemples
 > 1. Le noyau $\mathrm{Ker}\, f$ d'un morphisme de groupes.
@@ -109,13 +113,15 @@ i.e. $g H g^{-1} = H$, i.e. $g H = H g$.
 
 ## 3. Groupe dérivé $\mathfrak{D}(G)$
 
-**Déf :** $\mathfrak{D}(G)$ = sous-groupe de $G$ engendré par les **commutateurs**, i.e. par les éléments $xyx^{-1}y^{-1}$, $x,y \in G$.
+> [!note] Déf
+> $\mathfrak{D}(G)$ = sous-groupe de $G$ engendré par les **commutateurs**, i.e. par les éléments $xyx^{-1}y^{-1}$, $x,y \in G$.
 
 Notation : $[x,y] = xyx^{-1}y^{-1}$.
 Dire que $[x,y] = e$, c'est dire $xy = yx$. Donc :
 $$\mathfrak{D}(G) = \{e\} \iff G \text{ commutatif}$$
 
-**Prop :** $\mathfrak{D}(G)$ est un sous-groupe distingué.
+> [!info] Prop
+> $\mathfrak{D}(G)$ est un sous-groupe distingué.
 
 **Preuve :** Il suffit de voir que $\forall g \in G$, $\forall x,y \in G$ :
 $$g[x,y]g^{-1} = gxyx^{-1}y^{-1}g^{-1} = (gxg^{-1})(gyg^{-1})(gxg^{-1})^{-1}(gyg^{-1})^{-1} = [gxg^{-1}, gyg^{-1}]$$
@@ -124,12 +130,14 @@ $$g[x,y]g^{-1} = gxyx^{-1}y^{-1}g^{-1} = (gxg^{-1})(gyg^{-1})(gxg^{-1})^{-1}(gyg
 
 ## 4. Groupe quotient
 
-**Notation :** si $H < G$ sous-groupe distingué, on l'écrit $H \triangleleft G$.
+> [!info] Notation
+> si $H < G$ sous-groupe distingué, on l'écrit $H \triangleleft G$.
 
 ### 4.1 Construction
 
-**Thm :** Soit $H \triangleleft G$. Alors il existe sur $G/H$ une unique structure de groupe telle que l'application $\pi: G \to G/H$, $g \mapsto gH$ soit un morphisme de groupes, i.e. telle que :
-$$(gH)(g'H) = gg'H$$
+> [!note] Thm
+> Soit $H \triangleleft G$. Alors il existe sur $G/H$ une unique structure de groupe telle que l'application $\pi: G \to G/H$, $g \mapsto gH$ soit un morphisme de groupes, i.e. telle que :
+> $$(gH)(g'H) = gg'H$$
 
 (Il faut s'assurer que cette formule a un sens, i.e. : si $g_1 \in gH$, $g'_1 \in g'H$, alors $g_1g'_1 \in gg'H$.)
 
@@ -160,13 +168,15 @@ Alors il existe un morphisme $\overline{F} : G/H \to K$ tel que $f = \overline{F
   $\bar{f}$ est bien un morphisme de groupes, i.e.
   $$\bar{f}(gH \cdot g'H) = \bar{f}(gHg'H) = \bar{f}(gg'H) = f(gg') = f(g)f(g') = \bar{f}(gH) \cdot \bar{f}(g'H)$$
 
-**Corollaire :** On a un isomorphisme de groupes.
-$$G/\mathrm{Ker}\, f \longrightarrow \mathrm{Im}\, f$$
-Ainsi, si $G$ fini : $|G| = |\mathrm{Im}\, f| \cdot |\mathrm{Ker}\, f|$ (car $|G/H| = \frac{|G|}{|H|}$).
+> [!note] Corollaire
+> On a un isomorphisme de groupes.
+> $$G/\mathrm{Ker}\, f \longrightarrow \mathrm{Im}\, f$$
+> Ainsi, si $G$ fini : $|G| = |\mathrm{Im}\, f| \cdot |\mathrm{Ker}\, f|$ (car $|G/H| = \frac{|G|}{|H|}$).
 
 ### 4.3 Propriété universelle du groupe dérivé
 
-**Thm :** Soit $G$ groupe, $A$ groupe commutatif et $f : G \longrightarrow A$ un morphisme. Alors $f$ se factorise à travers $G/\mathfrak{D}(G)$ :
+> [!note] Thm
+> Soit $G$ groupe, $A$ groupe commutatif et $f : G \longrightarrow A$ un morphisme. Alors $f$ se factorise à travers $G/\mathfrak{D}(G)$ :
 
 $$
 \begin{CD}
@@ -198,9 +208,10 @@ $\bar{\pi}_1$ est donné par le thm ; il est surjectif car $\pi_1$ est surjectif
 
 Soit $H \triangleleft G$, $\pi: G \longrightarrow G/H$.
 
-**Thm :** Il y a une bijection entre :
-1. l'ensemble des sous-groupes de $G/H$ (respectivement sous-groupes distingués de $G/H$) ;
-2. l'ensemble des sous-groupes de $G$ contenant $H$ (respectivement sous-groupes distingués de $G$ contenant $H$).
+> [!note] Thm
+> Il y a une bijection entre :
+> 1. l'ensemble des sous-groupes de $G/H$ (respectivement sous-groupes distingués de $G/H$) ;
+> 2. l'ensemble des sous-groupes de $G$ contenant $H$ (respectivement sous-groupes distingués de $G$ contenant $H$).
 
 **Preuve :**
 
@@ -225,8 +236,9 @@ Soit $H \triangleleft G$, $\pi: G \longrightarrow G/H$.
 
 ### 4.5 Deuxième théorème d'isomorphisme
 
-**Théorème :** Soit $H \trianglelefteq G$ et $M \subset G$ sous-groupe. Alors $M \cap H \trianglelefteq M$, et on a un isomorphisme :
-$$\frac{M}{M \cap H} \cong \frac{MH}{H}$$
+> [!note] Théorème
+> Soit $H \trianglelefteq G$ et $M \subset G$ sous-groupe. Alors $M \cap H \trianglelefteq M$, et on a un isomorphisme :
+> $$\frac{M}{M \cap H} \cong \frac{MH}{H}$$
 
 **Preuve :** On dispose du morphisme $\pi: G \to G/H$. On le restreint à $M$ : $\pi|_M = \pi_1 : M \to G/H$ morphisme.
 - Son image : $\pi(M) = \frac{MH}{H}$
@@ -257,8 +269,9 @@ $$\frac{M}{\mathrm{Ker}(\pi_1)} \cong \mathrm{Im}(\pi_1) \quad\Longrightarrow\qu
 
 ### 4.6 Troisième théorème d'isomorphisme
 
-**Thm :** $G$ groupe, $H \triangleleft G$, $K \triangleleft H$ et $K \triangleleft G$. Alors $H/K \triangleleft G/K$, et :
-$$\frac{G/K}{H/K} \simeq G/H$$
+> [!note] Thm
+> $G$ groupe, $H \triangleleft G$, $K \triangleleft H$ et $K \triangleleft G$. Alors $H/K \triangleleft G/K$, et :
+> $$\frac{G/K}{H/K} \simeq G/H$$
 
 **Preuve :** $H/K \triangleleft G/K$ : théorème sur les sous-groupes d'un quotient.
 On considère les morphismes de passage au quotient :
@@ -272,11 +285,14 @@ On a aussi $H \subset \ker \varphi$ car $\pi_1(H) = H/K = \ker \pi_2$.
 
 ### 4.7 Groupe simple
 
-**Déf :** Un groupe $G$ est **simple** si ses seuls sous-groupes distingués sont $\{e\}$ et $G$.
+> [!note] Déf
+> Un groupe $G$ est **simple** si ses seuls sous-groupes distingués sont $\{e\}$ et $G$.
 
-**Intérêt :** Si $G$ est simple et $f : G \to K$ un morphisme non trivial (i.e. $\mathrm{Im}\, f \neq \{e\}$), alors $f$ est injective.
+> [!info] Intérêt
+> Si $G$ est simple et $f : G \to K$ un morphisme non trivial (i.e. $\mathrm{Im}\, f \neq \{e\}$), alors $f$ est injective.
 
-**Prop :** Soit $H \subset G$ sous-groupe d'indice 2, i.e. $|G/H| = 2$. Alors $H \trianglelefteq G$.
+> [!info] Prop
+> Soit $H \subset G$ sous-groupe d'indice 2, i.e. $|G/H| = 2$. Alors $H \trianglelefteq G$.
 
 **Preuve :** Soit $g \in G$, $g \notin H$ ; alors $gH \neq H$, donc $G/H = \{H, gH\}$ et
 $$G = H \sqcup gH$$
@@ -290,19 +306,21 @@ Ceci vaut $\forall g \in G$, d'où $H \trianglelefteq G$.
 
 $X$ ensemble, $\mathfrak{S}(X) = \{ f : X \to X \mid f \text{ bijection} \}$.
 
-**Déf :** On dit qu'un groupe $G$ **opère** (ou **agit**) sur $X$ si on a un morphisme de groupes.
-$$\varphi : G \to \mathfrak{S}(X)$$
-notation : $\varphi(g) : x \mapsto g \cdot x$.
-Autrement dit : on a une application $G \times X \to X$, $(g, x) \mapsto g \cdot x$, telle que :
-1. $\forall g, g' \in G, \forall x \in X \quad g \cdot (g' \cdot x) = (gg') \cdot x$
-2. $\forall x \in X \quad e \cdot x = x$
+> [!note] Déf
+> On dit qu'un groupe $G$ **opère** (ou **agit**) sur $X$ si on a un morphisme de groupes.
+> $$\varphi : G \to \mathfrak{S}(X)$$
+> notation : $\varphi(g) : x \mapsto g \cdot x$.
+> Autrement dit : on a une application $G \times X \to X$, $(g, x) \mapsto g \cdot x$, telle que :
+> 1. $\forall g, g' \in G, \forall x \in X \quad g \cdot (g' \cdot x) = (gg') \cdot x$
+> 2. $\forall x \in X \quad e \cdot x = x$
 
-**Déf :**
-1. L'action est **fidèle** si $\varphi$ est injective.
-2. L'action est **transitive** si : $\forall x, y \in X, \exists g \in G$ tel que $g \cdot x = y$.
+> [!note] Déf
+> 1. L'action est **fidèle** si $\varphi$ est injective.
+> 2. L'action est **transitive** si : $\forall x, y \in X, \exists g \in G$ tel que $g \cdot x = y$.
 
-**Déf :** Soit $G$ agissant sur $X$ et $x \in X$. L'**orbite** de $x$ :
-$$O(x) = \{ g \cdot x ,\ g \in G \} = G \cdot x$$
+> [!note] Déf
+> Soit $G$ agissant sur $X$ et $x \in X$. L'**orbite** de $x$ :
+> $$O(x) = \{ g \cdot x ,\ g \in G \} = G \cdot x$$
 
 > [!info] Rem
 > On a sur $X$ une relation d'équivalence : pour $x, y \in X$,
@@ -310,20 +328,22 @@ $$O(x) = \{ g \cdot x ,\ g \in G \} = G \cdot x$$
 > les orbites sont les classes d'équivalence. Ainsi : les orbites distinctes sont disjointes, et elles forment une partition de $X$.
 > Une action est transitive $\iff$ il y a une seule orbite.
 
-**Déf :** Soit $x \in X$. Le **stabilisateur** de $x$ :
-$$\mathrm{Stab}(x) = \{ g \in G ; g \cdot x = x \}$$
-(aussi noté $G_x$). C'est un sous-groupe de $G$.
+> [!note] Déf
+> Soit $x \in X$. Le **stabilisateur** de $x$ :
+> $$\mathrm{Stab}(x) = \{ g \in G ; g \cdot x = x \}$$
+> (aussi noté $G_x$). C'est un sous-groupe de $G$.
 
 ### 5.1 Description de l'orbite en termes du stabilisateur
 
-**Prop :** Soit $x \in X$. L'application
-$$
-\begin{aligned}
-G / \mathrm{Stab}(x) &\longrightarrow \mathcal{O}(x) \\
-g \cdot \mathrm{Stab}(x) &\longmapsto g \cdot x.
-\end{aligned}
-$$
-est bijective.
+> [!info] Prop
+> Soit $x \in X$. L'application
+> $$
+> \begin{aligned}
+> G / \mathrm{Stab}(x) &\longrightarrow \mathcal{O}(x) \\
+> g \cdot \mathrm{Stab}(x) &\longmapsto g \cdot x.
+> \end{aligned}
+> $$
+> est bijective.
 
 **Preuve :**
 - Bien définie : si $g \cdot \mathrm{Stab}(x) = g' \cdot \mathrm{Stab}(x)$, alors $\exists h \in \mathrm{Stab}(x)$ tel que $g = g' h$, donc
@@ -366,7 +386,8 @@ $$|O(x)| \mid |G|$$
 
    i.e. « $f$ transforme l'action de $G$ sur $X$ en l'action de $G$ sur $Y$ ».
 
-**Prop :** Soit $G$ agissant sur $X$, $x \in X$. Alors la bijection $\psi: G/\operatorname{Stab}(x) \longrightarrow O(x)$ est $G$-équivariante.
+> [!info] Prop
+> Soit $G$ agissant sur $X$, $x \in X$. Alors la bijection $\psi: G/\operatorname{Stab}(x) \longrightarrow O(x)$ est $G$-équivariante.
 
 Ainsi : pour étudier l'action de $G$ sur une orbite, on se ramène à étudier l'action par translation à gauche sur $G/\operatorname{Stab}(x)$.
 
@@ -382,7 +403,8 @@ $$\begin{aligned}
 
 ---
 
-**Prop :** Si $G$ agit sur $X$ et $x \in X$, alors $$\text{Stab}(g\cdot x) = g\,\text{Stab}(x)\,g^{-1}.$$
+> [!info] Prop
+> Si $G$ agit sur $X$ et $x \in X$, alors $$\text{Stab}(g\cdot x) = g\,\text{Stab}(x)\,g^{-1}.$$
 
 En effet : $h\cdot(g\cdot x) = g\cdot x \Longleftrightarrow (g^{-1}hg)\cdot x = x \Longleftrightarrow g^{-1}hg \in \text{Stab}(x)$.
 
@@ -425,7 +447,8 @@ G\times M_{n,p}(k) & \longrightarrow & M_{n,p}(k) \\
 
 les orbites de cette action sont les classes d'équivalence de matrices.
 
-**Thm :** 2 matrices sont équivalentes $\Leftrightarrow$ même rang.
+> [!note] Thm
+> 2 matrices sont équivalentes $\Leftrightarrow$ même rang.
 
 Pour $r \leq n,p$ représentant $I_r=\begin{pmatrix} I_r & 0 \\ 0 & 0 \end{pmatrix}$.
 
@@ -456,12 +479,14 @@ $$x \in X^G \Longleftrightarrow O(x) = \{x\}$$
 
 ## Application
 
-**Déf :** Soit $k$ nombre premier.
-On appelle **$k$-groupe** un groupe dont le cardinal est une puissance de $k$.
-$$|G| = k^n,\ n \geq 1.$$
+> [!note] Déf
+> Soit $k$ nombre premier.
+> On appelle **$k$-groupe** un groupe dont le cardinal est une puissance de $k$.
+> $$|G| = k^n,\ n \geq 1.$$
 
-**Prop :** Soit $G$ un $k$-groupe agissant sur $X$ fini.  
-Alors $\displaystyle |X| \equiv |X^G| \pmod{k}$.
+> [!info] Prop
+> Soit $G$ un $k$-groupe agissant sur $X$ fini.  
+> Alors $\displaystyle |X| \equiv |X^G| \pmod{k}$.
 
 *Preuve :* équation aux classes, et le fait que $|O(\alpha_i)| \mid |G|$. Comme $|G| = k^n$, si $|O(\alpha_i)| \geq 2$,
 
@@ -473,7 +498,8 @@ $$|X|=|X^G|+\sum_{|O(\alpha_i)|\geqslant 2}|O(\alpha_i)|$$
 
 on a $|X|\equiv |X^G| \bmod k$.
 
-**Thm :** Si $G$ est un $p$-groupe, alors le centre de $G$ est $\neq \{e\}$, i.e. $Z(G)$ non trivial.
+> [!note] Thm
+> Si $G$ est un $p$-groupe, alors le centre de $G$ est $\neq \{e\}$, i.e. $Z(G)$ non trivial.
 
 **Preuve :** On considère l'action de $G$ sur lui-même par conjugaison. On a $Z(G)=\{g\in G\mid \forall x\in G,\; xgx^{-1}=g\}$.
 
@@ -511,7 +537,8 @@ $$\begin{aligned}
 &= |G| \cdot N.
 \end{aligned}$$
 
-**Prop :** Soit $G$ groupe fini, agissant sur $X$ fini, $|X|\geq 2$ transitivement. Alors il y a au moins un élément $g\in G$ sans point fixe.
+> [!info] Prop
+> Soit $G$ groupe fini, agissant sur $X$ fini, $|X|\geq 2$ transitivement. Alors il y a au moins un élément $g\in G$ sans point fixe.
 
 **Preuve :** Ici $N=1$.
 $$\begin{aligned}
@@ -521,7 +548,8 @@ $$\begin{aligned}
 
 Ici $|X|\geq 2$ et si on avait $\forall g\in G$, $|\mathrm{Fix}(g)|\geq 1$ on aurait une contradiction.
 
-**Application :** Sous-groupes finis du groupe des rotations de l'espace euclidien $\mathbb{R}^3$, $SO(3)$.
+> [!example] Application
+> Sous-groupes finis du groupe des rotations de l'espace euclidien $\mathbb{R}^3$, $SO(3)$.
 
 > [!note] Thm : sous-groupes finis de $SO(3)$
 > Soit $G\subset SO(3)$ sous-groupe fini. Alors $G$ est isomorphe à l'un des groupes suivants :
@@ -550,7 +578,8 @@ On a ainsi, par restriction à $X$, une action de $G$ sur $X$.
 
 Soit $N$ le nombre d'orbites.
 
-**Prop :** On a $N=2$ ou $N=3$.
+> [!info] Prop
+> On a $N=2$ ou $N=3$.
 
 **Preuve :** Burnside $N=\frac{1}{|G|}\sum\limits_{g \in G} |\text{Fix}(g)|$.
 
@@ -571,7 +600,8 @@ N &= \frac{1}{|G|}\left(\sum_{i=1}^{N}|O_i|+2(|G|-1)\right) \\
 \sum_{i=1}^{N}\left(1-\frac{1}{|G_{x_i}|}\right) &= 2\left(1-\frac{1}{|G|}\right).
 \end{aligned}$$
 
-**Rem :** $|G| \geq 2 \qquad \frac{1}{2} \leq 1-\frac{1}{|G|} < 1$.
+> [!info] Rem
+> $|G| \geq 2 \qquad \frac{1}{2} \leq 1-\frac{1}{|G|} < 1$.
 
 De même $G_{x_i}$ contient $\text{Id}$, et aussi une rotation $\neq \text{Id}$ dont l'axe est la droite $\mathbb{R}x_i$, d'où $|G_{x_i}| \geq 2$.
 
@@ -588,7 +618,8 @@ De plus, $N>1$ via $(\star)$, car si $N=1$ on aurait $|X|+|G|=2$ d'où $|G|=|X|=
 
 **Conclusion :** $N \in\{2,3\}$.
 
-**Remarque :** les stabilisateurs $G_{x_{i}}$ sont des *groupes cycliques* : les éléments de $G_{x_{i}}$ sont des rotations de même axe $\mathbb{R} \alpha_{i}$. Ainsi $G_{x_{i}}$ est en bijection avec un sous-groupe fini du groupe des rotations du plan $(\mathbb{R} \alpha_{i})^{\perp}$.
+> [!info] Remarque
+> les stabilisateurs $G_{x_{i}}$ sont des *groupes cycliques* : les éléments de $G_{x_{i}}$ sont des rotations de même axe $\mathbb{R} \alpha_{i}$. Ainsi $G_{x_{i}}$ est en bijection avec un sous-groupe fini du groupe des rotations du plan $(\mathbb{R} \alpha_{i})^{\perp}$.
 
 ---
 
@@ -633,7 +664,8 @@ $$\begin{aligned}
 &|O_3| = 2.
 \end{aligned}$$
 
-**Rem :** l'action de $G$ sur $X$ est la restriction à $X$ d'une action linéaire $g(-x)=-g(x)$.
+> [!info] Rem
+> l'action de $G$ sur $X$ est la restriction à $X$ d'une action linéaire $g(-x)=-g(x)$.
 
 $$\forall x \quad G_{x}=G_{-x}, \text{ d'où } |\mathcal{O}(x)|=|\mathcal{O}(-x)|$$
 
@@ -655,7 +687,8 @@ De plus $G_x \cap G_y = \{\mathrm{Id}\}$, et $G_x$ est d'indice 2 dans $G$, donc
 
 On dispose du groupe $G_x G_y = G_y G_x$, de cardinal $|G_x|\,|G_y| = 2n = |G|$ ; ainsi $G = G_x G_y$ est isomorphe au groupe diédral $D_{2n}$, en considérant les restrictions à $(\mathbb{R}x)^\perp$.
 
-**Rem :** Si $n=2$, $|G|=4$. A priori $G = \mathbb{Z}/4\mathbb{Z}$ ou $D_4$.
+> [!info] Rem
+> Si $n=2$, $|G|=4$. A priori $G = \mathbb{Z}/4\mathbb{Z}$ ou $D_4$.
 
 ---
 
