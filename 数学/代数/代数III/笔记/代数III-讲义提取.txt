@@ -1,0 +1,317 @@
+﻿<<<PAGE 1>>>
+Références:
+
+Daniel Perrin : Cours d'algèbre
+
+Paul Kree, Jacques Vanthier, Mirella Kree
+
+*Algèbre*. Cours de Mathématiques et exercices de $2^{\text{me}}$ année.
+
+En anglais: Mike Artin Algebra.
+Nathan Jacobson: Basic algebra 1.
+
+Sous-groupes de Sylow.
+
+Définition:
+
+Soit $p$ un nombre premier, divisant $|G|$. On écrit $|G| = p^\alpha m$ avec $p \nmid m = 1$.
+<<<PAGE 2>>>
+On appelle $p$-sous-groupe de $Sylow$ de $G$ (ou $p$-$Sylow$ de $G$) tout sous-groupe de $G$ de cardinal $p^{\alpha}$.
+
+Exemple : $p$ premier $\quad \mathbb{F}_p = \mathbb{Z}/p\mathbb{Z}$, $G = GL_n(\mathbb{F}_p)$. Groupe fini.
+
+Prop $|GL_n(\mathbb{F}_p)| = (p^n - 1)(p^n - p)\cdots(p^n - p^{n-1})$
+$$= p^{\frac{n(n-1)}{2}} (p^n - 1)(p^{n-1} - 1)\cdots(p - 1)$$
+
+Preuve : $g \in G \iff \text{ses vecteurs forment une base de } (\mathbb{F}_p)^n$.
+
+Tout revient à déterminer le nombre de bases de l'espace vectoriel $(\mathbb{F}_p)^n$ $(e_1, \dots, e_n)$
+$1^{\text{er}}$ vecteur $e_1 : e_1 \neq 0$ d'où $|\mathbb{F}_p^n| - 1$ possibilités
+$$p^n - 1$$
+$2^{\text{e}}$ vecteur $e_2 : e_2 \notin \text{Vect}(e_1) \quad e_2 \in (\mathbb{F}_p)^n - \mathbb{F}_p \cdot e_1$
+d'où $p^n - p$ possibilités
+
+on poursuit
+
+Si on a déjà $e_1, \dots, e_{k-1} \quad (k \ge 2)$
+alors on doit prendre $e_k \notin \text{Vect}(e_1, \dots, e_k)$
+$\underline{\text{$\mathbb{F}_p$-espace vectoriel de dim $k-1$ de cardinal $p^{k-1}$}}$
+d'où $p^n - p^{k-1}$ possibilités pour $e_k$.
+
+$|GL_n(\mathbb{F}_p)| = (p^n - 1)(p^n - p)\cdots(p^n - p^{n-1})$
+$$= p^{\alpha} (p^n - 1)\cdots(p - 1), \quad \alpha = \frac{n(n-1)}{2}$$
+
+Cherchons un sous-groupe de Sylow de $G$.
+$$S = \left\{ \begin{pmatrix} 1 & * & \cdots \\ & 1 & \ddots \\ 0 & & 1 \end{pmatrix} \right\} \text{ il y a } \frac{n(n-1)}{2} \text{ termes strictement au-dessus}$$
+$\qquad \qquad \qquad \qquad \quad \text{de la diagonale}$
+$|S| = p^{\alpha}$
+<<<PAGE 3>>>
+Thm (Sylow) Si $p$ premier divise $|G|$, alors $G$ possède au moins un p-Sylow.
+
+Corollaire : si $p \mid |G|$, avec $|G| = p^\alpha m$, $m \nmid p^{-1}$.
+
+Alors $\forall \beta \leqslant \alpha$, $G$ possède un sous-groupe d'ordre $p^\beta$
+
+Lemme : Soit $G$ groupe, $|G| = p^\alpha \cdot m$, $p \nmid m$, $\alpha \geqslant 1$.
+
+On suppose que $S$ est un p-Sylow de $G$.
+
+Soit $H < G$ sous-groupe, $\exists \exists a \in G$ tel que $aSa^{-1} \cap H$ est un p-Sylow de $H$.
+
+Rem. $\forall a \in G$, $aSa^{-1}$ est un p-Sylow de $G$.
+
+Preuve : On considère l'action de $G$ sur $G/S$ par translation.
+
+$\forall a \in G$, $\text{Stab}(aS) = aSa^{-1}$.
+
+On restreint cette action à $H$:
+
+$$ \text{Stab}_H(aS) = H \cap aSa^{-1} $$
+
+$\forall a \in G$, $aSa^{-1} \cap H$ est un p-groupe. On cherche $a \in G$
+
+tel que $|H / H \cap aSa^{-1}|$ premier avec $p$.
+
+$$ [H : H \cap aSa^{-1}] = \text{cardinal de l'orbite de } aS \text{ sous l'action de } H. $$
+
+$G/S$ est réunion disjointe de ces orbites sous l'action de $H$.
+
+Si $p$ divisait les cardinaux de toutes ces orbites, $p$ diviserait $|G/S|$ : impossible.
+
+Conclusion : $\exists a \not\in \# \# a \quad |H / H \cap aSa^{-1}| \nmid p^{=1}$ et
+
+$$ H \cap aSa^{-1} \quad \text{p-Sylow de } H. $$
+<<<PAGE 4>>>
+
+
+Preuve des thm de Sylow.
+
+Soit $G$ groupe fini. $|G| = p^a \cdot m$, $p \nmid m > 1$.
+
+- Théorème de Cayley : $G \hookrightarrow G_{|G|}$ $\quad n = |G|$
+"sous-groupe de $G_n$"
+
+- Pour tout corps $K$, le groupe $G_n$ est isomorphe à un sous-groupe de $Gl_n(K)$, via les matrices de permutation $G_n \hookrightarrow Gl_n(K)$
+$\sigma \mapsto P_\sigma$.
+
+Conclusion : Tout groupe $G$ est isomorphe à un sous-groupe de $Gl_n(K)$, $n = |G|$.
+Alors $K = \mathbb{F}_p$. $G \hookrightarrow Gl_n(\mathbb{F}_p)$
+et d'après le lemme, $G$ possède au moins un $p$-Sylow.
+
+Thm (Sylow) : Soit $G$ groupe $|G| = p^a m$, $p \nmid m > 1$.
+
+1) Si $H \subset G$ est un $p$-groupe, alors il existe
+un $p$-Sylow de $G$ contenant $H$.
+
+2) Tous les $p$-Sylow de $G$ sont conjugués, et
+leur nombre $k$ divise $|G|$.
+
+En particulier :
+$G$ possède un unique $p$-Sylow $\Leftrightarrow$ $G$ possède un $p$-Sylow
+qui est un sous-groupe distingué.
+
+3) Le nombre $k$ de $p$-Sylow de $G$
+$k \equiv 1 \pmod{p}$ (donc $k \mid m$)
+
+Preuve. 1) et 2)
+
+Soit $H \subset G$ un $p$-groupe. Fixons $S$ un $p$-Sylow de $G$, alors,
+d'après le lemme, $\exists a \in G$ / $a S a^{-1} \cap H$ est $p$-Sylow de $H$.
+Mais $H$ est son propre $p$-Sylow
+<<<PAGE 5>>>
+
+
+$\exists a \in G,\ a S a^{-1} \cap H = H \quad \text{i.e.} \quad H \subset \underset{\text{p-Sylow de } G}{\underline{a S a^{-1}}}$.
+
+2) Si $S' \subset G$ est un autre p-Sylow de $G$.  
+alors $\exists a \in G / \ S' \subset a S a^{-1}$ (selon 1)  
+d'où $S' = a S a$ (égalité des cardinaux)  
+Ainsi, en considérant l'action de $G$ sur l'ensemble des p-Sylow  
+par conjugaison, il y a une seule orbite, et son cardinal divise $|G|$.
+
+3) Soit $X = \{\text{p-Sylow de } G\}$. $|X| = k$.  
+action de $G$ par conjugaison  
+Soit $S \subset G$ un p-Sylow de $G$, il agit sur $X$ par conjugaison.  
+et c'est un p-groupe.  
+Equation aux classes: si $X^S = \{\text{point fixes}\}$  
+alors $|X| \equiv |X^S| \mod p$.
+
+Montrons $|X^S| = 1$, i.e. $X^S = \{S\}$  
+Soit $T \in X^S$ : $\forall s \in S,\ s T s^{-1} = T$.  
+Soit $H$ le sous-groupe de $G$ engendré par $S$ et $T$,  
+On a: $T \triangleleft H$  
+Mais $S$ et $T$ sont des p-Sylow de $G$, et donc aussi des p-Sylow de $H$.  
+Comme $T \triangleleft H$, $T$ est l'unique p-Sylow de $H$, d'où $T = S$.
+
+Application: Etude de la simplicité d'un groupe selon son cardinal.  
+(2 méthodes)
+
+Exemple 1. Soit $G$ groupe d'ordre 63. Alors $G$ n'est pas un groupe simple.  
+$|G| = 63 = 3^2 \times 7$. Considère les 7-Sylow de $G$.  
+Leur nombre $k \equiv 1 \mod 7$ et $k \mid 9$, d'où $k = 1$ : unique 7-Sylow,  
+qui est distingué.
+<<<PAGE 6>>>
+Exemple 2: Soit $G$ groupe d'ordre 48. Alors $G$ n'est pas simple.
+
+Idée: $G$ agit sur les $p$-Sylow et si $k$ est leur nombre,
+ceci donne un morphisme $\varphi: G \rightarrow \mathcal{G}_k$ non trivial car action transitive
+Si $|a|$ ne divise pas $k! = |\mathcal{G}_k|$. alors $\varphi$ ne peut être surjectif
+d'où $\ker \varphi \triangleleft G$ avec $\ker \varphi \neq \{e\}$ $\ker \varphi \neq G$
+
+Ici $|G| = 48 = 2^4 \times 3$
+
+On prend $p=2$. On a $k$ impair, $k|3$. d'où $k \in \{1, 3\}$
+$k = 1$ $\vee$ 2-Sylow unique, alors distingué
+$k = 3$ le morphisme $G \rightarrow \mathcal{G}_3$ ne peut pas être surjectif
+
+Groupes symmétriques
+
+Notation: $n \ge 1$ $\mathcal{G}_n$ groupe symmétrique
+$\mathcal{A}_n$ groupe alterné
+
+$\mathcal{E}: \mathcal{G}_n \rightarrow \{\pm 1\}$ signature , $\tilde{u}_n \rightarrow \text{ker } \mathcal{E}$
+
+$\mathcal{E}(\sigma) = \prod_{i < j} \frac{\sigma(i) - \sigma(j)}{i - j}$
+
+1. Générateurs
+
+Déf Pour $i \neq j$ dans $\{1, \dots, n\}$, $(ij)$ la permutation $\sigma$ telle que $\sigma(i) = j$
+et $\sigma(j) = i$ et $k \neq \{i, j\}, \sigma(k) = k$
+
+*transposition*
+
+Prop. $\mathcal{G}_n$ est engendré par les transpositions
+<<<PAGE 7>>>
+Prop : $G_n$ est engendré par
+1) les transpositions $(12), (13), \ldots, (1k)$
+ou 2) les transpositions $(12), (23), \ldots, (n-1 \ n)$
+
+Preuve:
+Pour 1) soient $i < j$, $(1i)(1j)(1i) = (ij)$
+Pour 2) il suffit de voir que chaque $(1i)$ est produit des $(12)(23)\ldots(n-1 \ n)$
+
+$$(23)(12)(23) = (13)$$
+$$(34)(13)(34) = (14)$$
+$$\vdots$$
+$$(k \ k+1)(1 \ k)(k \ k+1) = (1 \ k+1)$$
+
+Déf: Soit $k \leq n$, on appelle $k$-cycle, ou cycle de longueur $k$, toute permutation de la forme suivante: il existe des éléments $i_1, i_2, \ldots, i_k$ distincts dans $\{1, \ldots, n\}$ tels que:
+
+$$\sigma(i_1) = i_2 \ \ \sigma(i_2) = i_3 \ \ \ldots \ \ \sigma(i_{k-1}) = i_k \ \ \sigma(i_k) = i_1$$
+
+et si $j \notin \{i_1, \ldots, i_k\}, \ \sigma(j) = j$
+
+Notation: $(i_1 \ i_2 \ldots i_k)$
+
+Rem $(i_1 \ i_2 \ldots i_k) = (i_2 \ i_3 \ldots i_k \ i_1)$
+
+Déf. Le support de $(i_1 \ i_2 \ldots i_k)$ est l'ensemble $\{i_1, i_2, \ldots i_k\}$
+
+Prop Dans $G_n$, pour tout $k \leq n$, les $k$-cycles sont conjugués
+i.e. si $\sigma, \sigma'$ $k$-cycles. $\exists \tau \in G_n$, tel que $\sigma' = \tau \sigma \tau^{-1}$
+
+Preuve: $\forall \tau \in G_n$
+
+$$\tau (i_1 \ldots i_k) \tau^{-1} = (\tau(i_1) \ \tau(i_2) \ \ldots \tau(i_k))$$
+
+On utilise que l'action de $G_n$ sur $\{1, \ldots, n\}$ est $k$-fois transitive
+$\forall k \leq n$ i.e. $i_1, \ldots, i_k$ distincts et $j_1, \ldots, j_k$ distincts. $\exists \sigma \in G_n$
+t.q $\sigma(i_1) = j_1, \ldots, \sigma(i_k) = j_k$
+<<<PAGE 8>>>
+
+
+Thm. Pour $n\geq 3$, $\mathcal{A}_n$ est engendré par les 3-cycles
+
+Preuve: $\mathcal{G}_n$ engendré par les transpositions et $\varepsilon(\text{transposition}) = -1$
+
+Ainsi $\mathcal{A}_n$ est engendré par les produit de 2 transpositions
+
+Or: $(ij)(jk) = (ijk)$
+
+si $i,j,k,l$ distincts
+
+$(ij)(kl) = (ij)(jk)(jk)(kl)$
+
+$= (ijk)(jkl)$
+
+Prop. Si $n\geq 5$, les 3-cycles sont conjugués dans $\mathcal{A}_n$
+
+Preuve: On sait que dans $\mathcal{G}_n$ les 3-cycles sont conjugués
+
+si $\tau(abc)\tau^{-1} = (a'b'c')$
+
+si $\varepsilon(\tau) = 1$ $\quad$ ✓
+
+si $\varepsilon(\tau) = -1$ Comme $n\geq 5$, $\exists\, d', e' \in \{1,\dots,n\}$ avec $d'\neq e'$
+
+et $d', e' \notin \{a', b', c'\}$.
+
+Alors $(e'd')(a'b'c')(e'd') = (a'b'c')$
+
+Posons $\widetilde{\tau} = (e'd')\tau \in \mathcal{A}_n$ et $\widetilde{\tau}(abc)\widetilde{\tau}^{-1} = (a'b'c')$
+
+Interprét: Si on a un sous-groupe distingué de $\mathcal{A}_n$, $n\geq 5$, qui
+
+contient un 3-cycle, alors il les contient tous, et donc il est
+
+$\mathcal{A}_n$.
+
+Prop: Il existe un unique morphisme de groupes non trivial:
+
+$\mathcal{G}_n \longrightarrow (\mathbb{C}^*, \cdot)$, c'est la signature $\varepsilon$.
+
+Preuve: Soit $\varphi: \mathcal{G}_n \longrightarrow (\mathbb{C}^*, \cdot)$ un tel morphisme
+
+Soit $\tau$ transposition. On a $\tau^2 = id$, donc $\varphi(\tau) = \varphi(\tau)^2 = 1$.
+
+Donc $\varphi(\tau) \in \{\pm 1\}$, on voit $\varphi$ à valeurs dans $\{\pm 1\}$.
+<<<PAGE 9>>>
+Si $\varphi$ est non trivial, $\exists \tau$ transposition telle que $\varphi(\tau) = -1$.
+Or, toutes les transpositions sont conjuguées et $(\mathbb{C}^*, \cdot)$ commutatif
+Dont $\forall \tau'$ transposition $\varphi(\tau') = -1$, d'où $\varphi = e$.
+
+## Décomposition en produit de cycles à supports disjoints
+
+Thm. Soit $\sigma \in S_n$. Alors il existe des cycles $c_1, \dots, c_r$ à supports 2 à 2 disjoints tels que
+$$ \sigma = c_1 c_2 \dots c_r $$
+De plus, cette décomposition est unique à l'ordre près des facteurs.
+(Rem : comme les supports sont disjoints
+$$ \forall i, j, \quad c_i \sigma = \sigma c_i \quad ) $$
+
+Preuve : Soit $\sigma \in S_m$. On considère le sous-groupe $\langle \sigma \rangle$ de $S_n$ engendré par $\sigma$, et l'action de ce sous-groupe sur $\{1, \dots, n\}$.
+On considère des orbites $F_1, \dots, F_r$ (y compris les orbites à 1 élément)
+Soit $k \in F_i$, et soit $s$ le plus petit entier tel que $\sigma^s(k) = k$.
+Alors $k, \sigma(k), \dots, \sigma^{s-1}(k)$ sont distincts et $F_i = \{k, \sigma(k), \dots, \sigma^{s-1}(k)\}$.
+Dans $F_i$, $\sigma$ agit comme un cycle $(k, \sigma(k), \dots, \sigma^{s-1}(k))$.
+Chaque orbite donne un cycle dont le support est cette orbite.
+
+## Description des classes de conjugaison dans $S_n$
+
+Prop. Deux permutations $\sigma$ et $\sigma'$ sont conjuguées dans $S_n$ si et seulement si
+$\forall k \in \{1, \dots, n\}$, elles ont le même nombre de $k$-cycles dans leur
+décomposition en produit de cycles à supports disjoints.
+
+Preuve : Si $\sigma = c_1 \dots c_r$, $\tau \in S_n$
+$$ \tau \sigma \tau^{-1} = (\tau c_1 \tau^{-1}) \dots (\tau c_r \tau^{-1}) $$
+Chaque $\tau c_i \tau^{-1}$ est un cycle, de même longueur que $c_i$.
+
+<<<PAGE 10>>>
+$$de\ support\ l'image\ par\ \sigma\ du\ support\ de\ c_{i}$$
+
+$$Involution:\begin{array}{r} \sigma\cdot c_{1}\ldots c_{r}\ \ \ \ \ avec\ longueur(c_{i})=longueur(c_{i}^{\prime})\\ \sigma\cdot c_{1}^{\prime}\ldots c_{r}^{\prime} \end{array}$$
+
+$$\forall i,\ on\ construit\ en\ envoyant\ support(c_{i})\ sur\ support(c_{i}^{\prime})\ \ \ \ \ en\ preservant\ l'ordre$$
+
+$$Conséquence:1.L'ordre\ d'une\ permutation\ est\ le\ plus\ petit\ commun\ multiple$$ $$(p.p.c.m)\ des\ longueurs\ des\ cycles\ de\ sa\ décomposition.$$
+
+$$2.Centre:$$
+
+$$Prop.Pour\ n\geq 3,\ Z(S_{n})=\{Id\}$$
+
+$$3.Questions\ de\ simplicité$$
+
+$$Thm.Pour\ n\geq 4,\ A_{n}\ est\ simple$$
+
+$$Rem.Pour\ n<4,\ A_{4}\ n'est\ pas\ simple\ car\ il\ contient\ les$$ $$sous-groupes\ distingués\ V=\{Id,(12)(34),(13)(24),(14)(23)\}$$ $$(\simeq \mathbb{Z}/2\mathbb{Z}\times\mathbb{Z}/2\mathbb{Z}).$$
+
+$$Pour\ n=3,\ A_{3}\simeq\mathbb{Z}/3\mathbb{Z}$$

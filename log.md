@@ -2,6 +2,20 @@
 
 > 数学与物理知识库的变更记录。数学和物理答疑的可复用内容直接沉淀到对应课程的概念页。
 
+## [2026-09-10] ingest | 代数III 讲义续篇(Sylow 定理与对称群)
+- 来源:`C:\Users\13761\Downloads\代数III.pdf`(10 页,手写法语,无文本层,视觉模型转写)
+- **转写通道修复**:`ds_vision_ustc.ps1` 的密钥正则 `api_key:\s*(sk-...)` 取的是配置中**第一个** sk- 密钥(DeepSeek 的),导致 401;新脚本 `ds_vision_ustc2.ps1` 按 provider 块边界(`^  custom:api-llm-ustc-edu-cn:` 起到下一个 provider 头)**定位 USTC 密钥**。另:4.4MB 原图触发 503,降到 0.6 倍(约 1.1MB)后稳定成功
+- **更新 `代数III笔记.md`**(接在第 3 节 $G_1=G/H$ 递推证明之后):
+  - Références(Perrin/Krée/Artin/Jacobson)
+  - **Sous-groupes de Sylow**:$p$-Sylow 定义;$|\mathrm{GL}_n(\mathbb{F}_p)|$ 的数基证明与上三角单位群给出 $p$-Sylow;关键引理($aSa^{-1}\cap H$ 是 $H$ 的 $p$-Sylow,用 $G/S$ 平移作用 + 轨道计数);Sylow 定理三条(存在/共轭/计数 $k\equiv1 \bmod p$、$k\mid m$)及完整证明;Cayley 定理 + 置换矩阵把存在性归约到 $\mathrm{GL}_n(\mathbb{F}_p)$;应用两例($|G|=63$、$|G|=48$ → 非单)
+  - **Groupes symétriques**:符号差定义;$\mathfrak{S}_n$ 的两套生成元($(1i)$ 型与相邻转置);$k$-循环与支撑;循环分解定理($\langle\sigma\rangle$ 轨道证明);共轭类 ⟺ 循环型;$\mathfrak{A}_n$ 由 3-循环生成;3-循环在 $\mathfrak{A}_n$ 中共轭($n\geqslant5$);唯一非平凡同态 $\mathfrak{S}_n\to\mathbb{C}^*$ 即 $\varepsilon$;阶 = 循环长度 p.p.c.m.;$Z(\mathfrak{S}_n)=\{\mathrm{Id}\}$;$\mathfrak{A}_n$ 单性与 $\mathfrak{A}_4$ 例外 $V$
+  - **修正原文自相矛盾**:笔记写 "Thm. Pour $n\geqslant4$, $\mathfrak{A}_n$ est simple" 但紧接 "Rem. Pour $n=4$, $\mathfrak{A}_4$ n'est pas simple"。已按唯一合理解读改为 $n\geqslant5$(三件套证据:定理与 Rem 直接冲突、$|A_4|=12$ 确有正规子群 $V$、$n=4$ 时 3-循环共轭性证明中"另取两个不在支撑内的元素"失败)
+- **新建概念页 2 个**:
+  - `Sylow定理.md` — Lagrange 逆命题反例($A_4$ 无 6 阶子群)、$p$-Sylow 定义、$|\mathrm{GL}_n(\mathbb{F}_p)|$ 与显式 $p$-Sylow、关键引理、三条定理与证明、按阶判非单三步模板
+  - `对称群.md` — 符号差、生成元、循环与支撑、循环分解、共轭类=循环型(分拆)、$\mathfrak{A}_n$ 由 3-循环生成、3-循环共轭与单性拼图、中心与 $n=4$ 例外
+- **更新**:`群论学习路径.md`(新增"Sylow 与对称群"节,主线延伸到 Sylow→对称群)、`数学/代数/_索引.md`(补 Sylow定理/对称群/自同构与群的对称性,更新关系图主线)、`代数III笔记.md` frontmatter 的 sources 与 updated
+- 转写临时文件保留在 `C:\Users\13761\Downloads\alg3_pages\`(small-NN.png/txt)
+
 ## [2026-09-10] ingest | 新版 Fourier 讲义(sofar.pdf,36 页)+ 第 4-5 章概念页建设
 - 来源:`C:\Users\13761\Downloads\sofar (1).pdf`(36 页,2026-09 版,覆盖 §1-§5 并新增 §1.3/§3.6/§4.3/§5.5 历史注记);提取文本已归档为 `Fourier/笔记/sofar_extracted.txt`(替换旧的 17 页版本)
 - 讲义实际进度:第 1-3 章(9 月 2 日课)+ 第 4 章 Cesàro/Abel 求和 + 第 5 章 L² 理论(9 月 26 日课);§6-§8 目录已列出但未讲授
