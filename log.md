@@ -14,6 +14,7 @@
   - `Sylow定理.md` — Lagrange 逆命题反例($A_4$ 无 6 阶子群)、$p$-Sylow 定义、$|\mathrm{GL}_n(\mathbb{F}_p)|$ 与显式 $p$-Sylow、关键引理、三条定理与证明、按阶判非单三步模板
   - `对称群.md` — 符号差、生成元、循环与支撑、循环分解、共轭类=循环型(分拆)、$\mathfrak{A}_n$ 由 3-循环生成、3-循环共轭与单性拼图、中心与 $n=4$ 例外
 - **更新**:`群论学习路径.md`(新增"Sylow 与对称群"节,主线延伸到 Sylow→对称群)、`数学/代数/_索引.md`(补 Sylow定理/对称群/自同构与群的对称性,更新关系图主线)、`代数III笔记.md` frontmatter 的 sources 与 updated
+- **格式统一(2026-09-10 补)**:续篇两节(Sous-groupes de Sylow / Groupes symétriques)的 Définition/Prop/Thm/Corollaire/Lemme/Rem/Exemple/Notation/Interprétation/Conséquence 全部由粗体标签(`**Prop :**`)改为 callout 分块(`> [!info] Prop`、`> [!note] Thm (Sylow)`、`> [!example] Exemple`),与前 5 节样式对齐;证明仍为正文 `**Preuve :**`(含多行公式,不塞进 callout)
 - 转写文本已归档为 `代数III-讲义提取.txt`;页面图与临时脚本已清理
 
 ## [2026-09-10] ingest | 新版 Fourier 讲义(sofar.pdf,36 页)+ 第 4-5 章概念页建设
