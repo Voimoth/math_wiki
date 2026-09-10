@@ -364,9 +364,6 @@ $$|O(x)| \mid |G|$$
 
    $$\forall x \in X,\; \forall g \in G \quad f(g \cdot x) = g \cdot f(x)$$
 
-   $\uparrow$ action de $G$ sur $X$
-   $\qquad\qquad\;\;$ action de $G$ sur $Y$
-
    i.e. « $f$ transforme l'action de $G$ sur $X$ en l'action de $G$ sur $Y$ ».
 
 **Prop :** Soit $G$ agissant sur $X$, $x \in X$. Alors la bijection $\psi: G/\operatorname{Stab}(x) \longrightarrow O(x)$ est $G$-équivariante.
@@ -439,7 +436,7 @@ Pour $r \leq n,p$ représentant $I_r=\begin{pmatrix} I_r & 0 \\ 0 & 0 \end{pmatr
 Action du groupe $GL_n(k)$ sur l'espace des matrices symétriques $S_n(k)\subset M_n(k)$.
 $$\begin{array}{ccc}
 GL_n(k)\times S_n(k) & \longrightarrow & S_n(k) \\
-(P,Q) & \longmapsto & P\,Q\,{}^tP.
+(P,Q) & \longmapsto & P\,Q\,{}^{t}P.
 \end{array}$$
 
 ### Points fixes pour une action de groupe
@@ -636,8 +633,7 @@ $$\begin{aligned}
 &|O_3| = 2.
 \end{aligned}$$
 
-**Rem :** l'action de $G$ sur $X$ est la restriction à $X$
-d'une action linéaire $g(-x)=-g(x)$.
+**Rem :** l'action de $G$ sur $X$ est la restriction à $X$ d'une action linéaire $g(-x)=-g(x)$.
 
 $$\forall x \quad G_{x}=G_{-x}, \text{ d'où } |\mathcal{O}(x)|=|\mathcal{O}(-x)|$$
 
@@ -645,15 +641,15 @@ Supposons $m \geq 3$ : comment étudier $O_3$ ?
 
 $x \in O_3$, $|O(x)|=|O(-x)|=2$. Comme il y a une seule orbite de cardinal 2, $O_3=\{x,-x\}$.
 
-$G_{z_3}$ est un groupe cyclique d'ordre $n$, d'axe $\mathbb{R}z_3$.
+$G_{x_3}$ est un groupe cyclique d'ordre $n$, d'axe $\mathbb{R}x_3$.
 
-Soit $y \in O_1$, $|G_y|=2$, $G_y=\{\text{Id}, r\}$, où $r$ est une rotation d'angle $\pi$. $G_y$ agit dans l'orbite $O_3=O(z_3)$. Comme $x$ et $y$ non colinéaires, $r(x_3)\neq x_3$, donc $r(x_3)=-z_3$, d'où $z_3 \perp y$ ($x=z_3$).
+Soit $y \in O_1$, $|G_y|=2$, $G_y=\{\text{Id}, r\}$, où $r$ est une rotation d'angle $\pi$. $G_y$ agit dans l'orbite $O_3=O(x_3)$. Comme $x$ et $y$ non colinéaires, $r(x_3)\neq x_3$, donc $r(x_3)=-x_3$, d'où $x_3 \perp y$ ($x=x_3$).
 
-Considérons une base orthonormée $(x, y_{13})$ de $\mathbb{R}^3$. Dans cette base, les éléments de $G$ ont des matrices de la forme :
+Considérons une base orthonormée $(x, y, z)$ de $\mathbb{R}^3$. Dans cette base, les éléments de $G$ ont des matrices de la forme :
 $$\begin{pmatrix} 1 & 0 & 0 \\ 0 & \cos\theta & -\sin\theta \\ 0 & \sin\theta & \cos\theta \end{pmatrix} \text{ et } G_y=\left\{\text{Id}, \begin{pmatrix} -1 & 0 & 0 \\ 0 & 1 & 0 \\ 0 & 0 & -1 \end{pmatrix}\right\}$$
 Les restrictions au plan $(\mathbb{R}x)^\perp$ sont :
 • Pour $G_x$ : un groupe cyclique de rotations planes, $\simeq \mathbb{Z}/n\mathbb{Z}$ ;
-• Pour $G_y$ : $\{\mathrm{Id}, s\}$, où $s$ est la symétrie orthogonale par rapport à la droite $\mathbb{R}y$.
+• Pour $G_y$ : $\{\mathrm{Id}, r\}$, où $r$ est la symétrie orthogonale par rapport à la droite $\mathbb{R}y$.
 
 De plus $G_x \cap G_y = \{\mathrm{Id}\}$, et $G_x$ est d'indice 2 dans $G$, donc il est distingué dans $G$.
 
@@ -687,7 +683,7 @@ On trouve $G \simeq A_5$, car $A_5$ est l'unique groupe simple d'ordre 60.
 > **Motivation :** Thm de Lagrange : si $H \subset G$ sous groupe alors $|H| \mid |G|$.
 > Soit $d \mid |G|$, existe-t-il un sous-groupe de $G$ de cardinal $d$ ?
 > **Non !**
-> **Exercice :** $G = \mathbb{Z}/4\mathbb{Z}$, $|G|=12$. $G$ ne possède pas de sous-groupe d'ordre 6.
+> **Exercice :** $G = A_4$, $|G|=12$. $G$ ne possède pas de sous-groupe d'ordre 6.
 
 ## Situation favorable
 
