@@ -9,12 +9,12 @@
   - Références(Perrin/Krée/Artin/Jacobson)
   - **Sous-groupes de Sylow**:$p$-Sylow 定义;$|\mathrm{GL}_n(\mathbb{F}_p)|$ 的数基证明与上三角单位群给出 $p$-Sylow;关键引理($aSa^{-1}\cap H$ 是 $H$ 的 $p$-Sylow,用 $G/S$ 平移作用 + 轨道计数);Sylow 定理三条(存在/共轭/计数 $k\equiv1 \bmod p$、$k\mid m$)及完整证明;Cayley 定理 + 置换矩阵把存在性归约到 $\mathrm{GL}_n(\mathbb{F}_p)$;应用两例($|G|=63$、$|G|=48$ → 非单)
   - **Groupes symétriques**:符号差定义;$\mathfrak{S}_n$ 的两套生成元($(1i)$ 型与相邻转置);$k$-循环与支撑;循环分解定理($\langle\sigma\rangle$ 轨道证明);共轭类 ⟺ 循环型;$\mathfrak{A}_n$ 由 3-循环生成;3-循环在 $\mathfrak{A}_n$ 中共轭($n\geqslant5$);唯一非平凡同态 $\mathfrak{S}_n\to\mathbb{C}^*$ 即 $\varepsilon$;阶 = 循环长度 p.p.c.m.;$Z(\mathfrak{S}_n)=\{\mathrm{Id}\}$;$\mathfrak{A}_n$ 单性与 $\mathfrak{A}_4$ 例外 $V$
-  - **修正原文自相矛盾**:笔记写 "Thm. Pour $n\geqslant4$, $\mathfrak{A}_n$ est simple" 但紧接 "Rem. Pour $n=4$, $\mathfrak{A}_4$ n'est pas simple"。已按唯一合理解读改为 $n\geqslant5$(三件套证据:定理与 Rem 直接冲突、$|A_4|=12$ 确有正规子群 $V$、$n=4$ 时 3-循环共轭性证明中"另取两个不在支撑内的元素"失败)
+  - **原文符号澄清(重要,已更正)**:转写初稿把该行读作 "Pour $n\geqslant4$",并因它与紧随其后的 "Rem. Pour $n=4$, $\mathfrak{A}_4$ n'est pas simple" 冲突而"修正"为 $n\geqslant5$ —— **这是误改**。对原图该行逐字复核后确认原文是 **$n\neq4$**(等号上的斜杠被误读),即 "Thm. Pour $n\neq4$, $\mathfrak{A}_n$ est simple",与 Rem. 完全自洽:$n=3$ 时 $\mathfrak{A}_3\simeq\mathbb{Z}/3\mathbb{Z}$ 平凡地单,$n=4$ 是唯一例外,$n\geqslant5$ 由 3-循环共轭拼图给出。已把 `代数III笔记.md`、`对称群.md`、`群论学习路径.md` 改回 $n\neq4$
 - **新建概念页 2 个**:
   - `Sylow定理.md` — Lagrange 逆命题反例($A_4$ 无 6 阶子群)、$p$-Sylow 定义、$|\mathrm{GL}_n(\mathbb{F}_p)|$ 与显式 $p$-Sylow、关键引理、三条定理与证明、按阶判非单三步模板
   - `对称群.md` — 符号差、生成元、循环与支撑、循环分解、共轭类=循环型(分拆)、$\mathfrak{A}_n$ 由 3-循环生成、3-循环共轭与单性拼图、中心与 $n=4$ 例外
 - **更新**:`群论学习路径.md`(新增"Sylow 与对称群"节,主线延伸到 Sylow→对称群)、`数学/代数/_索引.md`(补 Sylow定理/对称群/自同构与群的对称性,更新关系图主线)、`代数III笔记.md` frontmatter 的 sources 与 updated
-- 转写临时文件保留在 `C:\Users\13761\Downloads\alg3_pages\`(small-NN.png/txt)
+- 转写文本已归档为 `代数III-讲义提取.txt`;页面图与临时脚本已清理
 
 ## [2026-09-10] ingest | 新版 Fourier 讲义(sofar.pdf,36 页)+ 第 4-5 章概念页建设
 - 来源:`C:\Users\13761\Downloads\sofar (1).pdf`(36 页,2026-09 版,覆盖 §1-§5 并新增 §1.3/§3.6/§4.3/§5.5 历史注记);提取文本已归档为 `Fourier/笔记/sofar_extracted.txt`(替换旧的 17 页版本)
