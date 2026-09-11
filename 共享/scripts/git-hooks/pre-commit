@@ -1,0 +1,45 @@
+#!/bin/sh
+# ---------------------------------------------------------------
+# pre-commit 钩子：拦截体积过大的文件
+#
+# 背景：本仓库曾因误提交手机照片/截图/MP4/Obsidian 插件包，
+#       在 .git 里积累出 158MB 不可达孤儿对象（需 reflog expire
+#       + gc --prune=now 才能回收，代价大且容易漏）。
+#       .gitignore 挡不住 "git add 具体文件名"，所以需要这个钩子兜底。
+#
+# 阈值：单文件 5MB
+# 绕过：git commit --no-verify （确认确实要提交时）
+# ---------------------------------------------------------------
+
+LIMIT_MB=5
+LIMIT_BYTES=$((LIMIT_MB * 1024 * 1024))
+
+TMPF="${TMPDIR:-/tmp}/_precommit_files.$$"
+
+# 注意 core.quotepath=false：否则中文文件名会被八进制转义，导致路径匹配失败
+git -c core.quotepath=false diff --cached --name-only --diff-filter=ACM > "$TMPF" 2>/dev/null
+
+BLOCKED=""
+while IFS= read -r f; do
+  [ -z "$f" ] && continue
+  [ -f "$f" ] || continue
+  size=$(wc -c < "$f" 2>/dev/null)
+  [ -z "$size" ] && continue
+  if [ "$size" -gt "$LIMIT_BYTES" ]; then
+    BLOCKED="$BLOCKED
+  [拒绝] $f  ($((size / 1024 / 1024))MB > ${LIMIT_MB}MB)"
+  fi
+done < "$TMPF"
+
+rm -f "$TMPF"
+
+if [ -n "$BLOCKED" ]; then
+  echo "$BLOCKED"
+  echo ""
+  echo "提交被阻止：以上文件体积过大，一旦进入历史就难以回收。"
+  echo "  处理方式 1（推荐）：挪到 vault 外面，不要放进 E:\\notes"
+  echo "  处理方式 2：确实需要提交，则用 git commit --no-verify 绕过"
+  exit 1
+fi
+
+exit 0

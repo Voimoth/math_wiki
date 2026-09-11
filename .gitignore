@@ -6,9 +6,29 @@ node_modules/
 .vscode/
 *.swp
 
-# 临时脚本副本
-scripts/pdfjs/extract.js
-
-# Obsidian 本地配置
+# Obsidian 本地配置（app.json 已跟踪，保留共享配置）
 .obsidian/
-!notes
+
+# 大文件：避免误提交把 .git 撑爆
+# 教训：本仓库曾因误提交手机照片/截图/MP4/插件包，积累出 158MB 不可达孤儿对象，
+#       需 git reflog expire + git gc --prune=now 才能回收。
+*.mp4
+*.mov
+*.avi
+*.mkv
+*.flv
+*.wmv
+*.zip
+*.7z
+*.rar
+*.iso
+*.exe
+*.msi
+*.dmg
+
+# 大体积媒体（笔记需要插图时用 SVG 或压缩后的 PNG，不要放原始照片）
+*.heic
+*.raw
+
+# pdfjs 脚本目录里的临时 PDF 副本（原始讲义不放这里）
+共享/scripts/pdfjs/*.pdf

@@ -1,0 +1,5 @@
+# shell 脚本必须保持 LF —— CRLF 会让 sh 解析失败（如 "bad interpreter"）
+# git-hooks/pre-commit 需要被复制回 .git/hooks/ 使用，务必保持 LF
+共享/scripts/git-hooks/* text eol=lf
+*.sh text eol=lf
+pre-commit text eol=lf
