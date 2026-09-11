@@ -1,10 +1,10 @@
 ---
 title: 群论讲义 Cours de Groupes (Marc Rosso)
 created: 2026-09-01
-updated: 2026-09-10
+updated: 2026-09-11
 type: entity
 tags: [group-theory, algebre, cours]
-sources: [Cours USTC 01-09-26.pdf, 代数III.pdf]
+sources: [Cours USTC 01-09-26.pdf, 代数III.pdf, 扫描全能王 2026-09-11 12.04.pdf]
 confidence: medium
 ---
 
@@ -960,3 +960,212 @@ Réciproquement : si $\sigma = c_1 \cdots c_r$ et $\sigma' = c_1' \cdots c_r'$ a
 >    - **Thm. :** Pour $n \neq 4$, $\mathfrak{A}_n$ est simple.
 >    - **Rem. :** Pour $n = 4$, $\mathfrak{A}_4$ n'est pas simple, car il contient le sous-groupe distingué $V = \{\mathrm{Id}, (12)(34), (13)(24), (14)(23)\}$ ($\simeq \mathbb{Z}/2\mathbb{Z} \times \mathbb{Z}/2\mathbb{Z}$).
 >    - Pour $n = 3$, $\mathfrak{A}_3 \simeq \mathbb{Z}/3\mathbb{Z}$.
+
+---
+
+## Preuve de la simplicité de $\mathfrak{A}_5$
+
+**Preuve :**
+
+### 1) $\mathfrak{A}_5$ est simple
+
+Soit $H \triangleleft \mathfrak{A}_5$, $H \neq \{\mathrm{Id}\}$. Montrons que $H = \mathfrak{A}_5$.
+
+**Rappel.** Si $h \in H$, $\forall g \in \mathfrak{A}_5$, $ghg^{-1} \in H$. $|\mathfrak{A}_5| = 60 = 2^2 \times 3 \times 5$.
+
+> [!info] Rem
+> On considère les orbites des éléments.
+
+**1° Ordre 2 :** Ce sont les produits de 2 transpositions à support disjoint $(ab)(cd)(e)$. Combien ? $5$ choix pour $e$, $\binom{4}{2}$ pour $(ab)$, mais compté $2$ fois, donc
+$$\frac{5 \cdot \binom{4}{2}}{2} = 15$$
+Ces éléments sont conjugués dans $\mathfrak{A}_5$ : la conjugaison est vraie dans $\mathfrak{S}_5$, et comme on dispose de $5$ éléments, on peut choisir un conjugant de signature $+1$.
+
+**2° Ordre 3 :** les 3-cycles. Combien ? le support donne $\binom{5}{3} = 10$ possibilités, et par un support donné on a $(abc)$ et $(acb)$, d'où $20$ éléments d'ordre 3.
+
+On a vu qu'ils sont conjugués dans $\mathfrak{A}_5$.
+
+**3° Ordre 5 :** cycles de longueur 5. Combien ? il y en a $4! = 24$.
+
+Rappel de la forme : $(1\ i_1\ i_2\ i_3\ i_4)$.
+
+> [!info] Rem
+> En général, dans $\mathfrak{S}_n$, il y a $(n-1)!$ cycles de longueur $n$.
+
+Ces 5-cycles ne sont pas tous conjugués dans $\mathfrak{A}_5$ : les 24 éléments d'ordre 5 se répartissent en **deux** classes de conjugaison de 12 éléments chacune. En effet chaque 5-cycle $\sigma$ a pour centralisateur dans $\mathfrak{A}_5$ le sous-groupe d'ordre 5 engendré par $\sigma$, d'où $|\mathrm{Cl}(\sigma)| = 60/5 = 12$; les 24 éléments d'ordre 5 se scindent donc en deux classes de 12 (ce qu'on voit aussi par $24 \nmid 60$).
+
+> [!note] Lemme
+> Soit $H \triangleleft \mathfrak{A}_5$. Si $H$ contient un 5-cycle, alors il les contient tous.
+
+**Preuve :** Soit $\sigma$ un 5-cycle, $\sigma \in H$. Alors le sous-groupe cyclique $\langle \sigma \rangle$ engendré par $\sigma$ est contenu dans $H$, et $\langle \sigma \rangle$ contient tous les éléments d'ordre 5 engendrés par $\sigma$. En fait, tous les éléments d'ordre 5 engendrent un 5-cycle. Or les 5-cycles sont conjugués dans $\mathfrak{A}_5$. Donc $H$ contient tous les 5-cycles, et donc tous les éléments d'ordre 5.
+
+On a maintenant obtenu tous les éléments de $\mathfrak{A}_5$ car
+$$1 + 15 + 20 + 24 = 60$$
+
+Montrons que $H = \mathfrak{A}_5$, avec $H \neq \{\mathrm{Id}\}$.
+
+- Si $H$ contient un élément d'ordre 3, alors il les contient tous, d'où $|H| \geqslant 1 + 24 = 25$; on a $|H| \in \{30, 60\}$, donc $|H| = 60$.
+- Si $H$ contient un élément d'ordre 2, alors il contient tous les éléments d'ordre 2, d'où $|H| \geqslant 1 + 15 = 16$. Mais $|H| \mid 60$, donc $|H| \in \{20, 30, 60\}$. Or $H$ contient aussi un élément d'ordre 3 ou 5, et alors $|H| = 60$. Si $H$ contient un élément d'ordre 5, alors $|H| \geqslant 1 + 24 = 25$, d'où $|H| \in \{30, 60\}$, et comme $|H| \mid 60$ avec $|H|$ contenant un élément d'ordre 3 ou 5, on a $|H| = 60$.
+
+### 2) Cas général : $n \geqslant 6$
+
+On se ramène au cas $n = 5$.
+
+Soit $F \subset \{1, \dots, n\}$ une partie à 5 éléments, et $A_F$ le sous-groupe de $A_n$ des permutations qui valent $\mathrm{Id}$ sur le complémentaire de $F$ :
+$$\sigma \in A_F \iff \operatorname{supp}(\sigma) \subset F$$
+On a $A_F \simeq A_5$, qui est simple.
+
+Soit $H \triangleleft A_n$, $H \neq \{e\}$. Alors $H \cap A_F \triangleleft A_F$, donc soit $H \cap A_F = \{\mathrm{Id}\}$, soit $H \cap A_F = A_5$, i.e. $A_F \subset H$. Dans ce dernier cas, comme $A_5$ contient des 3-cycles, $H$ aussi, et il les contient tous car ils sont conjugués, d'où $H = A_n$ (génération par les 3-cycles).
+
+Il suffit donc de trouver une partie $F$ à 5 éléments telle que $H \cap A_F \neq \{\mathrm{Id}\}$ : il faut trouver dans $H$ un élément $\neq \mathrm{Id}$ qui a au moins $n - 5$ points fixes.
+
+Soit $\sigma \in H$, $\sigma \neq \mathrm{Id}$. On a $\forall \tau \in A_n$, $\tau \sigma \tau^{-1} \in H$, d'où
+$$\tau \sigma \tau^{-1} \sigma^{-1} \in H$$
+On va choisir $\tau$ convenablement pour que $\tau \sigma \tau^{-1} \sigma^{-1}$ ait au moins $n - 5$ points fixes. Prenons $\tau$ un 3-cycle : $\tau = (a\ b\ c)$, $\tau^{-1} = (a\ c\ b)$. Alors
+$$\sigma \tau \sigma^{-1} = (\sigma(a)\ \sigma(b)\ \sigma(c))$$
+Comme $\sigma \neq \mathrm{Id}$, il existe $a$ tel que $\sigma(a) \neq a$. On prend $b = \sigma(a)$, ce qui donne
+$$\sigma' = \tau \sigma \tau^{-1} \sigma^{-1} = (a\ b\ c)\,(\sigma(a)\ \sigma(b)\ \sigma(c))$$
+Choisissons $c$ pour que $\sigma' \neq \mathrm{Id}$ : on prend $c \notin \{a, b, \sigma(b)\}$. Alors $\sigma'(b) \neq b$ : en effet
+$$\sigma'(b) = \tau\sigma\tau^{-1}\sigma^{-1}(b) = \tau\sigma\tau^{-1}(a) = \tau\sigma(b)$$
+et $\tau \sigma(b) = b \iff \sigma(b) = \tau^{-1}(b) = c$, mais $c \neq \sigma(b)$, donc $\sigma'(b) \neq b$.
+
+## Complément : groupe simple d'ordre 60
+
+> [!note] Thm
+> Soit $G$ un groupe simple d'ordre 60. Alors $G \simeq \mathfrak{A}_5$.
+
+**Preuve :** On essaie de faire agir $G$ non trivialement sur un ensemble à 5 éléments. On a alors un morphisme
+$$\varphi : G \to \mathfrak{S}_5$$
+avec $\ker \varphi \neq G$. Comme $G$ est simple, $\ker(\varphi) = \{\mathrm{Id}\}$, i.e. $\varphi$ injectif. Donc $G$ est isomorphe à un sous-groupe de $\mathfrak{S}_5$ de cardinal 60, i.e. à un sous-groupe d'indice 2 de $\mathfrak{S}_5$, donc à $\mathfrak{A}_5$.
+
+On cherche donc à faire agir $G$ sur un ensemble $G/H$ de cardinal 5, par translation à gauche : il faut montrer que $G$ possède un sous-groupe d'indice 5.
+
+> [!info] Rem
+> $G$ ne possède pas de sous-groupe d'indice $\leqslant 4$.
+>
+> En effet, si $K \subset G$ est d'indice $\leqslant 4$, on considère l'action par translation à gauche sur $G/K$, donc
+> $$\Psi : G \to \mathfrak{S}(G/K), \qquad \text{ordre } 60 \to \text{ordre } \leqslant 4!$$
+> C'est impossible : $\Psi$ serait non trivial, donc injectif (car $G$ simple), mais $|G| = 60 > 4!$.
+
+On fait une preuve par l'absurde : on suppose que l'indice de tout sous-groupe propre de $G$ est $\geqslant 6$.
+
+$|G| = 60 = 2^2 \times 3 \times 5$.
+
+**Les 5-Sylow.** Leur nombre $k$ vérifie
+$$k \equiv 1 \bmod 5 \quad \text{et} \quad k \mid 12$$
+d'où $k = 6$, car $k = 1$ est impossible ($G$ simple, un unique 5-Sylow serait distingué). Ceci donne $6 \times 4 = 24$ éléments d'ordre 5.
+
+**Les 2-Sylow.** Leur nombre $k$ vérifie
+$$k \text{ impair} \quad \text{et} \quad k \mid 15$$
+d'où $k \in \{1, 3, 5, 15\}$. Or tous les 2-Sylow sont conjugués, donc $k$ est le cardinal d'une orbite, i.e. l'indice d'un stabilisateur, donc $k \geqslant 6$; d'où $k = 15$.
+
+> [!note] Propriété
+> Si $S_1$ et $S_2$ sont des 2-Sylow, alors $S_1 \cap S_2 = \{e\}$.
+
+**Preuve :** Sinon $|S_1 \cap S_2| = 2$, écrivons $S_1 \cap S_2 = \{e, u\}$ avec $u^2 = e$. On considère le commutant de $u$ :
+$$C(u) = \{g \in G,\ gu = ug\}$$
+Comme $S_1$ et $S_2$ sont commutatifs, on a $S_1 \subset C(u)$ et $S_1 \cap S_2 \subset C(u)$ (et aussi $S_2 \subset C(u)$), d'où
+$$4 \mid |C(u)| \quad \text{et} \quad 6 \leqslant |C(u)| \quad \Longrightarrow \quad |C(u)| = 8$$
+De plus, on a $[G : C(u)] = 6$, d'où $|C(u)| \leqslant \frac{60}{6} = 10$. Ceci contredit $8 \mid |C(u)|$ et $|C(u)| \neq G$. Donc $S_1 \cap S_2 = \{e\}$.
+
+**Conclusion.** On a $3 \times 15 = 45$ éléments dans $G$ d'ordre 2 ou 4 (chaque 2-Sylow d'ordre 4 fournit 3 éléments non neutres, et les 2-Sylow se coupent deux à deux trivialement). On aurait alors
+$$1 + 24 + 45 > 60$$
+éléments dans $G$, contradiction.
+
+> [!info] Rem
+> On a vu que nécessairement $C(u) = G$. Alors $u \in Z(G) \triangleleft G$; comme $G$ est simple, $Z(G) = \{e\}$, impossible.
+
+Donc $G$ possède un sous-groupe d'indice 5, et $G \simeq \mathfrak{A}_5$.
+
+## Application : sous-groupes finis de $SO(3)$
+
+> [!note] Prop
+> $SO(3)$ possède un sous-groupe fini isomorphe à $A_5$.
+
+**Preuve :** Soit $G$ un sous-groupe fini de $SO(3)$. Il agit sur $X = \{\text{pôles}\}$, et le nombre d'orbites $N$ vaut $2$ ou $3$.
+
+**Cas $N = 3$ avec $e_1 = 2$, $e_2 = 3$, $e_3 = 5$ :** $|G| = 60$. Montrons que dans cette situation $G \simeq A_5$; pour cela, montrons que $G$ est simple.
+
+Les orbites ont pour cardinal
+$$|O_1| = 30, \quad |O_2| = 20, \quad |O_3| = 12$$
+Comme les orbites sont de cardinaux distincts, pour tout $x \in X$, $x$ et $-x$ sont dans la même orbite. Ainsi $\mathbb{R}x$ est l'axe de la rotation dont $x$ est un pôle, et pour chaque orbite on obtient des axes de rotations.
+
+- $O_1$ : 15 axes de rotations, qui stabilisent un des points de l'orbite. Comme les stabilisateurs des points d'une même orbite sont conjugués, ces rotations sont dans des groupes cycliques d'ordre 2. On a ainsi 15 axes de rotations d'angle $\pi$.
+- $O_2$ : 10 axes de rotations, les stabilisateurs sont des sous-groupes cycliques d'ordre 3 (2 à 2 conjugués).
+- $O_3$ : 6 axes de rotations, les stabilisateurs sont des sous-groupes cycliques d'ordre 5 (2 à 2 conjugués).
+
+Comptons les éléments :
+$$1 \text{ élément d'ordre } 1 : \mathrm{Id}, \qquad 15 \text{ d'ordre } 2 \text{ via } O_1, \qquad 20 \text{ d'ordre } 3 \text{ via } O_2, \qquad 24 \text{ d'ordre } 5 \text{ via } O_3$$
+on a tous les éléments de $G$.
+
+Soit $H \triangleleft G$, $H \neq \{e\}$.
+- Si $H$ contient un élément d'ordre 5, il contient le sous-groupe cyclique qu'il engendre, qui est un stabilisateur. Il contient tous ses conjugués donc tous les éléments d'ordre 5. Ainsi $|H| \geqslant 24 + 1 = 25$, et comme $|H| \mid 60$, on a $|H| \in \{30, 60\}$. Si $|H| = 30$, $H$ contient un élément d'ordre 3 (car $3 \mid 30$), donc tous les éléments d'ordre 3, d'où $|H| \geqslant 1 + 24 + 20 = 45 > 30$ : contradiction. Donc $|H| = 60$.
+- Si $H$ contient un élément d'ordre 3, de même il les contient tous, d'où $|H| \geqslant 1 + 20 = 21$, et $|H| \in \{30, 60\}$. Si $|H| = 30$, il contient un élément d'ordre 5 (car $5 \mid 30$), donc tous, d'où $|H| \geqslant 45 > 30$ : contradiction. Donc $H = G$.
+- Si $H$ ne contient que des éléments d'ordre 2, il les contient tous, d'où $|H| \geqslant 1 + 15 = 16$, et $|H| \in \{20, 30, 60\}$. Si $|H| = 20$ (resp. $30$), il contient un élément d'ordre 5 (resp. 3), contradiction. Donc $H = G$.
+
+Donc $G$ est simple et $|G| = 60$, d'où $G \simeq \mathfrak{A}_5$ (voir [[A5单性与60阶群]]).
+
+## Sous-groupes distingués de $\mathfrak{S}_n$
+
+> [!note] Thm
+> Pour $n \geqslant 5$, les seuls sous-groupes distingués de $\mathfrak{S}_n$ sont $\{\mathrm{Id}\}$, $\mathfrak{A}_n$ et $\mathfrak{S}_n$.
+
+**Preuve :** Soit $H \triangleleft \mathfrak{S}_n$, $H \neq \{\mathrm{Id}\}$. On a $H \cap \mathfrak{A}_n \triangleleft \mathfrak{A}_n$, donc $H \cap \mathfrak{A}_n = \{\mathrm{Id}\}$ ou $H \cap \mathfrak{A}_n = \mathfrak{A}_n$, i.e. $\mathfrak{A}_n \subset H \subset \mathfrak{S}_n$. Comme $\mathfrak{A}_n$ est d'indice 2, $H = \mathfrak{A}_n$ ou $H = \mathfrak{S}_n$.
+
+Reste le cas $H \cap \mathfrak{A}_n = \{\mathrm{Id}\}$. Considérons
+$$\varepsilon_{|H} : H \to \{\pm 1\}, \qquad \operatorname{Ker}(\varepsilon_{|H}) = H \cap \mathfrak{A}_n = \{\mathrm{Id}\}$$
+donc $\varepsilon_{|H}$ est injective, d'où $|H| = 1$, i.e. $H = \{\mathrm{Id}\}$, cas écarté. Sinon $H = \{\mathrm{Id}, u\}$ avec $u^2 = \mathrm{Id}$ : comme $H \triangleleft G$, on a $\forall g \in G$, $gug^{-1} = u$, i.e. $u \in Z(\mathfrak{S}_n) = \{\mathrm{Id}\}$, impossible.
+
+## Sous-groupes d'indice $n$ de $\mathfrak{S}_n$
+
+> [!note] Prop
+> Soit $H \subset \mathfrak{S}_n$ un sous-groupe d'indice $n$. Alors $H \simeq \mathfrak{S}_{n-1}$.
+
+**Preuve :** $|\mathfrak{S}_n / H| = n$. $\mathfrak{S}_n$ agit sur $\mathfrak{S}_n/H$ par translations à gauche, d'où un morphisme
+$$\varphi : \mathfrak{S}_n \to \mathfrak{S}(\mathfrak{S}_n/H)$$
+$\varphi$ est non trivial, donc $\operatorname{Ker} \varphi \neq \mathfrak{S}_n$; et $\operatorname{Ker} \varphi \triangleleft \mathfrak{S}_n$.
+
+Supposons $n \geqslant 5$. D'après le théorème précédent, $\operatorname{Ker} \varphi = \{\mathrm{Id}\}$ ou $\mathfrak{A}_n$. Mais
+$$\operatorname{Ker} \varphi = \bigcap_{g \in \mathfrak{S}_n} gHg^{-1} \subset H$$
+donc si $\operatorname{Ker} \varphi = \mathfrak{A}_n$, on aurait $|\operatorname{Ker} \varphi| = \frac{n!}{2} > (n-1)! = |H|$, impossible. Donc $\operatorname{Ker} \varphi = \{\mathrm{Id}\}$ : $\varphi$ est injectif, donc bijectif (cardinalité).
+
+Ainsi $\varphi$ réalise un isomorphisme entre $\mathfrak{S}_n$ et le groupe des permutations de l'ensemble $\mathfrak{S}_n/H$, de cardinal $n$. De plus $\varphi(H)$ est le stabilisateur de l'élément $H$ de $\mathfrak{S}_n/H$ : si $|X| = n$ et $\mathfrak{S}_n \simeq \mathfrak{S}(X)$, alors pour $x \in X$,
+$$\operatorname{Stab}(x) \simeq \mathfrak{S}_{n-1} \quad \text{car} \quad \mathfrak{S}(X - \{x\}) \simeq \mathfrak{S}_{n-1}$$
+
+## Groupe dérivé de $\mathfrak{S}_n$ et de $\mathfrak{A}_n$
+
+> [!info] Rappel
+> $G$ groupe, $\mathfrak{D}(G) = \langle [x,y] = xyx^{-1}y^{-1},\ x, y \in G \rangle$, et $G/\mathfrak{D}(G)$ est le « plus gros quotient abélien de $G$ ».
+
+> [!note] Thm
+> 1. $\mathfrak{D}(\mathfrak{S}_n) = \mathfrak{A}_n$.
+> 2. Pour $n \geqslant 5$, $\mathfrak{D}(\mathfrak{A}_n) = \mathfrak{A}_n$.
+
+**Preuve :** $\varepsilon(xyx^{-1}y^{-1}) = 1$, d'où $\mathfrak{D}(\mathfrak{S}_n) \subset \mathfrak{A}_n$, et comme les 3-cycles sont dans $\mathfrak{A}_n$, $\mathfrak{D}(\mathfrak{A}_n) \subset \mathfrak{D}(\mathfrak{S}_n) \subset \mathfrak{A}_n$.
+
+Pour montrer $\mathfrak{A}_n \subset \mathfrak{D}(\mathfrak{S}_n)$ (ou $\mathfrak{A}_n \subset \mathfrak{D}(\mathfrak{A}_n)$ si $n \geqslant 5$), montrons que les 3-cycles sont dans les groupes dérivés. Soit $\tau = (abc)$; alors $\tau^2 = (acb)$. Les 3-cycles sont conjugués dans $\mathfrak{S}_n$, et aussi dans $\mathfrak{A}_n$ si $n \geqslant 3$ : il existe $\sigma \in \mathfrak{S}_n$ (et même $\sigma \in \mathfrak{A}_n$ si $n \geqslant 3$) tel que
+$$\sigma \tau \sigma^{-1} = \tau^2$$
+d'où
+$$\tau^2 = \sigma \tau \sigma^{-1} = \tau \cdot [\tau^{-1}, \sigma^{-1}] \ \ \text{ou bien} \ \ \tau^2 \tau^{-1} = \tau = [\sigma, \tau]$$
+Ainsi $\tau = \sigma\tau\sigma^{-1}\tau^{-1} = [\sigma, \tau] \in \mathfrak{D}(\mathfrak{S}_n)$ : chaque 3-cycle est un commutateur, donc $\mathfrak{A}_n \subset \mathfrak{D}(\mathfrak{S}_n)$ (resp. $\mathfrak{D}(\mathfrak{A}_n)$).
+
+## Complément : retour sur le cas $N = 3$, $e_1 = 2$, $e_2 = 3$, $e_3 = 4$
+
+des sous-groupes finis de $SO(3)$.
+
+> [!note] Prop
+> $G \simeq \mathfrak{S}_4$.
+
+**Preuve :** On a vu $|G| = 24$. On fait agir $G$ sur un ensemble à 4 éléments, de façon fidèle. Les orbites ont pour cardinal
+$$|O_1| = 12, \quad |O_2| = 8, \quad |O_3| = 6$$
+Comme elles sont de cardinal impair, si $x \in O_i$ alors $-x \in O_i$, d'où l'axe $\mathbb{R}x$ de la rotation associée à $x$; cette rotation est dans $\operatorname{Stab}(x)$.
+
+On considère $O_2$ : ses éléments donnent $4$ axes de rotations. $G$ agit sur cet ensemble de 4 droites, d'où un morphisme
+$$\varphi : G \to \mathfrak{S}_4$$
+
+Si $g \in \ker \varphi$, $g$ stabilise chacune des droites; $g$ agit par $\pm \mathrm{Id}$ sur chacune d'elles, car ce sont des droites propres et les valeurs propres de $g$ sont $\pm 1$. Alors $g^2$ agit par $\mathrm{Id}$ sur ces 4 droites, et donc $g^2 = \mathrm{Id}$ car c'est une rotation ayant $1$ pour valeur propre de multiplicité $\geqslant 2$. Donc $g$ est une rotation d'angle $\pi$, et $g$ agit par $-\mathrm{Id}$ sur chacune des 4 droites (sinon $g$ est dans le stabilisateur des pôles de ces droites, et ce stabilisateur est de cardinal 3). Finalement, l'axe de $g$ est orthogonale à ces droites.
+
+Comme $\ker \varphi \triangleleft G$, pour tout $h \in G$, $hgh^{-1}$ est encore une rotation d'angle $\pi$, qui vaut $-\mathrm{Id}$ sur les droites, donc de même axe que $g$ : les pôles de $g$ sont stables par $h$, et ainsi par tous les éléments de $G$.
+
+Il y aurait donc une orbite à 3 éléments : impossible.
+
+D'où $\ker \varphi = \{\mathrm{Id}\}$, et $\varphi$ est un isomorphisme.

@@ -2,6 +2,26 @@
 
 > 数学与物理知识库的变更记录。数学和物理答疑的可复用内容直接沉淀到对应课程的概念页。
 
+## [2026-09-11] ingest | 代数III 讲义续篇二($A_5$ 单性、60 阶群、$SO(3)$ 分类)
+- 来源:`C:\Users\13761\Downloads\扫描全能王 2026-09-11 12.04.pdf`(10 页,A5 扫描件,无文本层,视觉模型转写:deepseek-flash 整批 ok=10)
+- **更新 `代数III笔记.md`**(接在"Conséquence"块之后):
+  - **Preuve de la simplicité de $\mathfrak{A}_5$**:元素普查(1+15+20+24=60,含 $\frac{5\binom{4}{2}}{2}=15$、$\binom{5}{3}\cdot 2=20$、$4!=24$ 三个计数);5-循环引理;逐类排除;$n\geqslant6$ 归约到 $n=5$($A_F\simeq A_5$ 单 + 选 3-循环 $\tau$ 造 $\sigma'=\tau\sigma\tau^{-1}\sigma^{-1}$ 使其至少固定 $n-5$ 点)
+  - **Complément : groupe simple d'ordre 60**:指数 $\leqslant4$ 被 $|\mathfrak{S}_d|\leqslant24<60$ 排除;$k_5=6$(→24 个 5 阶元)、$k_2=15$;2-Sylow 两两交平凡的证明(中心化子 $C(u)$,用 $4\mid|C(u)|$、$[G:C(u)]=6\Rightarrow|C(u)|\leqslant10$、$8\nmid60$);矛盾 $1+24+45>60$
+  - **Application : sous-groupes finis de $SO(3)$**:$N=3,e=(2,3,5)$ 情形(轨道 30/20/12,轴 15/10/6,元素 1+15+20+24=60,逐类排除得 $G\simeq A_5$)
+  - **Sous-groupes distingués de $\mathfrak{S}_n$**($n\geqslant5$ 只有 $\{Id\},A_n,\mathfrak{S}_n$)、**Sous-groupes d'indice $n$**($H\simeq\mathfrak{S}_{n-1}$)、**Groupe dérivé**($\mathfrak{D}(\mathfrak{S}_n)=A_n$;$n\geqslant5$ 时 $\mathfrak{D}(A_n)=A_n$)
+  - **Complément : retour sur $N=3$, $e=(2,3,4)$**($|G|=24$ 时 $G\simeq\mathfrak{S}_4$,用 $O_2$ 的 4 条轴给出 $G\to\mathfrak{S}_4$ 并证其单)
+  - 按要求**展开缩写**:$G_n\to\mathfrak{S}_n$、$A_n\to\mathfrak{A}_n$、$p.p.c.m.$、$Rq./Rapp./Prop./Thm./Rem./Déf$ 均已写全;**原稿用箭头/括号附注的补充(如 $C(u)=G$ 的旁注、$\sigma'$ 的定义补全、5-循环类分裂)已按正常行文顺序并入正文**,不保留旁注形式
+- **新建概念页 2 个**:
+  - `A5单性与60阶群.md` — 元素普查表;共轭类"含一即含全类"机制;逐类排除的 Sylow 骨架;为什么 $n=4$ 例外;反方向的 60 阶单群分类(指数假设的两处用处)
+  - `SO3的有限子群.md` — 极点集 $X$ + Burnside 得 $N\in\{2,3\}$;$N=2$ 循环群;$N=3$ 三种情形($D_{2n}$、$\mathfrak{A}_4/\mathfrak{S}_4/\mathfrak{A}_5$ 对应正四面体/立方体/二十面体)
+- **更新 `对称群.md`**:新增 5bis 节($A_n$ 单性两种情形)与两页配套定理——$\mathfrak{S}_n$ 的正规子群、指数 $n$ 子群 $\simeq\mathfrak{S}_{n-1}$、导群 $\mathfrak{D}(\mathfrak{S}_n)=A_n$ 与 $\mathfrak{D}(A_n)=A_n$
+- **数学更正(转写后以脚本核验,见下)**:
+  - 5-循环在 $\mathfrak{A}_5$ 中不是一个共轭类,而是**两个各 12 个的类**(手写稿"ces 5-cycles ne peuvent pas être conjugués"仅说"不(全)共轭",转写初稿曾误作"24 个全共轭")
+  - 已用 Node 枚举 $S_5/A_5$ 全部 120/60 个元素核验:**元素阶分布 1:1, 2:15, 3:20, 5:24**;$\mathfrak{A}_5$ 共轭类 $1,15,20,12,12$;$\mathfrak{A}_4$ 中 2 阶元仅 3 个、$V$ 在 $\mathfrak{A}_4$ 与 $\mathfrak{S}_4$ 中均正规;$\mathfrak{D}(\mathfrak{S}_4)=A_4$(12 阶)、$\mathfrak{D}(\mathfrak{A}_5)=\mathfrak{A}_5$(完美群);$16,21,25$ 均不整除 60
+  - 手写稿 $C(u)$ 段经局部裁剪重读确认为 `4 \mid |C(u)|` 与 `[G:C(u)]=6 ⇒ |C(u)| ≤ 10`,**不是** `8 \mid |C(u)|`(转写初稿的 `6 ≤ |C(u)|` 已按原稿保留并补足推理)
+- **更新**:`群论学习路径.md`(主线地图延伸到 $A_5$/$SO(3)$,新增"应用"节)、`数学/代数/_索引.md`(补两页,更新关系图)、`代数III笔记.md` frontmatter sources/updated
+- 转写页图与临时脚本已清理(10 张 png + 转写 txt 均在 `Downloads\alg3_scan\`)
+
 ## [2026-09-10] ingest | 代数III 讲义续篇(Sylow 定理与对称群)
 - 来源:`C:\Users\13761\Downloads\代数III.pdf`(10 页,手写法语,无文本层,视觉模型转写)
 - **转写通道修复**:`ds_vision_ustc.ps1` 的密钥正则 `api_key:\s*(sk-...)` 取的是配置中**第一个** sk- 密钥(DeepSeek 的),导致 401;新脚本 `ds_vision_ustc2.ps1` 按 provider 块边界(`^  custom:api-llm-ustc-edu-cn:` 起到下一个 provider 头)**定位 USTC 密钥**。另:4.4MB 原图触发 503,降到 0.6 倍(约 1.1MB)后稳定成功
