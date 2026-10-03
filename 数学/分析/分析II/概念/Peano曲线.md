@@ -1,0 +1,36 @@
+---
+title: Peano 曲线（space-filling 曲线）
+created: 2026-10-03
+updated: 2026-10-03
+type: concept
+tags: [analysis, topology, space-filling-curve]
+sources: [分析II笔记-上.md]
+confidence: high
+---
+
+# Peano 曲线（space-filling 曲线）
+
+> [!note] Thm.
+> 存在连续满射 $f:\mathbb R\to\mathbb R^2$。（事实上 $\mathbb R^n$ 都对；定义域是任何有内点的区间也一样；只要先构造像集含一个三角形的映射就能推广。）
+
+## 构造
+
+> [!note]
+> 取三角形 $ABC$，构造函数列 $f_n:[0,1]\to\mathbb R^2$：
+> - $f_0$ 是折线，$f_0([0,1/2])$ 为 $AB$、$f_0([1/2,1])$ 为 $BC$；
+> - $f_1$ 把 $[0,1]$ 分成四段，依次走 $A\to b\to c$、$c\to B\to a$、$a\to c\to b$、$b\to a\to C$；
+> - 若 $f_k$ 在每个长 $4^{-k}$ 的小区间上走一个小三角形的两条边，则 $f_{k+1}$ 在同一区间上分 $8$ 段，像集仍落在该小三角形内，且 $\sup|f_k-f_{k+1}|\le C2^{-k}$。
+> 由此 $f_n$ 一致收敛到连续函数 $f$。
+
+> [!note] 为什么填满
+> 对任何 $x$ 与任何 $n$，边长 $2^{-n}$ 的小三角形有 $4^n$ 个，$f_n$ 的像都经过，故存在 $t_n$ 使 $|f_n(t_n)-x|\le C2^{-n}$。$[0,1]$ 紧，取子列 $t_{n_k}\to t_0$，由一致收敛得 $f(t_0)=x$。
+
+> [!info] Rem.
+> 思考题：可导曲线能否覆盖平面？$C^1$ 曲线不能（光滑性限制折返能力，严格证明需要「测度」层面）。
+
+## 相关概念
+
+- [[连续处处不可导函数]] — 同一类「反常」构造
+- [[函数列的一致收敛]] — 构造靠一致收敛
+- [[紧性与列紧性]] — 用紧性取子列
+- [[Weierstrass逼近定理]]
