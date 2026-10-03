@@ -1,0 +1,156 @@
+---
+title: Fourier · 6 应用
+created: 2026-09-02
+updated: 2026-10-03
+type: notes
+tags: [fourier-series, notes, 分析III]
+confidence: high
+---
+
+# 6. Fourier 级数的应用
+
+**主线**：把前几章建立的理论落到具体问题上——严格求解热方程、证明等周不等式与 Weyl 等分布定理，并构造出 Fourier 级数在一点发散的连续函数。
+
+## 6.1 求解方程
+
+回到引言中试图求解的热方程初边值问题（周期边条件）：
+$$\begin{cases}\partial_t u=\partial_x^2 u \\ u(0,\theta)=f(\theta).\end{cases}$$
+这里不计较条件的最优，设 $f$ 很光滑，比如 $C^{l+1}$。要严肃讨论为什么引言中用分离变量法得到的形式解是真正的解。
+
+1. 将 $f$ 展开得 Fourier 系数，利用函数光滑性与 Fourier 系数衰减的关系，知道
+$$|a_n|,\ |b_n|\le M\,n^{-l}.$$
+2. 回忆分离变量给出的形式解
+$$u(t,\theta)=\sum_{n=0}^{\infty}\bigl(a_n\cos n\theta+b_n\sin n\theta\bigr)e^{-n^2kt}.$$
+右边为什么收敛？实际上可以证明右边在 $[0,\infty)\times[-\pi,\pi]$ 上一致收敛；更进一步，右边的级数的逐项求导也一致收敛（只要 $l$ 够大，可以逐项求很多次导数）。
+3. 如果逐项求导成立，那么只要代入方程计算，所有的形式计算就都是严格的了。
+
+> [!tip] 逐项求导为何合法（脚注 30、31）
+> 之前学的含参变量积分只有一个参数，现在 $(t,\theta)$ 都是参数。可以逐个分量去理解：对 $t$ 求导时把 $\theta$ 固定当常数，对 $\theta$ 求导时把 $t$ 看成常数，用之前的定理说明求导与求和可交换。
+>
+> 这里成功的关键又一次用到 $(\cos n\theta)''=-n^2\cos n\theta$。这是 Fourier 级数所选取的基优秀的原因：它本质上是算子 $Lu=\partial_\theta^2 u$ 的特征向量，而这些特征向量正好构成 Hilbert 空间的一组基——线性代数对应定理的推广。
+
+## 6.2 应用：等周不等式
+
+问题：平面上定长的曲线围成的最大面积是多少？答案：圆。我们假装有如下定理：
+
+> [!note] 定理 6.1（等周不等式）
+> 设 $\Gamma$ 是 $\mathbb{R}^2$ 上的简单闭曲线，长度为 $l$，$A$ 是该曲线围成的区域面积。则
+> $$A\le\frac{l^2}{4\pi},$$
+> 而且等号成立当且仅当 $\Gamma$ 是圆周。
+
+> [!info] Remark 6.2
+> 我们没有能力正经地证明。曲线、围成、长度这些概念比较深。仅对“光滑有正则参数化的简单闭曲线”证明。
+
+设有参数化曲线 $\gamma:[a,b]\to\mathbb{R}^2$，$\gamma(t)=(x(t),y(t))$。简单意味着 $\gamma$ 除去 $a,b$ 之外是单射；闭意味着 $\gamma(a)=\gamma(b)$；长度是 $\int_a^b|\gamma'|dt$。不妨设曲线的参数恰好表示弧长（这种参数化存在），则 $l=b-a$ 且 $|\gamma'(s)|=1$。面积公式：
+$$A=\frac12\int_a^b\bigl(x(t)y'(t)-y(t)x'(t)\bigr)dt=\int_a^b x(t)y'(t)\,dt.$$
+
+**证明**（不妨设 $l=2\pi$，$\gamma:[0,2\pi]\to\mathbb{R}^2$，继续用复的形式）。对 $x(s)$ 和 $y(s)$ 分别作复形式 Fourier 展开
+$$x(s)\sim\sum_n a_n e^{ins},\qquad y(s)\sim\sum_n b_n e^{ins},$$
+进而 $x'(s)\sim\sum_n a_n(in)e^{ins}$，$y'(s)\sim\sum_n b_n(in)e^{ins}$。弧长条件 $\int_0^{2\pi}\bigl((x')^2+(y')^2\bigr)ds=2\pi$ 和 Parseval 等式（见 [[Parseval恒等式]]）推出
+$$(6.1)\qquad\sum_{n=-\infty}^{\infty}n^2\bigl(|a_n|^2+|b_n|^2\bigr)=1.$$
+
+> [!info] 脚注 33（内积约定）
+> 这里的（复值）内积定义为 $\langle f,g\rangle=\dfrac{1}{2\pi}\displaystyle\int_{[-\pi,\pi]}f(x)\overline{g(x)}\,dx$，则 $e^{inx}$ 是一组单位正交基；若 $f\sim\sum_n c_ne^{inx}$，$g\sim\sum_n d_ne^{inx}$，则 $\langle f,g\rangle=\sum_n c_n\overline{d_n}$。
+
+利用 $A=\int_0^{2\pi}x(s)y'(s)\,ds$，
+$$\begin{aligned}
+A&\overset{(a)}{=}2\pi\sum_n a_n\overline{nb_n}\\
+&\overset{(c)}{\le}2\pi\sum_{n=-\infty}^{\infty}|a_n|\,|nb_n|\\
+&\overset{(d)}{\le}2\pi\sum_{n=-\infty}^{\infty}|na_n|\,|nb_n|\\
+&\overset{(b)}{\le}\pi\sum_{n=-\infty}^{\infty}n^2\bigl(|a_n|^2+|b_n|^2\bigr)=\pi.
+\end{aligned}$$
+
+> [!info] 取等号的条件
+> - (a) 那一步没有要求，注意 $y'$ 是实值函数，所以你可以认为上面有一个共轭；
+> - (b) 要求：对 $n\ne0$，$|a_n|=|b_n|$；
+> - (d) 要求：对 $|n|>1$，必须有 $a_nb_n=0$；结合前一点，对任何 $|n|>1$ 必须有 $a_n=b_n=0$；
+> - (c) 与 $a_0,b_0$ 没有关系，要求 $a_1b_1-a_{-1}b_{-1}=|a_1||b_1|+|a_{-1}||b_{-1}|$。另外由于 $x,y$ 实值，$a_{-1}=\overline{a_1}$，$b_{-1}=\overline{b_1}$。$a_1b_1$ 减去自己的共轭等于自己模长的 2 倍，说明它是纯虚数，故 $b_1=a_1\cdot(\pm i)$；
+> - 利用总长 $2\pi$ 的条件，$|a_1|=|b_1|=\frac12$。
+
+最后设 $a_1=u+iv$，则 $b_1=-v+iu$（或差一个符号），得
+$$x(s)=a_0+2u\cos\theta-2v\sin\theta,\qquad y(s)=b_0-2v\cos\theta-2u\sin\theta,$$
+不难看出这是半径为 1 的圆。
+
+证法的历史来历以及等周问题本身的故事，见 §6.5。
+
+## 6.3 Weyl 的分布定理 (*)
+
+设 $x$ 是实数，$\langle x\rangle\in[0,1)$ 表示 $x$ 的小数部分。
+
+> [!note] 定义 6.3（等分布）
+> $[0,1)$ 中的数列 $\{\xi_n\}$ 称为**等分布的**，如果对于任何 $(a,b)\subset[0,1)$，有
+> $$\lim_{N\to\infty}\frac{\#\{1\le n\le N\mid\xi_n\in(a,b)\}}{N}=b-a.$$
+> 落入区间的概率恰好是 $b-a$，故称等分布。
+
+> [!note] 定理 6.4（Weyl）
+> 设 $\gamma$ 是无理数，则数列 $x_n=\langle n\gamma\rangle$ 在 $[0,1)$ 中等分布。
+
+**证明**（分步）。
+1. 设 $f$ 是 $\chi_{[a,b]}$ 作周期一延拓得到的函数，则 $\#\{1\le n\le N\mid\xi_n\in(a,b)\}=\sum_{n=1}^{N}f(\xi_n)$（这里 $\xi_n=\langle n\gamma\rangle$）。因此只要证明
+$$(6.2)\qquad\lim_{N\to\infty}\frac1N\sum_{n=1}^{N}f(\xi_n)=b-a=\int_0^1 f(x)\,dx.$$
+2. 为证明 (6.2)，注意它两边都保持“序”，而且与“一致逼近”关系好：若 $f\le g$，则 $\frac1N\sum f(\xi_n)\le\frac1N\sum g(\xi_n)$ 且 $\int_0^1 f\le\int_0^1 g$；若 $|f-g|\le\varepsilon$，则两边的偏差都 $\le\varepsilon$。
+3. 先看 $f$ 是周期一的三角函数（固定 $k\in\mathbb{N}\setminus\{0\}$），$f(x)=e^{2\pi kix}$，则 (6.2) 的左边可以利用等比级数直接算出
+$$\frac1N\sum_{n=1}^{N}e^{(2\pi k\gamma)in}\longrightarrow0=\int_0^1 e^{2\pi kix}\,dx.$$
+（$k=0$ 时显然成立；这个极限用到 $\gamma$ 是无理数，等比级数求和时才能确保对任何 $k$ 分母都不为 0。）
+4. 于是 (6.2) 对三角多项式成立，进而对所有周期 1 的连续函数成立（因为可以一致逼近）。最后对 $f=\chi_{[a,b]}$，对任何 $\varepsilon>0$，取连续函数 $f_1\le f$ 且 $\int_0^1|f-f_1|(t)\,dt\le\varepsilon$。利用单调性
+$$\lim_{N\to\infty}\frac1N\sum_{n=1}^{N}f(\xi_n)\ge\lim_{N\to\infty}\frac1N\sum_{n=1}^{N}f_1(\xi_n)=\int_0^1 f_1(x)\,dx\ge\int_0^1 f(x)\,dx-\varepsilon.$$
+在 $f$ 的上方使用类似的逼近，得到另一个方向的不等式，然后令 $\varepsilon\to0$。证毕。
+
+> [!info] 讲义更正
+> 此处讲义有一处勘误批注（“之前的版本有问题，课上有问题，更正如下”），脚注 34 又指出后面并不用一致逼近这一点，称其为误导。
+
+Weyl 定理的历史背景见 §6.5。
+
+## 6.4 连续函数可以有发散的 Fourier 级数 (*)
+
+（参考 Stein 第 3.2.2 节。）
+
+从一个计算题开始，计算函数
+$$f(\theta)=\begin{cases}i(\pi-\theta), & 0<\theta<\pi,\\ i(-\pi-\theta), & -\pi<\theta\le0.\end{cases}$$
+它的 Fourier 级数为 $\displaystyle\sum_{n\ne0}\frac{e^{in\theta}}{n}$，对应的部分和
+$$S_N(\theta)=\sum_{1\le|n|\le N}\frac{e^{in\theta}}{n}=\sum_{1\le n\le N}\frac{e^{in\theta}-e^{-in\theta}}{n}.$$
+它的逐点收敛性质是已知的，尤其在 $\theta=0$ 处必须收敛于 0（确实，在 0 点实际上是 $n$ 和 $-n$ 项抵消才是 0）。单独看 $n\ge1$ 的部分，对应的是调和级数，不收敛。这个现象是下面构造的基础。
+
+> [!note] 引理 6.5
+> $\max_\theta|S_N(\theta)|$ 关于 $N$ 一致有界。
+
+**证明**（不平凡）。这是 Abel 和
+$$A_r(\theta)=\sum_{1\le n<\infty}r^n\frac{e^{in\theta}-e^{-in\theta}}{n}.$$
+断言 $\max_\theta|A_r(\theta)|\le C$ 关于 $r$ 一致。这一步简单，只要回忆 Poisson 核（见 [[Abel求和与Poisson核]]）
+$$A_r(\theta)=\frac{1}{2\pi}\int_{-\pi}^{\pi}f(\theta-\varphi)P_r(\varphi)\,d\varphi,$$
+把绝对值放进去，利用 $f$ 有界、$P_r(\theta)$ 的总权为 1。
+不平凡的是计算 $A_r(\theta)$ 和 $S_N(\theta)$ 的差。令 $c_n=\dfrac{e^{in\theta}-e^{-in\theta}}{n}$，对于任何 $N$，直接取 $r=1-\frac1N$（至于为什么这么取，不知道）。计算
+$$S_N(\theta)-A_r(\theta)=\sum_{1\le n\le N}c_n(1-r^n)-\sum_{n\ge N+1}c_nr^n.$$
+初等公式表明 $1-r^n=(1-r)(1+r+\cdots+r^{n-1})\le n(1-r)$，于是
+$$|S_N(\theta)-A_r(\theta)|\le\sum_{1\le n\le N}|c_n|\,n(1-r)+\sum_{n\ge N+1}|c_n|\,n\left(\frac1N\right)^n.$$
+由 $c_n$ 的表达式看出 $n|c_n|$ 有界，进而
+$$|S_N(\theta)-A_r(\theta)|\le NC(1-r)+\frac{C}{N}\sum_{n\ge0}r^n\le C,$$
+最后充分利用了 $r=1-\frac1N$。
+
+整个例子构造的想法与具体实现：取权重 $\alpha_k$ 与尺度 $N_k$（讲义取 $\alpha_k=\frac{1}{k^2}$，$N_k=3^{2^k}$），令
+$$P_k=e^{2N_ki\theta}\sum_{1\le|n|\le N_k}\frac{e^{in\theta}}{n}.$$
+$P_k$ 是一个三角多项式，其“阶”从 $N_k$ 到 $3N_k$。前面乘上一个有界的函数，就把 $-N_k$ 到 $N_k$ 阶的部分平移到 $N_k$ 到 $3N_k$ 了。妙处在于之前求和是一对对求的，平移之后再算 Fourier 级数的和就是一个个分别求和的。
+前面关于部分和一致有界的引理保证
+$$F(\theta)=\sum_{k=1}^{\infty}\alpha_kP_k(\theta)$$
+是一致收敛的函数项级数，进而 $F$ 连续。因为一致收敛，在算 $F$ 的 Fourier 系数时可以逐项积分，进而 $F$ 的 Fourier 级数系数就如同设计的一样。但 $F$ 的 Fourier 级数部分和在 0 点是不可能收敛的，因为
+$$S_{2N_k}(0)-S_{N_k}(0)=\alpha_k\sum_{n=N_k}^{2N_k}\left(-\frac1n\right)\sim-\alpha_k\log N_k\to-\infty.$$
+
+## 6.5 历史注记
+
+（本小节由 AI 生成，供背景参考。）
+
+本节的几个应用里，有两个可以直接对号到历史上的原始论文：等周不等式的证明就是 Hurwitz（1902）的证明，分布定理的证明就是 Weyl（1916）的判据与证法。它们分别是“Fourier 级数的几何应用”和“Fourier 级数的数论应用”两条线索的源头。第一个应用（严格求解热方程）所接续的历史——Fourier 本人与热方程的故事——已见第一节的历史注记（§1.3）。
+
+**等周不等式**。问题本身很古老：Zenodorus（约公元前 2 世纪）已经论说过“定长的闭曲线中圆围成的面积最大”，但著作失传，仅靠 Pappus《数学汇编》第五卷等后人转述保留。近代第一个有影响的论证属于 Steiner：1838 年的短文给出所谓“Steiner 对称化”——把沿一个方向的每条弦换成关于该方向的垂直平分线居中的等长弦，则面积不变而周长不增，除非图形本来就关于该轴对称；1841/42 年的长文又给出包括“四铰链法”在内的五种改进程序，于是面积最大者的每个内接角都必须是直角，由 Thales 定理的逆命题，曲线只能是圆。但两类论证都在同一步失足：“若原曲线是面积最大者”。Steiner 证明的是任何非圆的图形都可以被改进，这只能说明最大值若可达到则必在圆处达到；最大值的存在性本身并没有证明。Dirichlet 当时就指出了这个缺口，Steiner 始终不接受。
+
+这个缺口不是孤立的疏忽，而是时代的病症：Dirichlet–Riemann 在位势问题中也默认“下确界必被某个容许函数达到”。1870 年前后 Weierstrass 给出反例（在 $C^1[-1,1]$ 中以 $x(-1)=-1$、$x(1)=1$ 为边条件极小化 $\int_{-1}^1 t^2\dot x^2\,dt$，下确界为 0 但任何 $C^1$ 函数都达不到），确立了这类缺口的真实危险性。Weierstrass 本人在 1870 年代的柏林变分法讲义中给出了等周问题的第一个完整证明，但讲义生前未发表，直到 1927 年才据听课笔记整理收入《全集》第七卷。第一个发表的严格证明属于他的学生 Edler（1882），做法是在 Steiner 自己的框架内补入存在性论证，不过只针对凸曲线；Schwarz 在 1884 年给出的著名严格证明则是三维（球面）的情形。
+
+也许有人会问：1882 年，“严格化”所需的概念——可求长、有界变差、几乎处处可微——都还没有，Edler 的修补怎么可能？答案是 Steiner–Edler 定理的对象从头到尾是凸曲线，而凸性恰好规避了后来逼出测度论的全部病态：凸曲线的长度就是内接折线长度的上确界，单调收敛，无需任何一般定义。相比之下，一般的“可求长曲线”要等 Jordan 为 Fourier 级数收敛问题引入有界变差函数（1881）、又在《分析教程》中证明“可求长当且仅当参数化函数有界变差”（1893）才有定义；“有界变差函数几乎处处可微”要等 Lebesgue 的博士论文（1902）；“弧长等于积分”当且仅当参数化绝对连续，则是 Vitali（1905–1908）与 Tonelli（1908）的工作。所以准确地说：先有凸曲线的严格证明，后有“有界变差”这顶分析帽子。一般可求长曲线的等周定理之所以到二十世纪才完整，与其说是证明难，不如说是定理的陈述本身要等概念齐备才写得出来。
+
+本节的证法来自 Hurwitz：1901 年先投三页通报，1902 年全文发表，标题就叫《Fourier 级数的若干几何应用》。这是第一个完全不用几何作图的证明：弧长条件经 Parseval 等式变成系数的平方和，面积经 Green 公式变成系数的双线性型，逐项比较 $k\le k^2$ 即得不等式，等号条件一并落出——本节证明的每一步都在其中。同一篇论文还先对有界可积函数证明了 Parseval 等式（见 §5.5）。值得指出的是，这个证明内含了后来所谓 Wirtinger 不等式（一维的 Poincaré 不等式）的第一次几何应用，开创了“用谱间隙写几何不等式”的路线；经 Hardy–Littlewood–Pólya《不等式》（1934）收录后，它成为这个定理的标准证法之一。Hurwitz 为逐项求导假设了边界分段光滑；对一般可求长曲线的直接初等处理，最后由 E. Schmidt（1939）给出，只用 Green 公式和 Cauchy–Schwarz 不等式。
+
+**Weyl 的分布定理**。背景是 Kronecker 定理（1880 年代）：$\gamma$ 无理时，$\langle n\gamma\rangle$ 在 $[0,1]$ 中稠密。Weyl（1916）问的是更精细的问题：稠密还不够，轨道是否“均匀”地铺满区间？他的论文做了三件事。第一，把“模 1 等分布”定义为任意数列的一般性质——此前只有具体数列的具体稠密性，这个抽象化本身使分布成为一个可以研究的对象。第二，给出判据：数列等分布当且仅当对每个非零整数 $k$，$\frac1N\sum_{n\le N}e^{2\pi ik\xi_n}\to0$；本节的证明用的正是这个判据加等比级数求和，判据的内核其实是一个关于测度的 Fourier 唯一性命题——非零频率上 Fourier 系数全为零的测度只能是均匀测度。第三，对没有封闭公式可用的相位，Weyl 发明了“差分法”：把指数和取模平方并作平移，相位差的次数降一，归纳到底；由此证明一般多项式数列的等分布：只要多项式有非常数项的无理系数，$\langle P(n)\rangle$ 就等分布。
+
+值得说明的是这两个结果在 Weyl 自己论文里的地位。皇家学会的 Weyl 讣告（1957）说得直白：$\langle n\gamma\rangle$ 的等分布“已被其他人用多种方法证明过”，在文中只是主定理的“直接推论”（immediate deduction）——本节的等比级数估计就是全部所需；“更重要的推论”是多项式数列的等分布。同一篇讣告评价此文“对后来解析数论几乎所有工作都具有根本重要性”。这条时间线容易写反：并非“Weyl 提出问题、Hardy 看出应用”。Hardy 和 Littlewood 早在 1914 年就系统研究过 $\langle n^k\gamma\rangle$ 的分布并给出定量误差项，方法是用 theta 函数的 Jacobi 虚变换加 Poisson 求和——这正是后来圆法 major arc 结构的原始版本；但模变换是二次相位的专利，高次走不通，Weyl 的差分法不依赖任何模性、对任意次数有效，所以是真正的突破而不只是简化。1919 年起，Hardy–Littlewood 绕开单项式的局限，把“有理点局部化加消去”的结构独立出来发展成圆法。两人实为互相吸收：Hardy–Littlewood 给 Weyl 提供了问题，Weyl 给 Hardy 提供了把指数和当作通用对象的视角。
+
+最后澄清一个常见的误归属：$\langle n\gamma\rangle$ 的前 $N$ 个点把 $[0,1]$ 分成至多三种长度的区间，这个“三间隙定理”是 Steinhaus 的猜想，第一批证明属于 Sós、Świerczkowski 等人，已是 1950 年代末的事，与 Weyl 无关。另一个方向的后续也值得记一笔：等分布的定量化——偏差（discrepancy）的估计——经 Erdős–Turán 不等式归结为指数和估计，正是 Weyl 方法的直接后代，并经 Koksma–Hlawka 不等式成为拟 Monte Carlo 方法的基础。

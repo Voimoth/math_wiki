@@ -1,0 +1,174 @@
+---
+title: 代数III(群论) · 4 半直积与正合列
+created: 2026-09-01
+updated: 2026-10-03
+type: notes
+tags: [group-theory, algebre, cours]
+confidence: medium
+---
+
+# Produit semi-direct et suites exactes
+
+**Produit semi-direct**
+
+Rappel Produit direct de 2 groupes. $N_1, N_2$ groupes. Alors on munit $G = N_1 \times N_2$ d'une structure de groupe
+$$(N_1 \times N_2) \times (N_1 \times N_2) \longrightarrow N_1 \times N_2, \qquad (n_1, n_2) \times (n'_1, n'_2) \longmapsto (n_1 n'_1, n_2 n'_2)$$
+
+Ceci munit $G$ d'une loi de groupe, de neutre $(e_1, e_2)$, inverse $(n_1, n_2)^{-1} = (n_1^{-1}, n_2^{-1})$
+
+> [!info] Rem.
+> $G_1 = N_1 \times \{e_2\}$, $G_2 = \{e_1\} \times N_2$ sont des sous-groupes distingués de $G$ qui commutent, $G_1 \cap G_2 = \{(e_1, e_2)\}$ ; projections $G \longrightarrow N_1$, $G \longrightarrow N_2$ morphismes surjectifs
+> $$(n_1, n_2) \mapsto n_1, \qquad (n_1, n_2) \mapsto n_2$$
+> de noyaux respectifs $N_2$ et $N_1$.
+
+**Notion de suite exacte de groupes (courte)**
+
+C'est la donnée de groupes $N, G, Q$ et de $2$ morphismes
+$$N \xrightarrow{i} G \xrightarrow{p} Q \quad \text{avec } Im(i) = Ker(p)$$
+avec $i$ injective, $p$ surjective.
+
+**Exemple** : $N \triangleleft G$
+$$N \xrightarrow{i} G \xrightarrow{\pi} G/N.$$
+
+> [!info] Rem.
+> Soit $\{1\}$ le groupe à 1 élément. Dire $i$ injective, c'est dire $\{1\} \xrightarrow{} N \xrightarrow{i} G$ exacte en $G$. Dire $p$ est surjective, c'est dire $G \xrightarrow{p} Q \to \{1\}$ exacte en $Q$.
+
+Suite exacte courte
+$$\{1\} \to N \xrightarrow{i} G \xrightarrow{p} Q \to \{1\}$$
+à chaque groupe, image du morphisme qui arrive = noyau du morphisme qui part.
+
+Ex. produit
+$$\{1\} \to G_1 \xrightarrow{i} G \xrightarrow{p} N_2 \to \{1\}$$
+$$N_1 \times N_2$$
+
+> [!note] Déf
+> **Suite exacte scindée.** C'est une suite exacte (courte) $\{1\} \to N \xrightarrow{i} G \xrightarrow{p} Q \to \{1\}$ $(*)$ telle que $\exists s : Q \to G$ morphisme de groupes tq. $p \circ s = id_Q$. Une telle $s$ est appelée une section.
+
+> [!note] Prop
+> Une suite exacte $(*)$ est scindée ssi il existe un sous-groupe $Q_1 \subset G$ tel que la restriction $p|_{Q_1} : Q_1 \to Q$ isomorphisme.
+
+En effet. si on dispose d'une section $s$, on prend $Q_1 = s(Q)$ ; inversement, si on dispose de $Q_1$, on prend $s = (p|_{Q_1})^{-1}$.
+
+> [!info] Rem.
+> Si $(*)$ est scindée, on dispose dans $G$ de 2 sous-groupes $Q_1$ et $N_1 = i(N)$ avec
+> 1) $N_1 \triangleleft G$ (car $N_1 = \text{Ker } p$)
+> 2) $N_1 \cap Q_1 = \{e\}$
+> 3) $N_1 Q_1 = Q_1 N_1 = G$.
+> (en effet, si $g \in G$, $p(g) \in Q$, $s \circ p(g) \in Q_1$, on a alors $p(g) = p(g_1)$, donc $g_1^{-1} g \in \text{Ker } p = N_1$, $g = g_1 n_1$.)
+
+2) et 3) disent que l'application
+$$N_1 \times Q_1 \xrightarrow{\varphi} G, \qquad (n_1, q_1) \longmapsto n_1 q_1$$
+est bijective.
+
+injectivité : $n_1 q_1 = n_2 q_2$, $n_2^{-1} n_1 = q_2 q_1^{-1} = e$ via 2), avec $\underbrace{n_2^{-1} n_1}_{\in N_1}$ et $\underbrace{q_2 q_1^{-1}}_{\in Q_1}$.
+
+On transporte par $\varphi$ la structure de groupe de $G$ à l'ensemble $N_1 \times Q_1$
+$$\begin{array}{ccc}
+(N_1 \times Q_1) \times (N_1 \times Q_1) & \xrightarrow{\varphi \times \varphi} & G \times G \\
+\downarrow & & \downarrow \text{loi de } G \\
+N_1 \times Q_1 & \xleftarrow{\varphi^{-1}} & G
+\end{array}$$
+
+$$(n_1, q_1) \times (n_2, q_2) \longmapsto (n_1 q_1, n_2 q_2)$$
+$$\downarrow$$
+$$(n_1 q_1 n_2 q_1^{-1}, q_1 q_2) \longleftarrow n_1 q_1 n_2 q_2 = \underbrace{n_1}_{\in N_1} \underbrace{q_1 n_2 q_1^{-1}}_{\in N_1} \underbrace{q_1 q_2}_{\in Q_1}$$
+
+> [!note] Prop
+> $(N_1 \times Q_1) \times (N_1 \times Q_1) \longrightarrow (N_1 \times Q_1)$ définie par $(n_1, q_1) \times (n_2, q_2) \longmapsto (n_1 q_1 n_2 q_1^{-1}, q_1 q_2)$ munit $N_1 \times Q_1$ d'une loi de groupe.
+
+On voit apparaître l'action de $Q_1$ par automorphisme intérieur sur $N_1$
+$$f : Q_1 \longrightarrow Aut(N_1), \qquad q \longmapsto (n \mapsto q n q^{-1}), \qquad f \text{ morphisme}$$
+
+**Produit semi-direct**
+
+> [!note] Déf
+> Soit $N$ et $Q$ groupes. $f : Q \rightarrow Aut(N)$ morphisme de groupes. Alors on munit l'ensemble $N \times Q$ d'une loi de groupe par
+> $$(N \times Q) \times (N \times Q) \longrightarrow N \times Q, \qquad (n, q) \cdot (n', q') \longmapsto (n f(q)(n'), q q')$$
+> de neutre $(e_N, e_Q)$. On appelle produit semi-direct de $N$ par $Q$ via le morphisme $f$.
+
+On le note $N \rtimes_f Q$.
+
+> [!info] Rem.
+> Si $f$ est le morphisme trivial, i.e. $\forall q \in Q, f_q = Id_N$, alors on retrouve le groupe produit direct.
+
+**Preuve :** Associativité :
+$$((n_1, q_1) \cdot (n_2, q_2)) \cdot (n_3, q_3) \overset{?}{=} (n_1, q_1) \cdot ((n_2, q_2) \cdot (n_3, q_3))$$
+$$(n_1 f_{q_1}(n_2), q_1 q_2) \cdot (n_3, q_3) = (n_1, q_1) \cdot (n_2 f_{q_2}(n_3), q_2 q_3)$$
+$$= (n_1 f_{q_1}(n_2) f_{q_1 q_2}(n_3), q_1 q_2 q_3) = (n_1 \cdot f_{q_1}(n_2 f_{q_2}(n_3)), q_1 q_2 q_3) = (n_1, q_1) \cdot ((n_2, q_2) \cdot (n_3, q_3)).$$
+
+Remarques :
+1) On dispose dans $G$ de sous-groupes $N = N \times \{e_Q\}$, $Q = \{e_N\} \times Q$, respectivement isomorphes à $N$ et $Q$.
+2) $N \triangleleft G$
+3) $G = NQ = QN$ : $(n, e_Q) \cdot (e_N, q) = (n, q)$, $(e_N, q)^{-1} = (e_N, q^{-1})$.
+
+Par 2). D'après 3). $G$ engendré par $N$ et $Q$. Pour voir $N \triangleleft G$, il faut vérifier
+$$\forall n \in N, \forall q \in Q, \quad (e_N, q) (n, e_Q) (e_N, q^{-1}) \in N$$
+$$(f_q(n), q) \cdot (e_N, q^{-1}) = (f_q(n), e) \in N.$$
+
+> [!info] Rem.
+> Dans le produit semi-direct, « l'automorphisme $f_q \in Aut(N)$ » devient l'automorphisme intérieur par $(e, q)$.
+
+4) $N \cap Q = \{e\}$.
+
+**Avertissement**
+
+Soit $G$ groupe. $N, Q \subset G$ sous-groupes tels que
+1) $N \triangleleft G$
+2) $N \cap Q = \{e\}$
+3) $G = NQ = QN$
+
+Alors $G$ est isomorphe au produit semi-direct $N \rtimes Q$ où
+$$f: Q \to Aut(N), \qquad q \mapsto (n \mapsto qnq^{-1})$$
+
+En effet, il résulte de 2) et 3) que $G$ est bijective en $N \times Q \to G$
+$$(nq) \mapsto nq$$
+et la loi de $G$ donne : $nq \cdot n'q' = n(qn'q^{-1})qq' = n f(q)(n') qq'$.
+
+Exemples
+1) Groupes symétriques $\mathfrak{S}_n$
+$$\{1\} \to \mathfrak{A}_n \to \mathfrak{S}_n \xrightarrow{\varepsilon} \{+1\} \to \{1\} \quad \text{suite exacte}$$
+Soit $s: \{+1\} \to \mathfrak{S}_n$ section
+$$1 \mapsto Id, \qquad -1 \mapsto (12)$$
+Ainsi $\mathfrak{S}_n \simeq \mathfrak{A}_n \rtimes \mathbb{Z}/2\mathbb{Z}$
+$$f(-1) = \phi: \mathfrak{A}_n \to \mathfrak{A}_n, \qquad \sigma \mapsto (12)\sigma(12)$$
+
+2) Le Groupe linéaire
+$$\{1\} \to SL_n(k) \to GL_n(k) \xrightarrow{det} k^* \to \{1\} \quad \text{exacte}$$
+$$\begin{pmatrix} \lambda & 0 \\ 0 & I_{n-1} \end{pmatrix} \leftarrow \lambda \quad \text{section}$$
+d'où produit semi-direct $GL_n(k) = SL_n(k) \rtimes k^*$
+$$f: (k^*, \cdot) \to Aut(SL_n(k))$$
+$$\lambda \mapsto (M \mapsto \begin{pmatrix} \lambda & & \\ & \ddots & \\ & & \lambda \end{pmatrix} M \begin{pmatrix} \lambda^{-1} & & \\ & \ddots & \\ & & \lambda^{-1} \end{pmatrix})$$
+
+3) Groupe diédral $D_{2n}$
+$$D_{2n} = \text{Groupe des isométries du plan qui préservent le polygone}$$
+$$\text{régulier } P_n \text{ à } n \text{ côtés}.$$
+$$P_n : \text{sommets } \{ e^{2i\frac{k\pi}{n}} , \ 0 \leq k \leq n-1 \}$$
+$$\{1\} \longrightarrow \{\text{Rotations}\} \longrightarrow D_{2n} \xrightarrow{\text{det}} \{\pm 1\} \longrightarrow \{1\}$$
+$$\quad \quad \quad \mathbb{Z}/n\mathbb{Z} \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad s \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad$$
+$$D_{2n} \simeq \mathbb{Z}/n\mathbb{Z} \rtimes_f \mathbb{Z}/2\mathbb{Z}.$$
+
+> [!info] Rem.
+> Un produit semi direct dépend à priori du choix du morphisme $f : Q \longrightarrow \text{Aut}(N)$. Il se peut que deux $f$ distincts conduisent à des produits semi directs isomorphes. Deux situations conduisent à un isomorphisme :
+> 1) Via un automorphisme de $Q$.
+
+$$f : Q \longrightarrow \text{Aut}(N) \text{ morphisme}, \qquad g : Q \longrightarrow \text{Aut}(N)$$
+$$\begin{array}{ccc} Q & \xrightarrow{g} & \text{Aut}(N) \\ a \uparrow & \nearrow f & \\ Q & & \end{array}$$
+On suppose $\exists a \in \text{Aut}(Q)$ t.q. $f = g \circ a$.
+
+Alors les 2 produits semi-directs sont isomorphes
+$$N \rtimes_f Q \xrightarrow{\varphi} N \rtimes_g Q, \qquad (n, q) \longmapsto (n, a(q))$$
+
+Prop: $\varphi$ isomorphisme de groupes.
+
+**Preuve :** $\varphi((n,q) \cdot (n',q')) = \varphi(n f(q)(n') , qq') = (n f(q)(n') , a(qq')) = (n g(a(q))(n') , a(q) a(q')) = (n, a(q)) \cdot (n', a(q'))$.
+
+2) Via conjugaison par un élément de $Aut(G)$
+
+Soit $h \in Aut(G)$, alors on peut considérer la conjugaison par $h$ dans $Aut(N)$
+$$Aut(N) \to Aut(N), \qquad g \mapsto h g h^{-1}$$
+Si $f : Q \to Aut(N)$, on lui associe $g : Q \to Aut(N)$
+$$q \mapsto h f(q) h^{-1}$$
+
+Prop. L'application $\Psi : N \rtimes_f Q \to N \rtimes_g Q$, $(n, q) \mapsto (h(n), q)$, est un isomorphisme de groupes.
+
+**Preuve :** $\Psi((n, q)(n', q')) = \Psi(n f(q)(n'), qq') = (h(n f(q)(n')), qq') = (h(n) g(q)(h(n')), qq') = (h(n), q) (h(n'), q')$.

@@ -1,0 +1,107 @@
+---
+title: Fourier · 3 逐点收敛理论
+created: 2026-09-02
+updated: 2026-10-03
+type: notes
+tags: [fourier-series, notes, 分析III]
+confidence: high
+---
+
+# 3. Fourier 级数的逐点收敛理论
+
+**核心问题**：给 $f$，$S_N(f)$ 何时收敛？收敛到 $f$ 吗？本节给充分条件。存在连续函数其 Fourier 级数在某点/多点发散；存在(Lebesgue)可积函数几乎处处/处处发散(Zygmund 第 8 章)。
+
+**部分和**：$S_N(x)=\dfrac{a_0}{2}+\sum_{n=1}^{N}(a_n\cos nx+b_n\sin nx)=\sum_{n=-N}^{N}C_ne^{inx}$。
+
+## 3.1 Dirichlet 核
+
+把 $C_n$ 代入 $S_N$ 并交换求和积分：
+$$S_N(x)=\frac{1}{2\pi}\int_{-\pi}^{\pi} f(t)\sum_{n=-N}^{N}e^{in(x-t)}dt$$
+
+括号内是等比级数，令 $u=x-t$：
+$$D_N(u)=\sum_{n=-N}^{N}e^{inu}=\frac{e^{i(N+1)u}-e^{-iNu}}{e^{iu}-1}=\frac{\sin(N+\tfrac12)u}{\sin\tfrac u2}$$
+称 $D_N$ 为 **Dirichlet 核**，且(部分和的卷积表示)
+$$\boxed{S_N(x)=\frac{1}{2\pi}\int_{-\pi}^{\pi} f(t)D_N(x-t)dt=\frac{1}{2\pi}\int_{-\pi}^{\pi} f(x-s)D_N(s)ds}$$
+
+(利用周期性把 $f$ 延拓到 $\mathbb{R}$；最后用 $D_N$ 为偶函数得 $S_N(x)=\frac{1}{2\pi}\int_0^\pi\bigl[f(x-s)+f(x+s)\bigr]D_N(s)ds$。)
+
+> [!tip] 直觉
+> $S_N$ 是 $f$ 以 $D_N$ 为权的加权平均(卷积)。$N$ 增大时 $D_N$ 主峰高($\sim 2N+1$)变尖(宽 $\sim \frac{2\pi}{N+1/2}$)、旁瓣高频振荡。收敛问题归结为核 $D_N$ 的行为。
+
+## 3.2 Riemann-Lebesgue 引理与局部性
+
+**引理 3.1(Riemann-Lebesgue)**：$f$ 在 $[a,b]$ 可积或绝对可积，则
+$$\lim_{n\to\infty}\int_a^b f(t)\sin nt\,dt=0 \quad(\cos nt,\ e^{int}\ \text{同理})$$
+
+**证明(4 步逼近套路)**：
+1. $f$ 常值：直接积分 $\frac{C}{n}(\cos na-\cos nb)\to0$。
+2. $f$ 阶梯函数：有限小区间上常值函数的线性组合，逐段用 (1)。
+3. $f$ 黎曼可积：$\forall\varepsilon>0$ 存在阶梯 $g$ 使 $\int|f-g|<\varepsilon$；固定 $g$ 用 (2)，再三角不等式得 $|\int f\sin nt\,dt|<2\varepsilon$。
+4. $f$ 绝对可积(有瑕点)：设一个瑕点 $c\in(a,b)$，取 $\delta$ 使 $\int_{c-\delta}^{c+\delta}|f|<\varepsilon$，构造 $g(x)=f(x)$(当 $|x-c|>\delta$)、$g=0$(在 $[c-\delta,c+\delta]$)，对 $g$ 用 (3)，结合 $\int|f-g|<\varepsilon$。
+
+**推论 3.2**：任何可积函数的 Fourier 系数至少趋于 0。
+
+**定理 3.3(局部化原理)**：$f,g$ 若在某点 $x_0$ 小邻域内相同，则它们在 $x_0$ 处 Fourier 级数敛散性相同、收敛值相同。证明基于 (3.1)：$[\delta,\pi]$ 上的积分由 Riemann-Lebesgue 消失，极限只取决于 $0$ 附近(即 $x_0$ 附近)取值。
+
+## 3.3 Dini 条件
+
+**定义 3.4(Dini 条件)**：$f$ 在 $x$ 的空心邻域定义。若 (1) 左右极限 $f(x-),f(x+)$ 存在；(2) 存在小 $\varepsilon$ 使 $\displaystyle\int_0^{\varepsilon}\frac{|f(x-t)-f(x-)|+|f(x+t)-f(x+)|}{t}dt$ 收敛。
+
+> [!info] Dini 条件的直觉
+> 因 $\frac1t$ 在 0 附近不可积，分子须"足够小"使乘以 $\frac1t$ 后可积——本质是对 $f$ 在 $x$ 两侧收敛速度(连续性)的要求。
+
+**充分条件**：Hölder 条件 $|f(x)-f(y)|\le C|x-y|^{\alpha}\ (\alpha>0)\Rightarrow$ Dini；分段可导且导数有界 $\Rightarrow$ Dini。例 $f(x)=\text{sgn}\,x$ 满足。
+> [!warning] Dini 条件的定位
+> Dini 是**充分不必要**条件。
+
+**定理 3.6(Dini)**：$f$ $2\pi$ 周期、可积，若在 $x_0$ 满足 Dini 条件，则
+$$S_N(x_0)\xrightarrow{N\to\infty}\frac{f(x_0^-)+f(x_0^+)}{2}$$
+
+**证明要点**：利用 $\frac{1}{2\pi}\int_{-\pi}^{\pi}D_N=1$，把目标化为
+$$\lim_{N\to\infty}\int_0^{\pi}\bigl[f(x-t)+f(x+t)-f(x^-)-f(x^+)\bigr]\frac{\sin(N+\tfrac12)t}{\sin\tfrac{t}{2}}dt=0.$$
+对 $\varepsilon>0$ 用 Dini 条件选 $\delta$ 使 $[0,\frac{\delta}{2}]$ 上积分 $<\varepsilon$（分子被 $\frac{t}{\sin\frac t2}$ 控制、由 Dini 可积）；固定 $\delta$ 后在 $[\frac{\delta}{2},\pi]$ 上对被积函数用 Riemann-Lebesgue 引理，得积分 $<\varepsilon$。两部分合起来 $<\varepsilon$。
+
+**例 3.8**($f(x)=x$)：$x\sim\sum(-1)^{n-1}\frac2n\sin nx$，在 $(-\pi,\pi)$ 满足定理条件。$2\pi$ 周期延拓 $\tilde f$ 在端点 $x=(2k+1)\pi$ 处左右极限平均为 0，恰为级数值 $\sum(-1)^{n-1}\frac2n\sin(n\pi)=0$。
+
+## 3.4 函数光滑性与 Fourier 系数的关系
+
+**定理 3.9**：$f$ 在 $[-\pi,\pi]$ 可导、$f'$ 可积或绝对可积，若 $f(-\pi)=f(\pi)$，则 $a_n=o(\frac1n),\ b_n=o(\frac1n)$。
+证明(分部积分)：$a_n=\frac1\pi\int f\cos nx\,dx=\frac{1}{n\pi}\int f'\sin nx\,dx$（边界项因 $\sin n\pi=0$ 消失；$b_n$ 需 $f(-\pi)=f(\pi)$），再用 Riemann-Lebesgue。
+
+**定理 3.10(推广)**：$f$ 有到 $k+1$ 阶导数、$f^{(k+1)}$ 可积，且 $f^{(j)}(\pi)=f^{(j)}(-\pi)\ (j=0,\dots,k)$，则 $a_n,b_n=o(\frac{1}{n^{k+1}})$。反复分部积分。
+
+**反向**：若 $|a_n|,|b_n|\le \frac{C}{n^3}$，则 Fourier 级数及逐项求导都绝对一致收敛，收敛于一个 $C^1$ 函数 $g$（此时 $g$ 与 $f$ 的系数相同，需借助收敛性理论说明 $f=g$ 的意义——逐点/$L^2$/几乎处处）。
+
+> [!tip] 原理(不是定理)
+> $f$ 越光滑，Fourier 系数趋向 0 越快。例：$f=x$ 的 $b_n\sim\frac1n$，$f=|x|$ 的 $a_n\sim\frac1{n^2}$。
+
+## 3.5 文献注记：Zygmund《Trigonometric Series》进一步结果(第 1 卷第 2 章)
+
+本节只讲了 Dini 一条充分条件。Zygmund 书中另有经典结果（编号沿用该书）：
+
+1. **Dirichlet–Jordan 判别(Thm 8·1)**：$f$ 有界变差（$\Leftrightarrow f=f_1-f_2$，$f_1,f_2$ 单调）则逐点收敛到 $\frac{f(x+0)+f(x-0)}{2}$，在连续点组成的闭区间上一致收敛。
+2. **逐项积分定理(Thm 8·7)**：$f$ 可积，无论级数是否收敛，逐项积分 $\frac{a_0}{2}x+\sum\frac{a_n\sin nx-b_n\cos nx}{n}$ 一致收敛于 $\int_0^x f-C$。**发散的级数逐项积分后反一致收敛**。
+3. **Dini–Lipschitz 判别(Thm 10·3)**：$f$ 连续，连续性模 $\omega(\delta)=\sup_{|x-y|\le\delta}|f(x)-f(y)|$ 满足 $\omega(\delta)\log\frac1\delta\to0$（等价于一致连续即 $\lim_{\delta\to0}\omega(\delta)=0$，并更快），则 Fourier 级数一致收敛于 $f$。单点版本 $f(x\pm t)-f(x)=o(1/\log\frac1t)$ 不能保证收敛(反例见 Zygmund §2)。
+4. **Lebesgue 常数(§12)**：$L_n=\frac{1}{2\pi}\int|D_n|=\frac4{\pi^2}\log n+O(1)$，且 $L_n$ 恰为 $\sup_{|f|\le1\ \text{连续}}|S_n(f;0)|$ —— 结合一致有界性原理给出"连续函数某点发散"的定量解释。
+5. **Gibbs 现象(Thm 9·3)**：锯齿波 $\sum\frac{\sin nx}{n}=\frac{\pi-x}{2}$ 的部分和逐点收敛但在跳点附近不一致收敛，超出右极限比例 $\frac2\pi\int_0^\pi\frac{\sin t}{t}dt\approx1.179$（冲过跳跃约 9%），且不随 $n$ 消失。有界变差函数在每个不可去间断点出现 Gibbs 现象。
+6. **系数量级(§4)**：有界变差函数 $a_n,b_n=O(\frac1n)$，不可改进为 $o(\frac1n)$（锯齿波反例）。
+
+> [!info] Rem 3.11 (Zygmund)
+> Zygmund §11 的 Lebesgue 判别法逻辑上蕴含 Dini、Dini–Lipschitz、Dirichlet–Jordan，但条件不便验证。另外（Thm 11·10）：若 $f\in L^p$（$p>1$），则 $S[f]$ 在 $f$ 的 Lebesgue 集合上（特别地几乎处处）收敛到 $f$ —— 这是 Carleson 定理的古典前身。
+
+## 3.6 历史注记(§3.6)
+
+逐点收敛理论的历史，是**乐观猜想与著名反例交替**的历史。
+
+- **Fourier 本人(1822)** 相信"任意函数"都可表示为三角级数，但没有给出证明。
+- **第一个严格的充分性定理属于 Dirichlet(1829)**：分段单调、分段连续的有界函数，其 Fourier 级数逐点收敛(在间断点收敛于左右极限的平均)。
+- **Riemann** 为研究"函数何时可由三角级数表示"写下的就职论文(1854 完成，1867 发表)中**引入了以他命名的积分**。
+- 此后半个多世纪，人们倾向于相信**连续函数的 Fourier 级数处处收敛**;直到 **du Bois-Reymond(1873)构造出第一个反例：连续函数的 Fourier 级数可以在一点发散**。
+- **Fejér(1900)证明 Cesàro 平均总是收敛**，表明困难出在**求和方式**上而不在函数本身。
+- **Kolmogorov(1923，1926)** 进一步构造了 $L^1$ 函数，其 Fourier 级数**几乎处处发散、乃至处处发散**，逐点收敛在 $L^1$ 中彻底破灭。
+- 另一方向上，**Lusin 猜想(1915)**：$L^2$ 函数的 Fourier 级数几乎处处收敛。这一猜想悬置半个世纪，由 **Carleson(1966)证明**，**Hunt(1968)** 推广到 $L^p$($p>1$);特别地，**连续函数的 Fourier 级数几乎处处收敛**。
+- 同年 **Kahane–Katznelson** 证明：**任何零测集上，都可以找到某个连续函数在其上发散**。
+
+**衔接**：下一节(§4)由 Hardy《Divergent Series》引入 **Cesàro 求和与 Abel 求和**(广义求和)，用以处理原级数发散的情形。
+
+---

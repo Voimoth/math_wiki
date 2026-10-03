@@ -1,0 +1,202 @@
+---
+title: Fourier · 7 Fourier 变换
+created: 2026-09-02
+updated: 2026-10-03
+type: notes
+tags: [fourier-series, notes, 分析III]
+confidence: high
+---
+
+# 7. Fourier 变换
+
+**主线**：把频率从离散推向连续——Fourier 变换的定义、性质、求逆公式与 $L^2$ 等距。
+
+给定合适的 $f$，准备定义含参变量的积分
+$$\hat f(\xi):=\int_{-\infty}^{\infty}f(x)e^{-2\pi ix\xi}\,dx.$$
+这个函数称为函数 $f$ 的 Fourier 变换。讨论 Fourier 变换的时候，很难仅仅局限在实值函数讨论，所以从这里开始，我们都是考虑复值函数；即使 $f$ 是实值的，它的 Fourier 变换通常也不是。这个东西很有用，有很多优秀的性质。一个主要的困难是：如果对于性质很好的 $f$，那么这些性质很容易证明；对于性质一般的 $f$，很多看上去很简单的性质证明艰难多了。
+
+## 7.1 缓降函数
+
+我们约定
+$$\int_{-\infty}^{\infty}f(x)\,dx=\lim_{N\to\infty}\int_{-N}^{N}f(x)\,dx.$$
+
+> [!note] 定义 7.1（缓降函数）
+> $f:\mathbb{R}\to\mathbb{C}$ 称为**缓降的**，记为 $f\in M(\mathbb{R})$，如果 $f$ 是连续的，而且存在 $A>0$，使得
+> $$|f(x)|\le\frac{A}{1+x^2},\qquad x\in\mathbb{R}.$$
+
+注记：以上定义中的 $2$ 不是很本质的，你可以考虑换成任何比 $1$ 大的数。缓降函数的 Fourier 变换定义良好——虽然这不是最广泛的一类可以定义 Fourier 变换的函数，但至少是比较方便的一类。
+
+关于缓降函数，罗列如下初等性质：
+- 线性：$\forall f,g\in M(\mathbb{R})$，$\forall a,b\in\mathbb{C}$，$\displaystyle\int_{-\infty}^{\infty}(af+bg)\,dx=a\int_{-\infty}^{\infty}f\,dx+b\int_{-\infty}^{\infty}g\,dx$；
+- 平移不变性：对任何 $h\in\mathbb{R}$，$\displaystyle\int_{-\infty}^{\infty}f(x+h)\,dx=\int_{-\infty}^{\infty}f(x)\,dx$；
+- 伸缩：$\displaystyle\delta\int_{-\infty}^{\infty}f(\delta x)\,dx=\int_{-\infty}^{\infty}f(x)\,dx$；
+- 平移连续性：$\displaystyle\lim_{h\to0}\int_{-\infty}^{\infty}|f(x-h)-f(x)|\,dx=0$。
+
+证明过于简单就不多说了。
+
+> [!note] 定理 7.2
+> 设 $f\in M(\mathbb{R})$，则 $\hat f(\xi)$ 是连续函数，而且 $\displaystyle\lim_{\xi\to\infty}\hat f(\xi)=0$。
+
+（证明利用缓降的定义，转化成有界区间上的积分。）
+
+> [!example] 例子 7.3
+> 设 $f(x)=\chi_{[-1,1]}(x)$，则
+> $$\hat f(\xi)=\int_{-\infty}^{\infty}f(x)e^{-2\pi ix\xi}dx=\int_{-1}^{1}e^{-2\pi ix\xi}dx=2\int_0^1\cos(2\pi x\xi)\,dx=\frac{\sin 2\pi\xi}{\pi\xi}.$$
+
+> [!example] 例子 7.4
+> 设 $g(x)=\begin{cases}1-|x|,&|x|<1,\\0,&\text{otherwise}.\end{cases}$ 则
+> $$\hat g(\xi)=2\int_0^1(1-x)\cos(2\pi x\xi)\,dx=\cdots=\frac{\sin^2(\pi\xi)}{\pi^2\xi^2}.$$
+
+形式上还是有“函数越光滑对应的 Fourier 变换在 $\xi$ 趋于无穷时越快收敛于 0”。巧的是上面两个例子的 Fourier 变换还是实值的，因为它们是偶函数。
+
+## 7.2 速降函数
+
+> [!note] 定义 7.5（速降函数）
+> $f:\mathbb{R}\to\mathbb{C}$ 称为**速降的**，如果 $f$ 无穷次连续可微，而且对于任何 $k,l\in\mathbb{N}$，都有
+> $$\sup_{x\in\mathbb{R}}|x|^k\,|f^{(l)}(x)|\le C(k,l)<\infty.$$
+> 记全体速降函数为 $S(\mathbb{R})$。
+
+注意速降函数一定是缓降的：取 $k=0$ 和 $k=2$ 可知 $f$ 连续而且 $|f(x)|\le\frac{C}{1+x^2}$。所以速降函数的 Fourier 变换一定是定义良好的。
+
+> [!example] 例子 7.6
+> - 速降函数 $f$ 的任何导数都是速降的；
+> - 速降函数乘以任何多项式函数都是速降的；
+> - $f(x)=e^{-x^2}$ 是速降的；
+> - 紧支集的光滑函数是速降的。
+
+速降函数看上去很苛刻，但是是证明 Fourier 有关性质最愉快的函数空间。
+
+> [!info] 命题 7.7
+> 设 $f\in S(\mathbb{R})$：
+> - 平移函数 $f(x+h)$ 的 Fourier 变换为 $\hat f(\xi)e^{2\pi ih\xi}$；
+> - $f(x)e^{-2\pi ixh}\mapsto\hat f(\xi+h)$；
+> - 伸缩：$f(\delta x)\mapsto\delta^{-1}\hat f(\delta^{-1}\xi)$；
+> - 导数：$f'(x)\mapsto2\pi i\xi\hat f(\xi)$；
+> - 乘以 $x$：$-2\pi ixf(x)\mapsto\dfrac{d\hat f}{d\xi}(\xi)$。
+
+以上证明都很简单，略。但是它们合起来可以证明：
+
+> [!note] 定理 7.8
+> Fourier 变换把速降函数映射到速降函数。
+
+## 7.3 求逆公式
+
+求逆公式本身很好看，证明也不错。问题是需要用到一些广义积分的性质，不能说我们没有讲过，但是肯定不熟悉。好在如果仅仅考虑速降函数，对应的性质成立是不难想象的。
+
+> [!note] 引理 7.9
+> 1. $\displaystyle\int_{-\infty}^{\infty}e^{-\pi x^2}dx=1$；
+> 2. 若 $f(x)=e^{-\pi x^2}$，则 $\hat f(\xi)=f(\xi)$。
+
+**证明**。第一个性质是一个重要的结论，迟早要知道，至少有如下技巧证明：
+$$\int_{-\infty}^{\infty}e^{-\pi x^2}dx\cdot\int_{-\infty}^{\infty}e^{-\pi y^2}dy=\int_{\mathbb{R}^2}e^{-\pi r^2}r\,dr\,d\theta=1.$$
+第二个性质的证明利用了常微分方程（初值问题）的解的唯一性。易见 $f$ 满足方程
+$$f'(x)=-2\pi xf(x),\qquad f(0)=1.$$
+令 $F(\xi)=\int_{-\infty}^{\infty}f(x)e^{-2\pi ix\xi}dx$。利用引理第一条，有 $F(0)=1$（需要花力气去说明下面的计算是合理的），
+$$\begin{aligned}
+F'(\xi)&=\int_{-\infty}^{\infty}f(x)(-2\pi ix)e^{-2\pi ix\xi}dx\\
+&\overset{\text{ODE}}{=}\int_{-\infty}^{\infty}if'(x)e^{-2\pi ix\xi}dx\\
+&=(-i)\int_{-\infty}^{\infty}f(x)\cdot(-2\pi i\xi)e^{-2\pi ix\xi}dx=-2\pi\xi F(\xi).
+\end{aligned}$$
+由常微分方程的唯一性，$F(\xi)=f(\xi)$。
+
+卷积和 Fourier 变换有好的性质。
+
+> [!note] 引理 7.10
+> 若 $f,g\in S(\mathbb{R})$，则
+> $$\int_{-\infty}^{\infty}f(x)\hat g(x)\,dx=\int_{-\infty}^{\infty}\hat f(y)g(y)\,dy.$$
+
+**证明**。下面这个交换积分次序是合理的（需要花点力气，不过速降没问题）。
+$$\int_{-\infty}^{\infty}f(x)\hat g(x)\,dx=\int_{-\infty}^{\infty}f(x)\int_{-\infty}^{\infty}g(y)e^{-2\pi ixy}dy\,dx=\int_{-\infty}^{\infty}\!\!\int_{-\infty}^{\infty}f(x)g(y)e^{-2\pi ixy}dx\,dy=\text{交换次序}=\text{右边}.$$
+
+> [!note] 定理 7.11（求逆公式）
+> 若 $f\in S(\mathbb{R})$，则
+> $$f(x)=\int_{-\infty}^{\infty}\hat f(\xi)e^{2\pi ix\xi}d\xi.$$
+
+**证明**。利用 $e^{-\pi x^2}$ 的 Fourier 变换是自身，和初等性质。我们发现
+$$G_\delta(x)=e^{-\pi\delta x^2}$$
+的 Fourier 变换是
+$$K_\delta(x)=\frac{1}{\sqrt\delta}e^{-\pi x^2/\delta}.$$
+（观察当 $\delta\to0$ 时，这两个函数的形态：$G_\delta$ 渐渐地变成常值函数 1；$K_\delta$ 渐渐地变成那种“著名套路”中那个集中的权。）利用前一个引理
+$$(7.1)\qquad\int_{-\infty}^{\infty}f(x)K_\delta(x)\,dx=\int_{-\infty}^{\infty}\hat f(y)G_\delta(y)\,dy.$$
+令 $\delta\to0$，定理证明结束。
+
+> [!info] 讲义更正
+> 这个版本的求逆公式不好用，后面的例子说明了这个问题（课上并更正了一个符号，目前写的是对的）。一个常见的定理如下。
+
+> [!note] 定理 7.12（见 Rudin《Real and Complex Analysis》定理 9.11）
+> 如果 $f\in L^1$，而且 $\hat f\in L^1$，而且
+> $$g(x)=\int_{-\infty}^{\infty}\hat f(t)e^{2\pi ixt}dt,\qquad\forall x\in\mathbb{R},$$
+> 则 $g$ 连续，而且 $g=f$ 几乎处处。
+
+> [!note] 推论 7.13
+> 如果 $f$ 和 $\hat f$ 都是缓降的，定理 7.11 肯定成立。
+
+可以“理解”我们不可能从 $f$ 缓降推出 $\hat f$ 缓降；类似地也不可能从 $f$ 可积推出 $\hat f$ 可积。比如考虑在 $f$ 上加入一个非常振动、但是衰减非常快的函数，直观上这会给 $\hat f$ 在 $\xi$ 大的地方增加取值。所以定理成立的条件多半要同时约束 $f$ 和 $\hat f$。从定理证明的角度看，我们需要各种条件保证 (7.1) 成立：这个式子证明不复杂，本质上就是一个交换积分次序，但因为我们学习的积分理论比较弱，所以吃亏了。
+
+于是我们可以定义 Fourier 逆变换，对于任何 $f\in S(\mathbb{R})$，
+$$\check f(x)=\int_{-\infty}^{\infty}f(\xi)e^{2\pi ix\xi}d\xi.$$
+我们发现这个逆变换和变换差不多：$\check f(x)=\hat f(-x)$。既然 $\hat f$ 仍是速降函数，可以把上式中的 $f$ 换成 $\hat f$，得到 $\check{\hat f}(x)=\hat{\hat f}(-x)$。而由求逆公式，左边正是 $f(x)$，所以
+$$(7.2)\qquad f(x)=\hat{\hat f}(-x).$$
+换言之 $\hat{\hat f}(x)=f(-x)$。进而发现 Fourier 变换四次回到自己——Fourier 变换是一个周期为四的映射。
+
+把本节的内容组装起来，这是课上觉得想当然、但细细看应该要说明的结论：
+
+> [!note] 引理 7.14
+> Fourier 变换 $\mathcal{F}:S(\mathbb{R})\to S(\mathbb{R})$ 是线性同构，其逆映射就是 Fourier 逆变换 $\check{\ }$。
+
+**证明**。线性性由积分的线性性可得；$\mathcal{F}$ 把 $S(\mathbb{R})$ 映入 $S(\mathbb{R})$ 由上一小节的定理保证。
+单射：若 $\hat f=0$，由求逆公式（定理 7.11），$f=\check{\hat f}=0$。
+满射：对任何 $g\in S(\mathbb{R})$，令 $f=\check g$。由 $\check g(x)=\hat g(-x)$ 知 $f$ 也是速降的，而且
+$$\hat f(\xi)=\int_{-\infty}^{\infty}\hat g(-x)e^{-2\pi ix\xi}dx=\int_{-\infty}^{\infty}\hat g(y)e^{2\pi iy\xi}dy=g(\xi),$$
+最后一步是对 $g$ 用求逆公式。
+
+## 7.4 L² 理论
+
+和 Fourier 级数的理论类似，我们也可以在向量空间 $S(\mathbb{R})$ 上定义一个内积
+$$\langle f,g\rangle=\int_{-\infty}^{\infty}f\bar g\,dx.$$
+（记得我们考虑的是复值函数，所以速降函数空间也是复向量空间，这里需要一个 Hermite 内积。）本节的主要定理：
+
+> [!note] 定理 7.15
+> Fourier 变换是 $S(\mathbb{R})$ 到自身的等距。
+
+> [!note] 定义 7.16（卷积）
+> 对于合适的 $f,g$，$f$ 和 $g$ 的卷积定义为
+> $$(f*g)(x)=\int_{-\infty}^{\infty}f(y)g(x-y)\,dy.$$
+
+（至少速降函数是可以的，将来会说基本上 $L^1$ 就可以。）对于速降函数，卷积有性质：
+
+> [!note] 引理 7.17
+> 设 $f,g\in S(\mathbb{R})$，则
+> - $f*g\in S(\mathbb{R})$；
+> - $f*g=g*f$；
+> - $\widehat{f*g}(\xi)=\hat f(\xi)\hat g(\xi)$。
+
+**证明**。1. 当我们对卷积 $f*g$ 求导的时候，求导可以穿透积分号（因为大家速降，所以可以严格证明）。然后我们乘以 $x^l$，
+$$\begin{aligned}
+x^l(f*g)^{(k)}(x)&=\int_{-\infty}^{\infty}f(y)\,x^l g^{(k)}(x-y)\,dy\\
+&=\int_{-\infty}^{\infty}f(y)\,\bigl((x-y)+y\bigr)^l g^{(k)}(x-y)\,dy\\
+&=\int_{-\infty}^{\infty}\sum_{j=0}^{l}\binom{l}{j}y^{j}f(y)\cdot(x-y)^{l-j}g^{(k)}(x-y)\,dy\le C(k,l,f,g)<\infty.
+\end{aligned}$$
+上面最后一行用到 $f$ 和 $g$ 速降的性质。由 $k,l$ 的任意性，我们知道 $f*g$ 是速降的。
+2. 平凡的。
+3. 代入定义直接计算即可。
+$$\begin{aligned}
+\widehat{f*g}(\xi)&=\int_{-\infty}^{\infty}f*g(x)e^{-2\pi ix\xi}dx=\int_{-\infty}^{\infty}\!\!\int_{-\infty}^{\infty}f(y)g(x-y)\,dy\,e^{-2\pi ix\xi}dx\\
+&=\int_{-\infty}^{\infty}f(y)e^{-2\pi iy\xi}\left(\int_{-\infty}^{\infty}g(x-y)e^{-2\pi i(x-y)\xi}\,d(x-y)\right)dy\\
+&=\hat g(\xi)\int_{-\infty}^{\infty}f(y)e^{-2\pi iy\xi}\,dy=\hat g(\xi)\hat f(\xi).
+\end{aligned}$$
+
+**大定理**：
+
+> [!note] 定理 7.18（Plancherel）
+> 若 $f\in S(\mathbb{R})$，则 $\|f\|=\|\hat f\|$。
+
+**证明**（这个证明不难看懂，不过还是不容易想到）。令 $f^b(x)=f(-x)$，计算
+$$\widehat{f^b}(\xi)=\int_{-\infty}^{\infty}f(-x)e^{-2\pi ix\xi}dx=\int_{-\infty}^{\infty}f(-x)e^{2\pi ix\xi}dx=\int_{-\infty}^{\infty}f(y)e^{-2\pi iy\xi}dy=\hat f(\xi).$$
+设 $h(x)=(f*f^b)(x)$，则 $\hat h(\xi)=\hat f(\xi)\widehat{f^b}(\xi)=|\hat f(\xi)|^2$，且
+$$h(0)=(f*f^b)(0)=\int_{-\infty}^{\infty}f(y)f^b(0-y)\,dy=\int_{-\infty}^{\infty}|f|^2(x)\,dx.$$
+因为 $h\in S(\mathbb{R})$，用求逆公式 $h(0)=\int_{-\infty}^{\infty}\hat h(\xi)\,d\xi$。
+
+有了这个公式，我们可以做一些和 Fourier 级数类似的“完备化操作”：准备定义 $L^2(\mathbb{R},\mathbb{C})$ 为 $S(\mathbb{R})$ 在这个范数下的完备化。那么我们得到一个 Hilbert 空间 $L^2(\mathbb{R},\mathbb{C})$ 到自身的等距：Fourier 变换。
+
+（9 月 20 日的课结束在这里。）

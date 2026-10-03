@@ -1,0 +1,40 @@
+---
+title: Fourier · 2 定义与计算
+created: 2026-09-02
+updated: 2026-10-03
+type: notes
+tags: [fourier-series, notes, 分析III]
+confidence: high
+---
+
+# 2. Fourier 级数的定义与计算
+
+**函数类**：指定 $f$ 属于"**可积或绝对可积**"类——黎曼可积，或在分割点上允许瑕点且广义积分 $\int|f|$ 存在。改变函数在单点的取值不影响 Fourier 级数(级数由积分定义)。
+
+## 2.1 定义
+
+设 $f:[-\pi,\pi]\to\mathbb{R}$ 可积或绝对可积，定义(实形式)：
+$$a_n=\frac{1}{\pi}\int_{-\pi}^{\pi} f(x)\cos nx\,dx, \qquad b_n=\frac{1}{\pi}\int_{-\pi}^{\pi} f(x)\sin nx\,dx \quad (n=0,1,2,\dots)$$
+称 $\displaystyle \frac{a_0}{2}+\sum_{n=1}^{\infty}\bigl(a_n\cos nx+b_n\sin nx\bigr)$ 为 $f$ 的 **Fourier 级数**。
+
+**复形式**：$C_n = \dfrac{1}{2\pi}\int_{-\pi}^{\pi} f(\theta)e^{-in\theta}d\theta$，级数 $\displaystyle\sum_{n=-\infty}^{\infty}C_n e^{inx}=\lim_{N\to\infty}\sum_{n=-N}^{N}C_ne^{inx}$。若 $f$ 实值则 $C_n=\overline{C_{-n}}=\frac12(a_n+ib_n)$($n>0$)。
+
+> [!warning] 注意(Remark 2.2)
+> 这里没说级数收敛、也没说收敛于 $f$。$f$ 连续时级数也未必收敛(后续给反例)。"是否收敛于 $f$" 是第 3 章的核心问题。
+
+## 2.2 计算例子
+
+**例 2.4($f(x)=x$)**：奇函数故 $a_n=0$；$b_n=\frac1\pi\int_{-\pi}^{\pi}x\sin nx\,dx=(-1)^{n-1}\frac{2}{n}$。故
+$$x \sim \sum_{n=1}^{\infty}(-1)^{n-1}\frac{2}{n}\sin nx$$
+
+**例 2.5($f(x)=|x|$)**：偶函数故 $b_n=0$；$a_n=\frac2\pi\int_0^\pi x\cos nx\,dx=\frac{2}{n^2\pi}\bigl[(-1)^n-1\bigr]$。
+
+> [!tip] 对比两例
+> |x| 连续，系数 $a_n\sim \frac{1}{n^2}$ 衰减快于 x 的 $b_n\sim\frac1n$。**函数越光滑，级数收敛越快**(见 §3.4)。
+
+## 2.3 特殊区间
+
+- **一般区间 $[a,b]$**：令 $g(y)=f(\frac{a+b}{2}+\frac{y}{\pi}(b-a))$ 化为 $[-\pi,\pi]$，求 $g$ 的系数后再换回。
+- **$[0,\pi]$ 只含 sin**：奇延拓到 $[-\pi,\pi]$($a_n\equiv0$)。只含 cos 则偶延拓 $\tilde f(x)=f(|x|)$。同一函数可 sin 展开也可 cos 展开(见 L² 理论再解释)。
+
+---

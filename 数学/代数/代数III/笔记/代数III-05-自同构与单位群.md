@@ -1,0 +1,127 @@
+---
+title: 代数III(群论) · 5 循环群自同构与 (ℤ/nℤ)*
+created: 2026-09-01
+updated: 2026-10-03
+type: notes
+tags: [group-theory, algebre, cours]
+confidence: medium
+---
+
+# Automorphismes de $\mathbb{Z}/n\mathbb{Z}$
+
+Un automorphisme doit envoyer un générateur sur un générateur.
+
+Générateurs de $(\mathbb{Z}/n\mathbb{Z}, +)$ : ce sont les classes mod $n$ d'entiers $r$, $r \wedge n = 1$. Il y en a $\varphi(n)$, $\varphi$ fonction d'Euler. Ce sont exactement les éléments inversibles de l'anneau $(\mathbb{Z}/n\mathbb{Z}, +, \cdot)$.
+
+> [!note] Prop
+> Soit $u \in Aut(\mathbb{Z}/n\mathbb{Z})$, alors $u$ est complètement déterminé par l'image $u(\bar{1})$ et l'application $Aut(\mathbb{Z}/n\mathbb{Z}) \to (\mathbb{Z}/n\mathbb{Z})^*$, $u \mapsto u(\bar{1})$, est un isomorphisme de groupes.
+
+En effet, $u \circ v(\bar{1}) = u(v(\bar{1})) = u(\bar{1}) v(\bar{1})$.
+
+# Le groupe multiplicatif $(\mathbb{Z}/n\mathbb{Z})^*$
+
+**Lemme des restes chinois.** Si $n_1 \wedge n_2 = 1$, on a un isomorphisme d'anneaux
+$$\mathbb{Z}/n_1 n_2 \mathbb{Z} \simeq \mathbb{Z}/n_1 \mathbb{Z} \times \mathbb{Z}/n_2 \mathbb{Z}$$
+d'où $(\mathbb{Z}/n_1 n_2 \mathbb{Z})^* \simeq (\mathbb{Z}/n_1 \mathbb{Z})^* \times (\mathbb{Z}/n_2 \mathbb{Z})^*$.
+
+Ainsi, si $n = p_1^{\alpha_1} \dots p_r^{\alpha_r}$, $p_i$ premiers $2$ à $2$,
+$$(\mathbb{Z}/n\mathbb{Z})^* \simeq \prod (\mathbb{Z}/p_i^{\alpha_i} \mathbb{Z})^*$$
+
+$1^{er}$ cas. $p \geq 3$
+$$|(\mathbb{Z}/p^\alpha \mathbb{Z})^*| = \varphi(p^\alpha) = p^\alpha - p^{\alpha-1} = p^{\alpha-1}(p-1)$$
+
+> [!note] Thm.
+> $p \geq 3$. $(\mathbb{Z}/p^\alpha \mathbb{Z})^* \simeq \mathbb{Z}/p^{\alpha-1}(p-1)\mathbb{Z}$, groupe cyclique.
+
+**Preuve.** Pour $\alpha = 1$, groupe multiplicatif du corps fini $\mathbb{Z}/p\mathbb{Z} = \mathbb{F}_p$. Plus général, le cardinal d'un corps fini est de la forme $q = p^n$ et pour un cardinal $q$, il est unique à isomorphisme près, noté $\mathbb{F}_q$. On a $(\mathbb{F}_q)^* \simeq \mathbb{Z}/(q-1)\mathbb{Z}$. En effet on sait $|(\mathbb{F}_q)^*| = q-1$. Il faut trouver un élément d'ordre $q-1$.
+
+De façon générale, si $d \mid q-1$, on s'intéresse aux éléments d'ordre $d$ de $\mathbb{F}_q^*$.
+
+Supposons $\exists x$ d'ordre $d$, $x^d = 1$. $x$ est racine du polynôme $X^d - 1 \in \mathbb{F}_q[X]$. Ce polynôme a au plus $d$ racines. Par ailleurs, le groupe cyclique $<x>$ possède $d$ éléments, dont l'ordre divise $d$ et qui sont donc racines de ce polynôme.
+
+S'il existe un élément d'ordre $d$, tout autre élément d'ordre $d$, qui doit être racine de ce polynôme, est nécessairement dans le groupe cyclique engendré par $x$.
+
+Appelons $N(d)$ le nombre d'éléments d'ordre $d$ dans $\mathbb{F}_q^*$. On a : si $N(d) \neq 0$, alors $N(d) = \varphi(d)$.
+$$\text{Dans } \mathbb{F}_q^* , \ q-1 = \sum_{d \mid q-1} N(d)$$
+$$\text{Dans } \mathbb{Z}/(q-1)\mathbb{Z} , \ q-1 = \sum_{d \mid q-1} \varphi(d)$$
+$$\left. \begin{array}{l} \forall d \mid q-1 \ , \ N(d) = \varphi(d) \\ \text{en particulier } N(q-1) = \varphi(q-1) \neq 0 \end{array} \right\}$$
+
+Pour $\alpha$ quelconque $\geq 2$. Il suffit de trouver un élément $x$ d'ordre $p^{\alpha-1}$ et un élément $y$ d'ordre $p-1$, car alors, comme $p^{\alpha-1} \wedge (p-1) = 1$, $xy$ sera d'ordre $p^{\alpha-1}(p-1)$.
+
+> [!note] Lemme
+> Dans un groupe, si $a$ d'ordre $r$, $b$ d'ordre $s$, $r \wedge s = 1$, $ab = ba$, alors $ab$ d'ordre $rs$.
+
+Soit $t$ ordre de $ab$ : $(ab)^t = a^t b^t = e$, $a^t = b^{-t} \in \langle a \rangle \cap \langle b \rangle$, d'où $a^t = e$, $b^t = e \Rightarrow r \mid t \ , \ s \mid t \Rightarrow rs \mid t$.
+
+Pour $p^{\alpha-1}$ : On a $(1+p)^{p^k} = 1 + \lambda p^{k+1}$, $\lambda \equiv 1 \bmod p$.
+
+Preuve: $k=1$. $(1+p)^p = 1 + \sum_{r=1}^{p-1} \binom{p}{r} p^r + p^p$. On a : si $1 \leq r \leq p-1$, $p \mid \binom{p}{r}$. $(1+p)^p = 1 + p^2 + u p^3 = 1 + (1+up)p^2$.
+
+Récurrence. Si vrai pour $k$. $(1+p)^{p^{k+1}} = (1+p)^{p^k \cdot p} = \left[ (1+p)^{p^k} \right]^p = (1 + \lambda p^{k+1})^p = 1 + \sum_{r=1}^{p-1} \binom{p}{r} \lambda^r p^{r(k+1)} + \lambda^p p^{p(k+1)} = 1 + \lambda p^{k+2} + \cdots = 1 + p^{k+2} (\lambda + \mu p)$.
+
+Conclusion : $1+p$ est d'ordre $p^{\alpha-1}$
+$$(1+p)^{p^{\alpha-1}} = 1 + \lambda p^\alpha \equiv 1$$
+$$(1+p)^{p^{\alpha-2}} = 1 + \lambda p^{\alpha-1} \not\equiv 1 \text{ dans } \mathbb{Z}/p^\alpha\mathbb{Z}$$
+
+Pour $p-1$ :
+$$\begin{array}{ccc}
+\mathbb{Z} & \longrightarrow & \mathbb{Z}/p\mathbb{Z} \\
+\downarrow & & \downarrow \\
+\mathbb{Z}/p^2\mathbb{Z} & \xrightarrow{\pi} & \mathbb{Z}/p\mathbb{Z}
+\end{array}$$
+$\pi$ factorisation $\cong$ morphisme d'anneau ; $\pi$ surjectif.
+
+Soit $(\mathbb{Z}/p^2\mathbb{Z})^* \xrightarrow{\Psi} (\mathbb{Z}/p\mathbb{Z})^* = \mathbb{Z}/(p-1)\mathbb{Z}$, donc $y \in (\mathbb{Z}/p^2\mathbb{Z})^*$ tq $\Psi(y)$ générateur. Alors $(p-1) \mid \text{ordre de } y \text{ dans } (\mathbb{Z}/p^2\mathbb{Z})^*$, donc dans le groupe cyclique $<y>$, il y a un élément $y'$ d'ordre $(p-1)$.
+
+Cas $p=2$
+
+> [!note] Thm.
+> $(\mathbb{Z}/2^\alpha\mathbb{Z})^* \simeq \mathbb{Z}/2^{\alpha-2}\mathbb{Z} \times \mathbb{Z}/2\mathbb{Z} \quad (\alpha \geq 3)$
+> $(\mathbb{Z}/2\mathbb{Z})^* = \{1\} \quad , \quad (\mathbb{Z}/4\mathbb{Z})^* \simeq \mathbb{Z}/2\mathbb{Z}$
+
+**Preuve :** On cherche un élément d'ordre $2^{\alpha-2}$.
+Lemme : $5^{2^k} = 1 + \lambda 2^{k+2} \quad , \quad \lambda \neq 0 \text{ impair} \quad (k \geq 1)$.
+En effet, $k=1$ : $5^2 = 1 + 3 \cdot 2^3$. Ensuite, récurrence sur $k$
+$$5^{2^{k+1}} = 5^{2^k \cdot 2} = (5^{2^k})^2 = (1 + \lambda 2^{k+2})^2 = 1 + \lambda \cdot 2^{k+3} + \lambda^2 2^{2k+4} = 1 + (\lambda + \lambda^2 2^{k+1}) 2^{k+3}$$
+
+Conclusion : $5$ est d'ordre $2^{\alpha-2}$
+$$5^{2^{\alpha-2}} = 1 + \lambda \cdot 2^\alpha \equiv 1 \quad [2^\alpha]$$
+
+Pour le facteur $\mathbb{Z}/2\mathbb{Z}$ :
+
+On considère le morphisme $(\mathbb{Z}/2^\alpha\mathbb{Z})^* \xrightarrow{\psi} (\mathbb{Z}/4\mathbb{Z})^* \simeq \mathbb{Z}/2\mathbb{Z}$ ; $\psi$ est surjectif.
+
+$N = \ker \psi$, $\{1\} \to N \to (\mathbb{Z}/2^\alpha\mathbb{Z})^* \xrightarrow{\psi} \mathbb{Z}/2\mathbb{Z} \to \{1\}$. $|N| = 2^{\alpha-2}$.
+
+De plus $\psi(5) \equiv 1 \pmod 4 \Rightarrow 5 \in \ker \psi$. $5$ est d'ordre $2^{\alpha-2}$. Donc $N$ cyclique $\simeq \mathbb{Z}/2^{\alpha-2}\mathbb{Z}$.
+
+Cette suite exacte est scindée
+$$-1 \in (\mathbb{Z}/2^\alpha\mathbb{Z})^* \longmapsto -1 \in (\mathbb{Z}/4\mathbb{Z})^*$$
+engendre un sous-groupe d'ordre 2, générateur.
+
+Ainsi $(\mathbb{Z}/2^\alpha\mathbb{Z})^*$ est un produit semi-direct $N \rtimes \mathbb{Z}/2\mathbb{Z}$. Comme $(\mathbb{Z}/2^\alpha\mathbb{Z})^*$ commutatif, ce produit semi-direct est un produit direct.
+
+**Application: Classes d'isomorphisme des groupes d'ordre $pq$ avec $p, q$ premiers ($p < q$)**
+
+> [!note] Thm.
+> Pour un tel groupe $G$ :
+> 1) Si $p \nmid (q-1)$, alors $G$ cyclique, $G \simeq \mathbb{Z}/pq\mathbb{Z}$.
+> 2) Si $p \mid (q-1)$, alors soit $G$ cyclique, soit $G \simeq$ produit semi-direct $\mathbb{Z}/q\mathbb{Z} \rtimes \mathbb{Z}/p\mathbb{Z}$ non trivial (unique à isomorphisme près).
+
+**Preuve :** Sylow : $\exists$ des $q$-Sylow dans $G$. Leur nombre $k \equiv 1 \pmod q$, $k \mid p \Rightarrow k \in \{1, p\}$, et comme $p < q$, $k = 1$.
+$$\{1\} \to \mathbb{Z}/q\mathbb{Z} \to G \to \mathbb{Z}/p\mathbb{Z} \to \{1\}$$
+Soit $P$ un $p$-Sylow dans $G$. $P \simeq \mathbb{Z}/p\mathbb{Z}$. $P \cap \mathbb{Z}/q\mathbb{Z} = \{1\}$. Ceci donne une section, suite scindée.
+
+Si le produit est direct, $\times$, $G \simeq \mathbb{Z}/p\mathbb{Z}$.
+
+Sinon, il y a un morphisme non trivial
+$$f: \mathbb{Z}/p\mathbb{Z} \to \text{Aut}(\mathbb{Z}/q\mathbb{Z}) \simeq \mathbb{Z}/(q-1)\mathbb{Z}$$
+Alors $f$ injectif, $\text{Ker} f = \{0\}$, donc $f(\mathbb{Z}/p\mathbb{Z})$ sous-groupe de card $p$ de $\mathbb{Z}/(q-1)\mathbb{Z}$, donc $p \mid (q-1)$.
+
+Ora: deux morphismes $f$ et $g: \mathbb{Z}/p\mathbb{Z} \to \text{Aut}(\mathbb{Z}/q\mathbb{Z})$ donnant des produits semi-directs isomorphes. Ceci résulte du 1er cas d'isomorphisme entre produits semi-directs. $f(\mathbb{Z}/p\mathbb{Z})$ et $g(\mathbb{Z}/p\mathbb{Z})$ sous-groupes d'ordre $p$ de $\mathbb{Z}/(q-1)\mathbb{Z}$, donc
+$$f(\mathbb{Z}/p\mathbb{Z}) = g(\mathbb{Z}/p\mathbb{Z}) = H.$$
+$H$ engendré par $f(\bar{1})$. $\exists a \in \mathbb{Z}$ tq $f(\bar{1}) = g(\bar{a})$, $< \bar{a} > = \mathbb{Z}/p\mathbb{Z}$ alors $\forall x \in \mathbb{Z}, f(\bar{x}) = x f(\bar{1}) = x g(\bar{a}) = g(\bar{x} \cdot \bar{a})$. Soit $\alpha: \mathbb{Z}/p\mathbb{Z} \to \mathbb{Z}/p\mathbb{Z}$, $\bar{x} \mapsto \bar{a} \cdot \bar{x}$ : c'est un automorphisme du groupe $(\mathbb{Z}/p\mathbb{Z}, +)$, et $f = g \circ \alpha$.
+
+Ex. Groupes d'ordre $6 = 2 \times 3$. Il y a $\mathbb{Z}/6\mathbb{Z}$, $\mathbb{Z}/3\mathbb{Z} \rtimes_f \mathbb{Z}/2\mathbb{Z} \simeq \mathfrak{S}_3$
+$$15 \quad 15$$
+$$<(123)> \quad <(12)>$$

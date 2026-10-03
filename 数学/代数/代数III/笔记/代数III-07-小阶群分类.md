@@ -1,0 +1,100 @@
+---
+title: 代数III(群论) · 7 小阶群分类(≤15、四元数、12 阶)
+created: 2026-09-01
+updated: 2026-10-03
+type: notes
+tags: [group-theory, algebre, cours]
+confidence: medium
+---
+
+# Classification à isomorphisme près des groupes de cardinal $\leq 15$
+
+Ex 1) $p$ premier. $\mathbb{Z}/p\mathbb{Z}$ — $p=2, 3, 5, 7, 11, 13$.
+2) $|G|=p\cdot q$, $p<q$ premiers — $6, 10, 14, 15$
+3) Ordre 4 : $\mathbb{Z}/4\mathbb{Z}$, $\mathbb{Z}/2\mathbb{Z} \times \mathbb{Z}/2\mathbb{Z}$ ou $\mathbb{Z}/4\mathbb{Z}$.
+
+Il reste $8, 9, 12$.
+
+$n=9=3^2$
+
+> [!note] Lemme
+> Un groupe d'ordre $p^2$, $p$ premier, est abélien.
+
+d'où, thm de structure : $G \simeq \mathbb{Z}/9\mathbb{Z}$ ou $G \simeq \mathbb{Z}/3\mathbb{Z} \times \mathbb{Z}/3\mathbb{Z}$.
+
+Cas $n=8=2^3$.
+- Si $G$ abélien : $\mathbb{Z}/8\mathbb{Z}$, $\mathbb{Z}/2\mathbb{Z} \times \mathbb{Z}/4\mathbb{Z}$, $(\mathbb{Z}/2\mathbb{Z})^3$.
+- Si $G$ pas abélien : l'ordre d'un élément de $G \in \{1, 2, 4\}$ car pas cyclique. Si l'ordre est toujours 1 et 2, alors $G$ abélien. Nécessairement, $\exists x \in G$, $x$ d'ordre 4. Soit $H=<x>$. $[G:H]=2$, donc $H \triangleleft G$.
+$$\{1\} \to H \to G \to G/H \to \{1\} \quad (*)$$
+$$\downarrow^{\simeq} \mathbb{Z}/2\mathbb{Z}$$
+
+2 cas :
+1) La suite $(*)$ scindée, $\exists f : G/H \to Aut(H)$, $G \simeq H \rtimes (\mathbb{Z}/2\mathbb{Z})$. $Aut(H) \simeq (\mathbb{Z}/4\mathbb{Z})^* \simeq \mathbb{Z}/2\mathbb{Z}$. Ainsi, $f$ est un morphisme $\mathbb{Z}/2\mathbb{Z} \to \mathbb{Z}/2\mathbb{Z}$. Soit $f$ trivial, et on a alors un groupe produit abélien ; soit $f \neq \mathrm{Id}$, on a $\mathbb{Z}/4\mathbb{Z} \rtimes_f \mathbb{Z}/2\mathbb{Z} \simeq D_8$.
+
+l'application $f(\bar{1}) \in \text{aut}(\mathbb{Z}/4\mathbb{Z})$ envoit $\bar{1}$ sur $-\bar{1}$.
+
+2) la suite n'est pas scindée. Ceci signifie qu'il n'y a pas d'élément d'ordre 2 dans $G\setminus H$. Sinon, un tel élément y engendre un sous-groupe $P = \{e, y\}$, $P \cap H = \{e\}$ et $\pi_P : P \to \mathbb{Z}/2\mathbb{Z}$ isomorphisme.
+
+Dans $H \simeq \mathbb{Z}/4\mathbb{Z}$, il y a unique élément d'ordre 2 : $\bar{2}$. Donc dans $G$ il y a un unique élément d'ordre 2, on l'appelle $\alpha$. $\underline{\alpha \in Z(G)}$ :
+$$\forall g \in G, (g \alpha g^{-1})^2 = \alpha g \alpha g^{-1} = e \Rightarrow g \alpha g^{-1} = \alpha.$$
+
+Soit $x \in H$ générateur. On note maintenant multiplicativement $H = \{e, x, \alpha, \alpha x\}$. Soit $y \in G/H$. Alors $y$ est d'ordre 4. Alors $y^2 = \alpha$, et $<y> = \{e, y, \alpha, \alpha y\}$. Soit $z = xy \in G$, $z \notin H$, $z \notin <y>$. $G = \{e, x, y, \alpha, \alpha x, \alpha y, xy, \alpha xy\}$. La structure du groupe $G$, i.e. la loi multiplicative est donné par $\alpha \in Z(G)$, $x^2 = y^2 = \alpha$. $z = xy$, $xz = \alpha y$, $zy = \alpha x$, $yz = x$, $xz = \alpha x$, $zx = y$, $yx = \alpha xy$. C'est le groupe des quaternions $H_8$.
+
+# Rappel Quaternions
+
+$$\mathbb{H} = \left\{ \begin{pmatrix} a & b \\ -\overline{b} & \overline{a} \end{pmatrix} \in \mathcal{M}_2(\mathbb{C}) , a,b \in \mathbb{C} \right\}$$
+C'est un $\mathbb{R}$-espace vectoriel de dim 4.
+$$\det \begin{pmatrix} a & b \\ -\overline{b} & \overline{a} \end{pmatrix} = |a|^2 + |b|^2$$
+Donc $\forall x \in \mathbb{H} \setminus \{0\}$ inversible et on a $x^{-1} \in \mathbb{H}$. C'est un corps non commutatif.
+
+On considère les éléments de $\mathbb{H}^*$, groupe multiplicatif
+$$Id = \begin{pmatrix} 1 & 0 \\ 0 & 1 \end{pmatrix} , \quad I = \begin{pmatrix} i & 0 \\ 0 & -i \end{pmatrix} , \quad J = \begin{pmatrix} 0 & 1 \\ -1 & 0 \end{pmatrix} , \quad K = \begin{pmatrix} 0 & i \\ i & 0 \end{pmatrix}$$
+$a = x + iy$, $b = u + iv$
+$$\begin{pmatrix} a & b \\ -\overline{b} & \overline{a} \end{pmatrix} = x Id + y I + u J + v K .$$
+On a $I^2 = J^2 = K^2 = -Id .$
+$$IJ = K , \quad JK = I , \quad KI = J .$$
+$$\mathbb{H}_8 = <I,J> = \{ \pm Id, \pm I, \pm J, \pm K \} .$$
+
+Exercice : $\mathbb{H}_8$ n'est pas isomorphe à un produit semi-direct.
+
+# Groupes d'ordre $n=12 = 2^2 \times 3$
+
+a) Groupes abéliens
+Thm de structure $\Rightarrow \mathbb{Z}/12\mathbb{Z} , \mathbb{Z}/2\mathbb{Z} \times \mathbb{Z}/6\mathbb{Z} .$
+
+b) Groupes non abéliens
+On a toujours les sous-groupes de Sylow.
+- Nombre de 3-Sylow : leur nombre $k \equiv 1 \pmod 3 , \quad k|4$. $k \in \{1,4\}$.
+Si $k=4$, on a 4 groupes cycliques d'ordre 3, d'intersections 2 à 2 réduites à $\{e\}$. Ainsi, on a 8 éléments d'ordre 3 dans $G$.
+
+Par ailleurs, il y a au moins un 2-Sylow, d'ordre 4, dont les éléments sont d'ordre $\{1,2,4\}$. Donc il y a un unique 2-Sylow, qui est donc distingué. Soit $H$ ce 2-Sylow, $|H|=4$ donc $H \simeq \mathbb{Z}/4\mathbb{Z}$ ou $H \simeq \mathbb{Z}/2\mathbb{Z} \times \mathbb{Z}/2\mathbb{Z}$.
+
+On a une suite exacte
+$$\{1\} \to H \to G \to \mathbb{Z}/3\mathbb{Z} \to \{1\}$$
+Elle est scindée car il y a dans $G$ un 3-Sylow qui donne une section. Donc $G \simeq H \rtimes \mathbb{Z}/3\mathbb{Z}$, pour $f: \mathbb{Z}/3\mathbb{Z} \to \text{Aut}(H)$ morphisme.
+
+i) Si $H \simeq \mathbb{Z}/4\mathbb{Z}$. $\text{Aut}(H) \simeq \mathbb{Z}/2\mathbb{Z}$ et $f$ est trivial
+$$G \simeq \mathbb{Z}/4\mathbb{Z} \times \mathbb{Z}/3\mathbb{Z} \simeq \mathbb{Z}/12\mathbb{Z}.$$
+ii) Si $H \simeq \mathbb{Z}/2\mathbb{Z} \times \mathbb{Z}/2\mathbb{Z}$
+$$\text{Aut}(\mathbb{Z}/2\mathbb{Z} \times \mathbb{Z}/2\mathbb{Z})$$
+
+> [!info] Rem.
+> $\mathbb{Z}/2\mathbb{Z}$ est un corps et le groupe additif $\mathbb{Z}/2\mathbb{Z} \times \mathbb{Z}/2\mathbb{Z}$ est un $\mathbb{Z}/2\mathbb{Z}$-espace vectoriel de dimension 2.
+> $$\text{Aut}(\mathbb{Z}/2\mathbb{Z} \times \mathbb{Z}/2\mathbb{Z}) = \text{GL}((\mathbb{Z}/2\mathbb{Z})^2) = \text{GL}_2(\mathbb{Z}/2\mathbb{Z})$$
+> $$|\text{GL}_2(\mathbb{Z}/2\mathbb{Z})| = (2^2-1)(2^2-2) = 6.$$
+> Donc $\text{GL}_2(\mathbb{Z}/2\mathbb{Z}) \simeq \mathfrak{S}_3$ car il est non abélien.
+
+Ainsi, on cherche les morphismes $f: \mathbb{Z}/3\mathbb{Z} \to \mathfrak{S}_3$. Si $f$ non trivial, $f(\bar{1})$ d'ordre 3, i.e. 3-cycle $(123)$ ou $(132)=(123)^2$
+$$f_1(\bar{1}) = (123), \qquad f_2(\bar{1}) = (132) = f_1(\bar{2})$$
+$f_2 = f_1 \circ \varphi$ où $\varphi$ est l'automorphisme de $\mathbb{Z}/3\mathbb{Z}$, $\varphi(\bar{1}) = \bar{2}$. Donc les produits semi-directs $H \rtimes_{f_1} \mathbb{Z}/3\mathbb{Z}$ et $H \rtimes_{f_2} \mathbb{Z}/3\mathbb{Z}$ sont isomorphes, d'où une unique classe d'isomorphismes.
+
+Cas où il y a un unique 3-Sylow $N$.
+
+On a $N \triangleleft G$. Soit $H \subset G$ un 2-Sylow. $H \cap N = \{e\}$, $HN = NH = G$, et on a un produit semi-direct $N \rtimes H$.
+
+Il y a 2 cas : $H \simeq \mathbb{Z}/4\mathbb{Z}$ et $H \simeq \mathbb{Z}/2\mathbb{Z} \times \mathbb{Z}/2\mathbb{Z}$.
+
+1) Si $H \simeq \mathbb{Z}/4\mathbb{Z}$. $f : \mathbb{Z}/4\mathbb{Z} \to \text{Aut}(\mathbb{Z}/3\mathbb{Z}) = \mathbb{Z}/2\mathbb{Z}$. Soit $f$ est trivial, $f(\overline{1}) = \overline{0}$ $\Rightarrow$ groupe abélien $\mathbb{Z}/12\mathbb{Z}$. Soit $f(\overline{1}) = \overline{1}$ $\Rightarrow \mathbb{Z}/3\mathbb{Z} \rtimes \mathbb{Z}/4\mathbb{Z}$.
+
+2) Si $H \simeq \mathbb{Z}/2\mathbb{Z} \times \mathbb{Z}/2\mathbb{Z}$. On cherche les morphismes $f : \mathbb{Z}/2\mathbb{Z} \times \mathbb{Z}/2\mathbb{Z} \to \mathbb{Z}/2\mathbb{Z}$ de groupe additif. Ce sont automatiquement des morphismes de $\mathbb{Z}/2\mathbb{Z}$-e.v., i.e. ce sont des formes linéaires sur le $\mathbb{Z}/2\mathbb{Z}$ espace vectoriel $(\mathbb{Z}/2\mathbb{Z})^2$. Il y en a 3 : $e_1 = (\overline{1}, \overline{0})$, $e_2 = (\overline{0}, \overline{1})$, $e_3 = (\overline{1}, \overline{1})$. Toutes les formes linéaires se correspondent par un automorphisme linéaire de $(\mathbb{Z}/2\mathbb{Z})^2$ (transitivité de l'action de $Gl_2(\mathbb{Z}/2\mathbb{Z})$). Finalement, une unique classe de produit semi-direct
+$$\mathbb{Z}/3\mathbb{Z} \rtimes (\mathbb{Z}/2\mathbb{Z} \times \mathbb{Z}/2\mathbb{Z}) .$$

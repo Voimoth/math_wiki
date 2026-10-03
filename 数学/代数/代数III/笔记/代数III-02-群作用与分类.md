@@ -1,0 +1,287 @@
+---
+title: 代数III(群论) · 2 群作用与分类结果
+created: 2026-09-01
+updated: 2026-10-03
+type: notes
+tags: [group-theory, algebre, cours]
+confidence: medium
+---
+
+# Actions de groupes et résultats de classification
+
+## 1. Classes d'équivalence de matrices
+
+$k$ corps $\quad M_{n,p}(k)=\begin{cases} \text{matrices } n \text{ lignes, } p \text{ colonnes} \\ \text{à coefficients dans } k \end{cases}$.
+
+Soit $G=GL_n(k)\times GL_p(k)$ produit.
+
+$G$ agit sur $M_{n,p}(k)$.
+$$\begin{array}{ccc}
+G\times M_{n,p}(k) & \longrightarrow & M_{n,p}(k) \\
+((g_1,g_2),m) & \longmapsto & g_1mg_2^{-1}
+\end{array}$$
+
+les orbites de cette action sont les classes d'équivalence de matrices.
+
+> [!note] Thm
+> 2 matrices sont équivalentes $\Leftrightarrow$ même rang.
+
+Pour $r \leq n,p$ représentant $I_r=\begin{pmatrix} I_r & 0 \\ 0 & 0 \end{pmatrix}$.
+
+## 2. Classes de similitude de matrices carrées
+
+## 3. Réduction des formes quadratiques
+
+Action du groupe $GL_n(k)$ sur l'espace des matrices symétriques $S_n(k)\subset M_n(k)$.
+$$\begin{array}{ccc}
+GL_n(k)\times S_n(k) & \longrightarrow & S_n(k) \\
+(P,Q) & \longmapsto & P\,Q\,{}^{t}P.
+\end{array}$$
+
+### Points fixes pour une action de groupe
+
+$G$ agit sur $X$. On note $\displaystyle X^G = \{\text{points fixes}\} = \{x \in X; \forall g \in G, g\cdot x = x\}$.
+
+$$x \in X^G \Longleftrightarrow O(x) = \{x\}$$
+
+---
+
+> [!note] Thm : Equation aux classes
+> Soit $G$ agissant sur $X$. Alors
+> $$X = X^G \sqcup \bigsqcup_{|O(\alpha_i)| \geq 2} O(\alpha_i)$$
+> réunion disjointe de $X^G$ et des orbites non réduites à un point.
+
+---
+
+## Application
+
+> [!note] Déf
+> Soit $k$ nombre premier.
+> On appelle **$k$-groupe** un groupe dont le cardinal est une puissance de $k$.
+> $$|G| = k^n,\ n \geq 1.$$
+
+> [!info] Prop
+> Soit $G$ un $k$-groupe agissant sur $X$ fini.  
+> Alors $\displaystyle |X| \equiv |X^G| \pmod{k}$.
+
+*Preuve :* équation aux classes, et le fait que $|O(\alpha_i)| \mid |G|$. Comme $|G| = k^n$, si $|O(\alpha_i)| \geq 2$,
+
+alors $|O(\alpha_i)|=k^r$ avec $r\geqslant 1$, donc $k\mid |O(\alpha_i)|$.
+
+si $|O(\alpha_i)|\geqslant 2$ ?
+
+$$|X|=|X^G|+\sum_{|O(\alpha_i)|\geqslant 2}|O(\alpha_i)|$$
+
+on a $|X|\equiv |X^G| \bmod k$.
+
+> [!note] Thm
+> Si $G$ est un $p$-groupe, alors le centre de $G$ est $\neq \{e\}$, i.e. $Z(G)$ non trivial.
+
+**Preuve :** On considère l'action de $G$ sur lui-même par conjugaison. On a $Z(G)=\{g\in G\mid \forall x\in G,\; xgx^{-1}=g\}$.
+
+D'après la Prop., $|Z(G)|\equiv |G| \bmod p$.
+
+Mais $|G|\equiv 0 \bmod p$. Mais $|Z(G)|\geqslant 1$ car $e\in Z(G)$. Donc $p\mid |Z(G)|$, donc $|Z(G)|\geqslant p$.
+
+---
+
+> [!note] Thm : Formule de Burnside
+> Soit $G$ groupe fini, agissant sur $X$ fini.
+> Pour $g\in G$, soit $\mathrm{Fix}(g)=\{x\in X;\; g\cdot x=x\}$, l'ensemble des points fixes de $g$.
+> Alors le nombre $N$ d'orbites de $X$ est :
+> $$N=\frac{1}{|G|}\sum_{g\in G}|\mathrm{Fix}(g)|$$
+
+**Preuve :**
+
+On a : $x \in \mathrm{Fix}(g) \Leftrightarrow g \cdot x = x \Leftrightarrow g \in \mathrm{Stab}(x)$.
+
+$$\begin{aligned}
+&\text{Soit } E = \{(g,x) \in G \times X ; g \cdot x = x\} \\
+&\qquad = \bigsqcup_{g \in G} \{g\} \times \mathrm{Fix}(g) = \bigsqcup_{x \in X} \mathrm{Stab}(x) \times \{x\} \\
+&|E| = \sum_{g \in G} |\mathrm{Fix}(g)| = \sum_{x \in X} |\mathrm{Stab}(x)|.
+\end{aligned}$$
+
+Alors $\mathcal{O}_1, \mathcal{O}_2, \ldots, \mathcal{O}_N$ les orbites distinctes.
+
+$$X = \bigsqcup_{i=1}^{N} \mathcal{O}_i$$
+
+$$\begin{aligned}
+\sum_{x \in X} |\mathrm{Stab}(x)| &= \sum_{i=1}^{N} \left( \sum_{x \in \mathcal{O}_i} |\mathrm{Stab}(x)| \right) \\
+&|\mathrm{Stab}(x)| = \frac{|G|}{|\mathcal{O}(x)|} \\
+\sum_{x \in X} |\mathrm{Stab}(x)| &= \sum_{i=1}^{N} \sum_{x \in \mathcal{O}_i} \frac{|G|}{|\mathcal{O}_i|} \\
+&= |G| \sum_{i=1}^{N} \underbrace{\sum_{x \in \mathcal{O}_i} \frac{1}{|\mathcal{O}_i|}}_{\frac{1}{|\mathcal{O}_i|} \cdot |\mathcal{O}_i| = 1} \\
+&= |G| \cdot N.
+\end{aligned}$$
+
+> [!info] Prop
+> Soit $G$ groupe fini, agissant sur $X$ fini, $|X|\geq 2$ transitivement. Alors il y a au moins un élément $g\in G$ sans point fixe.
+
+**Preuve :** Ici $N=1$.
+$$\begin{aligned}
+1 &= \frac{1}{|G|}\sum_{g\in G}|\mathrm{Fix}(g)| \\
+&= \frac{1}{|G|}\left(|X|+\sum_{g\neq e}|\mathrm{Fix}(g)|\right).
+\end{aligned}$$
+
+Ici $|X|\geq 2$ et si on avait $\forall g\in G$, $|\mathrm{Fix}(g)|\geq 1$ on aurait une contradiction.
+
+> [!example] Application
+> Sous-groupes finis du groupe des rotations de l'espace euclidien $\mathbb{R}^3$, $SO(3)$.
+
+> [!note] Thm : sous-groupes finis de $SO(3)$
+> Soit $G\subset SO(3)$ sous-groupe fini. Alors $G$ est isomorphe à l'un des groupes suivants :
+> 1. groupe cyclique $\mathbb{Z}/n\mathbb{Z}$, $n\geq 2$ ;
+> 2. groupe diédral $D_{2n}$ (groupe des isométries du polygone régulier à $n$ côtés) ;
+> 3. $\mathcal{A}_4$ ;
+> 4. $\mathcal{S}_4$ ;
+> 5. $\mathcal{A}_5$.
+
+**Preuve :**
+
+Si $r \in SO(3)$, $r \neq \text{Id}$, on dispose de l'axe de $r$, droite vectorielle des points fixes ; dans une base orthonormée convenable, $r$ a pour matrice :
+$$\begin{pmatrix} 1 & 0 & 0 \\ 0 & \cos\theta & \sin\theta \\ 0 & -\sin\theta & \cos\theta \end{pmatrix}$$
+
+Si $g \in G$, $g \neq e$ : son axe intersecte la sphère $S^2$ de rayon 1 en 2 points $p$ et $-p$, appelés les pôles de $G$.
+
+![[附件/球面直径与极点.svg]]
+
+Soit $X$ l'ensemble des pôles des éléments de $G \setminus \{e\}$.
+
+Alors $G$ agit sur $X$, car il agit sur lui-même par conjugaison.
+
+Soit $g \in G$ et soit $p \in X$ un pôle de $r \in G$. Alors $grg^{-1} \in G$, et $g(p)$ (pour l'action habituelle de $SO(3)$ sur $\mathbb{R}^3$) est un pôle de $grg^{-1}$. Ainsi $g(p) \in X$.
+
+On a ainsi, par restriction à $X$, une action de $G$ sur $X$.
+
+Soit $N$ le nombre d'orbites.
+
+> [!info] Prop
+> On a $N=2$ ou $N=3$.
+
+**Preuve :** Burnside $N=\frac{1}{|G|}\sum\limits_{g \in G} |\text{Fix}(g)|$.
+
+Si $g=e=\text{Id}$, $\text{Fix}(g)=X$.
+
+Si $g \neq \text{Id}$, $\text{Fix}(g)=\{\text{pôles de }g\}$, $|\text{Fix}(g)|=2$.
+
+$$N=\frac{1}{|G|}\left(|X|+2(|G|-1)\right) \quad (\star)$$
+
+On décompose $X$ en réunion disjointe d'orbites,
+on choisit un élément $x_i$ dans chaque orbite $O_i$.
+
+Soit $G_{x_i} = \operatorname{Stab}(x_i)$ ; alors $|O_i| = \frac{|G|}{|G_{x_i}|}$.
+
+$$\begin{aligned}
+N &= \frac{1}{|G|}\left(\sum_{i=1}^{N}|O_i|+2(|G|-1)\right) \\
+&= \sum_{i=1}^{N}\frac{1}{|G_{x_i}|} + 2\Bigl(1-\frac{1}{|G|}\Bigr) \quad (\star\star) \\
+\sum_{i=1}^{N}\left(1-\frac{1}{|G_{x_i}|}\right) &= 2\left(1-\frac{1}{|G|}\right).
+\end{aligned}$$
+
+> [!info] Rem
+> $|G| \geq 2 \qquad \frac{1}{2} \leq 1-\frac{1}{|G|} < 1$.
+
+De même $G_{x_i}$ contient $\text{Id}$, et aussi une rotation $\neq \text{Id}$ dont l'axe est la droite $\mathbb{R}x_i$, d'où $|G_{x_i}| \geq 2$.
+
+$$
+\begin{aligned}
+&\frac{1}{2} \leq 1-\frac{1}{\left|G_{x_{i}}\right|}<1 \\
+&\frac{N}{2} \leq \sum_{i=1}^{N}\left(1-\frac{1}{\left|G_{x_i}\right|}\right)=2\left(1-\frac{1}{|G|}\right)<2.
+\end{aligned}
+$$
+
+Ainsi $N<4$.
+
+De plus, $N>1$ via $(\star)$, car si $N=1$ on aurait $|X|+|G|=2$ d'où $|G|=|X|=1$.
+
+**Conclusion :** $N \in\{2,3\}$.
+
+> [!info] Remarque
+> les stabilisateurs $G_{x_{i}}$ sont des *groupes cycliques* : les éléments de $G_{x_{i}}$ sont des rotations de même axe $\mathbb{R} \alpha_{i}$. Ainsi $G_{x_{i}}$ est en bijection avec un sous-groupe fini du groupe des rotations du plan $(\mathbb{R} \alpha_{i})^{\perp}$.
+
+---
+
+### 1. Étude du cas $N=2$
+
+Posons $e_{i}=\left|G_{x_{i}}\right|$.
+
+$$
+(\star \star) \quad \frac{1}{e_{1}}+\frac{1}{e_{2}}=\frac{2}{|G|} \quad \text { avec } e_{1}, e_{2} \leq|G|.
+$$
+
+Nécessairement $e_{1}=e_{2}=|G|$, i.e. $G_{x_{1}}=G_{x_{2}}=G$.
+
+Donc $G$ est cyclique, $x_2 = -x_1$ et $X = \{x_1, x_2\}$.
+
+### 2. Étude du cas $N=3$
+
+On suppose $e_1 \leq e_2 \leq e_3$.
+
+$$\begin{aligned}
+&2-\frac{2}{|G|}=3-\frac{1}{e_{1}}-\frac{1}{e_{2}}-\frac{1}{e_{3}} \\
+&\boxed{1+\frac{2}{|G|}=\frac{1}{e_{1}}+\frac{1}{e_{2}}+\frac{1}{e_{3}}} \quad>1.
+\end{aligned}$$
+
+Nécessairement $e_{1}=2$.
+
+$$\frac{1}{2}+\frac{2}{|G|}=\frac{1}{e_{2}}+\frac{1}{e_{3}} \quad>\frac{1}{2}$$
+
+Nécessairement $e_2 \leq 3$ (sinon $e_3 \geq e_2 \geq 4$).
+
+$$\frac{1}{e_{2}}+\frac{1}{e_{3}}\leq\frac{1}{2}$$
+
+$\boxed{e_2 = 2 \text{ ou } e_2 = 3}$.
+
+---
+
+#### a) Cas où $e_{1}=2$ et $e_{2}=2$
+
+$$\begin{aligned}
+&\frac{2}{|G|}=\frac{1}{e_{3}}, \qquad |G|=2e_{3}, \quad m=e_{3} \\
+&|O_1| = \frac{|G|}{e_1} = m = |O_2| \\
+&|O_3| = 2.
+\end{aligned}$$
+
+> [!info] Rem
+> l'action de $G$ sur $X$ est la restriction à $X$ d'une action linéaire $g(-x)=-g(x)$.
+
+$$\forall x \quad G_{x}=G_{-x}, \text{ d'où } |\mathcal{O}(x)|=|\mathcal{O}(-x)|$$
+
+Supposons $m \geq 3$ : comment étudier $O_3$ ?
+
+$x \in O_3$, $|O(x)|=|O(-x)|=2$. Comme il y a une seule orbite de cardinal 2, $O_3=\{x,-x\}$.
+
+$G_{x_3}$ est un groupe cyclique d'ordre $n$, d'axe $\mathbb{R}x_3$.
+
+Soit $y \in O_1$, $|G_y|=2$, $G_y=\{\text{Id}, r\}$, où $r$ est une rotation d'angle $\pi$. $G_y$ agit dans l'orbite $O_3=O(x_3)$. Comme $x$ et $y$ non colinéaires, $r(x_3)\neq x_3$, donc $r(x_3)=-x_3$, d'où $x_3 \perp y$ ($x=x_3$).
+
+Considérons une base orthonormée $(x, y, z)$ de $\mathbb{R}^3$. Dans cette base, les éléments de $G$ ont des matrices de la forme :
+$$\begin{pmatrix} 1 & 0 & 0 \\ 0 & \cos\theta & -\sin\theta \\ 0 & \sin\theta & \cos\theta \end{pmatrix} \text{ et } G_y=\left\{\text{Id}, \begin{pmatrix} -1 & 0 & 0 \\ 0 & 1 & 0 \\ 0 & 0 & -1 \end{pmatrix}\right\}$$
+Les restrictions au plan $(\mathbb{R}x)^\perp$ sont :
+• Pour $G_x$ : un groupe cyclique de rotations planes, $\simeq \mathbb{Z}/n\mathbb{Z}$ ;
+• Pour $G_y$ : $\{\mathrm{Id}, r\}$, où $r$ est la symétrie orthogonale par rapport à la droite $\mathbb{R}y$.
+
+De plus $G_x \cap G_y = \{\mathrm{Id}\}$, et $G_x$ est d'indice 2 dans $G$, donc il est distingué dans $G$.
+
+On dispose du groupe $G_x G_y = G_y G_x$, de cardinal $|G_x|\,|G_y| = 2n = |G|$ ; ainsi $G = G_x G_y$ est isomorphe au groupe diédral $D_{2n}$, en considérant les restrictions à $(\mathbb{R}x)^\perp$.
+
+> [!info] Rem
+> Si $n=2$, $|G|=4$. A priori $G = \mathbb{Z}/4\mathbb{Z}$ ou $D_4$.
+
+---
+
+#### b) Cas où $e_1=2$, $e_2=3$
+
+Nécessairement $e_3 \in \{3, 4, 5\}$.
+
+On a en effet : $\displaystyle \frac{1}{e_3} = \frac{1}{6} + \frac{2}{|G|}$, d'où $3 \leq e_3 < 6$.
+
+**Si $e_1=2$, $e_2=3$, $e_3=3$ :** $|G|=12$.
+
+On trouve $G \simeq A_4$.
+
+**Si $e_1=2$, $e_2=3$, $e_3=4$ :** $|G|=24$.
+
+On trouve $G \simeq S_4$.
+
+**Si $e_1=2$, $e_2=3$, $e_3=5$ :** $|G|=60$.
+
+On trouve $G \simeq A_5$, car $A_5$ est l'unique groupe simple d'ordre 60.
