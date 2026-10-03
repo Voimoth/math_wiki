@@ -1,7 +1,7 @@
 ---
 title: Beltrami 恒等式
 created: 2026-09-14
-updated: 2026-09-14
+updated: 2026-10-03
 type: concept
 tags: [mechanics, calculus-of-variations]
 confidence: high
@@ -40,6 +40,11 @@ $$\frac{d}{dt}\Big(F-q'\frac{\partial F}{\partial q'}\Big)=-\frac{\partial F}{\p
 ## 应用
 
 长度泛函（[[测地线方程]]）、光程（[[费马原理]]）、时间泛函（[[最速降线]]）的共同工具。
+
+> [!example] 旋转极小曲面（悬链面）
+> 求连接两点的曲线 $y=y(x)$，使其绕 $x$ 轴旋转所得曲面面积最小。面积为
+> $$\Sigma[y]=2\pi\int y\sqrt{1+y'^2}\,dx .$$
+> 被积函数不显含 $x$，Beltrami 恒等式给出 $\dfrac{y}{\sqrt{1+y'^2}}=\text{const}$，解为**悬链线** $y=a\cosh\dfrac{x-b}{a}$，旋转所得曲面即**悬链面**（caténoïde）。
 
 ## 相关概念
 
