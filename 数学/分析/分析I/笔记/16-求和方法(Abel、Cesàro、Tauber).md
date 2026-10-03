@@ -33,10 +33,8 @@ $$= (1-x)\sum_{n=1}^{\infty} \left( n\sigma_n - (n-1)\sigma_{n-1} \right)x^n$$
 $$= (1-x)^2\sum_{n=1}^{\infty} n\sigma_nx^n = (1-x)^2\sum_{n=1}^{N} n\sigma_nx^n + (1-x)^2\sum_{n=N+1}^{\infty} n\sigma_nx^n.$$
 取足够大的 $N$ 使 $\forall n\geq N$，$\sigma_n \leq \varepsilon$，则
 $$\Rightarrow \left| \sum_{n=N+1}^{\infty} a_nx^n \right| \leq \left| \sum_{n=N}^{\infty} a_nx^n \right|\cdot|x|^{N+1} + \left( (1-x)^2\sum_{n=N+1}^{\infty} |n\sigma_n|x^n \right)\cdot \varepsilon$$
-$$\left| \sum_{n=N}^{\infty} a_nx^n \right| |x|^{N+1} \to 0 ,\quad \varepsilon(1-x)^2\sum_{n=N+1}^{\infty} n|x|^n \leq \varepsilon(1-x)^2\sum_{n=0}^{\infty} n|x|^n = \varepsilon,$$
+$$\left| \sum_{n=N}^{\infty} n\sigma_nx^n \right| |x|^{N+1} \to 0 ,\quad \varepsilon(1-x)^2\sum_{n=N+1}^{\infty} n|x|^n \leq \varepsilon(1-x)^2\sum_{n=0}^{\infty} n|x|^n = \varepsilon,$$
 故 $\sum_{n=1}^{\infty} a_nx^n = 0 \ (A)$。
-
-[?]
 
 ## Tauber 型定理
 
@@ -50,21 +48,21 @@ $$\left| \sum_{k=0}^{n} a_k - S \right| \leqslant \left| \sum_{k=0}^{n} a_k - f(
 $$\leqslant \left| \sum_{k=0}^{n} a_k (1 - x^k) + \sum_{k=n+1}^{\infty} a_k x^k \right| + \left| f(x) - S \right|$$
 $$\leqslant (1-x) \sum_{k=1}^{n} |a_k| (1 + x + \cdots + x^{k-1}) + \sum_{k=n+1}^{\infty} |a_k| x^k + \left| f(x) - S \right|$$
 $$\leqslant (1-x) \sum_{k=1}^{n} k |a_k| + \sum_{k=n+1}^{\infty} \frac{k}{n+1} |a_k| x^k + \left| f(x) - S \right|$$
-$$= (1-x) \sum_{k=1}^{n} k |a_k| + \frac{n+1}{n+1} \sup_{k \geqslant n+1} |k a_k| \cdot \frac{1}{1-x} + \left| f(x) - S \right|.$$
+$$= (1-x) \sum_{k=1}^{n} k |a_k| + \frac{1}{n+1} \sup_{k \geqslant n+1} |k a_k| \cdot \frac{1}{1-x} + \left| f(x) - S \right|.$$
 取 $x = 1 - \frac{1}{n}$ $\Rightarrow \left| \sum_{k=0}^{n} a_k - S \right| \leqslant \frac{1}{n} \sum_{k=1}^{n} k |a_k| + \frac{n}{n+1} \sup_{k \geqslant n+1} |k a_k| + \left| f(x) - S \right| \to 0$，$\Rightarrow \sum_{n=0}^{\infty} a_n = S$。
 
 > [!note] Th (Tauber 第二定理)
-> 设 $\sum_{n=0}^{\infty} a_n = S \ (A)$。如果 $\frac{1}{n} \sum_{k=0}^{n} k a_k = o(n)$（$n \to +\infty$），则 $\sum_{n=0}^{\infty} a_n = S$。
+> 设 $\sum_{n=0}^{\infty} a_n = S \ (A)$。如果 $\sum_{k=0}^{n} k a_k = o(n)$（$n \to +\infty$），则 $\sum_{n=0}^{\infty} a_n = S$。
 
 **Démo :** 令 $b_n := \frac{1}{n} \sum_{k=0}^{n} k a_k \to 0$，则 $n b_n - (n-1) b_{n-1} = n a_n \Rightarrow a_n = b_n - b_{n-1} + \frac{b_{n-1}}{n} \Rightarrow \sum_{n=0}^{\infty} \frac{b_n}{n}$ 在 (A) 收敛于 $S$。又 $\frac{1}{n} b_{n-1} = o\left(\frac{1}{n}\right) \Rightarrow \sum_{n=0}^{\infty} \frac{b_n}{n}$ 收敛（由第一定理）。
 
 > [!note] Th (Hardy, 1910)
-> 设 $\sum_{n=0}^{+\infty} a_n = S \ (C, 1)$。若 $a_n = O\left(\frac{1}{n}\right)$，则 $\sum_{n=0}^{+\infty} a_n = S$。
+> 设 $\sum_{n=0}^{+\infty} a_n = S \ (C)$。若 $a_n = O\left(\frac{1}{n}\right)$，则 $\sum_{n=0}^{+\infty} a_n = S$。
 
 **Démo (Klostermann, 1940)：**
 
 第 1 步（离散 Taylor 公式）：记 $t_n = \sum_{k=1}^n S_k$。当 $h \in \mathbb{Z}_{\geqslant 1}$ 时有
-$$t_{n+h} = t_n + S_n \cdot h + \frac{h(h+1)}{2} \xi \quad (\text{此处有涂改，公式存疑}) \ [?]$$
+$$t_{n+h} = t_n + S_n \cdot h + \frac{h(h+1)}{2} \xi \quad [?]$$
 其中 $\min_{n < k \leqslant n+h} a_k \leqslant \xi \leqslant \max_{n < k \leqslant n+h} a_k$。
 
 **Démo :** $t_{n+h} = t_n + (S_{n+1} + \cdots + S_{n+h}) = t_n + S_n \cdot h + h a_{n+1} + (h-1)a_{n+2} + \cdots + 1 \cdot a_{n+h} = t_n + S_n h + \frac{h(h+1)}{2} \xi$。
