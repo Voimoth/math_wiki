@@ -42,3 +42,9 @@ confidence: medium
 - [[espace-probabilisable]]
 - [[mesure-de-probabilite]]
 - [[espace-probabilise]]
+
+## Notes du cours
+
+- [[06-Espace-probabilisable-et-tribus|概率论 · 06-Espace-probabilisable-et-tribus]]
+- [[11-Variables-aleatoires-et-mesurabilite|概率论 · 11-Variables-aleatoires-et-mesurabilite]]
+- [[15-Vecteurs-aleatoires-et-tribu-borelienne|概率论 · 15-Vecteurs-aleatoires-et-tribu-borelienne]]

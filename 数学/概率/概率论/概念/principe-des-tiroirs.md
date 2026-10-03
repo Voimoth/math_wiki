@@ -34,3 +34,7 @@ confidence: medium
 ## Voir aussi
 - [[ensemble-fini-et-cardinal]]
 - [[application-et-bijection]]
+
+## Notes du cours
+
+- [[02-Ensembles-finis-cardinal-et-comparaison|概率论 · 02-Ensembles-finis-cardinal-et-comparaison]]

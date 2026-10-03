@@ -44,3 +44,8 @@ car $\left(\bigcup_{n\le N} A_n\right)_N$ est croissante et $\left(\bigcap_{n\le
 ## Voir aussi
 - [[borel-cantelli]]
 - [[limsup-d-evenements]]
+
+## Notes du cours
+
+- [[08-Continuite-et-premier-lemme-de-Borel-Cantelli|概率论 · 08-Continuite-et-premier-lemme-de-Borel-Cantelli]]
+- [[13-Fonction-de-repartition|概率论 · 13-Fonction-de-repartition]]

@@ -43,3 +43,7 @@ confidence: medium
 ## Voir aussi
 - [[probabilite-conditionnelle]]
 - [[independance]]
+
+## Notes du cours
+
+- [[09-Probabilite-conditionnelle-et-formules|概率论 · 09-Probabilite-conditionnelle-et-formules]]

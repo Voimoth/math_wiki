@@ -38,3 +38,8 @@ confidence: medium
 ## Voir aussi
 - [[mesure-de-probabilite]]
 - [[probabilite-uniforme]]
+
+## Notes du cours
+
+- [[04-Coefficient-binomial-binome-et-denombrabilite|概率论 · 04-Coefficient-binomial-binome-et-denombrabilite]]
+- [[05-Ensembles-denombrables-et-indenombrables|概率论 · 05-Ensembles-denombrables-et-indenombrables]]

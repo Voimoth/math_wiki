@@ -41,3 +41,12 @@ confidence: medium
 - [[loi-conjointe]]
 - [[loi-conditionnelle]]
 - [[operations-ensemblistes]]
+
+## Notes du cours
+
+- [[10-Independance-et-second-lemme-de-Borel-Cantelli|概率论 · 10-Independance-et-second-lemme-de-Borel-Cantelli]]
+- [[17-Independance-de-variables-aleatoires|概率论 · 17-Independance-de-variables-aleatoires]]
+- [[18-Esperance-d-une-variable-aleatoire|概率论 · 18-Esperance-d-une-variable-aleatoire]]
+- [[21-Fonctions-generatrices|概率论 · 21-Fonctions-generatrices]]
+- [[22-Loi-faible-des-grands-nombres|概率论 · 22-Loi-faible-des-grands-nombres]]
+- [[24-Theoreme-central-limite|概率论 · 24-Theoreme-central-limite]]

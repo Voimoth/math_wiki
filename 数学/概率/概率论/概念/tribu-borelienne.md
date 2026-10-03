@@ -37,3 +37,11 @@ confidence: medium
 ## Voir aussi
 - [[vecteur-aleatoire]]
 - [[operations-ensemblistes]]
+
+## Notes du cours
+
+- [[06-Espace-probabilisable-et-tribus|概率论 · 06-Espace-probabilisable-et-tribus]]
+- [[07-Modeles-discret-et-continu-p-s|概率论 · 07-Modeles-discret-et-continu-p-s]]
+- [[11-Variables-aleatoires-et-mesurabilite|概率论 · 11-Variables-aleatoires-et-mesurabilite]]
+- [[13-Fonction-de-repartition|概率论 · 13-Fonction-de-repartition]]
+- [[15-Vecteurs-aleatoires-et-tribu-borelienne|概率论 · 15-Vecteurs-aleatoires-et-tribu-borelienne]]

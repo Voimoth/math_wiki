@@ -62,3 +62,10 @@ $$= \left( \int_0^L (x^2+y^2)\,dt \right)^{\frac{1}{2}} \left( \int_0^L (x'^2+y'
 $$\Rightarrow 4S^2 \leq \left( \int_0^L x'^2\,dt + \int_0^L y'^2\,dt \right) \left( \int_0^L x^2\,dt + \int_0^L y^2\,dt \right)$$
 $$\leq \left( \frac{L^2}{4\pi^2} \int_0^L x'^2\,dt + \frac{L^2}{4\pi^2} \int_0^L y'^2\,dt \right) \left( \int_0^L x'^2\,dt + \int_0^L y'^2\,dt \right) \quad (\text{Wirtinger})$$
 $$= \frac{L^2}{4\pi^2} \left( \int_0^L (x'^2+y'^2)\,dt \right)^2 = \frac{L^4}{4\pi^2} \Rightarrow S \leq \frac{L^2}{4\pi}.$$
+
+## 相关概念
+
+- [[分析III/Fourier/概念/等周不等式|等周不等式]]
+- [[Wirtinger不等式]]
+- [[Poincaré不等式]]
+- [[最速降线与Euler-Lagrange方程]]

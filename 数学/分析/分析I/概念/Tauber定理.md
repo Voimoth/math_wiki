@@ -39,3 +39,7 @@ $$\left|\sum_{k=0}^n a_k-S\right|\le\left|\sum_{k=0}^n a_k-f(x)\right|+\left|f(x
 - [[Abel求和]]
 - [[Cesàro求和]]
 - [[Hardy定理]] — $O(1/n)$ 情形下的 Tauber 型升级
+
+## 相关笔记
+
+- [[16-求和方法(Abel、Cesàro、Tauber)|分析I · 16-求和方法(Abel、Cesàro、Tauber)]]

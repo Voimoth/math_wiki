@@ -36,3 +36,7 @@ $$G'=-\left(f'-(f'-f'(0))\cot(x-\theta)\right)^2+f'^2-(f'-f'(0))^2,$$
 
 - [[Poincaré不等式]] — 同一类不等式的 Dirichlet 边界版本
 - [[等周不等式]]
+
+## 相关笔记
+
+- [[17-等周不等式与Wirtinger-Poincaré|分析I · 17-等周不等式与Wirtinger-Poincaré]]

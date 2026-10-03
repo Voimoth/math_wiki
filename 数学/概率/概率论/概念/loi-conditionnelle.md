@@ -33,3 +33,7 @@ confidence: medium
 ## Voir aussi
 - [[loi-conjointe]]
 - [[independance]]
+
+## Notes du cours
+
+- [[16-Egalite-presque-sure-loi-conjointe-loi-conditionnelle|概率论 · 16-Egalite-presque-sure-loi-conjointe-loi-conditionnelle]]

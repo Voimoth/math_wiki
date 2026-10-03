@@ -45,3 +45,8 @@ confidence: high
 - [[Weierstrass判别法]] — 同名但不同内容，注意区分
 - [[相对拓扑与稠密性]] — 定理即多项式稠密
 - [[一致收敛级数的性质]]
+
+## 相关笔记
+
+- [[07-函数项级数|分析II · 07-函数项级数]]
+- [[08-Stone-Weierstrass|分析II · 08-Stone-Weierstrass]]

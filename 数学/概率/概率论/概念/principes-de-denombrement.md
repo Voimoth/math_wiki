@@ -39,3 +39,7 @@ confidence: medium
 - [[ensemble-fini-et-cardinal]]
 - [[arrangement-et-combinaison]]
 - [[inclusion-exclusion]]
+
+## Notes du cours
+
+- [[03-Denombrement-arrangements-et-combinaisons|概率论 · 03-Denombrement-arrangements-et-combinaisons]]

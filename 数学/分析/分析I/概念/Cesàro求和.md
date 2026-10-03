@@ -39,3 +39,7 @@ confidence: medium
 - [[Tauber定理]]
 - [[广义求和与Cesàro求和]] — Fourier 级数情形的广义求和
 - [[Cesàro求和与Fejér核]]
+
+## 相关笔记
+
+- [[16-求和方法(Abel、Cesàro、Tauber)|分析I · 16-求和方法(Abel、Cesàro、Tauber)]]

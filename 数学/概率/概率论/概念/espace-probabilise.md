@@ -38,3 +38,12 @@ confidence: medium
 - [[mesure-de-probabilite]]
 - [[tribu]]
 - [[probabilite-uniforme]]
+
+## Notes du cours
+
+- [[06-Espace-probabilisable-et-tribus|概率论 · 06-Espace-probabilisable-et-tribus]]
+- [[09-Probabilite-conditionnelle-et-formules|概率论 · 09-Probabilite-conditionnelle-et-formules]]
+- [[10-Independance-et-second-lemme-de-Borel-Cantelli|概率论 · 10-Independance-et-second-lemme-de-Borel-Cantelli]]
+- [[11-Variables-aleatoires-et-mesurabilite|概率论 · 11-Variables-aleatoires-et-mesurabilite]]
+- [[12-Loi-d-une-variable-aleatoire|概率论 · 12-Loi-d-une-variable-aleatoire]]
+- [[15-Vecteurs-aleatoires-et-tribu-borelienne|概率论 · 15-Vecteurs-aleatoires-et-tribu-borelienne]]

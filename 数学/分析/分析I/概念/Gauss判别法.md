@@ -36,3 +36,7 @@ $$\frac{b_n}{b_{n+1}}=\frac{n+1}{n}\left(\frac{\log(n+1)}{\log n}\right)^\alpha=
 - [[d'Alembert比值判别法]]
 - [[正项级数判别法]]
 - [[积分判别法]]
+
+## 相关笔记
+
+- [[15-级数|分析I · 15-级数]]

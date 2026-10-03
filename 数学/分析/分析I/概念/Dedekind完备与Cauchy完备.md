@@ -46,3 +46,8 @@ $$\text{Dedekind 完备}\iff\text{Cauchy 完备}+\text{Archimedean}.$$
 - [[Cauchy列]]
 - [[Archimedean性质]]
 - [[完备性的等价形式]]
+
+## 相关笔记
+
+- [[01-实数与序|分析I · 01-实数与序]]
+- [[02-序列与实数的构造|分析I · 02-序列与实数的构造]]

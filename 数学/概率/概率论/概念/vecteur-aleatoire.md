@@ -36,3 +36,8 @@ confidence: medium
 ## Voir aussi
 - [[tribu-borelienne]]
 - [[egalite-presque-sure]]
+
+## Notes du cours
+
+- [[15-Vecteurs-aleatoires-et-tribu-borelienne|概率论 · 15-Vecteurs-aleatoires-et-tribu-borelienne]]
+- [[16-Egalite-presque-sure-loi-conjointe-loi-conditionnelle|概率论 · 16-Egalite-presque-sure-loi-conjointe-loi-conditionnelle]]

@@ -39,3 +39,7 @@ confidence: medium
 - [[inegalite-de-chebyshev]]
 - [[loi-forte-des-grands-nombres]]
 - [[esperance]]
+
+## Notes du cours
+
+- [[22-Loi-faible-des-grands-nombres|概率论 · 22-Loi-faible-des-grands-nombres]]

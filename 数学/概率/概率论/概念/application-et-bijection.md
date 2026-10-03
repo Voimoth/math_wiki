@@ -39,3 +39,9 @@ confidence: medium
 ## Voir aussi
 - [[ensemble-fini-et-cardinal]]
 - [[operations-ensemblistes]]
+
+## Notes du cours
+
+- [[01-Logique-ensembles-et-applications|概率论 · 01-Logique-ensembles-et-applications]]
+- [[02-Ensembles-finis-cardinal-et-comparaison|概率论 · 02-Ensembles-finis-cardinal-et-comparaison]]
+- [[05-Ensembles-denombrables-et-indenombrables|概率论 · 05-Ensembles-denombrables-et-indenombrables]]

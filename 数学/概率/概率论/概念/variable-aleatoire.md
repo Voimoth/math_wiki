@@ -45,3 +45,10 @@ confidence: medium
 - [[tribu-borelienne]]
 - [[mesure-de-probabilite]]
 - [[loi-d-une-variable-aleatoire]]
+
+## Notes du cours
+
+- [[11-Variables-aleatoires-et-mesurabilite|概率论 · 11-Variables-aleatoires-et-mesurabilite]]
+- [[12-Loi-d-une-variable-aleatoire|概率论 · 12-Loi-d-une-variable-aleatoire]]
+- [[13-Fonction-de-repartition|概率论 · 13-Fonction-de-repartition]]
+- [[15-Vecteurs-aleatoires-et-tribu-borelienne|概率论 · 15-Vecteurs-aleatoires-et-tribu-borelienne]]

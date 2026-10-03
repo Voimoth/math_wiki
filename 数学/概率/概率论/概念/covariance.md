@@ -52,3 +52,8 @@ Propriétés.
 - [[esperance]]
 - [[independance]]
 - [[inegalites-lp]]
+
+## Notes du cours
+
+- [[20-Covariance-variance-d-une-somme-et-lois-usuelles|概率论 · 20-Covariance-variance-d-une-somme-et-lois-usuelles]]
+- [[22-Loi-faible-des-grands-nombres|概率论 · 22-Loi-faible-des-grands-nombres]]

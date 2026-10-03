@@ -324,3 +324,12 @@ $H$ hyperplan. Soit $v \in E - H$. Si $(e_1, \dots, e_{n-1})$ base de $H$, $(e_1
 Alors $\text{Sp}(u) = \{1, \lambda\}$. Si $\lambda \neq 1$, $u$ diagonalisable ; si $\lambda = 1$, si $u$ était diagonalisable on aurait $u = \text{Id}$, exclu.
 
 Exercice : terminer la preuve.
+
+## 相关概念
+
+- [[经典群]]
+- [[代数III/概念/群]]
+- [[代数III/概念/商群]]
+- [[代数III/概念/导群]]
+- [[代数III/概念/群作用]]
+- [[代数III/概念/对称群]]

@@ -39,3 +39,7 @@ $$|S_n|\le\sup_{k\ge n}|\sigma_k|+\frac{2n}h\sup_{k\ge n}|\sigma_k|+\frac{Ch}{2n
 - [[Tauber定理]]
 - [[Cesàro求和]]
 - [[Abel求和]]
+
+## 相关笔记
+
+- [[16-求和方法(Abel、Cesàro、Tauber)|分析I · 16-求和方法(Abel、Cesàro、Tauber)]]

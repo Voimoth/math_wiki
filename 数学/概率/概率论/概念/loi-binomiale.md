@@ -40,3 +40,10 @@ confidence: medium
 - [[loi-de-bernoulli]]
 - [[coefficient-binomial]]
 - [[loi-de-poisson]]
+
+## Notes du cours
+
+- [[14-Lois-discretes-usuelles|概率论 · 14-Lois-discretes-usuelles]]
+- [[17-Independance-de-variables-aleatoires|概率论 · 17-Independance-de-variables-aleatoires]]
+- [[20-Covariance-variance-d-une-somme-et-lois-usuelles|概率论 · 20-Covariance-variance-d-une-somme-et-lois-usuelles]]
+- [[21-Fonctions-generatrices|概率论 · 21-Fonctions-generatrices]]

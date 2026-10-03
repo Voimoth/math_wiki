@@ -128,3 +128,11 @@ $$\mathrm{PSL}_2(\mathbb Z)\cong\langle S,R\mid S^2=1,\ R^3=1\rangle\cong C_2*C_
 
 > [!exercise] 练习 3.6（$\mathrm{PSL}_2(\mathbb Z)$ 的基本域）
 > 记 $S=\begin{pmatrix}0&-1\\1&0\end{pmatrix}$，$T=\begin{pmatrix}1&1\\0&1\end{pmatrix}$，$\omega=\exp(2\pi i/3)$。证明：若 $g\in\mathrm{PSL}_2(\mathbb Z)$ 固定某个 $z\in\mathbb H$ 且 $g\neq1$，则 $z$ 在 $\mathrm{PSL}_2(\mathbb Z)$ 的作用下等价于 $i$ 或 $\omega$；等价地，在标准基本域 $\mathcal F$ 中只有 $i$ 与 $\omega$ 的稳定子群非平凡。求出 $\operatorname{Stab}_{\mathrm{PSL}_2(\mathbb Z)}(i)$ 与 $\operatorname{Stab}_{\mathrm{PSL}_2(\mathbb Z)}(\omega)$，并证明它们分别由 $S$ 与 $ST$ 生成。
+
+## 相关概念
+
+- [[自由积]]
+- [[代数III/概念/群作用]]
+- [[代数III/概念/商群]]
+- [[经典群]]
+- [[代数III/概念/群]]

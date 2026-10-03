@@ -311,3 +311,9 @@ On a toujours $k[u] \subset \operatorname{Com}(u)$.
 
 > [!note] Prop
 > $u$ cyclique $\iff k[u] = \operatorname{Com}(u)$.
+
+## 相关概念
+
+- [[代数III/概念/模]]
+- [[域上代数]]
+- [[经典群]]

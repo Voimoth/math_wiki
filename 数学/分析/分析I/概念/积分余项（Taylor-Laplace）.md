@@ -44,3 +44,7 @@ $$=f(a)+\big.[-]\,(x-t)f'(t)\big|_a^x+\int_a^x(x-t)f''(t)\,dt
 - [[高阶Taylor公式]] — Peano 与 Lagrange 两种余项
 - [[Newton-Leibniz公式]] — 反复迭代的出发点
 - [[积分中值定理]] — 由积分余项回到 Lagrange 余项的桥梁
+
+## 相关笔记
+
+- [[13-数值积分与Newton法|分析I · 13-数值积分与Newton法]]

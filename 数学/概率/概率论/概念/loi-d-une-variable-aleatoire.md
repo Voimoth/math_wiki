@@ -45,3 +45,11 @@ confidence: medium
 - [[variable-aleatoire]]
 - [[mesure-de-probabilite]]
 - [[fonction-de-repartition]]
+
+## Notes du cours
+
+- [[12-Loi-d-une-variable-aleatoire|概率论 · 12-Loi-d-une-variable-aleatoire]]
+- [[13-Fonction-de-repartition|概率论 · 13-Fonction-de-repartition]]
+- [[16-Egalite-presque-sure-loi-conjointe-loi-conditionnelle|概率论 · 16-Egalite-presque-sure-loi-conjointe-loi-conditionnelle]]
+- [[17-Independance-de-variables-aleatoires|概率论 · 17-Independance-de-variables-aleatoires]]
+- [[18-Esperance-d-une-variable-aleatoire|概率论 · 18-Esperance-d-une-variable-aleatoire]]

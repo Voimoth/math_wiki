@@ -99,3 +99,13 @@ $$\int_{p_1}^{p_n}\frac1{\log t}\,d\big(R(t)+\log t\big)=\frac1{\log p_n}\cdot\f
 $$\sum_{p\le x}\frac1p=\int_{1.5}^x\frac1{\log t}\,d(R(t)+\log t)=\left.\frac{R(t)+\log t}{\log t}\right|_{1.5}^x+\int_{1.5}^x\frac{R(t)+\log t}{t\log^2 t}\,dt$$
 $$=\left.\frac{R(t)}{\log t}\right|_{1.5}^x+\log\log x-\log\log1.5+O\!\left(\frac1{\log x}\right)
 =\log\log x+M+O\!\left(\frac1{\log x}\right).$$
+
+## 相关概念
+
+- [[Riemann-Stieltjes积分]]
+- [[分部积分]]
+- [[Abel求和公式]]
+- [[Mertens定理]]
+- [[Mertens定理与素数倒数和]]
+- [[素数定理（弱形式）]]
+- [[Stirling公式]]

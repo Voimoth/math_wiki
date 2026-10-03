@@ -44,3 +44,7 @@ confidence: medium
 - [[loi-de-poisson]]
 - [[loi-binomiale]]
 - [[independance]]
+
+## Notes du cours
+
+- [[21-Fonctions-generatrices|概率论 · 21-Fonctions-generatrices]]

@@ -41,3 +41,10 @@ $$f(x)=T_a^n(f)+o\big((x-a)^n\big),\qquad T_a^n(f)=\sum_{k=0}^n\frac1{k!}f^{(k)}
 
 > [!example] 用带余项展开证不等式
 > $\ln(1+x)\le x-\dfrac{x^2}{2}+\dfrac{x^3}{3}$，$\cos x\ge 1-\dfrac12x^2$。
+
+## 相关概念
+
+- [[高阶Taylor公式]]
+- [[极限展开与正规形式]]
+- [[展开的运算]]
+- [[导数与可导性]]

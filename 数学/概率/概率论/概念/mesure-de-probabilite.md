@@ -37,3 +37,12 @@ confidence: medium
 - [[espace-probabilise]]
 - [[espace-probabilisable]]
 - [[probabilite-uniforme]]
+
+## Notes du cours
+
+- [[06-Espace-probabilisable-et-tribus|概率论 · 06-Espace-probabilisable-et-tribus]]
+- [[07-Modeles-discret-et-continu-p-s|概率论 · 07-Modeles-discret-et-continu-p-s]]
+- [[08-Continuite-et-premier-lemme-de-Borel-Cantelli|概率论 · 08-Continuite-et-premier-lemme-de-Borel-Cantelli]]
+- [[09-Probabilite-conditionnelle-et-formules|概率论 · 09-Probabilite-conditionnelle-et-formules]]
+- [[12-Loi-d-une-variable-aleatoire|概率论 · 12-Loi-d-une-variable-aleatoire]]
+- [[18-Esperance-d-une-variable-aleatoire|概率论 · 18-Esperance-d-une-variable-aleatoire]]

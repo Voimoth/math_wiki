@@ -35,3 +35,8 @@ confidence: medium
 - [[probabilite-uniforme]]
 - [[espace-probabilise]]
 - [[denombrabilite]]
+
+## Notes du cours
+
+- [[07-Modeles-discret-et-continu-p-s|概率论 · 07-Modeles-discret-et-continu-p-s]]
+- [[12-Loi-d-une-variable-aleatoire|概率论 · 12-Loi-d-une-variable-aleatoire]]

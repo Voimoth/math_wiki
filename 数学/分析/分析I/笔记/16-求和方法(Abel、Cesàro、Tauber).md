@@ -110,3 +110,12 @@ $$\Rightarrow \sum_{i=1}^{\infty} \sum_{j=1}^{\infty} a_{ij} = \lim_{k \to \inft
 $$\frac{1}{1 - p_n^{-s}} = 1 + \frac{1}{p_n^s} + \frac{1}{p_n^{2s}} + \cdots + \frac{1}{p_n^{ks}} + \cdots$$
 $$\frac{1}{1 - 2^{-s}} \cdot \frac{1}{1 - 3^{-s}} \cdots \frac{1}{1 - p_n^{-s}} \cdots = 1 + \frac{1}{2^s} + \frac{1}{3^s} + \cdots + \frac{1}{m^s} + \cdots = \zeta(s)$$
 即 $\zeta(s) = \prod_{n=1}^{\infty} \frac{1}{1 - p_n^{-s}}$。
+
+## 相关概念
+
+- [[Abel求和]]
+- [[Cesàro求和]]
+- [[Tauber定理]]
+- [[Hardy定理]]
+- [[级数求和与极限交换]]
+- [[Abel求和公式]]

@@ -39,3 +39,7 @@ confidence: medium
 - [[fonction-caracteristique]]
 - [[convergence-en-loi]]
 - [[theoreme-central-limite]]
+
+## Notes du cours
+
+- [[24-Theoreme-central-limite|概率论 · 24-Theoreme-central-limite]]

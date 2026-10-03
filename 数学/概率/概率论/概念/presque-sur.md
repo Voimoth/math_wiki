@@ -38,3 +38,9 @@ confidence: medium
 - [[espace-probabilise]]
 - [[mesure-de-probabilite]]
 - [[continuite-de-la-probabilite]]
+
+## Notes du cours
+
+- [[07-Modeles-discret-et-continu-p-s|概率论 · 07-Modeles-discret-et-continu-p-s]]
+- [[16-Egalite-presque-sure-loi-conjointe-loi-conditionnelle|概率论 · 16-Egalite-presque-sure-loi-conjointe-loi-conditionnelle]]
+- [[18-Esperance-d-une-variable-aleatoire|概率论 · 18-Esperance-d-une-variable-aleatoire]]

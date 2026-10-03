@@ -28,3 +28,7 @@ confidence: medium
 
 - [[混合偏导数相等]] — 保证 $\Delta$ 的定义不依赖求导次序
 - [[向量场的散度与旋度]] — $\Delta=\operatorname{div}\nabla$
+
+## 相关笔记
+
+- [[19-多元微积分初步|分析I · 19-多元微积分初步]]

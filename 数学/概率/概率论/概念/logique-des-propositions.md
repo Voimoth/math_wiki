@@ -44,3 +44,7 @@ confidence: medium
 ## Voir aussi
 - [[operations-ensemblistes]]
 - [[application-et-bijection]]
+
+## Notes du cours
+
+- [[01-Logique-ensembles-et-applications|概率论 · 01-Logique-ensembles-et-applications]]

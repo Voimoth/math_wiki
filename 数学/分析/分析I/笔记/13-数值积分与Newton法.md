@@ -69,3 +69,10 @@ $$\Rightarrow\ |x_{n+1}-c|\le\frac{M_2}{2m_1}(c-x_n)^2.\quad\#$$
 $$f(x)=f(a)+\int_a^xf'(t)\,dt=f(a)-\int_a^xf'(t)\,d(x-t)$$
 $$=f(a)-\big.(x-t)f'(t)\big|_a^x+\int_a^x(x-t)f''(t)\,dt
 =f(a)+(x-a)f'(a)+\int_a^x(x-t)f''(t)\,dt=\dots\ (\text{归纳}).\quad\#$$
+
+## 相关概念
+
+- [[数值积分]]
+- [[Newton法求根与二次收敛]]
+- [[积分余项（Taylor-Laplace）]]
+- [[高阶Taylor公式]]

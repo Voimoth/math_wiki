@@ -38,3 +38,7 @@ $$-\lambda u-u''=0,$$
 
 - [[Wirtinger不等式]]
 - [[等周不等式]]
+
+## 相关笔记
+
+- [[17-等周不等式与Wirtinger-Poincaré|分析I · 17-等周不等式与Wirtinger-Poincaré]]

@@ -33,3 +33,9 @@ confidence: medium
 ## Voir aussi
 - [[borel-cantelli]]
 - [[continuite-de-la-probabilite]]
+
+## Notes du cours
+
+- [[08-Continuite-et-premier-lemme-de-Borel-Cantelli|概率论 · 08-Continuite-et-premier-lemme-de-Borel-Cantelli]]
+- [[10-Independance-et-second-lemme-de-Borel-Cantelli|概率论 · 10-Independance-et-second-lemme-de-Borel-Cantelli]]
+- [[23-Loi-forte-des-grands-nombres|概率论 · 23-Loi-forte-des-grands-nombres]]

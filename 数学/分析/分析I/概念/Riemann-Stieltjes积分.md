@@ -39,3 +39,7 @@ confidence: medium
 - [[Abel求和公式]] — Stieltjes 形式的分部积分
 - [[Riemann可积性]] — 取 $\mu(x)=x$ 的特例
 - [[分部积分]] — 分部求和思想的 Riemann 版本
+
+## 相关笔记
+
+- [[10-Stieltjes积分与素数分布|分析I · 10-Stieltjes积分与素数分布]]

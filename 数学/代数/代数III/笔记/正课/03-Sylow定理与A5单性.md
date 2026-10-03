@@ -468,3 +468,12 @@ Il y aurait donc une orbite à 3 éléments : impossible.
 D'où $\ker \varphi = \{\mathrm{Id}\}$, et $\varphi$ est un isomorphisme.
 
 ---
+
+## 相关概念
+
+- [[Sylow定理]]
+- [[代数III/概念/对称群]]
+- [[A5单性与60阶群]]
+- [[SO3的有限子群]]
+- [[代数III/概念/导群]]
+- [[代数III/概念/群作用]]

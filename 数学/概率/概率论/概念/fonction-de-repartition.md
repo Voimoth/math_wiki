@@ -45,3 +45,10 @@ confidence: medium
 ## Voir aussi
 - [[variable-aleatoire]]
 - [[loi-d-une-variable-aleatoire]]
+
+## Notes du cours
+
+- [[13-Fonction-de-repartition|概率论 · 13-Fonction-de-repartition]]
+- [[17-Independance-de-variables-aleatoires|概率论 · 17-Independance-de-variables-aleatoires]]
+- [[18-Esperance-d-une-variable-aleatoire|概率论 · 18-Esperance-d-une-variable-aleatoire]]
+- [[24-Theoreme-central-limite|概率论 · 24-Theoreme-central-limite]]

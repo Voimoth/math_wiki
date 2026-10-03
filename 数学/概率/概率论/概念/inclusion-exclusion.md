@@ -35,3 +35,7 @@ confidence: medium
 ## Voir aussi
 - [[principes-de-denombrement]]
 - [[coefficient-binomial]]
+
+## Notes du cours
+
+- [[04-Coefficient-binomial-binome-et-denombrabilite|概率论 · 04-Coefficient-binomial-binome-et-denombrabilite]]

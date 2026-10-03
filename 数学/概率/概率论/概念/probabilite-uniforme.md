@@ -37,3 +37,8 @@ confidence: medium
 - [[espace-probabilise]]
 - [[modele-discret]]
 - [[mesure-de-probabilite]]
+
+## Notes du cours
+
+- [[07-Modeles-discret-et-continu-p-s|概率论 · 07-Modeles-discret-et-continu-p-s]]
+- [[14-Lois-discretes-usuelles|概率论 · 14-Lois-discretes-usuelles]]

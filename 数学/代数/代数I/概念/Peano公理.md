@@ -58,3 +58,7 @@ $$a\leqslant b\overset{\text{def}}{\iff}\exists c\in\mathbb{N},\ a+c=b.$$
 - [[数学归纳法]]
 - [[良序]]
 - [[超限归纳法]]
+
+## 相关笔记
+
+- [[10-自然数与归纳法|代数I · 10-自然数与归纳法]]

@@ -47,3 +47,7 @@ $$\sum_{p\le x}\frac1p=\int_{1.5}^x\frac1{\log t}\,d(R(t)+\log t)
 - [[Stirling公式]] — 阶乘估计
 - [[Abel求和公式]] — 把和对素数求和化的分部积分
 - [[Mertens定理]] — 同名的级数乘积定理
+
+## 相关笔记
+
+- [[10-Stieltjes积分与素数分布|分析I · 10-Stieltjes积分与素数分布]]

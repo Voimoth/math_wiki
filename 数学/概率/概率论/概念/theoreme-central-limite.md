@@ -37,3 +37,7 @@ confidence: medium
 - [[theoreme-de-continuite-de-levy]]
 - [[fonction-caracteristique]]
 - [[loi-forte-des-grands-nombres]]
+
+## Notes du cours
+
+- [[24-Theoreme-central-limite|概率论 · 24-Theoreme-central-limite]]

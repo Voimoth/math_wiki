@@ -44,3 +44,9 @@ confidence: medium
 ## Voir aussi
 - [[loi-de-bernoulli]]
 - [[variable-aleatoire]]
+
+## Notes du cours
+
+- [[14-Lois-discretes-usuelles|概率论 · 14-Lois-discretes-usuelles]]
+- [[20-Covariance-variance-d-une-somme-et-lois-usuelles|概率论 · 20-Covariance-variance-d-une-somme-et-lois-usuelles]]
+- [[21-Fonctions-generatrices|概率论 · 21-Fonctions-generatrices]]

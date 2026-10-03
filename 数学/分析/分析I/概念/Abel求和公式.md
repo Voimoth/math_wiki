@@ -40,3 +40,9 @@ $$\int_a^b f\,d\mu=\sum_{i=0}^{n-1}f(x_i)\big(\mu(x_{i+1})-\mu(x_i)\big)+o(1);$$
 - [[分部积分]] — Riemann 积分的同类恒等式
 - [[Abel求和]] — 与之同名但含义不同的广义求和
 - [[Abel判别法]]
+
+## 相关笔记
+
+- [[09-积分的计算与中值定理|分析I · 09-积分的计算与中值定理]]
+- [[10-Stieltjes积分与素数分布|分析I · 10-Stieltjes积分与素数分布]]
+- [[16-求和方法(Abel、Cesàro、Tauber)|分析I · 16-求和方法(Abel、Cesàro、Tauber)]]

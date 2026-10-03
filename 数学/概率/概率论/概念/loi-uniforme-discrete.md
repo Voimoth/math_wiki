@@ -36,3 +36,7 @@ confidence: medium
 - [[probabilite-uniforme]]
 - [[variable-aleatoire]]
 - [[ensemble-fini-et-cardinal]]
+
+## Notes du cours
+
+- [[14-Lois-discretes-usuelles|概率论 · 14-Lois-discretes-usuelles]]

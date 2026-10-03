@@ -43,3 +43,10 @@ $$f(z)=\frac1{|B(z,r)|}\int_{B(z,r)}f(y)dy$$
 这事可以修改。设 $C(K,\mathbb C)$ 是复值连续函数全体，$A$ 是其中一个含有 1 的、有分离点性质的（复）代数，如果它还关于共轭运算封闭，则 $\bar A=C(K,\mathbb C)$。
 
 **Preuve（要点）:** 只需证明对任何 $f\in C(K,\mathbb R)$ 有 $f\in\bar A$。事实上 $C(K,\mathbb C)$ 中的一般函数形如 $f+ig$；若 $f,g\in\bar A$（$\bar A$ 是复代数），则 $f+ig\in\bar A$。令 $A_{\mathbb R}=\{f\in A:f\in C(K,\mathbb R)\}$，则 $A_{\mathbb R}$ 是含 1 的（实）代数。声称它分离点:注意若 $f+ig\in A$，则 $f$ 和 $g$ 都属于 $A_{\mathbb R}$（这句用到了 $A$ 关于共轭封闭的假设:因共轭封闭才有取实部封闭，才知道 $f,g\in A$，才知道 $f,g\in A_{\mathbb R}$）。若 $x,y\in K$ 被复值函数 $f+ig$ 分离，则必被 $f$ 或 $g$ 分离，故 $A_{\mathbb R}$ 分离点。由实值版本的 Stone-Weierstrass，$\overline{A_{\mathbb R}}=C(K,\mathbb R)$，从而 $\bar A=C(K,\mathbb C)$。（这里说复代数，是关于复数的数乘封闭的；$A$ 是复代数，$\bar A$ 是复代数不难证明。）
+
+## 相关概念
+
+- [[Stone-Weierstrass定理]]
+- [[Weierstrass逼近定理]]
+- [[紧集上的连续函数]]
+- [[多线性映射与多项式]]

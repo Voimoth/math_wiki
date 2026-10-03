@@ -38,3 +38,8 @@ confidence: medium
 
 - [[偏导数与梯度]] — $\partial F/\partial y,\ \partial F/\partial y'$ 的含义
 - [[通解与特解]] — 降阶后的一阶方程如何定常数
+
+## 相关笔记
+
+- [[17-等周不等式与Wirtinger-Poincaré|分析I · 17-等周不等式与Wirtinger-Poincaré]]
+- [[18-常微分方程|分析I · 18-常微分方程]]

@@ -40,3 +40,9 @@ confidence: medium
 - [[principes-de-denombrement]]
 - [[principe-des-tiroirs]]
 - [[denombrabilite]]
+
+## Notes du cours
+
+- [[02-Ensembles-finis-cardinal-et-comparaison|概率论 · 02-Ensembles-finis-cardinal-et-comparaison]]
+- [[03-Denombrement-arrangements-et-combinaisons|概率论 · 03-Denombrement-arrangements-et-combinaisons]]
+- [[05-Ensembles-denombrables-et-indenombrables|概率论 · 05-Ensembles-denombrables-et-indenombrables]]

@@ -42,3 +42,7 @@ confidence: medium
 - [[theoreme-de-continuite-de-levy]]
 - [[theoreme-central-limite]]
 - [[fonction-generatrice]]
+
+## Notes du cours
+
+- [[24-Theoreme-central-limite|概率论 · 24-Theoreme-central-limite]]

@@ -48,3 +48,7 @@ confidence: medium
 - [[正交投影]]
 - [[基]]
 - [[Legendre多项式]]
+
+## 相关笔记
+
+- [[17-正交族与Schmidt正交化|代数II · 17-正交族与Schmidt正交化]]

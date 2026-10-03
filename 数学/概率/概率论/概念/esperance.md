@@ -53,3 +53,13 @@ Propriétés (admises) : $\mathbb{E}[\mathbb{1}_A]=\mathbb{P}(A)$ ; linéarité 
 - [[variance]]
 - [[covariance]]
 - [[inegalites-lp]]
+
+## Notes du cours
+
+- [[18-Esperance-d-une-variable-aleatoire|概率论 · 18-Esperance-d-une-variable-aleatoire]]
+- [[19-Moments-variance-et-inegalites-Lp|概率论 · 19-Moments-variance-et-inegalites-Lp]]
+- [[20-Covariance-variance-d-une-somme-et-lois-usuelles|概率论 · 20-Covariance-variance-d-une-somme-et-lois-usuelles]]
+- [[21-Fonctions-generatrices|概率论 · 21-Fonctions-generatrices]]
+- [[22-Loi-faible-des-grands-nombres|概率论 · 22-Loi-faible-des-grands-nombres]]
+- [[23-Loi-forte-des-grands-nombres|概率论 · 23-Loi-forte-des-grands-nombres]]
+- [[24-Theoreme-central-limite|概率论 · 24-Theoreme-central-limite]]

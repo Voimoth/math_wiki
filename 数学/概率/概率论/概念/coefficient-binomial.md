@@ -38,3 +38,9 @@ confidence: medium
 ## Voir aussi
 - [[arrangement-et-combinaison]]
 - [[inclusion-exclusion]]
+
+## Notes du cours
+
+- [[04-Coefficient-binomial-binome-et-denombrabilite|概率论 · 04-Coefficient-binomial-binome-et-denombrabilite]]
+- [[14-Lois-discretes-usuelles|概率论 · 14-Lois-discretes-usuelles]]
+- [[17-Independance-de-variables-aleatoires|概率论 · 17-Independance-de-variables-aleatoires]]
