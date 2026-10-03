@@ -107,3 +107,13 @@ $$=\sum_{k=1}^n\operatorname{Var}(X_k)+2\sum_{1\le i<j\le n}\operatorname{Cov}(X
 
 **Preuve :** Appliquer l'inégalité de Markov à $Y=\frac{X}{\mathbb{E}[X]}$ :
 $$\mathbb{P}\bigl(X\ge c\,\mathbb{E}[X]\bigr)=\mathbb{P}(Y\ge c)\le\frac{\mathbb{E}[Y]}{c}=\frac1c.\qquad\#$$
+
+## Voir aussi
+- [[covariance]]
+- [[variance]]
+- [[esperance]]
+- [[inegalite-de-markov]]
+- [[loi-de-bernoulli]]
+- [[loi-binomiale]]
+- [[loi-geometrique]]
+- [[loi-de-poisson]]

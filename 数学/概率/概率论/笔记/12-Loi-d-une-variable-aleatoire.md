@@ -64,3 +64,11 @@ $$\{X \in B\} = \{\omega \mid X(\omega) \in B\} = \bigsqcup_{x \in B \cap X(\Ome
 
 > [!example] Exemple 12.7
 > Soit $X = \mathbb{1}_A$ avec $A \in \mathcal{A}$. Alors $\mathbb{P}(X = 1) = \mathbb{P}(A)$ et $\mathbb{P}(X = 0) = \mathbb{P}(A^c) = 1 - \mathbb{P}(A)$. $X$ est une v.a. réelle et discrète.
+
+
+## Voir aussi
+- [[loi-d-une-variable-aleatoire]]
+- [[variable-aleatoire]]
+- [[mesure-de-probabilite]]
+- [[modele-discret]]
+- [[espace-probabilise]]

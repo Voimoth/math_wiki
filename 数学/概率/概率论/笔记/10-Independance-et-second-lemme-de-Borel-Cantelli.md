@@ -98,3 +98,12 @@ et l'on en déduit aussi $\sum_{k\in\mathbb{N}}\mathbb{P}(C_k)=0$. Donc $\mathbb
 > c'est-à-dire p.s. la pièce tombe sur pile une infinité de fois.
 
 **Preuve :** Soit $I=\limsup_{n\to\infty} C_n$. Dans ce modèle, la suite $(C_n)$ est indépendante et $\sum_{n\in\mathbb{N}}\mathbb{P}(C_n)=+\infty$. Le deuxième lemme de Borel–Cantelli donne donc $\mathbb{P}(I)=1$. $\#$
+
+
+## Voir aussi
+- [[independance]]
+- [[borel-cantelli]]
+- [[limsup-d-evenements]]
+- [[probabilite-conditionnelle]]
+- [[tribu-engendree]]
+- [[espace-probabilise]]

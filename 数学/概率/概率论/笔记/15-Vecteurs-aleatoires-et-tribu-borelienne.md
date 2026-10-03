@@ -54,3 +54,12 @@ $$\Omega \xrightarrow{X = (X_1, \dots, X_n)} \mathbb{R}^n \xrightarrow{f} \mathb
 
 > [!info] Rq. 15.5 (applications)
 > Si $X, Y$ sont deux variables aléatoires réelles, alors $X + Y$, $X - Y$, $XY$, $|X|$, $\min(X,Y)$, $\max(X,Y)$ sont des variables aléatoires réelles : ce sont les composées de $(X, Y)$ avec des fonctions continues de $\mathbb{R}^2$ dans $\mathbb{R}$.
+
+
+## Voir aussi
+- [[vecteur-aleatoire]]
+- [[tribu-borelienne]]
+- [[variable-aleatoire]]
+- [[tribu-engendree]]
+- [[tribu]]
+- [[espace-probabilise]]

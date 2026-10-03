@@ -100,3 +100,8 @@ $$\mathbb{E}\bigl[|X|^r\bigr]\le\bigl\|\,|X|^r\bigr\|_{L^{p/r}(\Omega)}\bigl\|1\
 > Plus généralement, pour tout $X\in L^2(\Omega)$ avec $\sigma(X)\ne0$, la variable
 > $$X^*:=\frac{X-\mathbb{E}[X]}{\sigma(X)}$$
 > est centrée réduite.
+
+## Voir aussi
+- [[esperance]]
+- [[variance]]
+- [[inegalites-lp]]

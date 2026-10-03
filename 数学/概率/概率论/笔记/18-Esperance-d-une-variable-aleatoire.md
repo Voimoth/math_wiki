@@ -106,3 +106,11 @@ Le théorème de Fubini--Tonelli (l'intégrande $|xy|\ge0$, et la séparation $d
 $$\left(\int_{\mathbb{R}}|x|\,dF_X(x)\right)\left(\int_{\mathbb{R}}|y|\,dF_Y(y)\right)<+\infty,$$
 c'est-à-dire $XY\in L^1(\Omega)$. Le même théorème, appliqué cette fois à $xy$ (dominé par $|xy|$, qui est intégrable), donne
 $$\mathbb{E}[XY]=\iint_{\mathbb{R}^2}xy\,dF_X(x)\,dF_Y(y)=\left(\int_{\mathbb{R}}x\,dF_X(x)\right)\left(\int_{\mathbb{R}}y\,dF_Y(y)\right)=\mathbb{E}[X]\,\mathbb{E}[Y].$$
+
+## Voir aussi
+- [[esperance]]
+- [[independance]]
+- [[fonction-de-repartition]]
+- [[mesure-de-probabilite]]
+- [[presque-sur]]
+- [[loi-d-une-variable-aleatoire]]

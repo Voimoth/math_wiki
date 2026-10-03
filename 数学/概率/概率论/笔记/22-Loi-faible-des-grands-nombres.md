@@ -89,3 +89,13 @@ $$\mathbb{P}(B_n)=\mathbb{P}\left(|S_n-T_n|\ge\frac{n\varepsilon}{3}\right)\le\f
 $$\mathbb{P}(A_n)=\mathbb{P}\left(\left|\frac{T_n}{n}-m_n\right|\ge\frac{\varepsilon}{3}\right)\le\frac{9}{n^2\varepsilon^2}\,n\,\mathrm{Var}\big(X_1^{(n)}\big)=\frac{9}{n\varepsilon^2}\,\mathbb{E}\big[X_1^2\mathbb{1}_{|X_1|\le n}\big]\xrightarrow{\text{Lemme 22.6 (ii)}}0.$$
 
 En conclusion, pour tout $\varepsilon>0$, $\displaystyle\lim_{n\to\infty}\mathbb{P}\left(\left|\frac{S_n}{n}-m\right|\ge\varepsilon\right)=0$, c'est-à-dire $\dfrac{S_n}{n}\xrightarrow{\mathbb{P}}m$. $\#$
+
+## Voir aussi
+- [[loi-faible-des-grands-nombres]]
+- [[inegalite-de-markov]]
+- [[inegalite-de-chebyshev]]
+- [[convergence-en-probabilite]]
+- [[variance]]
+- [[esperance]]
+- [[covariance]]
+- [[independance]]

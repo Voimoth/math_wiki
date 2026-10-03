@@ -69,3 +69,10 @@ La formule des probabilités composées permet de calculer la probabilité que $
 > [!info] Prop. 3.3 (formule de Bayes)
 > Soient $A,B\in\mathcal{F}$ tels que $\mathbb{P}(A)>0$ et $\mathbb{P}(B)>0$. Alors
 > $$\mathbb{P}(A\mid B) = \mathbb{P}(B\mid A)\frac{\mathbb{P}(A)}{\mathbb{P}(B)}.$$
+
+
+## Voir aussi
+- [[probabilite-conditionnelle]]
+- [[formule-des-probabilites-totales]]
+- [[mesure-de-probabilite]]
+- [[espace-probabilise]]

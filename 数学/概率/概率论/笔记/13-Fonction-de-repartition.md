@@ -67,3 +67,11 @@ $$\mathbb{P}(X = x) = \mathbb{P}(\{X \leq x\} \setminus \{X < x\}) = \mathbb{P}(
 
 **Preuve :** Soit $C \in \mathcal{F}$. Alors
 $$\mathbb{P}_{f(X)}(C) = \mathbb{P}(f(X) \in C) = \mathbb{P}(f \circ X \in C) = \mathbb{P}(\{\omega \mid (f \circ X)(\omega) \in C\}) = \mathbb{P}(\{\omega \mid X(\omega) \in f^{-1}(C)\}) = \mathbb{P}_X(f^{-1}(C)). \qquad \#$$
+
+
+## Voir aussi
+- [[fonction-de-repartition]]
+- [[loi-d-une-variable-aleatoire]]
+- [[variable-aleatoire]]
+- [[continuite-de-la-probabilite]]
+- [[tribu-borelienne]]

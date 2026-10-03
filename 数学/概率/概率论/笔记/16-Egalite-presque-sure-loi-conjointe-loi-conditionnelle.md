@@ -60,3 +60,13 @@ et de même pour la loi marginale de $X$. $\#$
 > $$\mathbb{P}(X = k \mid S = 7) = \frac{\frac{1}{36}}{\frac{1}{6}} = \frac{1}{6},$$
 > c'est-à-dire que la loi conditionnelle $\mathbb{P}_{X \mid S = 7}$ est la loi uniforme sur $[\![1, 6]\!]$ :
 > $$\mathbb{P}_{X \mid S = 7} = \mathbb{P}_X = \mathrm{Unif}\,[\![1, 6]\!].$$
+
+
+## Voir aussi
+- [[egalite-presque-sure]]
+- [[presque-sur]]
+- [[loi-conjointe]]
+- [[loi-conditionnelle]]
+- [[probabilite-conditionnelle]]
+- [[vecteur-aleatoire]]
+- [[loi-d-une-variable-aleatoire]]

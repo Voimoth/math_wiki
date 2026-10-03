@@ -74,3 +74,8 @@ $$\varphi : \{p\text{-arrangements d'éléments de } F\} \to \{f : E \to F \text
 
 > [!note] Déf. 3.11 ($p$-combinaison)
 > Une $p$-combinaison d'éléments de $E$ est un sous-ensemble de $E$ de cardinal $p$.
+
+## Voir aussi
+- [[principes-de-denombrement]]
+- [[arrangement-et-combinaison]]
+- [[ensemble-fini-et-cardinal]]

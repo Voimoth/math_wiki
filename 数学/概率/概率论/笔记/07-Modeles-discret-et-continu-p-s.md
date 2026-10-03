@@ -70,3 +70,10 @@ On voit une différence entre un événement de probabilité $0$ et un événeme
 > 4. si $A\subseteq B$ alors $P(A)\leq P(B)$ ;
 > 5. $P(A\cup B) = P(A) + P(B) - P(A\cap B)$ ;
 > 6. $P\!\left(\bigcup_{n\in\mathbb{N}} A_n\right) \leq \sum_{n\in\mathbb{N}} P(A_n)$.
+
+## Voir aussi
+- [[modele-discret]]
+- [[probabilite-uniforme]]
+- [[presque-sur]]
+- [[mesure-de-probabilite]]
+- [[tribu-borelienne]]

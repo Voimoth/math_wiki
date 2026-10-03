@@ -96,3 +96,12 @@ D'après la Prop. 11.3, $\mathbb{1}_A$ est mesurable, donc c'est une v.a. réell
 > $$id_{[0,1]} : ([0, 1], \mathcal{B}([0, 1])) \to ([0, 1], \mathcal{B}([0, 1]))$$
 > est une v.a. réelle : en effet, pour tout $B \in \mathcal{B}([0, 1])$, $id_{[0,1]}^{-1}(B) = B \in \mathcal{B}([0, 1])$.
 > Cette v.a. peut prendre une infinité non dénombrable de valeurs.
+
+
+## Voir aussi
+- [[variable-aleatoire]]
+- [[tribu-borelienne]]
+- [[tribu-engendree]]
+- [[tribu]]
+- [[espace-probabilisable]]
+- [[espace-probabilise]]

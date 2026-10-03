@@ -133,3 +133,12 @@ donc $P_1$ est vraie.
 $$\mathbb{P}(Y_{n+1} = k) = \sum_{j \in \mathbb{Z}} \mathbb{P}(Y_n = j)\,\mathbb{P}(X_{n+1} = k-j) = \mathbb{P}(Y_n = k-1)\,p + \mathbb{P}(Y_n = k)\,q$$
 $$= \binom{n}{k-1} p^k q^{n-k+1} + \binom{n}{k} p^k q^{n-k+1} = \binom{n+1}{k} p^k q^{n-k+1},$$
 c'est-à-dire $P_{n+1}$. La propriété est donc vraie pour tout $n \geq 1$. $\#$
+
+## Voir aussi
+- [[independance]]
+- [[loi-conjointe]]
+- [[loi-binomiale]]
+- [[loi-de-bernoulli]]
+- [[coefficient-binomial]]
+- [[fonction-de-repartition]]
+- [[loi-d-une-variable-aleatoire]]

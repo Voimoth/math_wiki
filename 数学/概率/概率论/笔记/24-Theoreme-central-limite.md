@@ -96,3 +96,13 @@ $$\varphi_1\left(\frac{t}{\sqrt{n}\,\sigma}\right)=1-\frac{t^2}{2n}+\frac{\varep
 Par suite
 $$\varphi_{Y_n}(t)=\left(1-\frac{t^2}{2n}+\frac{\varepsilon(n)}{n}\right)^n\xrightarrow[n\to\infty]{}e^{-\frac{t^2}{2}},$$
 qui est la fonction caractéristique de $\mathcal{N}(0,1)$. Par le théorème de continuité de Lévy, $Y_n\xrightarrow{\mathcal{L}}\mathcal{N}(0,1)$. $\#$
+
+## Voir aussi
+- [[theoreme-central-limite]]
+- [[convergence-en-loi]]
+- [[fonction-caracteristique]]
+- [[theoreme-de-continuite-de-levy]]
+- [[independance]]
+- [[variance]]
+- [[esperance]]
+- [[fonction-de-repartition]]

@@ -95,3 +95,8 @@ et $u \circ s \circ v^{-1}$ est une surjection $F \to E$. $\#$
 > Si l'on place $n$ objets dans $m$ tiroirs avec $n > m$, alors au moins un tiroir contient au moins deux objets.
 
 **Preuve :** Soit $f : E \to F$ l'application qui associe à chaque objet le tiroir où il est placé ($E$ = ensemble des objets, $F$ = ensemble des tiroirs). Comme $|E| > |F|$, l'application $f$ n'est pas injective : il existe $y \in F$ et $x_1, x_2 \in E$ tels que $f(x_1) = f(x_2) = y$ avec $x_1 \neq x_2$. $\#$
+
+## Voir aussi
+- [[ensemble-fini-et-cardinal]]
+- [[application-et-bijection]]
+- [[principe-des-tiroirs]]

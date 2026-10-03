@@ -64,3 +64,9 @@ confidence: medium
 ② $\Rightarrow$ ③. Si $f : A \to \mathbb{N}$ est une injection, alors $f : A \to f(A)$ est une bijection vers une partie de $\mathbb{N}$.
 
 ③ $\Rightarrow$ ①. Soit $B \subseteq \mathbb{N}$ tel que $A$ soit en bijection avec $B$. Si $B$ est fini, alors $A$ est fini. Si $B$ est infini, on définit $b_0 = \min B$, puis pour tout $n \geq 1$, $b_n = \min \{b \in B \mid b > b_{n-1}\}$. Alors $n \mapsto b_n$ est une bijection $\mathbb{N} \to B$, donc $A$ est dénombrable. $\#$
+
+## Voir aussi
+- [[coefficient-binomial]]
+- [[inclusion-exclusion]]
+- [[arrangement-et-combinaison]]
+- [[denombrabilite]]

@@ -99,3 +99,8 @@ Si $f : E \to F$ est bijective, alors on peut définir son application réciproq
 > [!note] Déf. 1.8 (image directe, image réciproque)
 > Soit $B \subseteq F$ ; l'image réciproque de $B$ par $f$ est $f^{-1}(B)$.
 > Soit $A \subseteq E$ ; l'image directe de $A$ par $f$ est $f(A)$.
+
+## Voir aussi
+- [[logique-des-propositions]]
+- [[operations-ensemblistes]]
+- [[application-et-bijection]]

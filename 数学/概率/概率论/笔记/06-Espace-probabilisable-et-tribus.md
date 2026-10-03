@@ -95,3 +95,11 @@ La famille $\mathcal{F}$ et les probabilités $\mathbb{P}(A)$ doivent satisfaire
 > - $\mathbb{P}$ est une mesure de probabilité sur $\mathcal{F}$.
 >
 > Modéliser une expérience aléatoire consiste à définir son espace de probabilité.
+
+## Voir aussi
+- [[tribu]]
+- [[espace-probabilisable]]
+- [[tribu-engendree]]
+- [[tribu-borelienne]]
+- [[mesure-de-probabilite]]
+- [[espace-probabilise]]

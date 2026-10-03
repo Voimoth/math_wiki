@@ -62,3 +62,9 @@ car la série $\sum_{n\ge0}\mathbb{P}(A_n)$ converge, donc son reste tend vers $
 
 > [!info] Rq. 2.5
 > Les résultats de la suite infinie des jeux ne sont pas nécessairement indépendants : le premier lemme de Borel–Cantelli ne requiert aucune hypothèse d'indépendance.
+
+## Voir aussi
+- [[continuite-de-la-probabilite]]
+- [[borel-cantelli]]
+- [[limsup-d-evenements]]
+- [[mesure-de-probabilite]]

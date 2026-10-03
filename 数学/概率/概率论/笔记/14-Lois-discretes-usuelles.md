@@ -96,3 +96,13 @@ $$= \frac{1}{k!} \cdot \frac{1}{(1-p_n)^k} \cdot (n p_n)\big[(n-1)p_n\big] \cdot
 > Le chapitre se poursuit par l'étude des vecteurs aléatoires : pour $n \geq 1$ on pose
 > $$\mathcal{B}(\mathbb{R}^n) = \sigma\Big(\{I_1 \times \cdots \times I_n \mid I_1, \dots, I_n \text{ sont des intervalles de } \mathbb{R}\}\Big),$$
 > tribu borélienne de $\mathbb{R}^n$ (elle contient tous les ouverts et tous les fermés de $\mathbb{R}^n$).
+
+
+## Voir aussi
+- [[loi-uniforme-discrete]]
+- [[loi-de-bernoulli]]
+- [[loi-binomiale]]
+- [[loi-geometrique]]
+- [[loi-de-poisson]]
+- [[coefficient-binomial]]
+- [[probabilite-uniforme]]

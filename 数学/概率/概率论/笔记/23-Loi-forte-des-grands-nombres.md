@@ -67,3 +67,13 @@ et la série $\sum_n\mathbb{P}(B_n)$ converge.
 
 > [!info] Rq.
 > L'hypothèse $X_1\in L^2(\Omega)$ n'est pas nécessaire : la loi forte des grands nombres reste vraie sous la seule hypothèse $X_1\in L^1(\Omega)$.
+
+## Voir aussi
+- [[loi-forte-des-grands-nombres]]
+- [[convergence-presque-sure]]
+- [[borel-cantelli]]
+- [[limsup-d-evenements]]
+- [[inegalite-de-chebyshev]]
+- [[convergence-en-probabilite]]
+- [[variance]]
+- [[esperance]]

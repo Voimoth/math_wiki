@@ -66,3 +66,8 @@ On a $A\in\mathcal{P}(E)$. Mais pour tout $x\in E$ : si $x\in A$, alors $x\notin
 **Preuve :** On définit
 $$\Phi : \{0,1\}^{\mathbb{N}} \to \mathbb{R},\qquad (d_n)_{n\in\mathbb{N}} \mapsto \sum_{n=0}^{+\infty} \frac{2d_n}{3^{n+1}}.$$
 $\Phi$ est injective.
+
+## Voir aussi
+- [[denombrabilite]]
+- [[ensemble-fini-et-cardinal]]
+- [[application-et-bijection]]
