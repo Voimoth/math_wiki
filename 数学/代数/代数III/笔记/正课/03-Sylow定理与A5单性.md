@@ -46,7 +46,7 @@ $$\pi^{-1}(K)/H \simeq K$$
 ## Références
 
 - Daniel Perrin, *Cours d'algèbre*.
-- Paul Krée, Jacques Vauthier, Mirella Krée, *Algèbre. Cours de Mathématiques et exercices de 2\textsuperscript{e} année*.
+- Paul Krée, Jacques Vauthier, Mirella Krée, *Algèbre. Cours de Mathématiques et exercices de 2$^{e}$ année*.
 - En anglais : Mike Artin, *Algebra* ; Nathan Jacobson, *Basic Algebra 1*.
 
 ## Sous-groupes de Sylow

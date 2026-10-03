@@ -27,7 +27,7 @@ $$= - \left( f'(x) - (f'(x)-f'(0))\cot(x-\theta) \right)^2 + f'(x)^2 - (f'(x)-f'
 在 $[0,2\pi]$ 上积分，则
 $$0 = G(2\pi)-G(0) = \int_0^{2\pi} G'(x)\,dx = \int_0^{2\pi} f'^2\,dx - \int_0^{2\pi} (f'(x)-f'(0))^2\,dx - \int_0^{2\pi} \left( f'(x) - (f'(x)-f'(0))\cot(x-\theta) \right)^2 dx,$$
 即
-$$\int_0^{2\pi} f'^2\,dx \geq \int_0^{2\pi} (f'(x)-f'(0))^2\,dx \ \cancel{2\pi}$$
+$$\int_0^{2\pi} f'^2\,dx \geq \int_0^{2\pi} (f'(x)-f'(0))^2\,dx $$
 $$= \int_0^{2\pi} \left( f'^2(x) - 2f'(x)f'(0) + f'(0)^2 \right) dx \geq \int_0^{2\pi} f'^2(x)\,dx.$$
 等号成立 $\iff f'(0)=0,\ f'(x) = (f'(x)-f'(0))\cot(x-\theta)$，即 $f' = f'\cot(x-\theta)$，$\frac{df}{f} = \cot(x-\theta)\,dx$
 $$\Rightarrow \log f + C = \log \sin(x-\theta) + C \Rightarrow f = C \sin(x-\theta). \ \#$$
