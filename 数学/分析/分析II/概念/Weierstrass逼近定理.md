@@ -4,7 +4,7 @@ created: 2026-10-03
 updated: 2026-10-03
 type: concept
 tags: [analysis, approximation, polynomial]
-sources: [分析II(1).pdf, 分析II(2).pdf]
+sources: [殷浩《分析 2》上册, 殷浩《分析 2》下册]
 confidence: high
 ---
 

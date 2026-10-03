@@ -4,7 +4,7 @@ created: 2026-09-10
 updated: 2026-09-10
 type: concept
 tags: [group-theory, algebre]
-sources: [代数III.pdf]
+sources: [代数III 课堂笔记(手写扫描)]
 confidence: high
 ---
 

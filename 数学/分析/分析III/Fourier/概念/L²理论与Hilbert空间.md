@@ -4,7 +4,7 @@ created: 2026-09-10
 updated: 2026-09-10
 type: concept
 tags: [fourier-series, orthogonal-system, convergence, proof-technique]
-sources: [Fourier笔记.md]
+sources: [殷浩《分析 3》Fourier 讲义]
 confidence: high
 ---
 

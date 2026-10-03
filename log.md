@@ -3,7 +3,7 @@
 > 数学与物理知识库的变更记录。数学和物理答疑的可复用内容直接沉淀到对应课程的概念页。
 
 ## [2026-09-11] ingest | 代数III 讲义续篇二($A_5$ 单性、60 阶群、$SO(3)$ 分类)
-- 来源:`C:\Users\13761\Downloads\扫描全能王 2026-09-11 12.04.pdf`(10 页,A5 扫描件,无文本层,视觉模型转写:deepseek-flash 整批 ok=10)
+- 来源:`扫描全能王 2026-09-11 12.04.pdf`(10 页,A5 扫描件,无文本层,视觉模型转写:deepseek-flash 整批 ok=10)
 - **更新 `代数III笔记.md`**(接在"Conséquence"块之后):
   - **Preuve de la simplicité de $\mathfrak{A}_5$**:元素普查(1+15+20+24=60,含 $\frac{5\binom{4}{2}}{2}=15$、$\binom{5}{3}\cdot 2=20$、$4!=24$ 三个计数);5-循环引理;逐类排除;$n\geqslant6$ 归约到 $n=5$($A_F\simeq A_5$ 单 + 选 3-循环 $\tau$ 造 $\sigma'=\tau\sigma\tau^{-1}\sigma^{-1}$ 使其至少固定 $n-5$ 点)
   - **Complément : groupe simple d'ordre 60**:指数 $\leqslant4$ 被 $|\mathfrak{S}_d|\leqslant24<60$ 排除;$k_5=6$(→24 个 5 阶元)、$k_2=15$;2-Sylow 两两交平凡的证明(中心化子 $C(u)$,用 $4\mid|C(u)|$、$[G:C(u)]=6\Rightarrow|C(u)|\leqslant10$、$8\nmid60$);矛盾 $1+24+45>60$
@@ -20,10 +20,10 @@
   - 已用 Node 枚举 $S_5/A_5$ 全部 120/60 个元素核验:**元素阶分布 1:1, 2:15, 3:20, 5:24**;$\mathfrak{A}_5$ 共轭类 $1,15,20,12,12$;$\mathfrak{A}_4$ 中 2 阶元仅 3 个、$V$ 在 $\mathfrak{A}_4$ 与 $\mathfrak{S}_4$ 中均正规;$\mathfrak{D}(\mathfrak{S}_4)=A_4$(12 阶)、$\mathfrak{D}(\mathfrak{A}_5)=\mathfrak{A}_5$(完美群);$16,21,25$ 均不整除 60
   - 手写稿 $C(u)$ 段经局部裁剪重读确认为 `4 \mid |C(u)|` 与 `[G:C(u)]=6 ⇒ |C(u)| ≤ 10`,**不是** `8 \mid |C(u)|`(转写初稿的 `6 ≤ |C(u)|` 已按原稿保留并补足推理)
 - **更新**:`群论学习路径.md`(主线地图延伸到 $A_5$/$SO(3)$,新增"应用"节)、`数学/代数/_索引.md`(补两页,更新关系图)、`代数III笔记.md` frontmatter sources/updated
-- 转写页图与临时脚本已清理(10 张 png + 转写 txt 均在 `Downloads\alg3_scan\`)
+- 转写页图与临时脚本已清理(页面图与转写中间产物已移至 agent 工作目录)
 
 ## [2026-09-10] ingest | 代数III 讲义续篇(Sylow 定理与对称群)
-- 来源:`C:\Users\13761\Downloads\代数III.pdf`(10 页,手写法语,无文本层,视觉模型转写)
+- 来源:`代数III.pdf`(10 页,手写法语,无文本层,视觉模型转写)
 - **转写通道修复**:`ds_vision_ustc.ps1` 的密钥正则 `api_key:\s*(sk-...)` 取的是配置中**第一个** sk- 密钥(DeepSeek 的),导致 401;新脚本 `ds_vision_ustc2.ps1` 按 provider 块边界(`^  custom:api-llm-ustc-edu-cn:` 起到下一个 provider 头)**定位 USTC 密钥**。另:4.4MB 原图触发 503,降到 0.6 倍(约 1.1MB)后稳定成功
 - **更新 `代数III笔记.md`**(接在第 3 节 $G_1=G/H$ 递推证明之后):
   - Références(Perrin/Krée/Artin/Jacobson)
@@ -38,7 +38,7 @@
 - 转写文本已归档为 `代数III-讲义提取.txt`;页面图与临时脚本已清理
 
 ## [2026-09-10] ingest | 新版 Fourier 讲义(sofar.pdf,36 页)+ 第 4-5 章概念页建设
-- 来源:`C:\Users\13761\Downloads\sofar (1).pdf`(36 页,2026-09 版,覆盖 §1-§5 并新增 §1.3/§3.6/§4.3/§5.5 历史注记);提取文本已归档为 `Fourier/笔记/sofar_extracted.txt`(替换旧的 17 页版本)
+- 来源:`sofar (1).pdf`(36 页,2026-09 版,覆盖 §1-§5 并新增 §1.3/§3.6/§4.3/§5.5 历史注记);提取文本已归档为 `Fourier/笔记/sofar_extracted.txt`(替换旧的 17 页版本)
 - 讲义实际进度:第 1-3 章(9 月 2 日课)+ 第 4 章 Cesàro/Abel 求和 + 第 5 章 L² 理论(9 月 26 日课);§6-§8 目录已列出但未讲授
 - **更新 `Fourier笔记.md`**:补 §1.3 历史注记详注(Bernoulli/Euler 之争、Dirichlet 1837 函数定义、Cantor 唯一性);第 3 章补 §3.6 反例史(du Bois-Reymond/Fejér/Kolmogorov/Lusin→Carleson/Kahane-Katznelson)并补 Zygmund Thm 11·10;新增 **§4 其它类型的逐点收敛**(4.1 公理化弱收敛、4.2 Cesàro、4.3 Abel、4.4 Hardy 注记)与 **§5 L² 理论**(5.1-5.5,含 Legendre 与历史注记);末尾加"三种收敛意义的层级"对照表与概念页索引
 - **新建概念页 5 个**:
@@ -95,7 +95,7 @@
 - 结构：习题课从"对称性"方向进入群论（对象+结构→保持变换群），与 Rosso 讲义主线互补；半直积 ⋊ 仅记号层面出现，正式定义留待后续课程
 
 ## [2026-10-03] create | Fourier 全课程(§6–§8)与点集拓扑(§1–§3)入库
-- 讲义归档:新 `fourier.pdf`(61 页,2026-09-21 版)替换 `书籍/分析/分析III/Fourier/fourier.pdf`;`sofar.pdf`(37 页,2026-09-30 版)放入 `书籍/分析/分析III/点集拓扑/`(该目录旧 `topo.pdf` 为往届完整版,保留未动)。
+- 讲义归档:新 `fourier.pdf`(61 页,2026-09-21 版)替换 旧版 `fourier.pdf`;`sofar.pdf`(37 页,2026-09-30 版)放入 点集拓扑目录(该目录旧 `topo.pdf` 为往届完整版,保留未动)。
 - Fourier:`Fourier笔记.md` 续写第 6–8 章(650→1131 行),开头涵盖范围更新为第 1—8 章;新建 11 概念页(傅里叶变换、缓降函数、速降函数、傅里叶逆变换、Plancherel定理、热方程、等周不等式、Weyl分布定理、发散傅里叶级数、Poisson求和公式、海森堡不确定性原理);讲义提取文本 `fourier-讲义-2026-09-21.txt` 入 `笔记/`。
 - 点集拓扑:新建笔记 `点集拓扑笔记.md`(§1–§3)与 12 概念页 + 入口页 `点集拓扑学习路径.md`;讲义提取文本 `sofar_extracted.txt` 入 `笔记/`。课程进行到 §3.3(9 月 30 日课),§4 起正文未讲授故未建页。
 - 更新:`分析III/_索引.md`、`点集拓扑/_索引.md`、`分析/_索引.md`、`傅里叶学习路径.md`。
@@ -132,3 +132,8 @@
 - 代数III:正课 9 篇移入 `笔记/正课/`,习题课 6 篇在 `笔记/习题课/`,两者不再区别对待。
 - 删除冗余讲义提取副产物:`fourier-讲义-full.txt`、`fourier-讲义.txt`(乱码)、`Fourier/笔记/sofar_extracted.txt`(旧版);保留现行 `fourier-讲义-2026-09-21.txt` 与 `点集拓扑/笔记/sofar_extracted.txt`。
 - 分析II 27 个概念页 sources 改指讲义 PDF。
+
+## [2026-10-03] refactor | vault 自包含化:去本地路径、清提取副产物
+- 全库 `sources:` 字段(113 处)改为**讲义名称**(如 `殷浩《分析 2》上册`、`Rosso《群论》讲义`),不再写文件名/路径;正文里的 `/mnt/e/书籍/...`、`C:\...`、`Downloads\...` 一律删除。
+- 讲义提取文本(txt)全部移出 vault(6 份 → agent 工作目录);`.gitignore` 增 `*.txt`.
+- 原则:本仓库是独立文档库,**不依赖用户本地其它文件**。

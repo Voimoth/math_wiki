@@ -36,3 +36,8 @@ node_modules/
 
 # Obsidian 自动生成的产物（反复出现，非笔记内容）
 wikilinks.md
+
+# 不要提交 OCR/提取副产物与其它非 vault 内容
+*.txt
+*.aux
+*.log
