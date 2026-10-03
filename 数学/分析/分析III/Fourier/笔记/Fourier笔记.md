@@ -1,7 +1,7 @@
 ---
 title: Fourier 合并笔记
 created: 2026-09-02
-updated: 2026-09-10
+updated: 2026-10-03
 type: notes
 tags: [fourier-series, notes, 分析III]
 confidence: high
@@ -10,7 +10,7 @@ confidence: high
 # Fourier 级数 笔记
 
 > [!info] 涵盖范围
-> 第 1—5 章（引言/分离变量、定义与计算、逐点收敛理论、Cesàro/Abel 广义求和、L² 理论）。讲义现为 36 页（sofar.pdf，2026-09 版），课程进行到 §5.5（9 月 26 日课）。第 6—8 章（应用、Fourier 变换、变换的应用）目录中已列出但正文尚未讲授。
+> 第 1—8 章（引言/分离变量、定义与计算、逐点收敛理论、Cesàro/Abel 广义求和、L² 理论、Fourier 级数的应用、Fourier 变换、Fourier 变换的应用）。讲义现为 61 页完整版（fourier-讲义-2026-09-21，2026-09 版），第 1—8 章正文齐备；其中第 6—8 章为本次续写（§6.3、§6.4 带 (*) 号，属选读）。
 
 ---
 
@@ -648,3 +648,484 @@ Riesz 后来回忆，是阅读 **Fatou 的论文**，特别是其中关于积分
 - [[勒让德多项式]] — 第 5 章 §5.4 推广
 - [[傅里叶学习路径]] — 学习路线图
 - [[傅里叶文献]] — 教材与参考资料
+
+---
+
+> [!info] 第 6—8 章（讲义 2026-09-21 版，61 页完整版，正文齐备）
+> 本部分续写讲义第 6—8 章。第 6 章 Fourier 级数的应用（§6.1 解方程、§6.2 等周不等式、§6.3 Weyl 分布定理 (*)、§6.4 连续函数的发散级数 (*)、§6.5 历史注记）；第 7 章 Fourier 变换（§7.1 缓降函数、§7.2 速降函数、§7.3 求逆公式、§7.4 $L^2$ 理论）；第 8 章 Fourier 变换的应用（§8.1 直线上的热方程、§8.2 Poisson 求和公式、§8.3 海森堡不确定性原理、§8.4 历史注记）。带 (*) 的小节为选读；§6.5、§8.4 历史注记由 AI 生成，供背景参考。
+
+## 6. Fourier 级数的应用
+
+**主线**：把前几章建立的理论落到具体问题上——严格求解热方程、证明等周不等式与 Weyl 等分布定理，并构造出 Fourier 级数在一点发散的连续函数。
+
+### 6.1 求解方程
+
+回到引言中试图求解的热方程初边值问题（周期边条件）：
+$$\begin{cases}\partial_t u=\partial_x^2 u \\ u(0,\theta)=f(\theta).\end{cases}$$
+这里不计较条件的最优，设 $f$ 很光滑，比如 $C^{l+1}$。要严肃讨论为什么引言中用分离变量法得到的形式解是真正的解。
+
+1. 将 $f$ 展开得 Fourier 系数，利用函数光滑性与 Fourier 系数衰减的关系，知道
+$$|a_n|,\ |b_n|\le M\,n^{-l}.$$
+2. 回忆分离变量给出的形式解
+$$u(t,\theta)=\sum_{n=0}^{\infty}\bigl(a_n\cos n\theta+b_n\sin n\theta\bigr)e^{-n^2kt}.$$
+右边为什么收敛？实际上可以证明右边在 $[0,\infty)\times[-\pi,\pi]$ 上一致收敛；更进一步，右边的级数的逐项求导也一致收敛（只要 $l$ 够大，可以逐项求很多次导数）。
+3. 如果逐项求导成立，那么只要代入方程计算，所有的形式计算就都是严格的了。
+
+> [!tip] 逐项求导为何合法（脚注 30、31）
+> 之前学的含参变量积分只有一个参数，现在 $(t,\theta)$ 都是参数。可以逐个分量去理解：对 $t$ 求导时把 $\theta$ 固定当常数，对 $\theta$ 求导时把 $t$ 看成常数，用之前的定理说明求导与求和可交换。
+>
+> 这里成功的关键又一次用到 $(\cos n\theta)''=-n^2\cos n\theta$。这是 Fourier 级数所选取的基优秀的原因：它本质上是算子 $Lu=\partial_\theta^2 u$ 的特征向量，而这些特征向量正好构成 Hilbert 空间的一组基——线性代数对应定理的推广。
+
+### 6.2 应用：等周不等式
+
+问题：平面上定长的曲线围成的最大面积是多少？答案：圆。我们假装有如下定理：
+
+> [!note] 定理 6.1（等周不等式）
+> 设 $\Gamma$ 是 $\mathbb{R}^2$ 上的简单闭曲线，长度为 $l$，$A$ 是该曲线围成的区域面积。则
+> $$A\le\frac{l^2}{4\pi},$$
+> 而且等号成立当且仅当 $\Gamma$ 是圆周。
+
+> [!info] Remark 6.2
+> 我们没有能力正经地证明。曲线、围成、长度这些概念比较深。仅对“光滑有正则参数化的简单闭曲线”证明。
+
+设有参数化曲线 $\gamma:[a,b]\to\mathbb{R}^2$，$\gamma(t)=(x(t),y(t))$。简单意味着 $\gamma$ 除去 $a,b$ 之外是单射；闭意味着 $\gamma(a)=\gamma(b)$；长度是 $\int_a^b|\gamma'|dt$。不妨设曲线的参数恰好表示弧长（这种参数化存在），则 $l=b-a$ 且 $|\gamma'(s)|=1$。面积公式：
+$$A=\frac12\int_a^b\bigl(x(t)y'(t)-y(t)x'(t)\bigr)dt=\int_a^b x(t)y'(t)\,dt.$$
+
+**证明**（不妨设 $l=2\pi$，$\gamma:[0,2\pi]\to\mathbb{R}^2$，继续用复的形式）。对 $x(s)$ 和 $y(s)$ 分别作复形式 Fourier 展开
+$$x(s)\sim\sum_n a_n e^{ins},\qquad y(s)\sim\sum_n b_n e^{ins},$$
+进而 $x'(s)\sim\sum_n a_n(in)e^{ins}$，$y'(s)\sim\sum_n b_n(in)e^{ins}$。弧长条件 $\int_0^{2\pi}\bigl((x')^2+(y')^2\bigr)ds=2\pi$ 和 Parseval 等式（见 [[Parseval恒等式]]）推出
+$$(6.1)\qquad\sum_{n=-\infty}^{\infty}n^2\bigl(|a_n|^2+|b_n|^2\bigr)=1.$$
+
+> [!info] 脚注 33（内积约定）
+> 这里的（复值）内积定义为 $\langle f,g\rangle=\dfrac{1}{2\pi}\displaystyle\int_{[-\pi,\pi]}f(x)\overline{g(x)}\,dx$，则 $e^{inx}$ 是一组单位正交基；若 $f\sim\sum_n c_ne^{inx}$，$g\sim\sum_n d_ne^{inx}$，则 $\langle f,g\rangle=\sum_n c_n\overline{d_n}$。
+
+利用 $A=\int_0^{2\pi}x(s)y'(s)\,ds$，
+$$\begin{aligned}
+A&\overset{(a)}{=}2\pi\sum_n a_n\overline{nb_n}\\
+&\overset{(c)}{\le}2\pi\sum_{n=-\infty}^{\infty}|a_n|\,|nb_n|\\
+&\overset{(d)}{\le}2\pi\sum_{n=-\infty}^{\infty}|na_n|\,|nb_n|\\
+&\overset{(b)}{\le}\pi\sum_{n=-\infty}^{\infty}n^2\bigl(|a_n|^2+|b_n|^2\bigr)=\pi.
+\end{aligned}$$
+
+> [!info] 取等号的条件
+> - (a) 那一步没有要求，注意 $y'$ 是实值函数，所以你可以认为上面有一个共轭；
+> - (b) 要求：对 $n\ne0$，$|a_n|=|b_n|$；
+> - (d) 要求：对 $|n|>1$，必须有 $a_nb_n=0$；结合前一点，对任何 $|n|>1$ 必须有 $a_n=b_n=0$；
+> - (c) 与 $a_0,b_0$ 没有关系，要求 $a_1b_1-a_{-1}b_{-1}=|a_1||b_1|+|a_{-1}||b_{-1}|$。另外由于 $x,y$ 实值，$a_{-1}=\overline{a_1}$，$b_{-1}=\overline{b_1}$。$a_1b_1$ 减去自己的共轭等于自己模长的 2 倍，说明它是纯虚数，故 $b_1=a_1\cdot(\pm i)$；
+> - 利用总长 $2\pi$ 的条件，$|a_1|=|b_1|=\frac12$。
+
+最后设 $a_1=u+iv$，则 $b_1=-v+iu$（或差一个符号），得
+$$x(s)=a_0+2u\cos\theta-2v\sin\theta,\qquad y(s)=b_0-2v\cos\theta-2u\sin\theta,$$
+不难看出这是半径为 1 的圆。
+
+证法的历史来历以及等周问题本身的故事，见 §6.5。
+
+### 6.3 Weyl 的分布定理 (*)
+
+设 $x$ 是实数，$\langle x\rangle\in[0,1)$ 表示 $x$ 的小数部分。
+
+> [!note] 定义 6.3（等分布）
+> $[0,1)$ 中的数列 $\{\xi_n\}$ 称为**等分布的**，如果对于任何 $(a,b)\subset[0,1)$，有
+> $$\lim_{N\to\infty}\frac{\#\{1\le n\le N\mid\xi_n\in(a,b)\}}{N}=b-a.$$
+> 落入区间的概率恰好是 $b-a$，故称等分布。
+
+> [!note] 定理 6.4（Weyl）
+> 设 $\gamma$ 是无理数，则数列 $x_n=\langle n\gamma\rangle$ 在 $[0,1)$ 中等分布。
+
+**证明**（分步）。
+1. 设 $f$ 是 $\chi_{[a,b]}$ 作周期一延拓得到的函数，则 $\#\{1\le n\le N\mid\xi_n\in(a,b)\}=\sum_{n=1}^{N}f(\xi_n)$（这里 $\xi_n=\langle n\gamma\rangle$）。因此只要证明
+$$(6.2)\qquad\lim_{N\to\infty}\frac1N\sum_{n=1}^{N}f(\xi_n)=b-a=\int_0^1 f(x)\,dx.$$
+2. 为证明 (6.2)，注意它两边都保持“序”，而且与“一致逼近”关系好：若 $f\le g$，则 $\frac1N\sum f(\xi_n)\le\frac1N\sum g(\xi_n)$ 且 $\int_0^1 f\le\int_0^1 g$；若 $|f-g|\le\varepsilon$，则两边的偏差都 $\le\varepsilon$。
+3. 先看 $f$ 是周期一的三角函数（固定 $k\in\mathbb{N}\setminus\{0\}$），$f(x)=e^{2\pi kix}$，则 (6.2) 的左边可以利用等比级数直接算出
+$$\frac1N\sum_{n=1}^{N}e^{(2\pi k\gamma)in}\longrightarrow0=\int_0^1 e^{2\pi kix}\,dx.$$
+（$k=0$ 时显然成立；这个极限用到 $\gamma$ 是无理数，等比级数求和时才能确保对任何 $k$ 分母都不为 0。）
+4. 于是 (6.2) 对三角多项式成立，进而对所有周期 1 的连续函数成立（因为可以一致逼近）。最后对 $f=\chi_{[a,b]}$，对任何 $\varepsilon>0$，取连续函数 $f_1\le f$ 且 $\int_0^1|f-f_1|(t)\,dt\le\varepsilon$。利用单调性
+$$\lim_{N\to\infty}\frac1N\sum_{n=1}^{N}f(\xi_n)\ge\lim_{N\to\infty}\frac1N\sum_{n=1}^{N}f_1(\xi_n)=\int_0^1 f_1(x)\,dx\ge\int_0^1 f(x)\,dx-\varepsilon.$$
+在 $f$ 的上方使用类似的逼近，得到另一个方向的不等式，然后令 $\varepsilon\to0$。证毕。
+
+> [!info] 讲义更正
+> 此处讲义有一处勘误批注（“之前的版本有问题，课上有问题，更正如下”），脚注 34 又指出后面并不用一致逼近这一点，称其为误导。
+
+Weyl 定理的历史背景见 §6.5。
+
+### 6.4 连续函数可以有发散的 Fourier 级数 (*)
+
+（参考 Stein 第 3.2.2 节。）
+
+从一个计算题开始，计算函数
+$$f(\theta)=\begin{cases}i(\pi-\theta), & 0<\theta<\pi,\\ i(-\pi-\theta), & -\pi<\theta\le0.\end{cases}$$
+它的 Fourier 级数为 $\displaystyle\sum_{n\ne0}\frac{e^{in\theta}}{n}$，对应的部分和
+$$S_N(\theta)=\sum_{1\le|n|\le N}\frac{e^{in\theta}}{n}=\sum_{1\le n\le N}\frac{e^{in\theta}-e^{-in\theta}}{n}.$$
+它的逐点收敛性质是已知的，尤其在 $\theta=0$ 处必须收敛于 0（确实，在 0 点实际上是 $n$ 和 $-n$ 项抵消才是 0）。单独看 $n\ge1$ 的部分，对应的是调和级数，不收敛。这个现象是下面构造的基础。
+
+> [!note] 引理 6.5
+> $\max_\theta|S_N(\theta)|$ 关于 $N$ 一致有界。
+
+**证明**（不平凡）。这是 Abel 和
+$$A_r(\theta)=\sum_{1\le n<\infty}r^n\frac{e^{in\theta}-e^{-in\theta}}{n}.$$
+断言 $\max_\theta|A_r(\theta)|\le C$ 关于 $r$ 一致。这一步简单，只要回忆 Poisson 核（见 [[Abel求和与Poisson核]]）
+$$A_r(\theta)=\frac{1}{2\pi}\int_{-\pi}^{\pi}f(\theta-\varphi)P_r(\varphi)\,d\varphi,$$
+把绝对值放进去，利用 $f$ 有界、$P_r(\theta)$ 的总权为 1。
+不平凡的是计算 $A_r(\theta)$ 和 $S_N(\theta)$ 的差。令 $c_n=\dfrac{e^{in\theta}-e^{-in\theta}}{n}$，对于任何 $N$，直接取 $r=1-\frac1N$（至于为什么这么取，不知道）。计算
+$$S_N(\theta)-A_r(\theta)=\sum_{1\le n\le N}c_n(1-r^n)-\sum_{n\ge N+1}c_nr^n.$$
+初等公式表明 $1-r^n=(1-r)(1+r+\cdots+r^{n-1})\le n(1-r)$，于是
+$$|S_N(\theta)-A_r(\theta)|\le\sum_{1\le n\le N}|c_n|\,n(1-r)+\sum_{n\ge N+1}|c_n|\,n\left(\frac1N\right)^n.$$
+由 $c_n$ 的表达式看出 $n|c_n|$ 有界，进而
+$$|S_N(\theta)-A_r(\theta)|\le NC(1-r)+\frac{C}{N}\sum_{n\ge0}r^n\le C,$$
+最后充分利用了 $r=1-\frac1N$。
+
+整个例子构造的想法与具体实现：取权重 $\alpha_k$ 与尺度 $N_k$（讲义取 $\alpha_k=\frac{1}{k^2}$，$N_k=3^{2^k}$），令
+$$P_k=e^{2N_ki\theta}\sum_{1\le|n|\le N_k}\frac{e^{in\theta}}{n}.$$
+$P_k$ 是一个三角多项式，其“阶”从 $N_k$ 到 $3N_k$。前面乘上一个有界的函数，就把 $-N_k$ 到 $N_k$ 阶的部分平移到 $N_k$ 到 $3N_k$ 了。妙处在于之前求和是一对对求的，平移之后再算 Fourier 级数的和就是一个个分别求和的。
+前面关于部分和一致有界的引理保证
+$$F(\theta)=\sum_{k=1}^{\infty}\alpha_kP_k(\theta)$$
+是一致收敛的函数项级数，进而 $F$ 连续。因为一致收敛，在算 $F$ 的 Fourier 系数时可以逐项积分，进而 $F$ 的 Fourier 级数系数就如同设计的一样。但 $F$ 的 Fourier 级数部分和在 0 点是不可能收敛的，因为
+$$S_{2N_k}(0)-S_{N_k}(0)=\alpha_k\sum_{n=N_k}^{2N_k}\left(-\frac1n\right)\sim-\alpha_k\log N_k\to-\infty.$$
+
+### 6.5 历史注记
+
+（本小节由 AI 生成，供背景参考。）
+
+本节的几个应用里，有两个可以直接对号到历史上的原始论文：等周不等式的证明就是 Hurwitz（1902）的证明，分布定理的证明就是 Weyl（1916）的判据与证法。它们分别是“Fourier 级数的几何应用”和“Fourier 级数的数论应用”两条线索的源头。第一个应用（严格求解热方程）所接续的历史——Fourier 本人与热方程的故事——已见第一节的历史注记（§1.3）。
+
+**等周不等式**。问题本身很古老：Zenodorus（约公元前 2 世纪）已经论说过“定长的闭曲线中圆围成的面积最大”，但著作失传，仅靠 Pappus《数学汇编》第五卷等后人转述保留。近代第一个有影响的论证属于 Steiner：1838 年的短文给出所谓“Steiner 对称化”——把沿一个方向的每条弦换成关于该方向的垂直平分线居中的等长弦，则面积不变而周长不增，除非图形本来就关于该轴对称；1841/42 年的长文又给出包括“四铰链法”在内的五种改进程序，于是面积最大者的每个内接角都必须是直角，由 Thales 定理的逆命题，曲线只能是圆。但两类论证都在同一步失足：“若原曲线是面积最大者”。Steiner 证明的是任何非圆的图形都可以被改进，这只能说明最大值若可达到则必在圆处达到；最大值的存在性本身并没有证明。Dirichlet 当时就指出了这个缺口，Steiner 始终不接受。
+
+这个缺口不是孤立的疏忽，而是时代的病症：Dirichlet–Riemann 在位势问题中也默认“下确界必被某个容许函数达到”。1870 年前后 Weierstrass 给出反例（在 $C^1[-1,1]$ 中以 $x(-1)=-1$、$x(1)=1$ 为边条件极小化 $\int_{-1}^1 t^2\dot x^2\,dt$，下确界为 0 但任何 $C^1$ 函数都达不到），确立了这类缺口的真实危险性。Weierstrass 本人在 1870 年代的柏林变分法讲义中给出了等周问题的第一个完整证明，但讲义生前未发表，直到 1927 年才据听课笔记整理收入《全集》第七卷。第一个发表的严格证明属于他的学生 Edler（1882），做法是在 Steiner 自己的框架内补入存在性论证，不过只针对凸曲线；Schwarz 在 1884 年给出的著名严格证明则是三维（球面）的情形。
+
+也许有人会问：1882 年，“严格化”所需的概念——可求长、有界变差、几乎处处可微——都还没有，Edler 的修补怎么可能？答案是 Steiner–Edler 定理的对象从头到尾是凸曲线，而凸性恰好规避了后来逼出测度论的全部病态：凸曲线的长度就是内接折线长度的上确界，单调收敛，无需任何一般定义。相比之下，一般的“可求长曲线”要等 Jordan 为 Fourier 级数收敛问题引入有界变差函数（1881）、又在《分析教程》中证明“可求长当且仅当参数化函数有界变差”（1893）才有定义；“有界变差函数几乎处处可微”要等 Lebesgue 的博士论文（1902）；“弧长等于积分”当且仅当参数化绝对连续，则是 Vitali（1905–1908）与 Tonelli（1908）的工作。所以准确地说：先有凸曲线的严格证明，后有“有界变差”这顶分析帽子。一般可求长曲线的等周定理之所以到二十世纪才完整，与其说是证明难，不如说是定理的陈述本身要等概念齐备才写得出来。
+
+本节的证法来自 Hurwitz：1901 年先投三页通报，1902 年全文发表，标题就叫《Fourier 级数的若干几何应用》。这是第一个完全不用几何作图的证明：弧长条件经 Parseval 等式变成系数的平方和，面积经 Green 公式变成系数的双线性型，逐项比较 $k\le k^2$ 即得不等式，等号条件一并落出——本节证明的每一步都在其中。同一篇论文还先对有界可积函数证明了 Parseval 等式（见 §5.5）。值得指出的是，这个证明内含了后来所谓 Wirtinger 不等式（一维的 Poincaré 不等式）的第一次几何应用，开创了“用谱间隙写几何不等式”的路线；经 Hardy–Littlewood–Pólya《不等式》（1934）收录后，它成为这个定理的标准证法之一。Hurwitz 为逐项求导假设了边界分段光滑；对一般可求长曲线的直接初等处理，最后由 E. Schmidt（1939）给出，只用 Green 公式和 Cauchy–Schwarz 不等式。
+
+**Weyl 的分布定理**。背景是 Kronecker 定理（1880 年代）：$\gamma$ 无理时，$\langle n\gamma\rangle$ 在 $[0,1]$ 中稠密。Weyl（1916）问的是更精细的问题：稠密还不够，轨道是否“均匀”地铺满区间？他的论文做了三件事。第一，把“模 1 等分布”定义为任意数列的一般性质——此前只有具体数列的具体稠密性，这个抽象化本身使分布成为一个可以研究的对象。第二，给出判据：数列等分布当且仅当对每个非零整数 $k$，$\frac1N\sum_{n\le N}e^{2\pi ik\xi_n}\to0$；本节的证明用的正是这个判据加等比级数求和，判据的内核其实是一个关于测度的 Fourier 唯一性命题——非零频率上 Fourier 系数全为零的测度只能是均匀测度。第三，对没有封闭公式可用的相位，Weyl 发明了“差分法”：把指数和取模平方并作平移，相位差的次数降一，归纳到底；由此证明一般多项式数列的等分布：只要多项式有非常数项的无理系数，$\langle P(n)\rangle$ 就等分布。
+
+值得说明的是这两个结果在 Weyl 自己论文里的地位。皇家学会的 Weyl 讣告（1957）说得直白：$\langle n\gamma\rangle$ 的等分布“已被其他人用多种方法证明过”，在文中只是主定理的“直接推论”（immediate deduction）——本节的等比级数估计就是全部所需；“更重要的推论”是多项式数列的等分布。同一篇讣告评价此文“对后来解析数论几乎所有工作都具有根本重要性”。这条时间线容易写反：并非“Weyl 提出问题、Hardy 看出应用”。Hardy 和 Littlewood 早在 1914 年就系统研究过 $\langle n^k\gamma\rangle$ 的分布并给出定量误差项，方法是用 theta 函数的 Jacobi 虚变换加 Poisson 求和——这正是后来圆法 major arc 结构的原始版本；但模变换是二次相位的专利，高次走不通，Weyl 的差分法不依赖任何模性、对任意次数有效，所以是真正的突破而不只是简化。1919 年起，Hardy–Littlewood 绕开单项式的局限，把“有理点局部化加消去”的结构独立出来发展成圆法。两人实为互相吸收：Hardy–Littlewood 给 Weyl 提供了问题，Weyl 给 Hardy 提供了把指数和当作通用对象的视角。
+
+最后澄清一个常见的误归属：$\langle n\gamma\rangle$ 的前 $N$ 个点把 $[0,1]$ 分成至多三种长度的区间，这个“三间隙定理”是 Steinhaus 的猜想，第一批证明属于 Sós、Świerczkowski 等人，已是 1950 年代末的事，与 Weyl 无关。另一个方向的后续也值得记一笔：等分布的定量化——偏差（discrepancy）的估计——经 Erdős–Turán 不等式归结为指数和估计，正是 Weyl 方法的直接后代，并经 Koksma–Hlawka 不等式成为拟 Monte Carlo 方法的基础。
+
+## 7. Fourier 变换
+
+**主线**：把频率从离散推向连续——Fourier 变换的定义、性质、求逆公式与 $L^2$ 等距。
+
+给定合适的 $f$，准备定义含参变量的积分
+$$\hat f(\xi):=\int_{-\infty}^{\infty}f(x)e^{-2\pi ix\xi}\,dx.$$
+这个函数称为函数 $f$ 的 Fourier 变换。讨论 Fourier 变换的时候，很难仅仅局限在实值函数讨论，所以从这里开始，我们都是考虑复值函数；即使 $f$ 是实值的，它的 Fourier 变换通常也不是。这个东西很有用，有很多优秀的性质。一个主要的困难是：如果对于性质很好的 $f$，那么这些性质很容易证明；对于性质一般的 $f$，很多看上去很简单的性质证明艰难多了。
+
+### 7.1 缓降函数
+
+我们约定
+$$\int_{-\infty}^{\infty}f(x)\,dx=\lim_{N\to\infty}\int_{-N}^{N}f(x)\,dx.$$
+
+> [!note] 定义 7.1（缓降函数）
+> $f:\mathbb{R}\to\mathbb{C}$ 称为**缓降的**，记为 $f\in M(\mathbb{R})$，如果 $f$ 是连续的，而且存在 $A>0$，使得
+> $$|f(x)|\le\frac{A}{1+x^2},\qquad x\in\mathbb{R}.$$
+
+注记：以上定义中的 $2$ 不是很本质的，你可以考虑换成任何比 $1$ 大的数。缓降函数的 Fourier 变换定义良好——虽然这不是最广泛的一类可以定义 Fourier 变换的函数，但至少是比较方便的一类。
+
+关于缓降函数，罗列如下初等性质：
+- 线性：$\forall f,g\in M(\mathbb{R})$，$\forall a,b\in\mathbb{C}$，$\displaystyle\int_{-\infty}^{\infty}(af+bg)\,dx=a\int_{-\infty}^{\infty}f\,dx+b\int_{-\infty}^{\infty}g\,dx$；
+- 平移不变性：对任何 $h\in\mathbb{R}$，$\displaystyle\int_{-\infty}^{\infty}f(x+h)\,dx=\int_{-\infty}^{\infty}f(x)\,dx$；
+- 伸缩：$\displaystyle\delta\int_{-\infty}^{\infty}f(\delta x)\,dx=\int_{-\infty}^{\infty}f(x)\,dx$；
+- 平移连续性：$\displaystyle\lim_{h\to0}\int_{-\infty}^{\infty}|f(x-h)-f(x)|\,dx=0$。
+
+证明过于简单就不多说了。
+
+> [!note] 定理 7.2
+> 设 $f\in M(\mathbb{R})$，则 $\hat f(\xi)$ 是连续函数，而且 $\displaystyle\lim_{\xi\to\infty}\hat f(\xi)=0$。
+
+（证明利用缓降的定义，转化成有界区间上的积分。）
+
+> [!example] 例子 7.3
+> 设 $f(x)=\chi_{[-1,1]}(x)$，则
+> $$\hat f(\xi)=\int_{-\infty}^{\infty}f(x)e^{-2\pi ix\xi}dx=\int_{-1}^{1}e^{-2\pi ix\xi}dx=2\int_0^1\cos(2\pi x\xi)\,dx=\frac{\sin 2\pi\xi}{\pi\xi}.$$
+
+> [!example] 例子 7.4
+> 设 $g(x)=\begin{cases}1-|x|,&|x|<1,\\0,&\text{otherwise}.\end{cases}$ 则
+> $$\hat g(\xi)=2\int_0^1(1-x)\cos(2\pi x\xi)\,dx=\cdots=\frac{\sin^2(\pi\xi)}{\pi^2\xi^2}.$$
+
+形式上还是有“函数越光滑对应的 Fourier 变换在 $\xi$ 趋于无穷时越快收敛于 0”。巧的是上面两个例子的 Fourier 变换还是实值的，因为它们是偶函数。
+
+### 7.2 速降函数
+
+> [!note] 定义 7.5（速降函数）
+> $f:\mathbb{R}\to\mathbb{C}$ 称为**速降的**，如果 $f$ 无穷次连续可微，而且对于任何 $k,l\in\mathbb{N}$，都有
+> $$\sup_{x\in\mathbb{R}}|x|^k\,|f^{(l)}(x)|\le C(k,l)<\infty.$$
+> 记全体速降函数为 $S(\mathbb{R})$。
+
+注意速降函数一定是缓降的：取 $k=0$ 和 $k=2$ 可知 $f$ 连续而且 $|f(x)|\le\frac{C}{1+x^2}$。所以速降函数的 Fourier 变换一定是定义良好的。
+
+> [!example] 例子 7.6
+> - 速降函数 $f$ 的任何导数都是速降的；
+> - 速降函数乘以任何多项式函数都是速降的；
+> - $f(x)=e^{-x^2}$ 是速降的；
+> - 紧支集的光滑函数是速降的。
+
+速降函数看上去很苛刻，但是是证明 Fourier 有关性质最愉快的函数空间。
+
+> [!info] 命题 7.7
+> 设 $f\in S(\mathbb{R})$：
+> - 平移函数 $f(x+h)$ 的 Fourier 变换为 $\hat f(\xi)e^{2\pi ih\xi}$；
+> - $f(x)e^{-2\pi ixh}\mapsto\hat f(\xi+h)$；
+> - 伸缩：$f(\delta x)\mapsto\delta^{-1}\hat f(\delta^{-1}\xi)$；
+> - 导数：$f'(x)\mapsto2\pi i\xi\hat f(\xi)$；
+> - 乘以 $x$：$-2\pi ixf(x)\mapsto\dfrac{d\hat f}{d\xi}(\xi)$。
+
+以上证明都很简单，略。但是它们合起来可以证明：
+
+> [!note] 定理 7.8
+> Fourier 变换把速降函数映射到速降函数。
+
+### 7.3 求逆公式
+
+求逆公式本身很好看，证明也不错。问题是需要用到一些广义积分的性质，不能说我们没有讲过，但是肯定不熟悉。好在如果仅仅考虑速降函数，对应的性质成立是不难想象的。
+
+> [!note] 引理 7.9
+> 1. $\displaystyle\int_{-\infty}^{\infty}e^{-\pi x^2}dx=1$；
+> 2. 若 $f(x)=e^{-\pi x^2}$，则 $\hat f(\xi)=f(\xi)$。
+
+**证明**。第一个性质是一个重要的结论，迟早要知道，至少有如下技巧证明：
+$$\int_{-\infty}^{\infty}e^{-\pi x^2}dx\cdot\int_{-\infty}^{\infty}e^{-\pi y^2}dy=\int_{\mathbb{R}^2}e^{-\pi r^2}r\,dr\,d\theta=1.$$
+第二个性质的证明利用了常微分方程（初值问题）的解的唯一性。易见 $f$ 满足方程
+$$f'(x)=-2\pi xf(x),\qquad f(0)=1.$$
+令 $F(\xi)=\int_{-\infty}^{\infty}f(x)e^{-2\pi ix\xi}dx$。利用引理第一条，有 $F(0)=1$（需要花力气去说明下面的计算是合理的），
+$$\begin{aligned}
+F'(\xi)&=\int_{-\infty}^{\infty}f(x)(-2\pi ix)e^{-2\pi ix\xi}dx\\
+&\overset{\text{ODE}}{=}\int_{-\infty}^{\infty}if'(x)e^{-2\pi ix\xi}dx\\
+&=(-i)\int_{-\infty}^{\infty}f(x)\cdot(-2\pi i\xi)e^{-2\pi ix\xi}dx=-2\pi\xi F(\xi).
+\end{aligned}$$
+由常微分方程的唯一性，$F(\xi)=f(\xi)$。
+
+卷积和 Fourier 变换有好的性质。
+
+> [!note] 引理 7.10
+> 若 $f,g\in S(\mathbb{R})$，则
+> $$\int_{-\infty}^{\infty}f(x)\hat g(x)\,dx=\int_{-\infty}^{\infty}\hat f(y)g(y)\,dy.$$
+
+**证明**。下面这个交换积分次序是合理的（需要花点力气，不过速降没问题）。
+$$\int_{-\infty}^{\infty}f(x)\hat g(x)\,dx=\int_{-\infty}^{\infty}f(x)\int_{-\infty}^{\infty}g(y)e^{-2\pi ixy}dy\,dx=\int_{-\infty}^{\infty}\!\!\int_{-\infty}^{\infty}f(x)g(y)e^{-2\pi ixy}dx\,dy=\text{交换次序}=\text{右边}.$$
+
+> [!note] 定理 7.11（求逆公式）
+> 若 $f\in S(\mathbb{R})$，则
+> $$f(x)=\int_{-\infty}^{\infty}\hat f(\xi)e^{2\pi ix\xi}d\xi.$$
+
+**证明**。利用 $e^{-\pi x^2}$ 的 Fourier 变换是自身，和初等性质。我们发现
+$$G_\delta(x)=e^{-\pi\delta x^2}$$
+的 Fourier 变换是
+$$K_\delta(x)=\frac{1}{\sqrt\delta}e^{-\pi x^2/\delta}.$$
+（观察当 $\delta\to0$ 时，这两个函数的形态：$G_\delta$ 渐渐地变成常值函数 1；$K_\delta$ 渐渐地变成那种“著名套路”中那个集中的权。）利用前一个引理
+$$(7.1)\qquad\int_{-\infty}^{\infty}f(x)K_\delta(x)\,dx=\int_{-\infty}^{\infty}\hat f(y)G_\delta(y)\,dy.$$
+令 $\delta\to0$，定理证明结束。
+
+> [!info] 讲义更正
+> 这个版本的求逆公式不好用，后面的例子说明了这个问题（课上并更正了一个符号，目前写的是对的）。一个常见的定理如下。
+
+> [!note] 定理 7.12（见 Rudin《Real and Complex Analysis》定理 9.11）
+> 如果 $f\in L^1$，而且 $\hat f\in L^1$，而且
+> $$g(x)=\int_{-\infty}^{\infty}\hat f(t)e^{2\pi ixt}dt,\qquad\forall x\in\mathbb{R},$$
+> 则 $g$ 连续，而且 $g=f$ 几乎处处。
+
+> [!note] 推论 7.13
+> 如果 $f$ 和 $\hat f$ 都是缓降的，定理 7.11 肯定成立。
+
+可以“理解”我们不可能从 $f$ 缓降推出 $\hat f$ 缓降；类似地也不可能从 $f$ 可积推出 $\hat f$ 可积。比如考虑在 $f$ 上加入一个非常振动、但是衰减非常快的函数，直观上这会给 $\hat f$ 在 $\xi$ 大的地方增加取值。所以定理成立的条件多半要同时约束 $f$ 和 $\hat f$。从定理证明的角度看，我们需要各种条件保证 (7.1) 成立：这个式子证明不复杂，本质上就是一个交换积分次序，但因为我们学习的积分理论比较弱，所以吃亏了。
+
+于是我们可以定义 Fourier 逆变换，对于任何 $f\in S(\mathbb{R})$，
+$$\check f(x)=\int_{-\infty}^{\infty}f(\xi)e^{2\pi ix\xi}d\xi.$$
+我们发现这个逆变换和变换差不多：$\check f(x)=\hat f(-x)$。既然 $\hat f$ 仍是速降函数，可以把上式中的 $f$ 换成 $\hat f$，得到 $\check{\hat f}(x)=\hat{\hat f}(-x)$。而由求逆公式，左边正是 $f(x)$，所以
+$$(7.2)\qquad f(x)=\hat{\hat f}(-x).$$
+换言之 $\hat{\hat f}(x)=f(-x)$。进而发现 Fourier 变换四次回到自己——Fourier 变换是一个周期为四的映射。
+
+把本节的内容组装起来，这是课上觉得想当然、但细细看应该要说明的结论：
+
+> [!note] 引理 7.14
+> Fourier 变换 $\mathcal{F}:S(\mathbb{R})\to S(\mathbb{R})$ 是线性同构，其逆映射就是 Fourier 逆变换 $\check{\ }$。
+
+**证明**。线性性由积分的线性性可得；$\mathcal{F}$ 把 $S(\mathbb{R})$ 映入 $S(\mathbb{R})$ 由上一小节的定理保证。
+单射：若 $\hat f=0$，由求逆公式（定理 7.11），$f=\check{\hat f}=0$。
+满射：对任何 $g\in S(\mathbb{R})$，令 $f=\check g$。由 $\check g(x)=\hat g(-x)$ 知 $f$ 也是速降的，而且
+$$\hat f(\xi)=\int_{-\infty}^{\infty}\hat g(-x)e^{-2\pi ix\xi}dx=\int_{-\infty}^{\infty}\hat g(y)e^{2\pi iy\xi}dy=g(\xi),$$
+最后一步是对 $g$ 用求逆公式。
+
+### 7.4 L² 理论
+
+和 Fourier 级数的理论类似，我们也可以在向量空间 $S(\mathbb{R})$ 上定义一个内积
+$$\langle f,g\rangle=\int_{-\infty}^{\infty}f\bar g\,dx.$$
+（记得我们考虑的是复值函数，所以速降函数空间也是复向量空间，这里需要一个 Hermite 内积。）本节的主要定理：
+
+> [!note] 定理 7.15
+> Fourier 变换是 $S(\mathbb{R})$ 到自身的等距。
+
+> [!note] 定义 7.16（卷积）
+> 对于合适的 $f,g$，$f$ 和 $g$ 的卷积定义为
+> $$(f*g)(x)=\int_{-\infty}^{\infty}f(y)g(x-y)\,dy.$$
+
+（至少速降函数是可以的，将来会说基本上 $L^1$ 就可以。）对于速降函数，卷积有性质：
+
+> [!note] 引理 7.17
+> 设 $f,g\in S(\mathbb{R})$，则
+> - $f*g\in S(\mathbb{R})$；
+> - $f*g=g*f$；
+> - $\widehat{f*g}(\xi)=\hat f(\xi)\hat g(\xi)$。
+
+**证明**。1. 当我们对卷积 $f*g$ 求导的时候，求导可以穿透积分号（因为大家速降，所以可以严格证明）。然后我们乘以 $x^l$，
+$$\begin{aligned}
+x^l(f*g)^{(k)}(x)&=\int_{-\infty}^{\infty}f(y)\,x^l g^{(k)}(x-y)\,dy\\
+&=\int_{-\infty}^{\infty}f(y)\,\bigl((x-y)+y\bigr)^l g^{(k)}(x-y)\,dy\\
+&=\int_{-\infty}^{\infty}\sum_{j=0}^{l}\binom{l}{j}y^{j}f(y)\cdot(x-y)^{l-j}g^{(k)}(x-y)\,dy\le C(k,l,f,g)<\infty.
+\end{aligned}$$
+上面最后一行用到 $f$ 和 $g$ 速降的性质。由 $k,l$ 的任意性，我们知道 $f*g$ 是速降的。
+2. 平凡的。
+3. 代入定义直接计算即可。
+$$\begin{aligned}
+\widehat{f*g}(\xi)&=\int_{-\infty}^{\infty}f*g(x)e^{-2\pi ix\xi}dx=\int_{-\infty}^{\infty}\!\!\int_{-\infty}^{\infty}f(y)g(x-y)\,dy\,e^{-2\pi ix\xi}dx\\
+&=\int_{-\infty}^{\infty}f(y)e^{-2\pi iy\xi}\left(\int_{-\infty}^{\infty}g(x-y)e^{-2\pi i(x-y)\xi}\,d(x-y)\right)dy\\
+&=\hat g(\xi)\int_{-\infty}^{\infty}f(y)e^{-2\pi iy\xi}\,dy=\hat g(\xi)\hat f(\xi).
+\end{aligned}$$
+
+**大定理**：
+
+> [!note] 定理 7.18（Plancherel）
+> 若 $f\in S(\mathbb{R})$，则 $\|f\|=\|\hat f\|$。
+
+**证明**（这个证明不难看懂，不过还是不容易想到）。令 $f^b(x)=f(-x)$，计算
+$$\widehat{f^b}(\xi)=\int_{-\infty}^{\infty}f(-x)e^{-2\pi ix\xi}dx=\int_{-\infty}^{\infty}f(-x)e^{2\pi ix\xi}dx=\int_{-\infty}^{\infty}f(y)e^{-2\pi iy\xi}dy=\hat f(\xi).$$
+设 $h(x)=(f*f^b)(x)$，则 $\hat h(\xi)=\hat f(\xi)\widehat{f^b}(\xi)=|\hat f(\xi)|^2$，且
+$$h(0)=(f*f^b)(0)=\int_{-\infty}^{\infty}f(y)f^b(0-y)\,dy=\int_{-\infty}^{\infty}|f|^2(x)\,dx.$$
+因为 $h\in S(\mathbb{R})$，用求逆公式 $h(0)=\int_{-\infty}^{\infty}\hat h(\xi)\,d\xi$。
+
+有了这个公式，我们可以做一些和 Fourier 级数类似的“完备化操作”：准备定义 $L^2(\mathbb{R},\mathbb{C})$ 为 $S(\mathbb{R})$ 在这个范数下的完备化。那么我们得到一个 Hilbert 空间 $L^2(\mathbb{R},\mathbb{C})$ 到自身的等距：Fourier 变换。
+
+（9 月 20 日的课结束在这里。）
+
+## 8. Fourier 变换的应用
+
+**主线**：Fourier 变换的三个应用——求解直线上的热方程、Poisson 求和公式、海森堡不确定性原理。
+
+### 8.1 求解直线上的热方程
+
+现在我们考虑在 $\mathbb{R}$ 上求解方程
+$$\begin{cases}\partial_t u=\partial_x^2 u,\\ u(x,0)=f(x).\end{cases}$$
+
+> [!info] Remark 8.1
+> 这里我们没有提出任何边条件。其一，既然考虑 $\mathbb{R}$ 似乎并没有边；其二，可以认为有物理过程对应，就是无穷远处啥也没有（所谓啥也没有，其实也是一个条件）；其三，数学上不提边条件还是会出问题的（唯一性不对）。
+
+形式上，我们可以在方程两边同时进行 Fourier 变换，继而
+$$\begin{cases}\partial_t\hat u(\xi,t)=-4\pi^2\xi^2\hat u(\xi,t),\\ \hat u(\xi,0)=\hat f(\xi).\end{cases}$$
+这可以看成是以 $\xi$ 为参数的一族 ODE，容易求得
+$$\hat u(\xi,t)=\hat f(\xi)e^{-4\pi^2\xi^2t}.$$
+再求逆变换可得 $u(x,t)=f*H_t$，其中 $\widehat{H_t}=e^{-4\pi^2\xi^2t}$，
+$$H(x,t)=\frac{1}{\sqrt{4\pi t}}e^{-\frac{x^2}{4t}}.$$
+那么我们形式上有求解公式
+$$u(x,t)=\int_{\mathbb{R}}f(y)\frac{1}{\sqrt{4\pi t}}e^{-\frac{|x-y|^2}{4t}}\,dy.$$
+
+这段“变换、解一族 ODE、再反演”的形式计算并不是后人的整理：Fourier 变换本来就是为解方程发明的。而它从一个解方程的技巧，逐步成长为整个线性偏微分算子理论的骨架——这条历史线路详见 §8.4。
+
+### 8.2 Poisson 求和公式
+
+> [!note] 定理 8.2（Poisson 求和公式）
+> 设 $f\in S(\mathbb{R})$，则
+> $$\sum_{n=-\infty}^{\infty}f(x+n)=\sum_{n=-\infty}^{\infty}\hat f(n)e^{2\pi inx}.$$
+> 特别地，当 $x=0$，
+> $$\sum_{n=-\infty}^{\infty}f(n)=\sum_{n=-\infty}^{\infty}\hat f(n).$$
+
+> [!info] Remark 8.3
+> 我们也可以从下面这个特殊的结论往上推，只要固定 $x$，用 $g(y)=f(x+y)$ 就可以了。
+
+**证明**。左边是一个周期 1 的函数，这个级数收敛得很好（这正是速降的用处；可以验证这个级数的任何阶导数都是一致收敛的）。我们计算它的 Fourier 级数，因为这个函数性质这么好，那么对应的 Fourier 级数一定收敛回到它。我们计算 Fourier 系数（$m$ 阶）
+$$\begin{aligned}
+&\int_0^1\sum_{n=-\infty}^{\infty}f(x+n)e^{-2\pi imx}dx=\sum_{n=-\infty}^{\infty}\int_0^1 f(x+n)e^{-2\pi imx}dx\\
+&=\sum_{n=-\infty}^{\infty}\int_n^{n+1}f(y)e^{-2\pi imy}dy=\int_{-\infty}^{\infty}f(y)e^{-2\pi imy}dy=\hat f(m).
+\end{aligned}$$
+所以看见右边正好是 Fourier 级数。
+
+Poisson 求和公式的应用：
+
+> [!example] 例子 8.4
+> 求证：$\forall\alpha\in\mathbb{R}\setminus\mathbb{Z}$，
+> $$\sum_{n=-\infty}^{\infty}\frac{1}{(n+\alpha)^2}=\frac{\pi^2}{(\sin\pi\alpha)^2}.$$
+
+暴力计算可得 $g(x)=\begin{cases}1-|x|,&|x|\le1,\\0,&\text{otherwise}\end{cases}$ 的 Fourier 变换 $\hat g(\xi)=\left(\dfrac{\sin\pi\xi}{\pi\xi}\right)^2$。利用 Fourier 变换和逆变换之间的关系（见 (7.2)），可以令 $f=\hat g$，知道 $\hat f=g$。对这个 $f$ 用 Poisson 求和公式
+$$\sum_{n=-\infty}^{\infty}\frac{(\sin\pi(n+\alpha))^2}{\pi^2(n+\alpha)^2}=\sum_{n=-\infty}^{\infty}\hat f(n)e^{2\pi in\alpha}=e^{2\pi i0\alpha}=1,$$
+进而得所要等式。（若 $\alpha$ 是整数，则上面那一步相当于两边同时除以了 0。）
+
+为什么可以用 Poisson 求和公式？回忆证明，主要是对周期 1 函数
+$$F(x)=\sum_{n=-\infty}^{\infty}\left(\frac{\sin\pi(x+n)}{\pi(x+n)}\right)^2$$
+使用 Fourier 级数。我们希望对应的 Fourier 级数逐点收敛回到 $F$ 自己。过去证明中关于 $F$ 的 Fourier 系数计算部分保持不变（那里只用到了 $F$ 的级数一致收敛，这由 $|\sin\pi(x+n)|\le1$ 和比较判别法立刻得到）。为了“希望”成立，我们验证 $F$ 是连续可导的：那么 $F$ 处处满足 Dini 条件，Fourier 级数逐点收敛回到 $F$。用函数项级数逐项求导的定理，$F$ 本身的级数已经一致收敛，只要验证逐项求导之后的级数还是一致收敛的：
+$$\left[\left(\frac{\sin\pi(x+n)}{\pi(x+n)}\right)^2\right]'=2\frac{\sin\pi(x+n)}{\pi(x+n)}\cdot\frac{\pi\cos\pi(x+n)\cdot\pi(x+n)-\pi\sin\pi(x+n)}{\pi^2(x+n)^2}.$$
+注意 $\dfrac{\sin\pi t}{\pi t}$ 在 $t=0$ 处是可去奇点，补充定义值为 1 以后是光滑函数，所以级数的每一项本来都是光滑的；下面的估计只是在 $|x+n|$ 大的时候才用。由 $|\sin|,|\cos|\le1$，当 $|x+n|\ge1$ 时通项的绝对值不超过
+$$\frac{2}{\pi|x+n|}\cdot\frac{\pi|x+n|+1}{\pi(x+n)^2}\le\frac{C}{1+n^2},$$
+其中 $C$ 与 $x\in[0,1]$ 和 $n$ 无关。而当 $x\in[0,1]$ 时，$|x+n|<1$ 的项至多两项（$n=0,-1$），它们是固定的 $C^1$ 函数，导数在 $[0,1]$ 上有界。合起来，求导后的级数在 $[0,1]$ 上一致收敛，$F$ 是连续可导的，Poisson 求和公式对这个 $f$ 确实成立。
+
+> [!example] 例子 8.5（$\mathbb{S}^1$ 和 $\mathbb{R}$ 上热核的关系）
+> 单位周长圆周上的热方程初值问题的解，也可以表示成一个与热核卷积的形式。以 $f(x)\sim\sum_n c_ne^{2\pi inx}$ 为初值的 Fourier 展开，则解是
+> $$u(x,t)=\sum_{n=-\infty}^{\infty}e^{-4\pi^2n^2t}c_ne^{2\pi inx}=\int_0^1 f(y)H_t(x-y)\,dy,$$
+> 其中 $H_t(x)=\displaystyle\sum_{n=-\infty}^{\infty}e^{-4\pi^2n^2t}e^{2\pi inx}$（这个函数天生是 $x$ 的周期 1 函数；物理意义明确，但似乎没有见过更加简单的表达形式）。
+> Claim：$\forall x$，$H_t(x)=\displaystyle\sum_{n=-\infty}^{\infty}H_t(x+n)$，其中 $H_t(x)=\dfrac{1}{\sqrt{4\pi t}}e^{-\frac{x^2}{4t}}$。
+> 证明直接对 $H_t$ 用 Poisson 求和公式，只需要回忆 $\widehat{H_t}(\xi)=e^{-4\pi^2\xi^2t}$。
+
+### 8.3 海森堡不确定性原理
+
+> [!note] 定理 8.6（不确定性原理）
+> 设 $\psi\in S(\mathbb{R})$，使得 $\displaystyle\int_{-\infty}^{\infty}|\psi(x)|^2dx=1$。则
+> $$\left(\int_{-\infty}^{\infty}x^2|\psi(x)|^2dx\right)\left(\int_{-\infty}^{\infty}\xi^2|\hat\psi(\xi)|^2d\xi\right)\ge\frac{1}{16\pi^2}.$$
+> 而且取等号，当且仅当存在 $B>0$ 和 $A\in\mathbb{C}$，$|A|^2=\sqrt{2B/\pi}$，使得
+> $$\psi(x)=Ae^{-Bx^2}.$$
+
+> [!info] Remark 8.7
+> 事实上，上述结论可以写成（对于任何 $x_0,\xi_0$）
+> $$\left(\int_{-\infty}^{\infty}(x-x_0)^2|\psi(x)|^2dx\right)\left(\int_{-\infty}^{\infty}(\xi-\xi_0)^2|\hat\psi(\xi)|^2d\xi\right)\ge\frac{1}{16\pi^2}.$$
+> 不难看出，使得左边取到最小的 $x_0$ 和 $\xi_0$ 分别是函数 $x$ 和 $\xi$ 在权重 $|\psi(x)|^2$ 和 $|\hat\psi|^2$ 下的平均值（期望）。只需针对这个值证明不等式，然而我们可以考虑 $\psi$ 的一个平移和相位变化使得对应的 $x_0,\xi_0$ 都是 0。这里用到了平移的 Fourier 变换公式。
+
+**证明**。
+$$1=\int_{-\infty}^{\infty}|\psi(x)|^2dx=-\int_{-\infty}^{\infty}x\frac{d}{dx}|\psi(x)|^2dx=-\int_{-\infty}^{\infty}x\bigl(\psi\bar\psi'+\psi'\bar\psi\bigr)dx.$$
+Schwarz 不等式说
+$$1\le2\left(\int_{-\infty}^{\infty}x^2|\psi|^2dx\right)^{1/2}\left(\int_{-\infty}^{\infty}|\psi'|^2dx\right)^{1/2}.$$
+另一方面，利用求导的 Fourier 变换公式以及 Plancherel（见 [[Plancherel定理]]）可知
+$$\int_{-\infty}^{\infty}|\psi'|^2dx=4\pi^2\int_{-\infty}^{\infty}|\xi|^2|\hat\psi(\xi)|^2d\xi.$$
+
+**取等号的条件**：从第一步等号到 Schwarz 不等式，实际经历了两步放缩（注意 $\psi\bar\psi'+\psi'\bar\psi=2\operatorname{Re}(\psi\bar\psi')$）
+$$1=-2\operatorname{Re}\int_{-\infty}^{\infty}x\psi\bar\psi'\,dx\le2\left|\int_{-\infty}^{\infty}x\psi\bar\psi'\,dx\right|\le2\left(\int_{-\infty}^{\infty}x^2|\psi|^2dx\right)^{1/2}\left(\int_{-\infty}^{\infty}|\psi'|^2dx\right)^{1/2}.$$
+要取等号，两个不等号必须同时取等。第二个是 Schwarz 不等式，取等要求 $x\psi$ 与 $\bar\psi'$ 线性相关，即存在常数 $\lambda\in\mathbb{C}$ 使得
+$$\psi'(x)=\lambda x\psi(x),\qquad\forall x\in\mathbb{R}.$$
+第一个不等号取等要求 $-\operatorname{Re}\int_{-\infty}^{\infty}x\psi\bar\psi'dx=\left|\int_{-\infty}^{\infty}x\psi\bar\psi'dx\right|$，即 $\int_{-\infty}^{\infty}x\psi\bar\psi'dx$ 是非正实数。代入 $\psi'=\lambda x\psi$ 得
+$$\int_{-\infty}^{\infty}x\psi\bar\psi'\,dx=\bar\lambda\int_{-\infty}^{\infty}x^2|\psi|^2dx,$$
+所以 $\lambda$ 必须是非正实数；若 $\lambda=0$，则 $\psi$ 是常数，与 $\|\psi\|_{L^2}=1$ 矛盾。记 $\lambda=-2B$，$B>0$，解方程 $\psi'=-2Bx\psi$ 得
+$$\psi(x)=Ae^{-Bx^2}.$$
+最后由归一化条件 $1=\int_{-\infty}^{\infty}|\psi|^2dx=|A|^2\sqrt{\pi/(2B)}$ 定出 $|A|^2=\sqrt{2B/\pi}$，而 $A$ 的相位任意。反过来，直接代入可知这一族函数确实使两个不等号同时取等。
+
+### 8.4 历史注记
+
+（本小节由 AI 生成，供背景参考。）
+
+Fourier 变换和微分方程的关系比 Fourier 级数更直接：这个变换本身就是为解微分方程发明的。1822 年《热的解析理论》第九章第一节的标题就是“无限长直线上热的自由运动”——正是本节第一个应用的问题。Fourier 在那里做完整套本节的计算：叠加 $e^{-q^2t}\cos qx$ 型的解，再令承载区间的尺度趋于无穷，让离散频率变成连续参数——他自己写道，三角函数倍弧的展开“se transforment en intégrales définies”（变成了定积分），从级数到积分的过渡是“en donnant une valeur infinie aux dimensions”。由此得到今天的反演公式：偶函数的情形
+$$\frac{\pi}{2}F(x)=\int_0^{\infty}\cos qx\,dq\int_0^{\infty}F(\alpha)\cos q\alpha\,d\alpha,$$
+一般函数的情形
+$$\pi y(x)=\int_0^{\infty}d\alpha\,y(\alpha)\int_0^{\infty}dq\,\cos q(x-\alpha).$$
+他甚至注意到这里的核有“cette singulière propriété”：乘上任意函数再积分，“l'effet de l'intégration est de changer $a$ en $x$ et de multiplier par le nombre $\pi$”——用今天的眼光看，这是 $\delta$ 函数（点质量）的第一次显式出场，比 Dirac 早一个世纪；而它出场的语境正是解方程：热量集中于一点（“foyer”）的解是 Gauss 型函数，一般初值的解就是它的叠加，即本节的卷积公式 $u=f*H_t$。
+
+**从一个方程到一类方程。** 把这个工具变成方法的是 Cauchy：他关于水面波的获奖论文（1815 年投稿、1816 年获奖、1827 年才发表）对空间变量作 Fourier 变换，把偏微分方程化成一族以频率为参数的常微分方程，解出再反演——正是本节的计算流程；1820 年代他又把它系统地用于一般的常系数线性偏微分方程。这一步的意义不限于多解了几个方程：它暴露出方法的内核，即求导在 Fourier 变换下变成乘法。一个常系数线性算子 $P(\partial)$ 被变成乘以多项式 $P(\xi)$——今天称之为算子的象征（symbol）——于是“解方程 $P(\partial)u=f$”在变换后成了代数问题“用 $P(\xi)$ 去除”。Fourier 变换由此从一个解方程的技巧，变成了研究算子本身的工具。
+
+**谱的视角。** $e^{ix\xi}$ 是 $\partial_x^2$ 的“特征函数”，Fourier 变换就是按这组连续谱特征函数的展开——Weyl（1908 年学位论文，1910 年长文）把 Sturm–Liouville 展开理论推进到奇异情形（无穷区间、系数有奇点），表明连续谱展开是一大类微分算子的通性，Fourier 变换只是其中最简单的例子。到 von Neumann（1929）建立无界自伴算子的谱定理，这条线索被收进一般理论：Fourier 变换正是算子 $-\partial_x^2$ 的谱分解。这也可以看作引言里那个观察——“基选得好，是因为它们是算子的特征向量”——的无穷区间版本。
+
+**基本解。** 与谱视角平行的是另一条线索：求“集中源”的响应。Fourier 的“foyer”之后，Green（1828）在静电学中引入以他命名的函数，Kirchhoff（1882）给出波方程的基本解；解一般初值或一般右端的问题就归结为与基本解的卷积。对变系数方程，Levi（1907）对椭圆方程发明了 paramétrix——用冻结系数造出的近似基本解，再做修正——这个想法后来一再复活。
+
+**严格化与除法问题。** 形式演算的合法化走了近一个世纪：逐点理论沿 Dirichlet（1829）–Jordan（1881）的路线移植到积分，$L^2$ 理论由 Plancherel（1910）建立（见 §5.5），Bochner（1932）的专著总结了当时的知识。真正的转折是广义函数：Sobolev（1936）为解双曲方程的 Cauchy 问题引入它，Schwartz 建立完整理论（1950–51 年出书，1950 年获 Fields 奖）——在缓增广义函数空间 $S'$ 上，Fourier 变换是自同构，求导永远可以进行，卷积与乘法永远互换，Fourier 和 Cauchy 的全部形式演算都成了定理。压轴的一笔来自 Cauchy 留下的代数视角：除法 $\hat u=\hat f/P(\xi)$ 在广义函数里是否总可以做？Ehrenpreis 与 Malgrange（1953–54）证明可以——任何常系数线性偏微分算子都有基本解；Hörmander 的学位论文（1955）进而按多项式 $P(\xi)$ 的增长性质给算子分类。Fourier 变换由此给出了一般常系数算子理论的基石。
+
+**变系数与微局部化。** 常系数理论的成功自然引出变系数的问题。Lewy（1957）的著名反例表明朴素的推广会失败：存在光滑系数的线性方程，连局部解都没有。出路是把 Fourier 变换“局部化”：Calderón–Zygmund（1952）的奇异积分理论（变系数椭圆方程的估计），Kohn–Nirenberg（1965）的拟微分算子——把象征 $P(\xi)$ 推广为依赖于 $x$ 的 $a(x,\xi)$，Levi 的 paramétrix 在其中成为系统的代数运算；Hörmander 的 Fourier 积分算子（1971）再进一步，处理双曲方程中波的传播。这一套“微局部分析”是今天线性偏微分算子理论的主体，而它的定义本身——拟微分算子就是“在 Fourier 变换那边乘以一个象征”——表明 Fourier 变换自始至终是这门理论的骨架。故事甚至绕回了起点：Atiyah–Singer 指标定理（1963）的热方程证明（McKean–Singer, 1967），用的正是 Fourier 当年那只热核。
+
+最后说明范围：本节另外两个应用各有自己的历史线索，此处不展开——Poisson 求和公式可以追溯到 Poisson 关于定积分与级数求和的论文（1823），不确定性原理则属于量子力学的历史（Heisenberg 1927 年提出，严格的数学表述与证明见 Kennard 1927、Weyl 1928）。
+
+---
+
+## 概念页索引（第 6—8 章新增）
+
+- [[等周不等式]] — 第 6 章 §6.2（Fourier 方法证明等周不等式）
+- [[Weyl分布定理]] — 第 6 章 §6.3（模 1 等分布）
+- [[发散傅里叶级数]] — 第 6 章 §6.4（连续函数可以有发散的 Fourier 级数）
+- [[热方程]] — 第 6 章 §6.1 与第 8 章 §8.1（Fourier 级数/变换两种解法）
+- [[傅里叶变换]] — 第 7 章（定义、性质、求逆、$L^2$ 理论）
+- [[缓降函数]] — 第 7 章 §7.1
+- [[速降函数]] — 第 7 章 §7.2
+- [[傅里叶逆变换]] — 第 7 章 §7.3
+- [[Plancherel定理]] — 第 7 章 §7.4
+- [[Poisson求和公式]] — 第 8 章 §8.2
+- [[海森堡不确定性原理]] — 第 8 章 §8.3
