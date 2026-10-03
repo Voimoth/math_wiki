@@ -128,6 +128,24 @@ $$|X| \equiv |X^S| \pmod p,$$
 
 所以 $|X^S| = 1$，从而 $k \equiv 1 \pmod p$。又由 2) $k \mid |G|$；结合 $k \equiv 1 \bmod p$ 与 $p \nmid m$ 可得 $k \mid m$。$\square$
 
+## 5′. 存在性的另一条证明（归纳 + 类方程）
+
+> [!tip] 思路一句话
+> Sylow 三段可以记成：**$p$-群定存在、共轭定唯一、双计数定个数。** 下面这条存在性证明不经过 $\mathrm{GL}_n(\mathbb F_p)$，只用到「$p$-群有各阶子群」与类方程，更能看出它为何是必然的。
+
+**引理**：$p^n$ 阶群对每个 $i$ 都有 $p^i$ 阶子群。
+*证明*：取 $z \in Z(G)$ 非平凡，把 $z$ 的阶降到 $p$，则 $\langle z\rangle \triangleleft G$；$G/\langle z\rangle$ 是 $p^{n-1}$ 阶 $p$-群，对 $n$ 归纳，再取原像即得。$\square$
+
+**定理（存在性）**：$|G| = p^{\alpha}m$，$p \nmid m$。对 $|G|$ 归纳。
+
+- **若 $p \mid |Z(G)|$**：取 $z \in Z(G)$ 阶 $p$，则 $\langle z\rangle \triangleleft G$，$|G/\langle z\rangle| = p^{\alpha-1}m$。归纳给 $G/\langle z\rangle$ 的 $p^{\alpha-1}$ 阶子群，**原像**回 $G$ 即 $p^\alpha$ 阶子群。
+- **若 $p \nmid |Z(G)|$**：类方程
+  $$|G| = |Z(G)| + \sum_{\text{非中心}} [G : Z(x)]$$
+  中 $|G| \equiv 0$、$|Z(G)| \not\equiv 0 \pmod p$，故至少有一个非中心项 $[G : Z(x)]$ 与 $p$ 互素。于是真子群 $H = Z(x)$ 满足 $p^\alpha \mid |H|$，对 $H$ 归纳即得。
+
+> [!tip] 关键认识
+> 归纳真正需要的不是「指数 $p$ 的子群」（它未必存在——$A_5$、$p=3$ 就是），而是**一个把 $p^\alpha$ 完整保留的真子群** $H$：于是 $|H| = p^{\alpha}m'$，$m' < m$，问题搬到更小的群上。$p \mid |Z(G)|$ 时用商，$p \nmid |Z(G)|$ 时用类方程逼出 $Z(x)$，两条路都服务于这一个目的。
+
 ## 6. 应用：按阶判断非单群
 
 > [!example] 例 1：$|G| = 63$ ⟹ $G$ 不单
