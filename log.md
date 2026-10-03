@@ -137,3 +137,9 @@
 - 全库 `sources:` 字段(113 处)改为**讲义名称**(如 `殷浩《分析 2》上册`、`Rosso《群论》讲义`),不再写文件名/路径;正文里的 `/mnt/e/书籍/...`、`C:\...`、`Downloads\...` 一律删除。
 - 讲义提取文本(txt)全部移出 vault(6 份 → agent 工作目录);`.gitignore` 增 `*.txt`.
 - 原则:本仓库是独立文档库,**不依赖用户本地其它文件**。
+
+## [2026-10-03] refactor | 清空 agent 遗留物、删除 README
+- agent 工具脚本搬出 vault:PDF 提取(node+pdfjs,含 node_modules)与两个 extract 脚本 → `~/.hermes/tools/math-wiki-scripts/`(搬家后已实测提取正常)。
+- git 钩子存档由 `共享/scripts/git-hooks/` 移至 `共享/git-hooks/`,`.gitattributes` 同步。
+- 删除根 `README.md`(用户要求:目录分类已足够清晰,不必额外说明);`.gitignore` 去掉 pdfjs 旧规则。
+- vault 现在只剩 md、`.gitignore/.gitattributes`、钩子存档与一张笔记附件 SVG。

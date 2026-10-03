@@ -31,8 +31,6 @@ node_modules/
 *.heic
 *.raw
 
-# pdfjs 脚本目录里的临时 PDF 副本（原始讲义不放这里）
-共享/scripts/pdfjs/*.pdf
 
 # Obsidian 自动生成的产物（反复出现，非笔记内容）
 wikilinks.md
