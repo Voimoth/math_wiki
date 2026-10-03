@@ -1373,9 +1373,9 @@ Supposons $\exists x$ d'ordre $d$, $x^d = 1$. $x$ est racine du polynôme $X^d -
 S'il existe un élément d'ordre $d$, tout autre élément d'ordre $d$, qui doit être racine de ce polynôme, est nécessairement dans le groupe cyclique engendré par $x$.
 
 Appelons $N(d)$ le nombre d'éléments d'ordre $d$ dans $\mathbb{F}_q^*$. On a : si $N(d) \neq 0$, alors $N(d) = \varphi(d)$.
-$$\text{Dans } \mathbb{F}_q^* , \ q-1 = \sum_{d \mid n} N(d)$$
-$$\text{Dans } \mathbb{Z}/(q-1)\mathbb{Z} , \ q-1 = \sum_{d \mid n} \varphi(d)$$
-$$\left. \begin{array}{l} \forall d \mid n \ , \ N(d) = \varphi(d) \\ \text{en particulier } N(q-1) = \varphi(q-1) \neq 0 \end{array} \right\}$$
+$$\text{Dans } \mathbb{F}_q^* , \ q-1 = \sum_{d \mid q-1} N(d)$$
+$$\text{Dans } \mathbb{Z}/(q-1)\mathbb{Z} , \ q-1 = \sum_{d \mid q-1} \varphi(d)$$
+$$\left. \begin{array}{l} \forall d \mid q-1 \ , \ N(d) = \varphi(d) \\ \text{en particulier } N(q-1) = \varphi(q-1) \neq 0 \end{array} \right\}$$
 
 Pour $\alpha$ quelconque $\geq 2$. Il suffit de trouver un élément $x$ d'ordre $p^{\alpha-1}$ et un élément $y$ d'ordre $p-1$, car alors, comme $p^{\alpha-1} \wedge (p-1) = 1$, $xy$ sera d'ordre $p^{\alpha-1}(p-1)$.
 
@@ -1470,7 +1470,7 @@ Remarque : on a alors $\forall x \in A, x^{d_r} = 1$, $|A| = d_1 \dots d_r$.
 ex. pour $A$ ci-dessus, l'exposant est $d_r$.
 
 > [!note] Prop
-> Soit $A$ groupe abélien fini. Alors $\exists x \in A$ dont l'ordre est l'exposant de $A$, ainsi pour $A$ abélien, l'exposant est aussi le minimum des ordres des éléments de $A$.
+> Soit $A$ groupe abélien fini. Alors $\exists x \in A$ dont l'ordre est l'exposant de $A$, ainsi pour $A$ abélien, l'exposant est aussi le maximum des ordres des éléments de $A$.
 
 **Preuve :** Soit $e$ = exposant de $A$.
 (1) $e = p_1^{\alpha_1} p_2^{\alpha_2} \dots p_r^{\alpha_r}$, $p_i$ premiers $2 \leq 2 \leq t$, $\alpha_i \geq 1$.
@@ -1623,7 +1623,7 @@ $$\downarrow^{\simeq} \mathbb{Z}/2\mathbb{Z}$$
 
 l'application $f(\bar{1}) \in \text{aut}(\mathbb{Z}/4\mathbb{Z})$ envoit $\bar{1}$ sur $-\bar{1}$.
 
-2) la suite n'est pas scindée. Ceci signifie qu'il n'y a pas d'élément d'ordre 2 dans $G/H$. Sinon, un tel élément y engendre un sous-groupe $P = \{e, y\}$, $P \cap H = \{e\}$ et $\pi_P : P \to \mathbb{Z}/2\mathbb{Z}$ isomorphisme.
+2) la suite n'est pas scindée. Ceci signifie qu'il n'y a pas d'élément d'ordre 2 dans $G\setminus H$. Sinon, un tel élément y engendre un sous-groupe $P = \{e, y\}$, $P \cap H = \{e\}$ et $\pi_P : P \to \mathbb{Z}/2\mathbb{Z}$ isomorphisme.
 
 Dans $H \simeq \mathbb{Z}/4\mathbb{Z}$, il y a unique élément d'ordre 2 : $\bar{2}$. Donc dans $G$ il y a un unique élément d'ordre 2, on l'appelle $\alpha$. $\underline{\alpha \in Z(G)}$ :
 $$\forall g \in G, (g \alpha g^{-1})^2 = \alpha g \alpha g^{-1} = e \Rightarrow g \alpha g^{-1} = \alpha.$$
@@ -1794,7 +1794,7 @@ L'image de ce morphisme est appelé sous-groupe à un paramètre.
 > [!note] Prop
 > Si $n \geq 3$, si $i \neq j \neq k \neq i$, dans $\{1, 2, \dots, n\}$ : $[E_{ij}(\lambda), E_{jk}(\mu)] = E_{ik}(\lambda \mu)$
 
-**Preuve.** Calcul en utilisant $E_{ij}E_{kl} = \delta_{jk}E_{il} , E_{ij}(\lambda) = I - \lambda E_{ij}$.
+**Preuve.** Calcul en utilisant $E_{ij}E_{kl} = \delta_{jk}E_{il} , E_{ij}(\lambda)^{-1} = I - \lambda E_{ij}$.
 
 **Groupes dérivés**
 
@@ -1879,7 +1879,7 @@ Conclusion: $G_x$ maximal.
 
 **Preuve du thm.**
 $$PSL_n(k) = SL_n(k) / Z(SL_n(k))$$
-Soit $N \triangleleft PSL_n(k)$. Montrons $N = \{e\}$ ou $N = PSL_n(k)$. Via la correspondance bijective entre sous-groupes (resp. distingués) de $PSL_n(k)$ et sous-groupes (resp. distingués) de $SL_n(k)$ contenant $Z(SL_n(k))$, on va montrer : si $N \triangleleft SL_n(k)$ avec $Z(SL_n(k)) \subset N$, alors $N \cdot Z(SL_n(k))$ ou $N = SL_n(k)$.
+Soit $N \triangleleft PSL_n(k)$. Montrons $N = \{e\}$ ou $N = PSL_n(k)$. Via la correspondance bijective entre sous-groupes (resp. distingués) de $PSL_n(k)$ et sous-groupes (resp. distingués) de $SL_n(k)$ contenant $Z(SL_n(k))$, on va montrer : si $N \triangleleft SL_n(k)$ avec $Z(SL_n(k)) \subset N$, alors $N = Z(SL_n(k))$ ou $N = SL_n(k)$.
 
 2 situations :
 1) $\exists$ une droite $D \subset k^n$ stabilisée par $N$, i.e. $\forall g \in N, g(D) = D$. Alors $N$ stabilise toutes les droites de $k^n$, et donc $N \supset Z(SL_n(k))$. En effet, $SL_n(k)$ agit transitivement sur $\mathbb{P}(k^n)$. Si $D' \in \mathbb{P}(k^n), \exists g \in SL_n(k), g(D) = D'$. Or soit $Stab(D') = g Stab(D) g^{-1}$. Or on a supposé $N \subset Stab(D)$. $\implies gNg^{-1} \subset g Stab(D) g^{-1} = Stab(D')$. D'où $N$ stabilise $D', \forall D'$.
@@ -1976,7 +1976,7 @@ On appelle transvection (resp. dilatations) toute matrice conjuguée d'une matri
 On a introduit les matrices de transvection élémentaires
 $$E_{ij}(\lambda) = Id + \lambda E_{ij} \ , \ (i \neq j) \ \lambda \in \mathbb{K}^*$$
 et les matrices dilatation élémentaires
-$$D_i(\lambda) = \lambda E_{ii} \ , \ \lambda \in \mathbb{K}^* \ , \ \lambda \neq 1$$
+$$D_i(\lambda) = Id + (\lambda - 1)E_{ii} \ , \ \lambda \in \mathbb{K}^* \ , \ \lambda \neq 1$$
 
 On appelle matrice de transvection, toute matrice conjuguée à une matrice de transvection élémentaire. On appelle matrice de dilatation, toute matrice conjuguée d'une matrice de dilatation élémentaire.
 
