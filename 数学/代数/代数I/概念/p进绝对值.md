@@ -39,6 +39,7 @@ confidence: medium
 
 - [[p进赋值]]
 - [[算术基本定理]]
+- [[Archimedean性质]] — p 进绝对值给出非阿基米德绝对值（分析 I）
 
 ## 相关笔记
 

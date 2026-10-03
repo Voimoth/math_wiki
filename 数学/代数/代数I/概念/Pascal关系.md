@@ -37,6 +37,8 @@ confidence: medium
 
 - [[二项式系数]] — 被递推生成的对象
 - [[二项式定理]] — 使用这些系数的展开式
+- [[coefficient-binomial]] — 二项式系数与二项式公式（概率论）
+- [[loi-binomiale]] — 二项分布用到这些系数（概率论）
 
 ## 相关笔记
 

@@ -37,7 +37,8 @@ confidence: medium
 ## Voir aussi
 - [[vecteur-aleatoire]]
 - [[operations-ensemblistes]]
-
+- [[拓扑空间]]
+- [[生成拓扑]]
 ## Notes du cours
 
 - [[06-Espace-probabilisable-et-tribus|概率论 · 06-Espace-probabilisable-et-tribus]]

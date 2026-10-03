@@ -45,7 +45,7 @@ confidence: medium
 - [[tribu-borelienne]]
 - [[mesure-de-probabilite]]
 - [[loi-d-une-variable-aleatoire]]
-
+- [[连续映射]]
 ## Notes du cours
 
 - [[11-Variables-aleatoires-et-mesurabilite|概率论 · 11-Variables-aleatoires-et-mesurabilite]]

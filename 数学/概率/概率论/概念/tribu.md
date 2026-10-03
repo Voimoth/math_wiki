@@ -42,7 +42,8 @@ confidence: medium
 - [[espace-probabilisable]]
 - [[mesure-de-probabilite]]
 - [[espace-probabilise]]
-
+- [[拓扑空间]]
+- [[集合的运算]]
 ## Notes du cours
 
 - [[06-Espace-probabilisable-et-tribus|概率论 · 06-Espace-probabilisable-et-tribus]]

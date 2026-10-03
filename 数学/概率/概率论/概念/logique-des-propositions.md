@@ -44,7 +44,8 @@ confidence: medium
 ## Voir aussi
 - [[operations-ensemblistes]]
 - [[application-et-bijection]]
-
+- [[逻辑联结词]]
+- [[蕴含与等价]]
 ## Notes du cours
 
 - [[01-Logique-ensembles-et-applications|概率论 · 01-Logique-ensembles-et-applications]]

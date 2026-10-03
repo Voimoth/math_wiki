@@ -135,6 +135,8 @@ $$|u(r,\theta)-f(\theta_0)| \le \sup_\theta|u(r,\theta)-f(\theta)| + |f(\theta)-
 - [[狄利克雷核]] — 三种核的对照起点
 - [[傅里叶级数收敛]] — 严格收敛理论
 - [[分离变量法]] — 圆盘 Laplace 问题与第 1 章的热方程/调和函数主题呼应
+- [[分析I/概念/Abel求和]] — Abel 求和的级数侧
+- [[分析I/概念/Laplace算子与调和函数]] — Poisson 核解圆盘 Dirichlet 问题
 
 ## 相关笔记
 

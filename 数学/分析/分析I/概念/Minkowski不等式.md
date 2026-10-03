@@ -42,6 +42,7 @@ confidence: medium
 - [[Hölder不等式]] — 证明工具
 - [[赋范向量空间]] — $\|\cdot\|_p$ 的三角不等式
 - [[Minkowski泛函]] — 凸集构造范数
+- [[inegalites-lp]] — ‖·‖ₚ 三角不等式的概率论版本
 
 ## 相关笔记
 

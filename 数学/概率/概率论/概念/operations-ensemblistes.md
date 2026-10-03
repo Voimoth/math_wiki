@@ -43,7 +43,8 @@ confidence: medium
 ## Voir aussi
 - [[logique-des-propositions]]
 - [[application-et-bijection]]
-
+- [[集合的运算]]
+- [[子集]]
 ## Notes du cours
 
 - [[01-Logique-ensembles-et-applications|概率论 · 01-Logique-ensembles-et-applications]]

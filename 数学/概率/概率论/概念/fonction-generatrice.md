@@ -44,7 +44,8 @@ confidence: medium
 - [[loi-de-poisson]]
 - [[loi-binomiale]]
 - [[independance]]
-
+- [[幂级数与收敛半径]]
+- [[几何级数]]
 ## Notes du cours
 
 - [[21-Fonctions-generatrices|概率论 · 21-Fonctions-generatrices]]

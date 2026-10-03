@@ -30,6 +30,7 @@ confidence: medium
 
 - [[一阶线性ODE与积分因子]] — 同一个积分因子技巧
 - [[Picard-Lindelöf定理]] — 用 Gronwall 型估计证明解的唯一性
+- [[牛顿决定性原理与微分方程解的唯一性]] — Gronwall 估计正是 ODE 解唯一性的物理含义
 
 ## 相关笔记
 

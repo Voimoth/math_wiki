@@ -39,6 +39,7 @@ $$\ln w_{n+1}-\ln w_n=-\frac{1}{12n^2}+O\!\left(\frac1{n^3}\right),$$
 - [[Euler-Maclaurin公式]]
 - [[积分判别法]]
 - [[级数的渐近估计]] — 与积分作渐近展开的一般思路
+- [[Gamma函数与Beta函数]] — Γ(n+1)=n! ，Stirling 由 Γ 的渐近给出
 
 ## 相关笔记
 

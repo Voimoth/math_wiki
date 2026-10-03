@@ -39,6 +39,7 @@ confidence: high
 - [[一致收敛级数的性质]]
 - [[Abel与Dirichlet判别法]]
 - [[Weierstrass逼近定理]]
+- [[正项级数判别法]]（分析I）— M-判别把一致收敛化归数项级数收敛
 
 ## 相关笔记
 

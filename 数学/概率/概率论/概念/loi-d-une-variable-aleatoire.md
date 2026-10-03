@@ -45,7 +45,7 @@ confidence: medium
 - [[variable-aleatoire]]
 - [[mesure-de-probabilite]]
 - [[fonction-de-repartition]]
-
+- [[变量替换]]
 ## Notes du cours
 
 - [[12-Loi-d-une-variable-aleatoire|概率论 · 12-Loi-d-une-variable-aleatoire]]

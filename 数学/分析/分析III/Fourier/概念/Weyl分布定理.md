@@ -46,6 +46,8 @@ $$\lim_{N\to\infty}\frac1N\sum_{n\le N}f(\xi_n)=\int_0^1 f(x)\,dx.$$
 - [[傅里叶系数唯一性]] — 与“测度的 Fourier 唯一性”同源
 - [[傅里叶级数]] — 三角多项式的稠密性与一致逼近
 - [[Parseval恒等式]] — 正交系上的均方工具
+- [[概率论/概念/fonction-caracteristique]] — 测度的 Fourier 变换（特征函数）
+- [[概率论/概念/convergence-en-loi]] — 等分布与测度收敛的对照
 
 ## 相关笔记
 

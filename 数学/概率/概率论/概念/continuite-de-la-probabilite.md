@@ -44,7 +44,7 @@ car $\left(\bigcup_{n\le N} A_n\right)_N$ est croissante et $\left(\bigcap_{n\le
 ## Voir aussi
 - [[borel-cantelli]]
 - [[limsup-d-evenements]]
-
+- [[单调有界定理]]
 ## Notes du cours
 
 - [[08-Continuite-et-premier-lemme-de-Borel-Cantelli|概率论 · 08-Continuite-et-premier-lemme-de-Borel-Cantelli]]

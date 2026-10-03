@@ -39,7 +39,7 @@ confidence: medium
 - [[borel-cantelli]]
 - [[loi-faible-des-grands-nombres]]
 - [[inegalite-de-chebyshev]]
-
+- [[上极限与下极限]]
 ## Notes du cours
 
 - [[23-Loi-forte-des-grands-nombres|概率论 · 23-Loi-forte-des-grands-nombres]]

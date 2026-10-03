@@ -35,7 +35,7 @@ confidence: medium
 - [[inegalite-de-markov]]
 - [[variance]]
 - [[loi-faible-des-grands-nombres]]
-
+- [[Jensen不等式]]
 ## Notes du cours
 
 - [[22-Loi-faible-des-grands-nombres|概率论 · 22-Loi-faible-des-grands-nombres]]

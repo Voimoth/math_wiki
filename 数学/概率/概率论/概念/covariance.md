@@ -52,7 +52,8 @@ Propriétés.
 - [[esperance]]
 - [[independance]]
 - [[inegalites-lp]]
-
+- [[数量积]]
+- [[Cauchy-Schwarz不等式]]
 ## Notes du cours
 
 - [[20-Covariance-variance-d-une-somme-et-lois-usuelles|概率论 · 20-Covariance-variance-d-une-somme-et-lois-usuelles]]

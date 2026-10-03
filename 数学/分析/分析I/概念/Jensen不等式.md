@@ -39,6 +39,7 @@ confidence: medium
 - [[凸函数]] — 定义与等价刻画
 - [[Young不等式]] — 由 $-\ln$ 的凸性导出
 - [[Hölder不等式]] — 由 Young 导出
+- [[esperance]] — E[φ(X)]≥φ(E[X]) 的期望形式
 
 ## 相关笔记
 

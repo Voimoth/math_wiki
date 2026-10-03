@@ -46,6 +46,7 @@ $$\text{Dedekind 完备}\iff\text{Cauchy 完备}+\text{Archimedean}.$$
 - [[Cauchy列]]
 - [[Archimedean性质]]
 - [[完备性的等价形式]]
+- [[上界与下界]] — Dedekind 完备=有上界子集有上确界的序论表述
 
 ## 相关笔记
 

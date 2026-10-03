@@ -39,6 +39,7 @@ confidence: medium
 - [[Abel求和公式]] — Stieltjes 形式的分部积分
 - [[Riemann可积性]] — 取 $\mu(x)=x$ 的特例
 - [[分部积分]] — 分部求和思想的 Riemann 版本
+- [[fonction-de-repartition]] — 以分布函数为积分元即概率期望的 Stieltjes 形式
 
 ## 相关笔记
 

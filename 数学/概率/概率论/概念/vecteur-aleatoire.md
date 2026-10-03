@@ -36,7 +36,7 @@ confidence: medium
 ## Voir aussi
 - [[tribu-borelienne]]
 - [[egalite-presque-sure]]
-
+- [[笛卡尔积]]
 ## Notes du cours
 
 - [[15-Vecteurs-aleatoires-et-tribu-borelienne|概率论 · 15-Vecteurs-aleatoires-et-tribu-borelienne]]

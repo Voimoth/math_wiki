@@ -51,7 +51,7 @@ est centrée réduite.
 - [[esperance]]
 - [[covariance]]
 - [[inegalites-lp]]
-
+- [[数量积]]
 ## Notes du cours
 
 - [[19-Moments-variance-et-inegalites-Lp|概率论 · 19-Moments-variance-et-inegalites-Lp]]

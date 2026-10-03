@@ -40,7 +40,7 @@ confidence: medium
 - [[principes-de-denombrement]]
 - [[principe-des-tiroirs]]
 - [[denombrabilite]]
-
+- [[集合的势]]
 ## Notes du cours
 
 - [[02-Ensembles-finis-cardinal-et-comparaison|概率论 · 02-Ensembles-finis-cardinal-et-comparaison]]

@@ -39,7 +39,7 @@ confidence: medium
 - [[coefficient-binomial]]
 - [[principes-de-denombrement]]
 - [[application-et-bijection]]
-
+- [[二项式系数]]
 ## Notes du cours
 
 - [[03-Denombrement-arrangements-et-combinaisons|概率论 · 03-Denombrement-arrangements-et-combinaisons]]

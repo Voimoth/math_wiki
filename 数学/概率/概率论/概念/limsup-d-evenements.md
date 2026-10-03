@@ -33,7 +33,8 @@ confidence: medium
 ## Voir aussi
 - [[borel-cantelli]]
 - [[continuite-de-la-probabilite]]
-
+- [[上极限与下极限]]
+- [[集合的运算]]
 ## Notes du cours
 
 - [[08-Continuite-et-premier-lemme-de-Borel-Cantelli|概率论 · 08-Continuite-et-premier-lemme-de-Borel-Cantelli]]

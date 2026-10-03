@@ -40,7 +40,8 @@ confidence: medium
 - [[loi-de-bernoulli]]
 - [[coefficient-binomial]]
 - [[loi-de-poisson]]
-
+- [[二项式定理]]
+- [[二项式系数]]
 ## Notes du cours
 
 - [[14-Lois-discretes-usuelles|概率论 · 14-Lois-discretes-usuelles]]

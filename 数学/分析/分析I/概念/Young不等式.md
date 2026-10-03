@@ -40,6 +40,7 @@ confidence: medium
 - [[Hölder不等式]] — 直接应用
 - [[Jensen不等式]] — 凸性形式
 - [[凸函数]] — $-\ln$ 的凸性
+- [[inegalites-lp]] — ab≤aᵖ/p+bᵠ/q 是 Lᵖ 不等式的构件
 
 ## 相关笔记
 

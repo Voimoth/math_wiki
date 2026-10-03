@@ -28,6 +28,7 @@ confidence: medium
 
 - [[混合偏导数相等]] — 保证 $\Delta$ 的定义不依赖求导次序
 - [[向量场的散度与旋度]] — $\Delta=\operatorname{div}\nabla$
+- [[热方程]] — Δ 是热方程的空间部分，调和函数为其稳态
 
 ## 相关笔记
 

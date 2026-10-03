@@ -58,6 +58,8 @@ $$a\leqslant b\overset{\text{def}}{\iff}\exists c\in\mathbb{N},\ a+c=b.$$
 - [[数学归纳法]]
 - [[良序]]
 - [[超限归纳法]]
+- [[实数公理化]] — 实数公理化以 Peano 公理的 N 为基础（分析 I）
+- [[Cauchy列构造实数]] — 从 N 构造实数的途径（分析 I）
 
 ## 相关笔记
 

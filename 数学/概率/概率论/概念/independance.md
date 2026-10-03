@@ -41,7 +41,7 @@ confidence: medium
 - [[loi-conjointe]]
 - [[loi-conditionnelle]]
 - [[operations-ensemblistes]]
-
+- [[笛卡尔积]]
 ## Notes du cours
 
 - [[10-Independance-et-second-lemme-de-Borel-Cantelli|概率论 · 10-Independance-et-second-lemme-de-Borel-Cantelli]]

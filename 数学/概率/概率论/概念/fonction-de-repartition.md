@@ -45,7 +45,7 @@ confidence: medium
 ## Voir aussi
 - [[variable-aleatoire]]
 - [[loi-d-une-variable-aleatoire]]
-
+- [[单调有界定理]]
 ## Notes du cours
 
 - [[13-Fonction-de-repartition|概率论 · 13-Fonction-de-repartition]]

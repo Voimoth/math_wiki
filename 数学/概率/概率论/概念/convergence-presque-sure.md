@@ -40,7 +40,7 @@ confidence: medium
 - [[limsup-d-evenements]]
 - [[convergence-en-probabilite]]
 - [[loi-forte-des-grands-nombres]]
-
+- [[上极限与下极限]]
 ## Notes du cours
 
 - [[23-Loi-forte-des-grands-nombres|概率论 · 23-Loi-forte-des-grands-nombres]]

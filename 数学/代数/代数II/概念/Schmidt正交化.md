@@ -48,6 +48,8 @@ confidence: medium
 - [[正交投影]]
 - [[基]]
 - [[Legendre多项式]]
+- [[正交函数系]]
+- [[L²理论与Hilbert空间]]
 
 ## 相关笔记
 

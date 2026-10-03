@@ -37,7 +37,8 @@ confidence: medium
 - [[limsup-d-evenements]]
 - [[independance]]
 - [[continuite-de-la-probabilite]]
-
+- [[级数与部分和]]
+- [[上极限与下极限]]
 ## Notes du cours
 
 - [[08-Continuite-et-premier-lemme-de-Borel-Cantelli|概率论 · 08-Continuite-et-premier-lemme-de-Borel-Cantelli]]

@@ -37,6 +37,7 @@ confidence: medium
 - [[Mertens定理]]
 - [[绝对收敛与条件收敛]]
 - [[Abel求和]]
+- [[fonction-generatrice]] — 生成函数的乘积正是 Cauchy 卷积
 
 ## 相关笔记
 

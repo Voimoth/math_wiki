@@ -44,7 +44,7 @@ confidence: medium
 ## Voir aussi
 - [[loi-de-bernoulli]]
 - [[variable-aleatoire]]
-
+- [[几何级数]]
 ## Notes du cours
 
 - [[14-Lois-discretes-usuelles|概率论 · 14-Lois-discretes-usuelles]]

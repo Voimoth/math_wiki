@@ -58,7 +58,8 @@ Sur $L^2(\Omega)$ on munit l'espace du produit scalaire $\langle X,Y\rangle:=\ma
 - [[variance]]
 - [[covariance]]
 - [[inegalite-de-markov]]
-
+- [[Hölder不等式]]
+- [[Minkowski不等式]]
 ## Notes du cours
 
 - [[19-Moments-variance-et-inegalites-Lp|概率论 · 19-Moments-variance-et-inegalites-Lp]]

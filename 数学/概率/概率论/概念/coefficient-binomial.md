@@ -38,7 +38,8 @@ confidence: medium
 ## Voir aussi
 - [[arrangement-et-combinaison]]
 - [[inclusion-exclusion]]
-
+- [[二项式定理]]
+- [[Pascal关系]]
 ## Notes du cours
 
 - [[04-Coefficient-binomial-binome-et-denombrabilite|概率论 · 04-Coefficient-binomial-binome-et-denombrabilite]]

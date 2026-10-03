@@ -53,7 +53,7 @@ Propriétés (admises) : $\mathbb{E}[\mathbb{1}_A]=\mathbb{P}(A)$ ; linéarité 
 - [[variance]]
 - [[covariance]]
 - [[inegalites-lp]]
-
+- [[Riemann-Stieltjes积分]]
 ## Notes du cours
 
 - [[18-Esperance-d-une-variable-aleatoire|概率论 · 18-Esperance-d-une-variable-aleatoire]]

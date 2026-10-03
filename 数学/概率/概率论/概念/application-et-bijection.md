@@ -39,7 +39,8 @@ confidence: medium
 ## Voir aussi
 - [[ensemble-fini-et-cardinal]]
 - [[operations-ensemblistes]]
-
+- [[双射]]
+- [[集合的势]]
 ## Notes du cours
 
 - [[01-Logique-ensembles-et-applications|概率论 · 01-Logique-ensembles-et-applications]]

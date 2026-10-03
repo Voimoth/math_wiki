@@ -44,6 +44,8 @@ confidence: medium
 - [[Young不等式]] — 证明工具
 - [[Minkowski不等式]] — 由 Hölder 导出
 - [[积分不等式]] — 积分版 Cauchy-Schwarz
+- [[Cauchy-Schwarz不等式]] — Hölder 在 p=q=2 的特例
+- [[inegalites-lp]] — Lᵖ 范数不等式与概率论中的对应结论
 
 ## 相关笔记
 

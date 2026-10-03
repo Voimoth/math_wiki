@@ -42,7 +42,8 @@ confidence: medium
 - [[theoreme-de-continuite-de-levy]]
 - [[theoreme-central-limite]]
 - [[fonction-generatrice]]
-
+- [[傅里叶变换]]
+- [[傅里叶逆变换]]
 ## Notes du cours
 
 - [[24-Theoreme-central-limite|概率论 · 24-Theoreme-central-limite]]

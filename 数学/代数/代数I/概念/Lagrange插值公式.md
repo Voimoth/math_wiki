@@ -36,6 +36,7 @@ confidence: medium
 - [[Euclide除法]]
 - [[中国剩余定理]]
 - [[根与重数]]
+- [[Cramer法则]] — 插值线性方程组用 Cramer 法则求解（代数 II）
 
 ## 相关笔记
 

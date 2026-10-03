@@ -38,7 +38,8 @@ confidence: medium
 ## Voir aussi
 - [[mesure-de-probabilite]]
 - [[probabilite-uniforme]]
-
+- [[集合的势]]
+- [[Schröder-Bernstein定理]]
 ## Notes du cours
 
 - [[04-Coefficient-binomial-binome-et-denombrabilite|概率论 · 04-Coefficient-binomial-binome-et-denombrabilite]]
