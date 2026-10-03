@@ -52,14 +52,14 @@ $$\frac18\le\frac{\pi(n)}{n/\log n}\le 12.$$
 
 **Démo :**
 
-> [!note] Semi 1
+> [!note] Lem 1
 > $$n!=\prod_{p\le n}p^{\,v_p(n!)}.$$
 
-> [!note] Semi 2
+> [!note] Lem 2
 > $C_n^{2n}$ 中 $p$ 的次数为 $\displaystyle\sum_{k\ge1}\left(\left\lfloor\frac{2n}{p^k}\right\rfloor-2\left\lfloor\frac{n}{p^k}\right\rfloor\right)$。
 
 > [!note] Claim 1
-> $$\prod_{n<p\le 2n}p\ \Big|\ C_n^{2n}\qquad(\text{由 Semi 2}).$$
+> $$\prod_{n<p\le 2n}p\ \Big|\ C_n^{2n}\qquad(\text{由 Lem 2}).$$
 
 $$C_n^{2n}\ \Big|\prod_{p\le 2n}p^{\,v_p(\cdot)}$$
 $$\Rightarrow\ n^{\pi(2n)-\pi(n)}\le C_n^{2n}\le(2n)^{\pi(2n)},\qquad 2^{2n}\le C_n^{2n}\le 2^{2n}$$
@@ -75,7 +75,7 @@ $$(k+1)\pi(2^{k+1})\le 3\cdot2^k+3\cdot2^{k-1}+\dots+3\cdot2^0\le 3\cdot2^{k+1}$
 $$\Rightarrow\ \frac12\le\frac{\pi(2^{k+1})}{2^{k+1}/(k+1)}\le 3.\quad\#$$
 
 > [!warning] 存疑
-> 弱形式推导中间的几行 OCR 断行、缺项（例如 $\pi(2n)-\pi(n)$ 与 $2^{2n}\le C_n^{2n}\le2^{2n}$ 两处），此处按原稿誊录，未能据原图完全厘清。 [?]
+> 原稿此处有几处需要留意的地方(转录忠实、未改数):①「$2^{2n}\le C_n^{2n}\le 2^{2n}$」左右写成了同一个式子——上界 $C_n^{2n}\le 2^{2n}$ 成立,但左端 $2^{2n}\le C_n^{2n}$ 不成立(标准下界是 $\frac{2^{2n}}{2n+1}\le C_n^{2n}$,差一个因子 $2n+1$);②取 $n=2^k$ 后第一式首项系数原稿写作 $2^k$,但由 $n^{\pi(2n)-\pi(n)}\le 2^{2n}$ 代入 $n=2^k$ 得到的应是 $k\,(\pi(2^{k+1})-\pi(2^k))\le 2^{k+1}$(若为 $2^k$ 则方向相反、该步不成立);③上一行 $\pi(2^{k+1})\le 2^k$ 被用来把 $2^{k+1}+\pi(2^{k+1})$ 放大到 $3\cdot2^k$,这一步未给理由。
 
 ## 4. Mertens 定理（素数倒数和）的证明
 
