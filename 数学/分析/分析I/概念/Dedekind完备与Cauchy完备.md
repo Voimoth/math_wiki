@@ -38,7 +38,7 @@ $$\text{Dedekind 完备}\iff\text{Cauchy 完备}+\text{Archimedean}.$$
 ## 概念性陷阱
 
 - 不等价性来自 Archimedean：脱离「有序域 + Archimedean」的语境，两个概念会分道扬镳。
-- Cauchy 完备是度量空间概念，Deikind 完备依赖序结构，不可互相替代。
+- Cauchy 完备是度量空间概念，Dedekind 完备依赖序结构，不可互相替代。
 
 ## 相关概念
 

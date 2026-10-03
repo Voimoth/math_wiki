@@ -30,7 +30,7 @@ $$\overline S_\sigma(f)=\sum_{i=1}^n M_i\big(\mu(x_i)-\mu(x_{i-1})\big),\qquad
 
 **Démo :**
 $$\int_a^b f\,d\mu=\sum_{i=0}^{n-1}f(x_i)\big(\mu(x_{i+1})-\mu(x_i)\big)+o(1)$$
-$$=f(x_n)\mu(x_n)-f(x_0)\mu(x_0)+\sum_{i=0}^{n-1}\big(f(x_i)-f(x_{i+1})\big)\big(\mu(x_{i+1})-\mu(x_0)\big)+o(1)$$
+$$=f(x_n)\big(\mu(x_n)-\mu(x_0)\big)+\sum_{i=0}^{n-1}\big(f(x_i)-f(x_{i+1})\big)\big(\mu(x_{i+1})-\mu(x_0)\big)+o(1)$$
 $$=f\mu\Big|_a^b-\sum_{i=1}^{n}\mu(x_i)\big(f(x_i)-f(x_{i-1})\big)+o(1)$$
 $$=f\mu\Big|_a^b-\int_a^b \mu(x)\,f'(x)\,dx.\quad\#$$
 
@@ -62,20 +62,17 @@ $$\frac18\le\frac{\pi(n)}{n/\log n}\le 12.$$
 > $$\prod_{n<p\le 2n}p\ \Big|\ C_n^{2n}\qquad(\text{由 Lem 2}).$$
 
 $$C_n^{2n}\ \Big|\prod_{p\le 2n}p^{\,v_p(\cdot)}$$
-$$\Rightarrow\ n^{\pi(2n)-\pi(n)}\le C_n^{2n}\le(2n)^{\pi(2n)},\qquad 2^{2n}\le C_n^{2n}\le 2^{2n}$$
-$$\Rightarrow\ n^{\pi(2n)-\pi(n)}\le 2^{2n},\qquad 2^{2n}\le(2n)^{\pi(2n)}.$$
+$$\Rightarrow\ n^{\pi(2n)-\pi(n)}\le C_n^{2n}\le(2n)^{\pi(2n)},\qquad 2^{n}\le C_n^{2n}\le 2^{2n}$$
+$$\Rightarrow\ n^{\pi(2n)-\pi(n)}\le 2^{2n},\qquad 2^{n}\le(2n)^{\pi(2n)}.$$
 
-取 $n=2^k$，$k\ge1,2,\dots$：
-$$\Rightarrow\ 2^k\pi(2^{k+1})-k\,\pi(2^k)\le 2^{k+1},\qquad 2^{k+1}\le 2^{k+1}\pi(2^{k+1})$$
+取 $n=2^k$，$k=0,1,2,\dots$：
+$$\Rightarrow\ 2^{k\pi(2^{k+1})-k\,\pi(2^k)}\le 2^{2^{k+1}},\qquad 2^{2^k}\le 2^{(k+1)\pi(2^{k+1})}$$
 $$\Rightarrow\ (k+1)\pi(2^{k+1})-k\,\pi(2^k)\le 2^{k+1}+\pi(2^{k+1})\le 2^{k+1}+2^k=3\cdot 2^k$$
 $$(k+1)\pi(2^{k+1})\ge 2^k.$$
 
 迭代：
 $$(k+1)\pi(2^{k+1})\le 3\cdot2^k+3\cdot2^{k-1}+\dots+3\cdot2^0\le 3\cdot2^{k+1}$$
 $$\Rightarrow\ \frac12\le\frac{\pi(2^{k+1})}{2^{k+1}/(k+1)}\le 3.\quad\#$$
-
-> [!warning] 存疑
-> 原稿此处有几处需要留意的地方(转录忠实、未改数):①「$2^{2n}\le C_n^{2n}\le 2^{2n}$」左右写成了同一个式子——上界 $C_n^{2n}\le 2^{2n}$ 成立,但左端 $2^{2n}\le C_n^{2n}$ 不成立(标准下界是 $\frac{2^{2n}}{2n+1}\le C_n^{2n}$,差一个因子 $2n+1$);②取 $n=2^k$ 后第一式首项系数原稿写作 $2^k$,但由 $n^{\pi(2n)-\pi(n)}\le 2^{2n}$ 代入 $n=2^k$ 得到的应是 $k\,(\pi(2^{k+1})-\pi(2^k))\le 2^{k+1}$(若为 $2^k$ 则方向相反、该步不成立);③上一行 $\pi(2^{k+1})\le 2^k$ 被用来把 $2^{k+1}+\pi(2^{k+1})$ 放大到 $3\cdot2^k$,这一步未给理由。
 
 ## 4. Mertens 定理（素数倒数和）的证明
 

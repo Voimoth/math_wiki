@@ -40,7 +40,7 @@ $$\int_\varepsilon^{\pi-\varepsilon} \left( f'^2(x) - f^2(x) \right) dx = \int_\
 $$= \int_\varepsilon^{\pi-\varepsilon} \varphi'^2 \sin^2 x\,dx + \frac{1}{2}\varphi^2 \sin 2x \bigg|_\varepsilon^{\pi-\varepsilon} = \frac{1}{2}\varphi^2 \sin 2x \bigg|_\varepsilon^{\pi-\varepsilon}.$$
 令 $\varepsilon \to 0$ 即得。
 
-> [!info] Rg.
+> [!info] Rq.
 > $f \in C^1([a,b])$ 时有 $\varphi(x) := f\left(\frac{b-a}{\pi}x + a\right) \in C^1([0,\pi])$，可对此应用 Poincaré 不等式。
 
 ## 变分法

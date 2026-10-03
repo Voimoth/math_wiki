@@ -63,11 +63,11 @@ $$= (1-x) \sum_{k=1}^{n} k |a_k| + \frac{n+1}{n+1} \sup_{k \geqslant n+1} |k a_k
 
 **Démo (Klostermann, 1940)：**
 
-第 1 步（离散 Taylor 公式）：记 $\sum_{k=n+1}^{n+h} = t_n$。当 $h \in \mathbb{Z}_{\geqslant 1}$ 时有
+第 1 步（离散 Taylor 公式）：记 $t_n = \sum_{k=1}^n S_k$。当 $h \in \mathbb{Z}_{\geqslant 1}$ 时有
 $$t_{n+h} = t_n + S_n \cdot h + \frac{h(h+1)}{2} \xi \quad (\text{此处有涂改，公式存疑}) \ [?]$$
 其中 $\min_{n < k \leqslant n+h} a_k \leqslant \xi \leqslant \max_{n < k \leqslant n+h} a_k$。
 
-**Démo :** $t_{n+h} = S_{n} + \sum_{k=n+1}^{n+h} = t_n + (S_{n+1} + \cdots + S_{n+h}) = t_n + S_n \cdot h + h a_{n+1} + (h-1)a_{n+2} + \cdots + 1 \cdot a_{n+h} = t_n + S_n h + \frac{h(h+1)}{2} \xi$。
+**Démo :** $t_{n+h} = t_n + (S_{n+1} + \cdots + S_{n+h}) = t_n + S_n \cdot h + h a_{n+1} + (h-1)a_{n+2} + \cdots + 1 \cdot a_{n+h} = t_n + S_n h + \frac{h(h+1)}{2} \xi$。
 
 第 2 步：不妨设 $S=0$。
 $$\sum_{n=0}^{\infty} a_n = 0 \ (C) \Rightarrow \sigma_n = \frac{1}{n} t_n \to 0$$
@@ -97,7 +97,7 @@ $$\Rightarrow i > N \text{ 时 } \left| \sum_{j=1}^{\infty} a_{ij} - \sum_{j=1}^
 即 $\lim_{i \to \infty} a_i = \sum_{j=1}^{\infty} a_j$。
 
 > [!note] Cor.
-> 设 $\lim_{j \to \infty} a_{ij} = a_j$，$|a_{ij}| \leq b_j$ 且 $\sum_{j=1}^{\infty} b_j$ 收敛，则 $\sum_{j=1}^{\infty} a_{ij}$ 收敛且 $\sum_{j=1}^{\infty} a_{ij} = \lim_{j \to \infty} \sum_{j=1}^{\infty} a_{ij}$。
+> 设 $\lim_{i \to \infty} a_{ij} = a_j$，$|a_{ij}| \leq b_j$ 且 $\sum_{j=1}^{\infty} b_j$ 收敛，则 $\sum_{j=1}^{\infty} a_j$ 收敛且 $\sum_{j=1}^{\infty} a_j = \lim_{i \to \infty} \sum_{j=1}^{\infty} a_{ij}$。
 
 **Démo :** $|a_{ij}| \leq b_j \Rightarrow |a_j| \leq b_j \Rightarrow \sum_{j=1}^{\infty} a_j$ 绝对收敛。$\left| \sum_{j=1}^{n} a_{ij} - \sum_{j=1}^{\infty} a_{ij} \right| \leq \sum_{j=n+1}^{\infty} |a_{ij}| \leq \sum_{j=n+1}^{\infty} b_j$，故 $\sum_{j=1}^{\infty} a_{ij}$ 一致收敛。 $\#$
 

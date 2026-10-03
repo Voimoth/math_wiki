@@ -26,7 +26,7 @@ $$f(x)=T_a^n(f)+o\big((x-a)^n\big),\qquad T_a^n(f)=\sum_{k=0}^n\frac1{k!}f^{(k)}
 
 > [!note] Th.（3.4）
 > 设 $f$ 在 $[a-\varepsilon,a+\varepsilon]$ 上有定义，且在 $a$ 处 $n$ 阶可导，则
-> $$f(x)=T_n^a(f)(x)+o\big((x-a)^n\big).$$
+> $$f(x)=T_a^n(f)(x)+o\big((x-a)^n\big).$$
 
 > [!example]
 > $$e^x=1+x+\frac{x^2}{2!}+\dots+\frac{x^n}{n!}+o(x^n),$$
@@ -36,7 +36,7 @@ $$f(x)=T_a^n(f)+o\big((x-a)^n\big),\qquad T_a^n(f)=\sum_{k=0}^n\frac1{k!}f^{(k)}
 
 > [!note] Th.（3.5）
 > 设 $f:I\to\mathbb{R}$，$a\in I$ 为内点，$f$ 在 $I$ 上有直到 $n+1$ 阶导数，则
-> $$f(x)=T_n^a(f)(x)+\frac1{(n+1)!}f^{(n+1)}(\xi)(x-a)^{n+1},$$
+> $$f(x)=T_a^n(f)(x)+\frac1{(n+1)!}f^{(n+1)}(\xi)(x-a)^{n+1},$$
 > 其中 $\xi$ 在 $x$ 与 $a$ 之间。
 
 > [!example] 用带余项展开证不等式

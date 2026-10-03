@@ -13,7 +13,7 @@ confidence: medium
 ## 定义
 
 > [!note] Déf.（Riemann 可积）
-> 设分割 $\sigma:x_0=a<\dots<x_n=b$，记网格 $S(\sigma)=\max_i(x_{i+1}-x_i)$，$\Delta x_i=x_{i+1}-x_i$。称 $f$ 在 $[a,b]$ 上 **Riemann 可积**，若存在 $I\in\mathbb{R}$，使 $\forall\varepsilon>0$，$\exists\delta_\varepsilon>0$：当 $S(\sigma)<\delta_\varepsilon$ 时，$\forall\xi_i\in[x_i,x_{i+1}]$，
+> 设分割 $\sigma:x_0=a<\dots<x_n=b$，记网格 $\delta(\sigma)=\max_i(x_{i+1}-x_i)$，$\Delta x_i=x_{i+1}-x_i$。称 $f$ 在 $[a,b]$ 上 **Riemann 可积**，若存在 $I\in\mathbb{R}$，使 $\forall\varepsilon>0$，$\exists\delta_\varepsilon>0$：当 $\delta(\sigma)<\delta_\varepsilon$ 时，$\forall\xi_i\in[x_i,x_{i+1}]$，
 > $$\Big|\sum_{i=0}^{n-1}f(\xi_i)\Delta x_i-I\Big|<\varepsilon.$$
 > 记 $I=\int_{[a,b]}f$。
 
