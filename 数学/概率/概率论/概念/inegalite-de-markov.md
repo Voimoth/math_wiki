@@ -38,6 +38,7 @@ $$\mathbb{P}\bigl(X\ge c\,\mathbb{E}[X]\bigr)=\mathbb{P}(Y\ge c)\le\frac{\mathbb
 ## Pièges
 
 > [!warning]
+>
 > - La borne est **grossière** : elle ne dépend que de l'espérance, jamais de la dispersion. Pour une loi concentrée on obtient une estimation très pessimiste.
 > - Nécessite $\mathbb{E}[|X|]<+\infty$.
 > - On majore $\mathbb{P}(|X|\ge\lambda)$ (valeur absolue) ; dans le cas positif centré, on peut remplacer par $\mathbb{P}(X\ge\lambda)$.

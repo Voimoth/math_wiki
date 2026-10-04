@@ -27,6 +27,7 @@ confidence: medium
 
 ## Pièges
 > [!warning]
+>
 > - Convergence en loi $\neq$ convergence en probabilité : elle n'entraîne pas la convergence jointe avec une autre variable.
 > - Une convergence en loi vers une constante implique la convergence en probabilité, mais l'inverse est faux en général.
 > - Les lois limites peuvent être continues alors que toutes les $X_n$ sont discrètes (c'est le cas du TCL).

@@ -41,6 +41,7 @@ confidence: medium
 > $$A^\perp=\bigcap_{a\in A}\operatorname{Ker}\varphi_a.$$
 
 > [!example] 例
+>
 > - $\{0\}^\perp=E$；$E^\perp=\{0\}$。
 > - $E=\mathbb{R}^2$，$x=(a,b)$：$\{x\}^\perp=\operatorname{Vect}\bigl((-b,a)\bigr)$。
 > - $u=(a,b,c)\in E=\mathbb{R}^3$：$\{u\}^\perp=\{(x,y,z)\in E\mid ax+by+cz=0\}$，是向量超平面。

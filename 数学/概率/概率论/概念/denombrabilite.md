@@ -17,6 +17,7 @@ confidence: medium
 > Un ensemble $E$ est **au plus dénombrable** s'il est fini ou en bijection avec $\mathbb{N}$ ; **dénombrable** s'il est en bijection avec $\mathbb{N}$. (Théorème de comparaison : $E$ au plus dénombrable ssi il s'injecte dans $\mathbb{N}$.)
 
 > [!info] Propriétés clés
+>
 > - Image d'un ensemble au plus dénombrable par une application quelconque : au plus dénombrable.
 > - Produit fini d'ensembles au plus dénombrables : au plus dénombrable.
 > - Réunion d'une famille au plus dénombrable d'ensembles au plus dénombrables, indicée par un ensemble au plus dénombrable : au plus dénombrable.
@@ -32,6 +33,7 @@ confidence: medium
 
 ## Pièges
 > [!warning]
+>
 > - « Dénombrable » exclut le fini (bijection avec $\mathbb{N}$) ; « au plus dénombrable » l'inclut.
 > - Tout ensemble infini contient un sous-ensemble dénombrable, mais tout infini n'est pas dénombrable : $\mathcal{P}(\mathbb{N})$ et $\mathbb{R}$ ne le sont pas (Cantor, argument diagonal / injection $\{0,1\}^{\mathbb{N}}\to\mathbb{R}$, $(d_n)\mapsto\sum 2d_n/3^{n+1}$).
 

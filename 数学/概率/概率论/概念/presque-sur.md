@@ -31,6 +31,7 @@ confidence: medium
 
 ## Pièges
 > [!warning]
+>
 > - Événement de probabilité $0$ $\neq$ événement impossible ; événement de probabilité $1$ $\neq$ événement certain.
 > - Une famille **au plus dénombrable** d'événements négligeables a une réunion négligeable, et une famille au plus dénombrable de $p.s.$ a une intersection $p.s.$ (conséquence de la σ-additivité) ; cela échoue pour une famille non dénombrable.
 

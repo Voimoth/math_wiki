@@ -19,6 +19,7 @@ confidence: medium
 Soient $P$ et $Q$ deux propositions.
 
 > [!info] Notation
+>
 > - $P \land Q$ : « $P$ et $Q$ ».
 > - $P \lor Q$ : « $P$ ou $Q$ ».
 > - $\neg P$ : « non $P$ », la négation de $P$.
@@ -34,6 +35,7 @@ Soient $P$ et $Q$ deux propositions.
 ## 1.2 Opérations sur les ensembles
 
 > [!info] Notation (de Bourbaki)
+>
 > - $\mathbb{N}$ : l'ensemble des entiers naturels, $\mathbb{N} = \{0, 1, 2, \dots\}$ et $\mathbb{N}^* = \mathbb{N} \setminus \{0\}$.
 > - $\mathbb{Z}$ : l'ensemble des entiers relatifs, $\mathbb{Z} = \{\dots, -2, -1, 0, 1, 2, \dots\}$ ; $\geq 0$ : positif (ou nul), $> 0$ : strictement positif.
 > - $\mathbb{Q}$ : l'ensemble des nombres rationnels, $\mathbb{Q} = \left\{ \frac{p}{q} \mid p \in \mathbb{Z},\ q \in \mathbb{N}^* \right\}$.
@@ -47,12 +49,14 @@ Soient $P$ et $Q$ deux propositions.
 Soit $E$ un ensemble.
 
 > [!info] Notation
+>
 > - $x \in E$ : $x$ appartient à $E$, $x$ est un élément de $E$.
 > - $A \subset E$ (ou $A \subseteq E$) : $A$ est inclus dans $E$, $A$ est un sous-ensemble de $E$ ; on dit aussi que $A$ est une partie de $E$.
 
 Soient $A, B$ deux parties de $E$.
 
 > [!note] Déf. 1.2 (opérations ensemblistes)
+>
 > - $A \cup B$ : union (réunion) de $A$ et $B$ ;
 > - $A \cap B$ : intersection de $A$ et $B$ ;
 > - $A^c$ : complémentaire de $A$ (par rapport à $E$) ;

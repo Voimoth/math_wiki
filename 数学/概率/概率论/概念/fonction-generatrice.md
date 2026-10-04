@@ -18,6 +18,7 @@ confidence: medium
 > $$G_X:[-1,1]\to\mathbb{R},\qquad G_X(t)=\mathbb{E}[t^X]=\sum_{n=0}^{+\infty}t^n\mathbb{P}(X=n).$$
 
 > [!info] Propriétés
+>
 > - $G_X$ est analytique, de rayon de convergence $R\ge1$, et $|G_X(t)|\le1$ sur $[-1,1]$.
 > - (détermine la loi) $\mathbb{P}(X=k)=\dfrac{G_X^{(k)}(0)}{k!}$.
 > - (moments) $G_X'(1)=\mathbb{E}[X]$ et $G_X''(1)=\mathbb{E}[X(X-1)]$, d'où $\mathrm{Var}(X)=G_X''(1)+G_X'(1)-\big(G_X'(1)\big)^2$.
@@ -34,6 +35,7 @@ confidence: medium
 
 ## Pièges
 > [!warning]
+>
 > - Elle n'existe que pour des variables à valeurs dans $\mathbb{N}$ ; pour une variable réelle, on utilise la fonction caractéristique ([[fonction-caracteristique]]).
 > - L'espérance s'obtient par dérivation en $1$, pas par évaluation : $G_X(1)=1$ ne donne rien.
 > - La dérivabilité en $t=1$ n'est pas automatique : elle encode précisément l'existence des moments.

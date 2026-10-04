@@ -36,12 +36,14 @@ est centrée réduite.
 ## Exemples
 
 > [!example]
+>
 > - $\operatorname{Var}(X)=0$ équivaut à $X$ constante p.s. (car $\mathbb{E}\bigl[|X-\mathbb{E}[X]|^2\bigr]=0$).
 > - Somme non corrélées : $\operatorname{Var}(X_1+\dots+X_n)=\sum_k\operatorname{Var}(X_k)$.
 
 ## Pièges
 
 > [!warning]
+>
 > - $\mathbb{E}[X^2]$ n'est pas $(\mathbb{E}[X])^2$ : la différence est exactement la variance.
 > - La variance n'est définie que si $X\in L^2(\Omega)$ (moment d'ordre 2 fini) ; une v.a. seulement $L^1$ n'a pas forcément de variance.
 > - $X\in L^2\Rightarrow X\in L^1$, mais l'inverse est faux.

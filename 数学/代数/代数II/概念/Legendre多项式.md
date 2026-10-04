@@ -27,6 +27,7 @@ confidence: medium
 > $$Q_n=\frac{1}{2^nn!}\frac{d^n}{dx^n}(x^2-1)^n.$$
 
 > [!info] 性质
+>
 > - 正交：$(L_m|L_n)=0\ (m\neq n)$；$(x\mapsto\tilde P_n(x))$ 与 $Q_n$ 正交。
 > - $Q_n$ 与 $X^n$ 同奇偶；$\forall n\ge1$，$Q_n$ 在 $]-1,1[$ 内有 $n$ 个互异根。
 > - $Q_n$ 是 Legendre 微分方程 $(x^2-1)y''+2xy'-n(n+1)y=0$ 的多项式解。
@@ -44,6 +45,7 @@ confidence: medium
 ## 陷阱
 
 > [!warning] 易错
+>
 > - 「首一」与「标准归一化 $L_n(1)=1$」相差一个常数因子（$Q_n$ 首一，$L_n$ 满足 $L_n(1)=1$），不要混用两种归一化。
 > - 正交区间是 $[-1,1]$；换区间或换权函数得到的是别的族（Chebyshev、Hermite 等）。
 > - Rodrigues 公式里除的是 $2^nn!$，别漏因子。

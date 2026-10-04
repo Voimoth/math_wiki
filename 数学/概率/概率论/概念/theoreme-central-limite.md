@@ -27,6 +27,7 @@ confidence: medium
 
 ## Pièges
 > [!warning]
+>
 > - Le facteur de normalisation est $\sqrt n\,\sigma$ (et non $n$) : sans lui la loi limite serait dégénérée.
 > - L'indépendance et l'identité de loi sont essentielles ; il faut au moins $L^2$.
 > - La convergence est en loi, pas en probabilité ni presque sûre : il n'y a pas de convergence de $Y_n$ le long de chaque $\omega$.

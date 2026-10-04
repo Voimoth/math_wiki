@@ -30,6 +30,7 @@ confidence: medium
 
 ## Pièges
 > [!warning]
+>
 > - Bien plus forte que la convergence en probabilité : p.s. $\Rightarrow$ en probabilité, mais la réciproque est fausse.
 > - « Événement de probabilité $1$ » n'est pas « événement certain » ([[presque-sur]]).
 > - L'uniformité en $\varepsilon$ n'est pas requise : on fixe $\varepsilon>0$, puis on fait $n\to\infty$.

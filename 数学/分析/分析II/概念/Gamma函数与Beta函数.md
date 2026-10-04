@@ -29,6 +29,7 @@ confidence: high
 ## 2. Beta 函数
 
 > [!note] 基本性质
+>
 > 1. $B(p,q)$ 在 $(0,\infty)^2$ 上有定义而且光滑;
 > 2. $B(p,q)=B(q,p)$(换元 $u=1-t$);
 > 3. $B(p+1,q+1)=\frac{pq}{(p+q+1)(p+q)}B(p,q)$。

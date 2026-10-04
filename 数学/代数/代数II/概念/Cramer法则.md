@@ -31,6 +31,7 @@ confidence: medium
 
 ## 陷阱
 > [!warning] 易错
+>
 > - 必须先验证 $\det(A)\neq0$（即 $A$ 可逆），否则不能使用。
 > - $\Delta_j^b$ 是把第 $j$ 列换成 $B$，不要换成行。
 > - 数值实践中 Cramer 法则代价高，通常改用行变换求解。

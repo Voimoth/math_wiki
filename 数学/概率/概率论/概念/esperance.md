@@ -27,6 +27,7 @@ confidence: medium
 Propriétés (admises) : $\mathbb{E}[\mathbb{1}_A]=\mathbb{P}(A)$ ; linéarité $\mathbb{E}[aX+bY]=a\mathbb{E}[X]+b\mathbb{E}[Y]$ ; positivité et $\mathbb{E}[X]=0\Rightarrow X=0$ p.s. ; monotonie ; $|\mathbb{E}[X]|\le\mathbb{E}[|X|]$.
 
 > [!note] Formules de calcul
+>
 > - **Cas discret** ($X(\Omega)\subset\mathbb{Z}$) : $\displaystyle \mathbb{E}[f(X)]=\sum_{n\in\mathbb{Z}}f(n)\mathbb{P}(X=n)$, et en particulier $\mathbb{E}[X]=\sum_{n\in\mathbb{Z}}n\,\mathbb{P}(X=n)$.
 > - **Forme générale** : $\displaystyle \mathbb{E}[f(X)]=\int_{-\infty}^{+\infty}f(x)\,dF_X(x)$ (Riemann--Stieltjes), où $F_X$ est la fonction de répartition de $X$.
 > - **Cas à densité** (si $F_X\in C^1$, $p_X=F_X'$) : $\displaystyle \mathbb{E}[f(X)]=\int_{-\infty}^{+\infty}f(x)\,p_X(x)\,dx$.
@@ -45,6 +46,7 @@ Propriétés (admises) : $\mathbb{E}[\mathbb{1}_A]=\mathbb{P}(A)$ ; linéarité 
 ## Pièges
 
 > [!warning]
+>
 > - $\mathbb{E}[X]$ n'existe pas toujours : elle vaut $\pm\infty$ si un seul des $\mathbb{E}[X^\pm]$ est fini, et n'est pas définie si les deux sont $+\infty$.
 > - Ne pas confondre « espérance finie » ($\mathbb{E}[|X|]<+\infty$) et « $X$ bornée ».
 > - L'additivité $\mathbb{E}[X+Y]=\mathbb{E}[X]+\mathbb{E}[Y]$ ne demande **aucune** hypothèse d'indépendance ; la multiplicativité $\mathbb{E}[XY]=\mathbb{E}[X]\mathbb{E}[Y]$, elle, l'exige.

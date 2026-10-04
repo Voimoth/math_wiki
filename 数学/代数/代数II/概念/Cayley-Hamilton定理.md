@@ -19,6 +19,7 @@ confidence: medium
 > 等价地，对 $A\in M_n(K)$，$\chi_A(A)=0$。
 
 > [!info] 推论
+>
 > - 极小多项式整除特征多项式：$\pi_u\mid\chi_u$（两者次数满足 $\deg\pi_u\le\deg\chi_u=n$）；
 > - 特征值与零化多项式的根的关系：$P(u)=0\Rightarrow\operatorname{Sp}(u)\subset\{P=0\}$；
 > - 若 $u$ 幂零则 $\chi_u=X^n$。
@@ -29,12 +30,14 @@ confidence: medium
 
 ## 例子
 > [!example] 例
+>
 > - $A=\begin{pmatrix}0&1\\0&0\end{pmatrix}$：$\chi_A=X^2$，确有 $A^2=0$；
 > - 伴随矩阵 $C$ 满足 $\chi_C=\pi_C=P$，即 Cayley–Hamilton 在「循环向量」情形取等；
 > - 二阶方阵 $\chi_A=X^2-(\operatorname{Tr}A)X+\det A\cdot I_2$ 给出 $A^2-(\operatorname{Tr}A)A+(\det A)I_2=0$。
 
 ## 陷阱
 > [!warning] 易错
+>
 > - $\chi_u(u)=0$ 中把多项式「代入」$u$，常数项 $a_0$ 要读成 $a_0\,\mathrm{id}_E$，不能当成标量加到矩阵上。
 > - Cayley–Hamilton 只给出「有一个零化多项式」，它一般不最小：$\deg\pi_u$ 可以严格小于 $n$。
 > - 「$\chi_A(A)=0$」并不说明 $\chi_A$ 就是极小多项式。

@@ -27,12 +27,14 @@ confidence: medium
 
 ## Exemples
 > [!example]
+>
 > - $\{\emptyset,\Omega\}$ : plus petite tribu (tribu triviale) ; $\mathcal{P}(\Omega)$ : plus grande tribu.
 > - Lancer de dé en observant seulement la parité : $\mathcal{F} = \{\emptyset, \{2,4,6\}, \{1,3,5\}, \Omega\}$.
 > - Tribu borélienne $\mathcal{B}(\mathbb{R}) = \sigma(\{\,]-\infty,t] \mid t\in\mathbb{Q}\})$.
 
 ## Pièges
 > [!warning]
+>
 > - Une réunion **quelconque** (non dénombrable) n'est pas en général dans $\mathcal{F}$ ; seule la réunion dénombrable est garantie.
 > - L'intersection d'une famille quelconque de tribus est une tribu, mais l'union de deux tribus n'en est pas une en général.
 > - $\emptyset\in\mathcal{F}$ automatiquement ($\emptyset = \Omega^c$).

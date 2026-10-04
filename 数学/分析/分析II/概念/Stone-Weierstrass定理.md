@@ -16,6 +16,7 @@ $K$ 是 $\mathbb R^n$ 的紧子集（暂不引入一般紧拓扑空间），$C(K
 > $A$ 分离 $K$ 的点：$\forall x\ne y\in K,\exists f\in A,\ f(x)\ne f(y)$。
 
 > [!note] Prop.（四个引理，证明在定理各步中）
+>
 > - $A$ 是代数 $\Rightarrow$ $\bar A$ 也是代数；
 > - 分离点且 $1\in A$ $\Rightarrow$ 对任意 $x\ne y$ 与任意 $c_1,c_2$，存在 $f\in A$ 使 $f(x)=c_i$；
 > - $f\in\bar A\Rightarrow|f|\in\bar A$（用 [[Weierstrass逼近定理]] 的多项式逼近 $|\cdot|$）；
@@ -29,6 +30,7 @@ $K$ 是 $\mathbb R^n$ 的紧子集（暂不引入一般紧拓扑空间），$C(K
 **Preuve（六步）：** (1) $\bar A$ 仍是代数；(2) 用分离点解线性方程组得两点插值；(3) 由 $|f|\in\bar A$ 得 $\bar A$ 对取绝对值封闭；(4) 进而对 $\max,\min$ 封闭；(5) 固定 $h,\varepsilon$ 与 $x$，对每个 $y$ 构造 $g_{x,y}$ 使 $g_{x,y}(x)=h(x)$、$g_{x,y}(y)=h(y)$，由连续性得局部下界 $g_{x,y}\ge h-\varepsilon$，用 $K$ 紧取有限个 $y_i$ 并令 $g_x=\max_i g_{x,y_i}\in\bar A$，则 $g_x(x)=h(x)$ 且 $g_x\ge h-\varepsilon$；(6) 同理对每个 $x$ 取邻域使 $g_x\le h+\varepsilon$，由紧性取有限个 $x_i$ 并令 $f=\min_i g_{x_i}$，则 $h-\varepsilon\le f\le h+\varepsilon$。
 
 > [!example]
+>
 > - $\mathbb R^n$ 的紧集（如闭球）上的多项式全体是分离点的代数，故稠密——这是 [[Weierstrass逼近定理]] 的高维推广。
 > - $S^1$ 上的三角多项式 $a_0+\sum_{n=1}^N(a_n\cos nx+b_n\sin nx)$ 全体（把 $S^1$ 看成周期函数，周期是否 $2\pi$ 都一样）。
 

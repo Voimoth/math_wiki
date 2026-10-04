@@ -21,6 +21,7 @@ confidence: medium
 Propriétés.
 
 > [!note] Propriétés
+>
 > - Si $X,Y\in L^2(\Omega)$ et $\mathbb{E}[X]=\mathbb{E}[Y]=0$, alors $\operatorname{Cov}(X,Y)=\mathbb{E}[XY]=\langle X,Y\rangle$ : la covariance est le produit scalaire de $L^2(\Omega)$.
 > - Si de plus $\sigma(X)=\sigma(Y)=1$, alors $\operatorname{Cov}(X,Y)=\cos\theta(X,Y)$ : la covariance devient le cosinus de l'angle entre $X$ et $Y$.
 > - Si $\operatorname{Cov}(X,Y)=0$, on dit que $X$ et $Y$ sont **non corrélées**.
@@ -43,6 +44,7 @@ Propriétés.
 ## Pièges
 
 > [!warning]
+>
 > - Réciproque fausse : non corrélées $\not\Rightarrow$ indépendantes. L'indépendance entraîne la nullité de la covariance, jamais l'inverse.
 > - La covariance est **bilinéaire et symétrique** ; la variance d'une somme fait donc apparaître les termes croisés, pas seulement la somme des variances.
 > - L'inégalité de Cauchy--Schwarz donne $|\operatorname{Cov}(X,Y)|\le\sigma(X)\sigma(Y)$ : le « cosinus » est bien dans $[-1,1]$.

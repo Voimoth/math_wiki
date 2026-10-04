@@ -27,6 +27,7 @@ confidence: medium
 
 ## Pièges
 > [!warning]
+>
 > - La convergence p.s. entraîne la convergence en probabilité, mais la réciproque est fausse ([[convergence-presque-sure]]).
 > - La convergence en probabilité n'implique pas la convergence des espérances (sauf uniforme intégrabilité).
 > - À ne pas confondre avec la convergence en loi, qui ne suppose même pas que les variables vivent sur le même espace ([[convergence-en-loi]]).

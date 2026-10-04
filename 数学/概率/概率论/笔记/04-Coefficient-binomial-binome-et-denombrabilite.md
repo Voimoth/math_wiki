@@ -32,6 +32,7 @@ confidence: medium
 > $$|A_1 \cup \dots \cup A_n| = \sum_{k=1}^n (-1)^{k+1} \sum_{1 \leq r_1 < \dots < r_k \leq n} |A_{r_1} \cap \dots \cap A_{r_k}|.$$
 
 > [!example]
+>
 > - $n = 2$ : $|A \cup B| = |A| + |B| - |A \cap B|$.
 > - $n = 3$ : $|A \cup B \cup C| = |A| + |B| + |C| - |A \cap B| - |B \cap C| - |C \cap A| + |A \cap B \cap C|$.
 

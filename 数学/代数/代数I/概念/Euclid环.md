@@ -21,11 +21,13 @@ confidence: medium
 > $v$ 把"大小"数值化，条件 ① 说明可以反复做带余除法、余数严格变小，于是欧几里得算法必然终止；条件 ② 保证 $v$ 在乘法下不减小，使整除关系与范数相容。
 
 > [!example] 例子
+>
 > - $\mathbb{Z}$：取 $v(n)=|n|$。
 > - 域 $K$ 上的多项式环 $K[X]$：取 $v(P)=\deg P$。
 > - 高斯整环 $\mathbb{Z}[i]$：取 $v(a+bi)=a^2+b^2$。
 
 > [!warning] 陷阱
+>
 > - Euclid 比 PID 更强：Euclid 整环一定是 PID，但存在是 PID 而非 Euclid 的整环（如 $\mathbb{Z}\bigl[\tfrac{1+\sqrt{-19}}{2}\bigr]$）。
 > - 范数 $v$ 不要求唯一，也不要求是"绝对值"；不同范数可能都满足条件。
 > - 定义的前提是整环，非整环即使有带余除法也不算 Euclid 环。

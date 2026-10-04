@@ -48,6 +48,7 @@ Sur $L^2(\Omega)$ on munit l'espace du produit scalaire $\langle X,Y\rangle:=\ma
 ## Pièges
 
 > [!warning]
+>
 > - Hölder est une inégalité : on écrit $\le$, et l'égalité n'a lieu que dans des cas dégénérés (proportionnalité de $|X|^p$ et $|Y|^q$).
 > - Le signe de $X,Y$ n'intervient pas : c'est $\mathbb{E}[|XY|]$ qui est majoré ; l'énoncé « $\mathbb{E}[XY]\le\ldots$ » n'est qu'une réécriture.
 > - Sens de l'inclusion : dans un espace de probabilité, $L^p\subseteq L^r$ pour $r\le p$ (le contraire de ce qui se passe sur un espace de mesure infinie).

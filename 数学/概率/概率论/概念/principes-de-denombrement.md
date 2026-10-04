@@ -14,6 +14,7 @@ confidence: medium
 > Compter un ensemble compliqué en le ramenant à des ensembles connus. Quatre principes suffisent à traiter la plupart des dénombrements : bijection (transporter le cardinal), addition (découper en morceaux disjoints), multiplication (compter les choix successifs indépendants), quotient (passer du comptage avec répétitions au comptage sans).
 
 > [!note] Définition
+>
 > - Principe de bijection : pour $E, F$ finis, s'il existe une bijection $E \to F$, alors $|E| = |F|$.
 > - Principe d'addition : si $A, B$ finis sont disjoints, $|A \cup B| = |A| + |B|$.
 > - Principe de multiplication : pour $A, B$ finis, $|A \times B| = |A| \cdot |B|$ ; plus généralement $|E_1 \times \dots \times E_k| = \prod_i |E_i|$.

@@ -30,6 +30,7 @@ confidence: medium
 
 ## Pièges
 > [!warning]
+>
 > - Sur un même $(\Omega,\mathcal{F})$, plusieurs mesures de probabilité sont possibles (dé équilibré vs pipé).
 > - Le vocabulaire « probabilité » désigne parfois le triplet entier : lire le contexte.
 

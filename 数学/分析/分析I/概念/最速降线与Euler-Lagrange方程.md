@@ -31,6 +31,7 @@ confidence: medium
 > 故 $F-y'\frac{\partial F}{\partial y'}=C$：把二阶方程降成一阶。这正是最速降线的可用形式。
 
 > [!warning] 概念性陷阱
+>
 > - 变分法的合法性依赖「分部积分 + $\varphi$ 任意」；端点条件（固定）是前提。
 > - Beltrami 恒等式只在 $F$ 不显含自变量时成立，是 Euler–Lagrange 的一个特例，不是另一个方程。
 

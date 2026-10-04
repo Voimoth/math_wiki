@@ -19,6 +19,7 @@ confidence: medium
 > 于是 $v_p:\mathbb{Z}^*\to\mathbb{N}$；再约定 $v_p(0)=+\infty$，得 $v_p:\mathbb{Z}\to\mathbb{N}\cup\{+\infty\}$。
 
 > [!note] 性质
+>
 > - $v_p(ab)=v_p(a)+v_p(b)$（赋值把乘法变成加法）；
 > - $v_p(a+b)\geq\min(v_p(a),v_p(b))$，且当 $v_p(a)\neq v_p(b)$ 时取等号。
 

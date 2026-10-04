@@ -27,6 +27,7 @@ confidence: medium
 
 ## Pièges
 > [!warning]
+>
 > - Borne grossière et valable pour toute loi : pour une loi gaussienne la vraie probabilité à $3\sigma$ est $\approx0{,}003$, très loin de $1/9$.
 > - Exige un moment d'ordre $2$ (contrairement à Markov, où $L^1$ suffit).
 > - Elle porte sur l'écart à l'espérance $|X-\mathbb{E}[X]|$ ; pour la variante unilatérale, utiliser l'inégalité de Cantelli–Bienaymé.

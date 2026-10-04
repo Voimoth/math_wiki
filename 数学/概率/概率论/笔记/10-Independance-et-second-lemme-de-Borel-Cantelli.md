@@ -21,6 +21,7 @@ Deux événements $A,B$ sont indépendants si l'observation de l'un ne change pa
 > $$\mathbb{P}(A\cap B) = \mathbb{P}(A)\,\mathbb{P}(B).$$
 
 > [!info] Rq. 1.2
+>
 > 1. La relation d'indépendance entre deux événements est symétrique.
 > 2. Si deux événements disjoints sont indépendants, alors au moins l'un des deux est négligeable. En particulier, disjonction et indépendance sont deux notions distinctes.
 > 3. Un événement de probabilité $0$ ou $1$ est indépendant de tout événement.

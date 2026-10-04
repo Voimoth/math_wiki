@@ -50,6 +50,7 @@ $$a\leqslant b\overset{\text{def}}{\iff}\exists c\in\mathbb{N},\ a+c=b.$$
 ## 陷阱
 
 > [!warning] 易错点
+>
 > - ③ 只要求后继 $S$ 是单射（$S(a)=S(b)\Rightarrow a=b$），不要求满射；④ 说明 $0$ 不在 $S$ 的像里。
 > - 真正承担「证明」职能的是公理 ⑤；少了它，可以构造出「比标准自然数更长」的模型。
 

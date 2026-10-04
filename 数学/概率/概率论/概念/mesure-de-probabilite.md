@@ -24,11 +24,13 @@ confidence: medium
 
 ## Exemples
 > [!example]
+>
 > - Mesure de comptage sur $\mathbb{N}$ : $\mu(A) = \mathrm{card}(A)$ si $A$ fini, $+\infty$ sinon. C'est une mesure **positive** ($\mu(\emptyset)=0$, σ-additive) mais **pas** une probabilité ($\mu(\Omega) = +\infty \neq 1$).
 > - Modèle discret : $\mathbb{P}(A) = \sum_{\omega\in A} p_\omega$ avec $p_\omega\geq 0$ et $\sum_\omega p_\omega = 1$.
 
 ## Pièges
 > [!warning]
+>
 > - Ne pas confondre **mesure positive** ($\mu : \mathcal{F}\to\mathbb{R}_+\cup\{+\infty\}$, $\mu(\emptyset)=0$, σ-additive) et **mesure de probabilité** (à valeurs dans $[0,1]$, $\mu(\Omega)=1$).
 > - La σ-additivité exige des événements deux-à-deux disjoints pour l'égalité ; sans disjonction on n'a qu'une inégalité (sous-additivité).
 

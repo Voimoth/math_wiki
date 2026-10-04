@@ -31,6 +31,7 @@ confidence: medium
 
 ## Pièges
 > [!warning]
+>
 > - La convergence simple des $\varphi_{X_n}$ ne suffit pas si la limite n'est pas continue en $0$ (masse fuyante) : c'est tout l'intérêt de l'équivalence avec 2).
 > - Les fonctions caractéristiques sont continues partout ; c'est la continuité de la **limite** qu'il faut vérifier.
 > - Lévy contrôle la convergence en loi, pas la convergence en probabilité.

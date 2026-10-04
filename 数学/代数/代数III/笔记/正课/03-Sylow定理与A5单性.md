@@ -251,6 +251,7 @@ Chaque $\tau c_i \tau^{-1}$ est un cycle, de même longueur que $c_i$, et de sup
 Réciproquement : si $\sigma = c_1 \cdots c_r$ et $\sigma' = c_1' \cdots c_r'$ avec $\operatorname{longueur}(c_i) = \operatorname{longueur}(c_i')$ pour tout $i$, on construit $\tau$ en envoyant $\operatorname{support}(c_i)$ sur $\operatorname{support}(c_i')$ en préservant l'ordre.
 
 > [!note] Conséquence
+>
 > 1. L'ordre d'une permutation est le plus petit commun multiple (p.p.c.m.) des longueurs des cycles de sa décomposition.
 > 2. Centre : pour $n \geqslant 3$, $Z(\mathfrak{S}_n) = \{\mathrm{Id}\}$.
 > 3. Questions de simplicité :
@@ -434,6 +435,7 @@ $$\operatorname{Stab}(x) \simeq \mathfrak{S}_{n-1} \quad \text{car} \quad \mathf
 > $G$ groupe, $\mathfrak{D}(G) = \langle [x,y] = xyx^{-1}y^{-1},\ x, y \in G \rangle$, et $G/\mathfrak{D}(G)$ est le « plus gros quotient abélien de $G$ ».
 
 > [!note] Thm
+>
 > 1. $\mathfrak{D}(\mathfrak{S}_n) = \mathfrak{A}_n$.
 > 2. Pour $n \geqslant 5$, $\mathfrak{D}(\mathfrak{A}_n) = \mathfrak{A}_n$.
 

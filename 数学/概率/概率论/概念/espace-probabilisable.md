@@ -22,11 +22,13 @@ confidence: medium
 
 ## Exemples
 > [!example]
+>
 > - Dé à 6 faces : $\Omega = \{1,\dots,6\}$, $\mathcal{F} = \mathcal{P}(\Omega)$.
 > - Dé en observant la parité : même $\Omega$, $\mathcal{F} = \{\emptyset, \{2,4,6\}, \{1,3,5\}, \Omega\}$.
 
 ## Pièges
 > [!warning]
+>
 > - $\Omega$ doit être non vide.
 > - Deux expériences sur le même $\Omega$ peuvent avoir des tribus différentes (selon ce qu'on observe).
 

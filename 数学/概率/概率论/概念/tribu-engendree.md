@@ -28,6 +28,7 @@ confidence: medium
 
 ## Pièges
 > [!warning]
+>
 > - Il faut que la famille $(\mathcal{F}_i)_{i\in I}$ soit non vide : il existe toujours au moins $\mathcal{P}(\Omega)$, qui contient $C$.
 > - $\sigma(C)$ dépend de l'ensemble ambiant $\Omega$, pas seulement de $C$.
 > - $\sigma(C)$ contient en général bien plus que $C$ et les opérations finies sur $C$.

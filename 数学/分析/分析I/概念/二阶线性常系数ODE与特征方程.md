@@ -16,6 +16,7 @@ confidence: medium
 > 称为**特征方程**。
 
 > [!note] 齐次方程的解（按判别式分类）
+>
 > - $\Delta=a^2-4b>0$：$y=C_1e^{\lambda_1 t}+C_2e^{\lambda_2 t}$；
 > - $\Delta=0$（重根 $\lambda=-a/2$）：$y=(C_1+C_2t)e^{\lambda t}$；
 > - $\Delta<0$（共轭复根）：$y=e^{-\frac{a}{2}t}\left(\tilde C_1\cos\frac{\sqrt{4b-a^2}}{2}t+\tilde C_2\sin\frac{\sqrt{4b-a^2}}{2}t\right)$。
@@ -27,6 +28,7 @@ confidence: medium
 > 断言对任意初值总能选出 $C_1,C_2$（线性代数）；于是只需证满足 $h(t_0)=h'(t_0)=0$ 的齐次解恒为零。令 $\omega=h^2+h'^2$，可得 $\omega'\leq C\omega$，$\omega(t_0)=0$，由 [[Gronwall不等式]] 型估计推出 $\omega\equiv 0$。
 
 > [!warning] 概念性陷阱
+>
 > - 根的三种情形对应 $S_0$ 的三种基，但维数恒为 $2$（实系数时以实解为基）。
 > - 重根时必须补出 $te^{\lambda t}$：单靠 $e^{\lambda t}$ 凑不出第二个无关解。
 

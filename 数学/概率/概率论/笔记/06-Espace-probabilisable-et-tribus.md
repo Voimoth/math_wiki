@@ -59,6 +59,7 @@ La famille $\mathcal{F}$ et les probabilités $\mathbb{P}(A)$ doivent satisfaire
 4. $\dots$ $\#$
 
 > [!example] Exemple 6.6
+>
 > 1. Pour tout $\Omega\neq\emptyset$, $\{\emptyset,\Omega\}$ est la plus petite tribu sur $\Omega$ (on l'appelle la tribu triviale sur $\Omega$), et $\mathcal{P}(\Omega)$ est la plus grande tribu sur $\Omega$.
 > 2. Pour l'expérience du lancer de dé, supposons qu'on observe uniquement la parité du résultat. Alors la tribu des événements observables est $\mathcal{F} = \{\emptyset, P, I, \Omega\}$, où $\Omega = \{1,2,3,4,5,6\}$, $P = \{2,4,6\}$ et $I = \{1,3,5\}$.
 

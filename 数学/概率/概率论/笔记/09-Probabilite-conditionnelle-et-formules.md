@@ -37,6 +37,7 @@ Donc $\mathbb{P}_A$ est $\sigma$-additive.
 (A2) $\mathbb{P}_A(\Omega) = \frac{\mathbb{P}(\Omega\cap A)}{\mathbb{P}(A)} = \frac{\mathbb{P}(A)}{\mathbb{P}(A)} = 1$ car $A\subset\Omega$. $\#$
 
 > [!info] Rq. 1.3
+>
 > 1. En fait $\mathbb{P}_A(A)=1$, c'est-à-dire $\mathbb{P}(A\mid A)=1$. On a aussi $\mathbb{P}(A^c\mid A)=0$. On appelle $\mathbb{P}_A$ la probabilité conditionnelle sachant $A$.
 > 2. Soit $B\in\mathcal{F}$ ; alors $\mathbb{P}(B^c\mid A) = 1-\mathbb{P}(B\mid A)$.
 

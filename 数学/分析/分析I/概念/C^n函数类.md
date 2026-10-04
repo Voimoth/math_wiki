@@ -22,6 +22,7 @@ confidence: medium
 ## 封闭性
 
 > [!note] Th.（复合、逆、除法）
+>
 > - 若 $f\in C^n(I,\mathbb{R})$，$g\in C^n(J,\mathbb{R})$，$f(I)\subset J$，则 $g\circ f\in C^n(I)$。
 > - 若 $f\in C^n$ 且 $f\neq0$，则 $1/f\in C^n$。
 > - 若 $f:I\to J$ 是 $C^n$ 的严格单调函数且 $f'\neq0$，则 $f^{-1}:J\to I$ 也是 $C^n$ 的。

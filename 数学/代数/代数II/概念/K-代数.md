@@ -36,6 +36,7 @@ confidence: medium
 
 ## 例子
 > [!example] 例
+>
 > - $K[X]$、$K(X)=\operatorname{Frac}(K[X])$、$K[\![X]\!]$、$K((X))=\operatorname{Frac}(K[\![X]\!])$；
 > - $M_n(K)$、$\mathcal{L}(E)$（非交换）；
 > - $T_n(K)\supset D_n(K)\supset K$（上三角、对角、常值对角）、$\{$收敛实序列$\}$、$C^0(\mathbb{R})$（$\mathbb{R}$-代数）。
@@ -43,6 +44,7 @@ confidence: medium
 
 ## 陷阱
 > [!warning] 易错
+>
 > - 同态必须保幺元 $f(1_A)=1_B$，仅要求线性 + 乘性不够。
 > - K-代数同态的核是理想（也是子向量空间），但一般不是子代数（通常不含幺元）。
 > - 「环」与「K-代数」不是同一个概念：遗漏数乘相容性会漏掉结构。

@@ -23,11 +23,13 @@ confidence: medium
 
 ## Exemples
 > [!example]
+>
 > - Probabilité uniforme sur un ensemble fini : $p_\omega = 1/|\Omega|$, d'où $\mathbb{P}(A) = |A|/|\Omega|$.
 > - Paradoxe des anniversaires : $\Omega = \{1,\dots,365\}^n$ avec la probabilité uniforme.
 
 ## Pièges
 > [!warning]
+>
 > - Ce théorème exige $\Omega$ **au plus dénombrable** ; si $\Omega$ est non dénombrable, les $p_\omega = \mathbb{P}(\{\omega\})$ ne suffisent pas à déterminer $\mathbb{P}$ (une probabilité continue peut avoir tous ses $p_\omega = 0$).
 > - Les $p_\omega$ doivent sommer à $1$ exactement.
 

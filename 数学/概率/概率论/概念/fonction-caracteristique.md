@@ -18,6 +18,7 @@ confidence: medium
 > $$\varphi_X:\mathbb{R}^n\to\mathbb{C},\qquad \varphi_X(z)=\mathbb{E}\big[e^{izX}\big].$$
 
 > [!info] Propriétés
+>
 > - $\varphi_X$ est continue, $\varphi_X(0)=1$ et $|\varphi_X(z)|\le1$.
 > - $X\overset{\mathcal{L}}{=}Y\iff\varphi_X=\varphi_Y$.
 > - Si $X\perp Y$, alors $\varphi_{(X,Y)}(x,y)=\varphi_X(x)\varphi_Y(y)$ ; en particulier $\varphi_{X+Y}=\varphi_X\varphi_Y$.
@@ -33,6 +34,7 @@ confidence: medium
 
 ## Pièges
 > [!warning]
+>
 > - Ne pas la confondre avec la transformée de Laplace ni avec la fonction génératrice : la variable $z$ est réelle, l'exponentielle est complexe, et le module est borné par $1$.
 > - Son existence ne suppose aucun moment.
 > - Elle ne se confond avec une densité que pour certaines lois : on revient à la loi par inversion de Fourier.

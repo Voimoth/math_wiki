@@ -24,10 +24,12 @@ confidence: medium
 > 「$\Leftarrow$」若 $x$ 不属于某极大理想 $m$，则 $(x) + m = R$，于是某个 $1 - xy$ 落在 $m$ 中，不可能是可逆元。
 
 > [!example] 例子
+>
 > - $R$ 是局部环，唯一极大理想为 $m$，则 $J(R) = m$。
 > - $\mathbb{Z}$ 中 $J(\mathbb{Z}) = \bigcap_p (p) = (0)$。
 
 > [!warning] 陷阱
+>
 > - $J(R)$ 一般不等于幂零根 $\operatorname{Nil}(R)$：有 $\operatorname{Nil}(R) \subseteq J(R)$，但反向不成立。
 > - 对某些环「所有极大理想之交」为零理想（如 $\mathbb{Z}$），此时 $J(R) = 0$ 仍是有效信息。
 > - 条件「$\forall y$」比单独「$1 - x$ 可逆」更强。

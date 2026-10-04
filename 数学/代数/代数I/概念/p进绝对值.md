@@ -19,6 +19,7 @@ confidence: medium
 > 于是 $|\cdot|_p:\mathbb{Q}\to\mathbb{R}^*$，称为 $p$ 进绝对值（valeur absolue $p$-adique）。
 
 > [!note] 性质
+>
 > 0. $|r|_p\geq 0$，且 $|r|_p=0\iff r=0$；
 > 1. 强三角不等式：$|a+b|_p\leq\max(|a|_p,|b|_p)$，且当 $|a|_p\neq|b|_p$ 时取等号；
 > 2. $|ab|_p=|a|_p|b|_p$。

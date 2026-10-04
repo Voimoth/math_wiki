@@ -29,6 +29,7 @@ confidence: high
 ## 例子
 
 > [!example]
+>
 > - 范数映射 $x\mapsto\|x\|$（1-Lip）；
 > - 到固定集合的距离 $x\mapsto d(x,A)$（1-Lip）；
 > - 距离函数 $(x,y)\mapsto d(x,y)$ 在 $E\times E$（乘积范数）上 Lip：$\bigl|d(x_1,y_1)-d(x_2,y_2)\bigr|\le\|x_1-x_2\|+\|y_1-y_2\|$，仔细写比看上去难；

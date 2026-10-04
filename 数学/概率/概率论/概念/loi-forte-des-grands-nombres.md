@@ -30,6 +30,7 @@ confidence: medium
 
 ## Pièges
 > [!warning]
+>
 > - La version $L^2$ utilise l'indépendance (pas seulement la non-corrélation) pour découper les blocs.
 > - Le contrôle uniforme en $k$ à l'intérieur d'un bloc (avec $k$ entre deux carrés consécutifs) est crucial ; estimer $A_n$ seulement en $n$ ne suffit pas.
 > - À ne pas confondre avec [[convergence-en-probabilite]] : ici la convergence est ponctuelle p.s.

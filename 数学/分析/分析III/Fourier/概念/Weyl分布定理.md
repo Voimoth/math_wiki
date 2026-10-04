@@ -36,6 +36,7 @@ $$\lim_{N\to\infty}\frac1N\sum_{n\le N}f(\xi_n)=\int_0^1 f(x)\,dx.$$
 > 这本质上是一个**测度的 Fourier 唯一性命题**——非零频率上 Fourier 系数全为零的测度只能是均匀（归一化 Lebesgue）测度；实现它靠三角多项式的稠密性。
 
 > [!info] 历史注记
+>
 > - 背景是 Kronecker 定理：$\gamma$ 无理时 $\langle n\gamma\rangle$ 在 $[0,1]$ 中稠密。
 > - Weyl（1916）把“模 1 等分布”抽象为一般数列的性质（使“分布”本身成为研究对象），给出上述判据，并发明“差分法”证明**多项式数列**的等分布。$\langle n\gamma\rangle$ 在他文中只是主定理的“直接推论”。
 > - 常见误归属：“三间隙定理”是 Steinhaus 的猜想，证明属 Sós、Świerczkowski 等（1950 年代末），与 Weyl 无关。

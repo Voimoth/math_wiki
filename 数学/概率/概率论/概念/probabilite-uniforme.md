@@ -25,11 +25,13 @@ confidence: medium
 
 ## Exemples
 > [!example]
+>
 > - Dé équilibré : $\mathbb{P}(\text{pair}) = 3/6$.
 > - Paradoxe des anniversaires : $\mathbb{P}(A) = 1 - \dfrac{365!}{(365-n)!\,365^n}$, et $\mathbb{P}(A) > \tfrac12$ dès $n\geq 23$.
 
 ## Pièges
 > [!warning]
+>
 > - N'existe que pour un univers **fini** (ou sous forme de choix uniforme sur un intervalle de longueur finie) ; pas de probabilité uniforme sur $\mathbb{N}$.
 > - En continu, $\mathbb{P}(\{x\}) = 0$ pour chaque point : un événement de probabilité nulle n'est pas impossible.
 

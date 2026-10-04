@@ -16,11 +16,13 @@ confidence: medium
 > 若 $\Delta f=0$，称 $f$ 为**调和函数**（fonction harmonique）。
 
 > [!example] 基本例子
+>
 > - $\mathbb{R}^3$ 中 $\Delta\frac{1}{r}=0$（$r=\sqrt{x_1^2+x_2^2+x_3^2}$）；
 > - $\mathbb{R}^2$ 中 $\Delta\log r=0$（$r=\sqrt{x_1^2+x_2^2}$）。
 > 这两者分别是三维、二维的「基本解」，与位势理论相关。
 
 > [!warning] 概念性陷阱
+>
 > - 混淆 $\Delta$（Laplace 算子）与增量记号 $\Delta(h,k)$：同一个符号两种含义，注意上下文。
 > - 使用 $\Delta(\log r)=0$ 时要避开 $r=0$，调和性只在定义域（挖去原点）上成立。
 

@@ -32,12 +32,14 @@ confidence: medium
 
 ## 例子
 > [!example] 例
+>
 > - $\lambda\neq\mu$：$\operatorname{diag}\bigl(J_\lambda(3),J_\lambda(2),J_\mu(2),J_\mu(1)\bigr)\in M_8(K)$；
 > - $n=2$ 可三角化不可对角化：$J_\lambda(2)=\begin{pmatrix}\lambda&1\\0&\lambda\end{pmatrix}$；
 > - 可对角化 $\iff$ 所有 Jordan 块都是 $1$ 阶（即 $\dim E_\lambda=m(\lambda)$）。
 
 ## 陷阱
 > [!warning] 易错
+>
 > - Jordan 型**只在域上分裂时**存在；不分裂就要先扩域（或改用一般域上的有理标准形/Frobenius 型）。
 > - 把 $\beta$ 归一成 $1$ 靠的是「换一组合适的基」，不是相似变换之外的操作；归一后的块才唯一。
 > - 两个同阶、同特征多项式的矩阵未必相似——要比较 Jordan 块（等价地比较 $\operatorname{rg}(A-\lambda I)^m$）。

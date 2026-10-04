@@ -30,6 +30,7 @@ confidence: medium
 
 ## Pièges
 > [!warning]
+>
 > - L'hypothèse est bien $X_1\in L^1$, pas seulement « $X_1$ bornée » : l'argument de troncature est indispensable.
 > - La loi faible ne dit rien sur la convergence pour un $\omega$ fixé ; c'est l'objet de la loi forte ([[loi-forte-des-grands-nombres]]).
 > - La preuve $L^2$ a besoin de la non-corrélation deux à deux ; l'indépendance en est un cas particulier.

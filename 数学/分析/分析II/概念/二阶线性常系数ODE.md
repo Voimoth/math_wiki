@@ -38,6 +38,7 @@ confidence: high
 于是解的结构彻底清楚:齐次方程解空间是二维线性空间,非齐次方程解空间是二维仿射空间。
 
 > [!example] 特解的猜测(右端为 $e^{\lambda x}$)
+>
 > - $\lambda$ 不是特征根:猜 $ce^{\lambda t}$;
 > - $\lambda$ 是特征单根:猜 $cte^{\lambda t}$;
 > - $\lambda$ 是特征重根:猜 $ct^2e^{\lambda t}$。
