@@ -258,3 +258,14 @@
 - 主要连接：物理「最小作用量原理 / 最速降线 / 欧拉-拉格朗日方程」↔ 分析 I「最速降线与 Euler-Lagrange 方程」/「变分」；「伽利略群」↔ 代数 II「正交群 / 等距变换 / 半直积」；「仿射空间」↔「参照系 / 卡氏方程」；「测地线方程」↔「弧长参数化 / 曲率」；概率 `fonction-caracteristique`、`theoreme-central-limite` ↔ Fourier「傅里叶变换 / Plancherel 定理」；Fourier「L² 与 Hilbert 空间」↔ 代数 II「数量积 / 正交族 / 谱定理」；概率 `tribu` ↔ 点集拓扑「拓扑空间」；概率 `inegalites-lp` ↔ 分析 I「Hölder / Minkowski 不等式」；`coefficient-binomial` ↔ 代数 I「二项式定理」。
 - 判据「不硬凑」：无真正跨课程对应（如代数 I 的「幺半群 / 整除 / p 进赋值」、代数 II 的「Desargues/Pappus/Pascal 定理」）的页面保持 0 条。
 - 已把「跨课程/跨学科互链」写入 skill math-notes-transcription。
+
+## [2026-10-04] fix | 补掉全库残留的歧义链接与数学记号误判
+
+- 用户读《纤维积》相关页时发现仍有歧义链接。全库复查（765 篇、约 6000 个 wikilink）：真歧义 **1 处**、
+  真断链 **0 处**、数学记号误判 **4 处**。
+- `数学/代数/代数II/概念/正交群.md`：裸链 `[[群]]` 在代数 I/III 各有同名页（Obsidian 解析到不确定的一个）
+  ⇒ 改 `[[代数I/概念/群]]`。上一轮消歧（167 处）与代数 II 入库那轮（33 文件）都漏了这页。
+- 形式幂级数 `$K[[X]]$` 会被 Obsidian 当 wikilink（点一次就生成空页 `X.md`）⇒ 按既有约定改 `$K[\![X]\!]$`：
+  `代数II/概念/K-代数.md`（2 处）、`代数II/笔记/09-K-代数与极小多项式.md`（2 处）。
+- 复查脚本的正确写法（要剥行内代码、区分路径式/裸名、数学记号单独归类）已补进 skill
+  wiki-writing-conventions 的 `references/vault-hygiene-and-git.md`。验收口径：真歧义 0 / 真断链 0 / 数学记号 0。
