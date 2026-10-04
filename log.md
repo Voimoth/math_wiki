@@ -303,3 +303,12 @@
 - 排查/验收脚本（已随技能保存）：`nvim-config/scripts/check_pdf_compile.py`（全库试编译：失败 + 缺字）
   与 `find_bad_math.py`（找没被解析的 `$...$`）。
 - 验收：全库 763 篇（排除 `log.md`/`wikilinks.md`/`templates/`）→ **0 编译失败、0 缺字**；改动 6 篇 rc=0。
+
+## [2026-10-04] add | 群论的目的与历史.md 新增 §4：陪集与正规子群的概念/术语来历（含出处）
+
+- 起因：复习第 1 站时用户问「历史上先有陪集还是先有正规子群」，并要求查实。
+- 查证结果（源：Wussing 引 Galois 1832 致 Chevalier 信；MacTutor；Wikipedia Coset / Normal subgroup / History of group theory）：
+  概念上两者同段出现——Galois 的「décomposition propre」= 左右陪集分解重合；术语「co-set」首见于 G. A. Miller 1910；
+  系统化经 Jordan 1869/1870 → Hölder 1889（商群标准形式）→ Weber/Burnside 教科书。
+  仍未坐实：德语 Normalteiler 一词的首用者（已标 [?] 并留了两条查证线索）。
+- 本节含一处术语陷阱：英语 distinguished subgroup ≠ 正规子群（= 严格特征子群）。
