@@ -288,3 +288,18 @@
   两条论证（按 §1 定义直接读 / 数次数 $n!$，实质是对称多项式基本定理）；
   与 §2 的 $C_4$ 例子对照（「一般」= 群最大，特殊关系压缩群）；「无根式解」的准确含义
   （不存在统一根式公式；只需一个 $\mathfrak S_5$ 的例子如 $X^5-6X+3$）。
+
+## [2026-10-04] fix | 预览编译全库排查：模板补齐 + 6 篇笔记的行内公式边界
+
+起因：用户报 `A5单性与60阶群` 无法编译预览，并要求排查库里同类问题。
+- 根因在**预览模板** `~/.local/share/pandoc/templates/mathwiki.tex`（不是笔记内容）：
+  ① 漏抄 pandoc 默认模板的表格导言区 ⇒ **凡含 markdown 表格的笔记全部编译失败**
+     （`Environment longtable undefined` / `No counter 'none' defined`：需 longtable + caption + `\newcounter{none}`）；
+  ② 缺 `\xeCJKsetup{CJKmath=true}` ⇒ 公式里夹的汉字（如 `$\|余项\|^2$`）在 PDF 里显示为空白；
+  ③ Noto Serif 缺 `⟹ → ① ② ↔ ≠ ≤ ∞ ⇔ ⊂ …` 等字形 ⇒ 用 `newunicodechar` 映射到 LaTeX 宏；
+  ④ 笔记里用到的 `\llbracket/\rrbracket`（stmaryrd，3 篇）与 `\mapsfrom`（1 篇）LaTeX 默认没有 ⇒ 模板里提供。
+- 笔记侧：6 个文件共 16 处 `$...$` 因「闭 `$` 前有空格」没被 pandoc 当公式（如 `$A = $`、`$\sigma = $`，
+  渲染成字面美元符；其中一处还会连带编译报错）⇒ 收窄公式边界后正常，语义未变。
+- 排查/验收脚本（已随技能保存）：`nvim-config/scripts/check_pdf_compile.py`（全库试编译：失败 + 缺字）
+  与 `find_bad_math.py`（找没被解析的 `$...$`）。
+- 验收：全库 763 篇（排除 `log.md`/`wikilinks.md`/`templates/`）→ **0 编译失败、0 缺字**；改动 6 篇 rc=0。

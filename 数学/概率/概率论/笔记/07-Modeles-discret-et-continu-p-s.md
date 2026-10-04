@@ -32,7 +32,7 @@ Réciproquement, pour chaque famille $(p_\omega)_{\omega\in\Omega}$ telle que $\
 > [!example] Exemple 7.3 (paradoxe des anniversaires)
 > Modèle : on considère $n$ personnes dont les anniversaires se trouvent dans les 365 jours d'une année,
 > $$\Omega = \{1,2,\dots,365\}^n,\qquad \mathcal{F} = \mathcal{P}(\Omega),\qquad \mathbb{P} = \text{la probabilité uniforme sur } \Omega.$$
-> Soit $A = $ « au moins 2 personnes ont le même anniversaire » ; alors $A^c = $ « les $n$ anniversaires sont tous différents ».
+> Soit $A =$ « au moins 2 personnes ont le même anniversaire » ; alors $A^c =$ « les $n$ anniversaires sont tous différents ».
 >
 > Supposons $n\leq 365$ (si $n>365$, par le principe des tiroirs, $A = \Omega$ et $A^c = \emptyset$). On a
 > $$A^c = \{(a_1,\dots,a_n) \mid \forall i\neq j,\ a_i\neq a_j\},$$

@@ -20,7 +20,7 @@ But : modéliser une « expérience aléatoire ».
 Informellement, un « événement » est une question à laquelle on peut répondre oui ou non, après avoir observé le résultat de l'expérience.
 
 > [!example] Exemple 6.2
-> Événement : $A = $ « le dé tombe sur un nombre pair ».
+> Événement : $A =$ « le dé tombe sur un nombre pair ».
 
 Formellement, un événement est représenté par un sous-ensemble de $\Omega$.
 

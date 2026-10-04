@@ -82,7 +82,7 @@ $$\Rightarrow |S_n| \leq \varepsilon + 2\sqrt{\varepsilon C} \Rightarrow \lim_{n
 ## 级数求和与极限的可交换性
 
 > [!note] Déf.
-> 称 $\sum_{j=1}^{\infty} a_{ij} = a_i$ 关于 $i$ 一致收敛，若 $\forall \varepsilon > 0 \ , \ \exists N(\varepsilon) \ , \ $ 当 $n \geq N \ , \ i \geq 1$ 时，$\left| \sum_{j=1}^{n} a_{ij} - a_i \right| \leq \varepsilon$。
+> 称 $\sum_{j=1}^{\infty} a_{ij} = a_i$ 关于 $i$ 一致收敛，若 $\forall \varepsilon > 0 \ , \ \exists N(\varepsilon) \ ,\,$ 当 $n \geq N \ , \ i \geq 1$ 时，$\left| \sum_{j=1}^{n} a_{ij} - a_i \right| \leq \varepsilon$。
 
 > [!note] Th.
 > 设 $\sum_{j=1}^{\infty} a_{ij} = a_i$ 关于 $i$ 一致收敛，当 $j \geq 1$ 时 $\lim_{i \to \infty} a_{ij} = a_j$，则 $\lim_{i \to \infty} a_i$ 存在，$\sum_{j=1}^{\infty} a_j$ 收敛，且二者相等。
