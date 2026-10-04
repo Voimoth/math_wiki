@@ -36,7 +36,7 @@ confidence: medium
 
 ## 例子
 > [!example] 例
-> - $K[X]$、$K(X)=\operatorname{Frac}(K[X])$、$K[[X]]$、$K((X))=\operatorname{Frac}(K[[X]])$；
+> - $K[X]$、$K(X)=\operatorname{Frac}(K[X])$、$K[\![X]\!]$、$K((X))=\operatorname{Frac}(K[\![X]\!])$；
 > - $M_n(K)$、$\mathcal{L}(E)$（非交换）；
 > - $T_n(K)\supset D_n(K)\supset K$（上三角、对角、常值对角）、$\{$收敛实序列$\}$、$C^0(\mathbb{R})$（$\mathbb{R}$-代数）。
 > - 取定基后 $\mathcal{L}(E)\cong M_n(k)$；$A\mapsto P^{-1}AP$ 是 $M_n(k)$ 的 $k$-代数自同构。
