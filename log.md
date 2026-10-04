@@ -312,3 +312,10 @@
   系统化经 Jordan 1869/1870 → Hölder 1889（商群标准形式）→ Weber/Burnside 教科书。
   仍未坐实：德语 Normalteiler 一词的首用者（已标 [?] 并留了两条查证线索）。
 - 本节含一处术语陷阱：英语 distinguished subgroup ≠ 正规子群（= 严格特征子群）。
+
+## [2026-10-04] add | 群论的目的与历史.md 增补「群论发展史」年表（第 0–4 幕）
+- 起因：用户要求「好好讲讲数学史」（并明确不必再重复正规子群这类基本概念）。
+- 内容：1545 Cardano/Ferrari → 1770 Lagrange 预解式 → 1799 Ruffini → 1824 Abel → 1830–32 Galois（含决斗前夜致 Chevalier 的信）
+  → 1842/46 Liouville 发表遗稿 → 1854 Cayley 抽象群定义（当时无人响应）→ 1862/1872 Sylow → 1869/70 Jordan 教科书
+  → 1872 Klein → 1882 von Dyck → 1880s–90s Dedekind/Weber/Hölder → 1897 Burnside/Frobenius → 20 世纪单群分类。
+- 查证源：Wikipedia（Galois / Lagrange / Cayley / Sylow / History of group theory）、MacTutor。
