@@ -269,3 +269,13 @@
   `代数II/概念/K-代数.md`（2 处）、`代数II/笔记/09-K-代数与极小多项式.md`（2 处）。
 - 复查脚本的正确写法（要剥行内代码、区分路径式/裸名、数学记号单独归类）已补进 skill
   wiki-writing-conventions 的 `references/vault-hygiene-and-git.md`。验收口径：真歧义 0 / 真断链 0 / 数学记号 0。
+
+## [2026-10-04] fix | 消掉「nvim 侧二义」这一整类：概念名与讲义笔记 H1 撞车
+
+- 用户报代数索引里 映射/序关系/多项式环/族/根与重数/有理分式 各指向 ≥2 个文件。Obsidian 里看不出问题，
+  差在解析规则：obsidian.nvim 按 `Note.reference_ids = {id, 标题(取 H1), 文件名, stem, aliases}` 匹配，
+  而这些概念名同时是同名讲义笔记的 H1（`05-映射.md`、`07-族.md` 等）⇒ 每个词有两个 exact match，
+  nvim 会弹候选列表或直接选错文件（实测 `resolve_note("映射")` 返回 `笔记/正课/05-映射.md`）。
+- 处置：43 个文件 53 处裸链 → `[[代数I/概念/…]]`（保留别名与锚点），Obsidian 显示不变。提交 `6abcf44`。
+- 复查脚本升级为技能自带脚本 `wiki-writing-conventions/scripts/check_wikilinks.py`：一次扫四类
+  （裸链二义 / 路径链接二义 / 断链 / 数学记号误判），本次全库 766 篇结果 **0/0/0/0**。
