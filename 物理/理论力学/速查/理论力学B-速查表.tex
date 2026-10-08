@@ -1,0 +1,219 @@
+% 理论力学 B 开卷速查表（2026 秋 小测用）
+% 编译：xelatex 理论力学B-速查表.tex （两遍以生成长目录/引用）
+\documentclass[9pt,a4paper]{ctexart}
+\usepackage[margin=1.3cm,top=1.5cm,bottom=1.4cm]{geometry}
+\usepackage{amsmath,amssymb}
+\usepackage{enumitem}
+\usepackage{xcolor}
+\usepackage{multicol}
+\usepackage{titlesec}
+\setlist{nosep,leftmargin=1.1em}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{2pt}
+\setlength{\columnsep}{0.7cm}
+\setlength{\columnseprule}{0.3pt}
+\definecolor{dblue}{RGB}{20,60,130}
+\newcommand{\Sec}[1]{\vspace{4pt}{\color{dblue}\bfseries\large #1}\par\vspace{1pt}\hrule\vspace{3pt}}
+\newcommand{\hd}[1]{\vspace{2pt}{\bfseries #1}\par}
+\titlespacing*{\section}{0pt}{6pt}{3pt}
+\pagestyle{plain}
+\newcommand{\dd}{\mathrm{d}}
+\newcommand{\rc}{r_c}
+\newcommand{\Veff}{V_{\rm eff}}
+\title{\vspace{-1.2cm}理论力学 B · 开卷速查}
+\author{}
+\date{2026-10-09 小测用 · 覆盖已学：变分法/最小作用量 $\to$ 拉格朗日力学 $\to$ 有心力轨道 $\to$ Schwarzschild 测地线}
+
+\begin{document}
+\maketitle
+\vspace{-1.1cm}
+\begin{multicols}{2}
+
+\Sec{0. 考场配方（任何力学题）}
+\begin{enumerate}
+\item 写拉格朗日量：经典 $L=T-V$；GR $\mathcal L=\tfrac12 g_{\mu\nu}\dot x^\mu\dot x^\nu$。
+\item 找循环坐标 $\Rightarrow$ 首积分（诺特：时间平移$\to$能量，平移$\to$动量，转动$\to$角动量）。
+\item 用首积分降到一维：$E=\tfrac12\mu\dot r^2+V_{\rm eff}$。
+\item 按问什么选工具：要\textbf{形状}用比内方程；要\textbf{时间}积 $\int \dd r/\sqrt{\cdot}$；要\textbf{小偏离}展开到二阶；要\textbf{进动}做微扰并只留共振项。
+\item 自查三条：量纲、代特例（$V=-k/r$ 必须回 Kepler）、两条独立路线对拍。
+\end{enumerate}
+
+\Sec{1. 最小作用量原理与变分法}
+\hd{作用量与 E-L}
+$S[q]=\int_{t_1}^{t_2}L(q,\dot q,t)\dd t$，$\delta S=0$ 是\textbf{驻值}（不一定是极小）。Euler--Lagrange：
+$$\frac{\dd}{\dd t}\frac{\partial L}{\partial \dot q_i}-\frac{\partial L}{\partial q_i}=0 .$$
+推导三步：$\delta S=\int(\frac{\partial L}{\partial q}\delta q+\frac{\partial L}{\partial\dot q}\delta\dot q)\dd t$；等时变分 $\delta\dot q=\frac{\dd}{\dd t}\delta q$（变分与 $\dd/\dd t$ 可交换，依据是有限区间上积分号下求导）；分部积分后边界项 $\delta q(t_1)=\delta q(t_2)=0$ 杀掉。
+
+\hd{三种推广}
+\begin{itemize}
+\item $L(q,\dot q,\ddot q)$：$\dfrac{\partial L}{\partial q}-\dfrac{\dd}{\dd t}\dfrac{\partial L}{\partial\dot q}+\dfrac{\dd^2}{\dd t^2}\dfrac{\partial L}{\partial\ddot q}=0$（分部积分两次；边界给 $\delta q=\delta\dot q=0$）。
+\item $L\to L+\dfrac{\dd f}{\dd t}$：方程不变（只改边界项）$\Rightarrow$ 物理只认 $L$ 的等价类。
+\item 端点自由的坐标：$\left.\partial L/\partial\dot q\right|_{\rm end}=0$（自然边界条件）。
+\end{itemize}
+
+\hd{Beltrami 与循环坐标}
+\begin{itemize}
+\item $L$ 不显含 $t$：$\displaystyle\sum_i \dot q_i\frac{\partial L}{\partial\dot q_i}-L=\text{const}$（就是能量）。
+\item 一般 $F(x,y,y')$：不显含 $x$ $\Rightarrow F-y'\partial F/\partial y'=\text{const}$；不显含 $y$ $\Rightarrow \partial F/\partial y'=\text{const}$。
+\item $L$ 对速度\textbf{二次齐次} $\Rightarrow \sum\dot q\partial L/\partial\dot q=2L$，于是 Beltrami 给 $L=\text{const}$（GR 里 $2\mathcal L=-1$ 就是这个）。
+\end{itemize}
+
+\hd{两个应用模板}
+费马原理 $\delta\!\int n\,\dd s=0$：$n$ 缓变时偏折角 $\approx$ 沿路径对横向梯度 $\nabla_\perp n$ 的积分。测地线：$\delta\!\int \dd s=0$ 给测地线方程，弧长是天然仿射参数。
+
+\Sec{2. 拉格朗日力学与对称性}
+\hd{虚功原理与广义坐标}
+理想约束力不做虚功，$\sum_a(\vec F_a-m_a\ddot{\vec r}_a)\cdot\delta\vec r_a=0$。广义力 $Q_i=\sum_a\vec F_a\cdot\partial\vec r_a/\partial q_i$，方程仍是 E-L。自由度 $=3N-(\text{完整约束数})$。约束不显含 $t$ 时 $T=\tfrac12\sum M_{ij}(q)\dot q_i\dot q_j$ 是二次型。
+
+\hd{守恒量与对称性（诺特）}
+\begin{itemize}
+\item 时间平移 $\Rightarrow$ 能量 $H=\sum_i \dot q_i p_i-L$，条件：$L$ 不显含 $t$。
+\item 空间平移 $\Rightarrow$ 总动量；转动 $\Rightarrow$ 总角动量。
+\item 循环坐标 $\Rightarrow p_i=\partial L/\partial\dot q_i$ 守恒。
+\end{itemize}
+注意 $H\ne T+V$ 的两种情形：广义坐标显含 $t$、或 $V$ 与速度有关。
+
+\hd{时间作为广义坐标}
+把 $t$ 当第 $0$ 个坐标、用参数 $\sigma$：$L_1=L\,q'^0$（$\,'=\dd/\dd\sigma$）。$L_1$ 对 $q'$ 一次齐次 $\Rightarrow$ Beltrami 给一条恒等式，它\textbf{就是}能量守恒；所以方程数目多一个，但独立方程数不变。
+
+\hd{非惯性系与等效原理}
+转动系（角速度 $\vec\Omega$）：惯性力 $=-m\vec\Omega\times(\vec\Omega\times\vec r)-2m\vec\Omega\times\vec v$（离心 + 科里奥利）。匀加速参考系 $\vec a$ 等价于均匀引力场 $\vec g=-\vec a$：局部无法区分；由此 $\vec g$ 场中"静止"的观者固有加速度非零。
+
+\Sec{3. 有心力场（hw4 工具箱）}
+\hd{极坐标与两个首积分}
+$L=\tfrac12\mu(\dot r^2+r^2\dot\theta^2)-V(r)$（$\theta$ 循环）：
+$$p_\theta=\mu r^2\dot\theta=L\ (\text{总角动量}),\qquad E=\tfrac12\mu\dot r^2+\Veff$$
+$$\Veff(r)=V(r)+\frac{L^2}{2\mu r^2}$$
+面积定律 $\dd A/\dd t=L/(2\mu)$。圆轨道 $\Veff'(\rc)=0$；稳定 $\Leftrightarrow \Veff''(\rc)>0$。
+
+\hd{降维后的两个积分}
+$$t-t_0=\int\frac{\dd r}{\sqrt{\tfrac{2}{\mu}\big(E-\Veff\big)}}$$
+$$\theta-\theta_0=\int\frac{L\,\dd r}{\mu r^2\sqrt{\tfrac2\mu\big(E-\Veff\big)}}$$
+
+\hd{比内方程（要轨道形状就用它）}
+$u=1/r$，$u'=\dd u/\dd\theta$：
+$$u''+u=-\frac{\mu\,F(1/u)}{L^2u^2}\qquad(F(r)\text{ 为径向力})$$
+$V=-k/r$：$u''+u=\dfrac{\mu k}{L^2}$ $\Rightarrow$
+$$r=\frac{p}{1+e\cos\theta},\quad p=\frac{L^2}{\mu k},\quad e=\sqrt{1+\frac{2EL^2}{\mu k^2}}$$
+类型：$E<0$ 椭圆，$E=0$ 抛物线，$E>0$ 双曲线。\textbf{在转折点（$\dot r=0$）求能量}是定 $E$--$e$ 关系的标准手段：
+$$E=\frac{\mu k^2}{2L^2}(e^2-1)$$
+（吸引/排斥同一式；只有"哪支曲线"受 $k$ 的符号影响。）
+排斥 $V=\alpha/r$：$u=\dfrac{\mu\alpha}{L^2}(e\cos\theta-1)$，$E>0$ 恒成立 $\Rightarrow$ 双曲线（力心在远焦点）。
+
+\hd{两个常用特解}
+$V=-k/r,\ E=0$（抛物线）的 $r(t)$：令 $s=\sqrt{2\mu kr-L^2}$，
+$$t=\frac{s^3/3+L^2 s}{2\mu k^2}\iff s^3+3L^2s=6\mu k^2t$$
+换成 $D=\tan(\theta/2)$、$p=L^2/(\mu k)$、$r=\tfrac p2(1+D^2)$ 即 Barker 方程 $t=\tfrac12\sqrt{\mu p^3/k}\,(D+D^3/3)$。要显式 $r(t)$ 得解三次方程（教材一般停在隐含式）。
+
+\hd{径向小振动（$E$ 略高于 $E_{\min}$）}
+$x=r-\rc$：$\mu\ddot x=-\Veff''(\rc)x$，$\omega_r=\sqrt{\Veff''/\mu}$。
+$$\Delta\theta_{\text{近心}\to\text{远心}}=\frac{\pi L}{\rc^2\sqrt{\mu\Veff''(\rc)}}$$
+（单位质量角动量 $l=L/\mu$ 的写法：$\pi l\sqrt\mu\,\big/\big(\rc^2\sqrt{\Veff''}\big)$。）
+近似用在哪：① 只留 $\Veff$ 的二阶项（$x$ 小）；② $\Delta\theta=\dot\theta_c T_r/2$ 里 $\dot\theta$ 取圆轨道值。一阶修正因 $\int x\,\dd t=0$ 自动消失，误差自 $O((x_{\max}/\rc)^2)$ 起。\textbf{别忘了离心项} $\frac{\dd^2}{\dd r^2}\frac{L^2}{2\mu r^2}=\frac{3L^2}{\mu r^4}$。
+
+\hd{进动（轨道不闭合）}
+每径向周期的进动角 $\delta\theta=2\Delta\theta-2\pi$。
+\begin{itemize}
+\item \textbf{一般一阶公式}（沿\emph{无扰}开普勒轨道积分，任意 $e$，朗道 §15 习题 3）：
+\begin{align*}
+\delta\theta&=\frac{\partial}{\partial M}\!\int_{r_{\min}}^{r_{\max}}\!\frac{2\mu\,\delta V\,\dd r}{\sqrt{2\mu(E+k/r)-M^2/r^2}}\\
+&=\frac{\partial}{\partial M}\!\left(\frac{2\mu}{M}\!\int_0^\pi\! r^2\delta V\,\dd\varphi\right)
+\end{align*}
+\item \textbf{$\delta V=\beta/r^2$：可精确解}。只改比内方程 $u$ 的系数：$u''+(1+\tfrac{2\mu\beta}{L^2})u=\tfrac{\mu k}{L^2}$，角波数 $\sqrt{1+2\mu\beta/L^2}$（进动椭圆）：
+$$\delta\theta=2\pi\Big(\frac1{\sqrt{1+2\mu\beta/L^2}}-1\Big)\approx-\frac{2\pi\mu\beta}{L^2}\quad(\beta>0\text{ 逆行})$$
+\item \textbf{$\delta V=\gamma/r^3$：只能微扰}。$u''+u=\frac{\mu k}{L^2}-\frac{3\mu\gamma}{L^2}u^2$；沿无扰椭圆 $u_0=K(1+e\cos\varphi)$（$K=\mu k/L^2$）展开，强迫项有三种频率（常数、$\cos\varphi$、$\cos2\varphi$），\textbf{只有与齐次解同频（$=1$）的 $\cos\varphi$ 项共振}，长出 $u_1\propto\varphi\sin\varphi$ $\Rightarrow$ 相位 $\psi=\frac{3\mu^2k\gamma}{L^4}$：
+$$\delta\theta=-2\pi\psi=-\frac{6\pi\mu^2k\gamma}{L^4}=-\frac{6\pi\gamma}{kp^2},\qquad p=\frac{L^2}{\mu k}$$
+与 $e$ 无关（共振振幅的 $e$ 与提出来的 $e$ 相消）；$\gamma>0$ 逆行。
+\end{itemize}
+\textbf{共振判据}（微扰题通用）：强迫项频率 $=1$ 才给 $\varphi\sin\varphi$ 的长期项；其他频率只给有界特解，改形状不改进动。
+
+\hd{LRL 矢量（只对精确 $1/r^2$ 守恒）}
+单位质量（用总角动量时 $k\to GM\mu$）：
+$$\vec A=\dot{\vec r}\times\vec L-k\,\hat r,\qquad \vec L=\vec r\times\dot{\vec r}$$
+$\vec A\cdot\vec L=0$（在轨道面内）；$|\vec A|=ke$；$A^2=k^2+2EL^2$；$\vec A$ 沿长轴指向近心点。
+$$\vec A\cdot\vec r=L^2-kr\ \Rightarrow\ r=\frac{L^2/k}{1+e\cos\theta}\quad(\text{轨道方程一步到手})$$
+守恒机制：写 $\ddot{\vec r}=f(r)\hat r$，则
+$$\frac{\dd\vec A}{\dd t}=\big[-f(r)r^2-k\big]\frac{\dd\hat r}{\dd t}\ \Rightarrow\ \text{守恒}\iff f\propto 1/r^2$$
+有用的恒等式：$\hat r\times\vec L=-r^2\dfrac{\dd\hat r}{\dd t}$（BAC-CAB + 速度分解 $\dot{\vec r}=\dot r\hat r+r\frac{\dd\hat r}{\dd t}$；或几何 $=-L\hat e_\theta$，因 $L=r^2\dot\theta$）。
+
+\hd{速度图（hodograph）}
+$$\vec L\times\vec A=L^2\dot{\vec r}-k L\hat e_\theta\ \Longrightarrow\ \dot{\vec r}=\frac{\vec L\times\vec A}{L^2}+\frac{k}{L}\hat e_\theta$$
+常矢量 $+$ 等长转动矢量 $=$ 圆：半径 $R=\dfrac kL$，速度原点（力心）到圆心 $=\dfrac{|\vec A|}{L}=eR$。速度端点转过的角 $=$ 轨道转过的角 $\Rightarrow$ 抛物线上 $\Delta v=(k/L)\Delta\theta$。
+
+\hd{散射（排斥库仑/引力，瞄准距 $b$）}
+$\cot(\chi/2)=\dfrac{\mu v_0^2 b}{\alpha}$（$\chi$ 偏转角，$\alpha$ 为势 $V=\alpha/r$ 的系数；$b$ 大偏转小）。
+
+\Sec{4. Schwarzschild 测地线（hw5 工具箱）}
+\hd{度规与拉格朗日量}
+$$\dd s^2=-f\dd t^2+f^{-1}\dd r^2+r^2\dd\Omega^2,\qquad f=1-\frac{2GM}{r}\ (c=1)$$
+$\mathcal L=\tfrac12 g_{\mu\nu}\dot x^\mu\dot x^\nu$（$\,\dot{}=\dd/\dd\tau$）。它是 $\dot x$ 的二次型：E-L 方程即测地线方程；又因二次齐次且自治，$\mathcal L$ 守恒。$m\ne0$ 且 $\tau$ 取原时 $\Rightarrow$
+$$\boxed{\,2\mathcal L=-f\dot t^2+f^{-1}\dot r^2+r^2\dot\theta^2+r^2\sin^2\!\theta\,\dot\phi^2=-1\,}$$
+
+\hd{赤道面稳定性}
+$\theta$ 的方程：$\ddot\theta+\dfrac{2\dot r}{r}\dot\theta=\sin\theta\cos\theta\,\dot\phi^2$。取 $\theta=\pi/2,\ \dot\theta=0$ 时右端 $=\sin(\pi/2)\cos(\pi/2)\dot\phi^2=0$，故 $\ddot\theta=0$；于是 $(\theta,\dot\theta)=(\pi/2,0)$ 是该二维系统的平衡初值，由二阶方程解的\textbf{唯一性}得此后恒有 $\theta\equiv\pi/2$。
+
+\hd{四个方程（(a) 的答案骨架）}
+\begin{align*}
+\text{t}:&\ \tfrac{\dd}{\dd\tau}\big(f\dot t\big)=0\ \Rightarrow\ f\dot t=E\\
+\text{phi}:&\ \tfrac{\dd}{\dd\tau}\big(r^2\sin^2\!\theta\,\dot\phi\big)=0\ \Rightarrow\ r^2\sin^2\!\theta\,\dot\phi=L\\
+\text{theta}:&\ \ddot\theta+\tfrac{2\dot r}{r}\dot\theta=\sin\theta\cos\theta\,\dot\phi^2\\
+\text{r}:&\ \ddot r-\tfrac{GM}{r^2f}\dot r^2+\tfrac{GM}{r^2}f\dot t^2\\
+&\ \ -rf\big(\dot\theta^2+\sin^2\!\theta\dot\phi^2\big)=0
+\end{align*}
+代 $f\dot t=E$ 后 $r$ 方程可写成 $\ddot r+\dfrac{GM}{r^2f}\big(E^2-\dot r^2\big)-rf\big(\dot\theta^2+\sin^2\!\theta\dot\phi^2\big)=0$，它在赤道面上等价于 $\ddot r=-\tfrac12\Veff'$。
+
+\hd{有效势（(c)：从 $-1$ 乘 $f$ 四行）}
+赤道面、$\dot\phi=L/r^2$：$-f\dot t^2+f^{-1}\dot r^2+L^2/r^2=-1$；用 $\dot t=E/f$ 得 $-E^2/f+f^{-1}\dot r^2+L^2/r^2=-1$；两边乘 $f$：
+$$\boxed{\ \dot r^2=E^2-\Veff(r;L),\qquad \Veff=\Big(1-\frac{2GM}{r}\Big)\Big(1+\frac{L^2}{r^2}\Big)\ }$$
+$E$ 前没有系数是"乘 $f$"乘出来的；$\dot t=E/f$ 这个定义就是为它服务的。$r\to\infty$ 时 $\Veff\to1$，故 $E=1$ 是"从无穷远静止下落"的分界。
+
+\hd{驻点、光子球、ISCO（(2) 的答案）}
+$\Veff'=0$ $\Rightarrow$ $GM r^2-L^2r+3GML^2=0$：
+$$r_\pm=\frac{L^2\pm\sqrt{L^4-12G^2M^2L^2}}{2GM}$$
+\begin{itemize}
+\item $L>2\sqrt3\,GM$ 时两个驻点：\textbf{小根 $r_-$ 是极大（势垒顶）}，大根 $r_+$ 是极小（稳定圆轨道）。
+\item 极大值 $=1$ $\iff L=4GM$，此时 $r=4GM$（$E=1$ 的不稳定圆轨道）。
+\item 拐点（两驻点重合，ISCO）$\iff L=2\sqrt3\,GM$，$r=6GM$。
+\end{itemize}
+轨道类型（看 $\Veff$ 与 $E^2$ 的交点）：无交点 $\Rightarrow$ 落入黑洞；只与极大值有关 $\Rightarrow$ 偏折/散射；被极小值围住 $\Rightarrow$ 束缚椭圆（其极小值 $<E^2<\min(1,\Veff^{\max})$）。
+
+\hd{GR 比内方程（(3)）}
+hw 归一 $u\equiv GM/r$、$u'=\dd u/\dd\phi$、$L=r^2\dot\phi$（$\dot{}=\dd/\dd\tau$）：
+$$\dot r=-\frac{L u'}{GM},\qquad \ddot r=-\frac{L^2u^2}{G^3M^3}u''$$
+（第一式由 $\dd r/\dd\phi=-GM\,u'/u^2$ 与 $\dot\phi=L/r^2$；第二式再对 $\tau$ 求一次导，$u'$ 前的系数已是常数。）配合 $\ddot r=-\tfrac12\Veff'$ 并把右端也换成 $u$：
+$$\boxed{\ u''+u=\Big(\frac{GM}{L}\Big)^2+3u^2\ }$$
+传统归一 $u=1/r$（$L$ 为单位质量角动量）：$u''+u=\dfrac{GM}{L^2}+3GM u^2$。$3u^2$ 就是纯 GR 项 $\Leftrightarrow$ hw4-5 的 $\gamma=-GMl^2$ 微扰 $\Rightarrow$ 顺行近日点进动
+$$\delta\phi=\frac{6\pi GM}{c^2a(1-e^2)}\quad(\text{每圈}).$$
+
+\hd{自由落体 $E=1$、$L=0$（选做）}
+$\dot r^2=1-f=2GM/r$ $\Rightarrow$
+$$\tau_0-\tau=\frac{2}{3\sqrt{2GM}}\big(r_0^{3/2}-r^{3/2}\big)$$
+坐标时由 $\dd t=\dd\tau/f$（$f=1-2GM/r$）积分：$t-t_0=\int_r^{r_0}\frac{\dd r}{(1-2GM/r)\sqrt{2GM/r}}$，给双曲项 + 对数项（hw (5) 的形式）。$r\to2GM$ 时 $t\to\infty$（坐标时发散，原时有限）。
+
+\Sec{5. 易错点（都是踩过的）}
+\begin{itemize}
+\item \textbf{$L$ 是总角动量还是单位质量？} hw4 (1) 与 hw5 的 $L=r^2\dot\phi$ 都是\emph{单位质量}；差一个 $\mu$。判据：量纲 + 代 $V=-k/r$ 应给回 $\pi$。
+\item \textbf{$\vec A$ 里的 $k$}：就是 $V=-k/r$ 的系数（引力 $k=GM\mu$），不是质量；配对规则：总 $\vec L$ 配 $k$，单位质量 $\vec l$ 配 $GM$。
+\item \textbf{有效势的驻点属于 $\Veff$ 整体}，不是 $V(r)$；求 $\Veff''$ 必须含离心项 $3L^2/(\mu r^4)$。
+\item \textbf{搬结论先查前提}：直线 vs 曲线、有无约束、小振动 vs 有限振幅——前一小问的条件变了就不能照搬。
+\item \textbf{Binet 方程里没有 $E$}：它是"形状"方程；$E$ 藏在初条件（偏心率）里。
+\item \textbf{归一化 $2\mathcal L=-1$} 是"$\tau=$ 原时"的定义，不是附加假设；换仿射参数则常数变。
+\item \textbf{进动角是每径向周期}，不是每单位时间；方向（顺/逆行）看微扰符号。
+\item \textbf{微扰只看共振项}；非共振项给有界特解。
+\item \textbf{量纲检查}：$\big[\dot{\vec r}\times\vec L\big]=$能量$\times$长度；$\Veff$ 与 $E^2$ 同量纲。
+\item 读 PDF 题目时公式容易错位（上下标、根号范围），拿不准就按量纲 + 特例反推。
+\end{itemize}
+
+\Sec{6. 数学工具速查}
+\begin{itemize}
+\item \textbf{Euler 齐次定理}：$f(\lambda\dot q)=\lambda^kf(\dot q)$ $\Rightarrow \sum\dot q_i\partial f/\partial\dot q_i=kf$。
+\item \textbf{分部积分}：$\int a\,\dot b=-\int \dot a\,b+[ab]$；变分里 $\delta\dot q=\frac{\dd}{\dd t}\delta q$。
+\item \textbf{小量展开}：$\sqrt{1+\varepsilon}\approx1+\frac\varepsilon2$，$\frac1{1+\varepsilon}\approx1-\varepsilon$，$\cos\varepsilon\approx1-\frac{\varepsilon^2}2$。
+\item \textbf{三角/双曲替换}：$\int\frac{\dd r}{\sqrt{a/r+b}}$ 型（$2GM/r$）；$\int\frac{\dd r}{(1-a/r)\sqrt{a/r}}$ 型（坐标时）拆部分分式后给 $\operatorname{arctanh}$/对数。
+\item \textbf{一维化后的两条积分}：答卷上写 $\int \dd r/\sqrt{\tfrac2\mu(E-\Veff)}$ 与 $\int L\dd r/(\mu r^2\sqrt{\cdots})$ 即可，不必算出来。
+\item \textbf{二次方程}：$GM r^2-L^2r+3GML^2=0$ 的判别式 $L^4-12G^2M^2L^2$ 决定有几个圆轨道。
+\item \textbf{共振/长期项}：$u''+u=A\cos\varphi$ 的解是 $\frac A2\varphi\sin\varphi$。
+\end{itemize}
+
+\end{multicols}
+\end{document}
