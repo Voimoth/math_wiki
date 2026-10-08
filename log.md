@@ -319,3 +319,10 @@
   → 1842/46 Liouville 发表遗稿 → 1854 Cayley 抽象群定义（当时无人响应）→ 1862/1872 Sylow → 1869/70 Jordan 教科书
   → 1872 Klein → 1882 von Dyck → 1880s–90s Dedekind/Weber/Hölder → 1897 Burnside/Frobenius → 20 世纪单群分类。
 - 查证源：Wikipedia（Galois / Lagrange / Cayley / Sylow / History of group theory）、MacTutor。
+
+## [2026-10-08] add | 代数 III 习题课新增 07-半直积的等价定义与同构判别（讲义 §1.3）
+
+- 起因：用户把 2026-10-08 的半直积讲义放进下载目录，要求整理进代数 III 习题课笔记；讲义 PDF 已归档到 `/mnt/e/书籍/代数/代数III/习题课讲义/`（md5 核对一致）。
+- 内容：内部判别法与标准定义的等价（含坐标乘法）；五个典型例子（直积、二面体群、Borel 子群、$pq$ 阶群、仿射群）；短正合列的截面、命题「分裂的短正合列就是半直积」；相容同构判别（允许两端分别经自同构，含 $\operatorname{Aut}(N)\times\operatorname{Aut}(H)$ 在 $\operatorname{Hom}(H,\operatorname{Aut}(N))$ 上的轨道解释）与它的适用边界；线性作用下的推论（$\mathrm{GL}_n(\mathbb{F}_q)$ 中共轭到幂次）；改变截面与 $1$-余循环、全形群的拉回图；末附五道习题（判断题、$S_4$、分类 $C_p\rtimes C_2$、$21$ 阶群、2015 丘赛团体赛）。
+- 流程：候选稿先在 vault 外写（`~/.hermes/cache/scratch/`）并跑完链接/公式/自然度检查，再由无上下文子代理独立评审（数学断言、两处交换图箭头逐条核对）；依其意见把命题 7.10 的证明移出 callout、删去与系列不一致的 `sources:` 字段、外文括注统一为英文。
+- 小节编号按本篇重排为 7.1–7.4，讲义原编号保留在 callout 标题的括注中；新笔记已进 `习题课/00-总览.md`。
