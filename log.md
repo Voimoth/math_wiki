@@ -326,3 +326,10 @@
 - 内容：内部判别法与标准定义的等价（含坐标乘法）；五个典型例子（直积、二面体群、Borel 子群、$pq$ 阶群、仿射群）；短正合列的截面、命题「分裂的短正合列就是半直积」；相容同构判别（允许两端分别经自同构，含 $\operatorname{Aut}(N)\times\operatorname{Aut}(H)$ 在 $\operatorname{Hom}(H,\operatorname{Aut}(N))$ 上的轨道解释）与它的适用边界；线性作用下的推论（$\mathrm{GL}_n(\mathbb{F}_q)$ 中共轭到幂次）；改变截面与 $1$-余循环、全形群的拉回图；末附五道习题（判断题、$S_4$、分类 $C_p\rtimes C_2$、$21$ 阶群、2015 丘赛团体赛）。
 - 流程：候选稿先在 vault 外写（`~/.hermes/cache/scratch/`）并跑完链接/公式/自然度检查，再由无上下文子代理独立评审（数学断言、两处交换图箭头逐条核对）；依其意见把命题 7.10 的证明移出 callout、删去与系列不一致的 `sources:` 字段、外文括注统一为英文。
 - 小节编号按本篇重排为 7.1–7.4，讲义原编号保留在 callout 标题的括注中；新笔记已进 `习题课/00-总览.md`。
+
+## [2026-10-08] update | 半直积.md 概念页补充同构判别、线性作用推论与 Borel 例子
+
+- 起因：用户要求这类可复用内容**直接补进概念页**，不必再问。
+- 增补：① 同构判别「同时改变两端的坐标」（$\varphi_2(\beta(h))=\alpha\circ\varphi_1(h)\circ\alpha^{-1}$、$F(n,h)=(\alpha(n),\beta(h))$，并给出 $\operatorname{Aut}(N)\times\operatorname{Aut}(H)$ 在 $\operatorname{Hom}(H,\operatorname{Aut}(N))$ 上的**轨道 = 固定两端的同构类**这一说法）；② 警告：该判别只是「保两端（正规部分与截面）」同构的充要条件、抽象同构的充分条件；③ 推论：线性作用下的判别 $G_M\cong G_{M'}\iff AMA^{-1}=(M')^k$；④ 例子：Borel 子群 $B_n(K)=U_n(K)\rtimes T_n(K)$；⑤ `相关笔记` 加代数 III 07 篇的回链，frontmatter 的 `updated`/`sources` 相应更新。
+- 既有段落一字未动（`git diff` 仅 23 增 2 删，删的是 frontmatter 两行）；链接/自然度检查与 `$$` 配对复核全过。
+- 另：正课 TD `Exercices USTC Octobre 2026.pdf` 复制进 `/mnt/e/书籍/代数/代数III/TD/`（md5 核对一致），**下载目录保留副本**——用户还没写完，直接从下载打开。
