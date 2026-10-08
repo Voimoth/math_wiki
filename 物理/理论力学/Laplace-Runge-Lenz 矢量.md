@@ -1,7 +1,7 @@
 ---
 title: Laplace-Runge-Lenz 矢量
 created: 2026-10-03
-updated: 2026-10-03
+updated: 2026-10-08
 type: concept
 tags: [mechanics, kepler, symmetry, conserved-quantity]
 confidence: high
@@ -20,11 +20,20 @@ $$\vec A=\dot{\vec r}\times\vec L-k\,\hat r,\qquad \vec L=\vec r\times\dot{\vec 
 > [!note] $\vec A$ 是守恒量
 > 直接求导可证 $\dfrac{d\vec A}{dt}=0$——**只对 $F=-k/r^2$ 成立**，对一般有心力不守恒。这是"隐藏对称性"（动力学对称，非时空对称）的标志。
 
+> [!tip] $\vec A$ 里的 $k$ 与用哪个角动量
+> $k$ 就是势 $V=-k/r$ 的系数（引力情形 $k=GM\mu$，$\mu$ 为运动天体质量），**不是质量**——量纲自动钉住配对：$[\dot{\vec r}\times\vec L]=$ 能量·长度 $=[k]$。
+> - 用**总**角动量 $\vec L=\mu\vec r\times\dot{\vec r}$ ⇒ 配 $k=GM\mu$；
+> - 用**单位质量**角动量 $\vec l=\vec r\times\dot{\vec r}$ ⇒ 配 $k=GM$（本页用这一套）。
+> 两套只差一个整体因子 $\mu$，速度图的半径/偏移形状相同。排斥场（$k<0$，库仑力或卢瑟福散射）同样守恒，方向沿长轴指向近点。
+
 ## 几何含义
 
 - $\vec A\cdot\vec L=0$：$\vec A$ 落在轨道平面内，且指向**近心点**方向；
 - 大小与能量：$A^2=k^2+2EL^2$，离心率 $e=A/k$；
 - $\vec A$ 方向恒定 $\iff$ 轨道主轴不动 $\iff$ **轨道闭合**（对任意 $E$）。这就是 $1/r$ 势"所有束缚轨道都闭合"的代数原因。
+- **为什么偏偏是 $1/r^2$**：写 $\ddot{\vec r}=f(r)\hat r$，则
+  $$\frac{d\vec A}{dt}=\Big[-f(r)\,r^2-k\Big]\frac{d\hat r}{dt},$$
+  要它恒为零必须 $f(r)\propto1/r^2$。于是「$\vec A$ 守恒」与「轨道闭合」是同一件事的两面；任何非常数修正（GR 的 $3u^2$、$\delta V=\beta/r^2$）立刻破坏它，这正是轨道进动的来源。同类还有各向同性谐振子（额外守恒量是对称无迹张量），Bertrand 定理说只有这两类势能对所有束缚轨道闭合。
 
 ## 用 $\vec L\times\vec A$ 证明速度图是圆
 
