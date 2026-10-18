@@ -21,3 +21,8 @@ __大二上(更新中):__
 - 分析III(殷浩)
 - 代数III(Marc ROSSO, Bernhard Keller/许金兴)
 - 理论力学(袁业飞) 电动力学(肖建元)
+
+---
+
+维护本库用的 AI 技能与 Neovim 配置放在 [math-toolkit](https://github.com/Voimoth/math-toolkit)：
+写作约定、记号标准（`共享/记号约定.md` 的机器规则）、概念页同步检查脚本，以及各课程的辅导技能。
