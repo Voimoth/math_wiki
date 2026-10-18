@@ -363,3 +363,11 @@
 - 重写 `群论学习路径`：改为「线 A 拆群 / 线 B 显形 / 汇合点」两线结构，覆盖讲义第 1–9 章与习题课两条入口，末尾附全部 28 个概念页的一句话清单。
 - `数学/代数/_索引.md` 同步新增 12 条（含跨课 2 条）。
 - 校验：`check_wikilinks` 0、`check_notation` 0、`check_concept_sync` 0、`lint_natural_chinese` 0。
+
+## [2026-10-19] fix | 代数III 正课两处数学错误更正 + 导群记号统一 + Jordan 页补换算
+
+- 记号：`\mathcal{GL}/\mathcal{SL}` → `\mathrm{GL}/\mathrm{SL}`；`\mathcal{D}` → `\mathfrak{D}`（导群 118 处，代数课程内统一），约定页与技能里的标准表同步重生成。
+- 更正 08 讲「Corollaire」：原稿把生成元写反（平延行列式为 1，只生成 $\mathrm{SL}_n$；$\mathrm{GL}_n$ 还须加对角伸缩），已在原处改正并加警告框。
+- 更正 08 讲 Prop (*)：原稿作 $\mathfrak{D}(\mathrm{GL}_2)\simeq\mathfrak{D}(\mathrm{SL}_2)$，与紧随的 $\mathfrak{D}(\mathrm{SL}_2)\simeq\mathbb{H}_8$ 及证明矛盾；改为 $\mathfrak{D}(\mathrm{GL}_2(\mathbb{F}_3))\simeq\mathrm{SL}_2(\mathbb{F}_3)$。
+- 更正 06 讲「exposant」定义：原稿作 pgcd，应为 ppcm（含幺元时 pgcd 恒为 1），已在原处改正并加注。
+- `代数II/概念/Jordan标准型.md` 补「与不变因子的换算（代数III 视角）」一节（$\delta_k$ 跳维数、块大小 ↔ 初等因子 ↔ 不变因子），链到 `Frobenius标准型`。

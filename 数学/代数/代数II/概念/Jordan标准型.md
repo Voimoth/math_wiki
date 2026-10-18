@@ -44,6 +44,14 @@ confidence: medium
 > - 把 $\beta$ 归一成 $1$ 靠的是「换一组合适的基」，不是相似变换之外的操作；归一后的块才唯一。
 > - 两个同阶、同特征多项式的矩阵未必相似——要比较 Jordan 块（等价地比较 $\operatorname{rg}(A-\lambda I)^m$）。
 
+## 与不变因子的换算（代数III 视角）
+
+Jordan 块的大小不来自特征值，而来自 $\ker(A-\lambda I)^k$ 的维数跳：
+
+$$\delta_k=\dim\ker(A-\lambda I)^k,\qquad \#\{\text{大小} \geqslant k \text{ 的块}\}=\delta_k-\delta_{k-1}.$$
+
+把 $A-\lambda I$ 的初等因子 $\{(X-\lambda)^{m_i}\}$ 按 $m_1\geqslant m_2\geqslant\cdots$ 排好，就是该 $\lambda$ 的块大小；反过来，各 $\lambda$ 的块大小给出初等因子，按整除链右对齐拼起来即不变因子。特征多项式不分裂时 Jordan 型不存在，但不变因子仍在，见 [[代数III/概念/Frobenius标准型]]。
+
 ## 相关概念
 - [[广义特征子空间]]、[[可三角化]]、[[幂零]]、[[相似矩阵]]、[[特征值的重数]]
 - [[代数III/概念/模]]

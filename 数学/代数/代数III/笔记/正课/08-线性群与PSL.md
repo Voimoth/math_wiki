@@ -66,25 +66,28 @@ Rappel. Opérations élémentaires sur les lignes et colonnes d'une matrice. Alg
 On fait des opérations sur les lignes de la matrice $g$.
 
 > [!note] Corollaire
-> 1) $\mathcal{GL}_n(k)$ est engendré par les matrices de transvection élémentaires.
-> 2) $\mathcal{SL}_n(k)$ est engendré par les matrices de transvection et de dilatation élémentaires.
+> 1) $\mathrm{SL}_n(k)$ est engendré par les matrices de transvection élémentaires.
+> 2) $\mathrm{GL}_n(k)$ est engendré par les transvections et les dilatations élémentaires.
+
+> [!warning] 原稿把 1)、2) 的群写反了
+> 平延的行列式恒为 $1$，只能生成 $\mathrm{SL}_n(k)$；要生成 $\mathrm{GL}_n(k)$ 还须加上对角伸缩。
 
 IV) Classes de conjugaison des matrices de transvection
 
-On introduit les matrices de permutation. Pour $w \in \mathfrak{S}_n$, soit $P_w \in \mathcal{GL}_n(k)$ défini par $P_w(e_i) = e_{w(i)}$.
+On introduit les matrices de permutation. Pour $w \in \mathfrak{S}_n$, soit $P_w \in \mathrm{GL}_n(k)$ défini par $P_w(e_i) = e_{w(i)}$.
 
 > [!note] Prop
 > 1) $\forall i \neq j, \lambda \in k^*, \forall w \in \mathfrak{S}_n, P_w E_{ij}(\lambda) P_w^{-1} = E_{w(i)w(j)}(\lambda)$
 > 2) $\forall i \neq j, \lambda \in k^*, \mu \in k^*$ : $D_i(\lambda) E_{ij}(\mu) D_i(\lambda)^{-1} = E_{ij}(\lambda\mu)$
 
 > [!note] Prop
-> Les $E_{ij}(\lambda)$ sont conjuguées dans $\mathcal{GL}_n(k)$ et, si $n \geq 3$, elles sont conjuguées dans $\mathcal{SL}_n(k)$.
+> Les $E_{ij}(\lambda)$ sont conjuguées dans $\mathrm{GL}_n(k)$ et, si $n \geq 3$, elles sont conjuguées dans $\mathrm{SL}_n(k)$.
 
-**Preuve.** Soient $i \neq j, l \neq m, \lambda, \mu \in k^*$ ; on veut $g \in \mathcal{GL}_n(k)$ ou $\mathcal{SL}_n(k)$ tq $g E_{ij}(\lambda) g^{-1} = E_{lm}(\mu)$. Comme $\mathfrak{S}_n$ agit 2 fois transitivement sur $\{1, \dots, n\}$
+**Preuve.** Soient $i \neq j, l \neq m, \lambda, \mu \in k^*$ ; on veut $g \in \mathrm{GL}_n(k)$ ou $\mathrm{SL}_n(k)$ tq $g E_{ij}(\lambda) g^{-1} = E_{lm}(\mu)$. Comme $\mathfrak{S}_n$ agit 2 fois transitivement sur $\{1, \dots, n\}$
 $$\exists w \in \mathfrak{S}_n, w(i) = l, \ w(j) = m$$
-D'où le résultat pour $\mathcal{GL}_n(k)$ : $P_w E_{ij}(\lambda) P_w^{-1} = E_{lm}(\lambda)$, $D_l(\frac{\mu}{\lambda}) E_{lm}(\lambda) D_l(\frac{\mu}{\lambda})^{-1} = E_{lm}(\mu)$.
+D'où le résultat pour $\mathrm{GL}_n(k)$ : $P_w E_{ij}(\lambda) P_w^{-1} = E_{lm}(\lambda)$, $D_l(\frac{\mu}{\lambda}) E_{lm}(\lambda) D_l(\frac{\mu}{\lambda})^{-1} = E_{lm}(\mu)$.
 
-Pour $\mathcal{SL}_n(k)$ avec $n \geq 3$ : si $\det P_w = 1 \ \checkmark$. Sinon, comme $n \geq 3, \exists s \in \{1, \dots, n\}$ tq $l \neq s \neq m$ : $D_s(-1) P_w \in \mathcal{SL}_n(k)$, $D_s(-1) E_{lm}(\lambda) D_s(-1)^{-1} = E_{lm}(\lambda)$.
+Pour $\mathrm{SL}_n(k)$ avec $n \geq 3$ : si $\det P_w = 1 \ \checkmark$. Sinon, comme $n \geq 3, \exists s \in \{1, \dots, n\}$ tq $l \neq s \neq m$ : $D_s(-1) P_w \in \mathrm{SL}_n(k)$, $D_s(-1) E_{lm}(\lambda) D_s(-1)^{-1} = E_{lm}(\lambda)$.
 
 Ensuite pour passer $E_{1,n}(\lambda)$ à $E_{1,n}(\mu)$ on utilise $diag(1, \dots, 1, \frac{\mu}{\lambda}, 1, \dots, 1, \frac{\lambda}{\mu}, 1, \dots, 1)$ au lieu de $D_1(\frac{\mu}{\lambda})$
 $$\uparrow \ \uparrow$$
@@ -118,31 +121,34 @@ L'image de ce morphisme est appelé sous-groupe à un paramètre.
 
 > [!note] Thm.
 > Si $n \geq 3$, ou si $n=2$ et $|k|>3$ :
-> $$\mathcal{D}(\mathcal{GL}_n(k)) = \mathcal{D}(\mathcal{SL}_n(k)) = \mathcal{SL}_n(k) .$$
+> $$\mathfrak{D}(\mathrm{GL}_n(k)) = \mathfrak{D}(\mathrm{SL}_n(k)) = \mathrm{SL}_n(k) .$$
 
-**Preuve :** $\mathcal{GL}_n(k) \xrightarrow{det} (k^* , .)$ abélien. Donc $\mathcal{D}(\mathcal{GL}_n(k)) \subset \ker(det) = \mathcal{SL}_n(k)$. De plus, $\mathcal{D}(\mathcal{SL}_n(k)) \subset \mathcal{D}(\mathcal{GL}_n(k))$. Il suffit de voir $\mathcal{D}(\mathcal{SL}_n(k)) = \mathcal{SL}_n(k)$.
+**Preuve :** $\mathrm{GL}_n(k) \xrightarrow{det} (k^* , .)$ abélien. Donc $\mathfrak{D}(\mathrm{GL}_n(k)) \subset \ker(det) = \mathrm{SL}_n(k)$. De plus, $\mathfrak{D}(\mathrm{SL}_n(k)) \subset \mathfrak{D}(\mathrm{GL}_n(k))$. Il suffit de voir $\mathfrak{D}(\mathrm{SL}_n(k)) = \mathrm{SL}_n(k)$.
 
-1) Si $n \geq 3$. $\forall i \neq j , \forall \lambda \in k^* : E_{ij}(\lambda) = [E_{ik}(\lambda), E_{kj}(1)] \in \mathcal{D}(\mathcal{SL}_n(k))$. Comme $\mathcal{SL}_n(k)$ engendré par les $E_{ij}(\lambda)$, $\mathcal{SL}_n(k) \subset \mathcal{D}(\mathcal{SL}_n(k))$ d'où l'égalité.
+1) Si $n \geq 3$. $\forall i \neq j , \forall \lambda \in k^* : E_{ij}(\lambda) = [E_{ik}(\lambda), E_{kj}(1)] \in \mathfrak{D}(\mathrm{SL}_n(k))$. Comme $\mathrm{SL}_n(k)$ engendré par les $E_{ij}(\lambda)$, $\mathrm{SL}_n(k) \subset \mathfrak{D}(\mathrm{SL}_n(k))$ d'où l'égalité.
 
-2) Pour $n=2$ et $|k|>3$ (i.e. $k \neq \mathbb{F}_2, k \neq \mathbb{F}_3$). On dispose dans $\mathcal{SL}_2(k)$ des éléments $\begin{pmatrix} \beta & 0 \\ 0 & \beta^{-1} \end{pmatrix} , \beta \in k^*$. Pour $\lambda \in k^*$,
+2) Pour $n=2$ et $|k|>3$ (i.e. $k \neq \mathbb{F}_2, k \neq \mathbb{F}_3$). On dispose dans $\mathrm{SL}_2(k)$ des éléments $\begin{pmatrix} \beta & 0 \\ 0 & \beta^{-1} \end{pmatrix} , \beta \in k^*$. Pour $\lambda \in k^*$,
 $$\left[ \begin{pmatrix} \beta & 0 \\ 0 & \beta^{-1} \end{pmatrix} , \begin{pmatrix} 1 & \lambda \\ 0 & 1 \end{pmatrix} \right] = \begin{pmatrix} 1 & \beta^2\lambda \\ 0 & 1 \end{pmatrix} \begin{pmatrix} 1 & -\lambda \\ 0 & 1 \end{pmatrix} = \begin{pmatrix} 1 & \lambda(\beta^2-1) \\ 0 & 1 \end{pmatrix}$$
-Montrons que $\forall \mu \in k^* , \begin{pmatrix} 1 & \mu \\ 0 & 1 \end{pmatrix} \in \mathcal{D}(\mathcal{SL}_2(k))$. En effet : $|k|>3 , \exists \beta \in k^* , \beta \neq \pm 1 , \text{i.e. } \beta^2 \neq 1$. $\mu \in k^*$ étant donné, on pose $\lambda = \frac{\mu}{\beta^2-1}$, alors $\begin{pmatrix} 1 & \mu \\ 0 & 1 \end{pmatrix} = \left[ \begin{pmatrix} \beta & 0 \\ 0 & \beta^{-1} \end{pmatrix} , \begin{pmatrix} 1 & \lambda \\ 0 & 1 \end{pmatrix} \right] .$
+Montrons que $\forall \mu \in k^* , \begin{pmatrix} 1 & \mu \\ 0 & 1 \end{pmatrix} \in \mathfrak{D}(\mathrm{SL}_2(k))$. En effet : $|k|>3 , \exists \beta \in k^* , \beta \neq \pm 1 , \text{i.e. } \beta^2 \neq 1$. $\mu \in k^*$ étant donné, on pose $\lambda = \frac{\mu}{\beta^2-1}$, alors $\begin{pmatrix} 1 & \mu \\ 0 & 1 \end{pmatrix} = \left[ \begin{pmatrix} \beta & 0 \\ 0 & \beta^{-1} \end{pmatrix} , \begin{pmatrix} 1 & \lambda \\ 0 & 1 \end{pmatrix} \right] .$
 
 De même pour les $\begin{pmatrix} 1 & 0 \\ \mu & 1 \end{pmatrix}$
 
 Autre cas exclus du thm :
-1) $n=2, \ k=\mathbb{Z}/2\mathbb{Z}$. $\mathrm{GL}_2(\mathbb{Z}/2\mathbb{Z}) = \mathrm{SL}_2(\mathbb{Z}/2\mathbb{Z})$ de cardinal $(2^2-1)(2^2-2)=6$, $\simeq \mathfrak{S}_3$ (non abélien). Or on a vu $\mathcal{D}(\mathfrak{S}_3) = \mathfrak{A}_3 \neq \mathfrak{S}_3$.
+1) $n=2, \ k=\mathbb{Z}/2\mathbb{Z}$. $\mathrm{GL}_2(\mathbb{Z}/2\mathbb{Z}) = \mathrm{SL}_2(\mathbb{Z}/2\mathbb{Z})$ de cardinal $(2^2-1)(2^2-2)=6$, $\simeq \mathfrak{S}_3$ (non abélien). Or on a vu $\mathfrak{D}(\mathfrak{S}_3) = \mathfrak{A}_3 \neq \mathfrak{S}_3$.
 
 2) $n=2, \ k=\mathbb{Z}/3\mathbb{Z}$.
 
 > [!note] Prop
-> $\mathcal{D}(\mathrm{GL}_2(\mathbb{Z}/3\mathbb{Z})) \simeq \mathcal{D}\mathrm{SL}_2(\mathbb{Z}/3\mathbb{Z}) \quad(*)$
+> $\mathfrak{D}(\mathrm{GL}_2(\mathbb{Z}/3\mathbb{Z})) \simeq \mathrm{SL}_2(\mathbb{Z}/3\mathbb{Z}) \quad(*)$
 
-mais $\mathcal{D}(\mathrm{SL}_2(\mathbb{Z}/3\mathbb{Z})) \simeq \mathbb{H}_8$ (groupe des quaternions)
+> [!warning] 原稿把 $(*)$ 写成 $\mathfrak{D}(\mathrm{GL}_2)\simeq\mathfrak{D}(\mathrm{SL}_2)$
+> 这与紧随其后的 $\mathfrak{D}(\mathrm{SL}_2)\simeq\mathbb{H}_8$ 矛盾；下面的证明给出的是一条平延 $A\in\mathfrak{D}(\mathrm{GL}_2)$，而平延生成 $\mathrm{SL}_2$，故 $(*)$ 应为 $\mathfrak{D}(\mathrm{GL}_2)\simeq\mathrm{SL}_2$。
 
-Preuve de $(*)$ : Est-ce que toute transvection élémentaire est dans $\mathcal{D}(\mathrm{GL}_2(\mathbb{Z}/3\mathbb{Z}))$ ?
+mais $\mathfrak{D}(\mathrm{SL}_2(\mathbb{Z}/3\mathbb{Z})) \simeq \mathbb{H}_8$ (groupe des quaternions)
+
+Preuve de $(*)$ : Est-ce que toute transvection élémentaire est dans $\mathfrak{D}(\mathrm{GL}_2(\mathbb{Z}/3\mathbb{Z}))$ ?
 $$A = \begin{pmatrix} 1 & 1 \\ 0 & 1 \end{pmatrix}, \ A^3 = \begin{pmatrix} 1 & 0 \\ 0 & 1 \end{pmatrix}$$
-On a vu que $A$ et $A^3$ sont conjugués dans $\mathrm{GL}_2(\mathbb{Z}/3\mathbb{Z})$ : si $g = \begin{pmatrix} a & b \\ c & d \end{pmatrix}, \ gAg^{-1}=A^3$. $\Rightarrow [g,A]=A \in \mathcal{D}(\mathrm{GL}_2(\mathbb{Z}/3\mathbb{Z}))$.
+On a vu que $A$ et $A^3$ sont conjugués dans $\mathrm{GL}_2(\mathbb{Z}/3\mathbb{Z})$ : si $g = \begin{pmatrix} a & b \\ c & d \end{pmatrix}, \ gAg^{-1}=A^3$. $\Rightarrow [g,A]=A \in \mathfrak{D}(\mathrm{GL}_2(\mathbb{Z}/3\mathbb{Z}))$.
 
 Questions de simplicité :
 $Z(\mathrm{SL}_n(k)) \triangleleft \mathrm{SL}_n(k)$. Il est naturel de considérer, au lieu de $\mathrm{SL}_n(k)$, le quotient $\mathrm{SL}_n(k)/Z(\mathrm{SL}_n(k))$.
@@ -209,8 +215,8 @@ On sait que $P$ est un sous-groupe maximal de $\mathrm{SL}_n(k)$ car action 2-tr
 On veut montrer $N = \mathrm{SL}_n(k)$.
 
 Les hypothèses sur $n$ et $k$ ne sont celles qui assurent que
-$$\mathcal{D}(\mathrm{SL}_n(k)) = \mathrm{SL}_n(k)$$
-On va montrer que $N = \mathcal{D}(\mathrm{SL}_n(k))$ et par cela on va montrer que $\mathrm{SL}_n(k)/N$ est abélien.
+$$\mathfrak{D}(\mathrm{SL}_n(k)) = \mathrm{SL}_n(k)$$
+On va montrer que $N = \mathfrak{D}(\mathrm{SL}_n(k))$ et par cela on va montrer que $\mathrm{SL}_n(k)/N$ est abélien.
 
 On considère le sous-groupe $K$ de $P$
 $$K = \left\{ \begin{pmatrix} 1 & & * \\ & \ddots & \\ 0 & & 1 \end{pmatrix} \right\} \text{ abélien}$$
@@ -229,7 +235,7 @@ Mais on sait que tous les sous-groupes à un paramètre $E_{ij}(\lambda)$ sont c
 
 D'où $\pi(K) = \mathrm{SL}_n(k)/N$, $\pi|_K$ surjective, $\mathrm{SL}_n(k)/N$ abélien.
 
-$\mathcal{D}(\mathrm{SL}_n(k)) = \mathrm{SL}_n(k) \subset N$.
+$\mathfrak{D}(\mathrm{SL}_n(k)) = \mathrm{SL}_n(k) \subset N$.
 
 Cas où $n=2$, $k=\mathbb{Z}/2\mathbb{Z}$
 
