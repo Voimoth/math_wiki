@@ -346,3 +346,11 @@
 - 增补：① 同构判别「同时改变两端的坐标」（$\varphi_2(\beta(h))=\alpha\circ\varphi_1(h)\circ\alpha^{-1}$、$F(n,h)=(\alpha(n),\beta(h))$，并给出 $\operatorname{Aut}(N)\times\operatorname{Aut}(H)$ 在 $\operatorname{Hom}(H,\operatorname{Aut}(N))$ 上的**轨道 = 固定两端的同构类**这一说法）；② 警告：该判别只是「保两端（正规部分与截面）」同构的充要条件、抽象同构的充分条件；③ 推论：线性作用下的判别 $G_M\cong G_{M'}\iff AMA^{-1}=(M')^k$；④ 例子：Borel 子群 $B_n(K)=U_n(K)\rtimes T_n(K)$；⑤ `相关笔记` 加代数 III 07 篇的回链，frontmatter 的 `updated`/`sources` 相应更新。
 - 既有段落一字未动（`git diff` 仅 23 增 2 删，删的是 frontmatter 两行）；链接/自然度检查与 `$$` 配对复核全过。
 - 另：正课 TD `Exercices USTC Octobre 2026.pdf` 复制进 `/mnt/e/书籍/代数/代数III/TD/`（md5 核对一致），**下载目录保留副本**——用户还没写完，直接从下载打开。
+
+## [2026-10-19] update | 全库记号统一 + 记号约定页 + 概念地图同步
+
+- 起因：扫描档转写出的笔记里同一对象并存多种写法（代数III 一篇内 `\mathrm{GL}`/`GL`/`\text{GL}`/`\mathcal{GL}` 四种），用户要求制定标准、同一门课内统一，并尽量贴合法国书籍习惯。
+- 标准：新增 `共享/记号约定.md`（人读，脚本生成）与技能里的 `notation-rules.json`（机器，唯一规则源）。要点：经典群 `\mathrm{GL}_n(K)`、`\mathfrak{S}_n`/`\mathfrak{A}_n`、`\operatorname{Aut}`/`\operatorname{Hom}`、`\ker`/`\operatorname{Im}`、`\mathrm{Id}`、`\operatorname{Vect}`、`\operatorname{Card}`、转置 `{}^{t}A`、自然常数 `\mathrm{e}` 正体（虚数 i 保持斜体）。分课差异（Z vs C、D_{2n} vs D_n、两套换位子、代数II 的对称矩阵 \mathcal{S}_n(K)、力学离心率 e）登记在同一页第 2 节。
+- 迁移：按课程分批 commit（代数III、代数I/II、分析I/II/III 与概率论与理论力学），共修正 1300 余处写法；`check_notation.py --check` 现全库 0 违规。
+- 概念地图：修复 4 个陈旧/漏链的地图文件（点集拓扑学习路径与其概念页索引补 `开映射`、`处处满射函数`；傅里叶学习路径与其概念页索引补 `傅里叶级数入门`；理论力学索引与变分法学习路径 bump）。新增 `check_concept_sync.py` 与地图登记表，查陈旧、未登记、孤儿页。
+- 未完成（下一步）：`群论学习路径` 重写与代数III 概念页补页同步进行中。
