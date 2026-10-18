@@ -37,7 +37,7 @@ $$\langle f,g\rangle := \int_{-\pi}^{\pi}fg\,dx \quad\text{或}\quad \langle f,g
 
 **例子 5.3(最重要的例子)**：$C([-\pi,\pi])$ 上的正交系
 $$\frac{1}{\sqrt{2\pi}},\quad \frac{1}{\sqrt{\pi}}\cos nx,\quad \frac{1}{\sqrt{\pi}}\sin nx,\ \dots$$
-或对应的复版本 $\frac{1}{\sqrt{2\pi}}e^{inx}$，$\forall n\in\mathbb{Z}$。直接验证即可。
+或对应的复版本 $\frac{1}{\sqrt{2\pi}}\mathrm{e}^{inx}$，$\forall n\in\mathbb{Z}$。直接验证即可。
 
 > [!tip] 两点提醒
 > **(i)** 定义内积时也许可以引入一个常数,使这些向量的归一化简单一点。

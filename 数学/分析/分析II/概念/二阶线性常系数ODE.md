@@ -23,9 +23,9 @@ confidence: high
 
 > [!note] 定理
 > 令 $\lambda_1,\lambda_2$ 是特征方程 $\lambda^2+a\lambda+b=0$ 的两个根。
-> - $\lambda_1\ne\lambda_2$:$S_0=\{x\mapsto c_1e^{\lambda_1x}+c_2e^{\lambda_2x}\}$;
-> - $\lambda_1=\lambda_2=\lambda$:$S_0=\{x\mapsto(c_1+c_2x)e^{\lambda x}\}$。
-> 复系数时 $c_i\in\mathbb C$。实系数时按根的类型:(i) 两实根,同上(实参数);(ii) 重根 $(c_1+c_2x)e^{\lambda x}$;(iii) 共轭复根 $\alpha\pm\beta i$,则 $c_1e^{\alpha x}\cos\beta x+c_2e^{\alpha x}\sin\beta x$。
+> - $\lambda_1\ne\lambda_2$:$S_0=\{x\mapsto c_1\mathrm{e}^{\lambda_1x}+c_2\mathrm{e}^{\lambda_2x}\}$;
+> - $\lambda_1=\lambda_2=\lambda$:$S_0=\{x\mapsto(c_1+c_2x)\mathrm{e}^{\lambda x}\}$。
+> 复系数时 $c_i\in\mathbb C$。实系数时按根的类型:(i) 两实根,同上(实参数);(ii) 重根 $(c_1+c_2x)\mathrm{e}^{\lambda x}$;(iii) 共轭复根 $\alpha\pm\beta i$,则 $c_1\mathrm{e}^{\alpha x}\cos\beta x+c_2\mathrm{e}^{\alpha x}\sin\beta x$。
 
 > [!tip] 唯一性证明思路
 > 先断言:对任何 $t_0$ 和初值 $A,B$,总能解出 $c_1,c_2$ 使 $f(t_0)=A$、$f'(t_0)=B$(线性代数)。于是只需证明满足 $f(t_0)=f'(t_0)=0$ 的齐次解恒为 $0$,用 $(|f|^2+|f'|^2)'\le C(|f|^2+|f'|^2)$ 的 Grönwall 型估计完成。
@@ -37,19 +37,19 @@ confidence: high
 
 于是解的结构彻底清楚:齐次方程解空间是二维线性空间,非齐次方程解空间是二维仿射空间。
 
-> [!example] 特解的猜测(右端为 $e^{\lambda x}$)
+> [!example] 特解的猜测(右端为 $\mathrm{e}^{\lambda x}$)
 >
 > - $\lambda$ 不是特征根:猜 $ce^{\lambda t}$;
 > - $\lambda$ 是特征单根:猜 $cte^{\lambda t}$;
-> - $\lambda$ 是特征重根:猜 $ct^2e^{\lambda t}$。
-> 右端形如 $P(x)e^{\lambda x}$ 也可类似处理(多项式次数按上述规则相应增加)。
+> - $\lambda$ 是特征重根:猜 $ct^2\mathrm{e}^{\lambda t}$。
+> 右端形如 $P(x)\mathrm{e}^{\lambda x}$ 也可类似处理(多项式次数按上述规则相应增加)。
 
 > [!note] 初值问题
 > 对任何 $(t_0,y_0,y_1)\in I\times K^2$,存在唯一 $f$ 满足方程以及 $f(t_0)=y_0$、$f'(t_0)=y_1$。这是解空间维数(二维)与初值条件个数(两个)的对应。
 
 > [!example] 阻尼振动与共振
 > 方程 $y''+2\lambda y'+\omega_0^2y=f(x)$($\lambda>0$ 表示阻力,$\omega_0$ 为固有频率):按 $\lambda^2$ 与 $\omega_0^2$ 的大小分三种齐次解——无周期、临界、阻尼振荡。
-> 受迫项 $A\cos\omega t$:用复化方程 $Ae^{i\omega t}$ 求特解。当 $\lambda=0$ 且 $\omega\to\omega_0$ 时解趋于 $\frac{At}{2\omega_0}\sin\omega_0t$,这是共振的数学解释;此时直接猜 $e^{i\omega t}$ 形式的特解失效,需改用 $te^{i\omega_0t}$ 形式。
+> 受迫项 $A\cos\omega t$:用复化方程 $Ae^{i\omega t}$ 求特解。当 $\lambda=0$ 且 $\omega\to\omega_0$ 时解趋于 $\frac{At}{2\omega_0}\sin\omega_0t$,这是共振的数学解释;此时直接猜 $\mathrm{e}^{i\omega t}$ 形式的特解失效,需改用 $te^{i\omega_0t}$ 形式。
 
 ## 相关概念
 

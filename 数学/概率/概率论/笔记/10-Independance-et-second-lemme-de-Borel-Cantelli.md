@@ -63,7 +63,7 @@ Deux événements $A,B$ sont indépendants si l'observation de l'un ne change pa
 **Preuve :** On considère l'événement complémentaire
 $$\left(\limsup_{n\to\infty} A_n\right)^c = \left(\bigcap_{k\ge1}\left(\bigcup_{n\ge k} A_n\right)\right)^c = \bigcup_{k\ge1}\left(\bigcup_{n\ge k} A_n\right)^c = \bigcup_{k\ge1}\left(\bigcap_{n\ge k} A_n^c\right).$$
 Pour chaque $k$, posons $C_k=\bigcap_{n\ge k} A_n^c$. Comme la famille $(A_n)_{n\in\mathbb{N}}$ est indépendante,
-$$\mathbb{P}(C_k) = \prod_{n\ge k}\mathbb{P}(A_n^c) = \prod_{n\ge k}(1-\mathbb{P}(A_n)) \le \prod_{n\ge k} e^{-\mathbb{P}(A_n)} = e^{-\sum_{n\ge k}\mathbb{P}(A_n)},$$
+$$\mathbb{P}(C_k) = \prod_{n\ge k}\mathbb{P}(A_n^c) = \prod_{n\ge k}(1-\mathbb{P}(A_n)) \le \prod_{n\ge k} \mathrm{e}^{-\mathbb{P}(A_n)} = \mathrm{e}^{-\sum_{n\ge k}\mathbb{P}(A_n)},$$
 car $\mathbb{P}(A_n)\in[0,1]$ ; or $\sum_{n\ge k}\mathbb{P}(A_n)=+\infty$, donc $\mathbb{P}(C_k)=0$ pour tout $k$. La suite $(C_k)$ est croissante, donc par continuité de $\mathbb{P}$,
 $$\mathbb{P}\left(\bigcup_{k\ge1} C_k\right) = \lim_{k\to\infty}\mathbb{P}(C_k) = 0,$$
 et l'on en déduit aussi $\sum_{k\in\mathbb{N}}\mathbb{P}(C_k)=0$. Donc $\mathbb{P}\left(\limsup_{n\to\infty} A_n\right)=1$. $\#$

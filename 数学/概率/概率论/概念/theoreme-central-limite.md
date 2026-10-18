@@ -19,7 +19,7 @@ confidence: medium
 
 ## Intuition
 > [!tip] Idée
-> La variable normalisée $Y_n$ est centrée et de variance $1$. Sa fonction caractéristique s'écrit $\varphi_1\big(\frac{t}{\sqrt n\,\sigma}\big)^n$ ; un développement limité en $0$ donne $\varphi_1\big(\frac{t}{\sqrt n\,\sigma}\big)=1-\frac{t^2}{2n}+o\big(\frac1n\big)$, et la puissance $n$-ième tend vers $e^{-t^2/2}$, fonction caractéristique de $\mathcal{N}(0,1)$. Le théorème de Lévy conclut.
+> La variable normalisée $Y_n$ est centrée et de variance $1$. Sa fonction caractéristique s'écrit $\varphi_1\big(\frac{t}{\sqrt n\,\sigma}\big)^n$ ; un développement limité en $0$ donne $\varphi_1\big(\frac{t}{\sqrt n\,\sigma}\big)=1-\frac{t^2}{2n}+o\big(\frac1n\big)$, et la puissance $n$-ième tend vers $\mathrm{e}^{-t^2/2}$, fonction caractéristique de $\mathcal{N}(0,1)$. Le théorème de Lévy conclut.
 
 ## Exemples
 > [!example]

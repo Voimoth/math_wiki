@@ -11,7 +11,7 @@ confidence: high
 # Gamma 函数与 Beta 函数
 
 > [!note] 定义
-> $$\Gamma(s)=\int_0^\infty t^{s-1}e^{-t}dt,\qquad B(p,q)=\int_0^1t^{p-1}(1-t)^{q-1}dt .$$
+> $$\Gamma(s)=\int_0^\infty t^{s-1}\mathrm{e}^{-t}dt,\qquad B(p,q)=\int_0^1t^{p-1}(1-t)^{q-1}dt .$$
 > 二者都是含参广义积分,其定义、连续性、可导性用控制收敛定理处理。
 
 ## 1. Gamma 函数
@@ -24,7 +24,7 @@ confidence: high
 > 满足这三条的函数唯一,因此这是 $\Gamma$ 的一个刻画。
 
 > [!tip] 证明要点
-> 定义:在 $0$ 附近 $t^{s-1}e^{-t}\sim t^{s-1}$($s>0$ 时可积),在 $\infty$ 处 $=o(e^{-t/2})$。连续与可导:取紧邻域 $[\alpha,\beta]$,在 $0$ 附近用 $t^{\alpha-1}$(或 $t^{\alpha-1}|\log t|^k$)控制,在 $\infty$ 附近用 $e^{-t/2}$ 控制,由控制收敛定理得逐次求导合法。
+> 定义:在 $0$ 附近 $t^{s-1}\mathrm{e}^{-t}\sim t^{s-1}$($s>0$ 时可积),在 $\infty$ 处 $=o(\mathrm{e}^{-t/2})$。连续与可导:取紧邻域 $[\alpha,\beta]$,在 $0$ 附近用 $t^{\alpha-1}$(或 $t^{\alpha-1}|\log t|^k$)控制,在 $\infty$ 附近用 $\mathrm{e}^{-t/2}$ 控制,由控制收敛定理得逐次求导合法。
 
 ## 2. Beta 函数
 
@@ -41,7 +41,7 @@ confidence: high
 > $$B(p,q)=\frac{\Gamma(p)\Gamma(q)}{\Gamma(p+q)} .$$
 
 > [!tip] 证明思路
-> 把 $\Gamma(x)\Gamma(y)$ 写成 $\iint u^{x-1}v^{y-1}e^{-(u+v)}dudv$,作变量替换 $u=st$、$v=s(1-t)$,雅可比行列式为 $s$,积分分离为 $\Gamma(x+y)\cdot B(x,y)$。
+> 把 $\Gamma(x)\Gamma(y)$ 写成 $\iint u^{x-1}v^{y-1}\mathrm{e}^{-(u+v)}dudv$,作变量替换 $u=st$、$v=s(1-t)$,雅可比行列式为 $s$,积分分离为 $\Gamma(x+y)\cdot B(x,y)$。
 
 > [!example] 例子
 > 由关系式与 $\Gamma(n+1)=n!$,整参数时 $B(m,n)=\frac{(m-1)!(n-1)!}{(m+n-1)!}$。

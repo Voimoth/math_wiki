@@ -43,7 +43,7 @@ confidence: medium
 
 > [!note] Déf. 3.6 ($p$-arrangement)
 > Soient $p \in \mathbb{N}^*$ et $E$ un ensemble fini de cardinal $n$. On appelle $p$-arrangement d'éléments de $E$ toute $p$-liste d'éléments de $E$ deux à deux distincts, et on note
-> $A_n^p = \mathrm{card}\left( \{(x_1, \dots, x_p) \in E^p \mid \forall i \neq j,\ x_i \neq x_j\} \right)$.
+> $A_n^p = \operatorname{Card}\left( \{(x_1, \dots, x_p) \in E^p \mid \forall i \neq j,\ x_i \neq x_j\} \right)$.
 
 > [!note] Thm. 3.7
 > Pour $n \in \mathbb{N}$ et $p \in \mathbb{N}^*$, on a
@@ -55,7 +55,7 @@ $$A_n^p = n(n-1)\cdots(n-p+1) = \frac{n!}{(n-p)!}. \quad \#$$
 
 > [!note] Cor. 3.8
 > Soient $E, F$ deux ensembles finis de cardinaux respectifs $p$ et $n$. Alors
-> $\mathrm{card}\{f : E \to F \mid f \text{ injective}\} = A_n^p$.
+> $\operatorname{Card}\{f : E \to F \mid f \text{ injective}\} = A_n^p$.
 
 **Preuve :** Soit $u : [\![1, p]\!] \to E$ une bijection. On a la bijection
 $$\varphi : \{p\text{-arrangements d'éléments de } F\} \to \{f : E \to F \text{ injective}\}, \quad (x_1, \dots, x_p) \mapsto \left( f(y) = x_{u^{-1}(y)} \right). \quad \#$$

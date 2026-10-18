@@ -86,7 +86,7 @@ La famille $\mathcal{F}$ et les probabilités $\mathbb{P}(A)$ doivent satisfaire
 > [!info] Rq. 6.11
 > Plus généralement, une application $\mu : \mathcal{F}\to\mathbb{R}_+\cup\{+\infty\}$ est une mesure (positive) si $\mu(\emptyset) = 0$ et $\mu$ est $\sigma$-additive.
 > Par exemple, la mesure de comptage sur $\mathbb{N}$ est définie par
-> $$\mu(A) = \begin{cases} \mathrm{card}(A) & \text{si } A\subset\mathbb{N} \text{ est fini} \\ +\infty & \text{si } A\subset\mathbb{N} \text{ est infini.} \end{cases}$$
+> $$\mu(A) = \begin{cases} \operatorname{Card}(A) & \text{si } A\subset\mathbb{N} \text{ est fini} \\ +\infty & \text{si } A\subset\mathbb{N} \text{ est infini.} \end{cases}$$
 > C'est une mesure (positive) mais pas une mesure de probabilité.
 
 > [!note] Déf. 6.12 (espace probabilisé)

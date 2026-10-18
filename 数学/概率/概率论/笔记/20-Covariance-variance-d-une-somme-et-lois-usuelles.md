@@ -82,17 +82,17 @@ $$=\sum_{k=1}^n\operatorname{Var}(X_k)+2\sum_{1\le i<j\le n}\operatorname{Cov}(X
 > $$\mathbb{E}[X]=\sum_{k=1}^{+\infty}k\,p\,q^{k-1}=\frac{p}{(1-q)^2}=\frac1p.$$
 > $$\operatorname{Var}(X)=\sum_{k=1}^{+\infty}\Bigl(k-\frac1p\Bigr)^2p\,q^{k-1}=\frac{q}{p^2}.$$
 >
-> **6. Loi de Poisson.** $X\sim\mathcal{P}(\lambda)$, $\mathbb{P}(X=n)=e^{-\lambda}\frac{\lambda^n}{n!}$, $n=0,1,\dots$
-> $$\mathbb{E}[X]=\sum_{n=0}^{+\infty}n\,e^{-\lambda}\frac{\lambda^n}{n!}=\lambda.$$
+> **6. Loi de Poisson.** $X\sim\mathcal{P}(\lambda)$, $\mathbb{P}(X=n)=\mathrm{e}^{-\lambda}\frac{\lambda^n}{n!}$, $n=0,1,\dots$
+> $$\mathbb{E}[X]=\sum_{n=0}^{+\infty}n\,\mathrm{e}^{-\lambda}\frac{\lambda^n}{n!}=\lambda.$$
 > $$\operatorname{Var}(X)=\lambda.$$
 >
 > **7. Loi gaussienne.** $X:\Omega\to\mathbb{R}$ avec
-> $$F_X(x)=\mathbb{P}(X\le x)=\frac{1}{\sqrt{2\pi}\sigma}\int_{-\infty}^{x}e^{-\frac{(t-m)^2}{2\sigma^2}}\,dt,\qquad\sigma>0,\ m\in\mathbb{R}.$$
+> $$F_X(x)=\mathbb{P}(X\le x)=\frac{1}{\sqrt{2\pi}\sigma}\int_{-\infty}^{x}\mathrm{e}^{-\frac{(t-m)^2}{2\sigma^2}}\,dt,\qquad\sigma>0,\ m\in\mathbb{R}.$$
 > Densité de $X$ :
-> $$p_X(x)=\frac{1}{\sqrt{2\pi}\sigma}e^{-\frac{(x-m)^2}{2\sigma^2}}.$$
+> $$p_X(x)=\frac{1}{\sqrt{2\pi}\sigma}\mathrm{e}^{-\frac{(x-m)^2}{2\sigma^2}}.$$
 > On note $X\sim\mathcal{N}(m,\sigma)$ : loi gaussienne de paramètres $m,\sigma$. Alors
-> $$\mathbb{E}[X]=\int_{-\infty}^{+\infty}x\,p_X(x)\,dx=\frac{1}{\sqrt{2\pi}\sigma}\int_{-\infty}^{+\infty}x\,e^{-\frac{(x-m)^2}{2\sigma^2}}\,dx=m,$$
-> $$\operatorname{Var}(X)=\int_{-\infty}^{+\infty}(x-m)^2p_X(x)\,dx=\frac{1}{\sqrt{2\pi}\sigma}\int_{-\infty}^{+\infty}(x-m)^2e^{-\frac{(x-m)^2}{2\sigma^2}}\,dx=\frac{\sigma^2}{\sqrt{2\pi}}\,\Gamma\!\Bigl(\frac32\Bigr)2^{3/2}=\sigma^2.$$
+> $$\mathbb{E}[X]=\int_{-\infty}^{+\infty}x\,p_X(x)\,dx=\frac{1}{\sqrt{2\pi}\sigma}\int_{-\infty}^{+\infty}x\,\mathrm{e}^{-\frac{(x-m)^2}{2\sigma^2}}\,dx=m,$$
+> $$\operatorname{Var}(X)=\int_{-\infty}^{+\infty}(x-m)^2p_X(x)\,dx=\frac{1}{\sqrt{2\pi}\sigma}\int_{-\infty}^{+\infty}(x-m)^2\mathrm{e}^{-\frac{(x-m)^2}{2\sigma^2}}\,dx=\frac{\sigma^2}{\sqrt{2\pi}}\,\Gamma\!\Bigl(\frac32\Bigr)2^{3/2}=\sigma^2.$$
 
 ## 20.5 Inégalité de Markov
 

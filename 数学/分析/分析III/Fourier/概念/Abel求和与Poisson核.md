@@ -81,10 +81,10 @@ $$\left|(1-r)^2\sum_{n>N}(n\sigma_n)r^n\right| \le \varepsilon(1-r)^2\sum_{n>N}n
 **证明**。因 $f$ 可积，Fourier 系数 $c_n$ 有界，故函数项级数
 $$\sum_{-\infty}^{\infty} r^{|n|}c_ne^{in\theta}$$
 对任何 $0\le r<1$ 一致收敛(把 $r,\theta$ 都当参数,关于 $0\le r<1-\delta$ 也一致收敛)。记和函数为 $A(r,\theta)$，仿照前文算卷积:
-$$A(r,\theta) = \sum_{-\infty}^{\infty}r^{|n|}\left(\frac{1}{2\pi}\int_{-\pi}^{\pi}f(\phi)e^{-in\phi}d\phi\right)e^{in\theta}
+$$A(r,\theta) = \sum_{-\infty}^{\infty}r^{|n|}\left(\frac{1}{2\pi}\int_{-\pi}^{\pi}f(\phi)\mathrm{e}^{-in\phi}d\phi\right)\mathrm{e}^{in\theta}
 = \frac{1}{2\pi}\int_{-\pi}^{\pi}f(\varphi)P_r(\theta-\varphi)\,d\varphi,$$
 其中
-$$P_r(\theta) = \sum_{-\infty}^{\infty}r^{|n|}e^{in\theta}
+$$P_r(\theta) = \sum_{-\infty}^{\infty}r^{|n|}\mathrm{e}^{in\theta}
 = 1 + \sum_{n\ge1}z^n + \sum_{n\ge1}(\bar z)^n
 = 1 + \frac{z}{1-z} + \frac{\bar z}{1-\bar z}
 = \frac{1-r^2}{1-2r\cos\theta+r^2},\qquad z = re^{i\theta}.$$

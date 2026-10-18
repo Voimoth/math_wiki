@@ -84,8 +84,8 @@ donc $G_{X+Y}(t)$ existe et vaut $G_X(t)G_Y(t)$. 2) Le même raisonnement. $\#$
 
 > [!example] Exemple 21.9 (loi de Poisson)
 > Soit $X\sim\mathcal{P}(\lambda)$. Alors
-> $$G_X(t)=\sum_{n=0}^{+\infty}t^n\,e^{-\lambda}\frac{\lambda^n}{n!}=e^{-\lambda}e^{\lambda t}=e^{\lambda(t-1)}.$$
-> On en déduit $G_X'(t)=\lambda e^{\lambda(t-1)}$, donc $\mathbb{E}[X]=G_X'(1)=\lambda$, puis $G_X''(t)=\lambda^2e^{\lambda(t-1)}$ et $\mathrm{Var}(X)=\lambda^2+\lambda-\lambda^2=\lambda$. De plus, si $X_j\sim\mathcal{P}(\lambda_j)$ ($j=1,\dots,n$) sont indépendantes et $X=\sum_{j=1}^nX_j$, alors la Prop. 21.5 donne $G_X(t)=e^{\lambda(t-1)}$ avec $\lambda=\lambda_1+\dots+\lambda_n$, d'où $X\sim\mathcal{P}(\lambda)$.
+> $$G_X(t)=\sum_{n=0}^{+\infty}t^n\,\mathrm{e}^{-\lambda}\frac{\lambda^n}{n!}=\mathrm{e}^{-\lambda}\mathrm{e}^{\lambda t}=\mathrm{e}^{\lambda(t-1)}.$$
+> On en déduit $G_X'(t)=\lambda \mathrm{e}^{\lambda(t-1)}$, donc $\mathbb{E}[X]=G_X'(1)=\lambda$, puis $G_X''(t)=\lambda^2\mathrm{e}^{\lambda(t-1)}$ et $\mathrm{Var}(X)=\lambda^2+\lambda-\lambda^2=\lambda$. De plus, si $X_j\sim\mathcal{P}(\lambda_j)$ ($j=1,\dots,n$) sont indépendantes et $X=\sum_{j=1}^nX_j$, alors la Prop. 21.5 donne $G_X(t)=\mathrm{e}^{\lambda(t-1)}$ avec $\lambda=\lambda_1+\dots+\lambda_n$, d'où $X\sim\mathcal{P}(\lambda)$.
 
 ## Voir aussi
 - [[fonction-generatrice]]

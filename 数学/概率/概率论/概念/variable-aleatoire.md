@@ -32,7 +32,7 @@ confidence: medium
 > [!example]
 > Toute application **constante** $X : \omega \mapsto c$ est une v.a. (dite déterministe) : $X^{-1}(B) \in \{\emptyset, \Omega\}$.
 > L'**indicatrice** $\mathbb{1}_A$ d'un événement $A \in \mathcal{A}$ est une v.a. réelle.
-> Sur $([0,1], \mathcal{B}([0,1]), \mathbb{P})$, l'identité $id_{[0,1]}$ est une v.a. réelle, à valeurs en infinité non dénombrable.
+> Sur $([0,1], \mathcal{B}([0,1]), \mathbb{P})$, l'identité $\mathrm{Id}_{[0,1]}$ est une v.a. réelle, à valeurs en infinité non dénombrable.
 
 ## Pièges
 > [!warning]

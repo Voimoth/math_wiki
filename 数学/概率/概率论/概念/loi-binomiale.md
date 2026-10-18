@@ -20,7 +20,7 @@ confidence: medium
 
 > [!note] Interprétation
 > Si $A_1, \dots, A_n$ sont $n$ événements indépendants avec $\mathbb{P}(A_k) = p$ pour tout $k$, alors
-> $$X = \mathrm{card}\{k \in [\![1, n]\!] \mid A_k \text{ est réalisé}\} = \sum_{k=1}^n \mathbb{1}_{A_k} \sim \mathcal{B}(n, p).$$
+> $$X = \operatorname{Card}\{k \in [\![1, n]\!] \mid A_k \text{ est réalisé}\} = \sum_{k=1}^n \mathbb{1}_{A_k} \sim \mathcal{B}(n, p).$$
 
 ## Intuition
 > [!tip] Idée

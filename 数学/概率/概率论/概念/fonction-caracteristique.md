@@ -15,7 +15,7 @@ confidence: medium
 
 > [!note] Définition
 > Soit $X$ une variable aléatoire à valeurs dans $\mathbb{R}^n$. Sa fonction caractéristique est
-> $$\varphi_X:\mathbb{R}^n\to\mathbb{C},\qquad \varphi_X(z)=\mathbb{E}\big[e^{izX}\big].$$
+> $$\varphi_X:\mathbb{R}^n\to\mathbb{C},\qquad \varphi_X(z)=\mathbb{E}\big[\mathrm{e}^{izX}\big].$$
 
 > [!info] Propriétés
 >
@@ -30,7 +30,7 @@ confidence: medium
 
 ## Exemples
 > [!example]
-> $\varphi(s)=e^{-s^2/2}$ pour $\mathcal{N}(0,1)$ ; $\varphi(s)=e^{-\sigma^2s^2/2+ims}$ pour $\mathcal{N}(m,\sigma)$. On en tire les moments de la loi normale : $\mathbb{E}[\xi^{2n}]=(2n-1)!!$ et $\mathbb{E}[\xi^{2n-1}]=0$.
+> $\varphi(s)=\mathrm{e}^{-s^2/2}$ pour $\mathcal{N}(0,1)$ ; $\varphi(s)=\mathrm{e}^{-\sigma^2s^2/2+ims}$ pour $\mathcal{N}(m,\sigma)$. On en tire les moments de la loi normale : $\mathbb{E}[\xi^{2n}]=(2n-1)!!$ et $\mathbb{E}[\xi^{2n-1}]=0$.
 
 ## Pièges
 > [!warning]

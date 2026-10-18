@@ -15,7 +15,7 @@ confidence: medium
 
 > [!note] Définition
 > Soient $p \in \mathbb{N}^*$ et $E$ un ensemble fini de cardinal $n$. Un $p$-arrangement d'éléments de $E$ est une $p$-liste d'éléments de $E$ deux à deux distincts, et
-> $$A_n^p = \mathrm{card}\left( \{(x_1, \dots, x_p) \in E^p \mid \forall i \neq j,\ x_i \neq x_j\} \right) = \begin{cases} \dfrac{n!}{(n-p)!} & \text{si } p \leq n \\ 0 & \text{si } p > n. \end{cases}$$
+> $$A_n^p = \operatorname{Card}\left( \{(x_1, \dots, x_p) \in E^p \mid \forall i \neq j,\ x_i \neq x_j\} \right) = \begin{cases} \dfrac{n!}{(n-p)!} & \text{si } p \leq n \\ 0 & \text{si } p > n. \end{cases}$$
 > Une permutation de $E$ est une bijection $E \to E$ ; il y en a $A_n^n = n!$.
 > Une $p$-combinaison de $E$ est un sous-ensemble de $E$ de cardinal $p$ ; il y en a $\binom{n}{p} = \dfrac{A_n^p}{p!} = \dfrac{n!}{p!\,(n-p)!}$.
 

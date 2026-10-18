@@ -25,7 +25,7 @@ confidence: medium
 ## Exemples
 > [!example]
 >
-> - Mesure de comptage sur $\mathbb{N}$ : $\mu(A) = \mathrm{card}(A)$ si $A$ fini, $+\infty$ sinon. C'est une mesure **positive** ($\mu(\emptyset)=0$, σ-additive) mais **pas** une probabilité ($\mu(\Omega) = +\infty \neq 1$).
+> - Mesure de comptage sur $\mathbb{N}$ : $\mu(A) = \operatorname{Card}(A)$ si $A$ fini, $+\infty$ sinon. C'est une mesure **positive** ($\mu(\emptyset)=0$, σ-additive) mais **pas** une probabilité ($\mu(\Omega) = +\infty \neq 1$).
 > - Modèle discret : $\mathbb{P}(A) = \sum_{\omega\in A} p_\omega$ avec $p_\omega\geq 0$ et $\sum_\omega p_\omega = 1$.
 
 ## Pièges

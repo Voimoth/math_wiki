@@ -15,16 +15,16 @@ confidence: medium
 
 > [!note] Définition
 > Soit $\lambda > 0$. Une v.a. à valeurs dans $\mathbb{N}$ suit la **loi de Poisson** de paramètre $\lambda$ si
-> $$\forall k \in \mathbb{N}, \quad \mathbb{P}(X = k) = e^{-\lambda} \frac{\lambda^k}{k!}.$$
+> $$\forall k \in \mathbb{N}, \quad \mathbb{P}(X = k) = \mathrm{e}^{-\lambda} \frac{\lambda^k}{k!}.$$
 > On note $X \sim \mathcal{P}(\lambda)$.
 
 > [!note] Théorème (approximation de Poisson)
 > Soit $(p_n)_{n \geq 1}$ avec $p_n \in [0, 1]$ et $n p_n \to \lambda > 0$. Si $X_n \sim \mathcal{B}(n, p_n)$, alors
-> $$\forall k \in \mathbb{N}, \quad \mathbb{P}(X_n = k) \longrightarrow e^{-\lambda} \frac{\lambda^k}{k!}.$$
+> $$\forall k \in \mathbb{N}, \quad \mathbb{P}(X_n = k) \longrightarrow \mathrm{e}^{-\lambda} \frac{\lambda^k}{k!}.$$
 
 ## Intuition
 > [!tip] Idée
-> Le paramètre $\lambda$ est l'intensité : on accumule beaucoup d'essais, chacun avec une faible probabilité de succès, à espérance totale $n p_n \approx \lambda$ constante. La loi binomiale devient « lisse » et tend vers une série exponentielle, d'où le facteur $e^{-\lambda}$ qui normalise la somme : $\sum_k e^{-\lambda} \lambda^k / k! = e^{-\lambda} e^{\lambda} = 1$.
+> Le paramètre $\lambda$ est l'intensité : on accumule beaucoup d'essais, chacun avec une faible probabilité de succès, à espérance totale $n p_n \approx \lambda$ constante. La loi binomiale devient « lisse » et tend vers une série exponentielle, d'où le facteur $\mathrm{e}^{-\lambda}$ qui normalise la somme : $\sum_k \mathrm{e}^{-\lambda} \lambda^k / k! = \mathrm{e}^{-\lambda} \mathrm{e}^{\lambda} = 1$.
 
 ## Exemples
 > [!example]
@@ -34,7 +34,7 @@ confidence: medium
 ## Pièges
 > [!warning]
 > L'approximation exige $n \gg 1$ et $p \ll 1$ **avec** $n p \to \lambda$ ; prendre $n$ grand sans rendre $p$ petit ne donne pas Poisson.
-> $\lambda > 0$ est sans dimension mais fixe à la fois l'espérance et la variance : ne pas oublier le facteur $e^{-\lambda}$ en croyant que $\sum_k \lambda^k / k! = 1$.
+> $\lambda > 0$ est sans dimension mais fixe à la fois l'espérance et la variance : ne pas oublier le facteur $\mathrm{e}^{-\lambda}$ en croyant que $\sum_k \lambda^k / k! = 1$.
 
 ## Voir aussi
 - [[loi-binomiale]]

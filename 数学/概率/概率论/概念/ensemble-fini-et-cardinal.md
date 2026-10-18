@@ -16,7 +16,7 @@ confidence: medium
 > [!note] Définition
 > Pour $n \in \mathbb{N}$, on note $[\![1, n]\!] = \{1, 2, \dots, n\}$, avec la convention $[\![1, 0]\!] = \emptyset$.
 > Un ensemble $E$ est fini s'il existe $n \in \mathbb{N}$ et une bijection $f : [\![1, n]\!] \to E$.
-> Si une telle bijection existe pour l'entier $n$, alors $n$ est appelé cardinal de $E$ : $\mathrm{Card}(E) = |E| = \#E = n$.
+> Si une telle bijection existe pour l'entier $n$, alors $n$ est appelé cardinal de $E$ : $\operatorname{Card}(E) = |E| = \#E = n$.
 > Un ensemble est infini s'il n'est pas fini.
 
 ## Intuition

@@ -33,7 +33,7 @@ $$\mathbb{P}_X\Big(\bigcup_{n \in \mathbb{N}} E_n\Big) = \mathbb{P}\Big(X^{-1}\b
 Donc $\mathbb{P}_X$ est $\sigma$-additive : c'est une probabilité. $\#$
 
 > [!info] Rq. 12.3
-> Réciproquement, pour toute mesure de probabilité $\mu$ sur $(E, \mathcal{E})$, il existe une v.a. $X : (\Omega, \mathcal{A}, \mathbb{P}) \to (E, \mathcal{E})$ telle que $\mu = \mathbb{P}_X$ : il suffit de considérer $(\Omega, \mathcal{A}, \mathbb{P}) = (E, \mathcal{E}, \mu)$ et $X = id_E$.
+> Réciproquement, pour toute mesure de probabilité $\mu$ sur $(E, \mathcal{E})$, il existe une v.a. $X : (\Omega, \mathcal{A}, \mathbb{P}) \to (E, \mathcal{E})$ telle que $\mu = \mathbb{P}_X$ : il suffit de considérer $(\Omega, \mathcal{A}, \mathbb{P}) = (E, \mathcal{E}, \mu)$ et $X = \mathrm{Id}_E$.
 
 ## Égalité en loi
 

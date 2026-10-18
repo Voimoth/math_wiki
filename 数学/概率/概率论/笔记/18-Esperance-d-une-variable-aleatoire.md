@@ -74,7 +74,7 @@ On ne peut pas définir $\mathbb{E}[X]$ si $\mathbb{E}[X^+]=\mathbb{E}[X^-]=+\in
 
 **Cas discret.** Soit $X$ une v.a. telle que $X(\Omega)\subset\mathbb{Z}$, et $f:\mathbb{R}\to\mathbb{R}$ mesurable telle que $\mathbb{E}[|f(X)|]<+\infty$. Alors
 $$\mathbb{E}[f(X)]=\sum_{n\in\mathbb{Z}}f(n)\,\mathbb{P}(X=n).$$
-En particulier, avec $f=\mathrm{id}$,
+En particulier, avec $f=\mathrm{Id}$,
 $$\mathbb{E}[X]=\sum_{n\in\mathbb{Z}}n\,\mathbb{P}(X=n).$$
 
 Soit $F_X(x)=\mathbb{P}(X\le x)$ la fonction de répartition de $X$. Alors

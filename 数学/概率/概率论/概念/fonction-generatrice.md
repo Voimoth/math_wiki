@@ -30,7 +30,7 @@ confidence: medium
 
 ## Exemples
 > [!example]
-> $X\sim\mathcal{P}(\lambda)$ : $G_X(t)=e^{\lambda(t-1)}$, d'où $\mathbb{E}[X]=\mathrm{Var}(X)=\lambda$ et, par la propriété de produit, la stabilité de la loi de Poisson sous l'addition.
+> $X\sim\mathcal{P}(\lambda)$ : $G_X(t)=\mathrm{e}^{\lambda(t-1)}$, d'où $\mathbb{E}[X]=\mathrm{Var}(X)=\lambda$ et, par la propriété de produit, la stabilité de la loi de Poisson sous l'addition.
 > $X\sim B(n,p)$ : $G_X(t)=(q+pt)^n$, d'où $\mathbb{E}[X]=np$ et $\mathrm{Var}(X)=npq$.
 
 ## Pièges

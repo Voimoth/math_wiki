@@ -26,7 +26,7 @@ confidence: medium
 > 令 $\varphi_0=y_0$，$\varphi_{n+1}=T\varphi_n$。Lipschitz 条件给出误差估计
 > $$|\varphi_{n+1}-\varphi_n|\leq \frac{L^{n}M}{(n+1)!}|x-x_0|^{n+1},$$
 > 由阶乘系数知 $(\varphi_n)$ 一致收敛到 $\varphi$，且 $T\varphi=\varphi$。
-> 唯一性：两解之差 $|y_1-y_2|\leq L\int|y_1-y_2|$，令 $F=\int|y_1-y_2|$ 得 $F'\leq LF$，即 $(e^{-Lx}F)'\leq 0$，从而 $F\equiv 0$。
+> 唯一性：两解之差 $|y_1-y_2|\leq L\int|y_1-y_2|$，令 $F=\int|y_1-y_2|$ 得 $F'\leq LF$，即 $(\mathrm{e}^{-Lx}F)'\leq 0$，从而 $F\equiv 0$。
 
 > [!warning] 概念性陷阱
 >
@@ -36,7 +36,7 @@ confidence: medium
 
 ## 相关概念
 
-- [[Gronwall不等式]] — 唯一性中 $(e^{-Lx}F)'\leq 0$ 那一步
+- [[Gronwall不等式]] — 唯一性中 $(\mathrm{e}^{-Lx}F)'\leq 0$ 那一步
 - [[一阶线性ODE与积分因子]] — 线性方程可以用同样思路（甚至可写显式解）
 - [[压缩映射与不动点]] — Picard 迭代的抽象框架
 - [[Lipschitz函数]] — 定理的关键假设

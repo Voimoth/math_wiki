@@ -29,7 +29,7 @@ $$f(x)=T_a^n(f)+o\big((x-a)^n\big),\qquad T_a^n(f)=\sum_{k=0}^n\frac1{k!}f^{(k)}
 > $$f(x)=T_a^n(f)(x)+o\big((x-a)^n\big).$$
 
 > [!example]
-> $$e^x=1+x+\frac{x^2}{2!}+\dots+\frac{x^n}{n!}+o(x^n),$$
+> $$\mathrm{e}^x=1+x+\frac{x^2}{2!}+\dots+\frac{x^n}{n!}+o(x^n),$$
 > $$\sin x=x-\frac{x^3}{3!}+\frac{x^5}{5!}-\dots+(-1)^n\frac{x^{2n+1}}{(2n+1)!}+\dots$$
 
 ## 3. Lagrange 余项的 Taylor 公式

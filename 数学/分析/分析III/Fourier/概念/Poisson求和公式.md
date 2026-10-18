@@ -25,7 +25,7 @@ confidence: high
 
 > [!tip]
 > 左边的 $\sum_n f(x+n)$ 是**周期 1** 的函数，且因 $f$ 速降而极其正则（各级导数都一致收敛）。算它的第 $m$ 个 Fourier 系数：交换求和与积分、令 $y=x+n$，区间 $[n,n+1]$ 拼成整条实轴，恰好得到
-> $$\int_0^1\sum_n f(x+n)e^{-2\pi imx}dx=\int_{-\infty}^{\infty}f(y)e^{-2\pi imy}dy=\hat f(m).$$
+> $$\int_0^1\sum_n f(x+n)\mathrm{e}^{-2\pi imx}dx=\int_{-\infty}^{\infty}f(y)\mathrm{e}^{-2\pi imy}dy=\hat f(m).$$
 > 所以右边的 $\sum_n\hat f(n)e^{2\pi inx}$ 正是左边函数的 Fourier 级数，二者相等。
 
 > [!tip] 对偶解读

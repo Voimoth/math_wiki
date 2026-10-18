@@ -93,8 +93,8 @@ D'après la Prop. 11.3, $\mathbb{1}_A$ est mesurable, donc c'est une v.a. réell
 
 > [!example] Exemple 11.6 (identité sur $[0,1]$)
 > Soit $([0, 1], \mathcal{B}([0, 1]), \mathbb{P})$ un espace probabilisé sur $[0,1]$. L'application identité
-> $$id_{[0,1]} : ([0, 1], \mathcal{B}([0, 1])) \to ([0, 1], \mathcal{B}([0, 1]))$$
-> est une v.a. réelle : en effet, pour tout $B \in \mathcal{B}([0, 1])$, $id_{[0,1]}^{-1}(B) = B \in \mathcal{B}([0, 1])$.
+> $$\mathrm{Id}_{[0,1]} : ([0, 1], \mathcal{B}([0, 1])) \to ([0, 1], \mathcal{B}([0, 1]))$$
+> est une v.a. réelle : en effet, pour tout $B \in \mathcal{B}([0, 1])$, $\mathrm{Id}_{[0,1]}^{-1}(B) = B \in \mathcal{B}([0, 1])$.
 > Cette v.a. peut prendre une infinité non dénombrable de valeurs.
 
 

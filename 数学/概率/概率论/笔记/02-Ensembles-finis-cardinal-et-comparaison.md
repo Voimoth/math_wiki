@@ -31,7 +31,7 @@ Le résultat est donc vrai pour $m+1$, et le lemme est démontré par récurrenc
 
 > [!note] Déf. 2.3 (cardinal)
 > Soit $E$ un ensemble fini. S'il existe une bijection $f : [\![1, n]\!] \to E$ pour l'entier $n$, alors $n$ est appelé le cardinal de $E$, et on écrit
-> $\mathrm{Card}(E) = |E| = \#E = n$.
+> $\operatorname{Card}(E) = |E| = \#E = n$.
 
 > [!info] Rq.
 > Cette définition pose problème : on ne sait pas a priori si un tel entier $n$ est unique. L'unicité est établie par le lemme suivant.

@@ -36,8 +36,8 @@ confidence: medium
 > 设 $f:I\setminus\{a\}$ 是 $C^n$ 的，且对 $k\in[1,n]$，$f^{(k)}$ 在 $a$ 处的单侧极限 $a_k$ 存在且有限，则 $f$ 可延拓为 $C^n$ 函数 $\tilde f:I\to\mathbb{R}$，且 $\tilde f^{(k)}(a)=a_k$。
 
 > [!example]
-> $$f(x)=\begin{cases}e^{-1/x^2},&x\neq0,\\0,&x=0\end{cases}\in C^\infty.$$
-> 逐阶求导得 $f^{(k)}(x)=e^{-1/x^2}P(1/x)$（$P$ 为多项式），令 $t=1/x$ 用 $e^{t^2}$ 的增长压倒多项式，得 $\lim_{x\to0}f^{(k)}(x)=0$，故 $f^{(k)}(0)=0$。这是「$C^\infty$ 但非实解析」的标准原型（见 [[实解析函数]]）。
+> $$f(x)=\begin{cases}\mathrm{e}^{-1/x^2},&x\neq0,\\0,&x=0\end{cases}\in C^\infty.$$
+> 逐阶求导得 $f^{(k)}(x)=\mathrm{e}^{-1/x^2}P(1/x)$（$P$ 为多项式），令 $t=1/x$ 用 $\mathrm{e}^{t^2}$ 的增长压倒多项式，得 $\lim_{x\to0}f^{(k)}(x)=0$，故 $f^{(k)}(0)=0$。这是「$C^\infty$ 但非实解析」的标准原型（见 [[实解析函数]]）。
 
 ## 概念性陷阱
 

@@ -27,7 +27,7 @@ confidence: medium
 
 ## Exemples
 > [!example]
-> Preuve du TCL : on montre $\varphi_{Y_n}(t)\to e^{-t^2/2}$, continue et égale à la fonction caractéristique de $\mathcal{N}(0,1)$ ; le théorème donne $Y_n\xrightarrow{\mathcal{L}}\mathcal{N}(0,1)$ ([[theoreme-central-limite]]).
+> Preuve du TCL : on montre $\varphi_{Y_n}(t)\to \mathrm{e}^{-t^2/2}$, continue et égale à la fonction caractéristique de $\mathcal{N}(0,1)$ ; le théorème donne $Y_n\xrightarrow{\mathcal{L}}\mathcal{N}(0,1)$ ([[theoreme-central-limite]]).
 
 ## Pièges
 > [!warning]

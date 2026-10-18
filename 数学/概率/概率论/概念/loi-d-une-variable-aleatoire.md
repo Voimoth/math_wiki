@@ -28,7 +28,7 @@ confidence: medium
 ## Intuition
 > [!tip] Idée
 > La loi = « la distribution de masse » que $X$ pousse sur $(E, \mathcal{E})$ à partir de $\mathbb{P}$. Deux v.a. peuvent différer comme applications et avoir la même loi : seule importe la probabilité des valeurs, pas leur réalisation concrète.
-> Réciproquement, toute probabilité $\mu$ sur $(E, \mathcal{E})$ est la loi d'une v.a. : prendre $(\Omega, \mathcal{A}, \mathbb{P}) = (E, \mathcal{E}, \mu)$ et $X = id_E$. C'est ce qui justifie qu'« étudier les v.a. » revient souvent à « étudier des probabilités ».
+> Réciproquement, toute probabilité $\mu$ sur $(E, \mathcal{E})$ est la loi d'une v.a. : prendre $(\Omega, \mathcal{A}, \mathbb{P}) = (E, \mathcal{E}, \mu)$ et $X = \mathrm{Id}_E$. C'est ce qui justifie qu'« étudier les v.a. » revient souvent à « étudier des probabilités ».
 
 ## Exemples
 > [!example]
