@@ -31,7 +31,7 @@ confidence: medium
 ## 同态与同构
 > [!note] 定义
 > 映射 $f:A\to B$ 为 K-代数同态（homomorphisme de K-algèbres），若 $f$ 是 $K$-线性的、乘性的（$f(xy)=f(x)f(y)$）且保幺元（$f(1_A)=1_B$）。
-> $f$ 为同构（isomorphisme），若存在同态 $g:B\to A$ 使 $f\circ g=\mathrm{id}_B,\ g\circ f=\mathrm{id}_A$；等价于 $f$ 是同态且是双射。
+> $f$ 为同构（isomorphisme），若存在同态 $g:B\to A$ 使 $f\circ g=\mathrm{Id}_B,\ g\circ f=\mathrm{Id}_A$；等价于 $f$ 是同态且是双射。
 > $A=B$ 时分别称为自同态 / 自同构。
 
 ## 例子

@@ -38,7 +38,7 @@ confidence: medium
 
 > [!info] 注记
 > $A$ 只需是一般子集，不必是子空间；易证 $A^\perp$ 是子空间。事实上对每个 $a\in A$，$\varphi_a:E\to\mathbb{R},\ x\mapsto(x|a)$ 是线性型，其核是闭子空间，且
-> $$A^\perp=\bigcap_{a\in A}\operatorname{Ker}\varphi_a.$$
+> $$A^\perp=\bigcap_{a\in A}\ker\varphi_a.$$
 
 > [!example] 例
 >
@@ -49,8 +49,8 @@ confidence: medium
 > [!info] 命题
 > 若 $A\subset B$，则 $A^\perp\supset B^\perp$。
 
-**证明：** 由 $A^\perp=\bigcap_{a\in A}\operatorname{Ker}\varphi_a$ 与 $B$ 的指标集更大，
-$$\bigcap_{a\in A}\operatorname{Ker}\varphi_a\supset\bigcap_{a\in B}\operatorname{Ker}\varphi_a,$$
+**证明：** 由 $A^\perp=\bigcap_{a\in A}\ker\varphi_a$ 与 $B$ 的指标集更大，
+$$\bigcap_{a\in A}\ker\varphi_a\supset\bigcap_{a\in B}\ker\varphi_a,$$
 即 $A^\perp\supset B^\perp$。$\#$
 
 > [!info] 命题

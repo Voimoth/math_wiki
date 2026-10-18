@@ -32,7 +32,7 @@ $\sum_i (e_i|x)^2\le\|x\|^2$：规范正交族下，各项「Fourier 系数」�
 
 > [!example] 例
 > 在 $E=\mathcal{C}^0([0,2\pi],\mathbb{R})$、$(f|g)=\int_0^{2\pi}fg$ 中取 $F=\operatorname{Vect}(\cos x,\sin x)$，则
-> $$\inf_{(a,b)}\int_0^{2\pi}(x-a\cos x-b\sin x)^2dx=d(\mathrm{id},F)^2=\|\mathrm{id}\|^2-\sum_{i}(e_i|\mathrm{id})^2,$$
+> $$\inf_{(a,b)}\int_0^{2\pi}(x-a\cos x-b\sin x)^2dx=d(\mathrm{Id},F)^2=\|\mathrm{Id}\|^2-\sum_{i}(e_i|\mathrm{Id})^2,$$
 > 其中 $(e_i)$ 是 $F$ 的规范正交基。Bessel 不等式保证这个下确界非负。
 
 ## 陷阱

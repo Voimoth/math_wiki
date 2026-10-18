@@ -26,7 +26,7 @@ confidence: medium
 
 ## 直觉
 > [!tip] 想法
-> 先按特征值把 $E$ 分成广义特征子空间直和（见 [[广义特征子空间]]），在每个 $N_\lambda$ 上 $u-\lambda\,\mathrm{id}$ 幂零。幂零算子有链状结构 $x,u_0(x),u_0^2(x),\dots$，沿这条链写下矩阵就得到若干个 $J_\lambda(k)$ 拼起来。**块的个数**（对每个 $\lambda$）由相似不变量
+> 先按特征值把 $E$ 分成广义特征子空间直和（见 [[广义特征子空间]]），在每个 $N_\lambda$ 上 $u-\lambda\,\mathrm{Id}$ 幂零。幂零算子有链状结构 $x,u_0(x),u_0^2(x),\dots$，沿这条链写下矩阵就得到若干个 $J_\lambda(k)$ 拼起来。**块的个数**（对每个 $\lambda$）由相似不变量
 > $$\operatorname{rg}(A-\lambda I_n)^m=\sum_{i=m}^n(i-m)k_i\qquad(1\le m\le n)$$
 > 唯一决定（$k_i$ 为块 $J_\lambda(i)$ 的个数），这里还有 $n=\sum_i i\,k_i$。
 

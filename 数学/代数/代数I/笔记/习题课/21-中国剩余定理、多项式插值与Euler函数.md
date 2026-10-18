@@ -28,7 +28,7 @@ $$R=(I_1+I_2)(I_1+I_3)\cdots(I_1+I_r)\subseteq I_1+I_2I_3\cdots I_r\subseteq I_1
 $$\tilde\varphi(x_k)=(x_k+I_1,\dots,x_k+I_r)=(0+I_1,\dots,\underline{1+I_k},\dots,0+I_r),$$
 即需 $x_k\in\bigcap_{j\neq k}I_j$ 且 $1-x_k\in I_k$。由 $1\in R=I_k+\bigcap_{j\neq k}I_j$，存在 $b\in I_k$、$x_k\in\bigcap_{j\neq k}I_j$ 使 $1=x_k+b$，于是 $1-x_k=b\in I_k$。对任意 $(a_1+I_1,\dots,a_r+I_r)$，取 $x=a_1x_1+\cdots+a_rx_r$，则
 $$\tilde\varphi(x)=\tilde\varphi(a_1)\tilde\varphi(x_1)+\cdots+\tilde\varphi(a_r)\tilde\varphi(x_r)=(a_1+I_1,\dots,a_r+I_r),$$
-故 $\tilde\varphi$ 满。又易验证 $\operatorname{Ker}(\tilde\varphi)=I_1\cap\cdots\cap I_r=I$，故由同构定理，$\varphi$ 是环同构。
+故 $\tilde\varphi$ 满。又易验证 $\ker(\tilde\varphi)=I_1\cap\cdots\cap I_r=I$，故由同构定理，$\varphi$ 是环同构。
 
 > [!note] 推论 1.2
 > 设 $n_1,\dots,n_r$ 两两互素，$n=n_1\cdots n_r$，则有环同构

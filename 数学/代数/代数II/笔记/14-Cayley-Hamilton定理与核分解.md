@@ -50,49 +50,49 @@ $x$ 任意，故 $\chi_u(u)=0$。$\#$
 
 > [!note] 定理 14.4（核分解定理）
 > 设 $u\in\mathcal{L}(E)$，$0\neq\dim E=n<+\infty$；$P_1,\dots,P_r\in K[X]$ 两两互素，$P=P_1\cdots P_r$。则
-> $$\operatorname{Ker}\bigl(P(u)\bigr)=\bigoplus_{k=1}^r\operatorname{Ker}\bigl(P_k(u)\bigr).$$
+> $$\ker\bigl(P(u)\bigr)=\bigoplus_{k=1}^r\ker\bigl(P_k(u)\bigr).$$
 
 **证明：** 对 $r$ 归纳，只需证 $r=2$。$P_1,P_2$ 互素 $\iff$ 存在 $(A,B)\in K[X]^2$ 使 $AP_1+BP_2=1$。
-一方面 $\operatorname{Ker}(P_1(u)),\operatorname{Ker}(P_2(u))\subset\operatorname{Ker}(P(u))$。反之，对 $x\in\operatorname{Ker}(P(u))$，由 $A(u)P_1(u)+B(u)P_2(u)=\mathrm{id}_E$ 得
+一方面 $\ker(P_1(u)),\ker(P_2(u))\subset\ker(P(u))$。反之，对 $x\in\ker(P(u))$，由 $A(u)P_1(u)+B(u)P_2(u)=\mathrm{Id}_E$ 得
 $$x=A(u)P_1(u)x+B(u)P_2(u)x.$$
-其中 $P_2(u)\bigl(A(u)P_1(u)x\bigr)=A(u)P(u)x=0$，故 $A(u)P_1(u)x\in\operatorname{Ker}(P_2(u))$；同理 $B(u)P_2(u)x\in\operatorname{Ker}(P_1(u))$。于是 $\operatorname{Ker}(P_1(u))+\operatorname{Ker}(P_2(u))=\operatorname{Ker}(P(u))$。
-再证和为直和：若 $x\in\operatorname{Ker}(P_1(u))\cap\operatorname{Ker}(P_2(u))$，则 $P_1(u)x=P_2(u)x=0$，故
+其中 $P_2(u)\bigl(A(u)P_1(u)x\bigr)=A(u)P(u)x=0$，故 $A(u)P_1(u)x\in\ker(P_2(u))$；同理 $B(u)P_2(u)x\in\ker(P_1(u))$。于是 $\ker(P_1(u))+\ker(P_2(u))=\ker(P(u))$。
+再证和为直和：若 $x\in\ker(P_1(u))\cap\ker(P_2(u))$，则 $P_1(u)x=P_2(u)x=0$，故
 $$x=A(u)P_1(u)x+B(u)P_2(u)x=0,$$
-即 $\operatorname{Ker}(P_1(u))\cap\operatorname{Ker}(P_2(u))=\{0\}$。$\#$
+即 $\ker(P_1(u))\cap\ker(P_2(u))=\{0\}$。$\#$
 
 > [!note] 推论 14.5
-> 条件同上。若 $P$ 零化 $u$（$P(u)=0$），则 $E=\bigoplus_{k=1}^r\operatorname{Ker}(P_k(u))$。
+> 条件同上。若 $P$ 零化 $u$（$P(u)=0$），则 $E=\bigoplus_{k=1}^r\ker(P_k(u))$。
 
 > [!note] 推论 14.6
-> 若 $\chi_u=P_1\cdots P_r$（各 $P_k$ 两两互素），则 $E=\bigoplus_{k=1}^r\operatorname{Ker}(P_k(u))$。
+> 若 $\chi_u=P_1\cdots P_r$（各 $P_k$ 两两互素），则 $E=\bigoplus_{k=1}^r\ker(P_k(u))$。
 
 ## 应用：线性递推与常系数微分方程
 
 > [!example] 例 14.7（二阶线性递推）
 > 设 $(a,b)\in K^2$，序列 $(u_n)\in K^{\mathbb{N}}$ 满足 $u_{n+2}=au_{n+1}+bu_n$。定义移位算子
 > $$T:K^{\mathbb{N}}\to K^{\mathbb{N}},\qquad (u_n)_{n\in\mathbb{N}}\mapsto(u_{n+1})_{n\in\mathbb{N}},$$
-> 则 $T^2u=aTu+bu$，即 $u\in\operatorname{Ker}(Q(T))$，其中 $Q=X^2-aX-b\in K[X]$。
+> 则 $T^2u=aTu+bu$，即 $u\in\ker(Q(T))$，其中 $Q=X^2-aX-b\in K[X]$。
 > 若 $Q$ 在 $K$ 上有互异根 $\lambda_1,\lambda_2$，即 $Q=(X-\lambda_1)(X-\lambda_2)$，由核分解
-> $$\operatorname{Ker}(Q(T))=\operatorname{Ker}(T-\lambda_1\mathrm{id})\oplus\operatorname{Ker}(T-\lambda_2\mathrm{id})=\{A\lambda_1^n+B\lambda_2^n\mid(A,B)\in K^2\}.$$
+> $$\ker(Q(T))=\ker(T-\lambda_1\mathrm{Id})\oplus\ker(T-\lambda_2\mathrm{Id})=\{A\lambda_1^n+B\lambda_2^n\mid(A,B)\in K^2\}.$$
 
 > [!example] 例 14.8（常系数线性微分方程）
 > $$(\mathrm{ED})\quad f^{(p)}+a_{p-1}f^{(p-1)}+\cdots+a_1f'+a_0f=0,\qquad f\in\mathcal{C}^\infty(\mathbb{R},\mathbb{C}).$$
 > 特征多项式 $C(X)=X^p+a_{p-1}X^{p-1}+\cdots+a_1X+a_0$。微分算子
 > $$D:\mathcal{C}^\infty(\mathbb{R},\mathbb{C})\to\mathcal{C}^\infty(\mathbb{R},\mathbb{C}),\qquad f\mapsto f'$$
-> 是 $\mathbb{C}$-线性的，且 $f$ 是 $(\mathrm{ED})$ 的解 $\iff$ $f\in\operatorname{Ker}(C(D))$。
-> 若 $C=\prod_{k=1}^r(X-\lambda_k)^{p_k}$，由核分解 $\operatorname{Ker}(C(D))=\bigoplus_{k=1}^r\operatorname{Ker}\bigl((D-\lambda_k)^{p_k}\bigr)$。
-> 记 $e_\lambda(x)=e^{\lambda x}$，则 $D(e_\lambda)=\lambda e_\lambda$，即 $e_\lambda\in\operatorname{Ker}(D-\lambda)$。对 $p$ 归纳可证
+> 是 $\mathbb{C}$-线性的，且 $f$ 是 $(\mathrm{ED})$ 的解 $\iff$ $f\in\ker(C(D))$。
+> 若 $C=\prod_{k=1}^r(X-\lambda_k)^{p_k}$，由核分解 $\ker(C(D))=\bigoplus_{k=1}^r\ker\bigl((D-\lambda_k)^{p_k}\bigr)$。
+> 记 $e_\lambda(x)=\mathrm{e}^{\lambda x}$，则 $D(e_\lambda)=\lambda e_\lambda$，即 $e_\lambda\in\ker(D-\lambda)$。对 $p$ 归纳可证
 > $$(D-\lambda)^p(fe_\lambda)=e_\lambda\,D^p(f)\qquad(\forall f\in\mathcal{C}^\infty(\mathbb{R},\mathbb{C})),$$
-> 于是 $\operatorname{Ker}(D-\lambda)^p=\{x\mapsto Q(x)e^{\lambda x}\mid Q\in\mathbb{C}_{p-1}[X]\}$ 是 $p$ 维的，基为 $(e^{\lambda x},xe^{\lambda x},\dots,x^{p-1}e^{\lambda x})$。从而
-> $$\dim\operatorname{Ker}(C(D))=\sum_kp_k=\deg C.$$
+> 于是 $\ker(D-\lambda)^p=\{x\mapsto Q(x)\mathrm{e}^{\lambda x}\mid Q\in\mathbb{C}_{p-1}[X]\}$ 是 $p$ 维的，基为 $(\mathrm{e}^{\lambda x},xe^{\lambda x},\dots,x^{p-1}\mathrm{e}^{\lambda x})$。从而
+> $$\dim\ker(C(D))=\sum_kp_k=\deg C.$$
 
 > [!example] 例 14.9（一般线性递推序列）
 > $$\forall n\in\mathbb{N},\quad u_{n+p}+a_{p-1}u_{n+p-1}+\cdots+a_1u_{n+1}+a_0u_n=0.$$
-> 令 $C(X)=X^p+a_{p-1}X^{p-1}+\cdots+a_1X+a_0\in K[X]$，则 $(u_n)$ 满足条件 $\iff$ $u\in\operatorname{Ker}(C(T))$。若 $C$ 分裂，$C=\prod_{k=1}^r(X-\lambda_k)^{p_k}$，则
-> $$u\in\operatorname{Ker}(C(T))=\bigoplus_{k=1}^r\operatorname{Ker}(T-\lambda_k)^{p_k},\qquad \dim\operatorname{Ker}(T-\lambda_k)^{p_k}=p_k.$$
-> - 若 $\lambda_k=0$：$\operatorname{Ker}(T^{p_k})=\{(u_n)\mid n\ge p_k\Rightarrow u_n=0\}$；
+> 令 $C(X)=X^p+a_{p-1}X^{p-1}+\cdots+a_1X+a_0\in K[X]$，则 $(u_n)$ 满足条件 $\iff$ $u\in\ker(C(T))$。若 $C$ 分裂，$C=\prod_{k=1}^r(X-\lambda_k)^{p_k}$，则
+> $$u\in\ker(C(T))=\bigoplus_{k=1}^r\ker(T-\lambda_k)^{p_k},\qquad \dim\ker(T-\lambda_k)^{p_k}=p_k.$$
+> - 若 $\lambda_k=0$：$\ker(T^{p_k})=\{(u_n)\mid n\ge p_k\Rightarrow u_n=0\}$；
 > - 若 $\lambda_k\neq0$：$(T-\lambda_k)^{p_k}$ 把 $\bigl(P(n)\lambda_k^n\bigr)_n$ 映为 $\bigl(\lambda_k^nQ(n)\bigr)_n$，其中 $Q(n)=\lambda_k\bigl(P(n+1)-P(n)\bigr)$ 满足 $\deg Q\le\deg P-1$；两边维数一致，故
-> $$\operatorname{Ker}(T-\lambda_k)^{p_k}=\{P(n)\lambda_k^n\mid P\in K_{p_k-1}[X]\}.$$
+> $$\ker(T-\lambda_k)^{p_k}=\{P(n)\lambda_k^n\mid P\in K_{p_k-1}[X]\}.$$
 > 于是通项
 > $$u_n=\sum_{k=1}^sP_k(n)\lambda_k^n,\qquad \deg P_k\le p_k-1.$$
 
@@ -101,7 +101,7 @@ $$x=A(u)P_1(u)x+B(u)P_2(u)x=0,$$
 > [!info] 注记 14.10
 > 递推 $u_{n+2}=au_{n+1}+bu_n$ 可写成矩阵形式
 > $$\begin{pmatrix}u_{n+2}\\u_{n+1}\end{pmatrix}=\begin{pmatrix}a&b\\1&0\end{pmatrix}\begin{pmatrix}u_{n+1}\\u_n\end{pmatrix}=A\begin{pmatrix}u_{n+1}\\u_n\end{pmatrix}=\cdots=A^{n+1}\begin{pmatrix}u_1\\u_0\end{pmatrix},$$
-> 于是求通项归结为求 $A^m$。把 $A$ 三角化：存在 $P\in GL_n(K)$ 使 $P^{-1}AP=T=D+N$（$D$ 对角、$N$ 幂零，且 $DN=ND$，即上三角的对角部分与严格上三角部分）。由二项式定理（$D,N$ 交换）及 $N^n=0$，
+> 于是求通项归结为求 $A^m$。把 $A$ 三角化：存在 $P\in \mathrm{GL}_n(K)$ 使 $P^{-1}AP=T=D+N$（$D$ 对角、$N$ 幂零，且 $DN=ND$，即上三角的对角部分与严格上三角部分）。由二项式定理（$D,N$ 交换）及 $N^n=0$，
 > $$A^m=P^{-1}(D+N)^mP=\sum_{k=0}^{n-1}\binom{m}{k}P^{-1}D^{m-k}N^kP.$$
 
 ## 相关概念
