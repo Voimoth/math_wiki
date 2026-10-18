@@ -18,18 +18,18 @@ $k$ corps. $E$ $k$-espace vectoriel de dim finie, $u \in L(E)$ dont le polynôme
 > $u \in L(E)$, dont le polynôme caractéristique est scindé. Alors il existe une base de $E$ dans laquelle la matrice de $u$ est diagonale par blocs avec des blocs qui sont des blocs de Jordan. De plus l'ensemble des couples $(\lambda, r)$ qui apparaissent, comptés avec leurs multiplicités, ne dépend que de $u$ et pas de la base. Cet ensemble avec multiplicités caractérise la classe de similitude de $u$.
 
 Rappels :
-Outils : 1) Thm de Cayley-Hamilton. Soit $\chi(X) \in k[X]$ le polynôme caractéristique de $u$ : $\chi(X) = \det(X \cdot Id - u)$. Alors $\chi(u) = 0$.
+Outils : 1) Thm de Cayley-Hamilton. Soit $\chi(X) \in k[X]$ le polynôme caractéristique de $u$ : $\chi(X) = \det(X \cdot \mathrm{Id} - u)$. Alors $\chi(u) = 0$.
 
 2) Soit $\chi(X) = P_1(X)^{\alpha_1} \dots P_r(X)^{\alpha_r}$, $\alpha_1, \dots, \alpha_r \in \mathbb{N}^*$, $P_i$ polynômes irréductibles 2 à 2 (i.e. $P_i(X) = X - \lambda_i$). Lemme des noyaux :
-$$E = \ker(\chi(u)) = \bigoplus_{i=1}^r \ker P_i^{\alpha_i}(u) = \bigoplus_{i=1}^r \ker (u - \lambda_i Id)^{\alpha_i} \qquad \text{sous-espace caractéristique}$$
+$$E = \ker(\chi(u)) = \bigoplus_{i=1}^r \ker P_i^{\alpha_i}(u) = \bigoplus_{i=1}^r \ker (u - \lambda_i \mathrm{Id})^{\alpha_i} \qquad \text{sous-espace caractéristique}$$
 
-3) Dans chaque sous-espace caractéristique $u_j = \lambda_j Id + n_j$ avec $n_j = 0$ (i.e. $n_j$ nilpotent). Ainsi, en se restreignant à un sous-espace caractéristique, on se ramène à démontrer le thm dans le cas d'un endomorphisme nilpotent.
+3) Dans chaque sous-espace caractéristique $u_j = \lambda_j \mathrm{Id} + n_j$ avec $n_j = 0$ (i.e. $n_j$ nilpotent). Ainsi, en se restreignant à un sous-espace caractéristique, on se ramène à démontrer le thm dans le cas d'un endomorphisme nilpotent.
 
 On suppose $u$ nilpotent. Soit $s$ l'indice de nilpotence, $u^s = 0$, $u^{s-1} \neq 0$. On va montrer qu'il existe une base dans laquelle la matrice de $u$ est diagonale par blocs, avec des blocs de la forme $\begin{pmatrix} 0 & 1 & 0 \\ & \ddots & \ddots \\ & & \ddots & 1 \\ & & & 0 \end{pmatrix}$ et que $\forall i$, le nombre de blocs de Jordan de taille $i$ ne dépend pas de la base (on va le calculer en fonction de $u$).
 
 On procède par récurrence sur $\dim E$. $\dim E = 1$ claire, $\dim E = 2$ aussi.
 
-On va construire un sous-espace stable dans lequel la restriction de $u$ a une matrice bloc de Jordan de taille $s$, et qui possède un supplémentaire stable. On a $u^s = 0$, $u^{s-1} \neq 0$, $\exists x \in E$ tq. $u^{s-1}(x) \neq 0$. Soit $F = \text{Vect}(x, u(x), \dots, u^{s-1}(x))$ stable par $u$. $\dim F = s$, $x, u(x), \dots, u^{s-1}(x)$ sont linéairement indépendants. Si on avait $a_0 x + a_1 u(x) + \dots + a_{s-1} u^{s-1}(x) = 0$ on applique $u^{s-1} \Rightarrow a_0 u^{s-1}(x) = 0 \Rightarrow a_0 = 0$, puis on applique $u^{s-2} \Rightarrow a_1 = 0$, etc.
+On va construire un sous-espace stable dans lequel la restriction de $u$ a une matrice bloc de Jordan de taille $s$, et qui possède un supplémentaire stable. On a $u^s = 0$, $u^{s-1} \neq 0$, $\exists x \in E$ tq. $u^{s-1}(x) \neq 0$. Soit $F = \operatorname{Vect}(x, u(x), \dots, u^{s-1}(x))$ stable par $u$. $\dim F = s$, $x, u(x), \dots, u^{s-1}(x)$ sont linéairement indépendants. Si on avait $a_0 x + a_1 u(x) + \dots + a_{s-1} u^{s-1}(x) = 0$ on applique $u^{s-1} \Rightarrow a_0 u^{s-1}(x) = 0 \Rightarrow a_0 = 0$, puis on applique $u^{s-2} \Rightarrow a_1 = 0$, etc.
 
 Étalons la base $(u^{s-1}(x), \dots, u(x), x)$ ; la matrice de $u$ dans cette base est $\begin{pmatrix} 0 & & \\ & \ddots & \\ & & 0 \end{pmatrix}$. Si,
 
@@ -104,14 +104,14 @@ Il suffit de le faire pour un bloc de Jordan.
 $$\begin{pmatrix} \lambda & 1 & & \\ & \ddots & \ddots & \\ & & \ddots & 1 \\ & & & \lambda \end{pmatrix} \text{ semblable à } \begin{pmatrix} \lambda & & 0 \\ 1 & \ddots & \\ & \ddots & \ddots & \\ 0 & & 1 & \lambda \end{pmatrix}$$
 changement de base $(e_1, \ldots, e_n) \to (e_n, \ldots, e_1)$, i.e. on prend $P = \begin{pmatrix} 0 & & 1 \\ & \ddots & \\ 1 & & 0 \end{pmatrix}$.
 
-2) $K=\mathbb{R}$. On a $M_n(\mathbb{R}) \subset M_n(\mathbb{C})$. Soit $M \in M_n(\mathbb{R})$. On applique le 1) : $\exists R \in GL_n(\mathbb{C})$ tq $RMR^{-1} = {}^tM$. On veut $S \in GL_n(\mathbb{R})$ tq $SMS^{-1} = {}^tM$.
+2) $K=\mathbb{R}$. On a $M_n(\mathbb{R}) \subset M_n(\mathbb{C})$. Soit $M \in M_n(\mathbb{R})$. On applique le 1) : $\exists R \in \mathrm{GL}_n(\mathbb{C})$ tq $RMR^{-1} = {}^tM$. On veut $S \in \mathrm{GL}_n(\mathbb{R})$ tq $SMS^{-1} = {}^tM$.
 
 > [!note] Prop
 > Soient $A, B \in M_n(\mathbb{R})$ semblables dans $M_n(\mathbb{C})$. Alors elles sont semblables dans $M_n(\mathbb{R})$.
 
 **Preuve :** $\exists R \in M_n(\mathbb{C})$ tq $RAR^{-1}=B$. Soit $R=P+iQ$ avec $P, Q \in M_n(\mathbb{R})$. $RA=BR$
-$$\implies \begin{cases} PA=BP \\ QA=BQ \end{cases} \text{ si } P, Q \in GL(\mathbb{R}) \text{ ok.}$$
-Mais $\forall t \in \mathbb{R}$, $(P+tQ)A = B(P+tQ)$. Il suffit de trouver $t \in \mathbb{R}$ tq $P+tQ \in GL_n(\mathbb{R})$, i.e. dét($P+tQ$) $\neq 0$.
+$$\implies \begin{cases} PA=BP \\ QA=BQ \end{cases} \text{ si } P, Q \in \mathrm{GL}(\mathbb{R}) \text{ ok.}$$
+Mais $\forall t \in \mathbb{R}$, $(P+tQ)A = B(P+tQ)$. Il suffit de trouver $t \in \mathbb{R}$ tq $P+tQ \in \mathrm{GL}_n(\mathbb{R})$, i.e. dét($P+tQ$) $\neq 0$.
 
 Soient $P, Q$ fixés. le polynôme $\varphi(X) = \det(P + XQ) \in \mathbb{R}[X]$. $\varphi$ n'est pas le polynôme nul, car $\varphi(i) = \det R \neq 0$. donc $\varphi$ n'a qu'un nombre fini de racines $\Rightarrow \exists t \in \mathbb{R}, \varphi(t) \neq 0$.
 
@@ -120,13 +120,13 @@ Soient $P, Q$ fixés. le polynôme $\varphi(X) = \det(P + XQ) \in \mathbb{R}[X]$
 
 Ceci est faux sur $\mathbb{R}$, car sur $\mathbb{R}$ les matrices symétriques sont diagonalisables mais sur $\mathbb{C}$, il y a des matrices symétriques non diagonalisables.
 
-**Preuve.** Soit $M \in M_n(\mathbb{C})$. On cherche $R \in GL_n(\mathbb{C})$ tq $RMR^{-1}$ symétrique, i.e $R^{-1} M R = RMR^{-1}$, $t_M = t_{RR} M (t_{RR})^{-1}$.
+**Preuve.** Soit $M \in M_n(\mathbb{C})$. On cherche $R \in \mathrm{GL}_n(\mathbb{C})$ tq $RMR^{-1}$ symétrique, i.e $R^{-1} M R = RMR^{-1}$, $t_M = t_{RR} M (t_{RR})^{-1}$.
 
-$M$ est semblable à une matrice diagonale par blocs de Jordan et il suffit de le faire pour un bloc de Jordan. i.e. Soit $J$ bloc de Jordan. On veut $R \in GL_n(\mathbb{C})$ tq $t_J = (t_{RR}) J (t_{RR})^{-1}$. On a vu que pour $J$ bloc de Jordan, $t_J = P J P^{-1}$ avec $P = \begin{pmatrix} 0 & 1 \\ 1 & 0 \end{pmatrix}$. Il suffit de trouver $R \in GL_n(\mathbb{C})$ tq $t_{RR} = P$.
+$M$ est semblable à une matrice diagonale par blocs de Jordan et il suffit de le faire pour un bloc de Jordan. i.e. Soit $J$ bloc de Jordan. On veut $R \in \mathrm{GL}_n(\mathbb{C})$ tq $t_J = (t_{RR}) J (t_{RR})^{-1}$. On a vu que pour $J$ bloc de Jordan, $t_J = P J P^{-1}$ avec $P = \begin{pmatrix} 0 & 1 \\ 1 & 0 \end{pmatrix}$. Il suffit de trouver $R \in \mathrm{GL}_n(\mathbb{C})$ tq $t_{RR} = P$.
 
-On va utiliser la classification des formes quadratiques sur $\mathbb{C}$. On a si $Q_1, Q_2$ formes quadratiques sur $\mathbb{C}$, de matrices $P_1$ et $P_2$, elles sont équivalentes, i.e. $\exists S \in GL_n(\mathbb{C})$ tq $P_1 = t_{SP_2S}$ $\iff \mathrm{rg}(P_1) = \mathrm{rg}(P_2)$.
+On va utiliser la classification des formes quadratiques sur $\mathbb{C}$. On a si $Q_1, Q_2$ formes quadratiques sur $\mathbb{C}$, de matrices $P_1$ et $P_2$, elles sont équivalentes, i.e. $\exists S \in \mathrm{GL}_n(\mathbb{C})$ tq $P_1 = t_{SP_2S}$ $\iff \mathrm{rg}(P_1) = \mathrm{rg}(P_2)$.
 
-$P \in M_n(\mathbb{C})$ est symétrique, $\mathrm{rg}(P) = n$. C'est la matrice d'une forme quadratique qui est équivalente à la forme quadratique de matrice $Id$. Donc $\exists R \in GL_n(\mathbb{C})$ tq $t_{RIdR} = t_{RR} = P$.
+$P \in M_n(\mathbb{C})$ est symétrique, $\mathrm{rg}(P) = n$. C'est la matrice d'une forme quadratique qui est équivalente à la forme quadratique de matrice $\mathrm{Id}$. Donc $\exists R \in \mathrm{GL}_n(\mathbb{C})$ tq $t_{RIdR} = t_{RR} = P$.
 
 # Réduction de Frobenius
 
@@ -136,7 +136,7 @@ $$\begin{pmatrix} 0 & & & * \\ 1 & \ddots & & \\ & \ddots & \ddots & \\ & & 1 & 
 ## 1. Espaces cycliques
 
 > [!note] Déf (Vecteur cyclique)
-> $x \in E$ est dit cyclique, si $Vect(u^k(x), k \in \mathbb{N}) = E$. (cela n'est pas toujours)
+> $x \in E$ est dit cyclique, si $\operatorname{Vect}(u^k(x), k \in \mathbb{N}) = E$. (cela n'est pas toujours)
 
 2) endomorphisme cyclique : $u \in L(E)$ tel que il existe un vecteur cyclique.
 3) sous-espace cyclique : c'est un sev $F \subset E$ stable par $u$ et tel que la restriction de $u$ à $F$ est cyclique.
@@ -146,7 +146,7 @@ $$\begin{pmatrix} 0 & & & * \\ 1 & \ddots & & \\ & \ddots & \ddots & \\ & & 1 & 
 
 Ainsi, si $P \in k[X]$ est tq $P(u)(x) = 0$, alors $\mu_x \mid P$. Et $\mu =$ polynôme minimal de $u$, on a $\mu_x \mid \mu$.
 
-De plus, si $r = \deg(\mu_x)$, alors $x, u(x), \dots, u^{r-1}(x)$ sont linéairement indépendants, $Vect(x, u(x), \dots, u^{r-1}(x)) = Vect(u^k(x), k \in \mathbb{N})$ est de dim $r$. Cet espace est le sous-espace cyclique engendré par $x$.
+De plus, si $r = \deg(\mu_x)$, alors $x, u(x), \dots, u^{r-1}(x)$ sont linéairement indépendants, $\operatorname{Vect}(x, u(x), \dots, u^{r-1}(x)) = \operatorname{Vect}(u^k(x), k \in \mathbb{N})$ est de dim $r$. Cet espace est le sous-espace cyclique engendré par $x$.
 
 Soit $\mu_\alpha(X) = a_0 + a_1 X + \dots + a_{n-1} X^{n-1} + X^n$. Dans la base du sous-espace cyclique $(e, u(e), \dots, u^{n-1}(e))$, la matrice de la restriction de $u$ est
 $$\begin{pmatrix}
@@ -222,7 +222,7 @@ $$\begin{pmatrix} C_{P_1} & & & 0 \\ & C_{P_2} & & \\ & & \ddots & \\ 0 & & & C_
 > 3) On n'a fait aucune hypothèse sur le fait que $\chi_u$ soit scindé ou non.
 
 **Preuve :**
-1) Existence : par récurrence sur $\dim E$. Posons $P_1 := \mu_u$. On a vu qu'il existe $x \in E$ tq. $\mu_x = \mu = P_1$. Soit $d := \deg(P_1)$. $F := \text{Vect}(x, u(x), \dots, u^{d-1}(x))$ sous-espace cyclique engendré par $x$. $u|_F$ cyclique, de polynôme minimal $P_1$. On va montrer que $F_1$ possède un supplémentaire stable par $u$, soit $F'$, et on pourra appliquer l'hypothèse de récurrence à $F'$.
+1) Existence : par récurrence sur $\dim E$. Posons $P_1 := \mu_u$. On a vu qu'il existe $x \in E$ tq. $\mu_x = \mu = P_1$. Soit $d := \deg(P_1)$. $F := \operatorname{Vect}(x, u(x), \dots, u^{d-1}(x))$ sous-espace cyclique engendré par $x$. $u|_F$ cyclique, de polynôme minimal $P_1$. On va montrer que $F_1$ possède un supplémentaire stable par $u$, soit $F'$, et on pourra appliquer l'hypothèse de récurrence à $F'$.
 
 Idée : utiliser $E^*$. On complète la famille libre $e_1 = x, e_2 = u(x), \dots, e_d = u^{d-1}(x)$, en une base $(e_1, \dots, e_d, e_{d+1}, \dots, e_n)$ de $E$. On considère la base duale $(e_1^*, \dots, e_d^*, \dots, e_n^*)$. Posons $\varphi = e_d^*$. On a $\varphi(e_1) = \dots = \varphi(e_{d-1}) = 0, \varphi(e_d) = 1$.
 
@@ -231,7 +231,7 @@ Idée : utiliser $E^*$. On complète la famille libre $e_1 = x, e_2 = u(x), \dot
 
 Preuve : Supposons qu'il existe $a_0, \dots, a_{d-1} \in \mathbb{K}$ tq $a_0 \varphi + a_1 {}^t u(\varphi) + \dots + a_{d-1} {}^t u^{d-1}(\varphi) = 0$. On applique à $e_1 = x$ : $\sum_{i=0}^{d-1} a_i \varphi(u^i(e_1)) = a_{d-1} \varphi(e_d) = 0$ $\Rightarrow a_{d-1} = 0$. On applique ensuite à $e_2 = x \Rightarrow a_{d-2} = 0$ etc. sur $e_d$ on obtient $a_0 = 0$.
 
-Soit $G = \text{Vect}(x, u(x), \dots, u^{d-1}(x))$, donc $\dim G = d$, et $G$ est stable par $u$ car $\mu_u \cdot \mu_u$ de degré $d$.
+Soit $G = \operatorname{Vect}(x, u(x), \dots, u^{d-1}(x))$, donc $\dim G = d$, et $G$ est stable par $u$ car $\mu_u \cdot \mu_u$ de degré $d$.
 
 Soit $F' = G^\circ$ (avec $G^\circ \subset E$), donc $\dim F' = n-d$. Comme $G$ stable pour $u$, $F' = G^\circ$ est stable par $u$.
 

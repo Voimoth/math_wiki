@@ -13,7 +13,7 @@ confidence: medium
 > **Motivation :** Thm de Lagrange : si $H \subset G$ sous groupe alors $|H| \mid |G|$.
 > Soit $d \mid |G|$, existe-t-il un sous-groupe de $G$ de cardinal $d$ ?
 > **Non !**
-> **Exercice :** $G = A_4$, $|G|=12$. $G$ ne possède pas de sous-groupe d'ordre 6.
+> **Exercice :** $G = \mathfrak{A}_4$, $|G|=12$. $G$ ne possède pas de sous-groupe d'ordre 6.
 
 ## Situation favorable
 
@@ -222,7 +222,7 @@ $$(ij)(kl) = (ij)(jk)(jk)(kl) = (ijk)(jkl)$$
 > [!info] Prop
 > Il existe un unique morphisme de groupes non trivial $\mathfrak{S}_n \longrightarrow (\mathbb{C}^*, \cdot)$ : c'est la signature $\varepsilon$.
 
-**Preuve :** Soit $\varphi : \mathfrak{S}_n \longrightarrow (\mathbb{C}^*, \cdot)$ un tel morphisme, et soit $\tau$ une transposition. On a $\tau^2 = \mathrm{id}$, donc $\varphi(\tau) = \varphi(\tau)^2$, d'où $\varphi(\tau)^2 = 1$ et $\varphi(\tau) \in \{\pm 1\}$ : on voit $\varphi$ à valeurs dans $\{\pm 1\}$.
+**Preuve :** Soit $\varphi : \mathfrak{S}_n \longrightarrow (\mathbb{C}^*, \cdot)$ un tel morphisme, et soit $\tau$ une transposition. On a $\tau^2 = \mathrm{Id}$, donc $\varphi(\tau) = \varphi(\tau)^2$, d'où $\varphi(\tau)^2 = 1$ et $\varphi(\tau) \in \{\pm 1\}$ : on voit $\varphi$ à valeurs dans $\{\pm 1\}$.
 
 Si $\varphi$ est non trivial, il existe une transposition $\tau$ telle que $\varphi(\tau) = -1$. Or toutes les transpositions sont conjuguées et $(\mathbb{C}^*, \cdot)$ est commutatif, donc pour toute transposition $\tau'$, $\varphi(\tau') = -1$, d'où $\varphi = \varepsilon$.
 
@@ -308,15 +308,15 @@ Montrons que $H = \mathfrak{A}_5$, avec $H \neq \{\mathrm{Id}\}$.
 
 On se ramène au cas $n = 5$.
 
-Soit $F \subset \{1, \dots, n\}$ une partie à 5 éléments, et $A_F$ le sous-groupe de $A_n$ des permutations qui valent $\mathrm{Id}$ sur le complémentaire de $F$ :
+Soit $F \subset \{1, \dots, n\}$ une partie à 5 éléments, et $A_F$ le sous-groupe de $\mathfrak{A}_n$ des permutations qui valent $\mathrm{Id}$ sur le complémentaire de $F$ :
 $$\sigma \in A_F \iff \operatorname{supp}(\sigma) \subset F$$
-On a $A_F \simeq A_5$, qui est simple.
+On a $A_F \simeq \mathfrak{A}_5$, qui est simple.
 
-Soit $H \triangleleft A_n$, $H \neq \{e\}$. Alors $H \cap A_F \triangleleft A_F$, donc soit $H \cap A_F = \{\mathrm{Id}\}$, soit $H \cap A_F = A_5$, i.e. $A_F \subset H$. Dans ce dernier cas, comme $A_5$ contient des 3-cycles, $H$ aussi, et il les contient tous car ils sont conjugués, d'où $H = A_n$ (génération par les 3-cycles).
+Soit $H \triangleleft \mathfrak{A}_n$, $H \neq \{e\}$. Alors $H \cap A_F \triangleleft A_F$, donc soit $H \cap A_F = \{\mathrm{Id}\}$, soit $H \cap A_F = \mathfrak{A}_5$, i.e. $A_F \subset H$. Dans ce dernier cas, comme $\mathfrak{A}_5$ contient des 3-cycles, $H$ aussi, et il les contient tous car ils sont conjugués, d'où $H = \mathfrak{A}_n$ (génération par les 3-cycles).
 
 Il suffit donc de trouver une partie $F$ à 5 éléments telle que $H \cap A_F \neq \{\mathrm{Id}\}$ : il faut trouver dans $H$ un élément $\neq \mathrm{Id}$ qui a au moins $n - 5$ points fixes.
 
-Soit $\sigma \in H$, $\sigma \neq \mathrm{Id}$. On a $\forall \tau \in A_n$, $\tau \sigma \tau^{-1} \in H$, d'où
+Soit $\sigma \in H$, $\sigma \neq \mathrm{Id}$. On a $\forall \tau \in \mathfrak{A}_n$, $\tau \sigma \tau^{-1} \in H$, d'où
 $$\tau \sigma \tau^{-1} \sigma^{-1} \in H$$
 On va choisir $\tau$ convenablement pour que $\tau \sigma \tau^{-1} \sigma^{-1}$ ait au moins $n - 5$ points fixes. Prenons $\tau$ un 3-cycle : $\tau = (a\ b\ c)$, $\tau^{-1} = (a\ c\ b)$. Alors
 $$\sigma \tau \sigma^{-1} = (\sigma(a)\ \sigma(b)\ \sigma(c))$$
@@ -377,11 +377,11 @@ Donc $G$ possède un sous-groupe d'indice 5, et $G \simeq \mathfrak{A}_5$.
 ## Application : sous-groupes finis de $SO(3)$
 
 > [!note] Prop
-> $SO(3)$ possède un sous-groupe fini isomorphe à $A_5$.
+> $SO(3)$ possède un sous-groupe fini isomorphe à $\mathfrak{A}_5$.
 
 **Preuve :** Soit $G$ un sous-groupe fini de $SO(3)$. Il agit sur $X = \{\text{pôles}\}$, et le nombre d'orbites $N$ vaut $2$ ou $3$.
 
-**Cas $N = 3$ avec $e_1 = 2$, $e_2 = 3$, $e_3 = 5$ :** $|G| = 60$. Montrons que dans cette situation $G \simeq A_5$; pour cela, montrons que $G$ est simple.
+**Cas $N = 3$ avec $e_1 = 2$, $e_2 = 3$, $e_3 = 5$ :** $|G| = 60$. Montrons que dans cette situation $G \simeq \mathfrak{A}_5$; pour cela, montrons que $G$ est simple.
 
 Les orbites ont pour cardinal
 $$|O_1| = 30, \quad |O_2| = 20, \quad |O_3| = 12$$
@@ -410,7 +410,7 @@ Donc $G$ est simple et $|G| = 60$, d'où $G \simeq \mathfrak{A}_5$ (voir [[A5单
 **Preuve :** Soit $H \triangleleft \mathfrak{S}_n$, $H \neq \{\mathrm{Id}\}$. On a $H \cap \mathfrak{A}_n \triangleleft \mathfrak{A}_n$, donc $H \cap \mathfrak{A}_n = \{\mathrm{Id}\}$ ou $H \cap \mathfrak{A}_n = \mathfrak{A}_n$, i.e. $\mathfrak{A}_n \subset H \subset \mathfrak{S}_n$. Comme $\mathfrak{A}_n$ est d'indice 2, $H = \mathfrak{A}_n$ ou $H = \mathfrak{S}_n$.
 
 Reste le cas $H \cap \mathfrak{A}_n = \{\mathrm{Id}\}$. Considérons
-$$\varepsilon_{|H} : H \to \{\pm 1\}, \qquad \operatorname{Ker}(\varepsilon_{|H}) = H \cap \mathfrak{A}_n = \{\mathrm{Id}\}$$
+$$\varepsilon_{|H} : H \to \{\pm 1\}, \qquad \ker(\varepsilon_{|H}) = H \cap \mathfrak{A}_n = \{\mathrm{Id}\}$$
 donc $\varepsilon_{|H}$ est injective, d'où $|H| = 1$, i.e. $H = \{\mathrm{Id}\}$, cas écarté. Sinon $H = \{\mathrm{Id}, u\}$ avec $u^2 = \mathrm{Id}$ : comme $H \triangleleft G$, on a $\forall g \in G$, $gug^{-1} = u$, i.e. $u \in Z(\mathfrak{S}_n) = \{\mathrm{Id}\}$, impossible.
 
 ## Sous-groupes d'indice $n$ de $\mathfrak{S}_n$
@@ -420,11 +420,11 @@ donc $\varepsilon_{|H}$ est injective, d'où $|H| = 1$, i.e. $H = \{\mathrm{Id}\
 
 **Preuve :** $|\mathfrak{S}_n / H| = n$. $\mathfrak{S}_n$ agit sur $\mathfrak{S}_n/H$ par translations à gauche, d'où un morphisme
 $$\varphi : \mathfrak{S}_n \to \mathfrak{S}(\mathfrak{S}_n/H)$$
-$\varphi$ est non trivial, donc $\operatorname{Ker} \varphi \neq \mathfrak{S}_n$; et $\operatorname{Ker} \varphi \triangleleft \mathfrak{S}_n$.
+$\varphi$ est non trivial, donc $\ker \varphi \neq \mathfrak{S}_n$; et $\ker \varphi \triangleleft \mathfrak{S}_n$.
 
-Supposons $n \geqslant 5$. D'après le théorème précédent, $\operatorname{Ker} \varphi = \{\mathrm{Id}\}$ ou $\mathfrak{A}_n$. Mais
-$$\operatorname{Ker} \varphi = \bigcap_{g \in \mathfrak{S}_n} gHg^{-1} \subset H$$
-donc si $\operatorname{Ker} \varphi = \mathfrak{A}_n$, on aurait $|\operatorname{Ker} \varphi| = \frac{n!}{2} > (n-1)! = |H|$, impossible. Donc $\operatorname{Ker} \varphi = \{\mathrm{Id}\}$ : $\varphi$ est injectif, donc bijectif (cardinalité).
+Supposons $n \geqslant 5$. D'après le théorème précédent, $\ker \varphi = \{\mathrm{Id}\}$ ou $\mathfrak{A}_n$. Mais
+$$\ker \varphi = \bigcap_{g \in \mathfrak{S}_n} gHg^{-1} \subset H$$
+donc si $\ker \varphi = \mathfrak{A}_n$, on aurait $|\ker \varphi| = \frac{n!}{2} > (n-1)! = |H|$, impossible. Donc $\ker \varphi = \{\mathrm{Id}\}$ : $\varphi$ est injectif, donc bijectif (cardinalité).
 
 Ainsi $\varphi$ réalise un isomorphisme entre $\mathfrak{S}_n$ et le groupe des permutations de l'ensemble $\mathfrak{S}_n/H$, de cardinal $n$. De plus $\varphi(H)$ est le stabilisateur de l'élément $H$ de $\mathfrak{S}_n/H$ : si $|X| = n$ et $\mathfrak{S}_n \simeq \mathfrak{S}(X)$, alors pour $x \in X$,
 $$\operatorname{Stab}(x) \simeq \mathfrak{S}_{n-1} \quad \text{car} \quad \mathfrak{S}(X - \{x\}) \simeq \mathfrak{S}_{n-1}$$
