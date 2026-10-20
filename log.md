@@ -371,3 +371,11 @@
 - 更正 08 讲 Prop (*)：原稿作 $\mathfrak{D}(\mathrm{GL}_2)\simeq\mathfrak{D}(\mathrm{SL}_2)$，与紧随的 $\mathfrak{D}(\mathrm{SL}_2)\simeq\mathbb{H}_8$ 及证明矛盾；改为 $\mathfrak{D}(\mathrm{GL}_2(\mathbb{F}_3))\simeq\mathrm{SL}_2(\mathbb{F}_3)$。
 - 更正 06 讲「exposant」定义：原稿作 pgcd，应为 ppcm（含幺元时 pgcd 恒为 1），已在原处改正并加注。
 - `代数II/概念/Jordan标准型.md` 补「与不变因子的换算（代数III 视角）」一节（$\delta_k$ 跳维数、块大小 ↔ 初等因子 ↔ 不变因子），链到 `Frobenius标准型`。
+
+## [2026-10-21] add | 代数III 习题课 08–10；理论力学 振动与线性代数准备
+
+- 代数III 习题课新增三篇：`08-对称群的生成元与An的共轭类`（2026-09-24 练习：相邻对换生成、Coxeter 关系与 von Dyck、$\mathfrak A_n$ 共轭类分裂、$\operatorname{Out}(\mathfrak S_n)$）、`09-有限Abel群的结构定理`（2026-10-12 讲义：存在性与唯一性两条主线、17 道习题的证明要点）、`10-单位群的结构`（2026-10-15 练习：$p$-进对数/指数、$p$ 奇与 $p=2$ 两种结论）；`00-总览` 接号。
+- 理论力学新增五页：`Dirac符号与对偶空间`、`共轭算符与对称算符`、`二次型与广义本征值问题`、`微振动与简正模`、`参数共振`；`_索引` 新增「振动与线性代数准备」组。
+- `轨道方程与比内公式` 补「各向同性振子」一节（椭圆中心在力心、等时性、$\omega_r=2\omega_\theta$ 与轨道闭合）。
+- 概念页补：`有限阿贝尔群结构` 加「按层计数 $b_k$ 与嵌入判据」「内射（可除）群与分裂判据」；`对称群` 加「$\mathfrak A_n$ 共轭类分裂判据」「$\operatorname{Aut}(\mathfrak S_n)$ 与 $n=6$ 例外」；`群论学习路径`、`变分法学习路径` 同步。
+- 检查：wikilinks 0 处、notation 0 处、concept_sync 0 问题、natural-chinese lint 0 命中。
