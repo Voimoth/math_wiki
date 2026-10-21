@@ -433,3 +433,9 @@
 - p.5 $\Delta m_{(2,1)}$ 展开补全为 $m_{(2,1)}(x)+m_{(2)}(x)m_{(1)}(y)+m_{(1)}(x)m_{(2)}(y)+m_{(2,1)}(y)$；`$R[\mathfrak{S}_n]=\mathbb Z[\text{Irr rep}]$`（方括号里是 Irr rep）。
 - p.6 `enveloping algebra of $\mathfrak{g}\mathfrak{l}_d(\mathbb C)=M_d(\mathbb C)$`；$T_i$ 三支公式按原图确认（第三支 $e_l\otimes e_k+(q-q^{-1})e_k\otimes e_l$，$k<l$）。
 - 用户手写的两条页内批注（关于 $m$ 与 $\Delta$、Irr rep 拼音）已删；文件现无 `[?]`。
+
+## [2026-10-21] fix | 讲座笔记全文校对（400dpi 逐带对照原图），去掉页号
+
+- 逐页分带重读 6 页原稿，修正上一版的实质错误：Bruhat 分解原稿作 $\mathrm{GL}_n(k)=BG_nB$（不是 $B\mathfrak S_nU$）；$\mathcal H_n$ 的定义量词是 $\forall b,b'\in B$；关系编号为 $(\star)$；$\mathcal H_n(q)$ 处原稿写 `relations (⋆)  p←q`（不是 `with p=q`）；$s_\lambda$ 的存在性原稿写 $\exists!$；余乘的"想法"是 $\mathbb N\times\mathbb N\hookrightarrow\mathbb N$，并补上 $\Lambda(x)\otimes\Lambda(y)=R(x,y)^{G_\infty\cdot G_\infty}$；$\Delta m_{(2,1)}$ 补回三行单项展开与四项合并（$m_{(2)}(x)m_{(1)}(y)+m_{(1)}(x)m_{(2)}(y)$）；$A\to\Lambda(x)$ 处补 $\lambda\in\mathrm{Part}_n$；Hecke 末段原稿作 "acts in $\mathbb C^d$" 且对偶对象写作 $\mathcal H_n(q)$。
+- 删去 `## p.1`…`## p.6`，改按原稿自带的小标题分节（Symmetric/GL、Bruhat、Schur-Weyl、Hopf、Symmetric functions、realization、Quantization）；补上原稿画的余结合交换图（AMScd）。
+- 用户把 `$\exists\,p$` 的 `\,` 删掉（那是 LaTeX 细空格，渲染出来像多余的空格/逗号）；按其版本保留 `$\exists p$`。
