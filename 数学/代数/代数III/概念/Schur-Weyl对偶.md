@@ -48,6 +48,7 @@ $$w\cdot(v_1\otimes\cdots\otimes v_n)=v_{w^{-1}(1)}\otimes\cdots\otimes v_{w^{-1
 
 ## 相关概念
 
+- [[表示论简史]] — Schur(1901) 与 Frobenius(1896–1900) 从两头得到同一批函数;Weyl 定名
 - [[Hopf代数]]
 - [[代数III/概念/对称群]]
 - [[代数III/概念/特征标与正交关系]]
