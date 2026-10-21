@@ -424,3 +424,12 @@
 - 用户澄清：讲座笔记应**按原稿整理**，不要把他的笔记改写成讲解稿。`笔记/讲座/2026-10-21-Rosso-Schur-Weyl与范畴化.md` 已重写为六页原稿的忠实整理（英文/法文原文、公式 LaTeX 化、[?] 保留），删去此前加进去的「一句话版本」「最小例子」「为什么重要」「术语表」等解读段落。
 - 讲解仍留在概念页 `Schur-Weyl对偶`、`Hopf代数`（概念页本就是讲解沉淀），不在讲座笔记里。
 - 检查：wikilinks 0、notation 0、concept_sync 0 问题、lint 0 命中。
+
+## [2026-10-21] fix | 讲座笔记全部 [?] 依原图与上下文还原
+
+放大原 PDF（400dpi + 局部裁切）逐处核对，四处 `[?]` 与两处批注全部定案：
+- p.1 `F_p-Sylow` → `∃ p-Sylow from any finite group $G\subset\mathfrak{S}_{|G|}$`（原稿写的是存在量词 $\exists$，不是 $\mathbb F_p$；配合 Cayley 嵌入读通）。
+- p.4 `$R(x)=\{f,\text{degré borné}\}$：若 $\alpha_1+\cdots+\alpha_n>d$ 则 $x^\alpha=0$`；`$G_\infty=\bigcup_nG_n$`（原稿把 $\mathfrak S_n$ 记作 $G_n$，此处按标准记号写成 $\mathfrak{S}_\infty=\bigcup_n\mathfrak{S}_n$），故 $\Lambda(x)=R(x)^{\mathfrak{S}_\infty}$。
+- p.5 $\Delta m_{(2,1)}$ 展开补全为 $m_{(2,1)}(x)+m_{(2)}(x)m_{(1)}(y)+m_{(1)}(x)m_{(2)}(y)+m_{(2,1)}(y)$；`$R[\mathfrak{S}_n]=\mathbb Z[\text{Irr rep}]$`（方括号里是 Irr rep）。
+- p.6 `enveloping algebra of $\mathfrak{g}\mathfrak{l}_d(\mathbb C)=M_d(\mathbb C)$`；$T_i$ 三支公式按原图确认（第三支 $e_l\otimes e_k+(q-q^{-1})e_k\otimes e_l$，$k<l$）。
+- 用户手写的两条页内批注（关于 $m$ 与 $\Delta$、Irr rep 拼音）已删；文件现无 `[?]`。

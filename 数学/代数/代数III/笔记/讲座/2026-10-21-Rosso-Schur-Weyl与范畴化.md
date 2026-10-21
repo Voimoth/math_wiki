@@ -1,11 +1,17 @@
 ---
-title: Rosso 讲座笔记 2026-10-21：对称群与一般线性群的交互
-created: 2026-10-21
-updated: 2026-10-21
-type: notes
-tags: [group-theory, representation, lecture]
-sources: [Marc Rosso 2026-10-21 讲座手写笔记 6 页]
+id: 2026-10-21-Rosso-Schur-Weyl与范畴化
+aliases: []
+tags:
+- group-theory
+- representation
+- lecture
 confidence: medium
+created: "2026-10-21"
+sources:
+- Marc Rosso 2026-10-21 讲座手写笔记 6 页
+title: Rosso 讲座笔记 2026-10-21：对称群与一般线性群的交互
+type: notes
+updated: "2026-10-21"
 ---
 
 # Marc Rosso：Interplays between symmetric groups and general linear groups
@@ -14,7 +20,7 @@ confidence: medium
 > 讲者：Marc Rosso（Université Paris Cité）
 > 时间：2026-10-21（三）16:00–17:00，五教 5106
 
-以下按原稿六页整理，保留原稿的写法与记号；辨认不清处标 `[?]`。
+以下按原稿六页整理，保留原稿的写法与记号。原稿把 $\mathfrak{S}_n$ 记作 $G_n$（$G_\infty=\bigcup_nG_n$），以下统一写成 $\mathfrak{S}_n$、$\mathfrak{S}_\infty$。
 
 ## p.1
 
@@ -22,7 +28,7 @@ Symmetric group $\mathfrak{S}_n$ ; General linear group $\mathrm{GL}_n(k)$, $k$ 
 $$B=\left\{\begin{pmatrix}*&*\\&*\end{pmatrix}\right\},\qquad U=\left\{\begin{pmatrix}1&*\\&1\end{pmatrix}\right\}.$$
 $\mathfrak{S}_n\subset \mathrm{GL}_n(k)$ as permutation matrices.
 
-For $k=\mathbb F_p$ — conséquences : $\mathbb F_p$-Sylow [?] from any finite group $G\subset \mathrm{GL}_n(k)$.
+For $k=\mathbb F_p$ — conséquences : $\exists\,p$-Sylow from any finite group $G\subset \mathfrak{S}_{|G|}$.
 
 Bruhat decomposition :
 $$\mathrm{GL}_n(k)=B\,\mathfrak{S}_n\,U .$$
@@ -86,12 +92,12 @@ Formal power series $f(x)=\sum_{\text{finite support}}c_\lambda x^\lambda$.
 
 ## p.4
 
-$R(x)=\{f \text{ de degré borné}\}$ — $[\alpha_1+\cdots+\alpha_n>d\Rightarrow x^\alpha=0]$ [?].
+$R(x)=\{f,\ \text{degré borné}\}$ : if $\alpha_1+\cdots+\alpha_n>d$, $x^\alpha=0$.
 
-from an algebra on which $\mathfrak{S}_n$ acts : $\mathfrak{S}_n=\bigcup \mathfrak{S}_n$, $\mathfrak{S}_1\subset\mathfrak{S}_2\subset\cdots\subset\mathfrak{S}_n$ [?].
+from an algebra on which $\mathfrak{S}_\infty$ acts : $\mathfrak{S}_\infty=\bigcup_n\mathfrak{S}_n$, $\mathfrak{S}_1\subset\mathfrak{S}_2\subset\cdots\subset\mathfrak{S}_n$.
 
 Then
-$$\Lambda(x):=R(x)^{\mathfrak{S}_n}=\Bigl\{f=\sum c_\alpha x^\alpha \ \text{s.t.}\ c_\alpha=c_\beta\ \text{if}\ \beta=w(\alpha),\ w\in\mathfrak{S}_n\Bigr\}.$$
+$$\Lambda(x):=R(x)^{\mathfrak{S}_\infty}=\Bigl\{f=\sum c_\alpha x^\alpha \ \text{s.t.}\ c_\alpha=c_\beta\ \text{if}\ \beta=w(\alpha),\ w\in\mathfrak{S}_\infty\Bigr\}.$$
 
 ex. $\lambda=(\lambda_1\ge\lambda_2\ge\cdots\ge\lambda_n\ge0)$ :
 $$m_\lambda=\sum_{\alpha\sim\lambda}x^\alpha\qquad\text{symmetric monomial},$$
@@ -109,18 +115,17 @@ $\Lambda(x)\to\Lambda(x,y)\to\Lambda(x)\otimes\Lambda(y)$.
 
 ## p.5
 
-$$\Delta m_{(2,1)}(x,y)=x_1^2x_2+x_1x_2^2+x_1^2y_1+x_1y_1^2+x_1^2y_2+x_1y_2^2+\cdots$$
-（原稿此处续写为若干项之和，字迹辨认不全）[?]
+$$\Delta m_{(2,1)}(x,y)=m_{(2,1)}(x)+m_{(2)}(x)m_{(1)}(y)+m_{(1)}(x)m_{(2)}(y)+m_{(2,1)}(y)$$
 $$\Delta m_\lambda(x)=\sum_{\mu\cup\nu=\lambda}m_\mu\otimes m_\nu .$$
 
 Thm. On the basis given by Schur fcts $s_\lambda$ :
 $$s_\lambda s_\mu=\sum_\nu c_{\lambda\mu}^\nu s_\nu,\qquad \Delta s_\nu=\sum_{\lambda,\mu}c_{\lambda\mu}^\nu\,s_\lambda\otimes s_\mu$$
 — some structure coeff for $\Delta$ and mult. ; $c_{\lambda\mu}^\nu\in\mathbb N$.
 
-On $\Lambda(x)$ there is an inner product of $s_\lambda$ o.n.b. ; $m$ et $\Delta$ adjoints [?].
+On $\Lambda(x)$ there is an inner product of $s_\lambda$ o.n.b. ; $m$ et $\Delta$ adjoints.
 
 A realization of $\Lambda(x)$ : consider the chain $\mathfrak{S}_1\subset\mathfrak{S}_2\subset\cdots\subset\mathfrak{S}_n$, $\mathfrak{S}_i\times\mathfrak{S}_j\hookrightarrow\mathfrak{S}_{i+j}$.
-Set $R[\mathfrak{S}_n]=\mathbb Z[\text{?}]$ [?] (representation ring).
+Call $R[\mathfrak{S}_n]=\mathbb Z[\text{Irr rep}]$ (representation ring).
 2 operations : Restriction
 $$R[\mathfrak{S}_{i+j}]\to R[\mathfrak{S}_i\times\mathfrak{S}_j]=R[\mathfrak{S}_i]\otimes R[\mathfrak{S}_j],$$
 Induction
@@ -138,10 +143,10 @@ $$\text{repn } \mathfrak{S}_n\longmapsto e_n=\sum_{i_1<\cdots<i_n}x_{i_1}\cdots 
 Quantization. Come back to Hecke alg $\mathcal H_q(\mathfrak{S}_n)$.
 It acts on each $(\mathbb C^d)^{\otimes n}$ as follows. $s_i=(i\ i+1)$, it acts only on positions $i,i+1$ :
 $$v_1\otimes\cdots\otimes v_i\otimes v_{i+1}\otimes\cdots\otimes v_n\longmapsto v_1\otimes\cdots\otimes v_{i+1}\otimes v_i\otimes\cdots\otimes v_n .$$
-$$T_i(e_k\otimes e_l)=\begin{cases}q\,e_k\otimes e_l,&k=l,\\ e_l\otimes e_k,&k>l,\\ e_l\otimes e_k+(q-q^{-1})\,e_k\otimes e_l,&k<l.\end{cases}\quad[?]$$
+$$T_i(e_k\otimes e_l)=\begin{cases}q\,e_k\otimes e_l,&k=l,\\ e_l\otimes e_k,&k>l,\\ e_l\otimes e_k+(q-q^{-1})\,e_k\otimes e_l,&k<l.\end{cases}$$
 Introduce $(e_1,\dots,e_d)$ basis of $\mathbb C^d$.
 
-There is a "deformation" or "quantization" of $\mathrm{GL}_d(\mathbb C)$ or rather of its enveloping algebra $\mathfrak{gl}_d$ (原稿此处有一处涂改：$M_d(\mathbb C)$ [?]) which has a Hopf alg structure, which acts on $\mathbb C^d$ as in classical situation but due to non-trivial $\Delta:V_q\to V_q\otimes V_q$ provides a Schur-Weyl duality with $\mathcal H_q(\mathfrak{S}_n)$.
+There is a "deformation" or "quantization" of $\mathrm{GL}_d(\mathbb C)$ or rather of its enveloping algebra of $\mathfrak{gl}_d(\mathbb C)=M_d(\mathbb C)$, which has a Hopf alg structure, which acts on $\mathbb C^d$ as in classical situation but due to non-trivial $\Delta:V_q\to V_q\otimes V_q$ provides a Schur-Weyl duality with $\mathcal H_q(\mathfrak{S}_n)$.
 
 ## 相关概念
 
