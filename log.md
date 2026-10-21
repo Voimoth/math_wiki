@@ -457,6 +457,6 @@
 ## [2026-10-21] refactor | 全库交换图：`\begin{CD}` 一律改成 `array`（推翻 2026-09 的「本库规范用 AMScd」）
 
 - 12 个文件、18 处 amscd `CD` 环境全部换成 `\begin{array}{c...c}` + `\xrightarrow`/`\xleftarrow`/`\big\downarrow`/`\big\uparrow`/`\Big\Vert`/`=`。涉及：代数 I 概念（群的扩张、自由群）、习题课 08/12/25、正课 23/25；代数 III 概念（同构定理）、习题课 07、正课 01/04/05。
-- 理由：`CD` 要 amscd 宏包，pandoc 的 LaTeX 模板与 Obsidian 默认 MathJax 包集都不带 —— 这些页面在 Obsidian 里一直是渲染报错的，只是此前没编译过没被发现。
+- 理由：`CD` 要 amscd 宏包，而 pandoc 的 LaTeX 模板不带 → 编不出 PDF（`Environment CD undefined`）。**更正上一版的说法**：Obsidian 的 MathJax 是 full bundle、确实带 amsCd（2026-10-03 已实证），CD 在 Obsidian 里一直能正常渲染，所以这不是「Obsidian 报错」而是「单端可用」—— array 是 Obsidian 与 pandoc 的双端交集。已知代价：MathJax 下 array 的竖箭头较短、不如 amscd 的连线条伸展。
 - 约定：竖直箭头标签按 amscd 位置习惯放（`@V{lab}VV` 标注在左 → `{\scriptstyle lab}\big\downarrow`，`@VV{lab}V` 标注在右 → `\big\downarrow{\scriptstyle lab}`）；callout 内的图每行保留 `> ` 前缀。
 - 验证：12/12 公式引擎校验 0 失败、12/12 pandoc 编译通过、6 个代表图渲染后逐个看过箭头方向与标签位置。
