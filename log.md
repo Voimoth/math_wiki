@@ -446,3 +446,17 @@
 - 格式对齐正课笔记 01–14：frontmatter 同款（title 前缀「代数III(群论) · 讲座」、tags 含 algebre）、正文按 `## N.` 编号分节、定义/命题/定理进 `> [!note]` callout、推导用 `**Détails.**` 正文、结尾 `## 相关概念`。
 - 全库排查同类误读：其它页面的 $G_x$（稳定子）、$G_M$（半直积）、$G_i$（正合列）都是合法用法，无「花体 S 记作 G」的残留。
 - 检查：notation 0、wikilinks 0、concept_sync 0 问题、lint 0 命中。
+
+## [2026-10-21] fix | 讲座笔记能编译了：pmatrix 花括号错乱 + CD 环境改 array
+
+- 用户报「编译不了，左右大括号没对齐」。真因两处：①三处对角矩阵被 OCR 写成 `\begin{pmatrix}t_1&&{ \\& } ;\ddots&...\end{pmatrix}`（`\\&` 与 `;` 被塞进花括号组），xelatex 报 `! Missing } inserted`；②Hopf 交换图用了 amscd 的 `\begin{CD}`，pandoc 默认模板无此宏包、Obsidian 默认包集也不带。
+- 三处对角矩阵改回 `\begin{pmatrix}t_1&&\\&\ddots&\\&&t_n\end{pmatrix}`（原稿前两处确为 $t_n$、第三处为 $t_d$，照抄）；Hopf 图改为 `\begin{array}{ccc}` + `\xrightarrow` + `\big\downarrow`。行内两处对角矩阵改 `\left(\begin{smallmatrix}...\end{smallmatrix}\right)`，不再撑开行距。
+- 验证：KaTeX 136 条公式 0 失败、MathJax 0 失败、pandoc→xelatex 编译通过、渲染图逐页看过。
+- 编译成品放在 `/mnt/e/书籍/代数/代数III/讲座/2026-10-21-Rosso-Schur-Weyl讲座笔记-整理版.pdf`（vault 内不放 PDF）。
+
+## [2026-10-21] refactor | 全库交换图：`\begin{CD}` 一律改成 `array`（推翻 2026-09 的「本库规范用 AMScd」）
+
+- 12 个文件、18 处 amscd `CD` 环境全部换成 `\begin{array}{c...c}` + `\xrightarrow`/`\xleftarrow`/`\big\downarrow`/`\big\uparrow`/`\Big\Vert`/`=`。涉及：代数 I 概念（群的扩张、自由群）、习题课 08/12/25、正课 23/25；代数 III 概念（同构定理）、习题课 07、正课 01/04/05。
+- 理由：`CD` 要 amscd 宏包，pandoc 的 LaTeX 模板与 Obsidian 默认 MathJax 包集都不带 —— 这些页面在 Obsidian 里一直是渲染报错的，只是此前没编译过没被发现。
+- 约定：竖直箭头标签按 amscd 位置习惯放（`@V{lab}VV` 标注在左 → `{\scriptstyle lab}\big\downarrow`，`@VV{lab}V` 标注在右 → `\big\downarrow{\scriptstyle lab}`）；callout 内的图每行保留 `> ` 前缀。
+- 验证：12/12 公式引擎校验 0 失败、12/12 pandoc 编译通过、6 个代表图渲染后逐个看过箭头方向与标签位置。
