@@ -14,12 +14,12 @@ L'espace $(\Omega,\mathcal{F},\mathbb{P})$ modélise notre connaissance de l'exp
 
 ## Probabilité conditionnelle
 
-> [!note] Déf. 1.1
+> [!note] Définition 1.1
 > Soit $A\in\mathcal{F}$ tel que $\mathbb{P}(A)>0$. Pour tout $B\in\mathcal{F}$, on pose
 > $$\mathbb{P}(B\mid A) = \frac{\mathbb{P}(B\cap A)}{\mathbb{P}(A)}.$$
 > Le nombre $\mathbb{P}(B\mid A)$ est appelé probabilité conditionnelle de $B$ sachant $A$.
 
-> [!note] Thm. 1.2
+> [!note] Théorème 1.2
 > Pour $A\in\mathcal{F}$ tel que $\mathbb{P}(A)>0$, l'application
 > $$\mathbb{P}_A : \mathcal{F}\to[0,1],\qquad B\mapsto\mathbb{P}(B\mid A)=\frac{\mathbb{P}(B\cap A)}{\mathbb{P}(A)}$$
 > est une mesure de probabilité sur $(\Omega,\mathcal{F})$.
@@ -36,7 +36,7 @@ Donc $\mathbb{P}_A$ est $\sigma$-additive.
 
 (A2) $\mathbb{P}_A(\Omega) = \frac{\mathbb{P}(\Omega\cap A)}{\mathbb{P}(A)} = \frac{\mathbb{P}(A)}{\mathbb{P}(A)} = 1$ car $A\subset\Omega$. $\#$
 
-> [!info] Rq. 1.3
+> [!info] Remarque 1.3
 >
 > 1. En fait $\mathbb{P}_A(A)=1$, c'est-à-dire $\mathbb{P}(A\mid A)=1$. On a aussi $\mathbb{P}(A^c\mid A)=0$. On appelle $\mathbb{P}_A$ la probabilité conditionnelle sachant $A$.
 > 2. Soit $B\in\mathcal{F}$ ; alors $\mathbb{P}(B^c\mid A) = 1-\mathbb{P}(B\mid A)$.
@@ -46,7 +46,7 @@ Donc $\mathbb{P}_A$ est $\sigma$-additive.
 
 ## Formule des probabilités composées
 
-> [!info] Cor. 2.1 (formule des probabilités composées)
+> [!info] Corollaire 2.1 (formule des probabilités composées)
 > Soient $n\ge2$ et $A_1,\dots,A_n\in\mathcal{F}$ tels que $\mathbb{P}(A_1\cap\dots\cap A_{n-1})>0$. Alors
 > $$\mathbb{P}(A_1\cap\dots\cap A_n) = \mathbb{P}(A_1)\cdot\prod_{k=2}^{n}\mathbb{P}\left(A_k \mid \bigcap_{j=1}^{k-1} A_j\right).$$
 
@@ -57,17 +57,17 @@ La formule des probabilités composées permet de calculer la probabilité que $
 
 ## Système quasi-complet et formule des probabilités totales
 
-> [!note] Déf. 3.1 (système quasi-complet d'événements)
+> [!note] Définition 3.1 (système quasi-complet d'événements)
 > Une famille au plus dénombrable $(A_i)_{i\in I}$ est appelée un système quasi-complet d'événements si
 > (i) $\forall i\in I,\ A_i\in\mathcal{F}$ ;
 > (ii) $\forall i\neq j,\ A_i\cap A_j=\varnothing$ (deux à deux disjoints) ;
 > (iii) $\sum_{i\in I}\mathbb{P}(A_i) = 1$.
 
-> [!info] Prop. 3.2 (formule des probabilités totales)
+> [!info] Proposition 3.2 (formule des probabilités totales)
 > Si $(A_i)_{i\in I}$ est un système quasi-complet d'événements tel que $\mathbb{P}(A_i)>0$ pour tout $i\in I$, alors pour tout $B\in\mathcal{F}$,
 > $$\mathbb{P}(B) = \sum_{i\in I}\mathbb{P}(B\mid A_i)\cdot\mathbb{P}(A_i).$$
 
-> [!info] Prop. 3.3 (formule de Bayes)
+> [!info] Proposition 3.3 (formule de Bayes)
 > Soient $A,B\in\mathcal{F}$ tels que $\mathbb{P}(A)>0$ et $\mathbb{P}(B)>0$. Alors
 > $$\mathbb{P}(A\mid B) = \mathbb{P}(B\mid A)\frac{\mathbb{P}(A)}{\mathbb{P}(B)}.$$
 

@@ -12,7 +12,7 @@ confidence: medium
 
 ## 20.1 Motivation
 
-Soient $X_1,\dots,X_n,\dots$ des v.a. i.i.d. avec $X_j\in L^1(\Omega)$.
+Soient $X_1,\dots,X_n,\dots$ des variables aléatoires i.i.d. avec $X_j\in L^1(\Omega)$.
 
 - Loi des grands nombres :
 $$\frac{X_1+\dots+X_n}{n}\ \xrightarrow[n\to+\infty]{?}\ \mathbb{E}[X_1],$$
@@ -23,7 +23,7 @@ $$\frac{1}{\sqrt n}\sum_{j=1}^n\frac{X_j-\mathbb{E}[X_j]}{\sigma(X_j)}\ \xrighta
 
 ## 20.2 Covariance
 
-> [!note] Déf. 20.1
+> [!note] Définition 20.1
 > Soient $X,Y$ deux variables aléatoires réelles d'espérance finie. Si la variable
 > $$(X-\mathbb{E}[X])\cdot(Y-\mathbb{E}[Y])\in L^1(\Omega),$$
 > on appelle covariance de $X$ et $Y$ (on tient compte du couple $(X,Y)$) le nombre
@@ -34,13 +34,13 @@ $$\operatorname{Cov}(X,Y)=\mathbb{E}[XY]=\langle X,Y\rangle.$$
 Si de plus $\sigma(X)=\sigma(Y)=1$, alors
 $$\operatorname{Cov}(X,Y)=\cos\theta(X,Y).$$
 
-> [!info] Rq. 20.2
+> [!info] Remarque 20.2
 > Si $\operatorname{Cov}(X,Y)=0$, on dit que $X$ et $Y$ sont non corrélées.
 > Si $X$ et $Y$ sont indépendantes, alors $\operatorname{Cov}(X,Y)=0$.
 > Réciproquement, « non corrélées » n'implique pas l'indépendance.
 
 > [!example] Exemple 20.3
-> On considère $\Omega=\{-1,0,1\}$ et une v.a. $X$ sur $\Omega$ telle que
+> On considère $\Omega=\{-1,0,1\}$ et une variable aléatoire $X$ sur $\Omega$ telle que
 > $$\mathbb{P}(X=-1)=\mathbb{P}(X=0)=\mathbb{P}(X=1)=\frac13.$$
 > On pose $Y=X^2\in\{0,1\}$, d'où $\mathbb{P}(Y=0)=\frac13$ et $\mathbb{P}(Y=1)=\frac23$.
 > Bien sûr, $X$ et $Y$ ne sont pas indépendantes. Mais
@@ -48,8 +48,8 @@ $$\operatorname{Cov}(X,Y)=\cos\theta(X,Y).$$
 
 ## 20.3 Variance d'une somme
 
-> [!info] Prop. 20.4
-> Soient $X_1,\dots,X_n$ des v.a. de $L^2(\Omega)$. Alors
+> [!info] Proposition 20.4
+> Soient $X_1,\dots,X_n$ des variables aléatoires de $L^2(\Omega)$. Alors
 > $$\operatorname{Var}\left(\sum_{k=1}^nX_k\right)=\sum_{k=1}^n\operatorname{Var}(X_k)+2\sum_{1\le i<j\le n}\operatorname{Cov}(X_i,X_j).$$
 > En particulier, si $X_i$ et $X_j$ sont non corrélées pour tous $i\ne j$, alors
 > $$\operatorname{Var}\left(\sum_{k=1}^nX_k\right)=\sum_{k=1}^n\operatorname{Var}(X_k).$$
@@ -96,14 +96,14 @@ $$=\sum_{k=1}^n\operatorname{Var}(X_k)+2\sum_{1\le i<j\le n}\operatorname{Cov}(X
 
 ## 20.5 Inégalité de Markov
 
-> [!note] Thm. 20.6 (Inégalité de Markov)
-> Soit $X$ une v.a. d'espérance finie. Pour tout $\lambda>0$,
+> [!note] Théorème 20.6 (Inégalité de Markov)
+> Soit $X$ une variable aléatoire d'espérance finie. Pour tout $\lambda>0$,
 > $$\mathbb{P}(|X|\ge\lambda)\le\frac1\lambda\,\mathbb{E}[|X|].$$
 
 > [!info] Interprétation
 > Si $X$ est positive, $0<\mathbb{E}[X]<+\infty$ et $c>0$, alors
 > $$\mathbb{P}(X\ge c\,\mathbb{E}[X])\le\frac1c.$$
-> Autrement dit, une v.a. positive dépasse rarement son espérance par un facteur grand.
+> Autrement dit, une variable aléatoire positive dépasse rarement son espérance par un facteur grand.
 
 **Preuve :** Appliquer l'inégalité de Markov à $Y=\frac{X}{\mathbb{E}[X]}$ :
 $$\mathbb{P}\bigl(X\ge c\,\mathbb{E}[X]\bigr)=\mathbb{P}(Y\ge c)\le\frac{\mathbb{E}[Y]}{c}=\frac1c.\qquad\#$$

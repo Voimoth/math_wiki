@@ -12,7 +12,7 @@ confidence: medium
 
 ## 定义
 
-> [!note] Déf.
+> [!note] 定义
 > 设 $\mu:[a,b]\to\mathbb{R}$ 单调增。取分划 $\sigma:a=x_0<x_1<\dots<x_n=b$，记 $m_i=\inf_{[x_{i-1},x_i]}f$、$M_i=\sup_{[x_{i-1},x_i]}f$，把第 $i$ 段的"长度"取为 $\mu(x_i)-\mu(x_{i-1})$，定义上、下和
 > $$\overline S_\sigma(f)=\sum_{i=1}^n M_i\big(\mu(x_i)-\mu(x_{i-1})\big),\qquad
 > \underline S_\sigma(f)=\sum_{i=1}^n m_i\big(\mu(x_i)-\mu(x_{i-1})\big).$$

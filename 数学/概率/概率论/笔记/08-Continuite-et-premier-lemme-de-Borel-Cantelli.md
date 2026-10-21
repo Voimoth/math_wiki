@@ -14,7 +14,7 @@ La $\sigma$-additivité de $\mathbb{P}$ entraîne sa continuité le long des sui
 
 ## Continuité d'une probabilité
 
-> [!info] Prop. 1.1 (continuité croissante)
+> [!info] Proposition 1.1 (continuité croissante)
 > Soit $(A_n)_{n\in\mathbb{N}}$ une suite croissante d'événements ($A_n\subset A_{n+1}$). Alors
 > $$\mathbb{P}\left(\bigcup_{n\ge0} A_n\right) = \lim_{n\to+\infty}\uparrow\mathbb{P}(A_n).$$
 
@@ -23,13 +23,13 @@ $$\mathbb{P}\left(\bigcup_{k\ge0} A_k\right) = \mathbb{P}(A_0) + \sum_{k\ge1}\ma
 et les sommes partielles valent
 $$\mathbb{P}(A_n) = \mathbb{P}(A_0) + \sum_{k=1}^{n}\mathbb{P}(A_k\setminus A_{k-1}) \xrightarrow{n\to+\infty} \mathbb{P}\left(\bigcup_{k\ge0} A_k\right).$$
 
-> [!info] Prop. 1.2 (continuité décroissante)
+> [!info] Proposition 1.2 (continuité décroissante)
 > Soit $(A_n)_{n\in\mathbb{N}}$ une suite décroissante d'événements. Alors
 > $$\mathbb{P}\left(\bigcap_{n\ge0} A_n\right) = \lim_{n\to+\infty}\downarrow\mathbb{P}(A_n).$$
 
 **Preuve :** Si $(A_n)$ est décroissante, $(A_n^c)$ est croissante ; la continuité croissante appliquée à $(A_n^c)$ donne le résultat en passant au complémentaire.
 
-> [!info] Rq. 1.3
+> [!info] Remarque 1.3
 > Pour une suite d'événements $(A_n)_{n\in\mathbb{N}}$ quelconque, on peut écrire
 > $$\mathbb{P}\left(\bigcup_{n\in\mathbb{N}} A_n\right) = \lim_{N\to\infty}\uparrow\mathbb{P}\left(\bigcup_{n=1}^{N} A_n\right),\qquad \mathbb{P}\left(\bigcap_{n\in\mathbb{N}} A_n\right) = \lim_{N\to\infty}\downarrow\mathbb{P}\left(\bigcap_{n=1}^{N} A_n\right),$$
 > car $\left(\bigcup_{n\le N} A_n\right)_N$ est croissante et $\left(\bigcap_{n\le N} A_n\right)_N$ est décroissante.
@@ -40,7 +40,7 @@ $$\mathbb{P}(A_n) = \mathbb{P}(A_0) + \sum_{k=1}^{n}\mathbb{P}(A_k\setminus A_{k
 > Soit $(A_n)_{n\in\mathbb{N}}$ une suite d'événements telle que $\displaystyle\sum_{n\ge0}\mathbb{P}(A_n) < +\infty$. Alors
 > $$\mathbb{P}\left(\bigcap_{k\ge1}\left(\bigcup_{n\ge k} A_n\right)\right) = 0.$$
 
-> [!info] Rq. 2.2
+> [!info] Remarque 2.2
 > L'événement $\bigcap_{k\ge1}\left(\bigcup_{n\ge k} A_n\right)$ est réalisé si et seulement si un nombre infini des événements $A_n$ sont réalisés. On le note
 > $$\limsup_{n\to\infty} A_n = \bigcap_{k\ge1}\left(\bigcup_{n\ge k} A_n\right),$$
 > à comparer avec $\limsup_{n\to\infty} a_n = \inf_{k\ge1}\left(\sup_{n\ge k} a_n\right)$ pour une suite réelle.
@@ -53,14 +53,14 @@ Donc
 $$\mathbb{P}\left(\bigcap_{k\ge1} B_k\right) = \lim_{k\to\infty}\sum_{n\ge k}\mathbb{P}(A_n) = 0,$$
 car la série $\sum_{n\ge0}\mathbb{P}(A_n)$ converge, donc son reste tend vers $0$. $\#$
 
-> [!info] Rq. 2.3 (interprétation probabiliste)
+> [!info] Remarque 2.3 (interprétation probabiliste)
 > Si les probabilités d'une suite d'événements décroissent assez vite, alors p.s. seul un nombre fini des éléments sont réalisés :
 > $$\mathbb{P}\bigl\{\omega \mid \omega\in A_n \text{ pour seulement un nombre fini de } n\in\mathbb{N}\bigr\} = 1.$$
 
 > [!example] Exemple 2.4
 > Un joueur joue une suite infinie de jeux telle que, pour tout $n\ge1$, la probabilité qu'il gagne au $n$-ième jeu soit $\frac{1}{2^n}$ (par exemple, on lance $n$ pièces au $n$-ième jeu et le joueur gagne seulement si toutes les pièces tombent sur «face»). Alors presque sûrement le joueur ne gagne qu'un nombre fini de jeux : p.s. il existe $k\in\mathbb{N}^*$ tel qu'il perde à tous les jeux à partir du $k$-ième jeu.
 
-> [!info] Rq. 2.5
+> [!info] Remarque 2.5
 > Les résultats de la suite infinie des jeux ne sont pas nécessairement indépendants : le premier lemme de Borel–Cantelli ne requiert aucune hypothèse d'indépendance.
 
 ## Voir aussi

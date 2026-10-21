@@ -12,19 +12,19 @@ confidence: medium
 
 ## Définition et premières propriétés
 
-> [!note] Déf. 21.1
+> [!note] Définition 21.1
 > Soit $(\Omega,\mathcal{F},\mathbb{P})$ un espace probabilisé et $X:\Omega\to\mathbb{N}$ une variable aléatoire. La **fonction génératrice** de $X$ est l'application $G_X:[-1,1]\to\mathbb{R}$ définie par
 > $$G_X(t):=\mathbb{E}[t^X]=\sum_{n=0}^{+\infty}t^n\,\mathbb{P}(X=n).$$
 
-> [!info] Rq.
+> [!info] Remarque
 > Pour $t\in[-1,1]$, la série $\sum_{n\ge0}t^n\mathbb{P}(X=n)$ converge absolument et l'on a $|G_X(t)|\le1$.
 
-> [!info] Rq.
+> [!info] Remarque
 > La fonction $G_X$ est analytique, de rayon de convergence $R\ge1$.
 
 ## La fonction génératrice détermine la loi
 
-> [!info] Prop. 21.2
+> [!info] Proposition 21.2
 > Pour tout $k\in\mathbb{N}$, on a
 > $$\mathbb{P}(X=k)=\frac{G_X^{(k)}(0)}{k!}.$$
 
@@ -43,7 +43,7 @@ $$\sum_{n=1}^{N}a_n(1+t+\dots+t^{n-1})\xrightarrow[t\to1^-]{}\sum_{n=1}^{N}na_n\
 donc la série $\sum_{n\ge1}na_n$ converge.
 - Réciproquement, si $\sum_{n\ge1}na_n$ converge, la fonction $g(t)=\frac{f(t)-f(1)}{t-1}=\sum_{n\ge1}a_n(1+t+\dots+t^{n-1})$ est croissante et majorée par $\sum_{n\ge1}na_n<+\infty$ (car $1+t+\dots+t^{n-1}\le n$ pour $t\le1$). Donc $\lim_{t\to1^-}g(t)$ existe et est finie, autrement dit $f$ est dérivable en $t=1$. $\#$
 
-> [!info] Prop. 21.4
+> [!info] Proposition 21.4
 > Soit $X$ une variable aléatoire à valeurs dans $\mathbb{N}$.
 > 1) $X$ est d'espérance finie $\iff$ $G_X$ est dérivable en $t=1$ ; on a alors $\mathbb{E}[X]=G_X'(1)$.
 > 2) $X$ possède un moment d'ordre $2$ $\iff$ $G_X$ est deux fois dérivable en $t=1$ ; on a alors $\mathbb{E}[X(X-1)]=G_X''(1)$.
@@ -58,7 +58,7 @@ $$G_X'(t)=\sum_{n\ge1}nt^{n-1}\mathbb{P}(X=n),\qquad G_X''(t)=\sum_{n\ge2}n(n-1)
 
 ## Fonction génératrice d'une somme de variables indépendantes
 
-> [!info] Prop. 21.5
+> [!info] Proposition 21.5
 > 1) Soient $X$ et $Y$ deux variables aléatoires indépendantes à valeurs dans $\mathbb{N}$. Alors, pour tout réel $t$ tel que $G_X(t)$ et $G_Y(t)$ soient définis, $G_{X+Y}(t)$ est défini et
 > $$G_{X+Y}(t)=G_X(t)\,G_Y(t).$$
 > 2) Plus généralement, si $X_1,\dots,X_n$ sont indépendantes et $X=X_1+\dots+X_n$, alors
@@ -74,7 +74,7 @@ donc $G_{X+Y}(t)$ existe et vaut $G_X(t)G_Y(t)$. 2) Le même raisonnement. $\#$
 > Soit $X\sim\mathrm{Ber}(p)$ et $q=1-p$. Alors $G_X(t)=\mathbb{E}[t^X]=q+pt$, $G_X'(t)=p=\mathbb{E}[X]$, $G_X''(t)=0$, donc $\mathrm{Var}(X)=pq$.
 
 > [!example] Exemple 21.7 (loi binomiale)
-> Soit $X\sim B(n,p)$. Comme $X\overset{\mathcal{L}}{=}X_1+\dots+X_n$ avec $X_i\sim\mathrm{Ber}(p)$ indépendantes, la Prop. 21.5 donne $G_X(t)=(q+pt)^n$. Alors $G_X'(t)=np(q+pt)^{n-1}$, $G_X''(t)=n(n-1)p^2(q+pt)^{n-2}$, et
+> Soit $X\sim B(n,p)$. Comme $X\overset{\mathcal{L}}{=}X_1+\dots+X_n$ avec $X_i\sim\mathrm{Ber}(p)$ indépendantes, la Proposition 21.5 donne $G_X(t)=(q+pt)^n$. Alors $G_X'(t)=np(q+pt)^{n-1}$, $G_X''(t)=n(n-1)p^2(q+pt)^{n-2}$, et
 > $$\mathrm{Var}(X)=n(n-1)p^2+np-n^2p^2=npq.$$
 
 > [!example] Exemple 21.8 (loi géométrique)
@@ -85,7 +85,7 @@ donc $G_{X+Y}(t)$ existe et vaut $G_X(t)G_Y(t)$. 2) Le même raisonnement. $\#$
 > [!example] Exemple 21.9 (loi de Poisson)
 > Soit $X\sim\mathcal{P}(\lambda)$. Alors
 > $$G_X(t)=\sum_{n=0}^{+\infty}t^n\,\mathrm{e}^{-\lambda}\frac{\lambda^n}{n!}=\mathrm{e}^{-\lambda}\mathrm{e}^{\lambda t}=\mathrm{e}^{\lambda(t-1)}.$$
-> On en déduit $G_X'(t)=\lambda \mathrm{e}^{\lambda(t-1)}$, donc $\mathbb{E}[X]=G_X'(1)=\lambda$, puis $G_X''(t)=\lambda^2\mathrm{e}^{\lambda(t-1)}$ et $\mathrm{Var}(X)=\lambda^2+\lambda-\lambda^2=\lambda$. De plus, si $X_j\sim\mathcal{P}(\lambda_j)$ ($j=1,\dots,n$) sont indépendantes et $X=\sum_{j=1}^nX_j$, alors la Prop. 21.5 donne $G_X(t)=\mathrm{e}^{\lambda(t-1)}$ avec $\lambda=\lambda_1+\dots+\lambda_n$, d'où $X\sim\mathcal{P}(\lambda)$.
+> On en déduit $G_X'(t)=\lambda \mathrm{e}^{\lambda(t-1)}$, donc $\mathbb{E}[X]=G_X'(1)=\lambda$, puis $G_X''(t)=\lambda^2\mathrm{e}^{\lambda(t-1)}$ et $\mathrm{Var}(X)=\lambda^2+\lambda-\lambda^2=\lambda$. De plus, si $X_j\sim\mathcal{P}(\lambda_j)$ ($j=1,\dots,n$) sont indépendantes et $X=\sum_{j=1}^nX_j$, alors la Proposition 21.5 donne $G_X(t)=\mathrm{e}^{\lambda(t-1)}$ avec $\lambda=\lambda_1+\dots+\lambda_n$, d'où $X\sim\mathcal{P}(\lambda)$.
 
 ## Voir aussi
 - [[fonction-generatrice]]

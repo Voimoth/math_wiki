@@ -12,7 +12,7 @@ confidence: high
 
 只讨论实变量的实值函数列（$[a,b]$ 上的函数 $a_n,b_n$）。
 
-> [!note] Thm.（Abel / Dirichlet 判别法）
+> [!note] 定理（Abel / Dirichlet 判别法）
 > 若满足以下之一，则 $\sum_{n\ge1}a_n(x)b_n(x)$ 在 $[a,b]$ 上一致收敛：
 > - **Dirichlet**：部分和 $\sum_{n=1}^Na_n(x)$ 一致有界，且对每个固定 $x$，$b_n(x)$ 关于 $n$ 单调、当 $n\to\infty$ 时**一致**收敛到 $0$；
 > - **Abel**：$\sum a_n(x)$ 一致收敛，且对每个固定 $x$，$b_n(x)$ 关于 $n$ 单调、**一致**有界。

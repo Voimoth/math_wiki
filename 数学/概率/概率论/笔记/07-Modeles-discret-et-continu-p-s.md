@@ -14,7 +14,7 @@ confidence: medium
 
 Dans ce cours, on va étudier un cas particulier d'espace de probabilité, pour les constructions techniques de $\mathcal{F}$ et de $\mathbb{P}$.
 
-> [!note] Thm. 7.1
+> [!note] Théorème 7.1
 > Soit $\Omega$ un ensemble au plus dénombrable non vide, et soit $\mathcal{F} = \mathcal{P}(\Omega)$. Alors une probabilité (mesure de probabilité) $\mathbb{P}$ sur $\mathcal{F} = \mathcal{P}(\Omega)$ est entièrement déterminée par les valeurs $\mathbb{P}(\{\omega\}) := p_\omega$, $\forall\omega\in\Omega$.
 >
 > Plus précisément, pour toute famille de nombres $(p_\omega)_{\omega\in\Omega}$ telle que
@@ -50,7 +50,7 @@ Modèle : $\Omega = [0,1]$, $\mathcal{F} = \mathcal{B}([0,1])$ (tribu borélienn
 
 On voit une différence entre un événement de probabilité $0$ et un événement impossible.
 
-> [!note] Déf. 7.4 (événement négligeable et propriété presque sûre)
+> [!note] Définition 7.4 (événement négligeable et propriété presque sûre)
 > Soit $A$ un événement.
 > - $A$ est négligeable si $\mathbb{P}(A) = 0$.
 > - $A$ est presque sûr si $\mathbb{P}(A) = 1$.
@@ -59,10 +59,10 @@ On voit une différence entre un événement de probabilité $0$ et un événeme
 > [!info] Notation 7.5
 > $p.s.$ : presque sûr. $P\text{-}p.s.$ : presque sûr sous la probabilité $P$.
 
-> [!info] Rq. 7.6
+> [!info] Remarque 7.6
 > L'union (l'intersection) d'une famille au plus dénombrable d'événements négligeables ($p.s.$) est encore négligeable ($p.s.$). C'est une conséquence de la $\sigma$-additivité de $P$.
 
-> [!note] Thm. 7.7
+> [!note] Théorème 7.7
 > Soient $A,B$ deux événements dans un espace probabilisé $(\Omega,\mathcal{F},P)$. Alors :
 > 1. $P(\emptyset) = 0$ ;
 > 2. si $A_1,\dots,A_n\in\mathcal{F}$ sont deux-à-deux disjoints, alors $P\!\left(\bigcup_{i=1}^n A_i\right) = \sum_{i=1}^n P(A_i)$ ;

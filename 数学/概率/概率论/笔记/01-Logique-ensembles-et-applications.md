@@ -26,7 +26,7 @@ Soient $P$ et $Q$ deux propositions.
 > - $P \Rightarrow Q$ : « $P$ implique $Q$ », « si $P$ alors $Q$ » ; $P$ est une condition suffisante de $Q$, et $Q$ est une condition nécessaire de $P$.
 > - $P \Leftrightarrow Q$ : $P$ et $Q$ sont équivalentes, « $P$ si et seulement si $Q$ » (ssi) ; $P$ est une condition nécessaire et suffisante (CNS) de $Q$.
 
-> [!info] Rq.
+> [!info] Remarque
 > Pour l'implication $P \Rightarrow Q$ :
 > - $Q \Rightarrow P$ est sa réciproque ;
 > - $\neg P \Rightarrow \neg Q$ est son inverse ;
@@ -42,7 +42,7 @@ Soient $P$ et $Q$ deux propositions.
 > - $\mathbb{R}$ : l'ensemble des nombres réels.
 > - $\mathbb{C}$ : l'ensemble des nombres complexes.
 
-> [!note] Déf. 1.1 (ensemble)
+> [!note] Définition 1.1 (ensemble)
 > Un ensemble est une collection d'objets (définition naïve, non axiomatique).
 > Deux ensembles sont égaux s'ils contiennent les mêmes objets. L'ensemble vide est noté $\emptyset$.
 
@@ -55,7 +55,7 @@ Soit $E$ un ensemble.
 
 Soient $A, B$ deux parties de $E$.
 
-> [!note] Déf. 1.2 (opérations ensemblistes)
+> [!note] Définition 1.2 (opérations ensemblistes)
 >
 > - $A \cup B$ : union (réunion) de $A$ et $B$ ;
 > - $A \cap B$ : intersection de $A$ et $B$ ;
@@ -70,29 +70,29 @@ Soit $I$ un ensemble d'indices et, pour tout $i \in I$, $A_i$ une partie de $E$.
 > [!info] Notation
 > $(A_i)_{i \in I}$ est la famille de sous-ensembles de $E$ indexée par $I$ ; on note $\bigcup_{i \in I} A_i$ l'union de la famille et $\bigcap_{i \in I} A_i$ l'intersection de la famille.
 
-> [!note] Déf. 1.3 (famille disjointe)
+> [!note] Définition 1.3 (famille disjointe)
 > La famille $(A_i)_{i \in I}$ est disjointe si $\forall i, j \in I$ tels que $i \neq j$, on a $A_i \cap A_j = \emptyset$.
 
-> [!info] Prop. 1.4 (distributivité et complémentaire)
+> [!info] Proposition 1.4 (distributivité et complémentaire)
 > Pour toute partie $B$ de $E$ :
 > $\left(\bigcup_{i \in I} A_i\right) \cap B = \bigcup_{i \in I} (A_i \cap B)$ et $\left(\bigcap_{i \in I} A_i\right) \cup B = \bigcap_{i \in I} (A_i \cup B)$.
 > De plus $\left(\bigcup_{i \in I} A_i\right)^c = \bigcap_{i \in I} A_i^c$ et $\left(\bigcap_{i \in I} A_i\right)^c = \bigcup_{i \in I} A_i^c$.
 
-> [!note] Déf. 1.5 (produit cartésien)
+> [!note] Définition 1.5 (produit cartésien)
 > $A \times B = \{ (a, b) \mid a \in A,\ b \in B \}$, où $(a, b)$ est un couple ordonné ; en général $A \times B \neq B \times A$.
 > Pour $n \geq 2$, on note $A^n = \underbrace{A \times A \times \dots \times A}_{n \text{ fois}}$.
 
 > [!info] Notation
 > $\mathcal{P}(E)$ désigne l'ensemble des sous-ensembles de $E$. Les ensembles $\emptyset$ et $E$ sont appelés les sous-ensembles triviaux de $E$.
 
-> [!note] Déf. 1.6 (fonction indicatrice)
+> [!note] Définition 1.6 (fonction indicatrice)
 > Pour toute partie $A \subset E$, la fonction indicatrice de $A$ est
 > $\mathbb{1}_A : E \to \mathbb{R}$, $x \mapsto \begin{cases} 1 & \text{si } x \in A \\ 0 & \text{si } x \notin A \end{cases}$.
 > L'ensemble $E$ est l'ensemble de départ et $\mathbb{R}$ l'ensemble d'arrivée.
 
 ### Applications injectives, surjectives, bijectives
 
-> [!note] Déf. 1.7
+> [!note] Définition 1.7
 > Soit $f : E \to F$ une application.
 > - $f$ est injective si tout élément de $F$ est l'image d'au plus un élément de $E$ ;
 > - $f$ est surjective si tout élément de $F$ est l'image d'au moins un élément de $E$ ;
@@ -100,7 +100,7 @@ Soit $I$ un ensemble d'indices et, pour tout $i \in I$, $A_i$ une partie de $E$.
 
 Si $f : E \to F$ est bijective, alors on peut définir son application réciproque $f^{-1} : F \to E$.
 
-> [!note] Déf. 1.8 (image directe, image réciproque)
+> [!note] Définition 1.8 (image directe, image réciproque)
 > Soit $B \subseteq F$ ; l'image réciproque de $B$ par $f$ est $f^{-1}(B)$.
 > Soit $A \subseteq E$ ; l'image directe de $A$ par $f$ est $f(A)$.
 

@@ -15,7 +15,7 @@ confidence: medium
 
 ## Inégalités de Markov et de Chebyshev
 
-> [!note] Thm. 22.1 (Inégalité de Markov)
+> [!note] Théorème 22.1 (Inégalité de Markov)
 > Soit $X$ une variable aléatoire admettant une espérance finie. Pour tout $\lambda>0$,
 > $$\mathbb{P}(|X|\ge\lambda)\le\frac{\mathbb{E}[|X|]}{\lambda}.$$
 
@@ -23,40 +23,40 @@ confidence: medium
 $$\mathbb{E}[|X|]\ge\lambda\,\mathbb{E}[\mathbb{1}_{|X|\ge\lambda}]=\lambda\,\mathbb{P}(|X|\ge\lambda),$$
 d'où l'inégalité. $\#$
 
-> [!note] Cor. 22.2 (Inégalité de Chebyshev)
+> [!note] Corollaire 22.2 (Inégalité de Chebyshev)
 > Soit $X\in L^2(\Omega)$. Pour tout $\lambda>0$,
 > $$\mathbb{P}(|X-\mathbb{E}[X]|\ge\lambda)\le\frac{\mathrm{Var}(X)}{\lambda^2}.$$
 
-**Preuve :** On pose $Y=(X-\mathbb{E}[X])^2\ge0$. Comme $X\in L^2(\Omega)$, $Y$ est d'espérance finie et $\mathbb{E}[Y]=\mathrm{Var}(X)$. D'après l'inégalité de Markov (Thm. 22.1) appliquée à $Y$ au niveau $\lambda^2$,
+**Preuve :** On pose $Y=(X-\mathbb{E}[X])^2\ge0$. Comme $X\in L^2(\Omega)$, $Y$ est d'espérance finie et $\mathbb{E}[Y]=\mathrm{Var}(X)$. D'après l'inégalité de Markov (Théorème 22.1) appliquée à $Y$ au niveau $\lambda^2$,
 $$\mathbb{P}(|X-\mathbb{E}[X]|\ge\lambda)=\mathbb{P}(Y\ge\lambda^2)\le\frac{\mathbb{E}[Y]}{\lambda^2}=\frac{\mathrm{Var}(X)}{\lambda^2}. \#$$
 
-> [!info] Rq. (Interprétation)
+> [!info] Remarque (Interprétation)
 > La variance mesure l'ordre de grandeur des fluctuations autour de l'espérance (la moyenne) d'une variable aléatoire.
 
 ## Convergence en probabilité
 
-> [!note] Déf. 22.3
+> [!note] Définition 22.3
 > Soit $(Y_n)$ une suite de variables aléatoires et $Y$ une variable aléatoire. On dit que $Y_n$ **converge en probabilité** vers $Y$, et on note $Y_n\xrightarrow{\mathbb{P}}Y$, si
 > $$\forall\varepsilon>0,\qquad\lim_{n\to+\infty}\mathbb{P}(|Y_n-Y|\ge\varepsilon)=0.$$
 
 ## Loi faible des grands nombres : cas $L^2$ (variables deux à deux non corrélées)
 
-> [!info] Prop. 22.4
+> [!info] Proposition 22.4
 > Soit $(X_n)$ une suite de variables aléatoires deux à deux non corrélées, de même loi, admettant un moment d'ordre $2$. On pose $m=\mathbb{E}[X_n]$ et $S_n=\sum_{k=1}^nX_k$. Alors, pour tout $\varepsilon>0$,
 > $$\mathbb{P}\left(\left|\frac{S_n}{n}-m\right|\ge\varepsilon\right)\xrightarrow[n\to+\infty]{}0.$$
 
 **Preuve :** Par linéarité de l'espérance, $\mathbb{E}\big[\frac{S_n}{n}\big]=m$. D'autre part, comme les variables sont deux à deux non corrélées (tous les $\mathrm{Cov}(X_i,X_j)=0$ pour $i\ne j$),
 $$\mathrm{Var}\left(\frac{S_n}{n}\right)=\frac{1}{n^2}\sum_{k=1}^{n}\mathrm{Var}(X_k)=\frac{\mathrm{Var}(X_1)}{n}.$$
-En appliquant l'inégalité de Chebyshev (Cor. 22.2) à $\frac{S_n}{n}$,
+En appliquant l'inégalité de Chebyshev (Corollaire 22.2) à $\frac{S_n}{n}$,
 $$\mathbb{P}\left(\left|\frac{S_n}{n}-m\right|\ge\varepsilon\right)\le\frac{\mathrm{Var}\big(\frac{S_n}{n}\big)}{\varepsilon^2}=\frac{\mathrm{Var}(X_1)}{n\,\varepsilon^2}\xrightarrow[n\to+\infty]{}0. \#$$
 
 ## Loi faible des grands nombres (théorème de Khintchine)
 
-> [!note] Thm. 22.5 (Loi faible des grands nombres, Khintchine)
+> [!note] Théorème 22.5 (Loi faible des grands nombres, Khintchine)
 > Soit $(X_n)$ une suite de variables aléatoires i.i.d. intégrables ($X_1\in L^1(\Omega)$). On pose $S_n=\sum_{k=1}^nX_k$ et $m=\mathbb{E}[X_1]=\mathbb{E}[X_n]$. Alors
 > $$\frac{S_n}{n}\xrightarrow{\mathbb{P}}m.$$
 
-> [!info] Rq.
+> [!info] Remarque
 > Si de plus $X_1\in L^2$, ce théorème est une conséquence directe de l'inégalité de Chebyshev : $\mathbb{P}\big(\big|\frac{S_n}{n}-m\big|\ge\varepsilon\big)\le\frac{1}{\varepsilon^2}\mathrm{Var}\big(\frac{S_n}{n}\big)=\frac{\mathrm{Var}(X_1)}{n\varepsilon^2}\to0$. L'intérêt est de n'exiger que l'intégrabilité.
 
 **Preuve :** L'idée est d'introduire une troncature. Pour tout $n$ et tout $1\le k\le n$, on pose
@@ -75,7 +75,7 @@ et on démontre que $\mathrm{I},\mathrm{II},\mathrm{III}\to0$ en probabilité.
 $$\mathbb{E}\big[X^2\,\mathbb{1}_{|X|\le n}\big]=\mathbb{E}\big[X^2\,\mathbb{1}_{|X|\le M}\big]+\mathbb{E}\big[X^2\,\mathbb{1}_{M<|X|\le n}\big]\le M^2+n\,\mathbb{E}\big[|X|\,\mathbb{1}_{|X|>M}\big],$$
 car $X^2\le M^2$ sur $\{|X|\le M\}$ et $X^2=|X|\cdot|X|\le n|X|$ sur $\{|X|\le n\}$. En divisant par $n$, en faisant tendre d'abord $n\to\infty$, puis $M\to\infty$, on obtient $\displaystyle\lim_{n\to\infty}\frac{1}{n}\mathbb{E}\big[|X|^2\,\mathbb{1}_{|X|\le n}\big]=0$. $\#$
 
-**Preuve (suite et fin du Thm. 22.5) :**
+**Preuve (suite et fin du Théorème 22.5) :**
 *Étape 1.* Pour tout $\varepsilon>0$,
 $$\left\{\left|\frac{S_n}{n}-m\right|\ge\varepsilon\right\}\subset\underbrace{\left\{\left|\frac{T_n}{n}-m_n\right|\ge\frac{\varepsilon}{3}\right\}}_{A_n}\cup\underbrace{\left\{\left|\frac{S_n-T_n}{n}\right|\ge\frac{\varepsilon}{3}\right\}}_{B_n}\cup\underbrace{\left\{|m_n-m|\ge\frac{\varepsilon}{3}\right\}}_{C_n},$$
 par inégalité triangulaire (si $\big|\frac{S_n}{n}-m\big|\ge\varepsilon$, l'un des trois termes $\mathrm{I},\mathrm{II},\mathrm{III}$ dépasse $\varepsilon/3$). Par conséquent

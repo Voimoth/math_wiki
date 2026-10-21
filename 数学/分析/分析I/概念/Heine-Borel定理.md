@@ -13,7 +13,7 @@ confidence: medium
 ## 定理
 
 > [!note] 定理（有限覆盖，Heine–Borel）
-> 有界闭区间 $[a,b]$ 的任一开覆盖都有有限子覆盖：若 $[a,b]\subset\bigcup_{i\in I}]a_i,b_i[$，则存在有限个指标 $i_1,\dots,i_n\in I$，s.t. $[a,b]\subset\bigcup_{k=1}^{n}]a_{i_k},b_{i_k}[$。
+> 有界闭区间 $[a,b]$ 的任一开覆盖都有有限子覆盖：若 $[a,b]\subset\bigcup_{i\in I}]a_i,b_i[$，则存在有限个指标 $i_1,\dots,i_n\in I$，使得 $[a,b]\subset\bigcup_{k=1}^{n}]a_{i_k},b_{i_k}[$。
 
 ## 为什么
 

@@ -11,7 +11,7 @@ confidence: medium
 # Événement négligeable et propriété presque sûre
 
 > [!tip] Pourquoi
-> En probabilité continue, des événements de probabilité $0$ ou $1$ sont omniprésents (ex. $\mathbb{P}(\{x\})=0$ pour $x\in[0,1]$). Il faut un vocabulaire pour distinguer « de probabilité nulle » de « impossible », et « de probabilité $1$ » de « certain ».
+> En probabilité continue, des événements de probabilité $0$ ou $1$ sont omniprésents (par exemple $\mathbb{P}(\{x\})=0$ pour $x\in[0,1]$). Il faut un vocabulaire pour distinguer « de probabilité nulle » de « impossible », et « de probabilité $1$ » de « certain ».
 
 > [!note] Définition
 > Soit $A$ un événement.

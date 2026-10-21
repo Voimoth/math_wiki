@@ -12,11 +12,11 @@ confidence: medium
 
 $\mathcal{B}(\mathbb{R}^n)$ est appelé la **tribu borélienne** de $\mathbb{R}^n$.
 
-> [!note] Déf. 15.1
+> [!note] Définition 15.1
 > Un **vecteur aléatoire** de dimension $n$ est une application mesurable
 > $$X : (\Omega, \mathcal{A}, \mathbb{P}) \to (\mathbb{R}^n, \mathcal{B}(\mathbb{R}^n)).$$
 
-> [!note] Thm. 15.2
+> [!note] Théorème 15.2
 > Soient $X_1, \dots, X_n : \Omega \to \mathbb{R}$. L'application
 > $$X : \Omega \to \mathbb{R}^n, \quad \omega \mapsto (X_1(\omega), \dots, X_n(\omega))$$
 > est un vecteur aléatoire si et seulement si $X_1, \dots, X_n$ sont des variables aléatoires réelles.
@@ -31,7 +31,7 @@ $$f^{-1}(A^c) = f^{-1}(A)^c, \qquad f^{-1}(\mathbb{R}^m) = \mathbb{R}^n.$$
 Il en résulte que $\{A \subset \mathbb{R}^m \mid f^{-1}(A) \in \mathcal{B}(\mathbb{R}^n)\}$ est une tribu, qui contient tous les ouverts de $\mathbb{R}^m$, donc
 $$\boxed{\{A \subset \mathbb{R}^m \mid f^{-1}(A) \in \mathcal{B}(\mathbb{R}^n)\} \supset \mathcal{B}(\mathbb{R}^m).} \quad \#$$
 
-**Preuve du Thm. 15.2.**
+**Preuve du Théorème 15.2.**
 $\Rightarrow$ : si $X : \Omega \to \mathbb{R}^n$ est un vecteur aléatoire, alors pour tout $k \in [\![1, n]\!]$, la projection
 $$\pi_k \circ X : \Omega \to \mathbb{R}, \qquad (x_1, \dots, x_n) \mapsto x_k,$$
 est mesurable comme composée d'applications mesurables : $X_k$ est une variable aléatoire réelle pour tout $k \in [\![1, n]\!]$.
@@ -44,15 +44,15 @@ donc $I_1 \times \dots \times I_n \in C$. Comme
 $$\mathcal{B}(\mathbb{R}^n) = \sigma(\{I_1 \times \dots \times I_n \mid I_1, \dots, I_n \text{ sont des intervalles}\}),$$
 on en déduit $C \supset \mathcal{B}(\mathbb{R}^n)$, c'est-à-dire que $X : (\Omega, \mathcal{A}) \to (\mathbb{R}^n, \mathcal{B}(\mathbb{R}^n))$ est mesurable. $\#$
 
-> [!note] Cor. 15.4
+> [!note] Corollaire 15.4
 > Si $X_1, \dots, X_n$ sont des variables aléatoires réelles et $f : \mathbb{R}^n \to \mathbb{R}^m$ est continue, alors
 > $$f(X_1, \dots, X_n) : \Omega \to \mathbb{R}^m, \quad \omega \mapsto f(X_1(\omega), \dots, X_n(\omega))$$
 > est un vecteur aléatoire.
 
-**Preuve du Cor. 15.4.** La composée de deux fonctions mesurables est mesurable :
+**Preuve du Corollaire 15.4.** La composée de deux fonctions mesurables est mesurable :
 $$\Omega \xrightarrow{X = (X_1, \dots, X_n)} \mathbb{R}^n \xrightarrow{f} \mathbb{R}^m. \quad \#$$
 
-> [!info] Rq. 15.5 (applications)
+> [!info] Remarque 15.5 (applications)
 > Si $X, Y$ sont deux variables aléatoires réelles, alors $X + Y$, $X - Y$, $XY$, $|X|$, $\min(X,Y)$, $\max(X,Y)$ sont des variables aléatoires réelles : ce sont les composées de $(X, Y)$ avec des fonctions continues de $\mathbb{R}^2$ dans $\mathbb{R}$.
 
 

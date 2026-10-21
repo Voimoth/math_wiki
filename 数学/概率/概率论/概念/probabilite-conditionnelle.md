@@ -18,13 +18,13 @@ confidence: medium
 > $$\mathbb{P}(B\mid A) = \frac{\mathbb{P}(B\cap A)}{\mathbb{P}(A)}.$$
 > Le nombre $\mathbb{P}(B\mid A)$ est la probabilité conditionnelle de $B$ sachant $A$.
 
-> [!note] Thm.
+> [!note] Théorème
 > Pour $A\in\mathcal{F}$ avec $\mathbb{P}(A)>0$, l'application $\mathbb{P}_A : \mathcal{F}\to[0,1]$, $B\mapsto\mathbb{P}(B\mid A)$, est une mesure de probabilité sur $(\Omega,\mathcal{F})$.
 
-> [!info] Rq. (propriétés)
+> [!info] Remarque (propriétés)
 > $\mathbb{P}(A\mid A)=1$ et $\mathbb{P}(A^c\mid A)=0$ ; pour tout $B$, $\mathbb{P}(B^c\mid A)=1-\mathbb{P}(B\mid A)$. En général, il n'y a aucune relation entre $\mathbb{P}(B\mid A^c)$ et $\mathbb{P}(B\mid A)$.
 
-> [!info] Cor. (formule des probabilités composées)
+> [!info] Corollaire (formule des probabilités composées)
 > Pour $n\ge2$ et $A_1,\dots,A_n\in\mathcal{F}$ tels que $\mathbb{P}(A_1\cap\dots\cap A_{n-1})>0$,
 > $$\mathbb{P}(A_1\cap\dots\cap A_n) = \mathbb{P}(A_1)\prod_{k=2}^{n}\mathbb{P}\left(A_k \mid \bigcap_{j=1}^{k-1} A_j\right).$$
 

@@ -12,12 +12,12 @@ confidence: medium
 $k$ corps commutatif
 $$\mathrm{GL}_n(k) = \{ M \in \mathcal{M}_n(k), \text{ inversible} \}$$
 
-> [!info] Rem.
+> [!info] Remarque
 > Si $E$ est un $k$-e.v de dim $E=n$, $\mathrm{GL}_n(E) = \{ f \in \mathcal{L}(E) \text{ inversible} \} \simeq \mathrm{GL}_n(k)$.
 
 On dispose de $\det : \mathrm{GL}_n(k) \to k^*$.
 
-> [!note] Déf
+> [!note] Définition
 > $\mathrm{SL}_n(k) = \ker(\det)$
 
 On a une suite exacte scindée
@@ -26,7 +26,7 @@ $$\begin{pmatrix} \lambda & 0 \\ 0 & I_{n-1} \end{pmatrix} \mapsfrom \lambda$$
 
 1. Centre.
 
-> [!note] Prop
+> [!note] Proposition
 > $Z(\mathrm{GL}_n(k)) = k^* \mathrm{Id}$.
 > $Z(\mathrm{SL}_n(k)) = Z(\mathrm{GL}_n(k)) \cap \mathrm{SL}_n(k) = \mu_n(k) \mathrm{Id}$
 > où $\mu_n(k) = \{ \text{racine } n\text{-ième de } 1 \text{ dans } k \} = \{ a \in k^*, a^n = 1 \}$.
@@ -34,7 +34,7 @@ $$\begin{pmatrix} \lambda & 0 \\ 0 & I_{n-1} \end{pmatrix} \mapsfrom \lambda$$
 Plusieurs preuves. Une des preuves utilise
 
 > [!note] Lemme
-> Soit $E$ e.v de dim finie, $u \in \operatorname{End}(E)$ tel que $\forall v \in E, u(v)$ colinéaire à $v$ (i.e. $(v, u(v))$ liée). Alors $\exists \lambda \in k, u = \lambda \mathrm{Id}$.
+> Soit $E$ e.v de dim finie, $u \in \operatorname{End}(E)$ tel que $\forall v \in E, u(v)$ colinéaire à $v$ (c'est-à-dire $(v, u(v))$ liée). Alors $\exists \lambda \in k, u = \lambda \mathrm{Id}$.
 
 On remarque ensuite : ($k \neq \mathbb{Z}/2\mathbb{Z}$). Si $u \in Z(\mathrm{GL}(E))$, $v \in E \setminus \{0\}$ et $H$ un supplémentaire de $kv$. Soit $\alpha \neq 0, 1$. Soit $f \in \mathcal{L}(E), f(v) = \alpha v, f_{|H} = 1$. Si $uf = fu$, $u$ stabilise les sous espaces propres de $f$. D'où $\exists \lambda \in k / u(v) = \lambda v \Rightarrow u = k \mathrm{Id}$.
 
@@ -52,15 +52,15 @@ $M E_{ii} = M E_{ij} E_{ji} = E_{ij} M E_{ji} = E_{ij} E_{ji} M = E_{ii} M$
 
 Donc $\forall N \in \mathcal{M}_n(k) \ , \ MN = NM$ ; en regardant les coefficients, on obtient $M = \lambda \mathrm{Id}$, et si $M \in Z(\mathrm{SL}_n(k)) \ , \ \lambda^n = 1$.
 
-> [!note] Déf
+> [!note] Définition
 > Les matrices $E_{ij}(\lambda) \ i \neq j \ , \ \lambda \in k^*$ sont appelées matrices de transvection élémentaires.
 
-> [!note] Déf
+> [!note] Définition
 > Pour $i \in \{1, \dots, n\} \ , \ a \in k^*$ soit $D_i(a) = diag(1, \dots, 1, a, 1, \dots, 1)$, matrice de dilatation élémentaire.
 
 Rappel. Opérations élémentaires sur les lignes et colonnes d'une matrice. Algorithme du pivot de Gauss.
 
-> [!note] Thm.
+> [!note] Théorème
 > Soit $g \in \mathrm{GL}_n(k)$. Alors il existe des matrices de transvection élémentaires $L_1, \dots, L_p$ telles que $g = L_1 \cdots L_p \begin{pmatrix} I_r & 0 \\ 0 & diag \end{pmatrix}$
 
 On fait des opérations sur les lignes de la matrice $g$.
@@ -76,18 +76,18 @@ IV) Classes de conjugaison des matrices de transvection
 
 On introduit les matrices de permutation. Pour $w \in \mathfrak{S}_n$, soit $P_w \in \mathrm{GL}_n(k)$ défini par $P_w(e_i) = e_{w(i)}$.
 
-> [!note] Prop
+> [!note] Proposition
 > 1) $\forall i \neq j, \lambda \in k^*, \forall w \in \mathfrak{S}_n, P_w E_{ij}(\lambda) P_w^{-1} = E_{w(i)w(j)}(\lambda)$
 > 2) $\forall i \neq j, \lambda \in k^*, \mu \in k^*$ : $D_i(\lambda) E_{ij}(\mu) D_i(\lambda)^{-1} = E_{ij}(\lambda\mu)$
 
-> [!note] Prop
+> [!note] Proposition
 > Les $E_{ij}(\lambda)$ sont conjuguées dans $\mathrm{GL}_n(k)$ et, si $n \geq 3$, elles sont conjuguées dans $\mathrm{SL}_n(k)$.
 
-**Preuve.** Soient $i \neq j, l \neq m, \lambda, \mu \in k^*$ ; on veut $g \in \mathrm{GL}_n(k)$ ou $\mathrm{SL}_n(k)$ tq $g E_{ij}(\lambda) g^{-1} = E_{lm}(\mu)$. Comme $\mathfrak{S}_n$ agit 2 fois transitivement sur $\{1, \dots, n\}$
+**Preuve.** Soient $i \neq j, l \neq m, \lambda, \mu \in k^*$ ; on veut $g \in \mathrm{GL}_n(k)$ ou $\mathrm{SL}_n(k)$ tel que $g E_{ij}(\lambda) g^{-1} = E_{lm}(\mu)$. Comme $\mathfrak{S}_n$ agit 2 fois transitivement sur $\{1, \dots, n\}$
 $$\exists w \in \mathfrak{S}_n, w(i) = l, \ w(j) = m$$
 D'où le résultat pour $\mathrm{GL}_n(k)$ : $P_w E_{ij}(\lambda) P_w^{-1} = E_{lm}(\lambda)$, $D_l(\frac{\mu}{\lambda}) E_{lm}(\lambda) D_l(\frac{\mu}{\lambda})^{-1} = E_{lm}(\mu)$.
 
-Pour $\mathrm{SL}_n(k)$ avec $n \geq 3$ : si $\det P_w = 1 \ \checkmark$. Sinon, comme $n \geq 3, \exists s \in \{1, \dots, n\}$ tq $l \neq s \neq m$ : $D_s(-1) P_w \in \mathrm{SL}_n(k)$, $D_s(-1) E_{lm}(\lambda) D_s(-1)^{-1} = E_{lm}(\lambda)$.
+Pour $\mathrm{SL}_n(k)$ avec $n \geq 3$ : si $\det P_w = 1 \ \checkmark$. Sinon, comme $n \geq 3, \exists s \in \{1, \dots, n\}$ tel que $l \neq s \neq m$ : $D_s(-1) P_w \in \mathrm{SL}_n(k)$, $D_s(-1) E_{lm}(\lambda) D_s(-1)^{-1} = E_{lm}(\lambda)$.
 
 Ensuite pour passer $E_{1,n}(\lambda)$ à $E_{1,n}(\mu)$ on utilise $diag(1, \dots, 1, \frac{\mu}{\lambda}, 1, \dots, 1, \frac{\lambda}{\mu}, 1, \dots, 1)$ au lieu de $D_1(\frac{\mu}{\lambda})$
 $$\uparrow \ \uparrow$$
@@ -95,31 +95,31 @@ $$i \quad j$$
 
 Pour $n=2$ ?
 
-> [!note] Prop
+> [!note] Proposition
 > 1) Dans $\mathrm{GL}_2(k)$, les matrices $\begin{pmatrix} 0 & \lambda \\ 1 & 0 \end{pmatrix}$ et $\begin{pmatrix} 1 & 0 \\ 0 & \lambda \end{pmatrix}$ sont conjuguées
 > 2) Les matrices $\begin{pmatrix} 0 & \lambda \\ 1 & 0 \end{pmatrix}$ et $\begin{pmatrix} 0 & \mu \\ 1 & 0 \end{pmatrix}$ sont conjuguées dans $\mathrm{GL}_2(k)$ $\iff \frac{\lambda}{\mu}$ est un carré dans $k^*$.
 
 **Preuve :** 1) utiliser $\begin{pmatrix} 0 & 1 \\ 1 & 0 \end{pmatrix}$
-2) Chercher $g = \begin{pmatrix} a & b \\ c & d \end{pmatrix}$ avec $ad-bc \neq 0$ tq $g \begin{pmatrix} 0 & \lambda \\ 1 & 0 \end{pmatrix} g^{-1} = \begin{pmatrix} 0 & \mu \\ 1 & 0 \end{pmatrix} g$
+2) Chercher $g = \begin{pmatrix} a & b \\ c & d \end{pmatrix}$ avec $ad-bc \neq 0$ tel que $g \begin{pmatrix} 0 & \lambda \\ 1 & 0 \end{pmatrix} g^{-1} = \begin{pmatrix} 0 & \mu \\ 1 & 0 \end{pmatrix} g$
 
 Propriétés supplémentaires des transvections
 
-> [!note] Prop (Sous-groupes à 1 paramètre)
+> [!note] Proposition (Sous-groupes à 1 paramètre)
 > $i \neq j, \lambda \in k^*$, $E_{ij}(\lambda) = \mathrm{Id} + \lambda E_{ij}$ et $E_{ij}(0) = \mathrm{Id}$. L'application $\begin{array}{rcl} (k,+) & \longrightarrow & \mathrm{GL}_n(k) \\ \lambda & \longmapsto & E_{ij}(\lambda) \end{array}$ est un morphisme de groupe.
 
 L'image de ce morphisme est appelé sous-groupe à un paramètre.
 
-> [!info] Rem.
+> [!info] Remarque
 > Dans $\mathrm{GL}_n(k)$, ces sous-groupes sont toujours conjugués. Fixons $i \neq j$ et $k \neq l$ : les ss-groupes $\{E_{ij}(\lambda), \lambda \in k\}$ et $\{E_{kl}(\mu), \mu \in k\}$ sont conjugués.
 
-> [!note] Prop
+> [!note] Proposition
 > Si $n \geq 3$, si $i \neq j \neq k \neq i$, dans $\{1, 2, \dots, n\}$ : $[E_{ij}(\lambda), E_{jk}(\mu)] = E_{ik}(\lambda \mu)$
 
 **Preuve.** Calcul en utilisant $E_{ij}E_{kl} = \delta_{jk}E_{il} , E_{ij}(\lambda)^{-1} = I - \lambda E_{ij}$.
 
 **Groupes dérivés**
 
-> [!note] Thm.
+> [!note] Théorème
 > Si $n \geq 3$, ou si $n=2$ et $|k|>3$ :
 > $$\mathfrak{D}(\mathrm{GL}_n(k)) = \mathfrak{D}(\mathrm{SL}_n(k)) = \mathrm{SL}_n(k) .$$
 
@@ -127,18 +127,18 @@ L'image de ce morphisme est appelé sous-groupe à un paramètre.
 
 1) Si $n \geq 3$. $\forall i \neq j , \forall \lambda \in k^* : E_{ij}(\lambda) = [E_{ik}(\lambda), E_{kj}(1)] \in \mathfrak{D}(\mathrm{SL}_n(k))$. Comme $\mathrm{SL}_n(k)$ engendré par les $E_{ij}(\lambda)$, $\mathrm{SL}_n(k) \subset \mathfrak{D}(\mathrm{SL}_n(k))$ d'où l'égalité.
 
-2) Pour $n=2$ et $|k|>3$ (i.e. $k \neq \mathbb{F}_2, k \neq \mathbb{F}_3$). On dispose dans $\mathrm{SL}_2(k)$ des éléments $\begin{pmatrix} \beta & 0 \\ 0 & \beta^{-1} \end{pmatrix} , \beta \in k^*$. Pour $\lambda \in k^*$,
+2) Pour $n=2$ et $|k|>3$ (c'est-à-dire $k \neq \mathbb{F}_2, k \neq \mathbb{F}_3$). On dispose dans $\mathrm{SL}_2(k)$ des éléments $\begin{pmatrix} \beta & 0 \\ 0 & \beta^{-1} \end{pmatrix} , \beta \in k^*$. Pour $\lambda \in k^*$,
 $$\left[ \begin{pmatrix} \beta & 0 \\ 0 & \beta^{-1} \end{pmatrix} , \begin{pmatrix} 1 & \lambda \\ 0 & 1 \end{pmatrix} \right] = \begin{pmatrix} 1 & \beta^2\lambda \\ 0 & 1 \end{pmatrix} \begin{pmatrix} 1 & -\lambda \\ 0 & 1 \end{pmatrix} = \begin{pmatrix} 1 & \lambda(\beta^2-1) \\ 0 & 1 \end{pmatrix}$$
-Montrons que $\forall \mu \in k^* , \begin{pmatrix} 1 & \mu \\ 0 & 1 \end{pmatrix} \in \mathfrak{D}(\mathrm{SL}_2(k))$. En effet : $|k|>3 , \exists \beta \in k^* , \beta \neq \pm 1 , \text{i.e. } \beta^2 \neq 1$. $\mu \in k^*$ étant donné, on pose $\lambda = \frac{\mu}{\beta^2-1}$, alors $\begin{pmatrix} 1 & \mu \\ 0 & 1 \end{pmatrix} = \left[ \begin{pmatrix} \beta & 0 \\ 0 & \beta^{-1} \end{pmatrix} , \begin{pmatrix} 1 & \lambda \\ 0 & 1 \end{pmatrix} \right] .$
+Montrons que $\forall \mu \in k^* , \begin{pmatrix} 1 & \mu \\ 0 & 1 \end{pmatrix} \in \mathfrak{D}(\mathrm{SL}_2(k))$. En effet : $|k|>3 , \exists \beta \in k^* , \beta \neq \pm 1 , \text{c'est-à-dire } \beta^2 \neq 1$. $\mu \in k^*$ étant donné, on pose $\lambda = \frac{\mu}{\beta^2-1}$, alors $\begin{pmatrix} 1 & \mu \\ 0 & 1 \end{pmatrix} = \left[ \begin{pmatrix} \beta & 0 \\ 0 & \beta^{-1} \end{pmatrix} , \begin{pmatrix} 1 & \lambda \\ 0 & 1 \end{pmatrix} \right] .$
 
 De même pour les $\begin{pmatrix} 1 & 0 \\ \mu & 1 \end{pmatrix}$
 
-Autre cas exclus du thm :
+Autre cas exclus du théorème :
 1) $n=2, \ k=\mathbb{Z}/2\mathbb{Z}$. $\mathrm{GL}_2(\mathbb{Z}/2\mathbb{Z}) = \mathrm{SL}_2(\mathbb{Z}/2\mathbb{Z})$ de cardinal $(2^2-1)(2^2-2)=6$, $\simeq \mathfrak{S}_3$ (non abélien). Or on a vu $\mathfrak{D}(\mathfrak{S}_3) = \mathfrak{A}_3 \neq \mathfrak{S}_3$.
 
 2) $n=2, \ k=\mathbb{Z}/3\mathbb{Z}$.
 
-> [!note] Prop
+> [!note] Proposition
 > $\mathfrak{D}(\mathrm{GL}_2(\mathbb{Z}/3\mathbb{Z})) \simeq \mathrm{SL}_2(\mathbb{Z}/3\mathbb{Z}) \quad(*)$
 
 > [!warning] 原稿把 $(*)$ 写成 $\mathfrak{D}(\mathrm{GL}_2)\simeq\mathfrak{D}(\mathrm{SL}_2)$
@@ -153,64 +153,64 @@ On a vu que $A$ et $A^3$ sont conjugués dans $\mathrm{GL}_2(\mathbb{Z}/3\mathbb
 Questions de simplicité :
 $Z(\mathrm{SL}_n(k)) \triangleleft \mathrm{SL}_n(k)$. Il est naturel de considérer, au lieu de $\mathrm{SL}_n(k)$, le quotient $\mathrm{SL}_n(k)/Z(\mathrm{SL}_n(k))$.
 
-> [!note] Déf
+> [!note] Définition
 > Groupe projectif linéaire : $\mathrm{PGL}_n(k) = \mathrm{GL}_n(k)/k^*\mathrm{Id}$
 > Groupe projectif spécial linéaire : $\mathrm{PSL}_n(k) = \mathrm{SL}_n(k)/Z(\mathrm{SL}_n(k)) = \mathrm{SL}_n(k)/\mu_n(k)\mathrm{Id}$.
 
 Ces groupes apparaissent naturellement quand on considère l'action de $\mathrm{GL}_n(k)$ ou de $\mathrm{SL}_n(k)$ sur l'ensemble $\mathbb{P}(k^n)$ des droites de l'espace vectoriel $k^n$.
 
-> [!note] Déf
+> [!note] Définition
 > $\mathbb{P}(k^n) = \{ \text{droites de } k^n \}$ espace projectif $= k^n \setminus \{0\} / k^*$ ; choix d'un vecteur $\neq 0$. 2 vecteurs $\neq 0$ définissent la même droite si ils sont colinéaires.
 
 $\mathrm{GL}_n(k)$ et $\mathrm{SL}_n(k)$ agissent transitivement sur $\mathbb{P}(k^n)$.
 
 D'où des morphismes $\mathrm{GL}_n(k) \longrightarrow \mathcal{G}(\mathbb{P}(k^n))$, $\mathrm{SL}_n(k)$.
 
-noyau : $g \in \mathrm{GL}_n(k)$ ou $\mathrm{SL}_n(k)$ tq $\forall v \neq 0$, $g(v)$ et $v$ sont colinéaires, i.e. $g = \lambda \mathrm{Id}$ pour un $\lambda \in k^*$.
+noyau : $g \in \mathrm{GL}_n(k)$ ou $\mathrm{SL}_n(k)$ tel que $\forall v \neq 0$, $g(v)$ et $v$ sont colinéaires, c'est-à-dire $g = \lambda \mathrm{Id}$ pour un $\lambda \in k^*$.
 
 On a ainsi des morphismes injectifs
 $$\mathrm{PGL}_n(k) \longrightarrow \mathcal{G}(\mathbb{P}(k^n)), \qquad \mathrm{PSL}_n(k)$$
-i.e. on a des actions fidèles et transitives.
+C'est-à-dire on a des actions fidèles et transitives.
 
-> [!note] Déf
+> [!note] Définition
 > Soit $G$ un groupe agissant sur un ensemble $X$. On dit que l'action est 2-transitive si $\forall x \neq y, \forall x' \neq y'$ dans $X$, $\exists g \in G / g(x) = x'$ et $g(y) = y'$.
 
-> [!note] Prop
+> [!note] Proposition
 > L'action de $\mathrm{PSL}_n(k)$ sur $\mathbb{P}(k^n)$ est 2-transitive.
 
-**Preuve :** Théorème de la base incomplète. $D_1 \neq D_2$ et $D'_1 \neq D'_2$ droites. On veut $g \in \mathrm{SL}_n(k)$ tq $g(D_1) = D'_1$. Soient $e_1, e_2, e'_1, e'_2$ des vecteurs $\neq 0$ sur $D_1, D_2, D'_1, D'_2$. Alors $(e_1, e_2)$ famille libre, qu'on complète en une base ; idem avec $(e'_1, e'_2)$ ; ensuite : $\exists g \in \mathrm{GL}_n(k)$, qui transforme la $1^{ere}$ base en la $2^e$ : $g(e_i) = e'_i$. Si on veut $g \in \mathrm{SL}_n(k)$ on prend $\tilde{g}$ avec $\tilde{g}(e_i) = e'_i , i \geq 2$,
+**Preuve :** Théorème de la base incomplète. $D_1 \neq D_2$ et $D'_1 \neq D'_2$ droites. On veut $g \in \mathrm{SL}_n(k)$ tel que $g(D_1) = D'_1$. Soient $e_1, e_2, e'_1, e'_2$ des vecteurs $\neq 0$ sur $D_1, D_2, D'_1, D'_2$. Alors $(e_1, e_2)$ famille libre, qu'on complète en une base ; idem avec $(e'_1, e'_2)$ ; ensuite : $\exists g \in \mathrm{GL}_n(k)$, qui transforme la $1^{ere}$ base en la $2^e$ : $g(e_i) = e'_i$. Si on veut $g \in \mathrm{SL}_n(k)$ on prend $\tilde{g}$ avec $\tilde{g}(e_i) = e'_i , i \geq 2$,
 $$\tilde{g}(e_1) = \frac{1}{det g} e'_1 .$$
 
-> [!note] Thm.
+> [!note] Théorème
 > Sauf pour $n=2$ et $k=\mathbb{F}_2$ ou $\mathbb{F}_3$, $\mathrm{PSL}_n(k)$ est un groupe simple.
 
-> [!info] Rem.
-> les situations exclues sont les mêmes que pour le thm sur les groupes dérivés.
+> [!info] Remarque
+> les situations exclues sont les mêmes que pour le théorème sur les groupes dérivés.
 
-> [!note] Déf
+> [!note] Définition
 > Soit $G$ un groupe. Un sous-groupe $H$ de $G$ est dit maximal si $\forall K \subset G$ sous-groupe, si $H \subset K \subset G$ alors $K=H$ ou $K=G$.
 
-> [!note] Prop
+> [!note] Proposition
 > Soit $G$ groupe qui agit 2-transitivement sur un ensemble $X$. Alors $\forall x \in X$, le stabilisateur $G_x = Stab(x)$ de $x$ est un sous-groupe maximal.
 
 **Preuve.** L'action sur $X$ est transitive. On sait alors que $\forall x \in X$, l'orbite de $x = X$ et on a une bijection équivalente : l'action par translation à gauche $G/G_x \xrightarrow{\sim} X$ qui transforme l'action sur $G/G_x$ en l'action sur $X$. On se ramène ainsi à $X=G/G_x$.
 
 Soit $K$ sous-groupe $G_x \subset K \subset G$. Par l'absurde, $G_x \neq K$, $K \neq G$. $\exists k \in K \setminus G_x$ et $\exists g \in G \setminus K$. On considère les classes $kG_x$ et $gG_x \in G/G_x$, et aussi la classe $eG_x = G_x \in G/G_x$.
-$$\exists u \in G \text{ tq } u(G_x) = G_x, \quad u(kG_x) = gG_x \quad (2\text{-transitif})$$
-i.e. $uG_x = G_x \Rightarrow u \in G_x$, $ukG_x = gG_x \Rightarrow g^{-1}uk \in G_x \subset K$. mais $k \in K$, $u \in G_x \subset K \Rightarrow g^{-1} \in K$ contradiction.
+$$\exists u \in G \text{ tel que } u(G_x) = G_x, \quad u(kG_x) = gG_x \quad (2\text{-transitif})$$
+C'est-à-dire $uG_x = G_x \Rightarrow u \in G_x$, $ukG_x = gG_x \Rightarrow g^{-1}uk \in G_x \subset K$. mais $k \in K$, $u \in G_x \subset K \Rightarrow g^{-1} \in K$ contradiction.
 
 Conclusion: $G_x$ maximal.
 
-**Preuve du thm.**
+**Preuve du théorème**
 $$\mathrm{PSL}_n(k) = \mathrm{SL}_n(k) / Z(\mathrm{SL}_n(k))$$
-Soit $N \triangleleft \mathrm{PSL}_n(k)$. Montrons $N = \{e\}$ ou $N = \mathrm{PSL}_n(k)$. Via la correspondance bijective entre sous-groupes (resp. distingués) de $\mathrm{PSL}_n(k)$ et sous-groupes (resp. distingués) de $\mathrm{SL}_n(k)$ contenant $Z(\mathrm{SL}_n(k))$, on va montrer : si $N \triangleleft \mathrm{SL}_n(k)$ avec $Z(\mathrm{SL}_n(k)) \subset N$, alors $N = Z(\mathrm{SL}_n(k))$ ou $N = \mathrm{SL}_n(k)$.
+Soit $N \triangleleft \mathrm{PSL}_n(k)$. Montrons $N = \{e\}$ ou $N = \mathrm{PSL}_n(k)$. Via la correspondance bijective entre sous-groupes (respectivement distingués) de $\mathrm{PSL}_n(k)$ et sous-groupes (respectivement distingués) de $\mathrm{SL}_n(k)$ contenant $Z(\mathrm{SL}_n(k))$, on va montrer : si $N \triangleleft \mathrm{SL}_n(k)$ avec $Z(\mathrm{SL}_n(k)) \subset N$, alors $N = Z(\mathrm{SL}_n(k))$ ou $N = \mathrm{SL}_n(k)$.
 
 2 situations :
-1) $\exists$ une droite $D \subset k^n$ stabilisée par $N$, i.e. $\forall g \in N, g(D) = D$. Alors $N$ stabilise toutes les droites de $k^n$, et donc $N \supset Z(\mathrm{SL}_n(k))$. En effet, $\mathrm{SL}_n(k)$ agit transitivement sur $\mathbb{P}(k^n)$. Si $D' \in \mathbb{P}(k^n), \exists g \in \mathrm{SL}_n(k), g(D) = D'$. Or soit $Stab(D') = g Stab(D) g^{-1}$. Or on a supposé $N \subset Stab(D)$. $\implies gNg^{-1} \subset g Stab(D) g^{-1} = Stab(D')$. D'où $N$ stabilise $D', \forall D'$.
+1) $\exists$ une droite $D \subset k^n$ stabilisée par $N$, c'est-à-dire $\forall g \in N, g(D) = D$. Alors $N$ stabilise toutes les droites de $k^n$, et donc $N \supset Z(\mathrm{SL}_n(k))$. En effet, $\mathrm{SL}_n(k)$ agit transitivement sur $\mathbb{P}(k^n)$. Si $D' \in \mathbb{P}(k^n), \exists g \in \mathrm{SL}_n(k), g(D) = D'$. Or soit $Stab(D') = g Stab(D) g^{-1}$. Or on a supposé $N \subset Stab(D)$. $\implies gNg^{-1} \subset g Stab(D) g^{-1} = Stab(D')$. D'où $N$ stabilise $D', \forall D'$.
 
 2) $N$ ne stabilise aucune droite. Soit $(e_1, ..., e_n)$ la base canonique de $k^n$
 $$P = Stab(ke_1) = \left\{ \begin{pmatrix} * & \cdots \\ 0 & \end{pmatrix} \in \mathrm{SL}_n(k) \right\}$$
-On sait que $P$ est un sous-groupe maximal de $\mathrm{SL}_n(k)$ car action 2-transitive. De plus $N \not\subset P$. Donc le groupe $NP = PN \supsetneq P$. $P$ maximal $\implies NP = PN = \mathrm{SL}_n(k)$. ie. $\mathrm{SL}_n(k) \twoheadrightarrow \mathrm{SL}_n(k)/N$, $\pi(P) = PN/N = \mathrm{SL}_n(k)/N$, $\pi|_P$ est surjective.
+On sait que $P$ est un sous-groupe maximal de $\mathrm{SL}_n(k)$ car action 2-transitive. De plus $N \not\subset P$. Donc le groupe $NP = PN \supsetneq P$. $P$ maximal $\implies NP = PN = \mathrm{SL}_n(k)$. C'est-à-dire $\mathrm{SL}_n(k) \twoheadrightarrow \mathrm{SL}_n(k)/N$, $\pi(P) = PN/N = \mathrm{SL}_n(k)/N$, $\pi|_P$ est surjective.
 
 On veut montrer $N = \mathrm{SL}_n(k)$.
 
@@ -247,7 +247,7 @@ On étudie plus en détail l'action de $\mathrm{PSL}_n(k)$ sur $\mathbb{P}(k^n)$
 
 Action de $\mathrm{PGL}_2(\mathbb{Z}/p\mathbb{Z})$ sur $\mathbb{P}((\mathbb{Z}/p\mathbb{Z})^2)$
 
-> [!note] Prop
+> [!note] Proposition
 > $|\mathbb{P}((\mathbb{Z}/p\mathbb{Z})^2)| = p+1$.
 
 **Preuve :** $\mathbb{P}((\mathbb{Z}/p\mathbb{Z})^2) = \{ (\mathbb{Z}/p\mathbb{Z})^2 - \{0\} \} / (\mathbb{Z}/p\mathbb{Z})^*$
@@ -268,7 +268,7 @@ D'où $\mathrm{PSL}_2(\mathbb{Z}/3\mathbb{Z}) \simeq \mathfrak{A}_4$ pas simple.
 
 Retour sur les groupes dérivés
 
-> [!note] Thm.
+> [!note] Théorème
 > $\mathfrak{D}(\mathrm{SL}_2(\mathbb{Z}/3\mathbb{Z})) \simeq \mathbb{H}_8$.
 
 **Preuve :** Pour trouver des informations sur le groupe dérivé, on peut considérer des morphismes vers des groupes abéliens ou des morphismes vers des groupes dont on connaît le groupe dérivé.
@@ -293,7 +293,7 @@ $D(\mathrm{SL}_2(\mathbb{Z}/3\mathbb{Z})) = \mathbb{Z}/8\mathbb{Z}$ pas possible
 
 Interprétation géométrique des translations et dilatations
 
-On appelle transvection (resp. dilatations) toute matrice conjuguée d'une matrice de transvection élémentaire (resp. dilatation élémentaire).
+On appelle transvection (respectivement dilatations) toute matrice conjuguée d'une matrice de transvection élémentaire (respectivement dilatation élémentaire).
 
 # Complément sur le groupe linéaire
 
@@ -311,19 +311,19 @@ Cadre: On considère $u \in \mathrm{GL}(E)$, $u \neq \mathrm{Id}$, qui laisse un
 $$\forall x \in H \ , \ u(x) = x \ .$$
 Il y a alors 2 cas possibles.
 
-> [!note] Prop
+> [!note] Proposition
 > Sous ces hypothèses, les conditions suivantes sont équivalentes
 > 1) $det u = \lambda \neq 1$
 > 2) $u$ est diagonalisable
 > 3) $\operatorname{Im}(u - \mathrm{Id}) \cap H = \{0\}$.
 > 4) Dans une base convenable $Mat(u) = \begin{pmatrix} 1 & & & \\ & \ddots & & \\ & & 1 & \\ & & & \lambda \end{pmatrix}$ ie c'est une dilatation
 
-> [!note] Prop
+> [!note] Proposition
 > Dans les hypothèses ci-dessus, les conditions suivantes sont équivalentes
 > 1) det $u = 1$
 > 2) $u$ non diagonalisable
 > 3) $\operatorname{Im}(u - \mathrm{Id}) \subset H$
-> 4) Dans une base convenable $\text{Mat}(u) = \begin{pmatrix} 1 & & 0 \\ & \ddots & \\ 0 & & 1 \end{pmatrix}$ i.e. c'est une transvection
+> 4) Dans une base convenable $\text{Mat}(u) = \begin{pmatrix} 1 & & 0 \\ & \ddots & \\ 0 & & 1 \end{pmatrix}$ c'est-à-dire c'est une transvection
 
 $H$ hyperplan. Soit $v \in E - H$. Si $(e_1, \dots, e_{n-1})$ base de $H$, $(e_1, \dots, e_{n-1}, v)$ base de $E$ et la matrice de $u$ dans cette base est de la forme $\begin{pmatrix} 1 & & 0 \\ & \ddots & \\ 0 & & 1 \end{pmatrix}$.
 

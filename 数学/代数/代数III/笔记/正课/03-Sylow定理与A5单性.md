@@ -10,7 +10,7 @@ confidence: medium
 # Théorèmes de Sylow
 
 > [!question] Motivation et question
-> **Motivation :** Thm de Lagrange : si $H \subset G$ sous groupe alors $|H| \mid |G|$.
+> **Motivation :** Théorème de Lagrange : si $H \subset G$ sous groupe alors $|H| \mid |G|$.
 > Soit $d \mid |G|$, existe-t-il un sous-groupe de $G$ de cardinal $d$ ?
 > **Non !**
 > **Exercice :** $G = \mathfrak{A}_4$, $|G|=12$. $G$ ne possède pas de sous-groupe d'ordre 6.
@@ -19,7 +19,7 @@ confidence: medium
 
 Soit $p$ nombre premier, $G$ un $p$-groupe, $|G|=p^n$.
 
-> [!note] Prop : sous-groupes d'ordre $p^i$
+> [!note] Proposition : sous-groupes d'ordre $p^i$
 > $\forall i \in \{1,\ldots,n-1\}$, $G$ possède un sous-groupe d'ordre $p^i$.
 
 **Preuve :** Récurrence sur $n$.
@@ -58,7 +58,7 @@ $$\pi^{-1}(K)/H \simeq K$$
 > [!example] Exemple
 > $p$ premier, $\mathbb{F}_p = \mathbb{Z}/p\mathbb{Z}$, $G = \mathrm{GL}_n(\mathbb{F}_p)$ — groupe fini.
 
-> [!info] Prop
+> [!info] Proposition
 > $$|\mathrm{GL}_n(\mathbb{F}_p)| = (p^n - 1)(p^n - p)\cdots(p^n - p^{n-1}) = p^{\frac{n(n-1)}{2}}(p^n - 1)(p^{n-1} - 1)\cdots(p - 1)$$
 
 **Preuve :** $g \in G \iff$ ses vecteurs colonnes forment une base de $(\mathbb{F}_p)^n$.
@@ -66,7 +66,7 @@ $$\pi^{-1}(K)/H \simeq K$$
 Tout revient à déterminer le nombre de bases $(e_1, \ldots, e_n)$ de l'espace vectoriel $(\mathbb{F}_p)^n$.
 
 - $1^{\text{er}}$ vecteur $e_1$ : $e_1 \neq 0$, d'où $|(\mathbb{F}_p)^n| - 1 = p^n - 1$ possibilités ;
-- $2^{\text{e}}$ vecteur $e_2$ : $e_2 \notin \operatorname{Vect}(e_1)$, i.e. $e_2 \in (\mathbb{F}_p)^n - \mathbb{F}_p\cdot e_1$, d'où $p^n - p$ possibilités.
+- $2^{\text{e}}$ vecteur $e_2$ : $e_2 \notin \operatorname{Vect}(e_1)$, c'est-à-dire $e_2 \in (\mathbb{F}_p)^n - \mathbb{F}_p\cdot e_1$, d'où $p^n - p$ possibilités.
 
 On poursuit. Si on a déjà $e_1, \ldots, e_{k-1}$ ($k \geqslant 2$), alors on doit prendre $e_k \notin \operatorname{Vect}(e_1, \ldots, e_{k-1})$, qui est un $\mathbb{F}_p$-espace vectoriel de dimension $k-1$, donc de cardinal $p^{k-1}$ : d'où $p^n - p^{k-1}$ possibilités pour $e_k$.
 
@@ -80,7 +80,7 @@ possède $\frac{n(n-1)}{2}$ termes strictement au-dessus de la diagonale, d'où 
 
 ### Théorème de Sylow
 
-> [!note] Thm (Sylow)
+> [!note] Théorème (Sylow)
 > Si $p$ premier divise $|G|$, alors $G$ possède au moins un $p$-Sylow.
 
 > [!note] Corollaire
@@ -89,7 +89,7 @@ possède $\frac{n(n-1)}{2}$ termes strictement au-dessus de la diagonale, d'où 
 > [!note] Lemme
 > Soit $G$ un groupe, $|G| = p^\alpha m$ avec $p \nmid m$, $\alpha \geqslant 1$. On suppose que $S$ est un $p$-Sylow de $G$. Soit $H < G$ un sous-groupe. Alors il existe $a \in G$ tel que $aSa^{-1} \cap H$ soit un $p$-Sylow de $H$.
 
-> [!info] Rem
+> [!info] Remarque
 > $\forall a \in G$, $aSa^{-1}$ est un $p$-Sylow de $G$.
 
 **Preuve :** On considère l'action de $G$ sur $G/S$ par translation. Pour tout $a \in G$, $\operatorname{Stab}(aS) = aSa^{-1}$.
@@ -115,7 +115,7 @@ Soit $G$ un groupe fini, $|G| = p^\alpha m$ avec $p \nmid m$, $\alpha \geqslant 
 
 **Conclusion :** tout groupe $G$ est isomorphe à un sous-groupe de $\mathrm{GL}_n(K)$ avec $n = |G|$. En prenant $K = \mathbb{F}_p$, on a $G \hookrightarrow \mathrm{GL}_n(\mathbb{F}_p)$, et d'après le lemme, $G$ possède au moins un $p$-Sylow.
 
-> [!note] Thm (Sylow)
+> [!note] Théorème (Sylow)
 > Soit $G$ un groupe, $|G| = p^\alpha m$ avec $p \nmid m$, $\alpha \geqslant 1$.
 >
 > 1. Si $H \subset G$ est un $p$-groupe, alors il existe un $p$-Sylow de $G$ contenant $H$.
@@ -126,7 +126,7 @@ Soit $G$ un groupe fini, $|G| = p^\alpha m$ avec $p \nmid m$, $\alpha \geqslant 
 
 Soit $H \subset G$ un $p$-groupe. Fixons $S$ un $p$-Sylow de $G$. D'après le lemme, il existe $a \in G$ tel que $aSa^{-1} \cap H$ soit un $p$-Sylow de $H$. Mais $H$ est son propre $p$-Sylow, donc
 
-$$\exists a \in G, \quad aSa^{-1} \cap H = H \qquad \text{i.e.} \qquad H \subset \underset{\text{p-Sylow de } G}{aSa^{-1}}.$$
+$$\exists a \in G, \quad aSa^{-1} \cap H = H \qquad \text{c'est-à-dire} \qquad H \subset \underset{\text{p-Sylow de } G}{aSa^{-1}}.$$
 
 Si $S' \subset G$ est un autre $p$-Sylow de $G$, alors $\exists a \in G$ tel que $S' \subset aSa^{-1}$ (d'après 1). Comme $|S'| = |aSa^{-1}|$, on a $S' = aSa^{-1}$. Ainsi, en considérant l'action de $G$ sur l'ensemble des $p$-Sylow par conjugaison, il y a une seule orbite, et son cardinal divise $|G|$.
 
@@ -134,7 +134,7 @@ Si $S' \subset G$ est un autre $p$-Sylow de $G$, alors $\exists a \in G$ tel que
 
 Équation aux classes : si $X^S = \{\text{points fixes}\}$, alors $|X| \equiv |X^S| \bmod p$.
 
-Montrons $|X^S| = 1$, i.e. $X^S = \{S\}$. Soit $T \in X^S$ : $\forall s \in S$, $sTs^{-1} = T$. Soit $H$ le sous-groupe de $G$ engendré par $S$ et $T$. On a $T \triangleleft H$. Mais $S$ et $T$ sont des $p$-Sylow de $G$, donc aussi des $p$-Sylow de $H$. Comme $T \triangleleft H$, $T$ est l'unique $p$-Sylow de $H$, d'où $T = S$.
+Montrons $|X^S| = 1$, c'est-à-dire $X^S = \{S\}$. Soit $T \in X^S$ : $\forall s \in S$, $sTs^{-1} = T$. Soit $H$ le sous-groupe de $G$ engendré par $S$ et $T$. On a $T \triangleleft H$. Mais $S$ et $T$ sont des $p$-Sylow de $G$, donc aussi des $p$-Sylow de $H$. Comme $T \triangleleft H$, $T$ est l'unique $p$-Sylow de $H$, d'où $T = S$.
 
 ### Application : étude de la simplicité d'un groupe selon son cardinal
 
@@ -165,10 +165,10 @@ Montrons $|X^S| = 1$, i.e. $X^S = \{S\}$. Soit $T \in X^S$ : $\forall s \in S$, 
 > [!note] Définition
 > Pour $i \neq j$ dans $\{1, \ldots, n\}$, on note $(ij)$ la permutation $\sigma$ telle que $\sigma(i) = j$, $\sigma(j) = i$ et $\sigma(k) = k$ pour $k \notin \{i, j\}$. C'est une **transposition**.
 
-> [!info] Prop
+> [!info] Proposition
 > $\mathfrak{S}_n$ est engendré par les transpositions.
 
-> [!info] Prop
+> [!info] Proposition
 > $\mathfrak{S}_n$ est engendré par
 >
 > 1. les transpositions $(12), (13), \ldots, (1n)$ ;
@@ -189,29 +189,29 @@ $$(k \ k+1)(1 \ k)(k \ k+1) = (1 \ k+1)$$
 > [!info] Notation
 > $(i_1 \ i_2 \ \ldots \ i_k)$.
 
-> [!info] Rem
+> [!info] Remarque
 > $(i_1 \ i_2 \ \ldots \ i_k) = (i_2 \ i_3 \ \ldots \ i_k \ i_1)$.
 
 > [!note] Définition
 > Le **support** de $(i_1 \ i_2 \ \ldots \ i_k)$ est l'ensemble $\{i_1, i_2, \ldots, i_k\}$.
 
-> [!info] Prop
-> Dans $\mathfrak{S}_n$, pour tout $k \leqslant n$, les $k$-cycles sont conjugués, i.e. si $\sigma, \sigma'$ sont des $k$-cycles, $\exists \tau \in \mathfrak{S}_n$ tel que $\sigma' = \tau\sigma\tau^{-1}$.
+> [!info] Proposition
+> Dans $\mathfrak{S}_n$, pour tout $k \leqslant n$, les $k$-cycles sont conjugués, c'est-à-dire si $\sigma, \sigma'$ sont des $k$-cycles, $\exists \tau \in \mathfrak{S}_n$ tel que $\sigma' = \tau\sigma\tau^{-1}$.
 
 **Preuve :** $\forall \tau \in \mathfrak{S}_n$,
 
 $$\tau(i_1 \ \ldots \ i_k)\tau^{-1} = (\tau(i_1) \ \tau(i_2) \ \ldots \ \tau(i_k))$$
 
-On utilise que l'action de $\mathfrak{S}_n$ sur $\{1, \ldots, n\}$ est $k$-fois transitive pour tout $k \leqslant n$, i.e. : si $i_1, \ldots, i_k$ sont distincts et $j_1, \ldots, j_k$ sont distincts, $\exists \sigma \in \mathfrak{S}_n$ tel que $\sigma(i_1) = j_1, \ldots, \sigma(i_k) = j_k$.
+On utilise que l'action de $\mathfrak{S}_n$ sur $\{1, \ldots, n\}$ est $k$-fois transitive pour tout $k \leqslant n$, c'est-à-dire : si $i_1, \ldots, i_k$ sont distincts et $j_1, \ldots, j_k$ sont distincts, $\exists \sigma \in \mathfrak{S}_n$ tel que $\sigma(i_1) = j_1, \ldots, \sigma(i_k) = j_k$.
 
-> [!note] Thm
+> [!note] Théorème
 > Pour $n \geqslant 3$, $\mathfrak{A}_n$ est engendré par les 3-cycles.
 
 **Preuve :** $\mathfrak{S}_n$ est engendré par les transpositions et $\varepsilon(\text{transposition}) = -1$. Ainsi $\mathfrak{A}_n$ est engendré par les produits de 2 transpositions. Or $(ij)(jk) = (ijk)$. Si $i, j, k, l$ sont distincts,
 
 $$(ij)(kl) = (ij)(jk)(jk)(kl) = (ijk)(jkl)$$
 
-> [!info] Prop
+> [!info] Proposition
 > Si $n \geqslant 5$, les 3-cycles sont conjugués dans $\mathfrak{A}_n$.
 
 **Preuve :** On sait que dans $\mathfrak{S}_n$ les 3-cycles sont conjugués : si $\tau(abc)\tau^{-1} = (a'b'c')$ et $\varepsilon(\tau) = 1$, c'est terminé. Si $\varepsilon(\tau) = -1$ : comme $n \geqslant 5$, il existe $d', e' \in \{1, \ldots, n\}$ avec $d' \neq e'$ et $d', e' \notin \{a', b', c'\}$. Alors $(e'd')(a'b'c')(e'd') = (a'b'c')$. Posons $\widetilde{\tau} = (e'd')\tau \in \mathfrak{A}_n$ ; alors $\widetilde{\tau}(abc)\widetilde{\tau}^{-1} = (a'b'c')$.
@@ -219,7 +219,7 @@ $$(ij)(kl) = (ij)(jk)(jk)(kl) = (ijk)(jkl)$$
 > [!info] Interprétation
 > Si un sous-groupe distingué de $\mathfrak{A}_n$ ($n \geqslant 5$) contient un 3-cycle, alors il les contient tous, et donc il est égal à $\mathfrak{A}_n$.
 
-> [!info] Prop
+> [!info] Proposition
 > Il existe un unique morphisme de groupes non trivial $\mathfrak{S}_n \longrightarrow (\mathbb{C}^*, \cdot)$ : c'est la signature $\varepsilon$.
 
 **Preuve :** Soit $\varphi : \mathfrak{S}_n \longrightarrow (\mathbb{C}^*, \cdot)$ un tel morphisme, et soit $\tau$ une transposition. On a $\tau^2 = \mathrm{Id}$, donc $\varphi(\tau) = \varphi(\tau)^2$, d'où $\varphi(\tau)^2 = 1$ et $\varphi(\tau) \in \{\pm 1\}$ : on voit $\varphi$ à valeurs dans $\{\pm 1\}$.
@@ -228,18 +228,18 @@ Si $\varphi$ est non trivial, il existe une transposition $\tau$ telle que $\var
 
 ### Décomposition en produit de cycles à supports disjoints
 
-> [!note] Thm
+> [!note] Théorème
 > Soit $\sigma \in \mathfrak{S}_n$. Alors il existe des cycles $c_1, \ldots, c_r$ à supports 2 à 2 disjoints tels que
 > $$\sigma = c_1 c_2 \cdots c_r$$
 > De plus, cette décomposition est unique à l'ordre près des facteurs.
 >
-> (Rem. : comme les supports sont disjoints, $\forall i, j$, $c_i\sigma = \sigma c_i$.)
+> (Remarque : comme les supports sont disjoints, $\forall i, j$, $c_i\sigma = \sigma c_i$.)
 
 **Preuve :** Soit $\sigma \in \mathfrak{S}_n$. On considère le sous-groupe $\langle \sigma \rangle$ de $\mathfrak{S}_n$ engendré par $\sigma$, et l'action de ce sous-groupe sur $\{1, \ldots, n\}$. On considère les orbites $F_1, \ldots, F_r$ (y compris les orbites à 1 élément). Soit $k \in F_i$, et soit $s$ le plus petit entier tel que $\sigma^s(k) = k$. Alors $k, \sigma(k), \ldots, \sigma^{s-1}(k)$ sont distincts et $F_i = \{k, \sigma(k), \ldots, \sigma^{s-1}(k)\}$. Dans $F_i$, $\sigma$ agit comme le cycle $(k \ \sigma(k) \ \ldots \ \sigma^{s-1}(k))$. Chaque orbite donne un cycle dont le support est cette orbite.
 
 ### Description des classes de conjugaison dans $\mathfrak{S}_n$
 
-> [!info] Prop
+> [!info] Proposition
 > Deux permutations $\sigma$ et $\sigma'$ sont conjuguées dans $\mathfrak{S}_n$ si et seulement si, $\forall k \in \{1, \ldots, n\}$, elles ont le même nombre de $k$-cycles dans leur décomposition en produit de cycles à supports disjoints.
 
 **Preuve :** Si $\sigma = c_1 \cdots c_r$ et $\tau \in \mathfrak{S}_n$,
@@ -255,8 +255,8 @@ Réciproquement : si $\sigma = c_1 \cdots c_r$ et $\sigma' = c_1' \cdots c_r'$ a
 > 1. L'ordre d'une permutation est le plus petit commun multiple (p.p.c.m.) des longueurs des cycles de sa décomposition.
 > 2. Centre : pour $n \geqslant 3$, $Z(\mathfrak{S}_n) = \{\mathrm{Id}\}$.
 > 3. Questions de simplicité :
->    - **Thm. :** Pour $n \neq 4$, $\mathfrak{A}_n$ est simple.
->    - **Rem. :** Pour $n = 4$, $\mathfrak{A}_4$ n'est pas simple, car il contient le sous-groupe distingué $V = \{\mathrm{Id}, (12)(34), (13)(24), (14)(23)\}$ ($\simeq \mathbb{Z}/2\mathbb{Z} \times \mathbb{Z}/2\mathbb{Z}$).
+>    - **Théorème :** Pour $n \neq 4$, $\mathfrak{A}_n$ est simple.
+>    - **Remarque :** Pour $n = 4$, $\mathfrak{A}_4$ n'est pas simple, car il contient le sous-groupe distingué $V = \{\mathrm{Id}, (12)(34), (13)(24), (14)(23)\}$ ($\simeq \mathbb{Z}/2\mathbb{Z} \times \mathbb{Z}/2\mathbb{Z}$).
 >    - Pour $n = 3$, $\mathfrak{A}_3 \simeq \mathbb{Z}/3\mathbb{Z}$.
 
 ---
@@ -271,7 +271,7 @@ Soit $H \triangleleft \mathfrak{A}_5$, $H \neq \{\mathrm{Id}\}$. Montrons que $H
 
 **Rappel.** Si $h \in H$, $\forall g \in \mathfrak{A}_5$, $ghg^{-1} \in H$. $|\mathfrak{A}_5| = 60 = 2^2 \times 3 \times 5$.
 
-> [!info] Rem
+> [!info] Remarque
 > On considère les orbites des éléments.
 
 **1° Ordre 2 :** Ce sont les produits de 2 transpositions à support disjoint $(ab)(cd)(e)$. Combien ? $5$ choix pour $e$, $\binom{4}{2}$ pour $(ab)$, mais compté $2$ fois, donc
@@ -286,7 +286,7 @@ On a vu qu'ils sont conjugués dans $\mathfrak{A}_5$.
 
 Rappel de la forme : $(1\ i_1\ i_2\ i_3\ i_4)$.
 
-> [!info] Rem
+> [!info] Remarque
 > En général, dans $\mathfrak{S}_n$, il y a $(n-1)!$ cycles de longueur $n$.
 
 Ces 5-cycles ne sont pas tous conjugués dans $\mathfrak{A}_5$ : les 24 éléments d'ordre 5 se répartissent en **deux** classes de conjugaison de 12 éléments chacune. En effet chaque 5-cycle $\sigma$ a pour centralisateur dans $\mathfrak{A}_5$ le sous-groupe d'ordre 5 engendré par $\sigma$, d'où $|\mathrm{Cl}(\sigma)| = 60/5 = 12$; les 24 éléments d'ordre 5 se scindent donc en deux classes de 12 (ce qu'on voit aussi par $24 \nmid 60$).
@@ -312,7 +312,7 @@ Soit $F \subset \{1, \dots, n\}$ une partie à 5 éléments, et $A_F$ le sous-gr
 $$\sigma \in A_F \iff \operatorname{supp}(\sigma) \subset F$$
 On a $A_F \simeq \mathfrak{A}_5$, qui est simple.
 
-Soit $H \triangleleft \mathfrak{A}_n$, $H \neq \{e\}$. Alors $H \cap A_F \triangleleft A_F$, donc soit $H \cap A_F = \{\mathrm{Id}\}$, soit $H \cap A_F = \mathfrak{A}_5$, i.e. $A_F \subset H$. Dans ce dernier cas, comme $\mathfrak{A}_5$ contient des 3-cycles, $H$ aussi, et il les contient tous car ils sont conjugués, d'où $H = \mathfrak{A}_n$ (génération par les 3-cycles).
+Soit $H \triangleleft \mathfrak{A}_n$, $H \neq \{e\}$. Alors $H \cap A_F \triangleleft A_F$, donc soit $H \cap A_F = \{\mathrm{Id}\}$, soit $H \cap A_F = \mathfrak{A}_5$, c'est-à-dire $A_F \subset H$. Dans ce dernier cas, comme $\mathfrak{A}_5$ contient des 3-cycles, $H$ aussi, et il les contient tous car ils sont conjugués, d'où $H = \mathfrak{A}_n$ (génération par les 3-cycles).
 
 Il suffit donc de trouver une partie $F$ à 5 éléments telle que $H \cap A_F \neq \{\mathrm{Id}\}$ : il faut trouver dans $H$ un élément $\neq \mathrm{Id}$ qui a au moins $n - 5$ points fixes.
 
@@ -328,16 +328,16 @@ et $\tau \sigma(b) = b \iff \sigma(b) = \tau^{-1}(b) = c$, mais $c \neq \sigma(b
 
 ## Complément : groupe simple d'ordre 60
 
-> [!note] Thm
+> [!note] Théorème
 > Soit $G$ un groupe simple d'ordre 60. Alors $G \simeq \mathfrak{A}_5$.
 
 **Preuve :** On essaie de faire agir $G$ non trivialement sur un ensemble à 5 éléments. On a alors un morphisme
 $$\varphi : G \to \mathfrak{S}_5$$
-avec $\ker \varphi \neq G$. Comme $G$ est simple, $\ker(\varphi) = \{\mathrm{Id}\}$, i.e. $\varphi$ injectif. Donc $G$ est isomorphe à un sous-groupe de $\mathfrak{S}_5$ de cardinal 60, i.e. à un sous-groupe d'indice 2 de $\mathfrak{S}_5$, donc à $\mathfrak{A}_5$.
+avec $\ker \varphi \neq G$. Comme $G$ est simple, $\ker(\varphi) = \{\mathrm{Id}\}$, c'est-à-dire $\varphi$ injectif. Donc $G$ est isomorphe à un sous-groupe de $\mathfrak{S}_5$ de cardinal 60, c'est-à-dire à un sous-groupe d'indice 2 de $\mathfrak{S}_5$, donc à $\mathfrak{A}_5$.
 
 On cherche donc à faire agir $G$ sur un ensemble $G/H$ de cardinal 5, par translation à gauche : il faut montrer que $G$ possède un sous-groupe d'indice 5.
 
-> [!info] Rem
+> [!info] Remarque
 > $G$ ne possède pas de sous-groupe d'indice $\leqslant 4$.
 >
 > En effet, si $K \subset G$ est d'indice $\leqslant 4$, on considère l'action par translation à gauche sur $G/K$, donc
@@ -354,7 +354,7 @@ d'où $k = 6$, car $k = 1$ est impossible ($G$ simple, un unique 5-Sylow serait 
 
 **Les 2-Sylow.** Leur nombre $k$ vérifie
 $$k \text{ impair} \quad \text{et} \quad k \mid 15$$
-d'où $k \in \{1, 3, 5, 15\}$. Or tous les 2-Sylow sont conjugués, donc $k$ est le cardinal d'une orbite, i.e. l'indice d'un stabilisateur, donc $k \geqslant 6$; d'où $k = 15$.
+d'où $k \in \{1, 3, 5, 15\}$. Or tous les 2-Sylow sont conjugués, donc $k$ est le cardinal d'une orbite, c'est-à-dire l'indice d'un stabilisateur, donc $k \geqslant 6$; d'où $k = 15$.
 
 > [!note] Propriété
 > Si $S_1$ et $S_2$ sont des 2-Sylow, alors $S_1 \cap S_2 = \{e\}$.
@@ -369,14 +369,14 @@ De plus, on a $[G : C(u)] = 6$, d'où $|C(u)| \leqslant \frac{60}{6} = 10$. Ceci
 $$1 + 24 + 45 > 60$$
 éléments dans $G$, contradiction.
 
-> [!info] Rem
+> [!info] Remarque
 > On a vu que nécessairement $C(u) = G$. Alors $u \in Z(G) \triangleleft G$; comme $G$ est simple, $Z(G) = \{e\}$, impossible.
 
 Donc $G$ possède un sous-groupe d'indice 5, et $G \simeq \mathfrak{A}_5$.
 
 ## Application : sous-groupes finis de $SO(3)$
 
-> [!note] Prop
+> [!note] Proposition
 > $SO(3)$ possède un sous-groupe fini isomorphe à $\mathfrak{A}_5$.
 
 **Preuve :** Soit $G$ un sous-groupe fini de $SO(3)$. Il agit sur $X = \{\text{pôles}\}$, et le nombre d'orbites $N$ vaut $2$ ou $3$.
@@ -398,24 +398,24 @@ on a tous les éléments de $G$.
 Soit $H \triangleleft G$, $H \neq \{e\}$.
 - Si $H$ contient un élément d'ordre 5, il contient le sous-groupe cyclique qu'il engendre, qui est un stabilisateur. Il contient tous ses conjugués donc tous les éléments d'ordre 5. Ainsi $|H| \geqslant 24 + 1 = 25$, et comme $|H| \mid 60$, on a $|H| \in \{30, 60\}$. Si $|H| = 30$, $H$ contient un élément d'ordre 3 (car $3 \mid 30$), donc tous les éléments d'ordre 3, d'où $|H| \geqslant 1 + 24 + 20 = 45 > 30$ : contradiction. Donc $|H| = 60$.
 - Si $H$ contient un élément d'ordre 3, de même il les contient tous, d'où $|H| \geqslant 1 + 20 = 21$, et $|H| \in \{30, 60\}$. Si $|H| = 30$, il contient un élément d'ordre 5 (car $5 \mid 30$), donc tous, d'où $|H| \geqslant 45 > 30$ : contradiction. Donc $H = G$.
-- Si $H$ ne contient que des éléments d'ordre 2, il les contient tous, d'où $|H| \geqslant 1 + 15 = 16$, et $|H| \in \{20, 30, 60\}$. Si $|H| = 20$ (resp. $30$), il contient un élément d'ordre 5 (resp. 3), contradiction. Donc $H = G$.
+- Si $H$ ne contient que des éléments d'ordre 2, il les contient tous, d'où $|H| \geqslant 1 + 15 = 16$, et $|H| \in \{20, 30, 60\}$. Si $|H| = 20$ (respectivement $30$), il contient un élément d'ordre 5 (respectivement 3), contradiction. Donc $H = G$.
 
 Donc $G$ est simple et $|G| = 60$, d'où $G \simeq \mathfrak{A}_5$ (voir [[A5单性与60阶群]]).
 
 ## Sous-groupes distingués de $\mathfrak{S}_n$
 
-> [!note] Thm
+> [!note] Théorème
 > Pour $n \geqslant 5$, les seuls sous-groupes distingués de $\mathfrak{S}_n$ sont $\{\mathrm{Id}\}$, $\mathfrak{A}_n$ et $\mathfrak{S}_n$.
 
-**Preuve :** Soit $H \triangleleft \mathfrak{S}_n$, $H \neq \{\mathrm{Id}\}$. On a $H \cap \mathfrak{A}_n \triangleleft \mathfrak{A}_n$, donc $H \cap \mathfrak{A}_n = \{\mathrm{Id}\}$ ou $H \cap \mathfrak{A}_n = \mathfrak{A}_n$, i.e. $\mathfrak{A}_n \subset H \subset \mathfrak{S}_n$. Comme $\mathfrak{A}_n$ est d'indice 2, $H = \mathfrak{A}_n$ ou $H = \mathfrak{S}_n$.
+**Preuve :** Soit $H \triangleleft \mathfrak{S}_n$, $H \neq \{\mathrm{Id}\}$. On a $H \cap \mathfrak{A}_n \triangleleft \mathfrak{A}_n$, donc $H \cap \mathfrak{A}_n = \{\mathrm{Id}\}$ ou $H \cap \mathfrak{A}_n = \mathfrak{A}_n$, c'est-à-dire $\mathfrak{A}_n \subset H \subset \mathfrak{S}_n$. Comme $\mathfrak{A}_n$ est d'indice 2, $H = \mathfrak{A}_n$ ou $H = \mathfrak{S}_n$.
 
 Reste le cas $H \cap \mathfrak{A}_n = \{\mathrm{Id}\}$. Considérons
 $$\varepsilon_{|H} : H \to \{\pm 1\}, \qquad \ker(\varepsilon_{|H}) = H \cap \mathfrak{A}_n = \{\mathrm{Id}\}$$
-donc $\varepsilon_{|H}$ est injective, d'où $|H| = 1$, i.e. $H = \{\mathrm{Id}\}$, cas écarté. Sinon $H = \{\mathrm{Id}, u\}$ avec $u^2 = \mathrm{Id}$ : comme $H \triangleleft G$, on a $\forall g \in G$, $gug^{-1} = u$, i.e. $u \in Z(\mathfrak{S}_n) = \{\mathrm{Id}\}$, impossible.
+donc $\varepsilon_{|H}$ est injective, d'où $|H| = 1$, c'est-à-dire $H = \{\mathrm{Id}\}$, cas écarté. Sinon $H = \{\mathrm{Id}, u\}$ avec $u^2 = \mathrm{Id}$ : comme $H \triangleleft G$, on a $\forall g \in G$, $gug^{-1} = u$, c'est-à-dire $u \in Z(\mathfrak{S}_n) = \{\mathrm{Id}\}$, impossible.
 
 ## Sous-groupes d'indice $n$ de $\mathfrak{S}_n$
 
-> [!note] Prop
+> [!note] Proposition
 > Soit $H \subset \mathfrak{S}_n$ un sous-groupe d'indice $n$. Alors $H \simeq \mathfrak{S}_{n-1}$.
 
 **Preuve :** $|\mathfrak{S}_n / H| = n$. $\mathfrak{S}_n$ agit sur $\mathfrak{S}_n/H$ par translations à gauche, d'où un morphisme
@@ -434,7 +434,7 @@ $$\operatorname{Stab}(x) \simeq \mathfrak{S}_{n-1} \quad \text{car} \quad \mathf
 > [!info] Rappel
 > $G$ groupe, $\mathfrak{D}(G) = \langle [x,y] = xyx^{-1}y^{-1},\ x, y \in G \rangle$, et $G/\mathfrak{D}(G)$ est le « plus gros quotient abélien de $G$ ».
 
-> [!note] Thm
+> [!note] Théorème
 >
 > 1. $\mathfrak{D}(\mathfrak{S}_n) = \mathfrak{A}_n$.
 > 2. Pour $n \geqslant 5$, $\mathfrak{D}(\mathfrak{A}_n) = \mathfrak{A}_n$.
@@ -445,13 +445,13 @@ Pour montrer $\mathfrak{A}_n \subset \mathfrak{D}(\mathfrak{S}_n)$ (ou $\mathfra
 $$\sigma \tau \sigma^{-1} = \tau^2$$
 d'où
 $$\tau^2 = \sigma \tau \sigma^{-1} = \tau \cdot [\tau^{-1}, \sigma^{-1}] \ \ \text{ou bien} \ \ \tau^2 \tau^{-1} = \tau = [\sigma, \tau]$$
-Ainsi $\tau = \sigma\tau\sigma^{-1}\tau^{-1} = [\sigma, \tau] \in \mathfrak{D}(\mathfrak{S}_n)$ : chaque 3-cycle est un commutateur, donc $\mathfrak{A}_n \subset \mathfrak{D}(\mathfrak{S}_n)$ (resp. $\mathfrak{D}(\mathfrak{A}_n)$).
+Ainsi $\tau = \sigma\tau\sigma^{-1}\tau^{-1} = [\sigma, \tau] \in \mathfrak{D}(\mathfrak{S}_n)$ : chaque 3-cycle est un commutateur, donc $\mathfrak{A}_n \subset \mathfrak{D}(\mathfrak{S}_n)$ (respectivement $\mathfrak{D}(\mathfrak{A}_n)$).
 
 ## Complément : retour sur le cas $N = 3$, $e_1 = 2$, $e_2 = 3$, $e_3 = 4$
 
 des sous-groupes finis de $SO(3)$.
 
-> [!note] Prop
+> [!note] Proposition
 > $G \simeq \mathfrak{S}_4$.
 
 **Preuve :** On a vu $|G| = 24$. On fait agir $G$ sur un ensemble à 4 éléments, de façon fidèle. Les orbites ont pour cardinal

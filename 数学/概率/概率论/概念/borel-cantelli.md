@@ -13,11 +13,11 @@ confidence: medium
 > [!tip] Pourquoi
 > Ces deux lemmes relient la convergence de la série des probabilités d'une suite d'événements au fait qu'une infinité d'entre eux se réalisent presque sûrement. C'est l'outil de base pour montrer qu'un événement est de probabilité $0$ ou $1$.
 
-> [!note] Thm. (premier lemme de Borel–Cantelli)
+> [!note] Théorème (premier lemme de Borel–Cantelli)
 > Soit $(A_n)_{n\in\mathbb{N}}$ une suite d'événements telle que $\sum_{n}\mathbb{P}(A_n)<+\infty$. Alors
 > $$\mathbb{P}\left(\limsup_{n\to\infty} A_n\right) = 0.$$
 
-> [!note] Thm. (deuxième lemme de Borel–Cantelli)
+> [!note] Théorème (deuxième lemme de Borel–Cantelli)
 > Soit $(A_n)_{n\in\mathbb{N}}$ une suite d'événements indépendants telle que $\sum_{n}\mathbb{P}(A_n)=+\infty$. Alors
 > $$\mathbb{P}\left(\limsup_{n\to\infty} A_n\right) = 1.$$
 

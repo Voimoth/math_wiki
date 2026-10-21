@@ -19,11 +19,11 @@ confidence: medium
 > (ii) $\forall i\neq j,\ A_i\cap A_j=\varnothing$ ;
 > (iii) $\sum_{i\in I}\mathbb{P}(A_i)=1$.
 
-> [!note] Prop. (formule des probabilités totales)
+> [!note] Proposition (formule des probabilités totales)
 > Si $(A_i)_{i\in I}$ est un système quasi-complet avec $\mathbb{P}(A_i)>0$ pour tout $i$, alors pour tout $B\in\mathcal{F}$,
 > $$\mathbb{P}(B) = \sum_{i\in I}\mathbb{P}(B\mid A_i)\cdot\mathbb{P}(A_i).$$
 
-> [!note] Prop. (formule de Bayes)
+> [!note] Proposition (formule de Bayes)
 > Soient $A,B\in\mathcal{F}$ avec $\mathbb{P}(A)>0$ et $\mathbb{P}(B)>0$. Alors
 > $$\mathbb{P}(A\mid B) = \mathbb{P}(B\mid A)\frac{\mathbb{P}(A)}{\mathbb{P}(B)}.$$
 

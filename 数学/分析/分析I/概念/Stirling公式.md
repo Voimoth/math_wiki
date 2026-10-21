@@ -15,7 +15,7 @@ confidence: medium
 > [!note] Th (Stirling)
 > $$n!\sim\sqrt{2\pi n}\left(\frac{n}{e}\right)^n.$$
 
-> [!note] Prop.（精细形式）
+> [!note] 命题（精细形式）
 > $$\frac{n!}{n^n}\cdot\frac{\mathrm{e}^n}{\sqrt n}=\mathrm{e}^{\left(\frac{1}{12n}+O\left(\frac{1}{n^2}\right)\right)}\sqrt{2\pi}.$$
 
 ## 为什么

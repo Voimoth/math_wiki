@@ -460,3 +460,11 @@
 - 理由：`CD` 要 amscd 宏包，而 pandoc 的 LaTeX 模板不带 → 编不出 PDF（`Environment CD undefined`）。**更正上一版的说法**：Obsidian 的 MathJax 是 full bundle、确实带 amsCd（2026-10-03 已实证），CD 在 Obsidian 里一直能正常渲染，所以这不是「Obsidian 报错」而是「单端可用」—— array 是 Obsidian 与 pandoc 的双端交集。已知代价：MathJax 下 array 的竖箭头较短、不如 amscd 的连线条伸展。
 - 约定：竖直箭头标签按 amscd 位置习惯放（`@V{lab}VV` 标注在左 → `{\scriptstyle lab}\big\downarrow`，`@VV{lab}V` 标注在右 → `\big\downarrow{\scriptstyle lab}`）；callout 内的图每行保留 `> ` 前缀。
 - 验证：12/12 公式引擎校验 0 失败、12/12 pandoc 编译通过、6 个代表图渲染后逐个看过箭头方向与标签位置。
+
+## [2026-10-21] refactor | 全库文字缩写展开（133 个文件，约 1200 处）
+
+- 用户要求「所有笔记里的所有缩写都应该直接展开写，不要保留缩写」。讲座笔记先单独做（9669bf6），其余 133 个文件分 5 批并行展开。
+- 展开项：Prop./Th./Thm./Déf./Théor./Lem./Cor./Rem./Rq. → 定义/命题/定理/推论/注记/引理（中文正文）或 Définition/Proposition/Théorème/Corollaire/Remarque/Lemme（法语正文）；s.t.→使得 / such that / tel que、i.e.→即 / c'est-à-dire、e.g.→例如、resp.→分别 / respectivement、ssi→si et seulement si、tq→tel que、iff→当且仅当、reps/repn→representations、f.d.→finite dimensional、h.w.→highest weight、o.n.b.→orthonormal basis、mult.→multiplication、coeff→coefficients、fcts→functions、w.r.t.→with respect to、v.a.→variable(s) aléatoire(s)（按单复数）、sev/s.e.v→sous-espace vectoriel、Démo→证明 / Démonstration、Irr rep / ind rep / Part_n→完整词。
+- **callout 标签语言按文件正文语言统一**（去掉公式后中文占比 >15% 判为中文笔记）：子代理首批出现的「中文正文却用 Définition」混排已全部纠正（18 个文件、220 处再统一）。
+- **保留项**（判为记号或通行写法，不是文字缩写）：`\iff` 等 LaTeX 命令；etc.；p.s.（presque sûrement）、i.i.d. 两个统计学标准记号；以及「解释缩写本身」的句子（`(if and only if，iff；si et seulement si，ssi)`、`condition nécessaire et suffisante (CNS)`）。
+- 验证：133 个文件公式引擎校验全部 0 失败；check_notation 0 违规；check_wikilinks 0 问题；check_concept_sync 0 问题；git diff 增删行数相等（纯行内替换，无结构变动）。

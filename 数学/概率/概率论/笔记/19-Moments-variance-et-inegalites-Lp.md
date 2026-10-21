@@ -12,22 +12,22 @@ confidence: medium
 
 ## 19.1 Moments
 
-> [!note] Déf. 19.1
-> Soit $r\in\mathbb{N}^*$ et $X$ une v.a. réelle. On dit que $X$ admet un moment d'ordre $r$ si $X^r$ est d'espérance finie, c'est-à-dire
+> [!note] Définition 19.1
+> Soit $r\in\mathbb{N}^*$ et $X$ une variable aléatoire réelle. On dit que $X$ admet un moment d'ordre $r$ si $X^r$ est d'espérance finie, c'est-à-dire
 > $$\mathbb{E}[X^r]<+\infty.$$
 > Le moment d'ordre $r$ de $X$ est alors le nombre $\mathbb{E}[X^r]$.
 
-> [!info] Rq. 19.2
+> [!info] Remarque 19.2
 > Le moment d'ordre 2 est le plus utilisé : il conduit à la notion de variance.
 
 ## 19.2 Variance et écart-type
 
-> [!note] Déf. 19.3 (Variance)
-> Soit $X$ une v.a. d'espérance finie. Si la variable aléatoire $X-\mathbb{E}[X]$ admet un moment d'ordre 2, on appelle variance de $X$ le nombre
+> [!note] Définition 19.3 (Variance)
+> Soit $X$ une variable aléatoire d'espérance finie. Si la variable aléatoire $X-\mathbb{E}[X]$ admet un moment d'ordre 2, on appelle variance de $X$ le nombre
 > $$\operatorname{Var}(X):=\mathbb{E}\bigl[\,|X-\mathbb{E}[X]|^2\,\bigr].$$
 
-> [!info] Rq. 19.4
-> 1) Une v.a. intégrable $X$ est dite centrée si $\mathbb{E}[X]=0$. La variance est donc aussi appelée moment centré d'ordre 2.
+> [!info] Remarque 19.4
+> 1) Une variable aléatoire intégrable $X$ est dite centrée si $\mathbb{E}[X]=0$. La variance est donc aussi appelée moment centré d'ordre 2.
 > 2) $\operatorname{Var}(X)=\mathbb{E}[X^2]-(\mathbb{E}[X])^2$.
 
 **Preuve de 2) :** on pose $m=\mathbb{E}[X]$, d'où $(X-m)^2=X^2-2mX+m^2$, puis
@@ -35,7 +35,7 @@ $$\mathbb{E}\bigl[(X-m)^2\bigr]=\mathbb{E}[X^2]-2m\,\mathbb{E}[X]+m^2=\mathbb{E}
 
 ## 19.3 Inégalité de Cauchy--Schwarz
 
-> [!info] Prop. 19.5 (Inégalité de Cauchy--Schwarz)
+> [!info] Proposition 19.5 (Inégalité de Cauchy--Schwarz)
 > Si $X,Y\in L^2(\Omega)$, alors $XY\in L^1(\Omega)$ et
 > $$\bigl|\mathbb{E}[XY]\bigr|\le\sqrt{\mathbb{E}[X^2]\cdot\mathbb{E}[Y^2]}.$$
 
@@ -51,13 +51,13 @@ Interprétation géométrique : $L^2(\Omega)$ est muni d'un produit scalaire, do
 
 ## 19.4 Inégalités de Hölder
 
-> [!info] Prop. 19.6 (Inégalités de Hölder)
+> [!info] Proposition 19.6 (Inégalités de Hölder)
 > Soient $p,q\in\,]1,+\infty[$ vérifiant la relation de conjugaison $\frac1p+\frac1q=1$. Soient $X\in L^p(\Omega)$ et $Y\in L^q(\Omega)$. Alors $XY\in L^1(\Omega)$ et
 > $$\bigl\|XY\bigr\|_{L^1(\Omega)}\le\|X\|_{L^p(\Omega)}\,\|Y\|_{L^q(\Omega)},$$
 > c'est-à-dire
 > $$\mathbb{E}[XY]\le\bigl(\mathbb{E}[|X|^p]\bigr)^{1/p}\bigl(\mathbb{E}[|Y|^q]\bigr)^{1/q}.$$
 
-> [!info] Rq. 19.7
+> [!info] Remarque 19.7
 > Pour $p=q=2$ on retrouve l'inégalité de Cauchy--Schwarz.
 
 **Preuve :** On rappelle que, pour tous $a,b\ge0$ et $\frac1p+\frac1q=1$,
@@ -66,7 +66,7 @@ Supposons $\|X\|_{L^p(\Omega)}>0$ et $\|Y\|_{L^q(\Omega)}>0$ ; sinon l'inégalit
 $$X_1:=\frac{|X|}{\|X\|_{L^p(\Omega)}},\qquad Y_1:=\frac{|Y|}{\|Y\|_{L^q(\Omega)}},$$
 de sorte que $\|X_1\|_{L^p(\Omega)}=\|Y_1\|_{L^q(\Omega)}=1$. En appliquant $(*)$ avec $a=X_1(\omega)$ et $b=Y_1(\omega)$, on obtient
 $$|X_1(\omega)Y_1(\omega)|\le\frac1p|X_1(\omega)|^p+\frac1q|Y_1(\omega)|^q,\qquad\forall\omega\in\Omega.$$
-En prenant l'espérance et en utilisant la Prop. 18.5 (linéarité, positivité),
+En prenant l'espérance et en utilisant la Proposition 18.5 (linéarité, positivité),
 $$\mathbb{E}\bigl[|X_1Y_1|\bigr]\le\frac1p\,\mathbb{E}\bigl[|X_1|^p\bigr]+\frac1q\,\mathbb{E}\bigl[|Y_1|^q\bigr]=\frac1p+\frac1q=1.$$
 Par conséquent
 $$\mathbb{E}\!\left[\frac{|XY|}{\|X\|_{L^p(\Omega)}\|Y\|_{L^q(\Omega)}}\right]\le1\ \Longrightarrow\ \mathbb{E}[|XY|]=\|XY\|_{L^1(\Omega)}\le\|X\|_{L^p(\Omega)}\|Y\|_{L^q(\Omega)}.$$
@@ -83,7 +83,7 @@ $$\mathbb{E}\!\left[\frac{|XY|}{\|X\|_{L^p(\Omega)}\|Y\|_{L^q(\Omega)}}\right]\l
 
 ## 19.5 Inclusion des espaces $L^r$
 
-> [!note] Cor. 19.9
+> [!note] Corollaire 19.9
 > Soit $X\in L^p(\Omega)$, $p\in[1,+\infty[$. Alors $X\in L^r(\Omega)$ pour tout $1\le r\le p$, autrement dit $L^p(\Omega)\subseteq L^r(\Omega)$.
 > En particulier, si $X\in L^2(\Omega)$, alors $\operatorname{Var}(X)$ existe et
 > $$\operatorname{Var}(X)=\mathbb{E}[X^2]-(\mathbb{E}[X])^2.$$
@@ -91,12 +91,12 @@ $$\mathbb{E}\!\left[\frac{|XY|}{\|X\|_{L^p(\Omega)}\|Y\|_{L^q(\Omega)}}\right]\l
 **Preuve :** On suppose $1\le r<p$ (le cas $r=p$ est immédiat). On écrit $\mathbb{E}[|X|^r]=\mathbb{E}\bigl[|X|^r\cdot1\bigr]$ et on applique Hölder avec les exposants conjugués $\frac pr$ et $\frac{p}{p-r}$ :
 $$\mathbb{E}\bigl[|X|^r\bigr]\le\bigl\|\,|X|^r\bigr\|_{L^{p/r}(\Omega)}\bigl\|1\bigr\|_{L^{p/(p-r)}(\Omega)}=\|X\|_{L^p(\Omega)}^r\,\mathbb{P}(\Omega)^{\frac{p-r}{p}}=\|X\|_{L^p(\Omega)}^r<+\infty.$$
 
-> [!note] Déf. 19.10
+> [!note] Définition 19.10
 > Soit $X\in L^2(\Omega)$. L'écart-type de $X$ est le réel
 > $$\sigma(X)=\sqrt{\operatorname{Var}(X)}.$$
 
 > [!info] Notation
-> Une v.a. $X\in L^2(\Omega)$ est dite centrée réduite si $\mathbb{E}[X]=0$ et $\sigma(X)=1$.
+> Une variable aléatoire $X\in L^2(\Omega)$ est dite centrée réduite si $\mathbb{E}[X]=0$ et $\sigma(X)=1$.
 > Plus généralement, pour tout $X\in L^2(\Omega)$ avec $\sigma(X)\ne0$, la variable
 > $$X^*:=\frac{X-\mathbb{E}[X]}{\sigma(X)}$$
 > est centrée réduite.

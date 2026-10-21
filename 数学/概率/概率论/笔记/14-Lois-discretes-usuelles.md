@@ -14,8 +14,8 @@ confidence: medium
 
 ### Loi uniforme discrète
 
-> [!note] Déf. 14.1
-> Soit $E$ un ensemble fini non vide. Une v.a. $X$ à valeurs dans $(E, \mathcal{P}(E))$ suit la loi uniforme sur $E$ si
+> [!note] Définition 14.1
+> Soit $E$ un ensemble fini non vide. Une variable aléatoire $X$ à valeurs dans $(E, \mathcal{P}(E))$ suit la loi uniforme sur $E$ si
 > $$\forall x \in E, \quad \mathbb{P}(X = x) = \frac{1}{|E|}.$$
 > On note alors $X \sim \mathrm{Unif}(E)$ (« $X$ suit la loi uniforme sur $E$ »).
 
@@ -24,22 +24,22 @@ confidence: medium
 
 ### Loi de Bernoulli
 
-> [!note] Déf. 14.3
-> Soit $p \in [0, 1]$. Une v.a. à valeurs dans $\{0, 1\}$ suit la loi de Bernoulli de paramètre $p$ si
+> [!note] Définition 14.3
+> Soit $p \in [0, 1]$. Une variable aléatoire à valeurs dans $\{0, 1\}$ suit la loi de Bernoulli de paramètre $p$ si
 > $$\mathbb{P}(X = 1) = p, \qquad \mathbb{P}(X = 0) = 1 - p.$$
 > On note $X \sim \mathrm{Ber}(p)$ (« $X$ suit la loi de Bernoulli de paramètre $p$ »).
 
-> [!info] Rq. 14.4
+> [!info] Remarque 14.4
 > Si $A$ est un événement de probabilité $p$, alors $\mathbb{1}_A \sim \mathrm{Ber}(p)$.
 
 ### Loi binomiale
 
-> [!note] Déf. 14.5
-> Soient $n \in \mathbb{N}^*$ et $p \in [0, 1]$. Une v.a. à valeurs dans $[\![0, n]\!]$ suit la loi binomiale de paramètres $n$ et $p$ si
+> [!note] Définition 14.5
+> Soient $n \in \mathbb{N}^*$ et $p \in [0, 1]$. Une variable aléatoire à valeurs dans $[\![0, n]\!]$ suit la loi binomiale de paramètres $n$ et $p$ si
 > $$\forall k \in [\![0, n]\!], \quad \mathbb{P}(X = k) = \binom{n}{k} p^k (1 - p)^{n-k}.$$
 > On note $X \sim \mathcal{B}(n, p)$.
 
-> [!info] Rq. 14.6
+> [!info] Remarque 14.6
 > Cette loi est bien définie car $\displaystyle\sum_{k=0}^n \mathbb{P}(X = k) = \sum_{k=0}^n \binom{n}{k} p^k (1 - p)^{n-k} = (p + (1 - p))^n = 1$.
 
 > [!info] Interprétation
@@ -50,8 +50,8 @@ confidence: medium
 
 ### Loi géométrique
 
-> [!note] Déf. 14.7
-> Soit $p \in ]0, 1[$. Une v.a. $X$ à valeurs dans $\mathbb{N}^*$ suit la loi géométrique de paramètre $p$ si
+> [!note] Définition 14.7
+> Soit $p \in ]0, 1[$. Une variable aléatoire $X$ à valeurs dans $\mathbb{N}^*$ suit la loi géométrique de paramètre $p$ si
 > $$\forall k \in \mathbb{N}^*, \quad \mathbb{P}(X = k) = p(1-p)^{k-1}.$$
 > On note $X \sim \mathcal{G}(p)$.
 
@@ -60,7 +60,7 @@ confidence: medium
 > $$X = \inf\{n \in \mathbb{N}^* \mid A_n \text{ est réalisé}\},$$
 > alors $X \sim \mathcal{G}(p)$.
 
-> [!info] Prop. 14.8 (absence de mémoire)
+> [!info] Proposition 14.8 (absence de mémoire)
 > Soit $X \sim \mathcal{G}(p)$. Alors pour tout $(k, l) \in (\mathbb{N}^*)^2$,
 > - $\mathbb{P}(X > k) = (1-p)^k$ ;
 > - $\mathbb{P}(X > k + l \mid X > k) = \mathbb{P}(X > l)$ : la durée du temps déjà écoulé ne modifie pas la loi du temps d'attente restant.
@@ -73,26 +73,26 @@ confidence: medium
 
 ### Loi de Poisson
 
-> [!note] Déf. 14.9
-> Soit $\lambda > 0$. Une v.a. à valeurs dans $\mathbb{N}$ suit la loi de Poisson de paramètre $\lambda$ si
+> [!note] Définition 14.9
+> Soit $\lambda > 0$. Une variable aléatoire à valeurs dans $\mathbb{N}$ suit la loi de Poisson de paramètre $\lambda$ si
 > $$\forall k \in \mathbb{N}, \quad \mathbb{P}(X = k) = \mathrm{e}^{-\lambda} \frac{\lambda^k}{k!}.$$
 > On note $X \sim \mathcal{P}(\lambda)$.
 
-> [!info] Rq. 14.10
+> [!info] Remarque 14.10
 > Cette loi est bien définie car $\displaystyle\sum_{k=0}^{+\infty} \mathrm{e}^{-\lambda} \frac{\lambda^k}{k!} = \mathrm{e}^{-\lambda} \mathrm{e}^{\lambda} = 1$.
 
 > [!info] Motivation (approximation de Poisson)
 > Une loi binomiale comportant un grand nombre de tests et une faible probabilité de succès est approximativement une loi de Poisson ($n \gg 1$, $p \ll 1$).
 
-> [!note] Thm. 14.11
-> Soit $(p_n)_{n \geq 1}$ une suite telle que $p_n \in [0, 1]$ pour tout $n$ et $n p_n \to \lambda > 0$. Soit $X_n$ une v.a. avec $X_n \sim \mathcal{B}(n, p_n)$. Alors
+> [!note] Théorème 14.11
+> Soit $(p_n)_{n \geq 1}$ une suite telle que $p_n \in [0, 1]$ pour tout $n$ et $n p_n \to \lambda > 0$. Soit $X_n$ une variable aléatoire avec $X_n \sim \mathcal{B}(n, p_n)$. Alors
 > $$\forall k \in \mathbb{N}, \quad \mathbb{P}(X_n = k) \longrightarrow \mathrm{e}^{-\lambda} \frac{\lambda^k}{k!}.$$
 
 **Preuve :** Pour $n \geq k$,
 $$\mathbb{P}(X_n = k) = \binom{n}{k} p_n^k (1-p_n)^{n-k} = \frac{n(n-1)\cdots(n-k+1)}{k!}\, p_n^k \cdot \frac{(1-p_n)^n}{(1-p_n)^k}$$
 $$= \frac{1}{k!} \cdot \frac{1}{(1-p_n)^k} \cdot (n p_n)\big[(n-1)p_n\big] \cdots \big[(n-k+1)p_n\big] \cdot (1-p_n)^n \longrightarrow \frac{1}{k!} \cdot 1 \cdot \lambda^k \cdot \mathrm{e}^{-\lambda}. \qquad \#$$
 
-> [!info] Rq. 14.12 (vecteurs aléatoires)
+> [!info] Remarque 14.12 (vecteurs aléatoires)
 > Le chapitre se poursuit par l'étude des vecteurs aléatoires : pour $n \geq 1$ on pose
 > $$\mathcal{B}(\mathbb{R}^n) = \sigma\Big(\{I_1 \times \cdots \times I_n \mid I_1, \dots, I_n \text{ sont des intervalles de } \mathbb{R}\}\Big),$$
 > tribu borélienne de $\mathbb{R}^n$ (elle contient tous les ouverts et tous les fermés de $\mathbb{R}^n$).

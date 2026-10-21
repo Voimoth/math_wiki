@@ -17,38 +17,38 @@ confidence: medium
 
 ## Convergence en loi
 
-> [!note] Déf. 24.1 (Convergence en loi)
+> [!note] Définition 24.1 (Convergence en loi)
 > Soient $X_1,\dots,X_n$ des variables aléatoires et $X$ une variable aléatoire à valeurs dans $\mathbb{R}$ (définies éventuellement sur des espaces probabilisés différents). On dit que $X_n$ **converge en loi** vers $X$, et on note $X_n\xrightarrow{\mathcal{L}}X$, si pour toute fonction continue bornée $f:\mathbb{R}\to\mathbb{R}$,
 > $$\mathbb{E}[f(X_n)]\xrightarrow[n\to+\infty]{}\mathbb{E}[f(X)].$$
 
-> [!info] Rq. (Lecture en termes de mesures)
+> [!info] Remarque (Lecture en termes de mesures)
 > La convergence en loi est une notion de convergence faible pour une suite de mesures $\mu_n=\mathrm{loi}(X_n)$ : puisque $\mathbb{E}[f(X_n)]=\int_{\mathbb{R}}f\,d\mu_n=\langle\mu_n,f\rangle$,
 > $$X_n\xrightarrow{\mathcal{L}}X\iff\langle\mu_n,f\rangle\to\langle\mu,f\rangle\quad\text{pour tout }f\in C_b(\mathbb{R}).$$
 
 ## Fonctions caractéristiques
 
-> [!note] Déf. 24.2 (Fonction caractéristique)
+> [!note] Définition 24.2 (Fonction caractéristique)
 > Soit $X$ une variable aléatoire à valeurs dans $\mathbb{R}^n$. Sa **fonction caractéristique** est l'application $\varphi_X:\mathbb{R}^n\to\mathbb{C}$ définie par
 > $$\varphi_X(z):=\mathbb{E}\big[\mathrm{e}^{izX}\big].$$
 
-> [!info] Rq.
+> [!info] Remarque
 > Si $\mathrm{loi}(X)=\mu$ est une mesure sur $(\mathbb{R}^n,\mathcal{B}(\mathbb{R}^n))$, alors $\varphi_X(z)=\hat\mu(z)$ est la transformée de Fourier de $\mu$. Pour une variable $X$ à valeurs dans $\mathbb{N}$, on relie $\varphi_X$ et la fonction génératrice $G_X$ par $G_X(t)=\mathbb{E}[t^X]=\mathbb{E}[\exp(X\ln t)]$.
 
-> [!info] Prop. 24.3
+> [!info] Proposition 24.3
 > La fonction caractéristique $\varphi_X$ est continue.
 
-> [!info] Prop. 24.4
+> [!info] Proposition 24.4
 > Soient $X,Y$ deux variables aléatoires à valeurs dans $\mathbb{R}^n$. Alors
 > $$X\overset{\mathcal{L}}{=}Y\iff\varphi_X(z)=\varphi_Y(z)\quad\forall z\in\mathbb{R}^n.$$
 
-> [!info] Prop. 24.5
+> [!info] Proposition 24.5
 > Si $X$ et $Y$ sont indépendantes, alors $\varphi_{(X,Y)}(x,y)=\varphi_X(x)\,\varphi_Y(y)$.
 
 **Preuve :** $\varphi_{(X,Y)}(x,y)=\mathbb{E}\big[\mathrm{e}^{ixX+iyY}\big]=\mathbb{E}\big[\mathrm{e}^{ixX}\cdot \mathrm{e}^{iyY}\big]=\mathbb{E}\big[\mathrm{e}^{ixX}\big]\cdot\mathbb{E}\big[\mathrm{e}^{iyY}\big]=\varphi_X(x)\varphi_Y(y)$, où l'avant-dernière égalité utilise l'indépendance. $\#$
 
 ## Théorème de continuité de Lévy
 
-> [!note] Thm. 24.6 (Théorème de continuité de Lévy)
+> [!note] Théorème 24.6 (Théorème de continuité de Lévy)
 > Soit $X_1,\dots,X_n,\dots$ une suite de variables aléatoires réelles de fonctions caractéristiques $\varphi_{X_n}$. On suppose que pour tout $z\in\mathbb{R}$, $\varphi_{X_n}(z)\to\varphi(z)$. Alors les assertions suivantes sont équivalentes :
 > 1) $X_n\xrightarrow{\mathcal{L}}X$ ;
 > 2) $\varphi$ est continue ;
@@ -79,7 +79,7 @@ confidence: medium
 
 ## Théorème central limite
 
-> [!note] Thm. 24.11 (Théorème central limite)
+> [!note] Théorème 24.11 (Théorème central limite)
 > Soit $(X_n)$ une suite de variables aléatoires i.i.d. avec $X_1\in L^2(\Omega)$. On pose $m=\mathbb{E}[X_1]$, $\sigma^2=\mathrm{Var}(X_1)$ et $S_n=\sum_{j=1}^nX_j$. Alors
 > $$\frac{S_n-nm}{\sqrt{n}\,\sigma}\xrightarrow{\mathcal{L}}\xi\sim\mathcal{N}(0,1).$$
 

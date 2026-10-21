@@ -12,7 +12,7 @@ confidence: medium
 
 把两个级数的「乘积」定义为按对角线归并的级数。
 
-> [!note] Déf.（Cauchy 和）
+> [!note] 定义（Cauchy 和）
 > 令 $c_n=\sum_{i+j=n}a_ib_j$，称 $\sum c_n$ 为 $\sum a_n$ 与 $\sum b_n$ 乘积的 **Cauchy 和**。形式上
 > $$\left(\sum_{n\ge0}a_nx^n\right)\left(\sum_{n\ge0}b_nx^n\right)=\sum_{n\ge0}\sum_{i+j=n}a_ib_jx^n.$$
 

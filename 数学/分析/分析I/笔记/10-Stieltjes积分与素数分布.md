@@ -24,11 +24,11 @@ $$\overline S_\sigma(f)=\sum_{i=1}^n M_i\big(\mu(x_i)-\mu(x_{i-1})\big),\qquad
 > [!example]
 > $\mu(x)=\begin{cases}1,&x\in[0,1[\\ 3,&x\in[1,2]\end{cases}$，$f\in C([0,2])$，则 $\displaystyle\int_0^2 f\,d\mu=2f(1)$。
 
-> [!info] Prop.（分部积分 / Abel 求和公式）
+> [!info] 命题（分部积分 / Abel 求和公式）
 > $\mu:[a,b]\to\mathbb{R}$ 增，$f\in C^1([a,b])$，则
 > $$\underbrace{\int_a^b f'\mu\,dx}_{\text{Riemann}}=f\mu\Big|_a^b-\underbrace{\int_a^b f\,d\mu}_{\text{Stieltjes}}.$$
 
-**Démo :**
+**Démonstration :**
 $$\int_a^b f\,d\mu=\sum_{i=0}^{n-1}f(x_i)\big(\mu(x_{i+1})-\mu(x_i)\big)+o(1)$$
 $$=f(x_n)\big(\mu(x_n)-\mu(x_0)\big)+\sum_{i=0}^{n-1}\big(f(x_i)-f(x_{i+1})\big)\big(\mu(x_{i+1})-\mu(x_0)\big)+o(1)$$
 $$=f\mu\Big|_a^b-\sum_{i=1}^{n}\mu(x_i)\big(f(x_i)-f(x_{i-1})\big)+o(1)$$
@@ -50,16 +50,16 @@ $$=f\mu\Big|_a^b-\int_a^b \mu(x)\,f'(x)\,dx.\quad\#$$
 
 $$\frac18\le\frac{\pi(n)}{n/\log n}\le 12.$$
 
-**Démo :**
+**Démonstration :**
 
-> [!note] Lem 1
+> [!note] 引理 1
 > $$n!=\prod_{p\le n}p^{\,v_p(n!)}.$$
 
-> [!note] Lem 2
+> [!note] 引理 2
 > $C_n^{2n}$ 中 $p$ 的次数为 $\displaystyle\sum_{k\ge1}\left(\left\lfloor\frac{2n}{p^k}\right\rfloor-2\left\lfloor\frac{n}{p^k}\right\rfloor\right)$。
 
 > [!note] Claim 1
-> $$\prod_{n<p\le 2n}p\ \Big|\ C_n^{2n}\qquad(\text{由 Lem 2}).$$
+> $$\prod_{n<p\le 2n}p\ \Big|\ C_n^{2n}\qquad(\text{由 Lemme 2}).$$
 
 $$C_n^{2n}\ \Big|\prod_{p\le 2n}p^{\,v_p(\cdot)}$$
 $$\Rightarrow\ n^{\pi(2n)-\pi(n)}\le C_n^{2n}\le(2n)^{\pi(2n)},\qquad 2^{n}\le C_n^{2n}\le 2^{2n}$$
@@ -76,7 +76,7 @@ $$\Rightarrow\ \frac12\le\frac{\pi(2^{k+1})}{2^{k+1}/(k+1)}\le 3.\quad\#$$
 
 ## 4. Mertens 定理（素数倒数和）的证明
 
-**Démo :** 先证
+**Démonstration :** 先证
 $$\log(N!)=N\sum_{p\le N}\frac{\log p}{p}+O(N).$$
 因为
 $$\log(N!)=\sum_{p\le N}\log p\cdot\left(\left\lfloor\frac Np\right\rfloor+\left\lfloor\frac N{p^2}\right\rfloor+\dots\right)

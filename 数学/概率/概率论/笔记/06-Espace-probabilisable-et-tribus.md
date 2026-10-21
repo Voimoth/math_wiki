@@ -34,7 +34,7 @@ La famille $\mathcal{F}$ et les probabilités $\mathbb{P}(A)$ doivent satisfaire
 
 ## Tribus
 
-> [!note] Déf. 6.3 (tribu)
+> [!note] Définition 6.3 (tribu)
 > Soit $\Omega$ un ensemble non vide. Une famille $\mathcal{F}\subset\mathcal{P}(\Omega)$ est appelée une tribu sur $\Omega$ si :
 > 1. $\Omega\in\mathcal{F}$ ;
 > 2. $A\in\mathcal{F}\Rightarrow A^c\in\mathcal{F}$ ;
@@ -42,10 +42,10 @@ La famille $\mathcal{F}$ et les probabilités $\mathbb{P}(A)$ doivent satisfaire
 >
 > (propriété de stabilité)
 
-> [!note] Déf. 6.4 (espace probabilisable)
+> [!note] Définition 6.4 (espace probabilisable)
 > Pour un ensemble $\Omega\neq\emptyset$ et $\mathcal{F}$ une tribu sur $\Omega$, on appelle le couple $(\Omega,\mathcal{F})$ un espace probabilisable. Dans ce cas, les éléments de $\mathcal{F}$ sont appelés événements.
 
-> [!info] Prop. 6.5
+> [!info] Proposition 6.5
 > Si $\mathcal{F}$ est une tribu sur $\Omega$, alors :
 > 1. $\Omega\in\mathcal{F}$ ;
 > 2. si $(A_n)_{n\in\mathbb{N}}$ est une famille dénombrable d'éléments de $\mathcal{F}$, alors $\bigcap_{n\in\mathbb{N}} A_n\in\mathcal{F}$ ;
@@ -68,7 +68,7 @@ La famille $\mathcal{F}$ et les probabilités $\mathbb{P}(A)$ doivent satisfaire
 
 ## Tribu engendrée
 
-> [!note] Déf. 6.8 (tribu engendrée)
+> [!note] Définition 6.8 (tribu engendrée)
 > Soit $C\subset\Omega$ et soit $(\mathcal{F}_i)_{i\in I}$ la famille des tribus sur $\Omega$ qui contiennent $C$. On définit
 > $$\sigma(C) = \bigcap_{i\in I}\mathcal{F}_i.$$
 > D'après le lemme, $\sigma(C)$ est une tribu sur $\Omega$. On l'appelle la tribu engendrée par $C$. C'est la plus petite tribu sur $\Omega$ qui contient $C$.
@@ -78,18 +78,18 @@ La famille $\mathcal{F}$ et les probabilités $\mathbb{P}(A)$ doivent satisfaire
 
 ## Mesure de probabilité et espace probabilisé
 
-> [!note] Déf. 6.10 (mesure de probabilité)
+> [!note] Définition 6.10 (mesure de probabilité)
 > Soit $\Omega$ un ensemble non vide muni d'une tribu $\mathcal{F}$. Une application $\mathbb{P} : \mathcal{F}\to[0,1]$ est appelée mesure de probabilité si elle satisfait les axiomes suivants :
 > - **A1** ($\sigma$-additivité ; $\sigma$ signifie « dénombrable ») : pour toute suite dénombrable $(A_n)_{n\in\mathbb{N}}$ d'événements deux-à-deux disjoints, on a $\mathbb{P}\!\left(\bigcup_{n\in\mathbb{N}} A_n\right) = \sum_{n\in\mathbb{N}}\mathbb{P}(A_n)$.
 > - **A2** : $\mathbb{P}(\Omega) = 1$.
 
-> [!info] Rq. 6.11
+> [!info] Remarque 6.11
 > Plus généralement, une application $\mu : \mathcal{F}\to\mathbb{R}_+\cup\{+\infty\}$ est une mesure (positive) si $\mu(\emptyset) = 0$ et $\mu$ est $\sigma$-additive.
 > Par exemple, la mesure de comptage sur $\mathbb{N}$ est définie par
 > $$\mu(A) = \begin{cases} \operatorname{Card}(A) & \text{si } A\subset\mathbb{N} \text{ est fini} \\ +\infty & \text{si } A\subset\mathbb{N} \text{ est infini.} \end{cases}$$
 > C'est une mesure (positive) mais pas une mesure de probabilité.
 
-> [!note] Déf. 6.12 (espace probabilisé)
+> [!note] Définition 6.12 (espace probabilisé)
 > Une probabilité est un triplet $(\Omega,\mathcal{F},\mathbb{P})$ tel que :
 > - $\Omega$ est un ensemble non vide ;
 > - $\mathcal{F}$ est une tribu sur $\Omega$ ;

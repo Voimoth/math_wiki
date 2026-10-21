@@ -10,10 +10,10 @@ confidence: high
 
 # Weierstrass 判别法（优级数判别法 / 正规收敛）
 
-> [!note] Déf.（正规收敛，convergence normale）
+> [!note] 定义（正规收敛，convergence normale）
 > $\sum u_n$ **正规收敛**，若每个 $u_n$ 有界，且数项级数 $\sum\|u_n\|_\infty$ 收敛。
 
-> [!note] Thm.（Weierstrass 判别法 / 优级数判别法）
+> [!note] 定理（Weierstrass 判别法 / 优级数判别法）
 > 若存在收敛的数项级数 $\sum M_n$ 使 $\forall n,\ \sup_A\|u_n\|\le M_n$，则 $\sum u_n$ 在 $A$ 上一致（且绝对）收敛。这正是「$\sum u_n$ 正规收敛 $\Rightarrow$ 一致收敛」。
 
 **Preuve（要点）：** $\sum\|u_n\|_\infty$ 收敛故其部分和为 Cauchy 列，由三角不等式 $\bigl\|\sum_{k=m}^n u_k(x)\bigr\|\le\sum_{k=m}^n\|u_k\|_\infty<\varepsilon$ 对一切 $x$ 成立，即 $\sum u_n$ 一致 Cauchy，由 [[函数项级数的一致收敛]] 的 Cauchy 判别法得一致收敛。

@@ -12,7 +12,7 @@ confidence: medium
 
 发散级数也可能有「可求和」的值。Abel 和是最弱、最自然的一种广义和：用幂级数作正则化。
 
-> [!note] Déf.（Abel 意义下可求和）
+> [!note] 定义（Abel 意义下可求和）
 > 若对 $x\in[0,1]$，$\sum a_nx^n$ 均收敛，且 $\lim_{x\to1^-}\sum_{n=0}^{\infty}a_nx^n$ 存在且有限，则称 $\sum_{n=0}^{\infty}a_n$ 在 **Abel 意义下可求和**，记为
 > $$\sum_{n=0}^{\infty}a_n=\lim_{x\to1^-}\sum_{n=0}^{\infty}a_nx^n\quad(A).$$
 

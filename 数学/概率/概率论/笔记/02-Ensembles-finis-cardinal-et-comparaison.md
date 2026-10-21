@@ -15,7 +15,7 @@ confidence: medium
 > [!info] Notation
 > Pour $n \in \mathbb{N}$, on note $[\![1, n]\!] = \{1, 2, \dots, n\}$, avec la convention $[\![1, 0]\!] = \emptyset$.
 
-> [!note] Déf. 2.1 (ensemble fini)
+> [!note] Définition 2.1 (ensemble fini)
 > Un ensemble $E$ est fini s'il existe $n \in \mathbb{N}$ et une bijection $f : [\![1, n]\!] \to E$.
 
 > [!note] Lemme 2.2 (lemme fondamental)
@@ -29,11 +29,11 @@ Hérédité : supposons le résultat vrai pour $m$, et soit $f : [\![1, n]\!] \t
 
 Le résultat est donc vrai pour $m+1$, et le lemme est démontré par récurrence. $\#$
 
-> [!note] Déf. 2.3 (cardinal)
+> [!note] Définition 2.3 (cardinal)
 > Soit $E$ un ensemble fini. S'il existe une bijection $f : [\![1, n]\!] \to E$ pour l'entier $n$, alors $n$ est appelé le cardinal de $E$, et on écrit
 > $\operatorname{Card}(E) = |E| = \#E = n$.
 
-> [!info] Rq.
+> [!info] Remarque
 > Cette définition pose problème : on ne sait pas a priori si un tel entier $n$ est unique. L'unicité est établie par le lemme suivant.
 
 > [!note] Lemme 2.4 (unicité du cardinal)
@@ -43,11 +43,11 @@ Le résultat est donc vrai pour $m+1$, et le lemme est démontré par récurrenc
 
 Grâce au lemme précédent, la définition du cardinal pour les ensembles finis est bien posée.
 
-> [!info] Rq.
+> [!info] Remarque
 > L'ensemble vide $\emptyset$ est le seul ensemble de cardinal nul.
 > Si $|E| = n$, on peut représenter les éléments de $E$ comme une suite ordonnée finie : $E = \{a_1, a_2, \dots, a_n\}$ avec $a_i \neq a_j$ pour tout $i \neq j$.
 
-> [!note] Déf. 2.5 (ensemble infini)
+> [!note] Définition 2.5 (ensemble infini)
 > Un ensemble infini est un ensemble qui n'est pas fini.
 
 > [!example]
@@ -55,11 +55,11 @@ Grâce au lemme précédent, la définition du cardinal pour les ensembles finis
 
 ### Théorème de comparaison et corollaires
 
-> [!note] Thm. 2.6 (théorème de comparaison)
+> [!note] Théorème 2.6 (théorème de comparaison)
 > Soient $E, F$ deux ensembles finis.
-> 1. $|E| \leq |F|$ ssi il existe une injection $E \to F$.
-> 2. $|E| = |F|$ ssi il existe une bijection $E \to F$.
-> 3. Si $E \neq \emptyset$, alors $|E| \leq |F|$ ssi il existe une surjection $F \to E$.
+> 1. $|E| \leq |F|$ si et seulement si il existe une injection $E \to F$.
+> 2. $|E| = |F|$ si et seulement si il existe une bijection $E \to F$.
+> 3. Si $E \neq \emptyset$, alors $|E| \leq |F|$ si et seulement si il existe une surjection $F \to E$.
 
 **Preuve :** Soient $n = |E|$ et $m = |F|$, et $u : [\![1, n]\!] \to E$, $v : [\![1, m]\!] \to F$ deux bijections.
 
@@ -71,10 +71,10 @@ Grâce au lemme précédent, la définition du cardinal pour les ensembles finis
 $$s : [\![1, m]\!] \to [\![1, n]\!], \quad k \mapsto \begin{cases} k & \text{si } k \leq n \\ 1 & \text{si } k > n, \end{cases}$$
 et $u \circ s \circ v^{-1}$ est une surjection $F \to E$. $\#$
 
-> [!note] Cor. 2.7
+> [!note] Corollaire 2.7
 > Soient $E, F$ deux ensembles finis. S'il existe une injection $E \to F$ et une injection $F \to E$, alors $|E| = |F|$.
 
-> [!note] Cor. 2.8
+> [!note] Corollaire 2.8
 > Soit $E$ un ensemble fini.
 > 1. Si $A \subseteq E$, alors $A$ est fini et $|A| \leq |E|$.
 > 2. Si $f : E \to F$ est une application, alors $f(E)$ est fini et $|f(E)| \leq |E|$ ; de plus $|f(E)| = |E|$ si et seulement si $f$ est injective.
@@ -86,12 +86,12 @@ et $u \circ s \circ v^{-1}$ est une surjection $F \to E$. $\#$
 
 2. On a $f(E) = \{f(a_1), f(a_2), \dots, f(a_n)\}$, donc $f(E)$ contient au plus $n$ éléments, d'où $|f(E)| \leq n$. On a $|f(E)| = n$ s'il n'y a pas de valeurs répétées parmi $f(a_1), \dots, f(a_n)$, c'est-à-dire si $f$ est injective.
 
-3. $f$ injective $\Rightarrow |f(E)| = |E|$ (car $f : E \to f(E)$ est bijective) $\Rightarrow f(E) = E \Rightarrow f$ surjective. Réciproquement, $f$ surjective $\Rightarrow f(E) = E \Rightarrow |f(E)| = |E| \Rightarrow f$ injective. Donc $f$ est injective ssi $f$ est surjective ; la bijectivité leur est alors équivalente.
+3. $f$ injective $\Rightarrow |f(E)| = |E|$ (car $f : E \to f(E)$ est bijective) $\Rightarrow f(E) = E \Rightarrow f$ surjective. Réciproquement, $f$ surjective $\Rightarrow f(E) = E \Rightarrow |f(E)| = |E| \Rightarrow f$ injective. Donc $f$ est injective si et seulement si $f$ est surjective ; la bijectivité leur est alors équivalente.
 
 > [!warning]
-> L'hypothèse « $E$ est fini » est indispensable dans le Cor. 2.8(3). Si $E$ est infini on a le contre-exemple $f : \mathbb{N} \to \mathbb{N}$, $n \mapsto n+1$, qui est injective mais non surjective.
+> L'hypothèse « $E$ est fini » est indispensable dans le Corollaire 2.8(3). Si $E$ est infini on a le contre-exemple $f : \mathbb{N} \to \mathbb{N}$, $n \mapsto n+1$, qui est injective mais non surjective.
 
-> [!note] Cor. 2.9 (principe des tiroirs)
+> [!note] Corollaire 2.9 (principe des tiroirs)
 > Si l'on place $n$ objets dans $m$ tiroirs avec $n > m$, alors au moins un tiroir contient au moins deux objets.
 
 **Preuve :** Soit $f : E \to F$ l'application qui associe à chaque objet le tiroir où il est placé ($E$ = ensemble des objets, $F$ = ensemble des tiroirs). Comme $|E| > |F|$, l'application $f$ n'est pas injective : il existe $y \in F$ et $x_1, x_2 \in E$ tels que $f(x_1) = f(x_2) = y$ avec $x_1 \neq x_2$. $\#$

@@ -13,12 +13,12 @@ confidence: high
 
 首先考虑实值。由于暂时没有学习紧拓扑空间，就考虑 $\mathbb R^n$ 的紧子集 $K$。$K$ 上定义的函数集 $A$ 称为一个代数，如果它（对加法、乘法、数乘封闭）。连续函数全体当然是一个代数，我们考虑的是其中的子代数。
 
-> [!note] Déf. 8.1
+> [!note] 定义 8.1
 > $A$ **分离点**（separates points），如果对任何 $x,y\in K$（$x\ne y$），存在 $f\in A$ 使 $f(x)\ne f(y)$。
 
 ## 8.1 实值函数
 
-> [!note] Thm. 8.2 (Stone-Weierstrass)
+> [!note] 定理 8.2 (Stone-Weierstrass)
 > 设 $A$ 是紧集 $K$ 上连续函数的代数。若 $A$ 分离点且 $1\in A$，则 $\bar A=C(K)$（闭包是对 $\|\cdot\|_\infty$ 而言，也就是一致收敛逼近的文雅说法）。
 
 **Preuve :** 1. 若 $A\subset C(K)$ 是代数，则 $\bar A$ 也是:若 $f,g\in\bar A$，有 $f_i,g_i$ 分别一致收敛于 $f,g$，则 $f_i+g_i$ 一致收敛于 $f+g$，故 $f+g\in\bar A$（乘法同理）。

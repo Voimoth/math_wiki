@@ -10,7 +10,7 @@ confidence: high
 
 # Weierstrass 逼近定理
 
-> [!note] Thm.
+> [!note] 定理
 > $f$ 是 $[0,1]$ 上的连续实值函数，$\forall\varepsilon>0$ 存在多项式 $g$ 使 $\sup_{[0,1]}|f-g|\le\varepsilon$。
 
 > [!note] 等价说法

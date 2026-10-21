@@ -14,7 +14,7 @@ confidence: medium
 > La σ-additivité ne parle que de familles **dénombrables** ; le modèle discret repose sur un univers $\Omega$ au plus dénombrable. La dénombrabilité est donc la frontière technique naturelle du chapitre.
 
 > [!note] Définition
-> Un ensemble $E$ est **au plus dénombrable** s'il est fini ou en bijection avec $\mathbb{N}$ ; **dénombrable** s'il est en bijection avec $\mathbb{N}$. (Théorème de comparaison : $E$ au plus dénombrable ssi il s'injecte dans $\mathbb{N}$.)
+> Un ensemble $E$ est **au plus dénombrable** s'il est fini ou en bijection avec $\mathbb{N}$ ; **dénombrable** s'il est en bijection avec $\mathbb{N}$. (Théorème de comparaison : $E$ au plus dénombrable si et seulement si il s'injecte dans $\mathbb{N}$.)
 
 > [!info] Propriétés clés
 >

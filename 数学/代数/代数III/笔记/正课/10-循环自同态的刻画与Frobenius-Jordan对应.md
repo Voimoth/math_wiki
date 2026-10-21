@@ -13,12 +13,12 @@ confidence: medium
 
 ## 1. Le commutant
 
-> [!note] Déf.
+> [!note] 定义
 > Pour $u\in L(E)$, le **commutant** de $u$ est
 > $$\operatorname{Com}(u)=\{\,v\in L(E)\mid u\circ v=v\circ u\,\}.$$
 > On a toujours $K[u]\subset\operatorname{Com}(u)$（多项式在 $u$ 中显然与 $u$ 交换）。
 
-> [!note] Prop.
+> [!note] 命题
 > $u$ cyclique $\iff K[u]=\operatorname{Com}(u)$.
 
 **Preuve.** ($\Rightarrow$) Soit $v\in\operatorname{Com}(u)$，取 $u$ 的循环向量 $x$，则 $(x,u(x),\dots,u^{d-1}(x))$ 是基（$d=\dim E$）。把 $v(x)$ 在这组基上展开：
@@ -33,7 +33,7 @@ $$v(u^k(x))=u^k\bigl(v(x)\bigr)=u^k P(u)(x)=P(u)\bigl(u^k(x)\bigr),$$
 
 ## 2. Sous-espaces stables
 
-> [!note] Prop.
+> [!note] 命题
 > On suppose $K$ infini. Alors $u\in L(E)$ cyclique $\iff u$ ne possède qu'un nombre fini de sous-espaces stables.
 
 **Preuve.** ($\Rightarrow$) 设 $u$ 循环、$P=\mu_u$，则 $E\cong K[X]/(P)$ 且 $u$ 就是乘 $X$。乘 $X$ 不变的子空间恰是 $K[X]/(P)$ 的理想；理想与 $K[X]$ 中包含 $P$ 的理想一一对应，而 $K[X]$ 是主理想环，故理想形如 $(Q)$，$Q$ 首一、$Q\mid P$。$P$ 的首一因式只有有限个。
@@ -42,14 +42,14 @@ $$v(u^k(x))=u^k\bigl(v(x)\bigr)=u^k P(u)(x)=P(u)\bigl(u^k(x)\bigr),$$
 $$E=\bigcup_{j=1}^{n}E_j$$
 是有限个真子空间之并。
 
-> [!note] Lemme
+> [!note] 引理
 > Si $K$ est infini, $E$ n'est pas réunion d'un nombre fini de sous-espaces stricts.
 
 （标准引理：对 $n$ 归纳；两个真子空间之并不能覆盖 $E$，因为取 $x\notin E_1\cup E_2$ 可用 $E_1$ 中的点沿一条仿射直线绕开 $E_2$。）
 
 ## 3. Le bicommutant
 
-> [!note] Thm.
+> [!note] 定理
 > Soit $u\in L(E)$. Alors $\operatorname{Com}\bigl(\operatorname{Com}(u)\bigr)=K[u]$.
 
 **Preuve.** 包含 $K[u]\subset\operatorname{Com}(\operatorname{Com}(u))$ 由定义。反向：取循环分解
@@ -70,7 +70,7 @@ $$v(e_1)=\varphi_i\bigl(v(e_1)\bigr)=\varphi_i\bigl(Q_1(u)(e_1)\bigr)=Q_1(u)(e_1
 
 设 $u$ 的特征多项式分裂。Frobenius 定理把问题化归为**矩阵 compagnon** $C_P$（$P$ 分裂）的 Jordan 分解。
 
-> [!note] Prop.
+> [!note] 命题
 > Dans chaque sous-espace caractéristique, il y a un unique bloc de Jordan de taille $\alpha_i$ :
 > $$\begin{pmatrix}\lambda_i&1&&\\&\ddots&\ddots&\\&&\lambda_i&1\\&&&\lambda_i\end{pmatrix}.$$
 
@@ -81,10 +81,10 @@ $$C_P=\begin{pmatrix}0&&&-a_0\\1&\ddots&&\vdots\\&\ddots&0&-a_{n-2}\\&&1&-a_{n-1
 
 ## 5. De Jordan à Frobenius
 
-> [!note] Rem.
+> [!note] 注记
 > Un bloc de Jordan $J_{\lambda,r}$ donne un endomorphisme cyclique, avec $\chi(X)=\mu(X)=(X-\lambda)^r$.
 
-> [!note] Lemme
+> [!note] 引理
 > Soit $M$ diagonale par blocs de Jordan $J_{\lambda_i,r_i}$. Alors $M$ est cyclique $\iff$ les $\lambda_i$ sont deux à deux distincts.
 
 **Preuve.** 循环 $\iff\chi_M=\mu_M$。而

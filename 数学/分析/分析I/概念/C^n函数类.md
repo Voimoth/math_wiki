@@ -12,16 +12,16 @@ confidence: medium
 
 ## 定义
 
-> [!note] Déf.（高阶可导与 $C^n$）
+> [!note] 定义（高阶可导与 $C^n$）
 > $f$ 称为 **$n$ 次可导**，若其 $n-1$ 阶导数可导，记 $f^{(n)}=(f^{(n-1)})'$。
 > $f\in C^n(I,\mathbb{R})$：$f$ 在 $I$ 上 $n$ 次可导且 $f^{(n)}$ **连续**（$n=0$ 时 $C^0=C$）。若 $\forall n$，$f\in C^n$，称 $f$ 为 **$C^\infty$（光滑，lisse）**。
 
-> [!note] Prop.（分级）
+> [!note] 命题（分级）
 > $f\in C^{p+q}(I,\mathbb{R})\iff f\in C^p(I,\mathbb{R})$ 且 $f^{(p)}\in C^q(I,\mathbb{R})$。
 
 ## 封闭性
 
-> [!note] Th.（复合、逆、除法）
+> [!note] 定理（复合、逆、除法）
 >
 > - 若 $f\in C^n(I,\mathbb{R})$，$g\in C^n(J,\mathbb{R})$，$f(I)\subset J$，则 $g\circ f\in C^n(I)$。
 > - 若 $f\in C^n$ 且 $f\neq0$，则 $1/f\in C^n$。
@@ -32,7 +32,7 @@ confidence: medium
 
 ## 延拓
 
-> [!note] Th.
+> [!note] 定理
 > 设 $f:I\setminus\{a\}$ 是 $C^n$ 的，且对 $k\in[1,n]$，$f^{(k)}$ 在 $a$ 处的单侧极限 $a_k$ 存在且有限，则 $f$ 可延拓为 $C^n$ 函数 $\tilde f:I\to\mathbb{R}$，且 $\tilde f^{(k)}(a)=a_k$。
 
 > [!example]

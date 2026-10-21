@@ -13,7 +13,7 @@ confidence: medium
 用相邻两项之比与 $1$ 比较，判定正项级数敛散。
 
 > [!note] Th (d'Alembert)
-> 设 $\sum a_n$，$a_n\ge0$。若 $\exists q<1$，s.t. $n\ge n_0$ 时 $\frac{a_{n+1}}{a_n}\le q$，则 $\sum a_n$ 收敛。
+> 设 $\sum a_n$，$a_n\ge0$。若 $\exists q<1$，使得 $n\ge n_0$ 时 $\frac{a_{n+1}}{a_n}\le q$，则 $\sum a_n$ 收敛。
 
 ## 为什么
 
@@ -21,13 +21,13 @@ confidence: medium
 
 ## 比值形式的比较
 
-> [!note] Prop.
+> [!note] 命题
 > 设 $\sum a_n$、$\sum b_n$ 正项，若 $n\ge n_0$ 时 $\frac{a_{n+1}}{a_n}\le\frac{b_{n+1}}{b_n}$，则 $\sum a_n$ 收敛 $\Rightarrow\sum b_n$ 收敛。
 
 这是把两个正项级数的「比值」直接比较；本质是把比值当成本征参数，比值越小衰减越快。
 
-> [!note] Th.（比值的加强/退化情形）
-> 若 $\exists r>1$，s.t. $n\ge n_0$ 时 $n\!\left(\frac{a_n}{a_{n+1}}-1\right)\ge r$，则 $\sum a_n$ 收敛。
+> [!note] 定理（比值的加强/退化情形）
+> 若 $\exists r>1$，使得 $n\ge n_0$ 时 $n\!\left(\frac{a_n}{a_{n+1}}-1\right)\ge r$，则 $\sum a_n$ 收敛。
 
 ## 陷阱
 

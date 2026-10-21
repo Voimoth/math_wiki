@@ -17,13 +17,13 @@ confidence: medium
 > Pour $r\in[1,+\infty[$,
 > $$L^r(\Omega):=\bigl\{X\ \big|\ \mathbb{E}[|X|^r]<+\infty\bigr\},\qquad \|X\|_{L^r(\Omega)}:=\bigl(\mathbb{E}[|X|^r]\bigr)^{1/r}.$$
 
-> [!info] Prop. (Cauchy--Schwarz)
+> [!info] Proposition (Cauchy--Schwarz)
 > Si $X,Y\in L^2(\Omega)$, alors $XY\in L^1(\Omega)$ et
 > $$\bigl|\mathbb{E}[XY]\bigr|\le\sqrt{\mathbb{E}[X^2]\,\mathbb{E}[Y^2]}.$$
 
 Sur $L^2(\Omega)$ on munit l'espace du produit scalaire $\langle X,Y\rangle:=\mathbb{E}[XY]$, avec $\langle X,X\rangle=\|X\|_{L^2(\Omega)}^2$ ; l'inégalité s'écrit alors $|\langle X,Y\rangle|\le\|X\|_{L^2}\|Y\|_{L^2}$.
 
-> [!info] Prop. (Hölder)
+> [!info] Proposition (Hölder)
 > Soient $p,q\in\,]1,+\infty[$ conjugués : $\frac1p+\frac1q=1$. Si $X\in L^p(\Omega)$ et $Y\in L^q(\Omega)$, alors $XY\in L^1(\Omega)$ et
 > $$\|XY\|_{L^1(\Omega)}\le\|X\|_{L^p(\Omega)}\|Y\|_{L^q(\Omega)},$$
 > c'est-à-dire $\mathbb{E}[XY]\le(\mathbb{E}[|X|^p])^{1/p}(\mathbb{E}[|Y|^q])^{1/q}$. Pour $p=q=2$ on retrouve Cauchy--Schwarz.

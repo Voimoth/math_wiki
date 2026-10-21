@@ -12,14 +12,14 @@ confidence: medium
 
 ## Convergence presque sûre
 
-> [!note] Déf. 23.1 (Convergence presque sûre)
+> [!note] Définition 23.1 (Convergence presque sûre)
 > Soit $(Y_n)$ une suite de variables aléatoires et $Y$ une variable aléatoire sur $(\Omega,\mathcal{F},\mathbb{P})$. On dit que $Y_n$ **converge presque sûrement** vers $Y$, et on note $Y_n\xrightarrow{p.s.}Y$, si
 > $$\mathbb{P}\Big(\lim_{n\to+\infty}Y_n=Y\Big)=1.$$
 
-> [!info] Rq.
+> [!info] Remarque
 > La convergence presque sûre implique la convergence en probabilité ; la réciproque est fausse.
 
-> [!info] Prop. 23.2 (Critère de convergence presque sûre)
+> [!info] Proposition 23.2 (Critère de convergence presque sûre)
 > Soit $(Y_n)$ une suite de variables aléatoires et $Y$ une variable aléatoire. Si pour tout $\varepsilon>0$,
 > $$\lim_{n\to+\infty}\mathbb{P}\left(\bigcup_{k\ge n}\{|Y_k-Y|\ge\varepsilon\}\right)=0,$$
 > alors $Y_n\xrightarrow{p.s.}Y$.
@@ -34,7 +34,7 @@ c'est-à-dire $\mathbb{P}(\lim Y_n\ne Y)=0$, soit $\mathbb{P}(\lim Y_n=Y)=1$. $\
 
 ## Loi forte des grands nombres (cas $L^2$)
 
-> [!note] Thm. 23.3 (Loi forte des grands nombres, version facile)
+> [!note] Théorème 23.3 (Loi forte des grands nombres, version facile)
 > Soit $(X_n)$ une suite de variables aléatoires indépendantes de même loi, avec $X_1\in L^2(\Omega)$. On pose $m=\mathbb{E}[X_1]$ et $S_n=\sum_{k=1}^nX_k$. Alors
 > $$\frac{S_n}{n}\xrightarrow{p.s.}m.$$
 
@@ -63,9 +63,9 @@ Par conséquent,
 $$\mathbb{P}(B_n)\le\mathbb{P}(C_n)+\sum_{k=n^2}^{(n+1)^2-1}\mathbb{P}(D_k)\le\frac{C\,\mathrm{Var}(X_1)}{n^2\varepsilon^2},$$
 et la série $\sum_n\mathbb{P}(B_n)$ converge.
 
-*Conclusion.* Par le lemme de Borel–Cantelli, $\mathbb{P}\big(\bigcap_{n\ge1}\bigcup_{j\ge n}B_j\big)=0$, donc $\lim_{n\to\infty}\mathbb{P}\big(\bigcup_{j\ge n}B_j\big)=0$. Comme les $B_j$ regroupent les événements $A_k$ pour $k\in[j^2,(j+1)^2)$, on en déduit, par la Prop. 23.2, que $\frac{S_n}{n}\to m$ presque sûrement. $\#$
+*Conclusion.* Par le lemme de Borel–Cantelli, $\mathbb{P}\big(\bigcap_{n\ge1}\bigcup_{j\ge n}B_j\big)=0$, donc $\lim_{n\to\infty}\mathbb{P}\big(\bigcup_{j\ge n}B_j\big)=0$. Comme les $B_j$ regroupent les événements $A_k$ pour $k\in[j^2,(j+1)^2)$, on en déduit, par la Proposition 23.2, que $\frac{S_n}{n}\to m$ presque sûrement. $\#$
 
-> [!info] Rq.
+> [!info] Remarque
 > L'hypothèse $X_1\in L^2(\Omega)$ n'est pas nécessaire : la loi forte des grands nombres reste vraie sous la seule hypothèse $X_1\in L^1(\Omega)$.
 
 ## Voir aussi

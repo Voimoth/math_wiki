@@ -12,19 +12,19 @@ confidence: medium
 
 ## 定义
 
-> [!note] Déf.（Riemann 可积）
+> [!note] 定义（Riemann 可积）
 > 设分割 $\sigma:x_0=a<\dots<x_n=b$，记网格 $\delta(\sigma)=\max_i(x_{i+1}-x_i)$，$\Delta x_i=x_{i+1}-x_i$。称 $f$ 在 $[a,b]$ 上 **Riemann 可积**，若存在 $I\in\mathbb{R}$，使 $\forall\varepsilon>0$，$\exists\delta_\varepsilon>0$：当 $\delta(\sigma)<\delta_\varepsilon$ 时，$\forall\xi_i\in[x_i,x_{i+1}]$，
 > $$\Big|\sum_{i=0}^{n-1}f(\xi_i)\Delta x_i-I\Big|<\varepsilon.$$
 > 记 $I=\int_{[a,b]}f$。
 
 ## Darboux 上下和
 
-> [!note] Déf.
+> [!note] 定义
 > 记 $M_i=\sup_{[x_i,x_{i+1}]}f$，$m_i=\inf_{[x_i,x_{i+1}]}f$，定义**上和** $\overline S(f,\sigma)=\sum M_i\Delta x_i$ 与**下和** $\underline S(f,\sigma)=\sum m_i\Delta x_i$（Darboux 和）。
 > - 加细分割使上和减小、下和增大：$\sigma'$ 更细 $\Rightarrow \overline S(f,\sigma')\le\overline S(f,\sigma)$，$\underline S(f,\sigma')\ge\underline S(f,\sigma)$。
 > - 任意两个分割满足 $\underline S(f,\sigma)\le\overline S(f,\sigma')$。
 
-> [!note] Th.（充要条件）
+> [!note] 定理（充要条件）
 > 记 $\overline I=\inf_\sigma\overline S(f,\sigma)$（上积分），$\underline I=\sup_\sigma\underline S(f,\sigma)$（下积分），则
 > $$f\ \text{Riemann 可积}\iff\overline I=\underline I.$$
 

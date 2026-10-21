@@ -14,20 +14,20 @@ confidence: medium
 
 ### Coefficient binomial
 
-> [!note] Thm. 4.1
+> [!note] Théorème 4.1
 > Le nombre de $p$-combinaisons d'un ensemble $E$ de cardinal $n$ est donné par $\dfrac{A_n^p}{p!}$.
 
-> [!note] Déf. 4.2 (coefficient binomial)
+> [!note] Définition 4.2 (coefficient binomial)
 > Pour $n \in \mathbb{N}$ et $p \in \mathbb{N}$, on écrit
 > $\dbinom{n}{p} = \dfrac{A_n^p}{p!} = \dfrac{n!}{p!\,(n-p)!}$,
 > quantité appelée coefficient binomial, avec la convention $0! = 1$.
 
-> [!info] Rq.
+> [!info] Remarque
 > $\dbinom{n}{0} = 1$, et pour tout $p > n$, $\dbinom{n}{p} = 0$.
 
 ### Principe d'inclusion-exclusion
 
-> [!note] Thm. 4.3 (inclusion-exclusion)
+> [!note] Théorème 4.3 (inclusion-exclusion)
 > Soient $A_1, \dots, A_n$ $n$ ensembles finis (non nécessairement disjoints). On a
 > $$|A_1 \cup \dots \cup A_n| = \sum_{k=1}^n (-1)^{k+1} \sum_{1 \leq r_1 < \dots < r_k \leq n} |A_{r_1} \cap \dots \cap A_{r_k}|.$$
 
@@ -38,13 +38,13 @@ confidence: medium
 
 ### Formule du binôme de Newton
 
-> [!note] Thm. 4.4 (binôme de Newton)
+> [!note] Théorème 4.4 (binôme de Newton)
 > Pour $n \in \mathbb{N}$ et $(a, b) \in \mathbb{C}^2$ (ou dans tout anneau commutatif),
 > $$(a+b)^n = \sum_{k=0}^n \binom{n}{k} a^k b^{n-k}.$$
 
 ## 1.5 Dénombrabilité
 
-> [!note] Déf. 4.5 (ensemble dénombrable)
+> [!note] Définition 4.5 (ensemble dénombrable)
 > Un ensemble $A$ est dénombrable s'il existe une bijection $\mathbb{N} \to A$. Il est dit au plus dénombrable s'il est dénombrable ou fini.
 
 > [!info] Interprétation
@@ -53,7 +53,7 @@ confidence: medium
 > [!example] $\mathbb{Z}$ est dénombrable
 > L'application $\varphi : \mathbb{N} \to \mathbb{Z}$ définie par $\varphi(2k) = k$ et $\varphi(2k+1) = -k-1$ pour tout $k \in \mathbb{N}$ est une bijection $\mathbb{N} \to \mathbb{Z}$.
 
-> [!note] Thm. 4.6 (théorème de comparaison)
+> [!note] Théorème 4.6 (théorème de comparaison)
 > Soit $A$ un ensemble. Les propriétés suivantes sont équivalentes :
 > 1. $A$ est au plus dénombrable ;
 > 2. il existe une injection $A \to \mathbb{N}$ ;

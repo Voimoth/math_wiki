@@ -14,7 +14,7 @@ confidence: medium
 
 > [!note] Th (Cauchy)
 > 设 $\sum a_n$，$a_n\ge0$。
-> ① 若 $\exists q<1$，s.t. 对充分大的 $n$ 有 $\sqrt[n]{a_n}\le q$，则 $\sum a_n$ 收敛；
+> ① 若 $\exists q<1$，使得对充分大的 $n$ 有 $\sqrt[n]{a_n}\le q$，则 $\sum a_n$ 收敛；
 > ② 若 $\exists$ 无穷多个 $n$ 使 $\sqrt[n]{a_n}\ge1$，则 $\sum a_n$ 发散。
 
 ## 为什么

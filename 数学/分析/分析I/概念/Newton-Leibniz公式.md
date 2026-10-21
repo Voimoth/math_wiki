@@ -12,15 +12,15 @@ confidence: medium
 
 ## 定义
 
-> [!note] Th.（变上限积分）
+> [!note] 定理（变上限积分）
 > 设 $f:I\to\mathbb{R}$ 连续，$a\in I$，则 $\Phi(x)=\int_a^xf(t)\,\mathrm dt$ 是 $f$ 的一个原函数，并且是唯一在 $a$ 处取 $0$ 的原函数：
 > $$\Phi'(x)=\lim_{h\to0}\frac1h\int_x^{x+h}f(t)\,\mathrm dt=f(x).$$
 
-> [!note] Th.（Newton-Leibniz，连续情形）
+> [!note] 定理（Newton-Leibniz，连续情形）
 > $f:I\to\mathbb{R}$ 连续，$F'=f$，则
 > $$\int_a^bf(x)\,\mathrm dx=F(b)-F(a).$$
 
-> [!note] Th.（Newton-Leibniz，可积 + 有原函数）
+> [!note] 定理（Newton-Leibniz，可积 + 有原函数）
 > 设 $f\in R([a,b])$ 且有原函数 $F$，则 $\int_a^bf(x)\,\mathrm dx=F(b)-F(a)=F(x)\big|_a^b$。
 
 ## 证明要点
@@ -32,7 +32,7 @@ confidence: medium
 
 ## 变限积分
 
-> [!note] Cor.
+> [!note] 推论
 > $f$ 连续，$\alpha,\beta$ 可导，则 $g(x)=\int_{\alpha(x)}^{\beta(x)}f(t)\,\mathrm dt$ 可导，且
 > $$g'(x)=f(\beta(x))\beta'(x)-f(\alpha(x))\alpha'(x).$$
 
