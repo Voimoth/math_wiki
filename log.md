@@ -392,3 +392,10 @@
 
 - 用户要求：分析III 的 TD 不整理成笔记，建概念页即可。已删 `点集拓扑/笔记/习题课/`（00-总览、04-紧性、05-连通性），清掉 `笔记/00-总览`、`04-概念页索引`、`点集拓扑学习路径`、`分析III/_索引` 中的引用，并撤出地图类登记表。
 - 保留 `乘积拓扑`、`紧性`、`连通性`、`道路连通` 四个概念页（内容取自讲义 §4–§6）。TD 04/05 PDF 仍在 `书籍/分析/分析III/点集拓扑/TD/` 归档。
+
+## [2026-10-21] add | Rosso 讲座（Schur-Weyl / Hecke / 范畴化）笔记与两页概念
+
+- 讲座笔记 `代数III/笔记/讲座/2026-10-21-Rosso-Schur-Weyl与范畴化.md`：六页手写笔记按主题整理（Bruhat 分解与双不变函数→Hecke 代数 Iwahori 关系；Schur-Weyl 分解 $V^{\otimes n}=\oplus S^\lambda\otimes V_\lambda$；对称函数 $m_\lambda/s_\lambda$、$\Delta$、LR 系数；$\bigoplus R[\mathfrak S_n]\to\Lambda(x)$ 的 Hopf 同构＝范畴化的第一个例子；$\mathcal H_q$ 与 $U_q(\mathfrak{gl}_d)$ 的量子 Schur-Weyl），附讲解、最小例子（$d=2,n=2$）、术语表与不确定处 `[?]`。
+- 新增概念页 `Schur-Weyl对偶`、`Hopf代数`（代数III/概念），`群论学习路径` 概念清单与 `正课/00-总览`（新增「讲座」组）同步。
+- 归档（不在 vault）：`书籍/代数/代数III/讲座/Rosso-2026-10-21-Schur-Weyl讲座笔记.pdf` 与讲座海报 jpg；新一批 39 页手写正课笔记 `手写笔记/2026-10-21-正课手写笔记.pdf`。
+- 检查：wikilinks 0、notation 0、concept_sync 0 问题、lint 0 命中。
