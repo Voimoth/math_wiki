@@ -411,3 +411,10 @@
 - 新增概念页 `Hermite型与Signature`、`酉群与极分解`；`代数II/概念/伴随自同态` 补「复 Hermite 情形与正规算子」一节（跨课程同一页）。
 - 转写修正（原稿笔误，均在原处留 warning/注记）：$P_2\mid\gcd(P,1-P)$ 的写法、极化恒等式漏 $h$、Cauchy–Schwarz 中 $\lambda=te^{-i\theta}$、prehilbertien 定义、Courant–Fischer 的下标偏移、$\mathrm{GL}_n(\mathbb Z/2)$ 应为 $\mathbb Z/p$、$U_n$ 中心证明中 $My=y$ 应为 $uy=y$、Gram–Schmidt 一般步的求和。
 - 检查：wikilinks 0、notation 0、concept_sync 0 问题、lint 0 命中；转写稿与 300dpi 图已在收尾时清除（PDF 在资料库可复现）。
+
+## [2026-10-21] fix | 代数III 10–14 篇：删去笔误标注（笔误直接改）、补入 p13 重拍页
+
+- 用户要求：原稿笔误**直接改掉、不在页内标注**。已删除 10–14 篇中全部 `[!warning] 原稿…` / `[!info] 注记（原稿…）` 块（共 9 处），保留改正后的数学；页内不再出现「原稿写作 X」这类整理痕迹。
+- p13（半双线性形式页，原扫描失焦）用户已重拍，据此补齐 `11-半双线性形式与Hermite型` 的 §6 Orthogonalité：$A^\perp$ 定义、$\dim V^\perp=\dim E-\dim V$ 及零化子证明、$(1,1)$ 迷向反例、迷向/非迷向子空间、$V$ 非迷向 $\Rightarrow E=V\oplus V^\perp$、三条正交补性质。该页不再有 `[?]`。
+- 重拍件归档：`书籍/代数/代数III/手写笔记/2026-10-21-正课手写笔记-p13重拍.jpg`。
+- 检查：wikilinks 0、notation 0、concept_sync 0 问题、lint 0 命中；10–14 篇无 `[?]`、无「原稿」字样。

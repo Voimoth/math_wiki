@@ -31,8 +31,6 @@ $$v(u^k(x))=u^k\bigl(v(x)\bigr)=u^k P(u)(x)=P(u)\bigl(u^k(x)\bigr),$$
 
 在 $F_2\oplus\cdots\oplus F_r$ 上 $p=0$，故 $P(u)|_{F_2}=0$，而 $F_2$ 循环、最小多项式为 $P_2$，得 $P_2\mid P$。在 $F_1$ 上 $\mathrm{Id}-p=0$，而 $F_1$ 的最小多项式为 $P_1$，得 $P_1\mid 1-P$。又 $P_2\mid P_1\mid P$，于是 $P_2\mid P$ 且 $P_2\mid 1-P$，从而 $P_2\mid\gcd(P,1-P)=1$，$P_2$ 为常数，与 $r\ge2$ 矛盾。
 
-> [!warning] 原稿此处写作 $P_2\left|\frac{1-P}{P}\right.$：本意是 $P_2$ 同时整除 $P$ 与 $1-P$（即 $\gcd(P,1-P)$），不是商。已按上式改正。
-
 ## 2. Sous-espaces stables
 
 > [!note] Prop.
@@ -67,9 +65,6 @@ $$\varphi_i\bigl(u^k(e_i)\bigr)=u^k(e_1)\qquad(0\le k\le m_i-1,\ m_i=\deg P_i),$
 于是 $\varphi_i\in\operatorname{Com}(u)$，故 $v\circ\varphi_i=\varphi_i\circ v$。作用到 $e_1$：
 $$v(e_1)=\varphi_i\bigl(v(e_1)\bigr)=\varphi_i\bigl(Q_1(u)(e_1)\bigr)=Q_1(u)(e_1).$$
 再对 $u^k(e_1)$ 重复同样的计算（$Q_i(u)$、$Q_1(u)$ 都与 $u^k$ 交换）得 $Q_i(u)|_{E_1}=Q_1(u)|_{E_1}$，从而 $v=Q_1(u)$。
-
-> [!info] 注记（原稿 p05 单行）
-> 原稿在链条中间留下孤立的一行「$Q_i(u)(e_i)$」，语义在原稿中即不完整；此处按上下文并入上面的论证，未改动数学内容。
 
 ## 4. De Frobenius à Jordan
 

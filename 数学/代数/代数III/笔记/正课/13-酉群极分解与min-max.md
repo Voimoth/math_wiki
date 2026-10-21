@@ -32,8 +32,6 @@ confidence: medium
 
 **Preuve.** 设 $M$ 在中心。只需证 $M$ 是位似：固定单位向量 $X$，取 $u\in U_n$ 使 $u(X)=\alpha X$（$|\alpha|=1$）、$u=\mathrm{Id}$ 在 $(\mathbb C X)^\perp$ 上（在适当的正交归一基下 $u=\operatorname{diag}(\alpha,1,\dots,1)$，确实酉）。$M$ 与 $u$ 交换，故稳定 $u$ 的 $\alpha$-特征子空间 $\mathbb C X$，即 $MX=\lambda X$。对每个 $X$ 都如此，故 $M$ 为位似；再转置共轭得 $|\lambda|=1$。
 
-> [!warning] 原稿 p26 此处把「$u$ 在 $(\mathbb C X)^\perp$ 上为恒等」写成了「$My=y$」（$u$ 与 $M$ 混），按上文改正。
-
 > [!note] Prop.
 > $U_n(\mathbb C)$ 与 $SU_n(\mathbb C)$ 紧。
 
@@ -90,9 +88,6 @@ $$\gamma(t)=P\operatorname{diag}(\mathrm{e}^{it\theta_1},\dots,\mathrm{e}^{it\th
 
 **Preuve.** 对 $(A^{-1},C)$ 用 Thm 1：$A^{-1}=P^*P$、$C=P^*DP$，于是 $AC=P^{-1}D P$（相似于对角阵）。
 
-> [!info] 注记
-> 原稿 p30 把中间过程写成 "$C^*A=AC=B$" 与 "$A= P^*\mathrm{Id}\,P$" 等片段；数学内容如上（$A=P^*P$ 是因为新基对 $A$ 正交归一）。若 $A$ 不正定，Thm 2 一般不成立（可退化）。
-
 ## 6. Min-max（Courant–Fischer）
 
 $u=u^*$，特征值 $\lambda_1\le\cdots\le\lambda_n$，正交归一特征基 $e_i$，$\langle u(x),x\rangle=\sum\lambda_i|x_i|^2$。
@@ -105,8 +100,6 @@ $u=u^*$，特征值 $\lambda_1\le\cdots\le\lambda_n$，正交归一特征基 $e_
 > $$\lambda_i=\min_{\substack{F\subset E\\ \dim F=i}}\ \max_{\substack{x\in F\\ \|x\|=1}}\langle u(x),x\rangle=\max_{\substack{G\subset E\\ \dim G=n-i+1}}\ \min_{\substack{x\in G\\ \|x\|=1}}\langle u(x),x\rangle .$$
 
 **Preuve（min-max 一侧）.** 取 $G_i=\operatorname{Vect}(e_i,\dots,e_n)$（$\dim=n-i+1$）；对任意 $\dim F=i$ 有 $F\cap G_i\ne\{0\}$，取单位向量 $y\in F\cap G_i$，则 $\langle u(y),y\rangle\ge\lambda_i$，故 $\max_{F}\ge\lambda_i$；而取 $F=F_i:=\operatorname{Vect}(e_1,\dots,e_i)$ 时 $\max$ 恰为 $\lambda_i$（在 $F_i$ 上 $\langle u(x),x\rangle\le\lambda_i$，等号在 $e_i$）。max 一侧对 $-u$ 用同一结论。
-
-> [!warning] 原稿 p32 把中间特征值写成「$F_i=\operatorname{Vect}(e_1,\dots,e_i)$，$\lambda_i=\max_{x\in F_i^\perp}$」：在 $F_i^\perp$ 上的 max 实际是 $\lambda_{i+1}$（当 $i<n$）。标准的 Courant–Fischer 表述如上，已改正下标。
 
 ## 7. Matrice de Gram
 

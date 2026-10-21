@@ -65,10 +65,6 @@ $$\overline{\psi(y,x)}=\bar\lambda\,\overline{\varphi(y,x)}=\bar\lambda\alpha\va
 $h$ 可以还原 $\varphi$（**极化恒等式**）：
 $$\varphi(x,y)=\tfrac14\Bigl(h(x+y)-h(x-y)+i\,h(x+iy)-i\,h(x-iy)\Bigr).$$
 
-> [!warning] 原稿 p11 此处第三项写成 $-i(x+iy)$（漏了 $h$）、且与第四项符号顺序也不一；按上式改正，并保留原稿的 $h(x+y)=h(x)+h(y)+2\operatorname{Re}\varphi(x,y)$ 作为检验。
-> [!info] 注记
-> 原稿这一行确实写作 $-i(x+iy)+i\,h(x-iy)$，与极化恒等式的标准形式差一个整体符号与一个 $h$；数学上只有上式能给出 $\varphi$。
-
 ## 5. Matrices hermitiennes
 
 记 $H=(\varphi(e_i,e_j))_{i,j}$。则 $H$ 是 Hermite 矩阵：$H^*={}^t\bar H$，$H=H^*$。
@@ -86,8 +82,29 @@ $$H'=P^*HP .$$
 
 > [!note] Déf.
 > $x\perp y\iff\varphi(x,y)=0$。$\varphi$ Hermite 对称时该关系对称。
+> 对 $A\subset E$，$A$ 的**正交补**为
+> $$A^\perp=\{y\in E:\forall x\in A,\ \varphi(x,y)=0\},$$
+> 它是 $E$ 的子空间。
 
-（原稿 p13 整页失焦，仅可辨：$V^\perp$ 的定义、isotrope 的定义、非退化时 $E=V\oplus V^\perp$ 的断言。以下按 p14 的性质补全记号：$V^\perp=\{x:\forall v\in V,\ \varphi(x,v)=0\}$；$x$ 称为**迷向**（isotrope）若 $h(x)=0$。）[?]
+> [!note] Prop.
+> $h$ 非退化（即 $\varphi$ 非退化）、$\dim E<\infty$，$V\subset E$ 为子空间。则
+> $$\dim V^\perp=\dim E-\dim V .$$
+> 但一般**不一定** $V\cap V^\perp=\{0\}$。
+
+**Preuve.** $\hat\varphi:E\to E^*$、$x\mapsto\varphi_x$ 是双射，它把 $V^\perp$ 送到 $V$ 的零化子：
+$$\hat\varphi(V^\perp)=\{\varphi_x:x\in V^\perp\}=\{\varphi_x:\forall y\in V,\ \varphi(x,y)=0\}=V^\circ,$$
+而 $\dim V^\circ=\dim E-\dim V$，故 $\dim V^\perp=\dim\hat\varphi(V^\perp)=\dim V^\circ=\dim E-\dim V$。
+
+> [!example] 迷向的例子
+> 在 $\mathbb C^2$ 上取 $\varphi(x,y)=\bar x_1y_1-\bar x_2y_2$（$h(x)=|x_1|^2-|x_2|^2$，非退化），取 $e=(1,1)$：$\varphi(e,e)=0$。于是 $\mathbb Ce\subset(\mathbb Ce)^\perp$，$V\cap V^\perp=V\ne\{0\}$。
+
+> [!note] Déf.
+> $x\in E$ 称为**迷向**（isotrope）若 $h(x)=0$。子空间 $V$ 称为迷向若 $V\cap V^\perp\ne\{0\}$，否则称**非迷向**。
+
+> [!note] Prop.
+> $V$ 非迷向 $\Rightarrow E=V\oplus V^\perp$。
+
+理由：$V\cap V^\perp=\{0\}$，而 $\dim V+\dim V^\perp=\dim E$。
 
 > [!note] Prop.
 > $h$ 非退化、$\dim E<\infty$。则对子空间 $V,W$：
@@ -95,7 +112,7 @@ $$H'=P^*HP .$$
 > 2. $(V+W)^\perp=V^\perp\cap W^\perp$；
 > 3. $(V\cap W)^\perp=V^\perp+W^\perp$。
 
-**Preuve.** 1) 恒有 $V\subset V^{\perp\perp}$；而 $\dim V^{\perp\perp}=\dim E-(\dim E-\dim V)=\dim V$（非退化给 $\dim V^\perp=\dim E-\dim V$），故相等。2) 由定义直接读出。3) 对 2) 取正交。
+**Preuve.** 1) 恒有 $V\subset V^{\perp\perp}$；而 $\dim V^{\perp\perp}=\dim E-(\dim E-\dim V)=\dim V$，故相等。2) 由定义直接读出。3) 对 2) 取正交。
 
 ## 7. Base orthogonale 与标准形
 
