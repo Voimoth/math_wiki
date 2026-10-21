@@ -399,3 +399,15 @@
 - 新增概念页 `Schur-Weyl对偶`、`Hopf代数`（代数III/概念），`群论学习路径` 概念清单与 `正课/00-总览`（新增「讲座」组）同步。
 - 归档（不在 vault）：`书籍/代数/代数III/讲座/Rosso-2026-10-21-Schur-Weyl讲座笔记.pdf` 与讲座海报 jpg；新一批 39 页手写正课笔记 `手写笔记/2026-10-21-正课手写笔记.pdf`。
 - 检查：wikilinks 0、notation 0、concept_sync 0 问题、lint 0 命中。
+
+## [2026-10-21] add | 代数III 正课手写笔记（39 页，2026-10）并入：笔记 10–14
+
+- 新一批手写法文正课笔记 39 页（`书籍/代数/代数III/手写笔记/2026-10-21-正课手写笔记.pdf`）视觉转写后整理为五篇：
+  `10-循环自同态的刻画与Frobenius-Jordan对应`（交换子/有限多稳定子空间/bicommutant/Frobenius↔Jordan/Young 型对齐）、
+  `11-半双线性形式与Hermite型`（半线性映射、Hermite 对称、非退化、正交关系对称 ⟺ $\varphi=\lambda\psi$、极化恒等式、标准形与 signature）、
+  `12-正定形式伴随与正规算子`（Cauchy–Schwarz、范数、伴随、正规算子五等价、Hermite/反 Hermite/酉、正交投影与对称、Gram–Schmidt）、
+  `13-酉群极分解与min-max`（QR、$U_n/SU_n$、中心、紧、道路连通、正平方根、极分解、极大紧子群、同时化、Courant–Fischer、Gram 矩阵）、
+  `14-张量积的万有性质与两个群论练习`（$n!\mid|\mathrm{GL}_n(\mathbb F_p)|/(p-1)^n$ 用正规化子、$G\times H\simeq G\times H'\Rightarrow H\simeq H'$、张量积万有性质）。
+- 新增概念页 `Hermite型与Signature`、`酉群与极分解`；`代数II/概念/伴随自同态` 补「复 Hermite 情形与正规算子」一节（跨课程同一页）。
+- 转写修正（原稿笔误，均在原处留 warning/注记）：$P_2\mid\gcd(P,1-P)$ 的写法、极化恒等式漏 $h$、Cauchy–Schwarz 中 $\lambda=te^{-i\theta}$、prehilbertien 定义、Courant–Fischer 的下标偏移、$\mathrm{GL}_n(\mathbb Z/2)$ 应为 $\mathbb Z/p$、$U_n$ 中心证明中 $My=y$ 应为 $uy=y$、Gram–Schmidt 一般步的求和。
+- 检查：wikilinks 0、notation 0、concept_sync 0 问题、lint 0 命中；转写稿与 300dpi 图已在收尾时清除（PDF 在资料库可复现）。
