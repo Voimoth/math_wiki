@@ -54,13 +54,13 @@ Connection between reps of $\mathfrak{S}_n$ and $\mathrm{GL}_d(\mathbb C)$.
 1) $\mathfrak{S}_n$ : irreducible reps are parametrized by partitions of $n$, $\lambda=(\lambda_1\ge\lambda_2\ge\cdots\ge\lambda_n)$, $V_\lambda$.
 
 2) $\mathrm{GL}_d(\mathbb C)$ : classification of f.d. reps, highest weight.
-Consider restriction to diagonal matrices $\begin{pmatrix}t_1&&{ \\& } ;\ddots&\\&&t_n\end{pmatrix}$ which you try to simultaneously diagonalize.
+Consider restriction to diagonal matrices $\begin{pmatrix}t_1&&\\&\ddots&\\&&t_n\end{pmatrix}$ which you try to simultaneously diagonalize.
 For $\lambda=(\lambda_1,\dots,\lambda_n)\in\mathbb Z^n$ :
-$$\chi_\lambda:\begin{pmatrix}t_1&&{ \\& } ;\ddots&\\&&t_n\end{pmatrix}\longmapsto t_1^{\lambda_1}\cdots t_n^{\lambda_n}.$$
+$$\chi_\lambda:\begin{pmatrix}t_1&&\\&\ddots&\\&&t_n\end{pmatrix}\longmapsto t_1^{\lambda_1}\cdots t_n^{\lambda_n}.$$
 $V=\bigoplus V_\lambda$. $V$ is completed by the "highest" $\lambda$, $\lambda_1\ge\cdots\ge\lambda_n$.
 
 The rep of $\mathrm{GL}_d(\mathbb C)$ with h.w. $\lambda$ is determined by "character" $g\mapsto\operatorname{Tr}(\rho(g))$.
-Restricted to diagonal matrices $\begin{pmatrix}t_1&&{ \\& } ;\ddots&\\&&t_d\end{pmatrix}$, it will be a polynomial in $t_1,\dots,t_d$, which is symmetric :
+Restricted to diagonal matrices $\begin{pmatrix}t_1&&\\&\ddots&\\&&t_d\end{pmatrix}$, it will be a polynomial in $t_1,\dots,t_d$, which is symmetric :
 $$s_\lambda=\frac{\det\bigl(t_i^{\lambda_j+d-j}\bigr)}{\det\bigl(t_i^{d-j}\bigr)} .$$
 
 **Détails.** Consider standard rep of $\mathrm{GL}_d(\mathbb C)$ in $\mathbb C^d=V$.
@@ -79,11 +79,11 @@ $\forall g\in\mathrm{GL}_d$, $\forall w\in\mathfrak{S}_n$ : $g$ and $w$ commute.
 A nice way to have tensor products of representations.
 
 Let $(A,m)$ associative alg. $\Delta:A\to A\otimes A$ algebra morphism :
-$$\begin{CD}
-A @>{\Delta}>> A\otimes A\\
-@V{\Delta}VV @VV{\Delta\otimes\mathrm{Id}}V\\
-A\otimes A @>>{\mathrm{Id}\otimes\Delta}> A^{\otimes3}
-\end{CD}$$
+$$\begin{array}{ccc}
+A & \xrightarrow{\ \Delta\ } & A\otimes A\\[6pt]
+{\scriptstyle\Delta}\big\downarrow & & \big\downarrow{\scriptstyle\Delta\otimes\mathrm{Id}}\\[6pt]
+A\otimes A & \xrightarrow{\ \mathrm{Id}\otimes\Delta\ } & A^{\otimes3}
+\end{array}$$
 $\varepsilon:A\to k$ counit ("cogèbre").
 $A=k[G]$, $\Delta(g)=g\otimes g$.
 
