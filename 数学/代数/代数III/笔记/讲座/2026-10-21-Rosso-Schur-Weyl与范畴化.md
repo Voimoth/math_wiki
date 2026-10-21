@@ -14,7 +14,7 @@ confidence: medium
 > 讲者：Marc Rosso（Université Paris Cité）
 > 时间：2026-10-21（三）16:00–17:00，五教 5106
 
-以下按原稿顺序整理，保留原稿的写法与记号（原稿的 $\mathfrak{S}_n$ 手写作花体，字形近似 $G$）。
+以下按原稿顺序整理，保留原稿的记号（原稿的 $\mathfrak{S}_n$ 手写作花体，字形近似 $G$）；原稿的速记缩写一律展开为完整词。
 
 ## 1. Symmetric group 与 general linear group
 
@@ -32,9 +32,9 @@ Representations of groups : $\rho:G\to\mathrm{GL}_n(k)$ morphisms.
 
 Group algebra $k[G]=\mathcal F(G,k)$, convolution product. $\delta_g$ (delta function), $\delta_g\cdot\delta_{g'}=\delta_{gg'}$.
 
-Bruhat : consider bi-invariant functions on $\mathrm{GL}_n(k)$ w.r.t. $B$ :
+Bruhat : consider bi-invariant functions on $\mathrm{GL}_n(k)$ with respect to $B$ :
 
-> [!note] Déf. (fonctions bi-invariantes)
+> [!note] Définition (fonctions bi-invariantes)
 > $$\mathcal H_n=\{f:\mathrm{GL}_n(k)\to k,\ f(bgb')=f(g),\ \forall b,b'\in B\}.$$
 > $\forall w\in\mathfrak{S}_n$，$BwB$ 的特征函数记为 $T_w$。
 
@@ -49,36 +49,36 @@ $$\mathcal H_n(q)=\{T_i,\ 1\le i\le n-1,\ \text{relations }(\star)\ \ p\leftarro
 
 ## 3. Classical：Schur–Weyl 对偶
 
-Connection between reps of $\mathfrak{S}_n$ and $\mathrm{GL}_d(\mathbb C)$.
+Connection between representations of $\mathfrak{S}_n$ and $\mathrm{GL}_d(\mathbb C)$.
 
-1) $\mathfrak{S}_n$ : irreducible reps are parametrized by partitions of $n$, $\lambda=(\lambda_1\ge\lambda_2\ge\cdots\ge\lambda_n)$, $V_\lambda$.
+1) $\mathfrak{S}_n$ : irreducible representations are parametrized by partitions of $n$, $\lambda=(\lambda_1\ge\lambda_2\ge\cdots\ge\lambda_n)$, $V_\lambda$.
 
-2) $\mathrm{GL}_d(\mathbb C)$ : classification of f.d. reps, highest weight.
+2) $\mathrm{GL}_d(\mathbb C)$ : classification of finite dimensional representations, highest weight.
 Consider restriction to diagonal matrices $\left(\begin{smallmatrix}t_1&&\\&\ddots&\\&&t_n\end{smallmatrix}\right)$ which you try to simultaneously diagonalize.
 For $\lambda=(\lambda_1,\dots,\lambda_n)\in\mathbb Z^n$ :
 $$\chi_\lambda:\begin{pmatrix}t_1&&\\&\ddots&\\&&t_n\end{pmatrix}\longmapsto t_1^{\lambda_1}\cdots t_n^{\lambda_n}.$$
 $V=\bigoplus V_\lambda$. $V$ is completed by the "highest" $\lambda$, $\lambda_1\ge\cdots\ge\lambda_n$.
 
-The rep of $\mathrm{GL}_d(\mathbb C)$ with h.w. $\lambda$ is determined by "character" $g\mapsto\operatorname{Tr}(\rho(g))$.
+The representation of $\mathrm{GL}_d(\mathbb C)$ with highest weight $\lambda$ is determined by "character" $g\mapsto\operatorname{Tr}(\rho(g))$.
 Restricted to diagonal matrices $\left(\begin{smallmatrix}t_1&&\\&\ddots&\\&&t_d\end{smallmatrix}\right)$, it will be a polynomial in $t_1,\dots,t_d$, which is symmetric :
 $$s_\lambda=\frac{\det\bigl(t_i^{\lambda_j+d-j}\bigr)}{\det\bigl(t_i^{d-j}\bigr)} .$$
 
-**Détails.** Consider standard rep of $\mathrm{GL}_d(\mathbb C)$ in $\mathbb C^d=V$.
+**Détails.** Consider standard representation of $\mathrm{GL}_d(\mathbb C)$ in $\mathbb C^d=V$.
 Take $V^{\otimes n}$ where $G$ acts $g(v_1\otimes\cdots\otimes v_n)=g(v_1)\otimes\cdots\otimes g(v_n)$.
 Observe $\mathfrak{S}_n$ acts on $V^{\otimes n}$ by permuting the vectors :
 $$w(v_1\otimes\cdots\otimes v_n)=v_{w(1)}\otimes\cdots\otimes v_{w(n)} .$$
 $\forall g\in\mathrm{GL}_d$, $\forall w\in\mathfrak{S}_n$ : $g$ and $w$ commute.
 
-> [!note] Thm. (Schur–Weyl)
+> [!note] Theorem (Schur–Weyl)
 > They are exactly commutant of each other.
 > $$(\mathbb C^d)^{\otimes n}=\bigoplus_{\lambda\ \text{partitions}}V_\lambda\otimes W_\lambda,$$
-> $V_\lambda$ for $\mathfrak{S}_n$, $W_\lambda$ ind rep for $\mathrm{GL}_d$.
+> $V_\lambda$ for $\mathfrak{S}_n$, $W_\lambda$ induced representation for $\mathrm{GL}_d$.
 
 ## 4. Hopf algebra structure
 
 A nice way to have tensor products of representations.
 
-Let $(A,m)$ associative alg. $\Delta:A\to A\otimes A$ algebra morphism :
+Let $(A,m)$ associative algebra $\Delta:A\to A\otimes A$ algebra morphism :
 $$\begin{array}{ccc}
 A & \xrightarrow{\ \Delta\ } & A\otimes A\\[6pt]
 {\scriptstyle\Delta}\big\downarrow & & \big\downarrow{\scriptstyle\Delta\otimes\mathrm{Id}}\\[6pt]
@@ -97,18 +97,18 @@ $R(x)=\{f,\ \text{degré borné}\}$ : if $\alpha_1+\cdots+\alpha_n>d$, $x^\alpha
 from an algebra on which $\mathfrak{S}_\infty$ acts : $\mathfrak{S}_\infty=\bigcup_n\mathfrak{S}_n$, $\mathfrak{S}_1\subset\mathfrak{S}_2\subset\cdots\subset\mathfrak{S}_n$.
 
 Then
-$$\Lambda(x):=R(x)^{\mathfrak{S}_\infty}=\Bigl\{f=\sum c_\alpha x^\alpha \ \text{s.t.}\ c_\alpha=c_\beta\ \text{if}\ \beta=w(\alpha),\ w\in\mathfrak{S}_\infty\Bigr\}.$$
+$$\Lambda(x):=R(x)^{\mathfrak{S}_\infty}=\Bigl\{f=\sum c_\alpha x^\alpha \ \text{such that}\ c_\alpha=c_\beta\ \text{if}\ \beta=w(\alpha),\ w\in\mathfrak{S}_\infty\Bigr\}.$$
 
-ex. $\lambda=(\lambda_1\ge\lambda_2\ge\cdots\ge\lambda_n\ge0)$ :
+Example. $\lambda=(\lambda_1\ge\lambda_2\ge\cdots\ge\lambda_n\ge0)$ :
 $$m_\lambda=\sum_{\alpha\sim\lambda}x^\alpha\qquad\text{symmetric monomial},$$
 $$m_{(2,1)}=x_1^2x_2+x_1x_2^2+x_1^2x_3+x_1x_3^2+\cdots$$
 
-> [!note] Prop.
+> [!note] Proposition
 > The $m_\lambda$'s form a basis of $\Lambda(x)$.
 
-Other examples : $S_\lambda$ "Schur symmetric functions" : $\exists!\,s_\lambda\in\Lambda(x)$ s.t. when we put $x_{n+1}=x_{n+2}=\cdots=0$ one gets the Schur polynomial which gives character of $\mathrm{GL}_n$.
+Other examples : $S_\lambda$ "Schur symmetric functions" : $\exists!\,s_\lambda\in\Lambda(x)$ such that when we put $x_{n+1}=x_{n+2}=\cdots=0$ one gets the Schur polynomial which gives character of $\mathrm{GL}_n$.
 
-> [!note] Prop.
+> [!note] Proposition
 > The $s_\lambda$'s are also a basis.
 
 **Coproduct.** Idea : $\mathbb N\times\mathbb N\hookrightarrow\mathbb N$, $\Delta:\Lambda(x)\to\Lambda(x)\otimes\Lambda(x)$.
@@ -120,17 +120,17 @@ $$\Delta m_{(2,1)}(x,y)=x_1^2x_2+x_1x_2^2+\cdots+x_1^2y_1+x_1y_1^2+x_1^2y_2+x_1y
 $$=m_{(2,1)}(x)+m_{(2)}(x)m_{(1)}(y)+m_{(1)}(x)m_{(2)}(y)+m_{(2,1)}(y)$$
 $$\Delta m_\lambda(x)=\sum_{\mu\cup\nu=\lambda}m_\mu\otimes m_\nu .$$
 
-> [!note] Thm.
-> On the basis given by Schur fcts $s_\lambda$ :
+> [!note] Theorem
+> On the basis given by Schur functions $s_\lambda$ :
 > $$s_\lambda s_\mu=\sum_\nu c_{\lambda\mu}^\nu s_\nu,\qquad \Delta s_\nu=\sum_{\lambda,\mu}c_{\lambda\mu}^\nu\,s_\lambda\otimes s_\mu$$
-> — some structure coeff for $\Delta$ and mult. ; $c_{\lambda\mu}^\nu\in\mathbb N$.
+> — some structure coefficients for $\Delta$ and multiplication ; $c_{\lambda\mu}^\nu\in\mathbb N$.
 
-On $\Lambda(x)$ there is an inner product of $s_\lambda$ o.n.b. ; $m$ et $\Delta$ adjoints.
+On $\Lambda(x)$ there is an inner product of $s_\lambda$ orthonormal basis ; $m$ et $\Delta$ adjoints.
 
 ## 6. A realization of $\Lambda(x)$
 
 Consider the chain $\mathfrak{S}_1\subset\mathfrak{S}_2\subset\cdots\subset\mathfrak{S}_n$, $\mathfrak{S}_i\times\mathfrak{S}_j\hookrightarrow\mathfrak{S}_{i+j}$.
-Call $R[\mathfrak{S}_n]=\mathbb Z[\text{Irr rep}]$ (representation ring).
+Call $R[\mathfrak{S}_n]=\mathbb Z[\text{irreducible representations}]$ (representation ring).
 2 operations : Restriction
 $$R[\mathfrak{S}_{i+j}]\to R[\mathfrak{S}_i\times\mathfrak{S}_j]=R[\mathfrak{S}_i]\otimes R[\mathfrak{S}_j],$$
 Induction
@@ -140,20 +140,20 @@ $$A=\bigoplus_{j\ge1}R[\mathfrak{S}_j].$$
 Induction provides product ; Restriction provides $\Delta:A\to A\otimes A$,
 $$R[\mathfrak{S}_n]\longrightarrow\bigoplus_{i+j=n}R[\mathfrak{S}_i]\otimes R[\mathfrak{S}_j].$$
 
-> [!note] Thm.
-> There is a Hopf alg isomorphism
+> [!note] Theorem
+> There is a Hopf algebra isomorphism
 > $$A\longrightarrow\Lambda(x)$$
-> $$\text{repn } \mathfrak{S}_n\longmapsto e_n=\sum_{i_1<\cdots<i_n}x_{i_1}\cdots x_{i_n};\qquad \lambda\in\text{Part}_n:\ \text{rep } V_\lambda\ \text{of}\ \mathfrak{S}_n\longmapsto s_\lambda .$$
+> $$\text{representation } \mathfrak{S}_n\longmapsto e_n=\sum_{i_1<\cdots<i_n}x_{i_1}\cdots x_{i_n};\qquad \lambda\ \text{a partition of } n:\ \text{representation } V_\lambda\ \text{of}\ \mathfrak{S}_n\longmapsto s_\lambda .$$
 
 ## 7. Quantization
 
-Come back to Hecke alg $\mathcal H_n(q)$.
+Come back to Hecke algebra $\mathcal H_n(q)$.
 It acts on each $(\mathbb C^d)^{\otimes n}$ as follows. $s_i=(i\ i+1)$, it acts only on positions $i,i+1$ :
 $$v_1\otimes\cdots\otimes v_i\otimes v_{i+1}\otimes\cdots\otimes v_n\longmapsto v_1\otimes\cdots\otimes v_{i+1}\otimes v_i\otimes\cdots\otimes v_n .$$
 $$T_i(e_k\otimes e_l)=\begin{cases}q\,e_k\otimes e_l,&k=l,\\ e_l\otimes e_k,&k>l,\\ e_l\otimes e_k+(q-q^{-1})\,e_k\otimes e_l,&k<l.\end{cases}$$
 Introduce $(e_1,\dots,e_d)$ basis of $\mathbb C^d$.
 
-There is a "deformation" or "quantization" of $\mathrm{GL}_d(\mathbb C)$ or rather of its enveloping algebra of $\mathfrak{gl}_d(\mathbb C)=M_d(\mathbb C)$, which has a Hopf alg structure, which acts in $\mathbb C^d$ as in classical situation, but due to non trivial $\Delta:V_q\to V_q\otimes V_q$ provides a Schur-Weyl duality with $\mathcal H_n(q)$.
+There is a "deformation" or "quantization" of $\mathrm{GL}_d(\mathbb C)$ or rather of its enveloping algebra of $\mathfrak{gl}_d(\mathbb C)=M_d(\mathbb C)$, which has a Hopf algebra structure, which acts in $\mathbb C^d$ as in classical situation, but due to non trivial $\Delta:V_q\to V_q\otimes V_q$ provides a Schur-Weyl duality with $\mathcal H_n(q)$.
 
 ## 相关概念
 
