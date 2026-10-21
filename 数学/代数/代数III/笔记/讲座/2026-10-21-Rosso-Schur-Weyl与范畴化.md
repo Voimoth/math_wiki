@@ -155,6 +155,25 @@ Introduce $(e_1,\dots,e_d)$ basis of $\mathbb C^d$.
 
 There is a "deformation" or "quantization" of $\mathrm{GL}_d(\mathbb C)$ or rather of its enveloping algebra of $\mathfrak{gl}_d(\mathbb C)=M_d(\mathbb C)$, which has a Hopf algebra structure, which acts in $\mathbb C^d$ as in classical situation, but due to non trivial $\Delta:V_q\to V_q\otimes V_q$ provides a Schur-Weyl duality with $\mathcal H_n(q)$.
 
+## 掌握状态与补课路径（2026-10-22 判断）
+
+五站骨架（Bruhat → Hecke → 经典 Schur–Weyl → $\Lambda(x)$/Hopf → 量子化）**现在即可掌握**，只需
+「对象是谁、被什么困难逼出、在整条线的哪一站」，不需要任何课程之外的工具。
+
+真正卡人的三块，课程**不会补**：
+
+- $\mathfrak{S}_n$ 的不可约 ↔ 分拆、Specht 模 —— 课内只到「共轭类 = 分拆」（见 [[代数III/概念/对称群]]）；
+- $\mathrm{GL}_d$ 有限维表示由最高权分类 —— 课内只有 $\mathrm{GL}_n/\mathrm{SL}_n$ 的群结构；
+- 对称函数环 $\Lambda(x)$、表示环 $R[\mathfrak{S}_n]$ 与诱导/限制 —— 课内没有；
+- Hecke 代数只在 [[Bruhat分解]] 里露过影子，量子群没有。
+
+因此「等学完张量积再回头」不成立：张量积（`14-张量积的万有性质` §4）已含万有性质，
+而讲座只用到双线性、结合性与「逐因子作用」，$V^{\otimes n}$ 的构造不需要更多。
+
+补课顺序（本地有书）：Sagan《The Symmetric Group》(GTM 203) 的 Specht 模一章 → Macdonald / Stanley EC2
+的对称函数 → Kassel 或 Chari–Pressley 的量子群。讲座里**没展开**的只有范畴化（摘要说「time permits」的
+further applications 不在笔记里），被砍掉的是最容易的部分，硬骨头都在笔记正文。
+
 ## 相关概念
 
 - [[Schur-Weyl对偶]]
