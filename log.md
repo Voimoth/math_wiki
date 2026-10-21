@@ -439,3 +439,10 @@
 - 逐页分带重读 6 页原稿，修正上一版的实质错误：Bruhat 分解原稿作 $\mathrm{GL}_n(k)=BG_nB$（不是 $B\mathfrak S_nU$）；$\mathcal H_n$ 的定义量词是 $\forall b,b'\in B$；关系编号为 $(\star)$；$\mathcal H_n(q)$ 处原稿写 `relations (⋆)  p←q`（不是 `with p=q`）；$s_\lambda$ 的存在性原稿写 $\exists!$；余乘的"想法"是 $\mathbb N\times\mathbb N\hookrightarrow\mathbb N$，并补上 $\Lambda(x)\otimes\Lambda(y)=R(x,y)^{G_\infty\cdot G_\infty}$；$\Delta m_{(2,1)}$ 补回三行单项展开与四项合并（$m_{(2)}(x)m_{(1)}(y)+m_{(1)}(x)m_{(2)}(y)$）；$A\to\Lambda(x)$ 处补 $\lambda\in\mathrm{Part}_n$；Hecke 末段原稿作 "acts in $\mathbb C^d$" 且对偶对象写作 $\mathcal H_n(q)$。
 - 删去 `## p.1`…`## p.6`，改按原稿自带的小标题分节（Symmetric/GL、Bruhat、Schur-Weyl、Hopf、Symmetric functions、realization、Quantization）；补上原稿画的余结合交换图（AMScd）。
 - 用户把 `$\exists\,p$` 的 `\,` 删掉（那是 LaTeX 细空格，渲染出来像多余的空格/逗号）；按其版本保留 `$\exists p$`。
+
+## [2026-10-21] fix | 讲座笔记：原稿花体 S 误作 G_n，全文改回 𝔖；格式对齐正课笔记
+
+- 原稿的 $\mathfrak{S}_n$ 是花体手写，字形近似 $G$，转写时被读成 $G_n$。已全部改回：$\mathfrak{S}_n$、$\mathfrak{S}_\infty=\bigcup_n\mathfrak{S}_n$、$\mathfrak{S}_{|G|}$、$R[\mathfrak{S}_n]$、$\mathfrak{S}_i\times\mathfrak{S}_j\hookrightarrow\mathfrak{S}_{i+j}$。
+- 格式对齐正课笔记 01–14：frontmatter 同款（title 前缀「代数III(群论) · 讲座」、tags 含 algebre）、正文按 `## N.` 编号分节、定义/命题/定理进 `> [!note]` callout、推导用 `**Détails.**` 正文、结尾 `## 相关概念`。
+- 全库排查同类误读：其它页面的 $G_x$（稳定子）、$G_M$（半直积）、$G_i$（正合列）都是合法用法，无「花体 S 记作 G」的残留。
+- 检查：notation 0、wikilinks 0、concept_sync 0 问题、lint 0 命中。
