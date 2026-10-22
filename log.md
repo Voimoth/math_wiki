@@ -469,3 +469,9 @@
 - **保留项**（判为记号或通行写法，不是文字缩写）：`\iff` 等 LaTeX 命令；etc.；p.s.（presque sûrement）、i.i.d. 两个统计学标准记号；以及「解释缩写本身」的句子（`(if and only if，iff；si et seulement si，ssi)`、`condition nécessaire et suffisante (CNS)`）。
 - 验证：133 个文件公式引擎校验全部 0 失败；check_notation 0 违规；check_wikilinks 0 问题；check_concept_sync 0 问题；git diff 增删行数相等（纯行内替换，无结构变动）。
 - 2026-10-22 讲座史线：新建 `代数III/概念/表示论简史.md`（Schur–Weyl 线的年表 1890–1999，逐条标出处；三处不可靠处标注：Gordan 的「神学」引文、双中心化子的措辞、$S_\infty$ 属现代框架）。核实用一手源：MacTutor Frobenius 传记（1896-07-16 柏林科学院、与 Dedekind 1896-04-12 起的通信、1898 Frobenius 互反、Schur 是 1901 博士生）、Wikipedia Schur–Weyl duality/Bruhat decomposition/Categorification/Nagayoshi Iwahori/Michio Jimbo、zbMATH 的 Rosso 著作表（1988 CMP 量子群最高权定理、1989 PBW 与 universal R-matrix）。讲座笔记页与 Schur-Weyl 页互链、索引补 4 条（含此前漏登的 Schur-Weyl/Hopf/讲座入口）。用户 2026-10-22 明确：讲座深层机制「一时讲不清楚就算了」，历史只讲到第四幕（Bruhat/Hecke）即收，不要再主动展开量子群与范畴化。
+
+## [2026-10-22] fix | 表达层清理：14 处模板句与英译腔改为直陈（lint_natural_chinese 归零）
+
+- 用户要求「直接改掉」自然中文 lint 的 14 处提示：11 处「本质上是」、1 处「从来不是……而是」、1 处「使……成为可能」、1 处「本节的目的是」。
+- 改法：能直接说关系的就去掉包装（「行列式就是『对每一列都线性、且交错』的多重线性函数」、「群表示就是群代数上的模」、「『是不是内点』是相对拓扑的概念」、「Weyl 判据就是测度的 Fourier 唯一性命题」）；需要判断语气的改写断（「史书把一般线性群的出现归到这一步」替代「史书说这一步使一般线性群成为可能」；「Galois 手上没有抽象群，只有根集上的置换」替代「从来不是……而是」）。
+- 验证：lint_natural_chinese 0 处 / 804 文件；check_notation 0 违规 / 803 文件；check_concept_sync 0 问题 / 25 登记项；check_wikilinks 0 问题。git diff 为 14 个文件各 1 行替换，无结构变动。

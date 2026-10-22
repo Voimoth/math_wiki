@@ -33,7 +33,7 @@ $$\lim_{N\to\infty}\frac1N\sum_{n\le N}f(\xi_n)=\int_0^1 f(x)\,dx.$$
 
 > [!tip] 判据的内核
 > Weyl 判据：数列等分布 $\iff$ 对每个非零整数 $k$，$\frac1N\sum_{n\le N}e^{2\pi ik\xi_n}\to0$。
-> 这本质上是一个**测度的 Fourier 唯一性命题**——非零频率上 Fourier 系数全为零的测度只能是均匀（归一化 Lebesgue）测度；实现它靠三角多项式的稠密性。
+> 这就是**测度的 Fourier 唯一性命题**——非零频率上 Fourier 系数全为零的测度只能是均匀（归一化 Lebesgue）测度；实现它靠三角多项式的稠密性。
 
 > [!info] 历史注记
 >
