@@ -1,7 +1,7 @@
 ---
 title: Jordan 标准型（forme de Jordan）
 created: 2026-10-03
-updated: 2026-10-03
+updated: 2026-10-22
 type: concept
 tags: [algebre, endomorphisme, jordan, trigonalisation, class-de-similitude]
 sources: [代数 II 正课手写笔记]
@@ -43,6 +43,9 @@ confidence: medium
 > - Jordan 型**只在域上分裂时**存在；不分裂就要先扩域（或改用一般域上的有理标准形/Frobenius 型）。
 > - 把 $\beta$ 归一成 $1$ 靠的是「换一组合适的基」，不是相似变换之外的操作；归一后的块才唯一。
 > - 两个同阶、同特征多项式的矩阵未必相似——要比较 Jordan 块（等价地比较 $\operatorname{rg}(A-\lambda I)^m$）。
+
+> [!tip] 块的来源：$k[X]/((X-\lambda)^k)$ 上「乘 $X$」
+> 在这个商空间上，「乘 $X$」等于 $\lambda\,\mathrm{Id}$ 再加「乘 $X-\lambda$」，后者幂零、$k$ 步到零。所以 Jordan 块 $\lambda\mathrm{Id}+N$ 不是另起的构造，它就是初等因子 $(X-\lambda)^k$ 对应的循环块：域上分裂时每个初等因子都长成一次幂，循环块于是全变成 Jordan 块。
 
 ## 与不变因子的换算（代数III 视角）
 

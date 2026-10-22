@@ -1,7 +1,7 @@
 ---
 title: Frobenius 标准型（forme de Frobenius）
 created: 2026-10-19
-updated: 2026-10-19
+updated: 2026-10-22
 type: concept
 tags: [algebre, endomorphisme, frobenius, invariants-de-similitude, modules]
 sources: [代数III 正课讲义]
@@ -67,6 +67,12 @@ confidence: high
 > 令 $P\cdot x=P(u)(x)$，则 $E$ 是 $k[X]$-模（见 [[代数III/概念/模]]）：稳定子空间即子模，循环子空间同构于 $k[X]/(\mu_x)$，Frobenius 分解写成
 > $$E\cong k[X]/(P_1)\oplus\cdots\oplus k[X]/(P_r),\qquad P_r\mid\cdots\mid P_1,$$
 > 正是主理想整环 $k[X]$ 上有限生成挠模的结构定理：「不变因子」之名由此而来。
+
+> [!tip] 整除链是排法的产物，不是额外条件
+> 结构定理的第一层只给**初等因子**：$E\cong\bigoplus k[X]/(P_i^{e_i})$，$P_i$ 不可约，这些不可约幂的多重集唯一。整除链 $P_r\mid\cdots\mid P_1$ 是把同一不可约因子的各次幂按列对齐（每列从上到下取同一层）后逐行相乘得到的，不是定理之外附加的要求。所以 Frobenius 型的唯一性完全来自结构定理，整除链只决定各块怎么排成一行行。
+
+> [!warning] 域无关性落在哪一层
+> 不变因子 $P_i$ 的系数在 $k$ 里，算法只用 $k[X]$ 的带余除法，扩域不改变它们；「把 $P_i$ 分解成不可约幂」这一步才依赖域。同一个 $X^2+1$ 在 $\mathbb{R}$ 上是一个不可约因子，在 $\mathbb{C}$ 上分裂成两列。于是初等因子随扩域而变，不变因子不变，相似性也不变。
 
 ## 6. 交换子（commutant）
 
