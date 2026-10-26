@@ -57,6 +57,9 @@ confidence: high
 > [!info] 定义与推论
 > 这些 $P_i$ 称为**相似不变量**（invariants de similitude）或**不变因子**（facteurs invariants）。合适基下 $A\sim\operatorname{diag}(C_{P_1},\dots,C_{P_r})$，$\mu_u=P_1$、$\chi_u=P_1\cdots P_r$；$r=1$ 即循环情形。
 
+> [!warning] 两种排法都对，看方向再引用
+> 本页按**降序** $P_r\mid\cdots\mid P_1$ 排（$P_1=\mu_u$ 在最前）；习题课讲义（`笔记/习题课/12-循环分解与不变因子`）按**升序** $f_1\mid\cdots\mid f_r$ 排（$f_r=\mu_\varphi$ 在最后）。同一组多项式的两种写法，$P_i=f_{r+1-i}$。引用「不变因子」时先确认作者取的是哪一端。
+
 **Preuve（存在性）:** 取 $P_1=\mu_u$ 与 $\mu_x=\mu_u$ 的 $x$，$F_1$ 为其循环子空间（$d=\deg P_1$）。把 $x,u(x),\dots,u^{d-1}(x)$ 补成基，取对偶基中最后一个线性型 $\varphi$；$\varphi,{}^{t}u\varphi,\dots,{}^{t}u^{d-1}\varphi$ 线性无关、张成 $G\subset E^*$，其零化子 $G^\circ$ 是 $u$-稳定的、维数 $n-d$、与 $F_1$ 交为 $0$。对 $G^\circ$ 归纳，由 $P_1=\mu_u$ 得 $P_i\mid P_1$。
 
 **Preuve（唯一性）:** 两组分解逐块比较，$P_1=Q_1=\mu_u$。若前 $i-1$ 个相同，对 $P_i(u)(E)$ 用两种分解算维数，前面相消后只剩 $\sum_{j\ge i}\dim P_i(u)(G_j)=0$，故 $Q_i\mid P_i$；交换角色得 $P_i\mid Q_i$。
@@ -81,6 +84,26 @@ confidence: high
 > $$u\text{ 循环}\iff k[u]=\operatorname{Com}(u).$$
 
 **Preuve :** 循环时 $v$ 由 $v(x)$ 决定且 $v(x)=P(u)(x)$（$\deg P<n$），故 $\operatorname{Com}(u)\subset k[u]$，维数同为 $n$。$r\ge2$ 时到 $F_1$ 的投影与 $u$ 交换，但 $P(u)|_{F_1}=\mathrm{Id}$ 迫使 $P(u)|_{F_2}=\mathrm{Id}$，故它不在 $k[u]$。
+
+## 7. 子空间与商仍循环
+
+> [!note] 命题
+> $(V,\varphi)$ 循环，$W\subset V$ 是 $\varphi$-不变子空间，则 $(W,\varphi|_W)$ 与 $(V/W,\bar\varphi)$ 都循环。
+
+**Preuve :** 设 $V\simeq k[X]/(g)$，$W$ 不变即 $W$ 是 $k[X]$-子模、即理想，故 $W=h\cdot k[X]/(g)\simeq k[X]/(g/h)$（$h\mid g$），由 $h$ 的像生成；商 $V/W\simeq k[X]/(h)$。与 Abel 群「循环群的子群、商群都循环」逐字对应——只是把 $\mathbb Z$ 换成 $k[X]$。
+
+> [!warning] 逆命题不成立
+> $W$ 与 $V/W$ 都循环推不出 $V$ 循环：$V=k^2$、$u=\mathrm{Id}$、$W$ 为任一坐标轴。补上「$\mu_{u|_W}$ 与 $\mu_{\bar u}$ 互素」才够——此时 $\deg\operatorname{lcm}=\deg\mu_{u|_W}+\deg\mu_{\bar u}=\dim V$，夹逼得 $\mu_u=\chi_u$。
+
+## 8. 交换子的维数公式
+
+> [!note] 命题
+> 设 $u$ 的不变因子为 $P_1\mid\cdots\mid P_r$（降序），$v\in\mathcal L(F)$ 的不变因子为 $Q_1\mid\cdots\mid Q_s$。则
+> $$\dim\{T\in\operatorname{Hom}_k(E,F)\mid Tu=vT\}=\sum_{i,j}\deg\gcd(P_i,Q_j).$$
+
+**Preuve :** 条件是 $T$ 为 $k[X]$-模同态，而
+$$\operatorname{Hom}_{k[X]}\bigl(k[X]/(P_i),k[X]/(Q_j)\bigr)\cong k[X]/\bigl(\gcd(P_i,Q_j)\bigr),$$
+其 $k$-维数为 $\deg\gcd$。逐块相加。特例 $F=E$、$v=u$、$r=1$ 给 $\dim\operatorname{Com}(u)=\deg P_1=n$，即 $k[u]=\operatorname{Com}(u)$。
 
 ## 陷阱
 
