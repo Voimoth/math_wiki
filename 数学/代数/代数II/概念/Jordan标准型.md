@@ -1,7 +1,7 @@
 ---
 title: Jordan 标准型（forme de Jordan）
 created: 2026-10-03
-updated: 2026-10-22
+updated: 2026-10-29
 type: concept
 tags: [algebre, endomorphisme, jordan, trigonalisation, class-de-similitude]
 sources: [代数 II 正课手写笔记]
@@ -47,6 +47,12 @@ confidence: medium
 > [!tip] 块的来源：$k[X]/((X-\lambda)^k)$ 上「乘 $X$」
 > 在这个商空间上，「乘 $X$」等于 $\lambda\,\mathrm{Id}$ 再加「乘 $X-\lambda$」，后者幂零、$k$ 步到零。所以 Jordan 块 $\lambda\mathrm{Id}+N$ 不是另起的构造，它就是初等因子 $(X-\lambda)^k$ 对应的循环块：域上分裂时每个初等因子都长成一次幂，循环块于是全变成 Jordan 块。
 
+## 计算与 Jordan 基
+
+三步确定块结构：算 $\chi_A$ 得各 $\lambda$ 与代数重数；令 $d_j=\dim\ker(A-\lambda I)^j$（$d_0=0$）；则块总数 $d_1$，大小恰为 $j$ 的块有 $2d_j-d_{j-1}-d_{j+1}$ 个。
+
+要相似变换矩阵就取 **Jordan 链**：对每个块大小 $m$ 选 $v$ 使 $(A-\lambda I)^mv=0$、$(A-\lambda I)^{m-1}v\ne0$，链为 $(A-\lambda I)^{m-1}v,\dots,(A-\lambda I)v,v$；各链向量合成基，按链顺序作列得 $P$。取链时必须逐条检查与已选向量无关（等价：先在 $\ker(A-\lambda I)^j/\ker(A-\lambda I)^{j-1}$ 里选独立的类）。实例见 [[14-Jordan标准型的计算与Jordan-Chevalley分解|习题课 14]]。
+
 ## 与不变因子的换算（代数III 视角）
 
 Jordan 块的大小不来自特征值，而来自 $\ker(A-\lambda I)^k$ 的维数跳：
@@ -64,3 +70,4 @@ $$\delta_k=\dim\ker(A-\lambda I)^k,\qquad \#\{\text{大小} \geqslant k \text{ �
 
 - [[13-三角化|代数II · 13-三角化]]
 - [[15-幂零自同态与特征子空间分解|代数II · 15-幂零自同态与特征子空间分解]]
+- [[14-Jordan标准型的计算与Jordan-Chevalley分解|代数III · 习题课 14]]
