@@ -27,6 +27,8 @@
 - `check_wikilinks.py`
 - `lint_natural_chinese.py`
 
+DSH 里装好 `wiki-check` 插件后，可一次调用工具 `wiki_check` 跑完这四项（返回 ok 与失败项原文）。
+
 ## 不写进这里的东西
 
 - 答疑讲解不塞进概念页；辅导进度写 `共享/辅导进度.md`（唯一账本，技能里只留指针）。
