@@ -2,6 +2,10 @@
 
 > 数学与物理知识库的变更记录。数学和物理答疑的可复用内容直接沉淀到对应课程的概念页。
 
+## [2026-11-13] update | 理论力学：李导数的拖动定义
+
+- 在 [[刘维尔定理]] 中补充 $L_X\omega$ 的定义：流的 Jacobi 矩阵把速度推着走，$\omega_t(a)(u,v)=\omega(\Phi_t(a))(D\Phi_t(a).u,D\Phi_t(a).v)$，$L_X\omega$ 是 $\omega_t$ 在 $t=0$ 的变化率；附拉伸流 $X=q\partial_q$ 的非零例子与 Cartan 核对。
+
 ## [2026-11-13] update | 理论力学：ι_X 与形式求值的读法
 
 - 在 [[辛形式]] 中补充 $\iota_X$ 的“固定第一个槽”定义与主规则 $\iota_X(\alpha\wedge\beta)=\alpha(X)\beta-\beta(X)\alpha$，说明三条收缩公式只是读分量加槽序符号。
