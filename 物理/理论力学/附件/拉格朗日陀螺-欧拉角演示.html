@@ -1,0 +1,213 @@
+<style>
+#lt-root{
+  --seed-fg:#1c1c1e; --seed-muted:#6b6b70;
+  --viz-series-1:#4c8dff; --viz-series-2:#ff9f43; --viz-series-3:#2ecc71;
+  --viz-series-4:#9b59b6; --viz-series-5:#e74c3c;
+  --font-sans:system-ui,-apple-system,"Segoe UI","Noto Sans CJK SC",sans-serif;
+  background:#ffffff; padding:8px; border-radius:8px;
+}
+@media (prefers-color-scheme: dark){
+  #lt-root{ --seed-fg:#e8e8ea; --seed-muted:#9a9aa0; background:#141416; }
+}
+</style>
+<div id="lt-root" style="font-family:var(--font-sans);color:var(--seed-fg);font-size:13px;font-weight:400;">
+  <canvas id="lt-canvas" style="width:100%;height:380px;display:block;touch-action:none;"></canvas>
+
+  <div class="viz-controls" style="display:flex;flex-wrap:wrap;gap:8px;margin:8px 0;">
+    <button id="lt-m-still" aria-pressed="true">静止</button>
+    <button id="lt-m-phi" aria-pressed="false">只进动 φ</button>
+    <button id="lt-m-theta" aria-pressed="false">只章动 θ</button>
+    <button id="lt-m-psi" aria-pressed="false">只自转 ψ</button>
+    <button id="lt-m-all" aria-pressed="false">组合（稳定进动）</button>
+  </div>
+
+  <div class="viz-row" style="display:flex;flex-wrap:wrap;gap:12px;">
+    <label class="viz-field" style="flex:1;min-width:140px;">φ 进动 <span id="lt-v-phi" class="tabular-nums"></span>
+      <input id="lt-s-phi" type="range" min="0" max="360" value="30" style="width:100%;">
+    </label>
+    <label class="viz-field" style="flex:1;min-width:140px;">θ 章动 <span id="lt-v-theta" class="tabular-nums"></span>
+      <input id="lt-s-theta" type="range" min="5" max="175" value="55" style="width:100%;">
+    </label>
+    <label class="viz-field" style="flex:1;min-width:140px;">ψ 自转 <span id="lt-v-psi" class="tabular-nums"></span>
+      <input id="lt-s-psi" type="range" min="0" max="360" value="0" style="width:100%;">
+    </label>
+  </div>
+
+  <div id="lt-read" class="text-small tabular-nums" aria-live="polite" style="margin:6px 0;color:var(--seed-fg);"></div>
+
+  <div class="viz-legend text-small" style="display:flex;flex-wrap:wrap;gap:12px;color:var(--seed-muted);">
+    <span><span class="viz-legend-swatch" style="background:var(--viz-series-1);"></span>对称轴 e₃ / 自转</span>
+    <span><span class="viz-legend-swatch" style="background:var(--viz-series-2);"></span>进动 ω_φ（竖直）</span>
+    <span><span class="viz-legend-swatch" style="background:var(--viz-series-3);"></span>节点线 / 章动 ω_θ</span>
+    <span><span class="viz-legend-swatch" style="background:var(--viz-series-5);"></span>合角速度 ω</span>
+  </div>
+  <div class="text-small" style="color:var(--seed-muted);margin-top:6px;">拖动画面可旋转视角。虚线为进动角速度沿对称轴的轴向/横向分解。</div>
+</div>
+
+<script>
+(function(){
+  var root=document.getElementById('lt-root');
+  var cv=document.getElementById('lt-canvas');
+  var ctx=cv.getContext('2d');
+  var cs=getComputedStyle(root);
+  function cvv(n,f){var v=cs.getPropertyValue(n).trim();return v||f;}
+  var C={fg:cvv('--seed-fg','#222'),muted:cvv('--seed-muted','#888'),
+    s1:cvv('--viz-series-1','#4c8dff'),s2:cvv('--viz-series-2','#ff9f43'),
+    s3:cvv('--viz-series-3','#2ecc71'),s4:cvv('--viz-series-4','#9b59b6'),
+    s5:cvv('--viz-series-5','#e74c3c')};
+  var D2R=Math.PI/180;
+  var st={phi:30*D2R,theta:55*D2R,psi:0,mode:'still',yaw:0.6,pitch:0.35,t:0};
+  var reduced=window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  function add(a,b){return[a[0]+b[0],a[1]+b[1],a[2]+b[2]];}
+  function mul(a,k){return[a[0]*k,a[1]*k,a[2]*k];}
+  function cross(a,b){return[a[1]*b[2]-a[2]*b[1],a[2]*b[0]-a[0]*b[2],a[0]*b[1]-a[1]*b[0]];}
+  function dot(a,b){return a[0]*b[0]+a[1]*b[1]+a[2]*b[2];}
+
+  function basis(){
+    var p=st.phi,t=st.theta,s=st.psi;
+    var z=[0,0,1];
+    var n=[Math.cos(p),Math.sin(p),0];
+    var e3=[Math.sin(t)*Math.sin(p),-Math.sin(t)*Math.cos(p),Math.cos(t)];
+    var e1=add(mul(n,Math.cos(s)),mul(cross(e3,n),Math.sin(s)));
+    var e2=cross(e3,e1);
+    var tt=Math.sin(t)>1e-4?mul(add(z,mul(e3,-Math.cos(t))),1/Math.sin(t)):[1,0,0];
+    return{z:z,n:n,e3:e3,e1:e1,e2:e2,t:tt};
+  }
+  function rates(){
+    switch(st.mode){
+      case 'phi':return{ph:0.9,th:0,ps:0};
+      case 'theta':return{ph:0,th:0.6*Math.cos(st.t*1.4),ps:0};
+      case 'psi':return{ph:0,th:0,ps:1.2};
+      case 'all':return{ph:0.6,th:0,ps:1.0};
+      default:return{ph:0,th:0,ps:0};
+    }
+  }
+  function view(p){
+    var cy=Math.cos(st.yaw),sy=Math.sin(st.yaw);
+    var x1=cy*p[0]-sy*p[1],y1=sy*p[0]+cy*p[1],z1=p[2];
+    var cp=Math.cos(st.pitch),sp=Math.sin(st.pitch);
+    var y2=cp*y1-sp*z1,z2=sp*y1+cp*z1;
+    return[x1,y2,z2];
+  }
+  var W=0,H=0,SC=0,CX=0,CY=0;
+  function P(p){var q=view(p);return[CX+SC*q[0],CY-SC*q[2]];}
+  function resize(){
+    var dpr=window.devicePixelRatio||1;
+    W=root.clientWidth;H=380;
+    cv.width=W*dpr;cv.height=H*dpr;
+    ctx.setTransform(dpr,0,0,dpr,0,0);
+    SC=Math.min(W,H)*0.30;CX=W/2;CY=H*0.55;
+  }
+  function line(a,b,col,w,dash){
+    var A=P(a),B=P(b);
+    ctx.save();ctx.strokeStyle=col;ctx.lineWidth=w||1.5;
+    if(dash)ctx.setLineDash(dash);
+    ctx.beginPath();ctx.moveTo(A[0],A[1]);ctx.lineTo(B[0],B[1]);ctx.stroke();ctx.restore();
+  }
+  function arrow(v,col,label,dash){
+    var O=[0,0,0],A=P(O),B=P(v);
+    line(O,v,col,2,dash);
+    var dx=B[0]-A[0],dy=B[1]-A[1],L=Math.hypot(dx,dy)||1;dx/=L;dy/=L;
+    ctx.save();ctx.fillStyle=col;ctx.beginPath();
+    ctx.moveTo(B[0],B[1]);ctx.lineTo(B[0]-8*dx-4*dy,B[1]-8*dy+4*dx);
+    ctx.lineTo(B[0]-8*dx+4*dy,B[1]-8*dy-4*dx);ctx.closePath();ctx.fill();ctx.restore();
+    if(label){ctx.save();ctx.fillStyle=col;ctx.font='12px '+cvv('--font-sans','sans-serif');
+      ctx.fillText(label,B[0]+6,B[1]-6);ctx.restore();}
+  }
+  function text(p,str,col){var A=P(p);ctx.save();ctx.fillStyle=col||C.fg;
+    ctx.font='12px '+cvv('--font-sans','sans-serif');ctx.fillText(str,A[0]+4,A[1]-4);ctx.restore();}
+
+  function draw(){
+    ctx.clearRect(0,0,W,H);
+    var b=basis(),r=rates();
+    // lab axes
+    line([0,0,0],[1.4,0,0],C.muted,1);text([1.4,0,0],"x'",C.muted);
+    line([0,0,0],[0,1.4,0],C.muted,1);text([0,1.4,0],"y'",C.muted);
+    line([0,0,0],[0,0,1.5],C.muted,1);text([0,0,1.5],"z'(竖直)",C.muted);
+    // node line
+    line(mul(b.n,-1.2),mul(b.n,1.2),C.s3,1,[4,4]);text(mul(b.n,1.2),"节点线 n",C.s3);
+    // top: stem + disk
+    var cm=mul(b.e3,1.0);
+    line([0,0,0],cm,C.fg,2);
+    var R=0.55,pts=[];
+    for(var i=0;i<=40;i++){var a=i/40*2*Math.PI;
+      pts.push(P(add(cm,add(mul(b.e1,R*Math.cos(a)),mul(b.e2,R*Math.sin(a))))));}
+    ctx.save();ctx.globalAlpha=0.25;ctx.fillStyle=C.s1;ctx.beginPath();
+    pts.forEach(function(q,j){j?ctx.lineTo(q[0],q[1]):ctx.moveTo(q[0],q[1]);});
+    ctx.closePath();ctx.fill();ctx.restore();
+    ctx.save();ctx.strokeStyle=C.s1;ctx.lineWidth=1.5;ctx.beginPath();
+    pts.forEach(function(q,j){j?ctx.lineTo(q[0],q[1]):ctx.moveTo(q[0],q[1]);});
+    ctx.closePath();ctx.stroke();ctx.restore();
+    line(cm,add(cm,mul(b.e1,R)),C.s1,2); // spin marker
+    line([0,0,0],mul(b.e3,1.5),C.s1,1.5);text(mul(b.e3,1.5),"e₃",C.s1);
+    text(cm,"质心",C.fg);
+    // angular velocity vectors
+    var w=add(add(mul(b.z,r.ph),mul(b.n,r.th)),mul(b.e3,r.ps));
+    if(st.mode==='phi'){
+      arrow(mul(b.z,r.ph),C.s2,"ω_φ");
+      arrow(mul(b.t,r.ph*Math.sin(st.theta)),C.s2,"横向 φ·sinθ",[5,4]);
+      arrow(mul(b.e3,r.ph*Math.cos(st.theta)),C.s2,"轴向 φ·cosθ",[5,4]);
+    }else if(st.mode==='theta'){
+      arrow(mul(b.n,r.th),C.s3,"ω_θ");
+    }else if(st.mode==='psi'){
+      arrow(mul(b.e3,r.ps),C.s4,"ω_ψ");
+    }else if(st.mode==='all'){
+      arrow(mul(w,0.9),C.s5,"ω");
+    }
+    // readout
+    var w3=r.ps+r.ph*Math.cos(st.theta);
+    var wt2=r.th*r.th+r.ph*r.ph*Math.sin(st.theta)*Math.sin(st.theta);
+    var T=0.5*1*wt2+0.5*0.5*w3*w3;
+    document.getElementById('lt-read').textContent=
+      'ω₃ = ψ̇+φ̇cosθ = '+w3.toFixed(2)+
+      '； ω⊥² = θ̇²+φ̇²sin²θ = '+wt2.toFixed(2)+
+      '； T = ½I₁ω⊥² + ½I₃ω₃² = '+T.toFixed(2);
+    document.getElementById('lt-v-phi').textContent=Math.round(st.phi/D2R)+'°';
+    document.getElementById('lt-v-theta').textContent=Math.round(st.theta/D2R)+'°';
+    document.getElementById('lt-v-psi').textContent=Math.round(st.psi/D2R)+'°';
+  }
+
+  var last=null;
+  function loop(ts){
+    if(last==null)last=ts;
+    var dt=Math.min(0.05,(ts-last)/1000);last=ts;
+    if(!reduced){
+      st.t+=dt;
+      if(st.mode==='phi')st.phi=(st.phi+0.9*dt)%(2*Math.PI);
+      if(st.mode==='psi')st.psi=(st.psi+1.2*dt)%(2*Math.PI);
+      if(st.mode==='all'){st.phi=(st.phi+0.6*dt)%(2*Math.PI);st.psi=(st.psi+1.0*dt)%(2*Math.PI);}
+      if(st.mode==='theta')st.theta=(55+25*Math.sin(st.t*1.4))*D2R;
+      syncSliders();
+    }
+    draw();
+    requestAnimationFrame(loop);
+  }
+  function syncSliders(){
+    document.getElementById('lt-s-phi').value=Math.round(st.phi/D2R);
+    document.getElementById('lt-s-theta').value=Math.round(st.theta/D2R);
+    document.getElementById('lt-s-psi').value=Math.round(st.psi/D2R);
+  }
+  function setMode(m){
+    st.mode=m;
+    ['still','phi','theta','psi','all'].forEach(function(k){
+      document.getElementById('lt-m-'+k).setAttribute('aria-pressed',k===m?'true':'false');
+    });
+  }
+  ['still','phi','theta','psi','all'].forEach(function(k){
+    document.getElementById('lt-m-'+k).addEventListener('click',function(){setMode(k);});
+  });
+  document.getElementById('lt-s-phi').addEventListener('input',function(e){st.phi=+e.target.value*D2R;});
+  document.getElementById('lt-s-theta').addEventListener('input',function(e){st.theta=+e.target.value*D2R;});
+  document.getElementById('lt-s-psi').addEventListener('input',function(e){st.psi=+e.target.value*D2R;});
+  // drag to orbit
+  var drag=null;
+  cv.addEventListener('pointerdown',function(e){drag=[e.clientX,e.clientY];cv.setPointerCapture(e.pointerId);});
+  cv.addEventListener('pointermove',function(e){if(!drag)return;
+    st.yaw+=(e.clientX-drag[0])*0.005;st.pitch=Math.max(-1.2,Math.min(1.2,st.pitch+(e.clientY-drag[1])*0.005));
+    drag=[e.clientX,e.clientY];});
+  cv.addEventListener('pointerup',function(){drag=null;});
+  window.addEventListener('resize',function(){resize();draw();});
+  resize();draw();requestAnimationFrame(loop);
+})();
+</script>
